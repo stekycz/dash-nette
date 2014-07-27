@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="generator" content="ApiGen 2.8.0">
+
+	<title>Interface ArrayAccess | Nette 2.2.2 API</title>
+
+	<link rel="stylesheet" href="resources/style.css?3746977979">
+	<link rel="search" type="application/opensearchdescription+xml" title="Nette 2.2.2 API" href="http://api.nette.org/2.0/opensearch.xml">
+
+
+<script src='http://files.nette.org/js/analytics.js'></script><script>
+_ga.create('UA-95238-14', '.nette.org');
+_gaq.push(['_trackPageview']);
+</script>
+</head>
+
+<body>
+<div id="left">
+	<div id="menu">
+
+		<div id="groups">
+			<h3>Namespaces</h3>
+			<ul>
+				<li><a href="namespace-Latte.html">Latte<span></span></a>
+						<ul>
+				<li><a href="namespace-Latte.Loaders.html">Loaders</a>
+						</li>
+				<li><a href="namespace-Latte.Macros.html">Macros</a>
+						</li>
+				<li><a href="namespace-Latte.Runtime.html">Runtime</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.html">Nette<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.Application.html">Application<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.Application.Responses.html">Responses</a>
+						</li>
+				<li><a href="namespace-Nette.Application.Routers.html">Routers</a>
+						</li>
+				<li><a href="namespace-Nette.Application.UI.html">UI</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.Bridges.html">Bridges<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.Bridges.ApplicationLatte.html">ApplicationLatte</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.ApplicationTracy.html">ApplicationTracy</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.CacheLatte.html">CacheLatte</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.DatabaseDI.html">DatabaseDI</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.DatabaseTracy.html">DatabaseTracy</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.DITracy.html">DITracy</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.FormsLatte.html">FormsLatte</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.Framework.html">Framework</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.HttpTracy.html">HttpTracy</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.SecurityTracy.html">SecurityTracy</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.Caching.html">Caching<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.Caching.Storages.html">Storages</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.ComponentModel.html">ComponentModel</a>
+						</li>
+				<li><a href="namespace-Nette.Database.html">Database<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.Database.Drivers.html">Drivers</a>
+						</li>
+				<li><a href="namespace-Nette.Database.Reflection.html">Reflection</a>
+						</li>
+				<li><a href="namespace-Nette.Database.Table.html">Table</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.DI.html">DI<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.DI.Config.html">Config<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.DI.Config.Adapters.html">Adapters</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.DI.Extensions.html">Extensions</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.Diagnostics.html">Diagnostics</a>
+						</li>
+				<li><a href="namespace-Nette.Forms.html">Forms<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.Forms.Controls.html">Controls</a>
+						</li>
+				<li><a href="namespace-Nette.Forms.Rendering.html">Rendering</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.Http.html">Http</a>
+						</li>
+				<li><a href="namespace-Nette.Iterators.html">Iterators</a>
+						</li>
+				<li><a href="namespace-Nette.Latte.html">Latte</a>
+						</li>
+				<li><a href="namespace-Nette.Loaders.html">Loaders</a>
+						</li>
+				<li><a href="namespace-Nette.Localization.html">Localization</a>
+						</li>
+				<li><a href="namespace-Nette.Mail.html">Mail</a>
+						</li>
+				<li><a href="namespace-Nette.Neon.html">Neon</a>
+						</li>
+				<li><a href="namespace-Nette.PhpGenerator.html">PhpGenerator</a>
+						</li>
+				<li><a href="namespace-Nette.Reflection.html">Reflection</a>
+						</li>
+				<li><a href="namespace-Nette.Security.html">Security</a>
+						</li>
+				<li><a href="namespace-Nette.Templating.html">Templating</a>
+						</li>
+				<li><a href="namespace-Nette.Utils.html">Utils</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-NetteModule.html">NetteModule</a>
+						</li>
+				<li><a href="namespace-none.html">none</a>
+						</li>
+				<li class="active"><a href="namespace-PHP.html">PHP</a>
+						</li>
+				<li><a href="namespace-Tracy.html">Tracy</a>
+						</li>
+			</ul>
+		</div>
+
+		<hr>
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+			</ul>
+
+			<h3>Interfaces</h3>
+			<ul>
+			</ul>
+
+
+			<h3>Exceptions</h3>
+			<ul>
+			</ul>
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form action="http://www.google.com/cse" id="search">
+		<input type="hidden" name="cx" value="011549293477758430224:vxofa9ufnhc">
+		<input type="hidden" name="ie" value="UTF-8">
+		<input type="text" name="q" class="text">
+		<input type="submit" value="Search">
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+				<a href="namespace-PHP.html" title="Summary of PHP"><span>Namespace</span></a>
+			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+			<li>
+				<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions"><span>Tree</span></a>
+			</li>
+			<li>
+				<a href="deprecated.html" title="List of deprecated elements"><span>Deprecated</span></a>
+			</li>
+		</ul>
+		<ul><li><a href="http://api.nette.org/releases"><span>Other releases</span></a></li><li><a href="http://nette.org"><span>Nette homepage</span></a></li></ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Interface ArrayAccess</h1>
+
+
+
+
+
+
+
+	<div>
+		<h4>Direct known implementers</h4>
+			<a href="ArrayIterator.html">ArrayIterator</a>, 
+			<a href="CachingIterator.html">CachingIterator</a>, 
+			<a href="Nette.Utils.Html.html">Nette\Utils\Html</a>, 
+			<a href="SplObjectStorage.html">SplObjectStorage</a>, 
+			<a href="Nette.Application.UI.PresenterComponent.html">Nette\Application\UI\PresenterComponent</a>, 
+			<a href="Nette.Caching.Cache.html">Nette\Caching\Cache</a>, 
+			<a href="Nette.Database.IRow.html">Nette\Database\IRow</a>, 
+			<a href="Nette.Database.Table.Selection.html">Nette\Database\Table\Selection</a>, 
+			<a href="Nette.Forms.Container.html">Nette\Forms\Container</a>, 
+			<a href="Nette.Http.SessionSection.html">Nette\Http\SessionSection</a>, 
+			<a href="Nette.Utils.ArrayHash.html">Nette\Utils\ArrayHash</a>, 
+			<a href="Nette.Utils.ArrayList.html">Nette\Utils\ArrayList</a>
+	</div>
+
+	<div>
+		<h4>Indirect known implementers</h4>
+			<a href="Latte.Runtime.CachingIterator.html">Latte\Runtime\CachingIterator</a>, 
+			<a href="Nette.Application.Routers.RouteList.html">Nette\Application\Routers\RouteList</a>, 
+			<a href="Nette.Forms.Form.html">Nette\Forms\Form</a>, 
+			<a href="Nette.Iterators.CachingIterator.html">Nette\Iterators\CachingIterator</a>, 
+			<a href="RecursiveArrayIterator.html">RecursiveArrayIterator</a>, 
+			<a href="Nette.Application.UI.Control.html">Nette\Application\UI\Control</a>, 
+			<a href="Nette.Application.UI.Form.html">Nette\Application\UI\Form</a>, 
+			<a href="Nette.Application.UI.Multiplier.html">Nette\Application\UI\Multiplier</a>, 
+			<a href="Nette.Application.UI.Presenter.html">Nette\Application\UI\Presenter</a>, 
+			<a href="Nette.Database.Row.html">Nette\Database\Row</a>, 
+			<a href="Nette.Database.Table.ActiveRow.html">Nette\Database\Table\ActiveRow</a>, 
+			<a href="Nette.Database.Table.GroupedSelection.html">Nette\Database\Table\GroupedSelection</a>, 
+			<a href="Nette.Database.Table.IRow.html">Nette\Database\Table\IRow</a>
+	</div>
+
+
+
+	<div class="info">
+		
+		<b>PHP Extension:</b> <a href="http://php.net/manual" title="Go to PHP documentation">Core</a><br>
+		
+		
+
+		<b>Documented at</b> <a href="http://php.net/manual/class.arrayaccess.php" title="Go to PHP documentation">php.net</a><br>
+	</div>
+
+
+
+	<table class="summary" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="offsetExists" id="_offsetExists">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="ArrayAccess.html#_offsetExists">#</a>
+		<code><a href="http://php.net/manual/arrayaccess.offsetexists.php" title="Go to PHP documentation">offsetExists</a>( <span> <var>$offset</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="offsetGet" id="_offsetGet">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="ArrayAccess.html#_offsetGet">#</a>
+		<code><a href="http://php.net/manual/arrayaccess.offsetget.php" title="Go to PHP documentation">offsetGet</a>( <span> <var>$offset</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="offsetSet" id="_offsetSet">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="ArrayAccess.html#_offsetSet">#</a>
+		<code><a href="http://php.net/manual/arrayaccess.offsetset.php" title="Go to PHP documentation">offsetSet</a>( <span> <var>$offset</var></span>, <span> <var>$value</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="offsetUnset" id="_offsetUnset">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="ArrayAccess.html#_offsetUnset">#</a>
+		<code><a href="http://php.net/manual/arrayaccess.offsetunset.php" title="Go to PHP documentation">offsetUnset</a>( <span> <var>$offset</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+	<div id="footer">
+		Nette 2.2.2 API API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+	</div>
+</div>
+</div>
+<script src="resources/combined.js?3630868369"></script>
+<script src="elementlist.js?2087501429"></script>
+</body>
+</html>

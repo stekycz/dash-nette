@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="generator" content="ApiGen 2.8.0">
+
+	<title>Class Nette\Utils\ArrayList | Nette 2.2.2 API</title>
+
+	<link rel="stylesheet" href="resources/style.css?3746977979">
+	<link rel="search" type="application/opensearchdescription+xml" title="Nette 2.2.2 API" href="http://api.nette.org/2.0/opensearch.xml">
+
+
+<script src='http://files.nette.org/js/analytics.js'></script><script>
+_ga.create('UA-95238-14', '.nette.org');
+_gaq.push(['_trackPageview']);
+</script>
+</head>
+
+<body>
+<div id="left">
+	<div id="menu">
+
+		<div id="groups">
+			<h3>Namespaces</h3>
+			<ul>
+				<li><a href="namespace-Latte.html">Latte<span></span></a>
+						<ul>
+				<li><a href="namespace-Latte.Loaders.html">Loaders</a>
+						</li>
+				<li><a href="namespace-Latte.Macros.html">Macros</a>
+						</li>
+				<li><a href="namespace-Latte.Runtime.html">Runtime</a>
+						</li>
+							</ul></li>
+				<li class="active"><a href="namespace-Nette.html">Nette<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.Application.html">Application<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.Application.Responses.html">Responses</a>
+						</li>
+				<li><a href="namespace-Nette.Application.Routers.html">Routers</a>
+						</li>
+				<li><a href="namespace-Nette.Application.UI.html">UI</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.Bridges.html">Bridges<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.Bridges.ApplicationLatte.html">ApplicationLatte</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.ApplicationTracy.html">ApplicationTracy</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.CacheLatte.html">CacheLatte</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.DatabaseDI.html">DatabaseDI</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.DatabaseTracy.html">DatabaseTracy</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.DITracy.html">DITracy</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.FormsLatte.html">FormsLatte</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.Framework.html">Framework</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.HttpTracy.html">HttpTracy</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.SecurityTracy.html">SecurityTracy</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.Caching.html">Caching<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.Caching.Storages.html">Storages</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.ComponentModel.html">ComponentModel</a>
+						</li>
+				<li><a href="namespace-Nette.Database.html">Database<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.Database.Drivers.html">Drivers</a>
+						</li>
+				<li><a href="namespace-Nette.Database.Reflection.html">Reflection</a>
+						</li>
+				<li><a href="namespace-Nette.Database.Table.html">Table</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.DI.html">DI<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.DI.Config.html">Config<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.DI.Config.Adapters.html">Adapters</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.DI.Extensions.html">Extensions</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.Diagnostics.html">Diagnostics</a>
+						</li>
+				<li><a href="namespace-Nette.Forms.html">Forms<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.Forms.Controls.html">Controls</a>
+						</li>
+				<li><a href="namespace-Nette.Forms.Rendering.html">Rendering</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.Http.html">Http</a>
+						</li>
+				<li><a href="namespace-Nette.Iterators.html">Iterators</a>
+						</li>
+				<li><a href="namespace-Nette.Latte.html">Latte</a>
+						</li>
+				<li><a href="namespace-Nette.Loaders.html">Loaders</a>
+						</li>
+				<li><a href="namespace-Nette.Localization.html">Localization</a>
+						</li>
+				<li><a href="namespace-Nette.Mail.html">Mail</a>
+						</li>
+				<li><a href="namespace-Nette.Neon.html">Neon</a>
+						</li>
+				<li><a href="namespace-Nette.PhpGenerator.html">PhpGenerator</a>
+						</li>
+				<li><a href="namespace-Nette.Reflection.html">Reflection</a>
+						</li>
+				<li><a href="namespace-Nette.Security.html">Security</a>
+						</li>
+				<li><a href="namespace-Nette.Templating.html">Templating</a>
+						</li>
+				<li class="active"><a href="namespace-Nette.Utils.html">Utils</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-NetteModule.html">NetteModule</a>
+						</li>
+				<li><a href="namespace-none.html">none</a>
+						</li>
+				<li><a href="namespace-Tracy.html">Tracy</a>
+						</li>
+			</ul>
+		</div>
+
+		<hr>
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="Nette.Utils.ArrayHash.html">ArrayHash</a></li>
+				<li class="active"><a href="Nette.Utils.ArrayList.html">ArrayList</a></li>
+				<li><a href="Nette.Utils.Arrays.html">Arrays</a></li>
+				<li><a href="Nette.Utils.Callback.html">Callback</a></li>
+				<li><a href="Nette.Utils.CallbackFilterIterator.html">CallbackFilterIterator</a></li>
+				<li><a href="Nette.Utils.DateTime.html">DateTime</a></li>
+				<li><a href="Nette.Utils.FileSystem.html">FileSystem</a></li>
+				<li><a href="Nette.Utils.Finder.html">Finder</a></li>
+				<li><a href="Nette.Utils.Html.html">Html</a></li>
+				<li><a href="Nette.Utils.Image.html">Image</a></li>
+				<li><a href="Nette.Utils.Json.html">Json</a></li>
+				<li><a href="Nette.Utils.LimitedScope.html" class="deprecated">LimitedScope</a></li>
+				<li><a href="Nette.Utils.MimeTypeDetector.html" class="deprecated">MimeTypeDetector</a></li>
+				<li><a href="Nette.Utils.ObjectMixin.html">ObjectMixin</a></li>
+				<li><a href="Nette.Utils.Paginator.html">Paginator</a></li>
+				<li><a href="Nette.Utils.Random.html">Random</a></li>
+				<li><a href="Nette.Utils.RecursiveCallbackFilterIterator.html">RecursiveCallbackFilterIterator</a></li>
+				<li><a href="Nette.Utils.Strings.html">Strings</a></li>
+				<li><a href="Nette.Utils.TokenIterator.html">TokenIterator</a></li>
+				<li><a href="Nette.Utils.Tokenizer.html">Tokenizer</a></li>
+				<li><a href="Nette.Utils.Validators.html">Validators</a></li>
+			</ul>
+
+			<h3>Interfaces</h3>
+			<ul>
+				<li><a href="Nette.Utils.IHtmlString.html">IHtmlString</a></li>
+			</ul>
+
+
+			<h3>Exceptions</h3>
+			<ul>
+				<li><a href="Nette.Utils.AssertionException.html">AssertionException</a></li>
+				<li><a href="Nette.Utils.JsonException.html">JsonException</a></li>
+				<li><a href="Nette.Utils.RegexpException.html">RegexpException</a></li>
+				<li><a href="Nette.Utils.TokenizerException.html">TokenizerException</a></li>
+				<li><a href="Nette.Utils.UnknownImageFileException.html">UnknownImageFileException</a></li>
+			</ul>
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form action="http://www.google.com/cse" id="search">
+		<input type="hidden" name="cx" value="011549293477758430224:vxofa9ufnhc">
+		<input type="hidden" name="ie" value="UTF-8">
+		<input type="text" name="q" class="text">
+		<input type="submit" value="Search">
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+				<a href="namespace-Nette.Utils.html" title="Summary of Nette\Utils"><span>Namespace</span></a>
+			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+			<li>
+				<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions"><span>Tree</span></a>
+			</li>
+			<li>
+				<a href="deprecated.html" title="List of deprecated elements"><span>Deprecated</span></a>
+			</li>
+		</ul>
+		<ul><li><a href="http://api.nette.org/releases"><span>Other releases</span></a></li><li><a href="http://nette.org"><span>Nette homepage</span></a></li></ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Class ArrayList</h1>
+
+
+	<div class="description">
+	
+<p>Provides the base class for a generic list (items can be accessed by
+index).</p>
+
+	</div>
+
+	<dl class="tree">
+		<dd style="padding-left:0px">
+			<a href="Nette.Object.html"><span>Nette\Object</span></a>
+			
+			
+			
+		</dd>
+		<dd style="padding-left:30px">
+			<img src="resources/inherit.png" alt="Extended by">
+<b><span>Nette\Utils\ArrayList</span></b>			
+			 implements 
+				<a href="ArrayAccess.html"><span>ArrayAccess</span></a>, 
+			
+				<a href="Countable.html"><span>Countable</span></a>, 
+			
+				<a href="IteratorAggregate.html"><span>IteratorAggregate</span></a>
+			
+			
+		</dd>
+	</dl>
+
+
+	<div>
+		<h4>Direct known subclasses</h4>
+			<a href="Nette.Application.Routers.RouteList.html">Nette\Application\Routers\RouteList</a>
+	</div>
+
+
+
+
+
+
+	<div class="info">
+		
+		
+		<b>Namespace:</b> <a href="namespace-Nette.html">Nette</a>\<a href="namespace-Nette.Utils.html">Utils</a><br>
+		
+
+				<b>Author:</b>
+				David Grudl<br>
+		<b>Located at</b> <a href="source-Utils.ArrayList.php.html#13-106" title="Go to source code">Utils/ArrayList.php</a><br>
+	</div>
+
+
+
+	<table class="summary" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="getIterator" id="_getIterator">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="ArrayIterator.html">ArrayIterator</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Utils.ArrayList.html#_getIterator">#</a>
+		<code><a href="source-Utils.ArrayList.php.html#25-32" title="Go to source code">getIterator</a>( )</code>
+
+		<div class="description short">
+			
+<p>Returns an iterator over all items.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns an iterator over all items.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="ArrayIterator.html">ArrayIterator</a></code></code><br>
+				</div>
+
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="IteratorAggregate.html#_getIterator">IteratorAggregate::getIterator()</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="count" id="_count">
+
+		<td class="attributes"><code>
+			 public 
+			integer
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Utils.ArrayList.html#_count">#</a>
+		<code><a href="source-Utils.ArrayList.php.html#35-42" title="Go to source code">count</a>( )</code>
+
+		<div class="description short">
+			
+<p>Returns items count.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns items count.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>integer</code><br>
+				</div>
+
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="Countable.html#_count">Countable::count()</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="offsetSet" id="_offsetSet">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Utils.ArrayList.html#_offsetSet">#</a>
+		<code><a href="source-Utils.ArrayList.php.html#45-63" title="Go to source code">offsetSet</a>( <span>integer <var>$index</var></span>, <span>mixed <var>$value</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Replaces or appends a item.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Replaces or appends a item.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$index</var></dt>
+					<dd><code>integer</code></dd>
+					<dt><var>$value</var></dt>
+					<dd><code>mixed</code></dd>
+				</dl></div>
+
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><code><a href="OutOfRangeException.html">OutOfRangeException</a></code></code><br>
+				</div>
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="ArrayAccess.html#_offsetSet">ArrayAccess::offsetSet()</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="offsetGet" id="_offsetGet">
+
+		<td class="attributes"><code>
+			 public 
+			mixed
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Utils.ArrayList.html#_offsetGet">#</a>
+		<code><a href="source-Utils.ArrayList.php.html#66-78" title="Go to source code">offsetGet</a>( <span>integer <var>$index</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Returns a item.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns a item.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$index</var></dt>
+					<dd><code>integer</code></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>mixed</code><br>
+				</div>
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><code><a href="OutOfRangeException.html">OutOfRangeException</a></code></code><br>
+				</div>
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="ArrayAccess.html#_offsetGet">ArrayAccess::offsetGet()</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="offsetExists" id="_offsetExists">
+
+		<td class="attributes"><code>
+			 public 
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Utils.ArrayList.html#_offsetExists">#</a>
+		<code><a href="source-Utils.ArrayList.php.html#81-89" title="Go to source code">offsetExists</a>( <span>integer <var>$index</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Determines whether a item exists.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Determines whether a item exists.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$index</var></dt>
+					<dd><code>integer</code></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br>
+				</div>
+
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="ArrayAccess.html#_offsetExists">ArrayAccess::offsetExists()</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="offsetUnset" id="_offsetUnset">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Utils.ArrayList.html#_offsetUnset">#</a>
+		<code><a href="source-Utils.ArrayList.php.html#92-104" title="Go to source code">offsetUnset</a>( <span>integer <var>$index</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Removes the element at the specified position in this list.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Removes the element at the specified position in this list.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$index</var></dt>
+					<dd><code>integer</code></dd>
+				</dl></div>
+
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><code><a href="OutOfRangeException.html">OutOfRangeException</a></code></code><br>
+				</div>
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="ArrayAccess.html#_offsetUnset">ArrayAccess::offsetUnset()</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+	<table class="summary inherited">
+	<caption>Methods inherited from <a href="Nette.Object.html#methods">Nette\Object</a></caption>
+	<tr>
+		<td><code>
+			<a href="Nette.Object.html#___call">__call()</a>, 
+			<a href="Nette.Object.html#___callStatic">__callStatic()</a>, 
+			<a href="Nette.Object.html#___get">__get()</a>, 
+			<a href="Nette.Object.html#___isset">__isset()</a>, 
+			<a href="Nette.Object.html#___set">__set()</a>, 
+			<a href="Nette.Object.html#___unset">__unset()</a>, 
+			<a href="Nette.Object.html#_extensionMethod">extensionMethod()</a>, 
+			<a href="Nette.Object.html#_getReflection">getReflection()</a>
+		</code></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<table class="summary" id="magicProperties">
+	<caption>Magic properties summary</caption>
+	<tr data-order="iterator" id="m$iterator">
+		<td class="attributes"><code>
+			public  read-only
+			<code><a href="ArrayIterator.html">ArrayIterator</a></code>
+		</code></td>
+
+		<td class="name">
+				<a href="source-Utils.ArrayList.php.html#18" title="Go to source code"><var>$iterator</var></a>
+		</td>
+		<td class="description"><div>
+			<a href="Nette.Utils.ArrayList.html#m$iterator" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	</table>
+
+	<table class="summary inherited">
+	<caption>Magic properties inherited from <a href="Nette.Object.html#properties">Nette\Object</a></caption>
+	<tr>
+		<td><code>
+			<a href="Nette.Object.html#m$reflection"><var>$reflection</var></a>
+		</code></td>
+	</tr>
+	</table>
+
+
+</div>
+
+	<div id="footer">
+		Nette 2.2.2 API API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+	</div>
+</div>
+</div>
+<script src="resources/combined.js?3630868369"></script>
+<script src="elementlist.js?2087501429"></script>
+</body>
+</html>

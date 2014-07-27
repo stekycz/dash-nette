@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="generator" content="ApiGen 2.8.0">
+
+	<title>Deprecated Class Nette\Diagnostics\Debugger | Nette 2.2.2 API</title>
+
+	<link rel="stylesheet" href="resources/style.css?3746977979">
+	<link rel="search" type="application/opensearchdescription+xml" title="Nette 2.2.2 API" href="http://api.nette.org/2.0/opensearch.xml">
+
+
+<script src='http://files.nette.org/js/analytics.js'></script><script>
+_ga.create('UA-95238-14', '.nette.org');
+_gaq.push(['_trackPageview']);
+</script>
+</head>
+
+<body>
+<div id="left">
+	<div id="menu">
+
+		<div id="groups">
+			<h3>Namespaces</h3>
+			<ul>
+				<li><a href="namespace-Latte.html">Latte<span></span></a>
+						<ul>
+				<li><a href="namespace-Latte.Loaders.html">Loaders</a>
+						</li>
+				<li><a href="namespace-Latte.Macros.html">Macros</a>
+						</li>
+				<li><a href="namespace-Latte.Runtime.html">Runtime</a>
+						</li>
+							</ul></li>
+				<li class="active"><a href="namespace-Nette.html">Nette<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.Application.html">Application<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.Application.Responses.html">Responses</a>
+						</li>
+				<li><a href="namespace-Nette.Application.Routers.html">Routers</a>
+						</li>
+				<li><a href="namespace-Nette.Application.UI.html">UI</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.Bridges.html">Bridges<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.Bridges.ApplicationLatte.html">ApplicationLatte</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.ApplicationTracy.html">ApplicationTracy</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.CacheLatte.html">CacheLatte</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.DatabaseDI.html">DatabaseDI</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.DatabaseTracy.html">DatabaseTracy</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.DITracy.html">DITracy</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.FormsLatte.html">FormsLatte</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.Framework.html">Framework</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.HttpTracy.html">HttpTracy</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.SecurityTracy.html">SecurityTracy</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.Caching.html">Caching<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.Caching.Storages.html">Storages</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.ComponentModel.html">ComponentModel</a>
+						</li>
+				<li><a href="namespace-Nette.Database.html">Database<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.Database.Drivers.html">Drivers</a>
+						</li>
+				<li><a href="namespace-Nette.Database.Reflection.html">Reflection</a>
+						</li>
+				<li><a href="namespace-Nette.Database.Table.html">Table</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.DI.html">DI<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.DI.Config.html">Config<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.DI.Config.Adapters.html">Adapters</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.DI.Extensions.html">Extensions</a>
+						</li>
+							</ul></li>
+				<li class="active"><a href="namespace-Nette.Diagnostics.html">Diagnostics</a>
+						</li>
+				<li><a href="namespace-Nette.Forms.html">Forms<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.Forms.Controls.html">Controls</a>
+						</li>
+				<li><a href="namespace-Nette.Forms.Rendering.html">Rendering</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.Http.html">Http</a>
+						</li>
+				<li><a href="namespace-Nette.Iterators.html">Iterators</a>
+						</li>
+				<li><a href="namespace-Nette.Latte.html">Latte</a>
+						</li>
+				<li><a href="namespace-Nette.Loaders.html">Loaders</a>
+						</li>
+				<li><a href="namespace-Nette.Localization.html">Localization</a>
+						</li>
+				<li><a href="namespace-Nette.Mail.html">Mail</a>
+						</li>
+				<li><a href="namespace-Nette.Neon.html">Neon</a>
+						</li>
+				<li><a href="namespace-Nette.PhpGenerator.html">PhpGenerator</a>
+						</li>
+				<li><a href="namespace-Nette.Reflection.html">Reflection</a>
+						</li>
+				<li><a href="namespace-Nette.Security.html">Security</a>
+						</li>
+				<li><a href="namespace-Nette.Templating.html">Templating</a>
+						</li>
+				<li><a href="namespace-Nette.Utils.html">Utils</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-NetteModule.html">NetteModule</a>
+						</li>
+				<li><a href="namespace-none.html">none</a>
+						</li>
+				<li><a href="namespace-Tracy.html">Tracy</a>
+						</li>
+			</ul>
+		</div>
+
+		<hr>
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li class="active"><a href="Nette.Diagnostics.Debugger.html" class="deprecated">Debugger</a></li>
+				<li><a href="Nette.Diagnostics.Helpers.html" class="deprecated">Helpers</a></li>
+			</ul>
+
+			<h3>Interfaces</h3>
+			<ul>
+				<li><a href="Nette.Diagnostics.IBarPanel.html" class="deprecated">IBarPanel</a></li>
+			</ul>
+
+
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form action="http://www.google.com/cse" id="search">
+		<input type="hidden" name="cx" value="011549293477758430224:vxofa9ufnhc">
+		<input type="hidden" name="ie" value="UTF-8">
+		<input type="text" name="q" class="text">
+		<input type="submit" value="Search">
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+				<a href="namespace-Nette.Diagnostics.html" title="Summary of Nette\Diagnostics"><span>Namespace</span></a>
+			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+			<li>
+				<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions"><span>Tree</span></a>
+			</li>
+			<li>
+				<a href="deprecated.html" title="List of deprecated elements"><span>Deprecated</span></a>
+			</li>
+		</ul>
+		<ul><li><a href="http://api.nette.org/releases"><span>Other releases</span></a></li><li><a href="http://nette.org"><span>Nette homepage</span></a></li></ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1 class="deprecated">Class Debugger</h1>
+
+
+
+	<dl class="tree">
+		<dd style="padding-left:0px">
+			<a href="Tracy.Debugger.html"><span>Tracy\Debugger</span></a>
+			
+			
+			
+		</dd>
+		<dd style="padding-left:30px">
+			<img src="resources/inherit.png" alt="Extended by">
+<b><span class="deprecated">Nette\Diagnostics\Debugger</span></b>			
+			
+			
+		</dd>
+	</dl>
+
+
+
+
+
+
+
+
+	<div class="info">
+		
+		
+		<b>Namespace:</b> <a href="namespace-Nette.html">Nette</a>\<a href="namespace-Nette.Diagnostics.html">Diagnostics</a><br>
+		
+
+				<b>Deprecated</b>
+				<br>
+		<b>Located at</b> <a href="source-deprecated.Diagnostics.Debugger.php.html#14-61" title="Go to source code">deprecated/Diagnostics/Debugger.php</a><br>
+	</div>
+
+
+
+	<table class="summary" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="enable" id="_enable" class="deprecated">
+
+		<td class="attributes"><code>
+			 public static
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Diagnostics.Debugger.html#_enable">#</a>
+		<code><a href="source-deprecated.Diagnostics.Debugger.php.html#38-53" title="Go to source code">enable</a>( <span>mixed <var>$mode</var> = <span class="php-keyword1">NULL</span></span>, <span>string <var>$logDirectory</var> = <span class="php-keyword1">NULL</span></span>, <span>string <var>$email</var> = <span class="php-keyword1">NULL</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Enables displaying or logging errors and exceptions.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Enables displaying or logging errors and exceptions.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$mode</var></dt>
+					<dd><code>mixed</code><br>production, development mode, autodetection or IP address(es) whitelist.</dd>
+					<dt><var>$logDirectory</var></dt>
+					<dd><code>string</code><br>error log directory; enables logging in production mode, FALSE means that
+logging is disabled</dd>
+					<dt><var>$email</var></dt>
+					<dd><code>string</code><br>administrator email; enables email sending in production mode</dd>
+				</dl></div>
+
+
+
+
+				<h4>Overrides</h4>
+				<div class="list"><code><a href="Tracy.Debugger.html#_enable">Tracy\Debugger::enable()</a></code></div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="addPanel" id="_addPanel" class="deprecated">
+
+		<td class="attributes"><code>
+			 public static
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Diagnostics.Debugger.html#_addPanel">#</a>
+		<code><a href="source-deprecated.Diagnostics.Debugger.php.html#56-59" title="Go to source code">addPanel</a>( <span><code><a href="Nette.Diagnostics.IBarPanel.html" class="deprecated">Nette\Diagnostics\IBarPanel</a></code> <var>$panel</var></span>, <span> <var>$id</var> = <span class="php-keyword1">NULL</span></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+	<table class="summary inherited">
+	<caption>Methods inherited from <a href="Tracy.Debugger.html#methods">Tracy\Debugger</a></caption>
+	<tr>
+		<td><code>
+			<a href="Tracy.Debugger.html#___construct">__construct()</a>, 
+			<a href="Tracy.Debugger.html#_barDump">barDump()</a>, 
+			<a href="Tracy.Debugger.html#_dump">dump()</a>, 
+			<a href="Tracy.Debugger.html#_fireLog">fireLog()</a>, 
+			<a href="Tracy.Debugger.html#_getBar">getBar()</a>, 
+			<a href="Tracy.Debugger.html#_getBlueScreen">getBlueScreen()</a>, 
+			<a href="Tracy.Debugger.html#_getFireLogger">getFireLogger()</a>, 
+			<a href="Tracy.Debugger.html#_getLogger">getLogger()</a>, 
+			<a href="Tracy.Debugger.html#_isEnabled">isEnabled()</a>, 
+			<a href="Tracy.Debugger.html#_log">log()</a>, 
+			<a href="Tracy.Debugger.html#_setLogger">setLogger()</a>, 
+			<a href="Tracy.Debugger.html#_timer">timer()</a>
+		</code></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+	<table class="summary inherited">
+	<caption>Constants inherited from <a href="Tracy.Debugger.html#constants">Tracy\Debugger</a></caption>
+	<tr>
+		<td><code>
+			<a href="Tracy.Debugger.html#CRITICAL"><b>CRITICAL</b></a>, 
+			<a href="Tracy.Debugger.html#DEBUG"><b>DEBUG</b></a>, 
+			<a href="Tracy.Debugger.html#DETECT"><b>DETECT</b></a>, 
+			<a href="Tracy.Debugger.html#DEVELOPMENT"><b>DEVELOPMENT</b></a>, 
+			<a href="Tracy.Debugger.html#ERROR"><b>ERROR</b></a>, 
+			<a href="Tracy.Debugger.html#EXCEPTION"><b>EXCEPTION</b></a>, 
+			<a href="Tracy.Debugger.html#INFO"><b>INFO</b></a>, 
+			<a href="Tracy.Debugger.html#PRODUCTION"><b>PRODUCTION</b></a>, 
+			<a href="Tracy.Debugger.html#WARNING"><b>WARNING</b></a>
+		</code></td>
+	</tr>
+	</table>
+
+
+
+	<table class="summary" id="properties">
+	<caption>Properties summary</caption>
+	<tr data-order="consoleMode" id="$consoleMode">
+		<td class="attributes"><code>
+			public static 
+			
+		</code></td>
+
+		<td class="name">
+				<a href="source-deprecated.Diagnostics.Debugger.php.html#19-20" title="Go to source code"><var>$consoleMode</var></a>
+		</td>
+		<td class="value"><code></code></td>
+		<td class="description"><div>
+			<a href="Nette.Diagnostics.Debugger.html#$consoleMode" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+					<h4>Deprecated</h4>
+					<div class="list">
+					</div>
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="consoleColors" id="$consoleColors">
+		<td class="attributes"><code>
+			public static 
+			
+		</code></td>
+
+		<td class="name">
+				<a href="source-deprecated.Diagnostics.Debugger.php.html#22-23" title="Go to source code"><var>$consoleColors</var></a>
+		</td>
+		<td class="value"><code></code></td>
+		<td class="description"><div>
+			<a href="Nette.Diagnostics.Debugger.html#$consoleColors" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+					<h4>Deprecated</h4>
+					<div class="list">
+					</div>
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="blueScreen" id="$blueScreen">
+		<td class="attributes"><code>
+			public static 
+			BlueScreen
+		</code></td>
+
+		<td class="name">
+				<a href="source-deprecated.Diagnostics.Debugger.php.html#25-26" title="Go to source code"><var>$blueScreen</var></a>
+		</td>
+		<td class="value"><code></code></td>
+		<td class="description"><div>
+			<a href="Nette.Diagnostics.Debugger.html#$blueScreen" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+					<h4>Deprecated</h4>
+					<div class="list">
+							@var BlueScreen<br>
+					</div>
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="logger" id="$logger">
+		<td class="attributes"><code>
+			public static 
+			Logger
+		</code></td>
+
+		<td class="name">
+				<a href="source-deprecated.Diagnostics.Debugger.php.html#28-29" title="Go to source code"><var>$logger</var></a>
+		</td>
+		<td class="value"><code></code></td>
+		<td class="description"><div>
+			<a href="Nette.Diagnostics.Debugger.html#$logger" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+					<h4>Deprecated</h4>
+					<div class="list">
+							@var Logger<br>
+					</div>
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="fireLogger" id="$fireLogger">
+		<td class="attributes"><code>
+			public static 
+			FireLogger
+		</code></td>
+
+		<td class="name">
+				<a href="source-deprecated.Diagnostics.Debugger.php.html#31-32" title="Go to source code"><var>$fireLogger</var></a>
+		</td>
+		<td class="value"><code></code></td>
+		<td class="description"><div>
+			<a href="Nette.Diagnostics.Debugger.html#$fireLogger" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+					<h4>Deprecated</h4>
+					<div class="list">
+							@var FireLogger<br>
+					</div>
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="bar" id="$bar">
+		<td class="attributes"><code>
+			public static 
+			Bar
+		</code></td>
+
+		<td class="name">
+				<a href="source-deprecated.Diagnostics.Debugger.php.html#34-35" title="Go to source code"><var>$bar</var></a>
+		</td>
+		<td class="value"><code></code></td>
+		<td class="description"><div>
+			<a href="Nette.Diagnostics.Debugger.html#$bar" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+					<h4>Deprecated</h4>
+					<div class="list">
+							@var Bar<br>
+					</div>
+			</div>
+		</div></td>
+	</tr>
+	</table>
+
+	<table class="summary inherited">
+	<caption>Properties inherited from <a href="Tracy.Debugger.html#properties">Tracy\Debugger</a></caption>
+	<tr>
+		<td><code>
+			<a href="Tracy.Debugger.html#$browser"><var>$browser</var></a>, 
+			<a href="Tracy.Debugger.html#$editor"><var>$editor</var></a>, 
+			<a href="Tracy.Debugger.html#$email"><var>$email</var></a>, 
+			<a href="Tracy.Debugger.html#$emailSnooze"><var><span class="deprecated">$emailSnooze</span></var></a>, 
+			<a href="Tracy.Debugger.html#$logDirectory"><var>$logDirectory</var></a>, 
+			<a href="Tracy.Debugger.html#$mailer"><var><span class="deprecated">$mailer</span></var></a>, 
+			<a href="Tracy.Debugger.html#$maxDepth"><var>$maxDepth</var></a>, 
+			<a href="Tracy.Debugger.html#$maxLen"><var>$maxLen</var></a>, 
+			<a href="Tracy.Debugger.html#$onFatalError"><var>$onFatalError</var></a>, 
+			<a href="Tracy.Debugger.html#$productionMode"><var>$productionMode</var></a>, 
+			<a href="Tracy.Debugger.html#$scream"><var>$scream</var></a>, 
+			<a href="Tracy.Debugger.html#$showLocation"><var>$showLocation</var></a>, 
+			<a href="Tracy.Debugger.html#$source"><var>$source</var></a>, 
+			<a href="Tracy.Debugger.html#$strictMode"><var>$strictMode</var></a>, 
+			<a href="Tracy.Debugger.html#$time"><var>$time</var></a>, 
+			<a href="Tracy.Debugger.html#$version"><var>$version</var></a>
+		</code></td>
+	</tr>
+	</table>
+
+
+
+
+
+</div>
+
+	<div id="footer">
+		Nette 2.2.2 API API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+	</div>
+</div>
+</div>
+<script src="resources/combined.js?3630868369"></script>
+<script src="elementlist.js?2087501429"></script>
+</body>
+</html>

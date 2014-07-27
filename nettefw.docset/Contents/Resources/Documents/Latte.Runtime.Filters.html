@@ -1,0 +1,1323 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="generator" content="ApiGen 2.8.0">
+
+	<title>Class Latte\Runtime\Filters | Nette 2.2.2 API</title>
+
+	<link rel="stylesheet" href="resources/style.css?3746977979">
+	<link rel="search" type="application/opensearchdescription+xml" title="Nette 2.2.2 API" href="http://api.nette.org/2.0/opensearch.xml">
+
+
+<script src='http://files.nette.org/js/analytics.js'></script><script>
+_ga.create('UA-95238-14', '.nette.org');
+_gaq.push(['_trackPageview']);
+</script>
+</head>
+
+<body>
+<div id="left">
+	<div id="menu">
+
+		<div id="groups">
+			<h3>Namespaces</h3>
+			<ul>
+				<li class="active"><a href="namespace-Latte.html">Latte<span></span></a>
+						<ul>
+				<li><a href="namespace-Latte.Loaders.html">Loaders</a>
+						</li>
+				<li><a href="namespace-Latte.Macros.html">Macros</a>
+						</li>
+				<li class="active"><a href="namespace-Latte.Runtime.html">Runtime</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.html">Nette<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.Application.html">Application<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.Application.Responses.html">Responses</a>
+						</li>
+				<li><a href="namespace-Nette.Application.Routers.html">Routers</a>
+						</li>
+				<li><a href="namespace-Nette.Application.UI.html">UI</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.Bridges.html">Bridges<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.Bridges.ApplicationLatte.html">ApplicationLatte</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.ApplicationTracy.html">ApplicationTracy</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.CacheLatte.html">CacheLatte</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.DatabaseDI.html">DatabaseDI</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.DatabaseTracy.html">DatabaseTracy</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.DITracy.html">DITracy</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.FormsLatte.html">FormsLatte</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.Framework.html">Framework</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.HttpTracy.html">HttpTracy</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.SecurityTracy.html">SecurityTracy</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.Caching.html">Caching<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.Caching.Storages.html">Storages</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.ComponentModel.html">ComponentModel</a>
+						</li>
+				<li><a href="namespace-Nette.Database.html">Database<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.Database.Drivers.html">Drivers</a>
+						</li>
+				<li><a href="namespace-Nette.Database.Reflection.html">Reflection</a>
+						</li>
+				<li><a href="namespace-Nette.Database.Table.html">Table</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.DI.html">DI<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.DI.Config.html">Config<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.DI.Config.Adapters.html">Adapters</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.DI.Extensions.html">Extensions</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.Diagnostics.html">Diagnostics</a>
+						</li>
+				<li><a href="namespace-Nette.Forms.html">Forms<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.Forms.Controls.html">Controls</a>
+						</li>
+				<li><a href="namespace-Nette.Forms.Rendering.html">Rendering</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.Http.html">Http</a>
+						</li>
+				<li><a href="namespace-Nette.Iterators.html">Iterators</a>
+						</li>
+				<li><a href="namespace-Nette.Latte.html">Latte</a>
+						</li>
+				<li><a href="namespace-Nette.Loaders.html">Loaders</a>
+						</li>
+				<li><a href="namespace-Nette.Localization.html">Localization</a>
+						</li>
+				<li><a href="namespace-Nette.Mail.html">Mail</a>
+						</li>
+				<li><a href="namespace-Nette.Neon.html">Neon</a>
+						</li>
+				<li><a href="namespace-Nette.PhpGenerator.html">PhpGenerator</a>
+						</li>
+				<li><a href="namespace-Nette.Reflection.html">Reflection</a>
+						</li>
+				<li><a href="namespace-Nette.Security.html">Security</a>
+						</li>
+				<li><a href="namespace-Nette.Templating.html">Templating</a>
+						</li>
+				<li><a href="namespace-Nette.Utils.html">Utils</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-NetteModule.html">NetteModule</a>
+						</li>
+				<li><a href="namespace-none.html">none</a>
+						</li>
+				<li><a href="namespace-Tracy.html">Tracy</a>
+						</li>
+			</ul>
+		</div>
+
+		<hr>
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="Latte.Runtime.CachingIterator.html">CachingIterator</a></li>
+				<li class="active"><a href="Latte.Runtime.Filters.html">Filters</a></li>
+				<li><a href="Latte.Runtime.Html.html">Html</a></li>
+			</ul>
+
+			<h3>Interfaces</h3>
+			<ul>
+				<li><a href="Latte.Runtime.IHtmlString.html">IHtmlString</a></li>
+			</ul>
+
+
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form action="http://www.google.com/cse" id="search">
+		<input type="hidden" name="cx" value="011549293477758430224:vxofa9ufnhc">
+		<input type="hidden" name="ie" value="UTF-8">
+		<input type="text" name="q" class="text">
+		<input type="submit" value="Search">
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+				<a href="namespace-Latte.Runtime.html" title="Summary of Latte\Runtime"><span>Namespace</span></a>
+			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+			<li>
+				<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions"><span>Tree</span></a>
+			</li>
+			<li>
+				<a href="deprecated.html" title="List of deprecated elements"><span>Deprecated</span></a>
+			</li>
+		</ul>
+		<ul><li><a href="http://api.nette.org/releases"><span>Other releases</span></a></li><li><a href="http://nette.org"><span>Nette homepage</span></a></li></ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Class Filters</h1>
+
+
+	<div class="description">
+	
+<p>Template filters.</p>
+
+	</div>
+
+
+
+	<div>
+		<h4>Direct known subclasses</h4>
+			<a href="Nette.Templating.Helpers.html"><span class="deprecated">Nette\Templating\Helpers</span></a>
+	</div>
+
+
+
+
+
+
+	<div class="info">
+		
+		
+		<b>Namespace:</b> <a href="namespace-Latte.html">Latte</a>\<a href="namespace-Latte.Runtime.html">Runtime</a><br>
+		
+
+				<b>Author:</b>
+				David Grudl<br>
+		<b>Located at</b> <a href="source-Latte.Runtime.Filters.php.html#13-433" title="Go to source code">Latte/Runtime/Filters.php</a><br>
+	</div>
+
+
+
+	<table class="summary" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="escapeHtml" id="_escapeHtml">
+
+		<td class="attributes"><code>
+			 public static
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Latte.Runtime.Filters.html#_escapeHtml">#</a>
+		<code><a href="source-Latte.Runtime.Filters.php.html#27-43" title="Go to source code">escapeHtml</a>( <span>mixed <var>$s</var></span>, <span>integer <var>$quotes</var> = ENT_QUOTES</span> )</code>
+
+		<div class="description short">
+			
+<p>Escapes string for use inside HTML template.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Escapes string for use inside HTML template.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$s</var></dt>
+					<dd><code>mixed</code><br>UTF-8 encoding</dd>
+					<dt><var>$quotes</var></dt>
+					<dd><code>integer</code><br>optional attribute quotes</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="escapeHtmlComment" id="_escapeHtmlComment">
+
+		<td class="attributes"><code>
+			 public static
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Latte.Runtime.Filters.html#_escapeHtmlComment">#</a>
+		<code><a href="source-Latte.Runtime.Filters.php.html#46-58" title="Go to source code">escapeHtmlComment</a>( <span>string <var>$s</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Escapes string for use inside HTML comments.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Escapes string for use inside HTML comments.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$s</var></dt>
+					<dd><code>string</code><br>UTF-8 encoding</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="escapeXML" id="_escapeXML">
+
+		<td class="attributes"><code>
+			 public static
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Latte.Runtime.Filters.html#_escapeXML">#</a>
+		<code><a href="source-Latte.Runtime.Filters.php.html#61-72" title="Go to source code">escapeXML</a>( <span>string <var>$s</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Escapes string for use inside XML 1.0 template.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Escapes string for use inside XML 1.0 template.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$s</var></dt>
+					<dd><code>string</code><br>UTF-8 encoding</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="escapeCss" id="_escapeCss">
+
+		<td class="attributes"><code>
+			 public static
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Latte.Runtime.Filters.html#_escapeCss">#</a>
+		<code><a href="source-Latte.Runtime.Filters.php.html#75-84" title="Go to source code">escapeCss</a>( <span>string <var>$s</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Escapes string for use inside CSS template.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Escapes string for use inside CSS template.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$s</var></dt>
+					<dd><code>string</code><br>UTF-8 encoding</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="escapeJs" id="_escapeJs">
+
+		<td class="attributes"><code>
+			 public static
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Latte.Runtime.Filters.html#_escapeJs">#</a>
+		<code><a href="source-Latte.Runtime.Filters.php.html#87-104" title="Go to source code">escapeJs</a>( <span>mixed <var>$s</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Escapes variables for use inside &lt;script&gt;.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Escapes variables for use inside &lt;script&gt;.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$s</var></dt>
+					<dd><code>mixed</code><br>UTF-8 encoding</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="escapeICal" id="_escapeICal">
+
+		<td class="attributes"><code>
+			 public static
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Latte.Runtime.Filters.html#_escapeICal">#</a>
+		<code><a href="source-Latte.Runtime.Filters.php.html#107-116" title="Go to source code">escapeICal</a>( <span>mixed <var>$s</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Escapes string for use inside iCal template.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Escapes string for use inside iCal template.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$s</var></dt>
+					<dd><code>mixed</code><br>UTF-8 encoding</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="safeUrl" id="_safeUrl">
+
+		<td class="attributes"><code>
+			 public static
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Latte.Runtime.Filters.html#_safeUrl">#</a>
+		<code><a href="source-Latte.Runtime.Filters.php.html#119-127" title="Go to source code">safeUrl</a>( <span>string <var>$s</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Sanitizes string for use inside href attribute.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Sanitizes string for use inside href attribute.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$s</var></dt>
+					<dd><code>string</code></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="strip" id="_strip">
+
+		<td class="attributes"><code>
+			 public static
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Latte.Runtime.Filters.html#_strip">#</a>
+		<code><a href="source-Latte.Runtime.Filters.php.html#130-144" title="Go to source code">strip</a>( <span>string <var>$s</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Replaces all repeated white spaces with a single space.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Replaces all repeated white spaces with a single space.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$s</var></dt>
+					<dd><code>string</code><br>UTF-8 encoding or 8-bit</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="indent" id="_indent">
+
+		<td class="attributes"><code>
+			 public static
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Latte.Runtime.Filters.html#_indent">#</a>
+		<code><a href="source-Latte.Runtime.Filters.php.html#147-167" title="Go to source code">indent</a>( <span>string <var>$s</var></span>, <span>integer <var>$level</var> = <span class="php-num">1</span></span>, <span>string <var>$chars</var> = <span class="php-quote">&quot;\t&quot;</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Indents the HTML content from the left.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Indents the HTML content from the left.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$s</var></dt>
+					<dd><code>string</code><br>UTF-8 encoding or 8-bit</dd>
+					<dt><var>$level</var></dt>
+					<dd><code>integer</code></dd>
+					<dt><var>$chars</var></dt>
+					<dd><code>string</code></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="date" id="_date">
+
+		<td class="attributes"><code>
+			 public static
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Latte.Runtime.Filters.html#_date">#</a>
+		<code><a href="source-Latte.Runtime.Filters.php.html#170-195" title="Go to source code">date</a>( <span>string|integer|<code><a href="DateTime.html">DateTime</a></code>|<code><a href="DateInterval.html">DateInterval</a></code> <var>$time</var></span>, <span>string <var>$format</var> = <span class="php-keyword1">NULL</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Date/time formatting.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Date/time formatting.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$time</var></dt>
+					<dd><code>string|integer|<code><a href="DateTime.html">DateTime</a></code>|<code><a href="DateInterval.html">DateInterval</a></code></code></dd>
+					<dt><var>$format</var></dt>
+					<dd><code>string</code></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="bytes" id="_bytes">
+
+		<td class="attributes"><code>
+			 public static
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Latte.Runtime.Filters.html#_bytes">#</a>
+		<code><a href="source-Latte.Runtime.Filters.php.html#198-215" title="Go to source code">bytes</a>( <span>integer <var>$bytes</var></span>, <span>integer <var>$precision</var> = <span class="php-num">2</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Converts to human readable file size.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Converts to human readable file size.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$bytes</var></dt>
+					<dd><code>integer</code></dd>
+					<dt><var>$precision</var></dt>
+					<dd><code>integer</code></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="replace" id="_replace">
+
+		<td class="attributes"><code>
+			 public static
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Latte.Runtime.Filters.html#_replace">#</a>
+		<code><a href="source-Latte.Runtime.Filters.php.html#218-228" title="Go to source code">replace</a>( <span>string <var>$subject</var></span>, <span>string <var>$search</var></span>, <span>string <var>$replacement</var> = <span class="php-quote">''</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Performs a search and replace.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Performs a search and replace.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$subject</var></dt>
+					<dd><code>string</code></dd>
+					<dt><var>$search</var></dt>
+					<dd><code>string</code></dd>
+					<dt><var>$replacement</var></dt>
+					<dd><code>string</code></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="replaceRe" id="_replaceRe">
+
+		<td class="attributes"><code>
+			 public static
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Latte.Runtime.Filters.html#_replaceRe">#</a>
+		<code><a href="source-Latte.Runtime.Filters.php.html#231-244" title="Go to source code">replaceRe</a>( <span>string <var>$subject</var></span>, <span>string <var>$pattern</var></span>, <span> <var>$replacement</var> = <span class="php-quote">''</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Perform a regular expression search and replace.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Perform a regular expression search and replace.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$subject</var></dt>
+					<dd><code>string</code></dd>
+					<dt><var>$pattern</var></dt>
+					<dd><code>string</code></dd>
+					<dt><var>$replacement</var></dt>
+					<dd></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="dataStream" id="_dataStream">
+
+		<td class="attributes"><code>
+			 public static
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Latte.Runtime.Filters.html#_dataStream">#</a>
+		<code><a href="source-Latte.Runtime.Filters.php.html#247-259" title="Go to source code">dataStream</a>( <span>string <var>$data</var></span>, <span>string <var>$type</var> = <span class="php-keyword1">NULL</span></span> )</code>
+
+		<div class="description short">
+			
+<p>The data: URI generator.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>The data: URI generator.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$data</var></dt>
+					<dd><code>string</code></dd>
+					<dt><var>$type</var></dt>
+					<dd><code>string</code></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="nl2br" id="_nl2br">
+
+		<td class="attributes"><code>
+			 public static
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Latte.Runtime.Filters.html#_nl2br">#</a>
+		<code><a href="source-Latte.Runtime.Filters.php.html#262-269" title="Go to source code">nl2br</a>( <span>string <var>$value</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$value</var></dt>
+					<dd><code>string</code></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="substring" id="_substring">
+
+		<td class="attributes"><code>
+			 public static
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Latte.Runtime.Filters.html#_substring">#</a>
+		<code><a href="source-Latte.Runtime.Filters.php.html#272-288" title="Go to source code">substring</a>( <span>string <var>$s</var></span>, <span>integer <var>$start</var></span>, <span>integer <var>$length</var> = <span class="php-keyword1">NULL</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Returns a part of UTF-8 string.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns a part of UTF-8 string.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$s</var></dt>
+					<dd><code>string</code></dd>
+					<dt><var>$start</var></dt>
+					<dd><code>integer</code></dd>
+					<dt><var>$length</var></dt>
+					<dd><code>integer</code></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="truncate" id="_truncate">
+
+		<td class="attributes"><code>
+			 public static
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Latte.Runtime.Filters.html#_truncate">#</a>
+		<code><a href="source-Latte.Runtime.Filters.php.html#291-313" title="Go to source code">truncate</a>( <span>string <var>$s</var></span>, <span>integer <var>$maxLen</var></span>, <span>string <var>$append</var> = <span class="php-quote">&quot;\xE2\x80\xA6&quot;</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Truncates string to maximal length.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Truncates string to maximal length.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$s</var></dt>
+					<dd><code>string</code><br>UTF-8 encoding</dd>
+					<dt><var>$maxLen</var></dt>
+					<dd><code>integer</code></dd>
+					<dt><var>$append</var></dt>
+					<dd><code>string</code><br>UTF-8 encoding</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="lower" id="_lower">
+
+		<td class="attributes"><code>
+			 public static
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Latte.Runtime.Filters.html#_lower">#</a>
+		<code><a href="source-Latte.Runtime.Filters.php.html#316-323" title="Go to source code">lower</a>( <span> <var>$s</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Convert to lower case.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Convert to lower case.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="upper" id="_upper">
+
+		<td class="attributes"><code>
+			 public static
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Latte.Runtime.Filters.html#_upper">#</a>
+		<code><a href="source-Latte.Runtime.Filters.php.html#326-333" title="Go to source code">upper</a>( <span> <var>$s</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Convert to upper case.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Convert to upper case.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="firstUpper" id="_firstUpper">
+
+		<td class="attributes"><code>
+			 public static
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Latte.Runtime.Filters.html#_firstUpper">#</a>
+		<code><a href="source-Latte.Runtime.Filters.php.html#336-343" title="Go to source code">firstUpper</a>( <span> <var>$s</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Convert first character to upper case.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Convert first character to upper case.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="capitalize" id="_capitalize">
+
+		<td class="attributes"><code>
+			 public static
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Latte.Runtime.Filters.html#_capitalize">#</a>
+		<code><a href="source-Latte.Runtime.Filters.php.html#346-353" title="Go to source code">capitalize</a>( <span> <var>$s</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Capitalize string.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Capitalize string.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="length" id="_length">
+
+		<td class="attributes"><code>
+			 public static
+			integer
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Latte.Runtime.Filters.html#_length">#</a>
+		<code><a href="source-Latte.Runtime.Filters.php.html#356-363" title="Go to source code">length</a>( <span> <var>$s</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Returns UTF-8 string length.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns UTF-8 string length.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>integer</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="trim" id="_trim">
+
+		<td class="attributes"><code>
+			 public static
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Latte.Runtime.Filters.html#_trim">#</a>
+		<code><a href="source-Latte.Runtime.Filters.php.html#366-380" title="Go to source code">trim</a>( <span>string <var>$s</var></span>, <span>string <var>$charlist</var> = <span class="php-quote">&quot; \t\n\r\0\x0B\xC2\xA0&quot;</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Strips whitespace.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Strips whitespace.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$s</var></dt>
+					<dd><code>string</code><br>UTF-8 encoding</dd>
+					<dt><var>$charlist</var></dt>
+					<dd><code>string</code></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="htmlAttributes" id="_htmlAttributes">
+
+		<td class="attributes"><code>
+			 public static
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Latte.Runtime.Filters.html#_htmlAttributes">#</a>
+		<code><a href="source-Latte.Runtime.Filters.php.html#383-431" title="Go to source code">htmlAttributes</a>( <span> <var>$attrs</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Returns element's attributes.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns element's attributes.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+
+
+
+
+	<table class="summary" id="properties">
+	<caption>Properties summary</caption>
+	<tr data-order="dateFormat" id="$dateFormat">
+		<td class="attributes"><code>
+			public static 
+			string
+		</code></td>
+
+		<td class="name">
+				<a href="source-Latte.Runtime.Filters.php.html#20-21" title="Go to source code"><var>$dateFormat</var></a>
+		</td>
+		<td class="value"><code><span class="php-quote">'%x'</span></code></td>
+		<td class="description"><div>
+			<a href="Latte.Runtime.Filters.html#$dateFormat" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>default date format</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>default date format</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="xhtml" id="$xhtml">
+		<td class="attributes"><code>
+			public static 
+			boolean
+		</code></td>
+
+		<td class="name">
+				<a href="source-Latte.Runtime.Filters.php.html#23-24" title="Go to source code"><var>$xhtml</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">FALSE</span></code></td>
+		<td class="description"><div>
+			<a href="Latte.Runtime.Filters.html#$xhtml" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>use XHTML syntax?</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>use XHTML syntax?</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+</div>
+
+	<div id="footer">
+		Nette 2.2.2 API API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+	</div>
+</div>
+</div>
+<script src="resources/combined.js?3630868369"></script>
+<script src="elementlist.js?2087501429"></script>
+</body>
+</html>

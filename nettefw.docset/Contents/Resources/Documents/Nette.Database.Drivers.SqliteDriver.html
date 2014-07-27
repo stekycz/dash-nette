@@ -1,0 +1,862 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="generator" content="ApiGen 2.8.0">
+
+	<title>Class Nette\Database\Drivers\SqliteDriver | Nette 2.2.2 API</title>
+
+	<link rel="stylesheet" href="resources/style.css?3746977979">
+	<link rel="search" type="application/opensearchdescription+xml" title="Nette 2.2.2 API" href="http://api.nette.org/2.0/opensearch.xml">
+
+
+<script src='http://files.nette.org/js/analytics.js'></script><script>
+_ga.create('UA-95238-14', '.nette.org');
+_gaq.push(['_trackPageview']);
+</script>
+</head>
+
+<body>
+<div id="left">
+	<div id="menu">
+
+		<div id="groups">
+			<h3>Namespaces</h3>
+			<ul>
+				<li><a href="namespace-Latte.html">Latte<span></span></a>
+						<ul>
+				<li><a href="namespace-Latte.Loaders.html">Loaders</a>
+						</li>
+				<li><a href="namespace-Latte.Macros.html">Macros</a>
+						</li>
+				<li><a href="namespace-Latte.Runtime.html">Runtime</a>
+						</li>
+							</ul></li>
+				<li class="active"><a href="namespace-Nette.html">Nette<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.Application.html">Application<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.Application.Responses.html">Responses</a>
+						</li>
+				<li><a href="namespace-Nette.Application.Routers.html">Routers</a>
+						</li>
+				<li><a href="namespace-Nette.Application.UI.html">UI</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.Bridges.html">Bridges<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.Bridges.ApplicationLatte.html">ApplicationLatte</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.ApplicationTracy.html">ApplicationTracy</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.CacheLatte.html">CacheLatte</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.DatabaseDI.html">DatabaseDI</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.DatabaseTracy.html">DatabaseTracy</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.DITracy.html">DITracy</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.FormsLatte.html">FormsLatte</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.Framework.html">Framework</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.HttpTracy.html">HttpTracy</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.SecurityTracy.html">SecurityTracy</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.Caching.html">Caching<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.Caching.Storages.html">Storages</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.ComponentModel.html">ComponentModel</a>
+						</li>
+				<li class="active"><a href="namespace-Nette.Database.html">Database<span></span></a>
+						<ul>
+				<li class="active"><a href="namespace-Nette.Database.Drivers.html">Drivers</a>
+						</li>
+				<li><a href="namespace-Nette.Database.Reflection.html">Reflection</a>
+						</li>
+				<li><a href="namespace-Nette.Database.Table.html">Table</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.DI.html">DI<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.DI.Config.html">Config<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.DI.Config.Adapters.html">Adapters</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.DI.Extensions.html">Extensions</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.Diagnostics.html">Diagnostics</a>
+						</li>
+				<li><a href="namespace-Nette.Forms.html">Forms<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.Forms.Controls.html">Controls</a>
+						</li>
+				<li><a href="namespace-Nette.Forms.Rendering.html">Rendering</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.Http.html">Http</a>
+						</li>
+				<li><a href="namespace-Nette.Iterators.html">Iterators</a>
+						</li>
+				<li><a href="namespace-Nette.Latte.html">Latte</a>
+						</li>
+				<li><a href="namespace-Nette.Loaders.html">Loaders</a>
+						</li>
+				<li><a href="namespace-Nette.Localization.html">Localization</a>
+						</li>
+				<li><a href="namespace-Nette.Mail.html">Mail</a>
+						</li>
+				<li><a href="namespace-Nette.Neon.html">Neon</a>
+						</li>
+				<li><a href="namespace-Nette.PhpGenerator.html">PhpGenerator</a>
+						</li>
+				<li><a href="namespace-Nette.Reflection.html">Reflection</a>
+						</li>
+				<li><a href="namespace-Nette.Security.html">Security</a>
+						</li>
+				<li><a href="namespace-Nette.Templating.html">Templating</a>
+						</li>
+				<li><a href="namespace-Nette.Utils.html">Utils</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-NetteModule.html">NetteModule</a>
+						</li>
+				<li><a href="namespace-none.html">none</a>
+						</li>
+				<li><a href="namespace-Tracy.html">Tracy</a>
+						</li>
+			</ul>
+		</div>
+
+		<hr>
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="Nette.Database.Drivers.MsSqlDriver.html">MsSqlDriver</a></li>
+				<li><a href="Nette.Database.Drivers.MySqlDriver.html">MySqlDriver</a></li>
+				<li><a href="Nette.Database.Drivers.OciDriver.html">OciDriver</a></li>
+				<li><a href="Nette.Database.Drivers.OdbcDriver.html">OdbcDriver</a></li>
+				<li><a href="Nette.Database.Drivers.PgSqlDriver.html">PgSqlDriver</a></li>
+				<li><a href="Nette.Database.Drivers.Sqlite2Driver.html">Sqlite2Driver</a></li>
+				<li class="active"><a href="Nette.Database.Drivers.SqliteDriver.html">SqliteDriver</a></li>
+				<li><a href="Nette.Database.Drivers.SqlsrvDriver.html">SqlsrvDriver</a></li>
+			</ul>
+
+
+
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form action="http://www.google.com/cse" id="search">
+		<input type="hidden" name="cx" value="011549293477758430224:vxofa9ufnhc">
+		<input type="hidden" name="ie" value="UTF-8">
+		<input type="text" name="q" class="text">
+		<input type="submit" value="Search">
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+				<a href="namespace-Nette.Database.Drivers.html" title="Summary of Nette\Database\Drivers"><span>Namespace</span></a>
+			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+			<li>
+				<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions"><span>Tree</span></a>
+			</li>
+			<li>
+				<a href="deprecated.html" title="List of deprecated elements"><span>Deprecated</span></a>
+			</li>
+		</ul>
+		<ul><li><a href="http://api.nette.org/releases"><span>Other releases</span></a></li><li><a href="http://nette.org"><span>Nette homepage</span></a></li></ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Class SqliteDriver</h1>
+
+
+	<div class="description">
+	
+<p>Supplemental SQLite3 database driver.</p>
+
+	</div>
+
+	<dl class="tree">
+		<dd style="padding-left:0px">
+			<a href="Nette.Object.html"><span>Nette\Object</span></a>
+			
+			
+			
+		</dd>
+		<dd style="padding-left:30px">
+			<img src="resources/inherit.png" alt="Extended by">
+<b><span>Nette\Database\Drivers\SqliteDriver</span></b>			
+			 implements 
+				<a href="Nette.Database.ISupplementalDriver.html"><span>Nette\Database\ISupplementalDriver</span></a>
+			
+			
+		</dd>
+	</dl>
+
+
+	<div>
+		<h4>Direct known subclasses</h4>
+			<a href="Nette.Database.Drivers.Sqlite2Driver.html">Nette\Database\Drivers\Sqlite2Driver</a>
+	</div>
+
+
+
+
+
+
+	<div class="info">
+		
+		
+		<b>Namespace:</b> <a href="namespace-Nette.html">Nette</a>\<a href="namespace-Nette.Database.html">Database</a>\<a href="namespace-Nette.Database.Drivers.html">Drivers</a><br>
+		
+
+				<b>Author:</b>
+				David Grudl<br>
+		<b>Located at</b> <a href="source-Database.Drivers.SqliteDriver.php.html#13-261" title="Go to source code">Database/Drivers/SqliteDriver.php</a><br>
+	</div>
+
+
+
+	<table class="summary" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="__construct" id="___construct">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Database.Drivers.SqliteDriver.html#___construct">#</a>
+		<code><a href="source-Database.Drivers.SqliteDriver.php.html#27-32" title="Go to source code">__construct</a>( <span><code><a href="Nette.Database.Connection.html">Nette\Database\Connection</a></code> <var>$connection</var></span>, <span>array <var>$options</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="delimite" id="_delimite">
+
+		<td class="attributes"><code>
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Database.Drivers.SqliteDriver.html#_delimite">#</a>
+		<code><a href="source-Database.Drivers.SqliteDriver.php.html#38-44" title="Go to source code">delimite</a>( <span>string <var>$name</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Delimites identifier for use in a SQL statement.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Delimites identifier for use in a SQL statement.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$name</var></dt>
+					<dd><code>string</code></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>
+				</div>
+
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="Nette.Database.ISupplementalDriver.html#_delimite">Nette\Database\ISupplementalDriver::delimite()</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="formatBool" id="_formatBool">
+
+		<td class="attributes"><code>
+			 public 
+			mixed
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Database.Drivers.SqliteDriver.html#_formatBool">#</a>
+		<code><a href="source-Database.Drivers.SqliteDriver.php.html#47-53" title="Go to source code">formatBool</a>( <span>boolean <var>$value</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Formats boolean for use in a SQL statement.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Formats boolean for use in a SQL statement.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$value</var></dt>
+					<dd><code>boolean</code></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>mixed</code><br>
+				</div>
+
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="Nette.Database.ISupplementalDriver.html#_formatBool">Nette\Database\ISupplementalDriver::formatBool()</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="formatDateTime" id="_formatDateTime">
+
+		<td class="attributes"><code>
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Database.Drivers.SqliteDriver.html#_formatDateTime">#</a>
+		<code><a href="source-Database.Drivers.SqliteDriver.php.html#56-62" title="Go to source code">formatDateTime</a>( <span> <var>$value</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Formats date-time for use in a SQL statement.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Formats date-time for use in a SQL statement.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>
+				</div>
+
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="Nette.Database.ISupplementalDriver.html#_formatDateTime">Nette\Database\ISupplementalDriver::formatDateTime()</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="formatLike" id="_formatLike">
+
+		<td class="attributes"><code>
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Database.Drivers.SqliteDriver.html#_formatLike">#</a>
+		<code><a href="source-Database.Drivers.SqliteDriver.php.html#65-72" title="Go to source code">formatLike</a>( <span>string <var>$value</var></span>, <span>integer <var>$pos</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Encodes string for use in a LIKE statement.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Encodes string for use in a LIKE statement.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$value</var></dt>
+					<dd><code>string</code></dd>
+					<dt><var>$pos</var></dt>
+					<dd><code>integer</code></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>
+				</div>
+
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="Nette.Database.ISupplementalDriver.html#_formatLike">Nette\Database\ISupplementalDriver::formatLike()</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="applyLimit" id="_applyLimit">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Database.Drivers.SqliteDriver.html#_applyLimit">#</a>
+		<code><a href="source-Database.Drivers.SqliteDriver.php.html#75-83" title="Go to source code">applyLimit</a>( <span>string <var>&amp; $sql</var></span>, <span>integer <var>$limit</var></span>, <span>integer <var>$offset</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Injects LIMIT/OFFSET to the SQL query.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Injects LIMIT/OFFSET to the SQL query.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$sql</var></dt>
+					<dd><code>string</code><br>SQL query that will be modified.</dd>
+					<dt><var>$limit</var></dt>
+					<dd><code>integer</code></dd>
+					<dt><var>$offset</var></dt>
+					<dd><code>integer</code></dd>
+				</dl></div>
+
+
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="Nette.Database.ISupplementalDriver.html#_applyLimit">Nette\Database\ISupplementalDriver::applyLimit()</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="normalizeRow" id="_normalizeRow">
+
+		<td class="attributes"><code>
+			 public 
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Database.Drivers.SqliteDriver.html#_normalizeRow">#</a>
+		<code><a href="source-Database.Drivers.SqliteDriver.php.html#86-99" title="Go to source code">normalizeRow</a>( <span>array <var>$row</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Normalizes result row.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Normalizes result row.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$row</var></dt>
+					<dd><code>array</code></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>array</code><br>
+				</div>
+
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="Nette.Database.ISupplementalDriver.html#_normalizeRow">Nette\Database\ISupplementalDriver::normalizeRow()</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getTables" id="_getTables">
+
+		<td class="attributes"><code>
+			 public 
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Database.Drivers.SqliteDriver.html#_getTables">#</a>
+		<code><a href="source-Database.Drivers.SqliteDriver.php.html#105-124" title="Go to source code">getTables</a>( )</code>
+
+		<div class="description short">
+			
+<p>Returns list of tables.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns list of tables.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>array</code><br>of [name [, (bool) view]]<br>
+				</div>
+
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="Nette.Database.ISupplementalDriver.html#_getTables">Nette\Database\ISupplementalDriver::getTables()</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getColumns" id="_getColumns">
+
+		<td class="attributes"><code>
+			 public 
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Database.Drivers.SqliteDriver.html#_getColumns">#</a>
+		<code><a href="source-Database.Drivers.SqliteDriver.php.html#127-157" title="Go to source code">getColumns</a>( <span>string <var>$table</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Returns metadata for all columns in a table.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns metadata for all columns in a table.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$table</var></dt>
+					<dd><code>string</code></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>array</code><br>of [name, nativetype, primary [, table, fullname, (int) size, (bool) nullable,
+(mixed) default, (bool) autoincrement, (array) vendor]]<br>
+				</div>
+
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="Nette.Database.ISupplementalDriver.html#_getColumns">Nette\Database\ISupplementalDriver::getColumns()</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getIndexes" id="_getIndexes">
+
+		<td class="attributes"><code>
+			 public 
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Database.Drivers.SqliteDriver.html#_getIndexes">#</a>
+		<code><a href="source-Database.Drivers.SqliteDriver.php.html#160-204" title="Go to source code">getIndexes</a>( <span>string <var>$table</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Returns metadata for all indexes in a table.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns metadata for all indexes in a table.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$table</var></dt>
+					<dd><code>string</code></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>array</code><br>of [name, (array of names) columns [, (bool) unique, (bool) primary]]<br>
+				</div>
+
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="Nette.Database.ISupplementalDriver.html#_getIndexes">Nette\Database\ISupplementalDriver::getIndexes()</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getForeignKeys" id="_getForeignKeys">
+
+		<td class="attributes"><code>
+			 public 
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Database.Drivers.SqliteDriver.html#_getForeignKeys">#</a>
+		<code><a href="source-Database.Drivers.SqliteDriver.php.html#207-226" title="Go to source code">getForeignKeys</a>( <span>string <var>$table</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Returns metadata for all foreign keys in a table.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns metadata for all foreign keys in a table.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$table</var></dt>
+					<dd><code>string</code></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>array</code><br>
+				</div>
+
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="Nette.Database.ISupplementalDriver.html#_getForeignKeys">Nette\Database\ISupplementalDriver::getForeignKeys()</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getColumnTypes" id="_getColumnTypes">
+
+		<td class="attributes"><code>
+			 public 
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Database.Drivers.SqliteDriver.html#_getColumnTypes">#</a>
+		<code><a href="source-Database.Drivers.SqliteDriver.php.html#229-249" title="Go to source code">getColumnTypes</a>( <span><code><a href="PDOStatement.html">PDOStatement</a></code> <var>$statement</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Returns associative array of detected types (IReflection::FIELD_*) in result
+set.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns associative array of detected types (IReflection::FIELD_*) in result
+set.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$statement</var></dt>
+					<dd><code><code><a href="PDOStatement.html">PDOStatement</a></code></code></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>array</code><br>
+				</div>
+
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="Nette.Database.ISupplementalDriver.html#_getColumnTypes">Nette\Database\ISupplementalDriver::getColumnTypes()</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="isSupported" id="_isSupported">
+
+		<td class="attributes"><code>
+			 public 
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Database.Drivers.SqliteDriver.html#_isSupported">#</a>
+		<code><a href="source-Database.Drivers.SqliteDriver.php.html#252-259" title="Go to source code">isSupported</a>( <span>string <var>$item</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$item</var></dt>
+					<dd><code>string</code></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br>
+				</div>
+
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="Nette.Database.ISupplementalDriver.html#_isSupported">Nette\Database\ISupplementalDriver::isSupported()</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+	<table class="summary inherited">
+	<caption>Methods inherited from <a href="Nette.Object.html#methods">Nette\Object</a></caption>
+	<tr>
+		<td><code>
+			<a href="Nette.Object.html#___call">__call()</a>, 
+			<a href="Nette.Object.html#___callStatic">__callStatic()</a>, 
+			<a href="Nette.Object.html#___get">__get()</a>, 
+			<a href="Nette.Object.html#___isset">__isset()</a>, 
+			<a href="Nette.Object.html#___set">__set()</a>, 
+			<a href="Nette.Object.html#___unset">__unset()</a>, 
+			<a href="Nette.Object.html#_extensionMethod">extensionMethod()</a>, 
+			<a href="Nette.Object.html#_getReflection">getReflection()</a>
+		</code></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+	<table class="summary inherited">
+	<caption>Constants inherited from <a href="Nette.Database.ISupplementalDriver.html#constants">Nette\Database\ISupplementalDriver</a></caption>
+	<tr>
+		<td><code>
+			<a href="Nette.Database.ISupplementalDriver.html#SUPPORT_MULTI_COLUMN_AS_OR_COND"><b>SUPPORT_MULTI_COLUMN_AS_OR_COND</b></a>, 
+			<a href="Nette.Database.ISupplementalDriver.html#SUPPORT_MULTI_INSERT_AS_SELECT"><b>SUPPORT_MULTI_INSERT_AS_SELECT</b></a>, 
+			<a href="Nette.Database.ISupplementalDriver.html#SUPPORT_SELECT_UNGROUPED_COLUMNS"><b>SUPPORT_SELECT_UNGROUPED_COLUMNS</b></a>, 
+			<a href="Nette.Database.ISupplementalDriver.html#SUPPORT_SEQUENCE"><b>SUPPORT_SEQUENCE</b></a>, 
+			<a href="Nette.Database.ISupplementalDriver.html#SUPPORT_SUBSELECT"><b>SUPPORT_SUBSELECT</b></a>
+		</code></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+	<table class="summary inherited">
+	<caption>Magic properties inherited from <a href="Nette.Object.html#properties">Nette\Object</a></caption>
+	<tr>
+		<td><code>
+			<a href="Nette.Object.html#m$reflection"><var>$reflection</var></a>
+		</code></td>
+	</tr>
+	</table>
+
+
+</div>
+
+	<div id="footer">
+		Nette 2.2.2 API API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+	</div>
+</div>
+</div>
+<script src="resources/combined.js?3630868369"></script>
+<script src="elementlist.js?2087501429"></script>
+</body>
+</html>

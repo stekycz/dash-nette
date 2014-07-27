@@ -1,0 +1,1591 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="generator" content="ApiGen 2.8.0">
+
+	<title>Class Nette\Utils\Strings | Nette 2.2.2 API</title>
+
+	<link rel="stylesheet" href="resources/style.css?3746977979">
+	<link rel="search" type="application/opensearchdescription+xml" title="Nette 2.2.2 API" href="http://api.nette.org/2.0/opensearch.xml">
+
+
+<script src='http://files.nette.org/js/analytics.js'></script><script>
+_ga.create('UA-95238-14', '.nette.org');
+_gaq.push(['_trackPageview']);
+</script>
+</head>
+
+<body>
+<div id="left">
+	<div id="menu">
+
+		<div id="groups">
+			<h3>Namespaces</h3>
+			<ul>
+				<li><a href="namespace-Latte.html">Latte<span></span></a>
+						<ul>
+				<li><a href="namespace-Latte.Loaders.html">Loaders</a>
+						</li>
+				<li><a href="namespace-Latte.Macros.html">Macros</a>
+						</li>
+				<li><a href="namespace-Latte.Runtime.html">Runtime</a>
+						</li>
+							</ul></li>
+				<li class="active"><a href="namespace-Nette.html">Nette<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.Application.html">Application<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.Application.Responses.html">Responses</a>
+						</li>
+				<li><a href="namespace-Nette.Application.Routers.html">Routers</a>
+						</li>
+				<li><a href="namespace-Nette.Application.UI.html">UI</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.Bridges.html">Bridges<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.Bridges.ApplicationLatte.html">ApplicationLatte</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.ApplicationTracy.html">ApplicationTracy</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.CacheLatte.html">CacheLatte</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.DatabaseDI.html">DatabaseDI</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.DatabaseTracy.html">DatabaseTracy</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.DITracy.html">DITracy</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.FormsLatte.html">FormsLatte</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.Framework.html">Framework</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.HttpTracy.html">HttpTracy</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.SecurityTracy.html">SecurityTracy</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.Caching.html">Caching<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.Caching.Storages.html">Storages</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.ComponentModel.html">ComponentModel</a>
+						</li>
+				<li><a href="namespace-Nette.Database.html">Database<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.Database.Drivers.html">Drivers</a>
+						</li>
+				<li><a href="namespace-Nette.Database.Reflection.html">Reflection</a>
+						</li>
+				<li><a href="namespace-Nette.Database.Table.html">Table</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.DI.html">DI<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.DI.Config.html">Config<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.DI.Config.Adapters.html">Adapters</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.DI.Extensions.html">Extensions</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.Diagnostics.html">Diagnostics</a>
+						</li>
+				<li><a href="namespace-Nette.Forms.html">Forms<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.Forms.Controls.html">Controls</a>
+						</li>
+				<li><a href="namespace-Nette.Forms.Rendering.html">Rendering</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.Http.html">Http</a>
+						</li>
+				<li><a href="namespace-Nette.Iterators.html">Iterators</a>
+						</li>
+				<li><a href="namespace-Nette.Latte.html">Latte</a>
+						</li>
+				<li><a href="namespace-Nette.Loaders.html">Loaders</a>
+						</li>
+				<li><a href="namespace-Nette.Localization.html">Localization</a>
+						</li>
+				<li><a href="namespace-Nette.Mail.html">Mail</a>
+						</li>
+				<li><a href="namespace-Nette.Neon.html">Neon</a>
+						</li>
+				<li><a href="namespace-Nette.PhpGenerator.html">PhpGenerator</a>
+						</li>
+				<li><a href="namespace-Nette.Reflection.html">Reflection</a>
+						</li>
+				<li><a href="namespace-Nette.Security.html">Security</a>
+						</li>
+				<li><a href="namespace-Nette.Templating.html">Templating</a>
+						</li>
+				<li class="active"><a href="namespace-Nette.Utils.html">Utils</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-NetteModule.html">NetteModule</a>
+						</li>
+				<li><a href="namespace-none.html">none</a>
+						</li>
+				<li><a href="namespace-Tracy.html">Tracy</a>
+						</li>
+			</ul>
+		</div>
+
+		<hr>
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="Nette.Utils.ArrayHash.html">ArrayHash</a></li>
+				<li><a href="Nette.Utils.ArrayList.html">ArrayList</a></li>
+				<li><a href="Nette.Utils.Arrays.html">Arrays</a></li>
+				<li><a href="Nette.Utils.Callback.html">Callback</a></li>
+				<li><a href="Nette.Utils.CallbackFilterIterator.html">CallbackFilterIterator</a></li>
+				<li><a href="Nette.Utils.DateTime.html">DateTime</a></li>
+				<li><a href="Nette.Utils.FileSystem.html">FileSystem</a></li>
+				<li><a href="Nette.Utils.Finder.html">Finder</a></li>
+				<li><a href="Nette.Utils.Html.html">Html</a></li>
+				<li><a href="Nette.Utils.Image.html">Image</a></li>
+				<li><a href="Nette.Utils.Json.html">Json</a></li>
+				<li><a href="Nette.Utils.LimitedScope.html" class="deprecated">LimitedScope</a></li>
+				<li><a href="Nette.Utils.MimeTypeDetector.html" class="deprecated">MimeTypeDetector</a></li>
+				<li><a href="Nette.Utils.ObjectMixin.html">ObjectMixin</a></li>
+				<li><a href="Nette.Utils.Paginator.html">Paginator</a></li>
+				<li><a href="Nette.Utils.Random.html">Random</a></li>
+				<li><a href="Nette.Utils.RecursiveCallbackFilterIterator.html">RecursiveCallbackFilterIterator</a></li>
+				<li class="active"><a href="Nette.Utils.Strings.html">Strings</a></li>
+				<li><a href="Nette.Utils.TokenIterator.html">TokenIterator</a></li>
+				<li><a href="Nette.Utils.Tokenizer.html">Tokenizer</a></li>
+				<li><a href="Nette.Utils.Validators.html">Validators</a></li>
+			</ul>
+
+			<h3>Interfaces</h3>
+			<ul>
+				<li><a href="Nette.Utils.IHtmlString.html">IHtmlString</a></li>
+			</ul>
+
+
+			<h3>Exceptions</h3>
+			<ul>
+				<li><a href="Nette.Utils.AssertionException.html">AssertionException</a></li>
+				<li><a href="Nette.Utils.JsonException.html">JsonException</a></li>
+				<li><a href="Nette.Utils.RegexpException.html">RegexpException</a></li>
+				<li><a href="Nette.Utils.TokenizerException.html">TokenizerException</a></li>
+				<li><a href="Nette.Utils.UnknownImageFileException.html">UnknownImageFileException</a></li>
+			</ul>
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form action="http://www.google.com/cse" id="search">
+		<input type="hidden" name="cx" value="011549293477758430224:vxofa9ufnhc">
+		<input type="hidden" name="ie" value="UTF-8">
+		<input type="text" name="q" class="text">
+		<input type="submit" value="Search">
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+				<a href="namespace-Nette.Utils.html" title="Summary of Nette\Utils"><span>Namespace</span></a>
+			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+			<li>
+				<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions"><span>Tree</span></a>
+			</li>
+			<li>
+				<a href="deprecated.html" title="List of deprecated elements"><span>Deprecated</span></a>
+			</li>
+		</ul>
+		<ul><li><a href="http://api.nette.org/releases"><span>Other releases</span></a></li><li><a href="http://nette.org"><span>Nette homepage</span></a></li></ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Class Strings</h1>
+
+
+	<div class="description">
+	
+<p>String tools library.</p>
+
+	</div>
+
+
+
+
+
+
+
+
+
+	<div class="info">
+		
+		
+		<b>Namespace:</b> <a href="namespace-Nette.html">Nette</a>\<a href="namespace-Nette.Utils.html">Utils</a><br>
+		
+
+				<b>Author:</b>
+				David Grudl<br>
+		<b>Located at</b> <a href="source-Utils.Strings.php.html#13-547" title="Go to source code">Utils/Strings.php</a><br>
+	</div>
+
+
+
+	<table class="summary" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="__construct" id="___construct">
+
+		<td class="attributes"><code>
+			final public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Utils.Strings.html#___construct">#</a>
+		<code><a href="source-Utils.Strings.php.html#21-27" title="Go to source code">__construct</a>( )</code>
+
+		<div class="description short">
+			
+<p>Static class - cannot be instantiated.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Static class - cannot be instantiated.</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="checkEncoding" id="_checkEncoding">
+
+		<td class="attributes"><code>
+			 public static
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Utils.Strings.html#_checkEncoding">#</a>
+		<code><a href="source-Utils.Strings.php.html#30-41" title="Go to source code">checkEncoding</a>( <span>string <var>$s</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Checks if the string is valid for UTF-8 encoding.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Checks if the string is valid for UTF-8 encoding.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$s</var></dt>
+					<dd><code>string</code><br>byte stream to check</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="fixEncoding" id="_fixEncoding">
+
+		<td class="attributes"><code>
+			 public static
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Utils.Strings.html#_fixEncoding">#</a>
+		<code><a href="source-Utils.Strings.php.html#44-60" title="Go to source code">fixEncoding</a>( <span>string <var>$s</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Removes invalid code unit sequences from UTF-8 string.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Removes invalid code unit sequences from UTF-8 string.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$s</var></dt>
+					<dd><code>string</code><br>byte stream to fix</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="chr" id="_chr">
+
+		<td class="attributes"><code>
+			 public static
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Utils.Strings.html#_chr">#</a>
+		<code><a href="source-Utils.Strings.php.html#63-74" title="Go to source code">chr</a>( <span>integer <var>$code</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Returns a specific character in UTF-8.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns a specific character in UTF-8.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$code</var></dt>
+					<dd><code>integer</code><br>codepoint</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="startsWith" id="_startsWith">
+
+		<td class="attributes"><code>
+			 public static
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Utils.Strings.html#_startsWith">#</a>
+		<code><a href="source-Utils.Strings.php.html#77-86" title="Go to source code">startsWith</a>( <span>string <var>$haystack</var></span>, <span>string <var>$needle</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Starts the $haystack string with the prefix $needle?</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Starts the $haystack string with the prefix $needle?</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$haystack</var></dt>
+					<dd><code>string</code></dd>
+					<dt><var>$needle</var></dt>
+					<dd><code>string</code></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="endsWith" id="_endsWith">
+
+		<td class="attributes"><code>
+			 public static
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Utils.Strings.html#_endsWith">#</a>
+		<code><a href="source-Utils.Strings.php.html#89-98" title="Go to source code">endsWith</a>( <span>string <var>$haystack</var></span>, <span>string <var>$needle</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Ends the $haystack string with the suffix $needle?</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Ends the $haystack string with the suffix $needle?</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$haystack</var></dt>
+					<dd><code>string</code></dd>
+					<dt><var>$needle</var></dt>
+					<dd><code>string</code></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="contains" id="_contains">
+
+		<td class="attributes"><code>
+			 public static
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Utils.Strings.html#_contains">#</a>
+		<code><a href="source-Utils.Strings.php.html#101-110" title="Go to source code">contains</a>( <span>string <var>$haystack</var></span>, <span>string <var>$needle</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Does $haystack contain $needle?</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Does $haystack contain $needle?</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$haystack</var></dt>
+					<dd><code>string</code></dd>
+					<dt><var>$needle</var></dt>
+					<dd><code>string</code></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="substring" id="_substring">
+
+		<td class="attributes"><code>
+			 public static
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Utils.Strings.html#_substring">#</a>
+		<code><a href="source-Utils.Strings.php.html#113-129" title="Go to source code">substring</a>( <span>string <var>$s</var></span>, <span>integer <var>$start</var></span>, <span>integer <var>$length</var> = <span class="php-keyword1">NULL</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Returns a part of UTF-8 string.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns a part of UTF-8 string.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$s</var></dt>
+					<dd><code>string</code></dd>
+					<dt><var>$start</var></dt>
+					<dd><code>integer</code></dd>
+					<dt><var>$length</var></dt>
+					<dd><code>integer</code></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="normalize" id="_normalize">
+
+		<td class="attributes"><code>
+			 public static
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Utils.Strings.html#_normalize">#</a>
+		<code><a href="source-Utils.Strings.php.html#132-151" title="Go to source code">normalize</a>( <span>string <var>$s</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Removes special controls characters and normalizes line endings and
+spaces.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Removes special controls characters and normalizes line endings and
+spaces.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$s</var></dt>
+					<dd><code>string</code><br>UTF-8 encoding or 8-bit</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="normalizeNewLines" id="_normalizeNewLines">
+
+		<td class="attributes"><code>
+			 public static
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Utils.Strings.html#_normalizeNewLines">#</a>
+		<code><a href="source-Utils.Strings.php.html#154-162" title="Go to source code">normalizeNewLines</a>( <span>string <var>$s</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Standardize line endings to unix-like.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Standardize line endings to unix-like.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$s</var></dt>
+					<dd><code>string</code><br>UTF-8 encoding or 8-bit</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="toAscii" id="_toAscii">
+
+		<td class="attributes"><code>
+			 public static
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Utils.Strings.html#_toAscii">#</a>
+		<code><a href="source-Utils.Strings.php.html#165-189" title="Go to source code">toAscii</a>( <span>string <var>$s</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Converts to ASCII.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Converts to ASCII.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$s</var></dt>
+					<dd><code>string</code><br>UTF-8 encoding</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>ASCII<br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="webalize" id="_webalize">
+
+		<td class="attributes"><code>
+			 public static
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Utils.Strings.html#_webalize">#</a>
+		<code><a href="source-Utils.Strings.php.html#192-208" title="Go to source code">webalize</a>( <span>string <var>$s</var></span>, <span>string <var>$charlist</var> = <span class="php-keyword1">NULL</span></span>, <span>boolean <var>$lower</var> = <span class="php-keyword1">TRUE</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Converts to web safe characters [a-z0-9-] text.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Converts to web safe characters [a-z0-9-] text.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$s</var></dt>
+					<dd><code>string</code><br>UTF-8 encoding</dd>
+					<dt><var>$charlist</var></dt>
+					<dd><code>string</code><br>allowed characters</dd>
+					<dt><var>$lower</var></dt>
+					<dd><code>boolean</code></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="truncate" id="_truncate">
+
+		<td class="attributes"><code>
+			 public static
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Utils.Strings.html#_truncate">#</a>
+		<code><a href="source-Utils.Strings.php.html#211-233" title="Go to source code">truncate</a>( <span>string <var>$s</var></span>, <span>integer <var>$maxLen</var></span>, <span>string <var>$append</var> = <span class="php-quote">&quot;\xE2\x80\xA6&quot;</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Truncates string to maximal length.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Truncates string to maximal length.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$s</var></dt>
+					<dd><code>string</code><br>UTF-8 encoding</dd>
+					<dt><var>$maxLen</var></dt>
+					<dd><code>integer</code></dd>
+					<dt><var>$append</var></dt>
+					<dd><code>string</code><br>UTF-8 encoding</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="indent" id="_indent">
+
+		<td class="attributes"><code>
+			 public static
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Utils.Strings.html#_indent">#</a>
+		<code><a href="source-Utils.Strings.php.html#236-249" title="Go to source code">indent</a>( <span>string <var>$s</var></span>, <span>integer <var>$level</var> = <span class="php-num">1</span></span>, <span>string <var>$chars</var> = <span class="php-quote">&quot;\t&quot;</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Indents the content from the left.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Indents the content from the left.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$s</var></dt>
+					<dd><code>string</code><br>UTF-8 encoding or 8-bit</dd>
+					<dt><var>$level</var></dt>
+					<dd><code>integer</code></dd>
+					<dt><var>$chars</var></dt>
+					<dd><code>string</code></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="lower" id="_lower">
+
+		<td class="attributes"><code>
+			 public static
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Utils.Strings.html#_lower">#</a>
+		<code><a href="source-Utils.Strings.php.html#252-260" title="Go to source code">lower</a>( <span>string <var>$s</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Convert to lower case.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Convert to lower case.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$s</var></dt>
+					<dd><code>string</code><br>UTF-8 encoding</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="upper" id="_upper">
+
+		<td class="attributes"><code>
+			 public static
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Utils.Strings.html#_upper">#</a>
+		<code><a href="source-Utils.Strings.php.html#263-271" title="Go to source code">upper</a>( <span>string <var>$s</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Convert to upper case.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Convert to upper case.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$s</var></dt>
+					<dd><code>string</code><br>UTF-8 encoding</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="firstUpper" id="_firstUpper">
+
+		<td class="attributes"><code>
+			 public static
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Utils.Strings.html#_firstUpper">#</a>
+		<code><a href="source-Utils.Strings.php.html#274-282" title="Go to source code">firstUpper</a>( <span>string <var>$s</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Convert first character to upper case.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Convert first character to upper case.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$s</var></dt>
+					<dd><code>string</code><br>UTF-8 encoding</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="capitalize" id="_capitalize">
+
+		<td class="attributes"><code>
+			 public static
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Utils.Strings.html#_capitalize">#</a>
+		<code><a href="source-Utils.Strings.php.html#285-293" title="Go to source code">capitalize</a>( <span>string <var>$s</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Capitalize string.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Capitalize string.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$s</var></dt>
+					<dd><code>string</code><br>UTF-8 encoding</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="compare" id="_compare">
+
+		<td class="attributes"><code>
+			 public static
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Utils.Strings.html#_compare">#</a>
+		<code><a href="source-Utils.Strings.php.html#296-313" title="Go to source code">compare</a>( <span>string <var>$left</var></span>, <span>string <var>$right</var></span>, <span>integer <var>$len</var> = <span class="php-keyword1">NULL</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Case-insensitive compares UTF-8 strings.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Case-insensitive compares UTF-8 strings.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$left</var></dt>
+					<dd><code>string</code></dd>
+					<dt><var>$right</var></dt>
+					<dd><code>string</code></dd>
+					<dt><var>$len</var></dt>
+					<dd><code>integer</code></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="findPrefix" id="_findPrefix">
+
+		<td class="attributes"><code>
+			 public static
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Utils.Strings.html#_findPrefix">#</a>
+		<code><a href="source-Utils.Strings.php.html#316-339" title="Go to source code">findPrefix</a>( <span>string|array <var>$strings</var></span>, <span>string <var>$second</var> = <span class="php-keyword1">NULL</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Finds the length of common prefix of strings.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Finds the length of common prefix of strings.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$strings</var></dt>
+					<dd><code>string|array</code></dd>
+					<dt><var>$second</var></dt>
+					<dd><code>string</code></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="length" id="_length">
+
+		<td class="attributes"><code>
+			 public static
+			integer
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Utils.Strings.html#_length">#</a>
+		<code><a href="source-Utils.Strings.php.html#342-350" title="Go to source code">length</a>( <span>string <var>$s</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Returns UTF-8 string length.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns UTF-8 string length.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$s</var></dt>
+					<dd><code>string</code></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>integer</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="trim" id="_trim">
+
+		<td class="attributes"><code>
+			 public static
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Utils.Strings.html#_trim">#</a>
+		<code><a href="source-Utils.Strings.php.html#353-363" title="Go to source code">trim</a>( <span>string <var>$s</var></span>, <span>string <var>$charlist</var> = <span class="php-quote">&quot; \t\n\r\0\x0B\xC2\xA0&quot;</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Strips whitespace.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Strips whitespace.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$s</var></dt>
+					<dd><code>string</code><br>UTF-8 encoding</dd>
+					<dt><var>$charlist</var></dt>
+					<dd><code>string</code></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="padLeft" id="_padLeft">
+
+		<td class="attributes"><code>
+			 public static
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Utils.Strings.html#_padLeft">#</a>
+		<code><a href="source-Utils.Strings.php.html#366-378" title="Go to source code">padLeft</a>( <span>string <var>$s</var></span>, <span>integer <var>$length</var></span>, <span>string <var>$pad</var> = <span class="php-quote">' '</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Pad a string to a certain length with another string.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Pad a string to a certain length with another string.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$s</var></dt>
+					<dd><code>string</code><br>UTF-8 encoding</dd>
+					<dt><var>$length</var></dt>
+					<dd><code>integer</code></dd>
+					<dt><var>$pad</var></dt>
+					<dd><code>string</code></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="padRight" id="_padRight">
+
+		<td class="attributes"><code>
+			 public static
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Utils.Strings.html#_padRight">#</a>
+		<code><a href="source-Utils.Strings.php.html#381-393" title="Go to source code">padRight</a>( <span>string <var>$s</var></span>, <span>integer <var>$length</var></span>, <span>string <var>$pad</var> = <span class="php-quote">' '</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Pad a string to a certain length with another string.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Pad a string to a certain length with another string.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$s</var></dt>
+					<dd><code>string</code><br>UTF-8 encoding</dd>
+					<dt><var>$length</var></dt>
+					<dd><code>integer</code></dd>
+					<dt><var>$pad</var></dt>
+					<dd><code>string</code></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="reverse" id="_reverse">
+
+		<td class="attributes"><code>
+			 public static
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Utils.Strings.html#_reverse">#</a>
+		<code><a href="source-Utils.Strings.php.html#396-404" title="Go to source code">reverse</a>( <span>string <var>$s</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Reverse string.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Reverse string.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$s</var></dt>
+					<dd><code>string</code><br>UTF-8 encoding</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="random" id="_random" class="deprecated">
+
+		<td class="attributes"><code>
+			 public static
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Utils.Strings.html#_random">#</a>
+		<code><a href="source-Utils.Strings.php.html#407-414" title="Go to source code">random</a>( <span> <var>$length</var> = <span class="php-num">10</span></span>, <span> <var>$charlist</var> = <span class="php-quote">'0-9a-z'</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Use Nette\Utils\Random::generate</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Use Nette\Utils\Random::generate</p>
+
+
+				<h4>Deprecated</h4>
+				<div class="list">
+				</div>
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="split" id="_split">
+
+		<td class="attributes"><code>
+			 public static
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Utils.Strings.html#_split">#</a>
+		<code><a href="source-Utils.Strings.php.html#417-436" title="Go to source code">split</a>( <span>string <var>$subject</var></span>, <span>string <var>$pattern</var></span>, <span>integer <var>$flags</var> = <span class="php-num">0</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Splits string by a regular expression.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Splits string by a regular expression.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$subject</var></dt>
+					<dd><code>string</code></dd>
+					<dt><var>$pattern</var></dt>
+					<dd><code>string</code></dd>
+					<dt><var>$flags</var></dt>
+					<dd><code>integer</code></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>array</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="match" id="_match">
+
+		<td class="attributes"><code>
+			 public static
+			mixed
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Utils.Strings.html#_match">#</a>
+		<code><a href="source-Utils.Strings.php.html#439-464" title="Go to source code">match</a>( <span>string <var>$subject</var></span>, <span>string <var>$pattern</var></span>, <span>integer <var>$flags</var> = <span class="php-num">0</span></span>, <span>integer <var>$offset</var> = <span class="php-num">0</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Performs a regular expression match.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Performs a regular expression match.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$subject</var></dt>
+					<dd><code>string</code></dd>
+					<dt><var>$pattern</var></dt>
+					<dd><code>string</code></dd>
+					<dt><var>$flags</var></dt>
+					<dd><code>integer</code><br>can be PREG_OFFSET_CAPTURE (returned in bytes)</dd>
+					<dt><var>$offset</var></dt>
+					<dd><code>integer</code><br>offset in bytes</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>mixed</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="matchAll" id="_matchAll">
+
+		<td class="attributes"><code>
+			 public static
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Utils.Strings.html#_matchAll">#</a>
+		<code><a href="source-Utils.Strings.php.html#467-494" title="Go to source code">matchAll</a>( <span>string <var>$subject</var></span>, <span>string <var>$pattern</var></span>, <span>integer <var>$flags</var> = <span class="php-num">0</span></span>, <span>integer <var>$offset</var> = <span class="php-num">0</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Performs a global regular expression match.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Performs a global regular expression match.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$subject</var></dt>
+					<dd><code>string</code></dd>
+					<dt><var>$pattern</var></dt>
+					<dd><code>string</code></dd>
+					<dt><var>$flags</var></dt>
+					<dd><code>integer</code><br>can be PREG_OFFSET_CAPTURE (returned in bytes); PREG_SET_ORDER is default</dd>
+					<dt><var>$offset</var></dt>
+					<dd><code>integer</code><br>offset in bytes</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>array</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="replace" id="_replace">
+
+		<td class="attributes"><code>
+			 public static
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Utils.Strings.html#_replace">#</a>
+		<code><a href="source-Utils.Strings.php.html#497-545" title="Go to source code">replace</a>( <span>string <var>$subject</var></span>, <span>string|array <var>$pattern</var></span>, <span>string|callable <var>$replacement</var> = <span class="php-keyword1">NULL</span></span>, <span>integer <var>$limit</var> = -<span class="php-num">1</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Perform a regular expression search and replace.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Perform a regular expression search and replace.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$subject</var></dt>
+					<dd><code>string</code></dd>
+					<dt><var>$pattern</var></dt>
+					<dd><code>string|array</code></dd>
+					<dt><var>$replacement</var></dt>
+					<dd><code>string|callable</code></dd>
+					<dt><var>$limit</var></dt>
+					<dd><code>integer</code></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+	<div id="footer">
+		Nette 2.2.2 API API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+	</div>
+</div>
+</div>
+<script src="resources/combined.js?3630868369"></script>
+<script src="elementlist.js?2087501429"></script>
+</body>
+</html>

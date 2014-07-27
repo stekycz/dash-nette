@@ -1,0 +1,955 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="generator" content="ApiGen 2.8.0">
+
+	<title>Class Nette\Caching\Storages\FileJournal | Nette 2.2.2 API</title>
+
+	<link rel="stylesheet" href="resources/style.css?3746977979">
+	<link rel="search" type="application/opensearchdescription+xml" title="Nette 2.2.2 API" href="http://api.nette.org/2.0/opensearch.xml">
+
+
+<script src='http://files.nette.org/js/analytics.js'></script><script>
+_ga.create('UA-95238-14', '.nette.org');
+_gaq.push(['_trackPageview']);
+</script>
+</head>
+
+<body>
+<div id="left">
+	<div id="menu">
+
+		<div id="groups">
+			<h3>Namespaces</h3>
+			<ul>
+				<li><a href="namespace-Latte.html">Latte<span></span></a>
+						<ul>
+				<li><a href="namespace-Latte.Loaders.html">Loaders</a>
+						</li>
+				<li><a href="namespace-Latte.Macros.html">Macros</a>
+						</li>
+				<li><a href="namespace-Latte.Runtime.html">Runtime</a>
+						</li>
+							</ul></li>
+				<li class="active"><a href="namespace-Nette.html">Nette<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.Application.html">Application<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.Application.Responses.html">Responses</a>
+						</li>
+				<li><a href="namespace-Nette.Application.Routers.html">Routers</a>
+						</li>
+				<li><a href="namespace-Nette.Application.UI.html">UI</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.Bridges.html">Bridges<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.Bridges.ApplicationLatte.html">ApplicationLatte</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.ApplicationTracy.html">ApplicationTracy</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.CacheLatte.html">CacheLatte</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.DatabaseDI.html">DatabaseDI</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.DatabaseTracy.html">DatabaseTracy</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.DITracy.html">DITracy</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.FormsLatte.html">FormsLatte</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.Framework.html">Framework</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.HttpTracy.html">HttpTracy</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.SecurityTracy.html">SecurityTracy</a>
+						</li>
+							</ul></li>
+				<li class="active"><a href="namespace-Nette.Caching.html">Caching<span></span></a>
+						<ul>
+				<li class="active"><a href="namespace-Nette.Caching.Storages.html">Storages</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.ComponentModel.html">ComponentModel</a>
+						</li>
+				<li><a href="namespace-Nette.Database.html">Database<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.Database.Drivers.html">Drivers</a>
+						</li>
+				<li><a href="namespace-Nette.Database.Reflection.html">Reflection</a>
+						</li>
+				<li><a href="namespace-Nette.Database.Table.html">Table</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.DI.html">DI<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.DI.Config.html">Config<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.DI.Config.Adapters.html">Adapters</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.DI.Extensions.html">Extensions</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.Diagnostics.html">Diagnostics</a>
+						</li>
+				<li><a href="namespace-Nette.Forms.html">Forms<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.Forms.Controls.html">Controls</a>
+						</li>
+				<li><a href="namespace-Nette.Forms.Rendering.html">Rendering</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.Http.html">Http</a>
+						</li>
+				<li><a href="namespace-Nette.Iterators.html">Iterators</a>
+						</li>
+				<li><a href="namespace-Nette.Latte.html">Latte</a>
+						</li>
+				<li><a href="namespace-Nette.Loaders.html">Loaders</a>
+						</li>
+				<li><a href="namespace-Nette.Localization.html">Localization</a>
+						</li>
+				<li><a href="namespace-Nette.Mail.html">Mail</a>
+						</li>
+				<li><a href="namespace-Nette.Neon.html">Neon</a>
+						</li>
+				<li><a href="namespace-Nette.PhpGenerator.html">PhpGenerator</a>
+						</li>
+				<li><a href="namespace-Nette.Reflection.html">Reflection</a>
+						</li>
+				<li><a href="namespace-Nette.Security.html">Security</a>
+						</li>
+				<li><a href="namespace-Nette.Templating.html">Templating</a>
+						</li>
+				<li><a href="namespace-Nette.Utils.html">Utils</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-NetteModule.html">NetteModule</a>
+						</li>
+				<li><a href="namespace-none.html">none</a>
+						</li>
+				<li><a href="namespace-Tracy.html">Tracy</a>
+						</li>
+			</ul>
+		</div>
+
+		<hr>
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="Nette.Caching.Storages.DevNullStorage.html">DevNullStorage</a></li>
+				<li class="active"><a href="Nette.Caching.Storages.FileJournal.html">FileJournal</a></li>
+				<li><a href="Nette.Caching.Storages.FileStorage.html">FileStorage</a></li>
+				<li><a href="Nette.Caching.Storages.MemcachedStorage.html">MemcachedStorage</a></li>
+				<li><a href="Nette.Caching.Storages.MemoryStorage.html">MemoryStorage</a></li>
+				<li><a href="Nette.Caching.Storages.PhpFileStorage.html" class="deprecated">PhpFileStorage</a></li>
+				<li><a href="Nette.Caching.Storages.SQLiteStorage.html">SQLiteStorage</a></li>
+			</ul>
+
+			<h3>Interfaces</h3>
+			<ul>
+				<li><a href="Nette.Caching.Storages.IJournal.html">IJournal</a></li>
+			</ul>
+
+
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form action="http://www.google.com/cse" id="search">
+		<input type="hidden" name="cx" value="011549293477758430224:vxofa9ufnhc">
+		<input type="hidden" name="ie" value="UTF-8">
+		<input type="text" name="q" class="text">
+		<input type="submit" value="Search">
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+				<a href="namespace-Nette.Caching.Storages.html" title="Summary of Nette\Caching\Storages"><span>Namespace</span></a>
+			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+			<li>
+				<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions"><span>Tree</span></a>
+			</li>
+			<li>
+				<a href="deprecated.html" title="List of deprecated elements"><span>Deprecated</span></a>
+			</li>
+		</ul>
+		<ul><li><a href="http://api.nette.org/releases"><span>Other releases</span></a></li><li><a href="http://nette.org"><span>Nette homepage</span></a></li></ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Class FileJournal</h1>
+
+
+	<div class="description">
+	
+<p>Btree+ based file journal.</p>
+
+	</div>
+
+	<dl class="tree">
+		<dd style="padding-left:0px">
+			<a href="Nette.Object.html"><span>Nette\Object</span></a>
+			
+			
+			
+		</dd>
+		<dd style="padding-left:30px">
+			<img src="resources/inherit.png" alt="Extended by">
+<b><span>Nette\Caching\Storages\FileJournal</span></b>			
+			 implements 
+				<a href="Nette.Caching.Storages.IJournal.html"><span>Nette\Caching\Storages\IJournal</span></a>
+			
+			
+		</dd>
+	</dl>
+
+
+
+
+
+
+
+
+	<div class="info">
+		
+		
+		<b>Namespace:</b> <a href="namespace-Nette.html">Nette</a>\<a href="namespace-Nette.Caching.html">Caching</a>\<a href="namespace-Nette.Caching.Storages.html">Storages</a><br>
+		
+
+				<b>Author:</b>
+				Jakub Onderka<br>
+		<b>Located at</b> <a href="source-Caching.Storages.FileJournal.php.html#14-1204" title="Go to source code">Caching/Storages/FileJournal.php</a><br>
+	</div>
+
+
+
+	<table class="summary" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="__construct" id="___construct">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Caching.Storages.FileJournal.html#___construct">#</a>
+		<code><a href="source-Caching.Storages.FileJournal.php.html#102-108" title="Go to source code">__construct</a>( <span>string <var>$dir</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$dir</var></dt>
+					<dd><code>string</code><br>Directory containing journal file</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="__destruct" id="___destruct">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Caching.Storages.FileJournal.html#___destruct">#</a>
+		<code><a href="source-Caching.Storages.FileJournal.php.html#111-122" title="Go to source code">__destruct</a>( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="write" id="_write">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Caching.Storages.FileJournal.html#_write">#</a>
+		<code><a href="source-Caching.Storages.FileJournal.php.html#125-230" title="Go to source code">write</a>( <span>string <var>$key</var></span>, <span>array <var>$dependencies</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Writes entry information into the journal.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Writes entry information into the journal.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$key</var></dt>
+					<dd><code>string</code></dd>
+					<dt><var>$dependencies</var></dt>
+					<dd><code>array</code></dd>
+				</dl></div>
+
+
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="Nette.Caching.Storages.IJournal.html#_write">Nette\Caching\Storages\IJournal::write()</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="clean" id="_clean">
+
+		<td class="attributes"><code>
+			 public 
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Caching.Storages.FileJournal.html#_clean">#</a>
+		<code><a href="source-Caching.Storages.FileJournal.php.html#233-272" title="Go to source code">clean</a>( <span>array <var>$conditions</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Cleans entries from journal.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Cleans entries from journal.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$conditions</var></dt>
+					<dd><code>array</code></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>array</code><br>of removed items or NULL when performing a full cleanup<br>
+				</div>
+
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="Nette.Caching.Storages.IJournal.html#_clean">Nette\Caching\Storages\IJournal::clean()</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+	<table class="summary inherited">
+	<caption>Methods inherited from <a href="Nette.Object.html#methods">Nette\Object</a></caption>
+	<tr>
+		<td><code>
+			<a href="Nette.Object.html#___call">__call()</a>, 
+			<a href="Nette.Object.html#___callStatic">__callStatic()</a>, 
+			<a href="Nette.Object.html#___get">__get()</a>, 
+			<a href="Nette.Object.html#___isset">__isset()</a>, 
+			<a href="Nette.Object.html#___set">__set()</a>, 
+			<a href="Nette.Object.html#___unset">__unset()</a>, 
+			<a href="Nette.Object.html#_extensionMethod">extensionMethod()</a>, 
+			<a href="Nette.Object.html#_getReflection">getReflection()</a>
+		</code></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+	<table class="summary" id="constants">
+	<caption>Constants summary</caption>
+	<tr data-order="FILE" id="FILE">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name"><code>
+				<a href="source-Caching.Storages.FileJournal.php.html#21-22" title="Go to source code"><b>FILE</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-quote">'btfj.dat'</span></code></td>
+		<td class="description"><div>
+			<a href="Nette.Caching.Storages.FileJournal.html#FILE" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Filename with journal</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Filename with journal</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="FILE_MAGIC" id="FILE_MAGIC">
+
+		<td class="attributes"><code>integer</code></td>
+		<td class="name"><code>
+				<a href="source-Caching.Storages.FileJournal.php.html#24-25" title="Go to source code"><b>FILE_MAGIC</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-num">0x6274666A</span></code></td>
+		<td class="description"><div>
+			<a href="Nette.Caching.Storages.FileJournal.html#FILE_MAGIC" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>4 bytes file header magic (btfj)</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>4 bytes file header magic (btfj)</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="INDEX_MAGIC" id="INDEX_MAGIC">
+
+		<td class="attributes"><code>integer</code></td>
+		<td class="name"><code>
+				<a href="source-Caching.Storages.FileJournal.php.html#27-28" title="Go to source code"><b>INDEX_MAGIC</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-num">0x696E6465</span></code></td>
+		<td class="description"><div>
+			<a href="Nette.Caching.Storages.FileJournal.html#INDEX_MAGIC" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>4 bytes index node magic (inde)</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>4 bytes index node magic (inde)</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="DATA_MAGIC" id="DATA_MAGIC">
+
+		<td class="attributes"><code>integer</code></td>
+		<td class="name"><code>
+				<a href="source-Caching.Storages.FileJournal.php.html#30-31" title="Go to source code"><b>DATA_MAGIC</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-num">0x64617461</span></code></td>
+		<td class="description"><div>
+			<a href="Nette.Caching.Storages.FileJournal.html#DATA_MAGIC" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>4 bytes data node magic (data)</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>4 bytes data node magic (data)</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="NODE_SIZE" id="NODE_SIZE">
+
+		<td class="attributes"><code>integer</code></td>
+		<td class="name"><code>
+				<a href="source-Caching.Storages.FileJournal.php.html#33-34" title="Go to source code"><b>NODE_SIZE</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-num">4096</span></code></td>
+		<td class="description"><div>
+			<a href="Nette.Caching.Storages.FileJournal.html#NODE_SIZE" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Node size in bytes</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Node size in bytes</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="BITROT" id="BITROT">
+
+		<td class="attributes"><code>integer</code></td>
+		<td class="name"><code>
+				<a href="source-Caching.Storages.FileJournal.php.html#36-37" title="Go to source code"><b>BITROT</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-num">12</span></code></td>
+		<td class="description"><div>
+			<a href="Nette.Caching.Storages.FileJournal.html#BITROT" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Bit rotation for saving data into nodes. BITROT = log2(NODE_SIZE)</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Bit rotation for saving data into nodes. BITROT = log2(NODE_SIZE)</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="HEADER_SIZE" id="HEADER_SIZE">
+
+		<td class="attributes"><code>integer</code></td>
+		<td class="name"><code>
+				<a href="source-Caching.Storages.FileJournal.php.html#39-40" title="Go to source code"><b>HEADER_SIZE</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-num">4096</span></code></td>
+		<td class="description"><div>
+			<a href="Nette.Caching.Storages.FileJournal.html#HEADER_SIZE" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Header size in bytes</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Header size in bytes</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="INT32_SIZE" id="INT32_SIZE">
+
+		<td class="attributes"><code>integer</code></td>
+		<td class="name"><code>
+				<a href="source-Caching.Storages.FileJournal.php.html#42-43" title="Go to source code"><b>INT32_SIZE</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-num">4</span></code></td>
+		<td class="description"><div>
+			<a href="Nette.Caching.Storages.FileJournal.html#INT32_SIZE" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Size of 32 bit integer in bytes. INT32_SIZE = 32 / 8 :-)</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Size of 32 bit integer in bytes. INT32_SIZE = 32 / 8 :-)</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="INFO" id="INFO">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name"><code>
+				<a href="source-Caching.Storages.FileJournal.php.html#45" title="Go to source code"><b>INFO</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-quote">'i'</span></code></td>
+		<td class="description"><div>
+			<a href="Nette.Caching.Storages.FileJournal.html#INFO" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="TYPE" id="TYPE">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name"><code>
+				<a href="source-Caching.Storages.FileJournal.php.html#46" title="Go to source code"><b>TYPE</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-quote">'t'</span></code></td>
+		<td class="description"><div>
+			<a href="Nette.Caching.Storages.FileJournal.html#TYPE" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="IS_LEAF" id="IS_LEAF">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name"><code>
+				<a href="source-Caching.Storages.FileJournal.php.html#47" title="Go to source code"><b>IS_LEAF</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-quote">'il'</span></code></td>
+		<td class="description"><div>
+			<a href="Nette.Caching.Storages.FileJournal.html#IS_LEAF" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="PREV_NODE" id="PREV_NODE">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name"><code>
+				<a href="source-Caching.Storages.FileJournal.php.html#48" title="Go to source code"><b>PREV_NODE</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-quote">'p'</span></code></td>
+		<td class="description"><div>
+			<a href="Nette.Caching.Storages.FileJournal.html#PREV_NODE" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="END" id="END">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name"><code>
+				<a href="source-Caching.Storages.FileJournal.php.html#49" title="Go to source code"><b>END</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-quote">'e'</span></code></td>
+		<td class="description"><div>
+			<a href="Nette.Caching.Storages.FileJournal.html#END" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="MAX" id="MAX">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name"><code>
+				<a href="source-Caching.Storages.FileJournal.php.html#50" title="Go to source code"><b>MAX</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-quote">'m'</span></code></td>
+		<td class="description"><div>
+			<a href="Nette.Caching.Storages.FileJournal.html#MAX" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="INDEX_DATA" id="INDEX_DATA">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name"><code>
+				<a href="source-Caching.Storages.FileJournal.php.html#51" title="Go to source code"><b>INDEX_DATA</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-quote">'id'</span></code></td>
+		<td class="description"><div>
+			<a href="Nette.Caching.Storages.FileJournal.html#INDEX_DATA" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="LAST_INDEX" id="LAST_INDEX">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name"><code>
+				<a href="source-Caching.Storages.FileJournal.php.html#52" title="Go to source code"><b>LAST_INDEX</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-quote">'l'</span></code></td>
+		<td class="description"><div>
+			<a href="Nette.Caching.Storages.FileJournal.html#LAST_INDEX" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="TAGS" id="TAGS">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name"><code>
+				<a href="source-Caching.Storages.FileJournal.php.html#55" title="Go to source code"><b>TAGS</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-quote">'t'</span></code></td>
+		<td class="description"><div>
+			<a href="Nette.Caching.Storages.FileJournal.html#TAGS" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="PRIORITY" id="PRIORITY">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name"><code>
+				<a href="source-Caching.Storages.FileJournal.php.html#56" title="Go to source code"><b>PRIORITY</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-quote">'p'</span></code></td>
+		<td class="description"><div>
+			<a href="Nette.Caching.Storages.FileJournal.html#PRIORITY" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="ENTRIES" id="ENTRIES">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name"><code>
+				<a href="source-Caching.Storages.FileJournal.php.html#57" title="Go to source code"><b>ENTRIES</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-quote">'e'</span></code></td>
+		<td class="description"><div>
+			<a href="Nette.Caching.Storages.FileJournal.html#ENTRIES" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="DATA" id="DATA">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name"><code>
+				<a href="source-Caching.Storages.FileJournal.php.html#59" title="Go to source code"><b>DATA</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-quote">'d'</span></code></td>
+		<td class="description"><div>
+			<a href="Nette.Caching.Storages.FileJournal.html#DATA" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="KEY" id="KEY">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name"><code>
+				<a href="source-Caching.Storages.FileJournal.php.html#60" title="Go to source code"><b>KEY</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-quote">'k'</span></code></td>
+		<td class="description"><div>
+			<a href="Nette.Caching.Storages.FileJournal.html#KEY" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="DELETED" id="DELETED">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name"><code>
+				<a href="source-Caching.Storages.FileJournal.php.html#61" title="Go to source code"><b>DELETED</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-quote">'d'</span></code></td>
+		<td class="description"><div>
+			<a href="Nette.Caching.Storages.FileJournal.html#DELETED" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+	<table class="summary" id="properties">
+	<caption>Properties summary</caption>
+	<tr data-order="debug" id="$debug">
+		<td class="attributes"><code>
+			public static 
+			boolean
+		</code></td>
+
+		<td class="name">
+				<a href="source-Caching.Storages.FileJournal.php.html#63-64" title="Go to source code"><var>$debug</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">FALSE</span></code></td>
+		<td class="description"><div>
+			<a href="Nette.Caching.Storages.FileJournal.html#$debug" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Debug mode, only for testing purposes</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Debug mode, only for testing purposes</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+	<table class="summary inherited">
+	<caption>Magic properties inherited from <a href="Nette.Object.html#properties">Nette\Object</a></caption>
+	<tr>
+		<td><code>
+			<a href="Nette.Object.html#m$reflection"><var>$reflection</var></a>
+		</code></td>
+	</tr>
+	</table>
+
+
+</div>
+
+	<div id="footer">
+		Nette 2.2.2 API API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+	</div>
+</div>
+</div>
+<script src="resources/combined.js?3630868369"></script>
+<script src="elementlist.js?2087501429"></script>
+</body>
+</html>

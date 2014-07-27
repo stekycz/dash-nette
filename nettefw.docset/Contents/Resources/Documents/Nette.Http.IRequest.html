@@ -1,0 +1,1033 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="generator" content="ApiGen 2.8.0">
+
+	<title>Interface Nette\Http\IRequest | Nette 2.2.2 API</title>
+
+	<link rel="stylesheet" href="resources/style.css?3746977979">
+	<link rel="search" type="application/opensearchdescription+xml" title="Nette 2.2.2 API" href="http://api.nette.org/2.0/opensearch.xml">
+
+
+<script src='http://files.nette.org/js/analytics.js'></script><script>
+_ga.create('UA-95238-14', '.nette.org');
+_gaq.push(['_trackPageview']);
+</script>
+</head>
+
+<body>
+<div id="left">
+	<div id="menu">
+
+		<div id="groups">
+			<h3>Namespaces</h3>
+			<ul>
+				<li><a href="namespace-Latte.html">Latte<span></span></a>
+						<ul>
+				<li><a href="namespace-Latte.Loaders.html">Loaders</a>
+						</li>
+				<li><a href="namespace-Latte.Macros.html">Macros</a>
+						</li>
+				<li><a href="namespace-Latte.Runtime.html">Runtime</a>
+						</li>
+							</ul></li>
+				<li class="active"><a href="namespace-Nette.html">Nette<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.Application.html">Application<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.Application.Responses.html">Responses</a>
+						</li>
+				<li><a href="namespace-Nette.Application.Routers.html">Routers</a>
+						</li>
+				<li><a href="namespace-Nette.Application.UI.html">UI</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.Bridges.html">Bridges<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.Bridges.ApplicationLatte.html">ApplicationLatte</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.ApplicationTracy.html">ApplicationTracy</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.CacheLatte.html">CacheLatte</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.DatabaseDI.html">DatabaseDI</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.DatabaseTracy.html">DatabaseTracy</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.DITracy.html">DITracy</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.FormsLatte.html">FormsLatte</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.Framework.html">Framework</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.HttpTracy.html">HttpTracy</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.SecurityTracy.html">SecurityTracy</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.Caching.html">Caching<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.Caching.Storages.html">Storages</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.ComponentModel.html">ComponentModel</a>
+						</li>
+				<li><a href="namespace-Nette.Database.html">Database<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.Database.Drivers.html">Drivers</a>
+						</li>
+				<li><a href="namespace-Nette.Database.Reflection.html">Reflection</a>
+						</li>
+				<li><a href="namespace-Nette.Database.Table.html">Table</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.DI.html">DI<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.DI.Config.html">Config<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.DI.Config.Adapters.html">Adapters</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.DI.Extensions.html">Extensions</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.Diagnostics.html">Diagnostics</a>
+						</li>
+				<li><a href="namespace-Nette.Forms.html">Forms<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.Forms.Controls.html">Controls</a>
+						</li>
+				<li><a href="namespace-Nette.Forms.Rendering.html">Rendering</a>
+						</li>
+							</ul></li>
+				<li class="active"><a href="namespace-Nette.Http.html">Http</a>
+						</li>
+				<li><a href="namespace-Nette.Iterators.html">Iterators</a>
+						</li>
+				<li><a href="namespace-Nette.Latte.html">Latte</a>
+						</li>
+				<li><a href="namespace-Nette.Loaders.html">Loaders</a>
+						</li>
+				<li><a href="namespace-Nette.Localization.html">Localization</a>
+						</li>
+				<li><a href="namespace-Nette.Mail.html">Mail</a>
+						</li>
+				<li><a href="namespace-Nette.Neon.html">Neon</a>
+						</li>
+				<li><a href="namespace-Nette.PhpGenerator.html">PhpGenerator</a>
+						</li>
+				<li><a href="namespace-Nette.Reflection.html">Reflection</a>
+						</li>
+				<li><a href="namespace-Nette.Security.html">Security</a>
+						</li>
+				<li><a href="namespace-Nette.Templating.html">Templating</a>
+						</li>
+				<li><a href="namespace-Nette.Utils.html">Utils</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-NetteModule.html">NetteModule</a>
+						</li>
+				<li><a href="namespace-none.html">none</a>
+						</li>
+				<li><a href="namespace-Tracy.html">Tracy</a>
+						</li>
+			</ul>
+		</div>
+
+		<hr>
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="Nette.Http.Context.html">Context</a></li>
+				<li><a href="Nette.Http.FileUpload.html">FileUpload</a></li>
+				<li><a href="Nette.Http.Helpers.html">Helpers</a></li>
+				<li><a href="Nette.Http.Request.html">Request</a></li>
+				<li><a href="Nette.Http.RequestFactory.html">RequestFactory</a></li>
+				<li><a href="Nette.Http.Response.html">Response</a></li>
+				<li><a href="Nette.Http.Session.html">Session</a></li>
+				<li><a href="Nette.Http.SessionSection.html">SessionSection</a></li>
+				<li><a href="Nette.Http.Url.html">Url</a></li>
+				<li><a href="Nette.Http.UrlScript.html">UrlScript</a></li>
+				<li><a href="Nette.Http.UserStorage.html">UserStorage</a></li>
+			</ul>
+
+			<h3>Interfaces</h3>
+			<ul>
+				<li class="active"><a href="Nette.Http.IRequest.html">IRequest</a></li>
+				<li><a href="Nette.Http.IResponse.html">IResponse</a></li>
+				<li><a href="Nette.Http.ISessionStorage.html" class="deprecated">ISessionStorage</a></li>
+			</ul>
+
+
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form action="http://www.google.com/cse" id="search">
+		<input type="hidden" name="cx" value="011549293477758430224:vxofa9ufnhc">
+		<input type="hidden" name="ie" value="UTF-8">
+		<input type="text" name="q" class="text">
+		<input type="submit" value="Search">
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+				<a href="namespace-Nette.Http.html" title="Summary of Nette\Http"><span>Namespace</span></a>
+			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+			<li>
+				<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions"><span>Tree</span></a>
+			</li>
+			<li>
+				<a href="deprecated.html" title="List of deprecated elements"><span>Deprecated</span></a>
+			</li>
+		</ul>
+		<ul><li><a href="http://api.nette.org/releases"><span>Other releases</span></a></li><li><a href="http://nette.org"><span>Nette homepage</span></a></li></ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Interface IRequest</h1>
+
+
+	<div class="description">
+	
+<p>IHttpRequest provides access scheme for request sent via HTTP.</p>
+
+	</div>
+
+
+
+
+
+	<div>
+		<h4>Direct known implementers</h4>
+			<a href="Nette.Http.Request.html">Nette\Http\Request</a>
+	</div>
+
+
+
+
+	<div class="info">
+		
+		
+		<b>Namespace:</b> <a href="namespace-Nette.html">Nette</a>\<a href="namespace-Nette.Http.html">Http</a><br>
+		
+
+				<b>Author:</b>
+				David Grudl<br>
+		<b>Located at</b> <a href="source-Http.IRequest.php.html#13-141" title="Go to source code">Http/IRequest.php</a><br>
+	</div>
+
+
+
+	<table class="summary" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="getUrl" id="_getUrl">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="Nette.Http.UrlScript.html">Nette\Http\UrlScript</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Http.IRequest.html#_getUrl">#</a>
+		<code><a href="source-Http.IRequest.php.html#28-32" title="Go to source code">getUrl</a>( )</code>
+
+		<div class="description short">
+			
+<p>Returns URL object.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns URL object.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="Nette.Http.UrlScript.html">Nette\Http\UrlScript</a></code></code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getQuery" id="_getQuery">
+
+		<td class="attributes"><code>
+			 public 
+			mixed
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Http.IRequest.html#_getQuery">#</a>
+		<code><a href="source-Http.IRequest.php.html#36-43" title="Go to source code">getQuery</a>( <span>string <var>$key</var> = <span class="php-keyword1">NULL</span></span>, <span>mixed <var>$default</var> = <span class="php-keyword1">NULL</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Returns variable provided to the script via URL query ($_GET). If no key is
+passed, returns the entire array.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns variable provided to the script via URL query ($_GET). If no key is
+passed, returns the entire array.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$key</var></dt>
+					<dd><code>string</code><br>key</dd>
+					<dt><var>$default</var></dt>
+					<dd><code>mixed</code><br>default value</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>mixed</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getPost" id="_getPost">
+
+		<td class="attributes"><code>
+			 public 
+			mixed
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Http.IRequest.html#_getPost">#</a>
+		<code><a href="source-Http.IRequest.php.html#45-52" title="Go to source code">getPost</a>( <span>string <var>$key</var> = <span class="php-keyword1">NULL</span></span>, <span>mixed <var>$default</var> = <span class="php-keyword1">NULL</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Returns variable provided to the script via POST method ($_POST). If no key
+is passed, returns the entire array.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns variable provided to the script via POST method ($_POST). If no key
+is passed, returns the entire array.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$key</var></dt>
+					<dd><code>string</code><br>key</dd>
+					<dt><var>$default</var></dt>
+					<dd><code>mixed</code><br>default value</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>mixed</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getFile" id="_getFile">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="Nette.Http.FileUpload.html">Nette\Http\FileUpload</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Http.IRequest.html#_getFile">#</a>
+		<code><a href="source-Http.IRequest.php.html#54-59" title="Go to source code">getFile</a>( <span>string <var>$key</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Returns uploaded file.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns uploaded file.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$key</var></dt>
+					<dd><code>string</code><br>key (or more keys)</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="Nette.Http.FileUpload.html">Nette\Http\FileUpload</a></code></code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getFiles" id="_getFiles">
+
+		<td class="attributes"><code>
+			 public 
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Http.IRequest.html#_getFiles">#</a>
+		<code><a href="source-Http.IRequest.php.html#61-65" title="Go to source code">getFiles</a>( )</code>
+
+		<div class="description short">
+			
+<p>Returns uploaded files.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns uploaded files.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>array</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getCookie" id="_getCookie">
+
+		<td class="attributes"><code>
+			 public 
+			mixed
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Http.IRequest.html#_getCookie">#</a>
+		<code><a href="source-Http.IRequest.php.html#67-73" title="Go to source code">getCookie</a>( <span>string <var>$key</var></span>, <span>mixed <var>$default</var> = <span class="php-keyword1">NULL</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Returns variable provided to the script via HTTP cookies.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns variable provided to the script via HTTP cookies.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$key</var></dt>
+					<dd><code>string</code><br>key</dd>
+					<dt><var>$default</var></dt>
+					<dd><code>mixed</code><br>default value</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>mixed</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getCookies" id="_getCookies">
+
+		<td class="attributes"><code>
+			 public 
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Http.IRequest.html#_getCookies">#</a>
+		<code><a href="source-Http.IRequest.php.html#75-79" title="Go to source code">getCookies</a>( )</code>
+
+		<div class="description short">
+			
+<p>Returns variables provided to the script via HTTP cookies.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns variables provided to the script via HTTP cookies.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>array</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getMethod" id="_getMethod">
+
+		<td class="attributes"><code>
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Http.IRequest.html#_getMethod">#</a>
+		<code><a href="source-Http.IRequest.php.html#83-87" title="Go to source code">getMethod</a>( )</code>
+
+		<div class="description short">
+			
+<p>Returns HTTP request method (GET, POST, HEAD, PUT, ...). The method is
+case-sensitive.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns HTTP request method (GET, POST, HEAD, PUT, ...). The method is
+case-sensitive.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="isMethod" id="_isMethod">
+
+		<td class="attributes"><code>
+			 public 
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Http.IRequest.html#_isMethod">#</a>
+		<code><a href="source-Http.IRequest.php.html#89-94" title="Go to source code">isMethod</a>( <span>string <var>$method</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Checks HTTP request method.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Checks HTTP request method.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$method</var></dt>
+					<dd><code>string</code></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getHeader" id="_getHeader">
+
+		<td class="attributes"><code>
+			 public 
+			mixed
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Http.IRequest.html#_getHeader">#</a>
+		<code><a href="source-Http.IRequest.php.html#96-103" title="Go to source code">getHeader</a>( <span>string <var>$header</var></span>, <span>mixed <var>$default</var> = <span class="php-keyword1">NULL</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Return the value of the HTTP header. Pass the header name as the plain,
+HTTP-specified header name (e.g. 'Accept-Encoding').</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Return the value of the HTTP header. Pass the header name as the plain,
+HTTP-specified header name (e.g. 'Accept-Encoding').</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$header</var></dt>
+					<dd><code>string</code></dd>
+					<dt><var>$default</var></dt>
+					<dd><code>mixed</code></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>mixed</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getHeaders" id="_getHeaders">
+
+		<td class="attributes"><code>
+			 public 
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Http.IRequest.html#_getHeaders">#</a>
+		<code><a href="source-Http.IRequest.php.html#105-109" title="Go to source code">getHeaders</a>( )</code>
+
+		<div class="description short">
+			
+<p>Returns all HTTP headers.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns all HTTP headers.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>array</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="isSecured" id="_isSecured">
+
+		<td class="attributes"><code>
+			 public 
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Http.IRequest.html#_isSecured">#</a>
+		<code><a href="source-Http.IRequest.php.html#111-115" title="Go to source code">isSecured</a>( )</code>
+
+		<div class="description short">
+			
+<p>Is the request is sent via secure channel (https).</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Is the request is sent via secure channel (https).</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="isAjax" id="_isAjax">
+
+		<td class="attributes"><code>
+			 public 
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Http.IRequest.html#_isAjax">#</a>
+		<code><a href="source-Http.IRequest.php.html#117-121" title="Go to source code">isAjax</a>( )</code>
+
+		<div class="description short">
+			
+<p>Is AJAX request?</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Is AJAX request?</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getRemoteAddress" id="_getRemoteAddress">
+
+		<td class="attributes"><code>
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Http.IRequest.html#_getRemoteAddress">#</a>
+		<code><a href="source-Http.IRequest.php.html#123-127" title="Go to source code">getRemoteAddress</a>( )</code>
+
+		<div class="description short">
+			
+<p>Returns the IP address of the remote client.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns the IP address of the remote client.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getRemoteHost" id="_getRemoteHost">
+
+		<td class="attributes"><code>
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Http.IRequest.html#_getRemoteHost">#</a>
+		<code><a href="source-Http.IRequest.php.html#129-133" title="Go to source code">getRemoteHost</a>( )</code>
+
+		<div class="description short">
+			
+<p>Returns the host of the remote client.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns the host of the remote client.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getRawBody" id="_getRawBody">
+
+		<td class="attributes"><code>
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Http.IRequest.html#_getRawBody">#</a>
+		<code><a href="source-Http.IRequest.php.html#135-139" title="Go to source code">getRawBody</a>( )</code>
+
+		<div class="description short">
+			
+<p>Returns raw content of HTTP request body.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns raw content of HTTP request body.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+	<table class="summary" id="constants">
+	<caption>Constants summary</caption>
+	<tr data-order="GET" id="GET">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name"><code>
+				<a href="source-Http.IRequest.php.html#21-22" title="Go to source code"><b>GET</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-quote">'GET'</span></code></td>
+		<td class="description"><div>
+			<a href="Nette.Http.IRequest.html#GET" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>HTTP request method</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>HTTP request method</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="POST" id="POST">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name"><code>
+				<a href="source-Http.IRequest.php.html#22-23" title="Go to source code"><b>POST</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-quote">'POST'</span></code></td>
+		<td class="description"><div>
+			<a href="Nette.Http.IRequest.html#POST" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>HTTP request method</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>HTTP request method</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="HEAD" id="HEAD">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name"><code>
+				<a href="source-Http.IRequest.php.html#23-24" title="Go to source code"><b>HEAD</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-quote">'HEAD'</span></code></td>
+		<td class="description"><div>
+			<a href="Nette.Http.IRequest.html#HEAD" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>HTTP request method</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>HTTP request method</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="PUT" id="PUT">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name"><code>
+				<a href="source-Http.IRequest.php.html#24-25" title="Go to source code"><b>PUT</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-quote">'PUT'</span></code></td>
+		<td class="description"><div>
+			<a href="Nette.Http.IRequest.html#PUT" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>HTTP request method</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>HTTP request method</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="DELETE" id="DELETE">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name"><code>
+				<a href="source-Http.IRequest.php.html#25-26" title="Go to source code"><b>DELETE</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-quote">'DELETE'</span></code></td>
+		<td class="description"><div>
+			<a href="Nette.Http.IRequest.html#DELETE" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>HTTP request method</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>HTTP request method</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+
+
+</div>
+
+	<div id="footer">
+		Nette 2.2.2 API API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+	</div>
+</div>
+</div>
+<script src="resources/combined.js?3630868369"></script>
+<script src="elementlist.js?2087501429"></script>
+</body>
+</html>

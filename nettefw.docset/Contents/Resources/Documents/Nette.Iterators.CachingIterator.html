@@ -1,0 +1,1236 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="generator" content="ApiGen 2.8.0">
+
+	<title>Class Nette\Iterators\CachingIterator | Nette 2.2.2 API</title>
+
+	<link rel="stylesheet" href="resources/style.css?3746977979">
+	<link rel="search" type="application/opensearchdescription+xml" title="Nette 2.2.2 API" href="http://api.nette.org/2.0/opensearch.xml">
+
+
+<script src='http://files.nette.org/js/analytics.js'></script><script>
+_ga.create('UA-95238-14', '.nette.org');
+_gaq.push(['_trackPageview']);
+</script>
+</head>
+
+<body>
+<div id="left">
+	<div id="menu">
+
+		<div id="groups">
+			<h3>Namespaces</h3>
+			<ul>
+				<li><a href="namespace-Latte.html">Latte<span></span></a>
+						<ul>
+				<li><a href="namespace-Latte.Loaders.html">Loaders</a>
+						</li>
+				<li><a href="namespace-Latte.Macros.html">Macros</a>
+						</li>
+				<li><a href="namespace-Latte.Runtime.html">Runtime</a>
+						</li>
+							</ul></li>
+				<li class="active"><a href="namespace-Nette.html">Nette<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.Application.html">Application<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.Application.Responses.html">Responses</a>
+						</li>
+				<li><a href="namespace-Nette.Application.Routers.html">Routers</a>
+						</li>
+				<li><a href="namespace-Nette.Application.UI.html">UI</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.Bridges.html">Bridges<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.Bridges.ApplicationLatte.html">ApplicationLatte</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.ApplicationTracy.html">ApplicationTracy</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.CacheLatte.html">CacheLatte</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.DatabaseDI.html">DatabaseDI</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.DatabaseTracy.html">DatabaseTracy</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.DITracy.html">DITracy</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.FormsLatte.html">FormsLatte</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.Framework.html">Framework</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.HttpTracy.html">HttpTracy</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.SecurityTracy.html">SecurityTracy</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.Caching.html">Caching<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.Caching.Storages.html">Storages</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.ComponentModel.html">ComponentModel</a>
+						</li>
+				<li><a href="namespace-Nette.Database.html">Database<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.Database.Drivers.html">Drivers</a>
+						</li>
+				<li><a href="namespace-Nette.Database.Reflection.html">Reflection</a>
+						</li>
+				<li><a href="namespace-Nette.Database.Table.html">Table</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.DI.html">DI<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.DI.Config.html">Config<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.DI.Config.Adapters.html">Adapters</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.DI.Extensions.html">Extensions</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.Diagnostics.html">Diagnostics</a>
+						</li>
+				<li><a href="namespace-Nette.Forms.html">Forms<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.Forms.Controls.html">Controls</a>
+						</li>
+				<li><a href="namespace-Nette.Forms.Rendering.html">Rendering</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.Http.html">Http</a>
+						</li>
+				<li class="active"><a href="namespace-Nette.Iterators.html">Iterators</a>
+						</li>
+				<li><a href="namespace-Nette.Latte.html">Latte</a>
+						</li>
+				<li><a href="namespace-Nette.Loaders.html">Loaders</a>
+						</li>
+				<li><a href="namespace-Nette.Localization.html">Localization</a>
+						</li>
+				<li><a href="namespace-Nette.Mail.html">Mail</a>
+						</li>
+				<li><a href="namespace-Nette.Neon.html">Neon</a>
+						</li>
+				<li><a href="namespace-Nette.PhpGenerator.html">PhpGenerator</a>
+						</li>
+				<li><a href="namespace-Nette.Reflection.html">Reflection</a>
+						</li>
+				<li><a href="namespace-Nette.Security.html">Security</a>
+						</li>
+				<li><a href="namespace-Nette.Templating.html">Templating</a>
+						</li>
+				<li><a href="namespace-Nette.Utils.html">Utils</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-NetteModule.html">NetteModule</a>
+						</li>
+				<li><a href="namespace-none.html">none</a>
+						</li>
+				<li><a href="namespace-Tracy.html">Tracy</a>
+						</li>
+			</ul>
+		</div>
+
+		<hr>
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li class="active"><a href="Nette.Iterators.CachingIterator.html">CachingIterator</a></li>
+				<li><a href="Nette.Iterators.Filter.html">Filter</a></li>
+				<li><a href="Nette.Iterators.Mapper.html">Mapper</a></li>
+				<li><a href="Nette.Iterators.RecursiveFilter.html">RecursiveFilter</a></li>
+			</ul>
+
+
+
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form action="http://www.google.com/cse" id="search">
+		<input type="hidden" name="cx" value="011549293477758430224:vxofa9ufnhc">
+		<input type="hidden" name="ie" value="UTF-8">
+		<input type="text" name="q" class="text">
+		<input type="submit" value="Search">
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+				<a href="namespace-Nette.Iterators.html" title="Summary of Nette\Iterators"><span>Namespace</span></a>
+			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+			<li>
+				<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions"><span>Tree</span></a>
+			</li>
+			<li>
+				<a href="deprecated.html" title="List of deprecated elements"><span>Deprecated</span></a>
+			</li>
+		</ul>
+		<ul><li><a href="http://api.nette.org/releases"><span>Other releases</span></a></li><li><a href="http://nette.org"><span>Nette homepage</span></a></li></ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Class CachingIterator</h1>
+
+
+	<div class="description">
+	
+<p>Smarter caching iterator.</p>
+
+	</div>
+
+	<dl class="tree">
+		<dd style="padding-left:0px">
+			<a href="IteratorIterator.html"><span>IteratorIterator</span></a>
+			
+			 implements 
+				<a href="Iterator.html"><span>Iterator</span></a>, 
+			
+				<a href="Traversable.html"><span>Traversable</span></a>, 
+			
+				<a href="OuterIterator.html"><span>OuterIterator</span></a>
+			
+			
+		</dd>
+		<dd style="padding-left:30px">
+			<img src="resources/inherit.png" alt="Extended by">
+			<a href="CachingIterator.html"><span>CachingIterator</span></a>
+			
+			 implements 
+				<a href="ArrayAccess.html"><span>ArrayAccess</span></a>, 
+			
+				<a href="Countable.html"><span>Countable</span></a>
+			
+			
+		</dd>
+		<dd style="padding-left:60px">
+			<img src="resources/inherit.png" alt="Extended by">
+<b><span>Nette\Iterators\CachingIterator</span></b>			
+			 implements 
+				<a href="Countable.html"><span>Countable</span></a>
+			
+			
+		</dd>
+	</dl>
+
+
+
+
+
+
+
+
+	<div class="info">
+		
+		
+		<b>Namespace:</b> <a href="namespace-Nette.html">Nette</a>\<a href="namespace-Nette.Iterators.html">Iterators</a><br>
+		
+
+				<b>Author:</b>
+				David Grudl<br>
+		<b>Located at</b> <a href="source-Iterators.CachingIterator.php.html#14-244" title="Go to source code">Iterators/CachingIterator.php</a><br>
+	</div>
+
+
+
+	<table class="summary" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="__construct" id="___construct">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Iterators.CachingIterator.html#___construct">#</a>
+		<code><a href="source-Iterators.CachingIterator.php.html#37-55" title="Go to source code">__construct</a>( <span> <var>$iterator</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+				<h4>Overrides</h4>
+				<div class="list"><code><a href="CachingIterator.html#___construct">CachingIterator::__construct()</a></code></div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="isFirst" id="_isFirst">
+
+		<td class="attributes"><code>
+			 public 
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Iterators.CachingIterator.html#_isFirst">#</a>
+		<code><a href="source-Iterators.CachingIterator.php.html#58-66" title="Go to source code">isFirst</a>( <span>integer <var>$width</var> = <span class="php-keyword1">NULL</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Is the current element the first one?</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Is the current element the first one?</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$width</var></dt>
+					<dd><code>integer</code><br>grid width</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="isLast" id="_isLast">
+
+		<td class="attributes"><code>
+			 public 
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Iterators.CachingIterator.html#_isLast">#</a>
+		<code><a href="source-Iterators.CachingIterator.php.html#69-77" title="Go to source code">isLast</a>( <span>integer <var>$width</var> = <span class="php-keyword1">NULL</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Is the current element the last one?</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Is the current element the last one?</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$width</var></dt>
+					<dd><code>integer</code><br>grid width</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="isEmpty" id="_isEmpty">
+
+		<td class="attributes"><code>
+			 public 
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Iterators.CachingIterator.html#_isEmpty">#</a>
+		<code><a href="source-Iterators.CachingIterator.php.html#80-87" title="Go to source code">isEmpty</a>( )</code>
+
+		<div class="description short">
+			
+<p>Is the iterator empty?</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Is the iterator empty?</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="isOdd" id="_isOdd">
+
+		<td class="attributes"><code>
+			 public 
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Iterators.CachingIterator.html#_isOdd">#</a>
+		<code><a href="source-Iterators.CachingIterator.php.html#90-97" title="Go to source code">isOdd</a>( )</code>
+
+		<div class="description short">
+			
+<p>Is the counter odd?</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Is the counter odd?</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="isEven" id="_isEven">
+
+		<td class="attributes"><code>
+			 public 
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Iterators.CachingIterator.html#_isEven">#</a>
+		<code><a href="source-Iterators.CachingIterator.php.html#100-107" title="Go to source code">isEven</a>( )</code>
+
+		<div class="description short">
+			
+<p>Is the counter even?</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Is the counter even?</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getCounter" id="_getCounter">
+
+		<td class="attributes"><code>
+			 public 
+			integer
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Iterators.CachingIterator.html#_getCounter">#</a>
+		<code><a href="source-Iterators.CachingIterator.php.html#110-117" title="Go to source code">getCounter</a>( )</code>
+
+		<div class="description short">
+			
+<p>Returns the counter.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns the counter.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>integer</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="count" id="_count">
+
+		<td class="attributes"><code>
+			 public 
+			integer
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Iterators.CachingIterator.html#_count">#</a>
+		<code><a href="source-Iterators.CachingIterator.php.html#120-133" title="Go to source code">count</a>( )</code>
+
+		<div class="description short">
+			
+<p>Returns the count of elements.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns the count of elements.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>integer</code><br>
+				</div>
+
+
+
+				<h4>Overrides</h4>
+				<div class="list"><code><a href="CachingIterator.html#_count">CachingIterator::count()</a></code></div>
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="Countable.html#_count">Countable::count()</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="next" id="_next">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Iterators.CachingIterator.html#_next">#</a>
+		<code><a href="source-Iterators.CachingIterator.php.html#136-146" title="Go to source code">next</a>( )</code>
+
+		<div class="description short">
+			
+<p>Forwards to the next element.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Forwards to the next element.</p>
+
+
+
+
+
+
+
+				<h4>Overrides</h4>
+				<div class="list"><code><a href="CachingIterator.html#_next">CachingIterator::next()</a></code></div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="rewind" id="_rewind">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Iterators.CachingIterator.html#_rewind">#</a>
+		<code><a href="source-Iterators.CachingIterator.php.html#149-157" title="Go to source code">rewind</a>( )</code>
+
+		<div class="description short">
+			
+<p>Rewinds the Iterator.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Rewinds the Iterator.</p>
+
+
+
+
+
+
+
+				<h4>Overrides</h4>
+				<div class="list"><code><a href="CachingIterator.html#_rewind">CachingIterator::rewind()</a></code></div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getNextKey" id="_getNextKey">
+
+		<td class="attributes"><code>
+			 public 
+			mixed
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Iterators.CachingIterator.html#_getNextKey">#</a>
+		<code><a href="source-Iterators.CachingIterator.php.html#160-167" title="Go to source code">getNextKey</a>( )</code>
+
+		<div class="description short">
+			
+<p>Returns the next key.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns the next key.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>mixed</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getNextValue" id="_getNextValue">
+
+		<td class="attributes"><code>
+			 public 
+			mixed
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Iterators.CachingIterator.html#_getNextValue">#</a>
+		<code><a href="source-Iterators.CachingIterator.php.html#170-177" title="Go to source code">getNextValue</a>( )</code>
+
+		<div class="description short">
+			
+<p>Returns the next element.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns the next element.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>mixed</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="__call" id="___call">
+
+		<td class="attributes"><code>
+			 public 
+			mixed
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Iterators.CachingIterator.html#___call">#</a>
+		<code><a href="source-Iterators.CachingIterator.php.html#183-193" title="Go to source code">__call</a>( <span>string <var>$name</var></span>, <span>array <var>$args</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Call to undefined method.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Call to undefined method.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$name</var></dt>
+					<dd><code>string</code><br>method name</dd>
+					<dt><var>$args</var></dt>
+					<dd><code>array</code><br>arguments</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>mixed</code><br>
+				</div>
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><code><a href="Nette.MemberAccessException.html">Nette\MemberAccessException</a></code></code><br>
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="__get" id="___get">
+
+		<td class="attributes"><code>
+			 public 
+			mixed
+			&amp;
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Iterators.CachingIterator.html#___get">#</a>
+		<code><a href="source-Iterators.CachingIterator.php.html#196-205" title="Go to source code">__get</a>( <span>string <var>$name</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Returns property value. Do not call directly.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns property value. Do not call directly.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$name</var></dt>
+					<dd><code>string</code><br>property name</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>mixed</code><br>property value<br>
+				</div>
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><code><a href="Nette.MemberAccessException.html">Nette\MemberAccessException</a></code></code><br>if the property is not defined.<br>
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="__set" id="___set">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Iterators.CachingIterator.html#___set">#</a>
+		<code><a href="source-Iterators.CachingIterator.php.html#208-218" title="Go to source code">__set</a>( <span>string <var>$name</var></span>, <span>mixed <var>$value</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Sets value of a property. Do not call directly.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Sets value of a property. Do not call directly.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$name</var></dt>
+					<dd><code>string</code><br>property name</dd>
+					<dt><var>$value</var></dt>
+					<dd><code>mixed</code><br>property value</dd>
+				</dl></div>
+
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><code><a href="Nette.MemberAccessException.html">Nette\MemberAccessException</a></code></code><br>if the property is not defined or is read-only<br>
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="__isset" id="___isset">
+
+		<td class="attributes"><code>
+			 public 
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Iterators.CachingIterator.html#___isset">#</a>
+		<code><a href="source-Iterators.CachingIterator.php.html#221-229" title="Go to source code">__isset</a>( <span>string <var>$name</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Is property defined?</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Is property defined?</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$name</var></dt>
+					<dd><code>string</code><br>property name</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="__unset" id="___unset">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Iterators.CachingIterator.html#___unset">#</a>
+		<code><a href="source-Iterators.CachingIterator.php.html#232-241" title="Go to source code">__unset</a>( <span>string <var>$name</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Access to undeclared property.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Access to undeclared property.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$name</var></dt>
+					<dd><code>string</code><br>property name</dd>
+				</dl></div>
+
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><code><a href="Nette.MemberAccessException.html">Nette\MemberAccessException</a></code></code><br>
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+	<table class="summary inherited">
+	<caption>Methods inherited from <a href="CachingIterator.html#methods">CachingIterator</a></caption>
+	<tr>
+		<td><code>
+			<a href="CachingIterator.html#___toString">__toString()</a>, 
+			<a href="CachingIterator.html#_current">current()</a>, 
+			<a href="CachingIterator.html#_getCache">getCache()</a>, 
+			<a href="CachingIterator.html#_getFlags">getFlags()</a>, 
+			<a href="CachingIterator.html#_getInnerIterator">getInnerIterator()</a>, 
+			<a href="CachingIterator.html#_hasNext">hasNext()</a>, 
+			<a href="CachingIterator.html#_key">key()</a>, 
+			<a href="CachingIterator.html#_offsetExists">offsetExists()</a>, 
+			<a href="CachingIterator.html#_offsetGet">offsetGet()</a>, 
+			<a href="CachingIterator.html#_offsetSet">offsetSet()</a>, 
+			<a href="CachingIterator.html#_offsetUnset">offsetUnset()</a>, 
+			<a href="CachingIterator.html#_setFlags">setFlags()</a>, 
+			<a href="CachingIterator.html#_valid">valid()</a>
+		</code></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+	<table class="summary inherited">
+	<caption>Constants inherited from <a href="CachingIterator.html#constants">CachingIterator</a></caption>
+	<tr>
+		<td><code>
+			<a href="CachingIterator.html#CALL_TOSTRING"><b>CALL_TOSTRING</b></a>, 
+			<a href="CachingIterator.html#CATCH_GET_CHILD"><b>CATCH_GET_CHILD</b></a>, 
+			<a href="CachingIterator.html#FULL_CACHE"><b>FULL_CACHE</b></a>, 
+			<a href="CachingIterator.html#TOSTRING_USE_CURRENT"><b>TOSTRING_USE_CURRENT</b></a>, 
+			<a href="CachingIterator.html#TOSTRING_USE_INNER"><b>TOSTRING_USE_INNER</b></a>, 
+			<a href="CachingIterator.html#TOSTRING_USE_KEY"><b>TOSTRING_USE_KEY</b></a>
+		</code></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+	<table class="summary" id="magicProperties">
+	<caption>Magic properties summary</caption>
+	<tr data-order="flags" id="m$flags">
+		<td class="attributes"><code>
+			public  
+			
+		</code></td>
+
+		<td class="name">
+				<a href="source-Iterators.CachingIterator.php.html#28" title="Go to source code"><var>$flags</var></a>
+		</td>
+		<td class="description"><div>
+			<a href="Nette.Iterators.CachingIterator.html#m$flags" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="first" id="m$first">
+		<td class="attributes"><code>
+			public  read-only
+			boolean
+		</code></td>
+
+		<td class="name">
+				<a href="source-Iterators.CachingIterator.php.html#19" title="Go to source code"><var>$first</var></a>
+		</td>
+		<td class="description"><div>
+			<a href="Nette.Iterators.CachingIterator.html#m$first" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="last" id="m$last">
+		<td class="attributes"><code>
+			public  read-only
+			boolean
+		</code></td>
+
+		<td class="name">
+				<a href="source-Iterators.CachingIterator.php.html#20" title="Go to source code"><var>$last</var></a>
+		</td>
+		<td class="description"><div>
+			<a href="Nette.Iterators.CachingIterator.html#m$last" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="empty" id="m$empty">
+		<td class="attributes"><code>
+			public  read-only
+			boolean
+		</code></td>
+
+		<td class="name">
+				<a href="source-Iterators.CachingIterator.php.html#21" title="Go to source code"><var>$empty</var></a>
+		</td>
+		<td class="description"><div>
+			<a href="Nette.Iterators.CachingIterator.html#m$empty" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="odd" id="m$odd">
+		<td class="attributes"><code>
+			public  read-only
+			boolean
+		</code></td>
+
+		<td class="name">
+				<a href="source-Iterators.CachingIterator.php.html#22" title="Go to source code"><var>$odd</var></a>
+		</td>
+		<td class="description"><div>
+			<a href="Nette.Iterators.CachingIterator.html#m$odd" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="even" id="m$even">
+		<td class="attributes"><code>
+			public  read-only
+			boolean
+		</code></td>
+
+		<td class="name">
+				<a href="source-Iterators.CachingIterator.php.html#23" title="Go to source code"><var>$even</var></a>
+		</td>
+		<td class="description"><div>
+			<a href="Nette.Iterators.CachingIterator.html#m$even" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="counter" id="m$counter">
+		<td class="attributes"><code>
+			public  read-only
+			integer
+		</code></td>
+
+		<td class="name">
+				<a href="source-Iterators.CachingIterator.php.html#24" title="Go to source code"><var>$counter</var></a>
+		</td>
+		<td class="description"><div>
+			<a href="Nette.Iterators.CachingIterator.html#m$counter" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="nextKey" id="m$nextKey">
+		<td class="attributes"><code>
+			public  read-only
+			mixed
+		</code></td>
+
+		<td class="name">
+				<a href="source-Iterators.CachingIterator.php.html#25" title="Go to source code"><var>$nextKey</var></a>
+		</td>
+		<td class="description"><div>
+			<a href="Nette.Iterators.CachingIterator.html#m$nextKey" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="nextValue" id="m$nextValue">
+		<td class="attributes"><code>
+			public  read-only
+			mixed
+		</code></td>
+
+		<td class="name">
+				<a href="source-Iterators.CachingIterator.php.html#26" title="Go to source code"><var>$nextValue</var></a>
+		</td>
+		<td class="description"><div>
+			<a href="Nette.Iterators.CachingIterator.html#m$nextValue" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="innerIterator" id="m$innerIterator">
+		<td class="attributes"><code>
+			public  read-only
+			
+		</code></td>
+
+		<td class="name">
+				<a href="source-Iterators.CachingIterator.php.html#27" title="Go to source code"><var>$innerIterator</var></a>
+		</td>
+		<td class="description"><div>
+			<a href="Nette.Iterators.CachingIterator.html#m$innerIterator" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="cache" id="m$cache">
+		<td class="attributes"><code>
+			public  read-only
+			
+		</code></td>
+
+		<td class="name">
+				<a href="source-Iterators.CachingIterator.php.html#29" title="Go to source code"><var>$cache</var></a>
+		</td>
+		<td class="description"><div>
+			<a href="Nette.Iterators.CachingIterator.html#m$cache" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+</div>
+
+	<div id="footer">
+		Nette 2.2.2 API API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+	</div>
+</div>
+</div>
+<script src="resources/combined.js?3630868369"></script>
+<script src="elementlist.js?2087501429"></script>
+</body>
+</html>

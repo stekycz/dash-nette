@@ -1,0 +1,859 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="generator" content="ApiGen 2.8.0">
+	<meta name="robots" content="noindex">
+
+	<title>File Forms/Form.php | Nette 2.2.2 API</title>
+
+	<link rel="stylesheet" href="resources/style.css?3746977979">
+	<link rel="search" type="application/opensearchdescription+xml" title="Nette 2.2.2 API" href="http://api.nette.org/2.0/opensearch.xml">
+
+
+<script src='http://files.nette.org/js/analytics.js'></script><script>
+_ga.create('UA-95238-14', '.nette.org');
+_gaq.push(['_trackPageview']);
+</script>
+</head>
+
+<body>
+<div id="left">
+	<div id="menu">
+
+		<div id="groups">
+			<h3>Namespaces</h3>
+			<ul>
+				<li><a href="namespace-Latte.html">Latte<span></span></a>
+						<ul>
+				<li><a href="namespace-Latte.Loaders.html">Loaders</a>
+						</li>
+				<li><a href="namespace-Latte.Macros.html">Macros</a>
+						</li>
+				<li><a href="namespace-Latte.Runtime.html">Runtime</a>
+						</li>
+							</ul></li>
+				<li class="active"><a href="namespace-Nette.html">Nette<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.Application.html">Application<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.Application.Responses.html">Responses</a>
+						</li>
+				<li><a href="namespace-Nette.Application.Routers.html">Routers</a>
+						</li>
+				<li><a href="namespace-Nette.Application.UI.html">UI</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.Bridges.html">Bridges<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.Bridges.ApplicationLatte.html">ApplicationLatte</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.ApplicationTracy.html">ApplicationTracy</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.CacheLatte.html">CacheLatte</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.DatabaseDI.html">DatabaseDI</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.DatabaseTracy.html">DatabaseTracy</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.DITracy.html">DITracy</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.FormsLatte.html">FormsLatte</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.Framework.html">Framework</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.HttpTracy.html">HttpTracy</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.SecurityTracy.html">SecurityTracy</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.Caching.html">Caching<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.Caching.Storages.html">Storages</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.ComponentModel.html">ComponentModel</a>
+						</li>
+				<li><a href="namespace-Nette.Database.html">Database<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.Database.Drivers.html">Drivers</a>
+						</li>
+				<li><a href="namespace-Nette.Database.Reflection.html">Reflection</a>
+						</li>
+				<li><a href="namespace-Nette.Database.Table.html">Table</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.DI.html">DI<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.DI.Config.html">Config<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.DI.Config.Adapters.html">Adapters</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.DI.Extensions.html">Extensions</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.Diagnostics.html">Diagnostics</a>
+						</li>
+				<li class="active"><a href="namespace-Nette.Forms.html">Forms<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.Forms.Controls.html">Controls</a>
+						</li>
+				<li><a href="namespace-Nette.Forms.Rendering.html">Rendering</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.Http.html">Http</a>
+						</li>
+				<li><a href="namespace-Nette.Iterators.html">Iterators</a>
+						</li>
+				<li><a href="namespace-Nette.Latte.html">Latte</a>
+						</li>
+				<li><a href="namespace-Nette.Loaders.html">Loaders</a>
+						</li>
+				<li><a href="namespace-Nette.Localization.html">Localization</a>
+						</li>
+				<li><a href="namespace-Nette.Mail.html">Mail</a>
+						</li>
+				<li><a href="namespace-Nette.Neon.html">Neon</a>
+						</li>
+				<li><a href="namespace-Nette.PhpGenerator.html">PhpGenerator</a>
+						</li>
+				<li><a href="namespace-Nette.Reflection.html">Reflection</a>
+						</li>
+				<li><a href="namespace-Nette.Security.html">Security</a>
+						</li>
+				<li><a href="namespace-Nette.Templating.html">Templating</a>
+						</li>
+				<li><a href="namespace-Nette.Utils.html">Utils</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-NetteModule.html">NetteModule</a>
+						</li>
+				<li><a href="namespace-none.html">none</a>
+						</li>
+				<li><a href="namespace-Tracy.html">Tracy</a>
+						</li>
+			</ul>
+		</div>
+
+		<hr>
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="Nette.Forms.Container.html">Container</a></li>
+				<li><a href="Nette.Forms.ControlGroup.html">ControlGroup</a></li>
+				<li class="active"><a href="Nette.Forms.Form.html">Form</a></li>
+				<li><a href="Nette.Forms.Helpers.html">Helpers</a></li>
+				<li><a href="Nette.Forms.Rule.html">Rule</a></li>
+				<li><a href="Nette.Forms.Rules.html">Rules</a></li>
+			</ul>
+
+			<h3>Interfaces</h3>
+			<ul>
+				<li><a href="Nette.Forms.IControl.html">IControl</a></li>
+				<li><a href="Nette.Forms.IFormRenderer.html">IFormRenderer</a></li>
+				<li><a href="Nette.Forms.ISubmitterControl.html">ISubmitterControl</a></li>
+			</ul>
+
+
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form action="http://www.google.com/cse" id="search">
+		<input type="hidden" name="cx" value="011549293477758430224:vxofa9ufnhc">
+		<input type="hidden" name="ie" value="UTF-8">
+		<input type="text" name="q" class="text">
+		<input type="submit" value="Search">
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+				<a href="namespace-Nette.Forms.html" title="Summary of Nette\Forms"><span>Namespace</span></a>
+			</li>
+			<li>
+				<a href="Nette.Forms.Form.html" title="Summary of Nette\Forms\Form"><span>Class</span></a>
+			</li>
+		</ul>
+		<ul>
+			<li>
+				<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions"><span>Tree</span></a>
+			</li>
+			<li>
+				<a href="deprecated.html" title="List of deprecated elements"><span>Deprecated</span></a>
+			</li>
+		</ul>
+		<ul><li><a href="http://api.nette.org/releases"><span>Other releases</span></a></li><li><a href="http://nette.org"><span>Nette homepage</span></a></li></ul>
+		<ul>
+		</ul>
+	</div>
+
+<pre><code><span id="1" class="l"><a class="l" href="source-Forms.Form.php.html#1">  1: </a><span class="xlang">&lt;?php</span>
+</span><span id="2" class="l"><a class="l" href="source-Forms.Form.php.html#2">  2: </a>
+</span><span id="3" class="l"><a class="l" href="source-Forms.Form.php.html#3">  3: </a><span class="php-comment">/**
+</span></span><span id="4" class="l"><a class="l" href="source-Forms.Form.php.html#4">  4: </a><span class="php-comment"> * This file is part of the Nette Framework (http://nette.org)
+</span></span><span id="5" class="l"><a class="l" href="source-Forms.Form.php.html#5">  5: </a><span class="php-comment"> * Copyright (c) 2004 David Grudl (http://davidgrudl.com)
+</span></span><span id="6" class="l"><a class="l" href="source-Forms.Form.php.html#6">  6: </a><span class="php-comment"> */</span>
+</span><span id="7" class="l"><a class="l" href="source-Forms.Form.php.html#7">  7: </a>
+</span><span id="8" class="l"><a class="l" href="source-Forms.Form.php.html#8">  8: </a><span class="php-keyword1">namespace</span> Nette\Forms;
+</span><span id="9" class="l"><a class="l" href="source-Forms.Form.php.html#9">  9: </a>
+</span><span id="10" class="l"><a class="l" href="source-Forms.Form.php.html#10"> 10: </a><span class="php-keyword1">use</span> Nette;
+</span><span id="11" class="l"><a class="l" href="source-Forms.Form.php.html#11"> 11: </a>
+</span><span id="12" class="l"><a class="l" href="source-Forms.Form.php.html#12"> 12: </a>
+</span><span id="13" class="l"><a class="l" href="source-Forms.Form.php.html#13"> 13: </a><span class="php-comment">/**
+</span></span><span id="14" class="l"><a class="l" href="source-Forms.Form.php.html#14"> 14: </a><span class="php-comment"> * Creates, validates and renders HTML forms.
+</span></span><span id="15" class="l"><a class="l" href="source-Forms.Form.php.html#15"> 15: </a><span class="php-comment"> *
+</span></span><span id="16" class="l"><a class="l" href="source-Forms.Form.php.html#16"> 16: </a><span class="php-comment"> * @author     David Grudl
+</span></span><span id="17" class="l"><a class="l" href="source-Forms.Form.php.html#17"> 17: </a><span class="php-comment"> *
+</span></span><span id="18" class="l"><a class="l" href="source-Forms.Form.php.html#18"> 18: </a><span class="php-comment"> * @property   mixed $action
+</span></span><span id="19" class="l"><a class="l" href="source-Forms.Form.php.html#19"> 19: </a><span class="php-comment"> * @property   string $method
+</span></span><span id="20" class="l"><a class="l" href="source-Forms.Form.php.html#20"> 20: </a><span class="php-comment"> * @property-read array $groups
+</span></span><span id="21" class="l"><a class="l" href="source-Forms.Form.php.html#21"> 21: </a><span class="php-comment"> * @property   Nette\Localization\ITranslator|NULL $translator
+</span></span><span id="22" class="l"><a class="l" href="source-Forms.Form.php.html#22"> 22: </a><span class="php-comment"> * @property-read bool $anchored
+</span></span><span id="23" class="l"><a class="l" href="source-Forms.Form.php.html#23"> 23: </a><span class="php-comment"> * @property-read ISubmitterControl|FALSE $submitted
+</span></span><span id="24" class="l"><a class="l" href="source-Forms.Form.php.html#24"> 24: </a><span class="php-comment"> * @property-read bool $success
+</span></span><span id="25" class="l"><a class="l" href="source-Forms.Form.php.html#25"> 25: </a><span class="php-comment"> * @property-read array $httpData
+</span></span><span id="26" class="l"><a class="l" href="source-Forms.Form.php.html#26"> 26: </a><span class="php-comment"> * @property-read array $errors
+</span></span><span id="27" class="l"><a class="l" href="source-Forms.Form.php.html#27"> 27: </a><span class="php-comment"> * @property-read Nette\Utils\Html $elementPrototype
+</span></span><span id="28" class="l"><a class="l" href="source-Forms.Form.php.html#28"> 28: </a><span class="php-comment"> * @property   IFormRenderer $renderer
+</span></span><span id="29" class="l"><a class="l" href="source-Forms.Form.php.html#29"> 29: </a><span class="php-comment"> */</span>
+</span><span id="30" class="l"><a class="l" href="source-Forms.Form.php.html#30"> 30: </a><span class="php-keyword1">class</span> <a id="Form" href="source-Forms.Form.php.html#Form">Form</a> <span class="php-keyword1">extends</span> Container <span class="php-keyword1">implements</span> Nette\Utils\IHtmlString
+</span><span id="31" class="l"><a class="l" href="source-Forms.Form.php.html#31"> 31: </a>{
+</span><span id="32" class="l"><a class="l" href="source-Forms.Form.php.html#32"> 32: </a>    <span class="php-comment">/** validator */</span>
+</span><span id="33" class="l"><a class="l" href="source-Forms.Form.php.html#33"> 33: </a>    <span class="php-keyword1">const</span> <a id="EQUAL" href="source-Forms.Form.php.html#EQUAL">EQUAL</a> = <span class="php-quote">':equal'</span>,
+</span><span id="34" class="l"><a class="l" href="source-Forms.Form.php.html#34"> 34: </a>        <a id="IS_IN" href="source-Forms.Form.php.html#IS_IN">IS_IN</a> = self::EQUAL,
+</span><span id="35" class="l"><a class="l" href="source-Forms.Form.php.html#35"> 35: </a>        <a id="NOT_EQUAL" href="source-Forms.Form.php.html#NOT_EQUAL">NOT_EQUAL</a> = <span class="php-quote">':notEqual'</span>,
+</span><span id="36" class="l"><a class="l" href="source-Forms.Form.php.html#36"> 36: </a>        <a id="FILLED" href="source-Forms.Form.php.html#FILLED">FILLED</a> = <span class="php-quote">':filled'</span>,
+</span><span id="37" class="l"><a class="l" href="source-Forms.Form.php.html#37"> 37: </a>        <a id="BLANK" href="source-Forms.Form.php.html#BLANK">BLANK</a> = <span class="php-quote">':blank'</span>,
+</span><span id="38" class="l"><a class="l" href="source-Forms.Form.php.html#38"> 38: </a>        <a id="REQUIRED" href="source-Forms.Form.php.html#REQUIRED">REQUIRED</a> = self::FILLED,
+</span><span id="39" class="l"><a class="l" href="source-Forms.Form.php.html#39"> 39: </a>        <a id="VALID" href="source-Forms.Form.php.html#VALID">VALID</a> = <span class="php-quote">':valid'</span>;
+</span><span id="40" class="l"><a class="l" href="source-Forms.Form.php.html#40"> 40: </a>
+</span><span id="41" class="l"><a class="l" href="source-Forms.Form.php.html#41"> 41: </a>    <span class="php-comment">/** @deprecated CSRF protection */</span>
+</span><span id="42" class="l"><a class="l" href="source-Forms.Form.php.html#42"> 42: </a>    <span class="php-keyword1">const</span> <a id="PROTECTION" href="source-Forms.Form.php.html#PROTECTION">PROTECTION</a> = Controls\CsrfProtection::PROTECTION;
+</span><span id="43" class="l"><a class="l" href="source-Forms.Form.php.html#43"> 43: </a>
+</span><span id="44" class="l"><a class="l" href="source-Forms.Form.php.html#44"> 44: </a>    <span class="php-comment">// button</span>
+</span><span id="45" class="l"><a class="l" href="source-Forms.Form.php.html#45"> 45: </a>    <span class="php-keyword1">const</span> <a id="SUBMITTED" href="source-Forms.Form.php.html#SUBMITTED">SUBMITTED</a> = <span class="php-quote">':submitted'</span>;
+</span><span id="46" class="l"><a class="l" href="source-Forms.Form.php.html#46"> 46: </a>
+</span><span id="47" class="l"><a class="l" href="source-Forms.Form.php.html#47"> 47: </a>    <span class="php-comment">// text</span>
+</span><span id="48" class="l"><a class="l" href="source-Forms.Form.php.html#48"> 48: </a>    <span class="php-keyword1">const</span> <a id="MIN_LENGTH" href="source-Forms.Form.php.html#MIN_LENGTH">MIN_LENGTH</a> = <span class="php-quote">':minLength'</span>,
+</span><span id="49" class="l"><a class="l" href="source-Forms.Form.php.html#49"> 49: </a>        <a id="MAX_LENGTH" href="source-Forms.Form.php.html#MAX_LENGTH">MAX_LENGTH</a> = <span class="php-quote">':maxLength'</span>,
+</span><span id="50" class="l"><a class="l" href="source-Forms.Form.php.html#50"> 50: </a>        <a id="LENGTH" href="source-Forms.Form.php.html#LENGTH">LENGTH</a> = <span class="php-quote">':length'</span>,
+</span><span id="51" class="l"><a class="l" href="source-Forms.Form.php.html#51"> 51: </a>        <a id="EMAIL" href="source-Forms.Form.php.html#EMAIL">EMAIL</a> = <span class="php-quote">':email'</span>,
+</span><span id="52" class="l"><a class="l" href="source-Forms.Form.php.html#52"> 52: </a>        <a id="URL" href="source-Forms.Form.php.html#URL">URL</a> = <span class="php-quote">':url'</span>,
+</span><span id="53" class="l"><a class="l" href="source-Forms.Form.php.html#53"> 53: </a>        <span class="php-keyword2">PATTERN</span> = <span class="php-quote">':pattern'</span>,
+</span><span id="54" class="l"><a class="l" href="source-Forms.Form.php.html#54"> 54: </a>        <a id="INTEGER" href="source-Forms.Form.php.html#INTEGER">INTEGER</a> = <span class="php-quote">':integer'</span>,
+</span><span id="55" class="l"><a class="l" href="source-Forms.Form.php.html#55"> 55: </a>        <a id="NUMERIC" href="source-Forms.Form.php.html#NUMERIC">NUMERIC</a> = <span class="php-quote">':integer'</span>,
+</span><span id="56" class="l"><a class="l" href="source-Forms.Form.php.html#56"> 56: </a>        <a id="FLOAT" href="source-Forms.Form.php.html#FLOAT">FLOAT</a> = <span class="php-quote">':float'</span>,
+</span><span id="57" class="l"><a class="l" href="source-Forms.Form.php.html#57"> 57: </a>        <span class="php-keyword2">MIN</span> = <span class="php-quote">':min'</span>,
+</span><span id="58" class="l"><a class="l" href="source-Forms.Form.php.html#58"> 58: </a>        <span class="php-keyword2">MAX</span> = <span class="php-quote">':max'</span>,
+</span><span id="59" class="l"><a class="l" href="source-Forms.Form.php.html#59"> 59: </a>        <span class="php-keyword2">RANGE</span> = <span class="php-quote">':range'</span>;
+</span><span id="60" class="l"><a class="l" href="source-Forms.Form.php.html#60"> 60: </a>
+</span><span id="61" class="l"><a class="l" href="source-Forms.Form.php.html#61"> 61: </a>    <span class="php-comment">// multiselect</span>
+</span><span id="62" class="l"><a class="l" href="source-Forms.Form.php.html#62"> 62: </a>    <span class="php-keyword1">const</span> <span class="php-keyword2">COUNT</span> = self::LENGTH;
+</span><span id="63" class="l"><a class="l" href="source-Forms.Form.php.html#63"> 63: </a>
+</span><span id="64" class="l"><a class="l" href="source-Forms.Form.php.html#64"> 64: </a>    <span class="php-comment">// file upload</span>
+</span><span id="65" class="l"><a class="l" href="source-Forms.Form.php.html#65"> 65: </a>    <span class="php-keyword1">const</span> <a id="MAX_FILE_SIZE" href="source-Forms.Form.php.html#MAX_FILE_SIZE">MAX_FILE_SIZE</a> = <span class="php-quote">':fileSize'</span>,
+</span><span id="66" class="l"><a class="l" href="source-Forms.Form.php.html#66"> 66: </a>        <a id="MIME_TYPE" href="source-Forms.Form.php.html#MIME_TYPE">MIME_TYPE</a> = <span class="php-quote">':mimeType'</span>,
+</span><span id="67" class="l"><a class="l" href="source-Forms.Form.php.html#67"> 67: </a>        <a id="IMAGE" href="source-Forms.Form.php.html#IMAGE">IMAGE</a> = <span class="php-quote">':image'</span>,
+</span><span id="68" class="l"><a class="l" href="source-Forms.Form.php.html#68"> 68: </a>        <a id="MAX_POST_SIZE" href="source-Forms.Form.php.html#MAX_POST_SIZE">MAX_POST_SIZE</a> = <span class="php-quote">':maxPostSize'</span>;
+</span><span id="69" class="l"><a class="l" href="source-Forms.Form.php.html#69"> 69: </a>
+</span><span id="70" class="l"><a class="l" href="source-Forms.Form.php.html#70"> 70: </a>    <span class="php-comment">/** method */</span>
+</span><span id="71" class="l"><a class="l" href="source-Forms.Form.php.html#71"> 71: </a>    <span class="php-keyword1">const</span> <a id="GET" href="source-Forms.Form.php.html#GET">GET</a> = <span class="php-quote">'get'</span>,
+</span><span id="72" class="l"><a class="l" href="source-Forms.Form.php.html#72"> 72: </a>        <a id="POST" href="source-Forms.Form.php.html#POST">POST</a> = <span class="php-quote">'post'</span>;
+</span><span id="73" class="l"><a class="l" href="source-Forms.Form.php.html#73"> 73: </a>
+</span><span id="74" class="l"><a class="l" href="source-Forms.Form.php.html#74"> 74: </a>    <span class="php-comment">/** submitted data types */</span>
+</span><span id="75" class="l"><a class="l" href="source-Forms.Form.php.html#75"> 75: </a>    <span class="php-keyword1">const</span> <a id="DATA_TEXT" href="source-Forms.Form.php.html#DATA_TEXT">DATA_TEXT</a> = <span class="php-num">1</span>;
+</span><span id="76" class="l"><a class="l" href="source-Forms.Form.php.html#76"> 76: </a>    <span class="php-keyword1">const</span> <a id="DATA_LINE" href="source-Forms.Form.php.html#DATA_LINE">DATA_LINE</a> = <span class="php-num">2</span>;
+</span><span id="77" class="l"><a class="l" href="source-Forms.Form.php.html#77"> 77: </a>    <span class="php-keyword1">const</span> <a id="DATA_FILE" href="source-Forms.Form.php.html#DATA_FILE">DATA_FILE</a> = <span class="php-num">3</span>;
+</span><span id="78" class="l"><a class="l" href="source-Forms.Form.php.html#78"> 78: </a>    <span class="php-keyword1">const</span> <a id="DATA_KEYS" href="source-Forms.Form.php.html#DATA_KEYS">DATA_KEYS</a> = <span class="php-num">8</span>;
+</span><span id="79" class="l"><a class="l" href="source-Forms.Form.php.html#79"> 79: </a>
+</span><span id="80" class="l"><a class="l" href="source-Forms.Form.php.html#80"> 80: </a>    <span class="php-comment">/** @internal tracker ID */</span>
+</span><span id="81" class="l"><a class="l" href="source-Forms.Form.php.html#81"> 81: </a>    <span class="php-keyword1">const</span> <a id="TRACKER_ID" href="source-Forms.Form.php.html#TRACKER_ID">TRACKER_ID</a> = <span class="php-quote">'_form_'</span>;
+</span><span id="82" class="l"><a class="l" href="source-Forms.Form.php.html#82"> 82: </a>
+</span><span id="83" class="l"><a class="l" href="source-Forms.Form.php.html#83"> 83: </a>    <span class="php-comment">/** @internal protection token ID */</span>
+</span><span id="84" class="l"><a class="l" href="source-Forms.Form.php.html#84"> 84: </a>    <span class="php-keyword1">const</span> <a id="PROTECTOR_ID" href="source-Forms.Form.php.html#PROTECTOR_ID">PROTECTOR_ID</a> = <span class="php-quote">'_token_'</span>;
+</span><span id="85" class="l"><a class="l" href="source-Forms.Form.php.html#85"> 85: </a>
+</span><span id="86" class="l"><a class="l" href="source-Forms.Form.php.html#86"> 86: </a>    <span class="php-comment">/** @var array of function(Form $sender); Occurs when the form is submitted and successfully validated */</span>
+</span><span id="87" class="l"><a class="l" href="source-Forms.Form.php.html#87"> 87: </a>    <span class="php-keyword1">public</span> <span class="php-var"><a id="$onSuccess" href="source-Forms.Form.php.html#$onSuccess">$onSuccess</a></span>;
+</span><span id="88" class="l"><a class="l" href="source-Forms.Form.php.html#88"> 88: </a>
+</span><span id="89" class="l"><a class="l" href="source-Forms.Form.php.html#89"> 89: </a>    <span class="php-comment">/** @var array of function(Form $sender); Occurs when the form is submitted and is not valid */</span>
+</span><span id="90" class="l"><a class="l" href="source-Forms.Form.php.html#90"> 90: </a>    <span class="php-keyword1">public</span> <span class="php-var"><a id="$onError" href="source-Forms.Form.php.html#$onError">$onError</a></span>;
+</span><span id="91" class="l"><a class="l" href="source-Forms.Form.php.html#91"> 91: </a>
+</span><span id="92" class="l"><a class="l" href="source-Forms.Form.php.html#92"> 92: </a>    <span class="php-comment">/** @var array of function(Form $sender); Occurs when the form is submitted */</span>
+</span><span id="93" class="l"><a class="l" href="source-Forms.Form.php.html#93"> 93: </a>    <span class="php-keyword1">public</span> <span class="php-var"><a id="$onSubmit" href="source-Forms.Form.php.html#$onSubmit">$onSubmit</a></span>;
+</span><span id="94" class="l"><a class="l" href="source-Forms.Form.php.html#94"> 94: </a>
+</span><span id="95" class="l"><a class="l" href="source-Forms.Form.php.html#95"> 95: </a>    <span class="php-comment">/** @var mixed or NULL meaning: not detected yet */</span>
+</span><span id="96" class="l"><a class="l" href="source-Forms.Form.php.html#96"> 96: </a>    <span class="php-keyword1">private</span> <span class="php-var"><a id="$submittedBy" href="source-Forms.Form.php.html#$submittedBy">$submittedBy</a></span>;
+</span><span id="97" class="l"><a class="l" href="source-Forms.Form.php.html#97"> 97: </a>
+</span><span id="98" class="l"><a class="l" href="source-Forms.Form.php.html#98"> 98: </a>    <span class="php-comment">/** @var array */</span>
+</span><span id="99" class="l"><a class="l" href="source-Forms.Form.php.html#99"> 99: </a>    <span class="php-keyword1">private</span> <span class="php-var"><a id="$httpData" href="source-Forms.Form.php.html#$httpData">$httpData</a></span>;
+</span><span id="100" class="l"><a class="l" href="source-Forms.Form.php.html#100">100: </a>
+</span><span id="101" class="l"><a class="l" href="source-Forms.Form.php.html#101">101: </a>    <span class="php-comment">/** @var Nette\Utils\Html  &lt;form&gt; element */</span>
+</span><span id="102" class="l"><a class="l" href="source-Forms.Form.php.html#102">102: </a>    <span class="php-keyword1">private</span> <span class="php-var"><a id="$element" href="source-Forms.Form.php.html#$element">$element</a></span>;
+</span><span id="103" class="l"><a class="l" href="source-Forms.Form.php.html#103">103: </a>
+</span><span id="104" class="l"><a class="l" href="source-Forms.Form.php.html#104">104: </a>    <span class="php-comment">/** @var IFormRenderer */</span>
+</span><span id="105" class="l"><a class="l" href="source-Forms.Form.php.html#105">105: </a>    <span class="php-keyword1">private</span> <span class="php-var"><a id="$renderer" href="source-Forms.Form.php.html#$renderer">$renderer</a></span>;
+</span><span id="106" class="l"><a class="l" href="source-Forms.Form.php.html#106">106: </a>
+</span><span id="107" class="l"><a class="l" href="source-Forms.Form.php.html#107">107: </a>    <span class="php-comment">/** @var Nette\Localization\ITranslator */</span>
+</span><span id="108" class="l"><a class="l" href="source-Forms.Form.php.html#108">108: </a>    <span class="php-keyword1">private</span> <span class="php-var"><a id="$translator" href="source-Forms.Form.php.html#$translator">$translator</a></span>;
+</span><span id="109" class="l"><a class="l" href="source-Forms.Form.php.html#109">109: </a>
+</span><span id="110" class="l"><a class="l" href="source-Forms.Form.php.html#110">110: </a>    <span class="php-comment">/** @var ControlGroup[] */</span>
+</span><span id="111" class="l"><a class="l" href="source-Forms.Form.php.html#111">111: </a>    <span class="php-keyword1">private</span> <span class="php-var"><a id="$groups" href="source-Forms.Form.php.html#$groups">$groups</a></span> = <span class="php-keyword1">array</span>();
+</span><span id="112" class="l"><a class="l" href="source-Forms.Form.php.html#112">112: </a>
+</span><span id="113" class="l"><a class="l" href="source-Forms.Form.php.html#113">113: </a>    <span class="php-comment">/** @var array */</span>
+</span><span id="114" class="l"><a class="l" href="source-Forms.Form.php.html#114">114: </a>    <span class="php-keyword1">private</span> <span class="php-var"><a id="$errors" href="source-Forms.Form.php.html#$errors">$errors</a></span> = <span class="php-keyword1">array</span>();
+</span><span id="115" class="l"><a class="l" href="source-Forms.Form.php.html#115">115: </a>
+</span><span id="116" class="l"><a class="l" href="source-Forms.Form.php.html#116">116: </a>    <span class="php-comment">/** @var Nette\Http\IRequest  used only by standalone form */</span>
+</span><span id="117" class="l"><a class="l" href="source-Forms.Form.php.html#117">117: </a>    <span class="php-keyword1">public</span> <span class="php-var"><a id="$httpRequest" href="source-Forms.Form.php.html#$httpRequest">$httpRequest</a></span>;
+</span><span id="118" class="l"><a class="l" href="source-Forms.Form.php.html#118">118: </a>
+</span><span id="119" class="l"><a class="l" href="source-Forms.Form.php.html#119">119: </a>
+</span><span id="120" class="l"><a class="l" href="source-Forms.Form.php.html#120">120: </a>    <span class="php-comment">/**
+</span></span><span id="121" class="l"><a class="l" href="source-Forms.Form.php.html#121">121: </a><span class="php-comment">     * Form constructor.
+</span></span><span id="122" class="l"><a class="l" href="source-Forms.Form.php.html#122">122: </a><span class="php-comment">     * @param  string
+</span></span><span id="123" class="l"><a class="l" href="source-Forms.Form.php.html#123">123: </a><span class="php-comment">     */</span>
+</span><span id="124" class="l"><a class="l" href="source-Forms.Form.php.html#124">124: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="___construct" href="source-Forms.Form.php.html#___construct">__construct</a>(<span class="php-var">$name</span> = <span class="php-keyword1">NULL</span>)
+</span><span id="125" class="l"><a class="l" href="source-Forms.Form.php.html#125">125: </a>    {
+</span><span id="126" class="l"><a class="l" href="source-Forms.Form.php.html#126">126: </a>        <span class="php-keyword1">if</span> (<span class="php-var">$name</span> !== <span class="php-keyword1">NULL</span>) {
+</span><span id="127" class="l"><a class="l" href="source-Forms.Form.php.html#127">127: </a>            <span class="php-var">$this</span>-&gt;getElementPrototype()-&gt;id = <span class="php-quote">'frm-'</span> . <span class="php-var">$name</span>;
+</span><span id="128" class="l"><a class="l" href="source-Forms.Form.php.html#128">128: </a>            <span class="php-var">$tracker</span> = <span class="php-keyword1">new</span> Controls\HiddenField(<span class="php-var">$name</span>);
+</span><span id="129" class="l"><a class="l" href="source-Forms.Form.php.html#129">129: </a>            <span class="php-var">$tracker</span>-&gt;setOmitted();
+</span><span id="130" class="l"><a class="l" href="source-Forms.Form.php.html#130">130: </a>            <span class="php-var">$this</span>[self::TRACKER_ID] = <span class="php-var">$tracker</span>;
+</span><span id="131" class="l"><a class="l" href="source-Forms.Form.php.html#131">131: </a>        }
+</span><span id="132" class="l"><a class="l" href="source-Forms.Form.php.html#132">132: </a>        parent::__construct(<span class="php-keyword1">NULL</span>, <span class="php-var">$name</span>);
+</span><span id="133" class="l"><a class="l" href="source-Forms.Form.php.html#133">133: </a>    }
+</span><span id="134" class="l"><a class="l" href="source-Forms.Form.php.html#134">134: </a>
+</span><span id="135" class="l"><a class="l" href="source-Forms.Form.php.html#135">135: </a>
+</span><span id="136" class="l"><a class="l" href="source-Forms.Form.php.html#136">136: </a>    <span class="php-comment">/**
+</span></span><span id="137" class="l"><a class="l" href="source-Forms.Form.php.html#137">137: </a><span class="php-comment">     * @return void
+</span></span><span id="138" class="l"><a class="l" href="source-Forms.Form.php.html#138">138: </a><span class="php-comment">     */</span>
+</span><span id="139" class="l"><a class="l" href="source-Forms.Form.php.html#139">139: </a>    <span class="php-keyword1">protected</span> <span class="php-keyword1">function</span> <a id="_validateParent" href="source-Forms.Form.php.html#_validateParent">validateParent</a>(Nette\ComponentModel\IContainer <span class="php-var">$parent</span>)
+</span><span id="140" class="l"><a class="l" href="source-Forms.Form.php.html#140">140: </a>    {
+</span><span id="141" class="l"><a class="l" href="source-Forms.Form.php.html#141">141: </a>        parent::validateParent(<span class="php-var">$parent</span>);
+</span><span id="142" class="l"><a class="l" href="source-Forms.Form.php.html#142">142: </a>        <span class="php-var">$this</span>-&gt;monitor(__CLASS__);
+</span><span id="143" class="l"><a class="l" href="source-Forms.Form.php.html#143">143: </a>    }
+</span><span id="144" class="l"><a class="l" href="source-Forms.Form.php.html#144">144: </a>
+</span><span id="145" class="l"><a class="l" href="source-Forms.Form.php.html#145">145: </a>
+</span><span id="146" class="l"><a class="l" href="source-Forms.Form.php.html#146">146: </a>    <span class="php-comment">/**
+</span></span><span id="147" class="l"><a class="l" href="source-Forms.Form.php.html#147">147: </a><span class="php-comment">     * This method will be called when the component (or component's parent)
+</span></span><span id="148" class="l"><a class="l" href="source-Forms.Form.php.html#148">148: </a><span class="php-comment">     * becomes attached to a monitored object. Do not call this method yourself.
+</span></span><span id="149" class="l"><a class="l" href="source-Forms.Form.php.html#149">149: </a><span class="php-comment">     * @param  Nette\ComponentModel\IComponent
+</span></span><span id="150" class="l"><a class="l" href="source-Forms.Form.php.html#150">150: </a><span class="php-comment">     * @return void
+</span></span><span id="151" class="l"><a class="l" href="source-Forms.Form.php.html#151">151: </a><span class="php-comment">     */</span>
+</span><span id="152" class="l"><a class="l" href="source-Forms.Form.php.html#152">152: </a>    <span class="php-keyword1">protected</span> <span class="php-keyword1">function</span> <a id="_attached" href="source-Forms.Form.php.html#_attached">attached</a>(<span class="php-var">$obj</span>)
+</span><span id="153" class="l"><a class="l" href="source-Forms.Form.php.html#153">153: </a>    {
+</span><span id="154" class="l"><a class="l" href="source-Forms.Form.php.html#154">154: </a>        <span class="php-keyword1">if</span> (<span class="php-var">$obj</span> <span class="php-keyword1">instanceof</span> self) {
+</span><span id="155" class="l"><a class="l" href="source-Forms.Form.php.html#155">155: </a>            <span class="php-keyword1">throw</span> <span class="php-keyword1">new</span> Nette\InvalidStateException(<span class="php-quote">'Nested forms are forbidden.'</span>);
+</span><span id="156" class="l"><a class="l" href="source-Forms.Form.php.html#156">156: </a>        }
+</span><span id="157" class="l"><a class="l" href="source-Forms.Form.php.html#157">157: </a>    }
+</span><span id="158" class="l"><a class="l" href="source-Forms.Form.php.html#158">158: </a>
+</span><span id="159" class="l"><a class="l" href="source-Forms.Form.php.html#159">159: </a>
+</span><span id="160" class="l"><a class="l" href="source-Forms.Form.php.html#160">160: </a>    <span class="php-comment">/**
+</span></span><span id="161" class="l"><a class="l" href="source-Forms.Form.php.html#161">161: </a><span class="php-comment">     * Returns self.
+</span></span><span id="162" class="l"><a class="l" href="source-Forms.Form.php.html#162">162: </a><span class="php-comment">     * @return Form
+</span></span><span id="163" class="l"><a class="l" href="source-Forms.Form.php.html#163">163: </a><span class="php-comment">     */</span>
+</span><span id="164" class="l"><a class="l" href="source-Forms.Form.php.html#164">164: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_getForm" href="source-Forms.Form.php.html#_getForm">getForm</a>(<span class="php-var">$need</span> = <span class="php-keyword1">TRUE</span>)
+</span><span id="165" class="l"><a class="l" href="source-Forms.Form.php.html#165">165: </a>    {
+</span><span id="166" class="l"><a class="l" href="source-Forms.Form.php.html#166">166: </a>        <span class="php-keyword1">return</span> <span class="php-var">$this</span>;
+</span><span id="167" class="l"><a class="l" href="source-Forms.Form.php.html#167">167: </a>    }
+</span><span id="168" class="l"><a class="l" href="source-Forms.Form.php.html#168">168: </a>
+</span><span id="169" class="l"><a class="l" href="source-Forms.Form.php.html#169">169: </a>
+</span><span id="170" class="l"><a class="l" href="source-Forms.Form.php.html#170">170: </a>    <span class="php-comment">/**
+</span></span><span id="171" class="l"><a class="l" href="source-Forms.Form.php.html#171">171: </a><span class="php-comment">     * Sets form's action.
+</span></span><span id="172" class="l"><a class="l" href="source-Forms.Form.php.html#172">172: </a><span class="php-comment">     * @param  mixed URI
+</span></span><span id="173" class="l"><a class="l" href="source-Forms.Form.php.html#173">173: </a><span class="php-comment">     * @return self
+</span></span><span id="174" class="l"><a class="l" href="source-Forms.Form.php.html#174">174: </a><span class="php-comment">     */</span>
+</span><span id="175" class="l"><a class="l" href="source-Forms.Form.php.html#175">175: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_setAction" href="source-Forms.Form.php.html#_setAction">setAction</a>(<span class="php-var">$url</span>)
+</span><span id="176" class="l"><a class="l" href="source-Forms.Form.php.html#176">176: </a>    {
+</span><span id="177" class="l"><a class="l" href="source-Forms.Form.php.html#177">177: </a>        <span class="php-var">$this</span>-&gt;getElementPrototype()-&gt;action = <span class="php-var">$url</span>;
+</span><span id="178" class="l"><a class="l" href="source-Forms.Form.php.html#178">178: </a>        <span class="php-keyword1">return</span> <span class="php-var">$this</span>;
+</span><span id="179" class="l"><a class="l" href="source-Forms.Form.php.html#179">179: </a>    }
+</span><span id="180" class="l"><a class="l" href="source-Forms.Form.php.html#180">180: </a>
+</span><span id="181" class="l"><a class="l" href="source-Forms.Form.php.html#181">181: </a>
+</span><span id="182" class="l"><a class="l" href="source-Forms.Form.php.html#182">182: </a>    <span class="php-comment">/**
+</span></span><span id="183" class="l"><a class="l" href="source-Forms.Form.php.html#183">183: </a><span class="php-comment">     * Returns form's action.
+</span></span><span id="184" class="l"><a class="l" href="source-Forms.Form.php.html#184">184: </a><span class="php-comment">     * @return mixed URI
+</span></span><span id="185" class="l"><a class="l" href="source-Forms.Form.php.html#185">185: </a><span class="php-comment">     */</span>
+</span><span id="186" class="l"><a class="l" href="source-Forms.Form.php.html#186">186: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_getAction" href="source-Forms.Form.php.html#_getAction">getAction</a>()
+</span><span id="187" class="l"><a class="l" href="source-Forms.Form.php.html#187">187: </a>    {
+</span><span id="188" class="l"><a class="l" href="source-Forms.Form.php.html#188">188: </a>        <span class="php-keyword1">return</span> <span class="php-var">$this</span>-&gt;getElementPrototype()-&gt;action;
+</span><span id="189" class="l"><a class="l" href="source-Forms.Form.php.html#189">189: </a>    }
+</span><span id="190" class="l"><a class="l" href="source-Forms.Form.php.html#190">190: </a>
+</span><span id="191" class="l"><a class="l" href="source-Forms.Form.php.html#191">191: </a>
+</span><span id="192" class="l"><a class="l" href="source-Forms.Form.php.html#192">192: </a>    <span class="php-comment">/**
+</span></span><span id="193" class="l"><a class="l" href="source-Forms.Form.php.html#193">193: </a><span class="php-comment">     * Sets form's method.
+</span></span><span id="194" class="l"><a class="l" href="source-Forms.Form.php.html#194">194: </a><span class="php-comment">     * @param  string get | post
+</span></span><span id="195" class="l"><a class="l" href="source-Forms.Form.php.html#195">195: </a><span class="php-comment">     * @return self
+</span></span><span id="196" class="l"><a class="l" href="source-Forms.Form.php.html#196">196: </a><span class="php-comment">     */</span>
+</span><span id="197" class="l"><a class="l" href="source-Forms.Form.php.html#197">197: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_setMethod" href="source-Forms.Form.php.html#_setMethod">setMethod</a>(<span class="php-var">$method</span>)
+</span><span id="198" class="l"><a class="l" href="source-Forms.Form.php.html#198">198: </a>    {
+</span><span id="199" class="l"><a class="l" href="source-Forms.Form.php.html#199">199: </a>        <span class="php-keyword1">if</span> (<span class="php-var">$this</span>-&gt;httpData !== <span class="php-keyword1">NULL</span>) {
+</span><span id="200" class="l"><a class="l" href="source-Forms.Form.php.html#200">200: </a>            <span class="php-keyword1">throw</span> <span class="php-keyword1">new</span> Nette\InvalidStateException(__METHOD__ . <span class="php-quote">'() must be called until the form is empty.'</span>);
+</span><span id="201" class="l"><a class="l" href="source-Forms.Form.php.html#201">201: </a>        }
+</span><span id="202" class="l"><a class="l" href="source-Forms.Form.php.html#202">202: </a>        <span class="php-var">$this</span>-&gt;getElementPrototype()-&gt;method = <span class="php-keyword2">strtolower</span>(<span class="php-var">$method</span>);
+</span><span id="203" class="l"><a class="l" href="source-Forms.Form.php.html#203">203: </a>        <span class="php-keyword1">return</span> <span class="php-var">$this</span>;
+</span><span id="204" class="l"><a class="l" href="source-Forms.Form.php.html#204">204: </a>    }
+</span><span id="205" class="l"><a class="l" href="source-Forms.Form.php.html#205">205: </a>
+</span><span id="206" class="l"><a class="l" href="source-Forms.Form.php.html#206">206: </a>
+</span><span id="207" class="l"><a class="l" href="source-Forms.Form.php.html#207">207: </a>    <span class="php-comment">/**
+</span></span><span id="208" class="l"><a class="l" href="source-Forms.Form.php.html#208">208: </a><span class="php-comment">     * Returns form's method.
+</span></span><span id="209" class="l"><a class="l" href="source-Forms.Form.php.html#209">209: </a><span class="php-comment">     * @return string get | post
+</span></span><span id="210" class="l"><a class="l" href="source-Forms.Form.php.html#210">210: </a><span class="php-comment">     */</span>
+</span><span id="211" class="l"><a class="l" href="source-Forms.Form.php.html#211">211: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_getMethod" href="source-Forms.Form.php.html#_getMethod">getMethod</a>()
+</span><span id="212" class="l"><a class="l" href="source-Forms.Form.php.html#212">212: </a>    {
+</span><span id="213" class="l"><a class="l" href="source-Forms.Form.php.html#213">213: </a>        <span class="php-keyword1">return</span> <span class="php-var">$this</span>-&gt;getElementPrototype()-&gt;method;
+</span><span id="214" class="l"><a class="l" href="source-Forms.Form.php.html#214">214: </a>    }
+</span><span id="215" class="l"><a class="l" href="source-Forms.Form.php.html#215">215: </a>
+</span><span id="216" class="l"><a class="l" href="source-Forms.Form.php.html#216">216: </a>
+</span><span id="217" class="l"><a class="l" href="source-Forms.Form.php.html#217">217: </a>    <span class="php-comment">/**
+</span></span><span id="218" class="l"><a class="l" href="source-Forms.Form.php.html#218">218: </a><span class="php-comment">     * Cross-Site Request Forgery (CSRF) form protection.
+</span></span><span id="219" class="l"><a class="l" href="source-Forms.Form.php.html#219">219: </a><span class="php-comment">     * @param  string
+</span></span><span id="220" class="l"><a class="l" href="source-Forms.Form.php.html#220">220: </a><span class="php-comment">     * @return Controls\CsrfProtection
+</span></span><span id="221" class="l"><a class="l" href="source-Forms.Form.php.html#221">221: </a><span class="php-comment">     */</span>
+</span><span id="222" class="l"><a class="l" href="source-Forms.Form.php.html#222">222: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_addProtection" href="source-Forms.Form.php.html#_addProtection">addProtection</a>(<span class="php-var">$message</span> = <span class="php-keyword1">NULL</span>)
+</span><span id="223" class="l"><a class="l" href="source-Forms.Form.php.html#223">223: </a>    {
+</span><span id="224" class="l"><a class="l" href="source-Forms.Form.php.html#224">224: </a>        <span class="php-keyword1">return</span> <span class="php-var">$this</span>[self::PROTECTOR_ID] = <span class="php-keyword1">new</span> Controls\CsrfProtection(<span class="php-var">$message</span>);
+</span><span id="225" class="l"><a class="l" href="source-Forms.Form.php.html#225">225: </a>    }
+</span><span id="226" class="l"><a class="l" href="source-Forms.Form.php.html#226">226: </a>
+</span><span id="227" class="l"><a class="l" href="source-Forms.Form.php.html#227">227: </a>
+</span><span id="228" class="l"><a class="l" href="source-Forms.Form.php.html#228">228: </a>    <span class="php-comment">/**
+</span></span><span id="229" class="l"><a class="l" href="source-Forms.Form.php.html#229">229: </a><span class="php-comment">     * Adds fieldset group to the form.
+</span></span><span id="230" class="l"><a class="l" href="source-Forms.Form.php.html#230">230: </a><span class="php-comment">     * @param  string  caption
+</span></span><span id="231" class="l"><a class="l" href="source-Forms.Form.php.html#231">231: </a><span class="php-comment">     * @param  bool    set this group as current
+</span></span><span id="232" class="l"><a class="l" href="source-Forms.Form.php.html#232">232: </a><span class="php-comment">     * @return ControlGroup
+</span></span><span id="233" class="l"><a class="l" href="source-Forms.Form.php.html#233">233: </a><span class="php-comment">     */</span>
+</span><span id="234" class="l"><a class="l" href="source-Forms.Form.php.html#234">234: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_addGroup" href="source-Forms.Form.php.html#_addGroup">addGroup</a>(<span class="php-var">$caption</span> = <span class="php-keyword1">NULL</span>, <span class="php-var">$setAsCurrent</span> = <span class="php-keyword1">TRUE</span>)
+</span><span id="235" class="l"><a class="l" href="source-Forms.Form.php.html#235">235: </a>    {
+</span><span id="236" class="l"><a class="l" href="source-Forms.Form.php.html#236">236: </a>        <span class="php-var">$group</span> = <span class="php-keyword1">new</span> ControlGroup;
+</span><span id="237" class="l"><a class="l" href="source-Forms.Form.php.html#237">237: </a>        <span class="php-var">$group</span>-&gt;setOption(<span class="php-quote">'label'</span>, <span class="php-var">$caption</span>);
+</span><span id="238" class="l"><a class="l" href="source-Forms.Form.php.html#238">238: </a>        <span class="php-var">$group</span>-&gt;setOption(<span class="php-quote">'visual'</span>, <span class="php-keyword1">TRUE</span>);
+</span><span id="239" class="l"><a class="l" href="source-Forms.Form.php.html#239">239: </a>
+</span><span id="240" class="l"><a class="l" href="source-Forms.Form.php.html#240">240: </a>        <span class="php-keyword1">if</span> (<span class="php-var">$setAsCurrent</span>) {
+</span><span id="241" class="l"><a class="l" href="source-Forms.Form.php.html#241">241: </a>            <span class="php-var">$this</span>-&gt;setCurrentGroup(<span class="php-var">$group</span>);
+</span><span id="242" class="l"><a class="l" href="source-Forms.Form.php.html#242">242: </a>        }
+</span><span id="243" class="l"><a class="l" href="source-Forms.Form.php.html#243">243: </a>
+</span><span id="244" class="l"><a class="l" href="source-Forms.Form.php.html#244">244: </a>        <span class="php-keyword1">if</span> (!<span class="php-keyword2">is_scalar</span>(<span class="php-var">$caption</span>) || <span class="php-keyword1">isset</span>(<span class="php-var">$this</span>-&gt;groups[<span class="php-var">$caption</span>])) {
+</span><span id="245" class="l"><a class="l" href="source-Forms.Form.php.html#245">245: </a>            <span class="php-keyword1">return</span> <span class="php-var">$this</span>-&gt;groups[] = <span class="php-var">$group</span>;
+</span><span id="246" class="l"><a class="l" href="source-Forms.Form.php.html#246">246: </a>        } <span class="php-keyword1">else</span> {
+</span><span id="247" class="l"><a class="l" href="source-Forms.Form.php.html#247">247: </a>            <span class="php-keyword1">return</span> <span class="php-var">$this</span>-&gt;groups[<span class="php-var">$caption</span>] = <span class="php-var">$group</span>;
+</span><span id="248" class="l"><a class="l" href="source-Forms.Form.php.html#248">248: </a>        }
+</span><span id="249" class="l"><a class="l" href="source-Forms.Form.php.html#249">249: </a>    }
+</span><span id="250" class="l"><a class="l" href="source-Forms.Form.php.html#250">250: </a>
+</span><span id="251" class="l"><a class="l" href="source-Forms.Form.php.html#251">251: </a>
+</span><span id="252" class="l"><a class="l" href="source-Forms.Form.php.html#252">252: </a>    <span class="php-comment">/**
+</span></span><span id="253" class="l"><a class="l" href="source-Forms.Form.php.html#253">253: </a><span class="php-comment">     * Removes fieldset group from form.
+</span></span><span id="254" class="l"><a class="l" href="source-Forms.Form.php.html#254">254: </a><span class="php-comment">     * @param  string|ControlGroup
+</span></span><span id="255" class="l"><a class="l" href="source-Forms.Form.php.html#255">255: </a><span class="php-comment">     * @return void
+</span></span><span id="256" class="l"><a class="l" href="source-Forms.Form.php.html#256">256: </a><span class="php-comment">     */</span>
+</span><span id="257" class="l"><a class="l" href="source-Forms.Form.php.html#257">257: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_removeGroup" href="source-Forms.Form.php.html#_removeGroup">removeGroup</a>(<span class="php-var">$name</span>)
+</span><span id="258" class="l"><a class="l" href="source-Forms.Form.php.html#258">258: </a>    {
+</span><span id="259" class="l"><a class="l" href="source-Forms.Form.php.html#259">259: </a>        <span class="php-keyword1">if</span> (<span class="php-keyword2">is_string</span>(<span class="php-var">$name</span>) &amp;&amp; <span class="php-keyword1">isset</span>(<span class="php-var">$this</span>-&gt;groups[<span class="php-var">$name</span>])) {
+</span><span id="260" class="l"><a class="l" href="source-Forms.Form.php.html#260">260: </a>            <span class="php-var">$group</span> = <span class="php-var">$this</span>-&gt;groups[<span class="php-var">$name</span>];
+</span><span id="261" class="l"><a class="l" href="source-Forms.Form.php.html#261">261: </a>
+</span><span id="262" class="l"><a class="l" href="source-Forms.Form.php.html#262">262: </a>        } <span class="php-keyword1">elseif</span> (<span class="php-var">$name</span> <span class="php-keyword1">instanceof</span> ControlGroup &amp;&amp; <span class="php-keyword2">in_array</span>(<span class="php-var">$name</span>, <span class="php-var">$this</span>-&gt;groups, <span class="php-keyword1">TRUE</span>)) {
+</span><span id="263" class="l"><a class="l" href="source-Forms.Form.php.html#263">263: </a>            <span class="php-var">$group</span> = <span class="php-var">$name</span>;
+</span><span id="264" class="l"><a class="l" href="source-Forms.Form.php.html#264">264: </a>            <span class="php-var">$name</span> = <span class="php-keyword2">array_search</span>(<span class="php-var">$group</span>, <span class="php-var">$this</span>-&gt;groups, <span class="php-keyword1">TRUE</span>);
+</span><span id="265" class="l"><a class="l" href="source-Forms.Form.php.html#265">265: </a>
+</span><span id="266" class="l"><a class="l" href="source-Forms.Form.php.html#266">266: </a>        } <span class="php-keyword1">else</span> {
+</span><span id="267" class="l"><a class="l" href="source-Forms.Form.php.html#267">267: </a>            <span class="php-keyword1">throw</span> <span class="php-keyword1">new</span> Nette\InvalidArgumentException(<span class="php-quote">&quot;Group not found in form '</span><span class="php-var">$this</span><span class="php-quote">-&gt;name'&quot;</span>);
+</span><span id="268" class="l"><a class="l" href="source-Forms.Form.php.html#268">268: </a>        }
+</span><span id="269" class="l"><a class="l" href="source-Forms.Form.php.html#269">269: </a>
+</span><span id="270" class="l"><a class="l" href="source-Forms.Form.php.html#270">270: </a>        <span class="php-keyword1">foreach</span> (<span class="php-var">$group</span>-&gt;getControls() <span class="php-keyword1">as</span> <span class="php-var">$control</span>) {
+</span><span id="271" class="l"><a class="l" href="source-Forms.Form.php.html#271">271: </a>            <span class="php-var">$control</span>-&gt;getParent()-&gt;removeComponent(<span class="php-var">$control</span>);
+</span><span id="272" class="l"><a class="l" href="source-Forms.Form.php.html#272">272: </a>        }
+</span><span id="273" class="l"><a class="l" href="source-Forms.Form.php.html#273">273: </a>
+</span><span id="274" class="l"><a class="l" href="source-Forms.Form.php.html#274">274: </a>        <span class="php-keyword1">unset</span>(<span class="php-var">$this</span>-&gt;groups[<span class="php-var">$name</span>]);
+</span><span id="275" class="l"><a class="l" href="source-Forms.Form.php.html#275">275: </a>    }
+</span><span id="276" class="l"><a class="l" href="source-Forms.Form.php.html#276">276: </a>
+</span><span id="277" class="l"><a class="l" href="source-Forms.Form.php.html#277">277: </a>
+</span><span id="278" class="l"><a class="l" href="source-Forms.Form.php.html#278">278: </a>    <span class="php-comment">/**
+</span></span><span id="279" class="l"><a class="l" href="source-Forms.Form.php.html#279">279: </a><span class="php-comment">     * Returns all defined groups.
+</span></span><span id="280" class="l"><a class="l" href="source-Forms.Form.php.html#280">280: </a><span class="php-comment">     * @return ControlGroup[]
+</span></span><span id="281" class="l"><a class="l" href="source-Forms.Form.php.html#281">281: </a><span class="php-comment">     */</span>
+</span><span id="282" class="l"><a class="l" href="source-Forms.Form.php.html#282">282: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_getGroups" href="source-Forms.Form.php.html#_getGroups">getGroups</a>()
+</span><span id="283" class="l"><a class="l" href="source-Forms.Form.php.html#283">283: </a>    {
+</span><span id="284" class="l"><a class="l" href="source-Forms.Form.php.html#284">284: </a>        <span class="php-keyword1">return</span> <span class="php-var">$this</span>-&gt;groups;
+</span><span id="285" class="l"><a class="l" href="source-Forms.Form.php.html#285">285: </a>    }
+</span><span id="286" class="l"><a class="l" href="source-Forms.Form.php.html#286">286: </a>
+</span><span id="287" class="l"><a class="l" href="source-Forms.Form.php.html#287">287: </a>
+</span><span id="288" class="l"><a class="l" href="source-Forms.Form.php.html#288">288: </a>    <span class="php-comment">/**
+</span></span><span id="289" class="l"><a class="l" href="source-Forms.Form.php.html#289">289: </a><span class="php-comment">     * Returns the specified group.
+</span></span><span id="290" class="l"><a class="l" href="source-Forms.Form.php.html#290">290: </a><span class="php-comment">     * @param  string  name
+</span></span><span id="291" class="l"><a class="l" href="source-Forms.Form.php.html#291">291: </a><span class="php-comment">     * @return ControlGroup
+</span></span><span id="292" class="l"><a class="l" href="source-Forms.Form.php.html#292">292: </a><span class="php-comment">     */</span>
+</span><span id="293" class="l"><a class="l" href="source-Forms.Form.php.html#293">293: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_getGroup" href="source-Forms.Form.php.html#_getGroup">getGroup</a>(<span class="php-var">$name</span>)
+</span><span id="294" class="l"><a class="l" href="source-Forms.Form.php.html#294">294: </a>    {
+</span><span id="295" class="l"><a class="l" href="source-Forms.Form.php.html#295">295: </a>        <span class="php-keyword1">return</span> <span class="php-keyword1">isset</span>(<span class="php-var">$this</span>-&gt;groups[<span class="php-var">$name</span>]) ? <span class="php-var">$this</span>-&gt;groups[<span class="php-var">$name</span>] : <span class="php-keyword1">NULL</span>;
+</span><span id="296" class="l"><a class="l" href="source-Forms.Form.php.html#296">296: </a>    }
+</span><span id="297" class="l"><a class="l" href="source-Forms.Form.php.html#297">297: </a>
+</span><span id="298" class="l"><a class="l" href="source-Forms.Form.php.html#298">298: </a>
+</span><span id="299" class="l"><a class="l" href="source-Forms.Form.php.html#299">299: </a>    <span class="php-comment">/********************* translator ****************d*g**/</span>
+</span><span id="300" class="l"><a class="l" href="source-Forms.Form.php.html#300">300: </a>
+</span><span id="301" class="l"><a class="l" href="source-Forms.Form.php.html#301">301: </a>
+</span><span id="302" class="l"><a class="l" href="source-Forms.Form.php.html#302">302: </a>    <span class="php-comment">/**
+</span></span><span id="303" class="l"><a class="l" href="source-Forms.Form.php.html#303">303: </a><span class="php-comment">     * Sets translate adapter.
+</span></span><span id="304" class="l"><a class="l" href="source-Forms.Form.php.html#304">304: </a><span class="php-comment">     * @return self
+</span></span><span id="305" class="l"><a class="l" href="source-Forms.Form.php.html#305">305: </a><span class="php-comment">     */</span>
+</span><span id="306" class="l"><a class="l" href="source-Forms.Form.php.html#306">306: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_setTranslator" href="source-Forms.Form.php.html#_setTranslator">setTranslator</a>(Nette\Localization\ITranslator <span class="php-var">$translator</span> = <span class="php-keyword1">NULL</span>)
+</span><span id="307" class="l"><a class="l" href="source-Forms.Form.php.html#307">307: </a>    {
+</span><span id="308" class="l"><a class="l" href="source-Forms.Form.php.html#308">308: </a>        <span class="php-var">$this</span>-&gt;translator = <span class="php-var">$translator</span>;
+</span><span id="309" class="l"><a class="l" href="source-Forms.Form.php.html#309">309: </a>        <span class="php-keyword1">return</span> <span class="php-var">$this</span>;
+</span><span id="310" class="l"><a class="l" href="source-Forms.Form.php.html#310">310: </a>    }
+</span><span id="311" class="l"><a class="l" href="source-Forms.Form.php.html#311">311: </a>
+</span><span id="312" class="l"><a class="l" href="source-Forms.Form.php.html#312">312: </a>
+</span><span id="313" class="l"><a class="l" href="source-Forms.Form.php.html#313">313: </a>    <span class="php-comment">/**
+</span></span><span id="314" class="l"><a class="l" href="source-Forms.Form.php.html#314">314: </a><span class="php-comment">     * Returns translate adapter.
+</span></span><span id="315" class="l"><a class="l" href="source-Forms.Form.php.html#315">315: </a><span class="php-comment">     * @return Nette\Localization\ITranslator|NULL
+</span></span><span id="316" class="l"><a class="l" href="source-Forms.Form.php.html#316">316: </a><span class="php-comment">     */</span>
+</span><span id="317" class="l"><a class="l" href="source-Forms.Form.php.html#317">317: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_getTranslator" href="source-Forms.Form.php.html#_getTranslator">getTranslator</a>()
+</span><span id="318" class="l"><a class="l" href="source-Forms.Form.php.html#318">318: </a>    {
+</span><span id="319" class="l"><a class="l" href="source-Forms.Form.php.html#319">319: </a>        <span class="php-keyword1">return</span> <span class="php-var">$this</span>-&gt;translator;
+</span><span id="320" class="l"><a class="l" href="source-Forms.Form.php.html#320">320: </a>    }
+</span><span id="321" class="l"><a class="l" href="source-Forms.Form.php.html#321">321: </a>
+</span><span id="322" class="l"><a class="l" href="source-Forms.Form.php.html#322">322: </a>
+</span><span id="323" class="l"><a class="l" href="source-Forms.Form.php.html#323">323: </a>    <span class="php-comment">/********************* submission ****************d*g**/</span>
+</span><span id="324" class="l"><a class="l" href="source-Forms.Form.php.html#324">324: </a>
+</span><span id="325" class="l"><a class="l" href="source-Forms.Form.php.html#325">325: </a>
+</span><span id="326" class="l"><a class="l" href="source-Forms.Form.php.html#326">326: </a>    <span class="php-comment">/**
+</span></span><span id="327" class="l"><a class="l" href="source-Forms.Form.php.html#327">327: </a><span class="php-comment">     * Tells if the form is anchored.
+</span></span><span id="328" class="l"><a class="l" href="source-Forms.Form.php.html#328">328: </a><span class="php-comment">     * @return bool
+</span></span><span id="329" class="l"><a class="l" href="source-Forms.Form.php.html#329">329: </a><span class="php-comment">     */</span>
+</span><span id="330" class="l"><a class="l" href="source-Forms.Form.php.html#330">330: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_isAnchored" href="source-Forms.Form.php.html#_isAnchored">isAnchored</a>()
+</span><span id="331" class="l"><a class="l" href="source-Forms.Form.php.html#331">331: </a>    {
+</span><span id="332" class="l"><a class="l" href="source-Forms.Form.php.html#332">332: </a>        <span class="php-keyword1">return</span> <span class="php-keyword1">TRUE</span>;
+</span><span id="333" class="l"><a class="l" href="source-Forms.Form.php.html#333">333: </a>    }
+</span><span id="334" class="l"><a class="l" href="source-Forms.Form.php.html#334">334: </a>
+</span><span id="335" class="l"><a class="l" href="source-Forms.Form.php.html#335">335: </a>
+</span><span id="336" class="l"><a class="l" href="source-Forms.Form.php.html#336">336: </a>    <span class="php-comment">/**
+</span></span><span id="337" class="l"><a class="l" href="source-Forms.Form.php.html#337">337: </a><span class="php-comment">     * Tells if the form was submitted.
+</span></span><span id="338" class="l"><a class="l" href="source-Forms.Form.php.html#338">338: </a><span class="php-comment">     * @return ISubmitterControl|FALSE  submittor control
+</span></span><span id="339" class="l"><a class="l" href="source-Forms.Form.php.html#339">339: </a><span class="php-comment">     */</span>
+</span><span id="340" class="l"><a class="l" href="source-Forms.Form.php.html#340">340: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_isSubmitted" href="source-Forms.Form.php.html#_isSubmitted">isSubmitted</a>()
+</span><span id="341" class="l"><a class="l" href="source-Forms.Form.php.html#341">341: </a>    {
+</span><span id="342" class="l"><a class="l" href="source-Forms.Form.php.html#342">342: </a>        <span class="php-keyword1">if</span> (<span class="php-var">$this</span>-&gt;submittedBy === <span class="php-keyword1">NULL</span>) {
+</span><span id="343" class="l"><a class="l" href="source-Forms.Form.php.html#343">343: </a>            <span class="php-var">$this</span>-&gt;getHttpData();
+</span><span id="344" class="l"><a class="l" href="source-Forms.Form.php.html#344">344: </a>        }
+</span><span id="345" class="l"><a class="l" href="source-Forms.Form.php.html#345">345: </a>        <span class="php-keyword1">return</span> <span class="php-var">$this</span>-&gt;submittedBy;
+</span><span id="346" class="l"><a class="l" href="source-Forms.Form.php.html#346">346: </a>    }
+</span><span id="347" class="l"><a class="l" href="source-Forms.Form.php.html#347">347: </a>
+</span><span id="348" class="l"><a class="l" href="source-Forms.Form.php.html#348">348: </a>
+</span><span id="349" class="l"><a class="l" href="source-Forms.Form.php.html#349">349: </a>    <span class="php-comment">/**
+</span></span><span id="350" class="l"><a class="l" href="source-Forms.Form.php.html#350">350: </a><span class="php-comment">     * Tells if the form was submitted and successfully validated.
+</span></span><span id="351" class="l"><a class="l" href="source-Forms.Form.php.html#351">351: </a><span class="php-comment">     * @return bool
+</span></span><span id="352" class="l"><a class="l" href="source-Forms.Form.php.html#352">352: </a><span class="php-comment">     */</span>
+</span><span id="353" class="l"><a class="l" href="source-Forms.Form.php.html#353">353: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_isSuccess" href="source-Forms.Form.php.html#_isSuccess">isSuccess</a>()
+</span><span id="354" class="l"><a class="l" href="source-Forms.Form.php.html#354">354: </a>    {
+</span><span id="355" class="l"><a class="l" href="source-Forms.Form.php.html#355">355: </a>        <span class="php-keyword1">return</span> <span class="php-var">$this</span>-&gt;isSubmitted() &amp;&amp; <span class="php-var">$this</span>-&gt;isValid();
+</span><span id="356" class="l"><a class="l" href="source-Forms.Form.php.html#356">356: </a>    }
+</span><span id="357" class="l"><a class="l" href="source-Forms.Form.php.html#357">357: </a>
+</span><span id="358" class="l"><a class="l" href="source-Forms.Form.php.html#358">358: </a>
+</span><span id="359" class="l"><a class="l" href="source-Forms.Form.php.html#359">359: </a>    <span class="php-comment">/**
+</span></span><span id="360" class="l"><a class="l" href="source-Forms.Form.php.html#360">360: </a><span class="php-comment">     * Sets the submittor control.
+</span></span><span id="361" class="l"><a class="l" href="source-Forms.Form.php.html#361">361: </a><span class="php-comment">     * @return self
+</span></span><span id="362" class="l"><a class="l" href="source-Forms.Form.php.html#362">362: </a><span class="php-comment">     */</span>
+</span><span id="363" class="l"><a class="l" href="source-Forms.Form.php.html#363">363: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_setSubmittedBy" href="source-Forms.Form.php.html#_setSubmittedBy">setSubmittedBy</a>(ISubmitterControl <span class="php-var">$by</span> = <span class="php-keyword1">NULL</span>)
+</span><span id="364" class="l"><a class="l" href="source-Forms.Form.php.html#364">364: </a>    {
+</span><span id="365" class="l"><a class="l" href="source-Forms.Form.php.html#365">365: </a>        <span class="php-var">$this</span>-&gt;submittedBy = <span class="php-var">$by</span> === <span class="php-keyword1">NULL</span> ? <span class="php-keyword1">FALSE</span> : <span class="php-var">$by</span>;
+</span><span id="366" class="l"><a class="l" href="source-Forms.Form.php.html#366">366: </a>        <span class="php-keyword1">return</span> <span class="php-var">$this</span>;
+</span><span id="367" class="l"><a class="l" href="source-Forms.Form.php.html#367">367: </a>    }
+</span><span id="368" class="l"><a class="l" href="source-Forms.Form.php.html#368">368: </a>
+</span><span id="369" class="l"><a class="l" href="source-Forms.Form.php.html#369">369: </a>
+</span><span id="370" class="l"><a class="l" href="source-Forms.Form.php.html#370">370: </a>    <span class="php-comment">/**
+</span></span><span id="371" class="l"><a class="l" href="source-Forms.Form.php.html#371">371: </a><span class="php-comment">     * Returns submitted HTTP data.
+</span></span><span id="372" class="l"><a class="l" href="source-Forms.Form.php.html#372">372: </a><span class="php-comment">     * @return mixed
+</span></span><span id="373" class="l"><a class="l" href="source-Forms.Form.php.html#373">373: </a><span class="php-comment">     */</span>
+</span><span id="374" class="l"><a class="l" href="source-Forms.Form.php.html#374">374: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_getHttpData" href="source-Forms.Form.php.html#_getHttpData">getHttpData</a>(<span class="php-var">$type</span> = <span class="php-keyword1">NULL</span>, <span class="php-var">$htmlName</span> = <span class="php-keyword1">NULL</span>)
+</span><span id="375" class="l"><a class="l" href="source-Forms.Form.php.html#375">375: </a>    {
+</span><span id="376" class="l"><a class="l" href="source-Forms.Form.php.html#376">376: </a>        <span class="php-keyword1">if</span> (<span class="php-var">$this</span>-&gt;httpData === <span class="php-keyword1">NULL</span>) {
+</span><span id="377" class="l"><a class="l" href="source-Forms.Form.php.html#377">377: </a>            <span class="php-keyword1">if</span> (!<span class="php-var">$this</span>-&gt;isAnchored()) {
+</span><span id="378" class="l"><a class="l" href="source-Forms.Form.php.html#378">378: </a>                <span class="php-keyword1">throw</span> <span class="php-keyword1">new</span> Nette\InvalidStateException(<span class="php-quote">'Form is not anchored and therefore can not determine whether it was submitted.'</span>);
+</span><span id="379" class="l"><a class="l" href="source-Forms.Form.php.html#379">379: </a>            }
+</span><span id="380" class="l"><a class="l" href="source-Forms.Form.php.html#380">380: </a>            <span class="php-var">$data</span> = <span class="php-var">$this</span>-&gt;receiveHttpData();
+</span><span id="381" class="l"><a class="l" href="source-Forms.Form.php.html#381">381: </a>            <span class="php-var">$this</span>-&gt;httpData = (<span class="php-keyword1">array</span>) <span class="php-var">$data</span>;
+</span><span id="382" class="l"><a class="l" href="source-Forms.Form.php.html#382">382: </a>            <span class="php-var">$this</span>-&gt;submittedBy = <span class="php-keyword2">is_array</span>(<span class="php-var">$data</span>);
+</span><span id="383" class="l"><a class="l" href="source-Forms.Form.php.html#383">383: </a>        }
+</span><span id="384" class="l"><a class="l" href="source-Forms.Form.php.html#384">384: </a>        <span class="php-keyword1">if</span> (<span class="php-var">$htmlName</span> === <span class="php-keyword1">NULL</span>) {
+</span><span id="385" class="l"><a class="l" href="source-Forms.Form.php.html#385">385: </a>            <span class="php-keyword1">return</span> <span class="php-var">$this</span>-&gt;httpData;
+</span><span id="386" class="l"><a class="l" href="source-Forms.Form.php.html#386">386: </a>        }
+</span><span id="387" class="l"><a class="l" href="source-Forms.Form.php.html#387">387: </a>        <span class="php-keyword1">return</span> Helpers::extractHttpData(<span class="php-var">$this</span>-&gt;httpData, <span class="php-var">$htmlName</span>, <span class="php-var">$type</span>);
+</span><span id="388" class="l"><a class="l" href="source-Forms.Form.php.html#388">388: </a>    }
+</span><span id="389" class="l"><a class="l" href="source-Forms.Form.php.html#389">389: </a>
+</span><span id="390" class="l"><a class="l" href="source-Forms.Form.php.html#390">390: </a>
+</span><span id="391" class="l"><a class="l" href="source-Forms.Form.php.html#391">391: </a>    <span class="php-comment">/**
+</span></span><span id="392" class="l"><a class="l" href="source-Forms.Form.php.html#392">392: </a><span class="php-comment">     * Fires submit/click events.
+</span></span><span id="393" class="l"><a class="l" href="source-Forms.Form.php.html#393">393: </a><span class="php-comment">     * @return void
+</span></span><span id="394" class="l"><a class="l" href="source-Forms.Form.php.html#394">394: </a><span class="php-comment">     */</span>
+</span><span id="395" class="l"><a class="l" href="source-Forms.Form.php.html#395">395: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_fireEvents" href="source-Forms.Form.php.html#_fireEvents">fireEvents</a>()
+</span><span id="396" class="l"><a class="l" href="source-Forms.Form.php.html#396">396: </a>    {
+</span><span id="397" class="l"><a class="l" href="source-Forms.Form.php.html#397">397: </a>        <span class="php-keyword1">if</span> (!<span class="php-var">$this</span>-&gt;isSubmitted()) {
+</span><span id="398" class="l"><a class="l" href="source-Forms.Form.php.html#398">398: </a>            <span class="php-keyword1">return</span>;
+</span><span id="399" class="l"><a class="l" href="source-Forms.Form.php.html#399">399: </a>        }
+</span><span id="400" class="l"><a class="l" href="source-Forms.Form.php.html#400">400: </a>
+</span><span id="401" class="l"><a class="l" href="source-Forms.Form.php.html#401">401: </a>        <span class="php-var">$this</span>-&gt;validate();
+</span><span id="402" class="l"><a class="l" href="source-Forms.Form.php.html#402">402: </a>
+</span><span id="403" class="l"><a class="l" href="source-Forms.Form.php.html#403">403: </a>        <span class="php-keyword1">if</span> (<span class="php-var">$this</span>-&gt;submittedBy <span class="php-keyword1">instanceof</span> ISubmitterControl) {
+</span><span id="404" class="l"><a class="l" href="source-Forms.Form.php.html#404">404: </a>            <span class="php-keyword1">if</span> (<span class="php-var">$this</span>-&gt;isValid()) {
+</span><span id="405" class="l"><a class="l" href="source-Forms.Form.php.html#405">405: </a>                <span class="php-var">$this</span>-&gt;submittedBy-&gt;onClick(<span class="php-var">$this</span>-&gt;submittedBy);
+</span><span id="406" class="l"><a class="l" href="source-Forms.Form.php.html#406">406: </a>            } <span class="php-keyword1">else</span> {
+</span><span id="407" class="l"><a class="l" href="source-Forms.Form.php.html#407">407: </a>                <span class="php-var">$this</span>-&gt;submittedBy-&gt;onInvalidClick(<span class="php-var">$this</span>-&gt;submittedBy);
+</span><span id="408" class="l"><a class="l" href="source-Forms.Form.php.html#408">408: </a>            }
+</span><span id="409" class="l"><a class="l" href="source-Forms.Form.php.html#409">409: </a>        }
+</span><span id="410" class="l"><a class="l" href="source-Forms.Form.php.html#410">410: </a>
+</span><span id="411" class="l"><a class="l" href="source-Forms.Form.php.html#411">411: </a>        <span class="php-keyword1">if</span> (<span class="php-var">$this</span>-&gt;onSuccess) {
+</span><span id="412" class="l"><a class="l" href="source-Forms.Form.php.html#412">412: </a>            <span class="php-keyword1">foreach</span> (<span class="php-var">$this</span>-&gt;onSuccess <span class="php-keyword1">as</span> <span class="php-var">$handler</span>) {
+</span><span id="413" class="l"><a class="l" href="source-Forms.Form.php.html#413">413: </a>                <span class="php-keyword1">if</span> (!<span class="php-var">$this</span>-&gt;isValid()) {
+</span><span id="414" class="l"><a class="l" href="source-Forms.Form.php.html#414">414: </a>                    <span class="php-var">$this</span>-&gt;onError(<span class="php-var">$this</span>);
+</span><span id="415" class="l"><a class="l" href="source-Forms.Form.php.html#415">415: </a>                    <span class="php-keyword1">break</span>;
+</span><span id="416" class="l"><a class="l" href="source-Forms.Form.php.html#416">416: </a>                }
+</span><span id="417" class="l"><a class="l" href="source-Forms.Form.php.html#417">417: </a>                <span class="php-var">$params</span> = Nette\Utils\Callback::toReflection(<span class="php-var">$handler</span>)-&gt;getParameters();
+</span><span id="418" class="l"><a class="l" href="source-Forms.Form.php.html#418">418: </a>                <span class="php-var">$values</span> = <span class="php-keyword1">isset</span>(<span class="php-var">$params</span>[<span class="php-num">1</span>]) ? <span class="php-var">$this</span>-&gt;getValues(<span class="php-var">$params</span>[<span class="php-num">1</span>]-&gt;isArray()) : <span class="php-keyword1">NULL</span>;
+</span><span id="419" class="l"><a class="l" href="source-Forms.Form.php.html#419">419: </a>                Nette\Utils\Callback::invoke(<span class="php-var">$handler</span>, <span class="php-var">$this</span>, <span class="php-var">$values</span>);
+</span><span id="420" class="l"><a class="l" href="source-Forms.Form.php.html#420">420: </a>            }
+</span><span id="421" class="l"><a class="l" href="source-Forms.Form.php.html#421">421: </a>        } <span class="php-keyword1">elseif</span> (!<span class="php-var">$this</span>-&gt;isValid()) {
+</span><span id="422" class="l"><a class="l" href="source-Forms.Form.php.html#422">422: </a>            <span class="php-var">$this</span>-&gt;onError(<span class="php-var">$this</span>);
+</span><span id="423" class="l"><a class="l" href="source-Forms.Form.php.html#423">423: </a>        }
+</span><span id="424" class="l"><a class="l" href="source-Forms.Form.php.html#424">424: </a>        <span class="php-var">$this</span>-&gt;onSubmit(<span class="php-var">$this</span>);
+</span><span id="425" class="l"><a class="l" href="source-Forms.Form.php.html#425">425: </a>    }
+</span><span id="426" class="l"><a class="l" href="source-Forms.Form.php.html#426">426: </a>
+</span><span id="427" class="l"><a class="l" href="source-Forms.Form.php.html#427">427: </a>
+</span><span id="428" class="l"><a class="l" href="source-Forms.Form.php.html#428">428: </a>    <span class="php-comment">/**
+</span></span><span id="429" class="l"><a class="l" href="source-Forms.Form.php.html#429">429: </a><span class="php-comment">     * Internal: returns submitted HTTP data or NULL when form was not submitted.
+</span></span><span id="430" class="l"><a class="l" href="source-Forms.Form.php.html#430">430: </a><span class="php-comment">     * @return array|NULL
+</span></span><span id="431" class="l"><a class="l" href="source-Forms.Form.php.html#431">431: </a><span class="php-comment">     */</span>
+</span><span id="432" class="l"><a class="l" href="source-Forms.Form.php.html#432">432: </a>    <span class="php-keyword1">protected</span> <span class="php-keyword1">function</span> <a id="_receiveHttpData" href="source-Forms.Form.php.html#_receiveHttpData">receiveHttpData</a>()
+</span><span id="433" class="l"><a class="l" href="source-Forms.Form.php.html#433">433: </a>    {
+</span><span id="434" class="l"><a class="l" href="source-Forms.Form.php.html#434">434: </a>        <span class="php-var">$httpRequest</span> = <span class="php-var">$this</span>-&gt;getHttpRequest();
+</span><span id="435" class="l"><a class="l" href="source-Forms.Form.php.html#435">435: </a>        <span class="php-keyword1">if</span> (<span class="php-keyword2">strcasecmp</span>(<span class="php-var">$this</span>-&gt;getMethod(), <span class="php-var">$httpRequest</span>-&gt;getMethod())) {
+</span><span id="436" class="l"><a class="l" href="source-Forms.Form.php.html#436">436: </a>            <span class="php-keyword1">return</span>;
+</span><span id="437" class="l"><a class="l" href="source-Forms.Form.php.html#437">437: </a>        }
+</span><span id="438" class="l"><a class="l" href="source-Forms.Form.php.html#438">438: </a>
+</span><span id="439" class="l"><a class="l" href="source-Forms.Form.php.html#439">439: </a>        <span class="php-keyword1">if</span> (<span class="php-var">$httpRequest</span>-&gt;isMethod(<span class="php-quote">'post'</span>)) {
+</span><span id="440" class="l"><a class="l" href="source-Forms.Form.php.html#440">440: </a>            <span class="php-var">$data</span> = Nette\Utils\Arrays::mergeTree(<span class="php-var">$httpRequest</span>-&gt;getPost(), <span class="php-var">$httpRequest</span>-&gt;getFiles());
+</span><span id="441" class="l"><a class="l" href="source-Forms.Form.php.html#441">441: </a>        } <span class="php-keyword1">else</span> {
+</span><span id="442" class="l"><a class="l" href="source-Forms.Form.php.html#442">442: </a>            <span class="php-var">$data</span> = <span class="php-var">$httpRequest</span>-&gt;getQuery();
+</span><span id="443" class="l"><a class="l" href="source-Forms.Form.php.html#443">443: </a>            <span class="php-keyword1">if</span> (!<span class="php-var">$data</span>) {
+</span><span id="444" class="l"><a class="l" href="source-Forms.Form.php.html#444">444: </a>                <span class="php-keyword1">return</span>;
+</span><span id="445" class="l"><a class="l" href="source-Forms.Form.php.html#445">445: </a>            }
+</span><span id="446" class="l"><a class="l" href="source-Forms.Form.php.html#446">446: </a>        }
+</span><span id="447" class="l"><a class="l" href="source-Forms.Form.php.html#447">447: </a>
+</span><span id="448" class="l"><a class="l" href="source-Forms.Form.php.html#448">448: </a>        <span class="php-keyword1">if</span> (<span class="php-var">$tracker</span> = <span class="php-var">$this</span>-&gt;getComponent(self::TRACKER_ID, <span class="php-keyword1">FALSE</span>)) {
+</span><span id="449" class="l"><a class="l" href="source-Forms.Form.php.html#449">449: </a>            <span class="php-keyword1">if</span> (!<span class="php-keyword1">isset</span>(<span class="php-var">$data</span>[self::TRACKER_ID]) || <span class="php-var">$data</span>[self::TRACKER_ID] !== <span class="php-var">$tracker</span>-&gt;getValue()) {
+</span><span id="450" class="l"><a class="l" href="source-Forms.Form.php.html#450">450: </a>                <span class="php-keyword1">return</span>;
+</span><span id="451" class="l"><a class="l" href="source-Forms.Form.php.html#451">451: </a>            }
+</span><span id="452" class="l"><a class="l" href="source-Forms.Form.php.html#452">452: </a>        }
+</span><span id="453" class="l"><a class="l" href="source-Forms.Form.php.html#453">453: </a>
+</span><span id="454" class="l"><a class="l" href="source-Forms.Form.php.html#454">454: </a>        <span class="php-keyword1">return</span> <span class="php-var">$data</span>;
+</span><span id="455" class="l"><a class="l" href="source-Forms.Form.php.html#455">455: </a>    }
+</span><span id="456" class="l"><a class="l" href="source-Forms.Form.php.html#456">456: </a>
+</span><span id="457" class="l"><a class="l" href="source-Forms.Form.php.html#457">457: </a>
+</span><span id="458" class="l"><a class="l" href="source-Forms.Form.php.html#458">458: </a>    <span class="php-comment">/********************* validation ****************d*g**/</span>
+</span><span id="459" class="l"><a class="l" href="source-Forms.Form.php.html#459">459: </a>
+</span><span id="460" class="l"><a class="l" href="source-Forms.Form.php.html#460">460: </a>
+</span><span id="461" class="l"><a class="l" href="source-Forms.Form.php.html#461">461: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_validate" href="source-Forms.Form.php.html#_validate">validate</a>(<span class="php-keyword1">array</span> <span class="php-var">$controls</span> = <span class="php-keyword1">NULL</span>)
+</span><span id="462" class="l"><a class="l" href="source-Forms.Form.php.html#462">462: </a>    {
+</span><span id="463" class="l"><a class="l" href="source-Forms.Form.php.html#463">463: </a>        <span class="php-var">$this</span>-&gt;cleanErrors();
+</span><span id="464" class="l"><a class="l" href="source-Forms.Form.php.html#464">464: </a>        <span class="php-keyword1">if</span> (<span class="php-var">$controls</span> === <span class="php-keyword1">NULL</span> &amp;&amp; <span class="php-var">$this</span>-&gt;submittedBy <span class="php-keyword1">instanceof</span> ISubmitterControl) {
+</span><span id="465" class="l"><a class="l" href="source-Forms.Form.php.html#465">465: </a>            <span class="php-var">$controls</span> = <span class="php-var">$this</span>-&gt;submittedBy-&gt;getValidationScope();
+</span><span id="466" class="l"><a class="l" href="source-Forms.Form.php.html#466">466: </a>        }
+</span><span id="467" class="l"><a class="l" href="source-Forms.Form.php.html#467">467: </a>        <span class="php-var">$this</span>-&gt;validateMaxPostSize();
+</span><span id="468" class="l"><a class="l" href="source-Forms.Form.php.html#468">468: </a>        parent::validate(<span class="php-var">$controls</span>);
+</span><span id="469" class="l"><a class="l" href="source-Forms.Form.php.html#469">469: </a>    }
+</span><span id="470" class="l"><a class="l" href="source-Forms.Form.php.html#470">470: </a>
+</span><span id="471" class="l"><a class="l" href="source-Forms.Form.php.html#471">471: </a>
+</span><span id="472" class="l"><a class="l" href="source-Forms.Form.php.html#472">472: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_validateMaxPostSize" href="source-Forms.Form.php.html#_validateMaxPostSize">validateMaxPostSize</a>()
+</span><span id="473" class="l"><a class="l" href="source-Forms.Form.php.html#473">473: </a>    {
+</span><span id="474" class="l"><a class="l" href="source-Forms.Form.php.html#474">474: </a>        <span class="php-keyword1">if</span> (!<span class="php-var">$this</span>-&gt;submittedBy || <span class="php-keyword2">strcasecmp</span>(<span class="php-var">$this</span>-&gt;getMethod(), <span class="php-quote">'POST'</span>) || <span class="php-keyword1">empty</span>(<span class="php-var">$_SERVER</span>[<span class="php-quote">'CONTENT_LENGTH'</span>])) {
+</span><span id="475" class="l"><a class="l" href="source-Forms.Form.php.html#475">475: </a>            <span class="php-keyword1">return</span>;
+</span><span id="476" class="l"><a class="l" href="source-Forms.Form.php.html#476">476: </a>        }
+</span><span id="477" class="l"><a class="l" href="source-Forms.Form.php.html#477">477: </a>        <span class="php-var">$maxSize</span> = <span class="php-keyword2">ini_get</span>(<span class="php-quote">'post_max_size'</span>);
+</span><span id="478" class="l"><a class="l" href="source-Forms.Form.php.html#478">478: </a>        <span class="php-var">$units</span> = <span class="php-keyword1">array</span>(<span class="php-quote">'k'</span> =&gt; <span class="php-num">10</span>, <span class="php-quote">'m'</span> =&gt; <span class="php-num">20</span>, <span class="php-quote">'g'</span> =&gt; <span class="php-num">30</span>);
+</span><span id="479" class="l"><a class="l" href="source-Forms.Form.php.html#479">479: </a>        <span class="php-keyword1">if</span> (<span class="php-keyword1">isset</span>(<span class="php-var">$units</span>[<span class="php-var">$ch</span> = <span class="php-keyword2">strtolower</span>(<span class="php-keyword2">substr</span>(<span class="php-var">$maxSize</span>, -<span class="php-num">1</span>))])) {
+</span><span id="480" class="l"><a class="l" href="source-Forms.Form.php.html#480">480: </a>            <span class="php-var">$maxSize</span> &lt;&lt;= <span class="php-var">$units</span>[<span class="php-var">$ch</span>];
+</span><span id="481" class="l"><a class="l" href="source-Forms.Form.php.html#481">481: </a>        }
+</span><span id="482" class="l"><a class="l" href="source-Forms.Form.php.html#482">482: </a>        <span class="php-keyword1">if</span> (<span class="php-var">$maxSize</span> &gt; <span class="php-num">0</span> &amp;&amp; <span class="php-var">$maxSize</span> &lt; <span class="php-var">$_SERVER</span>[<span class="php-quote">'CONTENT_LENGTH'</span>]) {
+</span><span id="483" class="l"><a class="l" href="source-Forms.Form.php.html#483">483: </a>            <span class="php-var">$this</span>-&gt;addError(<span class="php-keyword2">sprintf</span>(Rules::<span class="php-var">$defaultMessages</span>[self::MAX_FILE_SIZE], <span class="php-var">$maxSize</span>));
+</span><span id="484" class="l"><a class="l" href="source-Forms.Form.php.html#484">484: </a>        }
+</span><span id="485" class="l"><a class="l" href="source-Forms.Form.php.html#485">485: </a>    }
+</span><span id="486" class="l"><a class="l" href="source-Forms.Form.php.html#486">486: </a>
+</span><span id="487" class="l"><a class="l" href="source-Forms.Form.php.html#487">487: </a>
+</span><span id="488" class="l"><a class="l" href="source-Forms.Form.php.html#488">488: </a>    <span class="php-comment">/**
+</span></span><span id="489" class="l"><a class="l" href="source-Forms.Form.php.html#489">489: </a><span class="php-comment">     * Adds global error message.
+</span></span><span id="490" class="l"><a class="l" href="source-Forms.Form.php.html#490">490: </a><span class="php-comment">     * @param  string  error message
+</span></span><span id="491" class="l"><a class="l" href="source-Forms.Form.php.html#491">491: </a><span class="php-comment">     * @return void
+</span></span><span id="492" class="l"><a class="l" href="source-Forms.Form.php.html#492">492: </a><span class="php-comment">     */</span>
+</span><span id="493" class="l"><a class="l" href="source-Forms.Form.php.html#493">493: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_addError" href="source-Forms.Form.php.html#_addError">addError</a>(<span class="php-var">$message</span>)
+</span><span id="494" class="l"><a class="l" href="source-Forms.Form.php.html#494">494: </a>    {
+</span><span id="495" class="l"><a class="l" href="source-Forms.Form.php.html#495">495: </a>        <span class="php-var">$this</span>-&gt;errors[] = <span class="php-var">$message</span>;
+</span><span id="496" class="l"><a class="l" href="source-Forms.Form.php.html#496">496: </a>    }
+</span><span id="497" class="l"><a class="l" href="source-Forms.Form.php.html#497">497: </a>
+</span><span id="498" class="l"><a class="l" href="source-Forms.Form.php.html#498">498: </a>
+</span><span id="499" class="l"><a class="l" href="source-Forms.Form.php.html#499">499: </a>    <span class="php-comment">/**
+</span></span><span id="500" class="l"><a class="l" href="source-Forms.Form.php.html#500">500: </a><span class="php-comment">     * Returns global validation errors.
+</span></span><span id="501" class="l"><a class="l" href="source-Forms.Form.php.html#501">501: </a><span class="php-comment">     * @return array
+</span></span><span id="502" class="l"><a class="l" href="source-Forms.Form.php.html#502">502: </a><span class="php-comment">     */</span>
+</span><span id="503" class="l"><a class="l" href="source-Forms.Form.php.html#503">503: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_getErrors" href="source-Forms.Form.php.html#_getErrors">getErrors</a>()
+</span><span id="504" class="l"><a class="l" href="source-Forms.Form.php.html#504">504: </a>    {
+</span><span id="505" class="l"><a class="l" href="source-Forms.Form.php.html#505">505: </a>        <span class="php-keyword1">return</span> <span class="php-keyword2">array_unique</span>(<span class="php-keyword2">array_merge</span>(<span class="php-var">$this</span>-&gt;errors, parent::getErrors()));
+</span><span id="506" class="l"><a class="l" href="source-Forms.Form.php.html#506">506: </a>    }
+</span><span id="507" class="l"><a class="l" href="source-Forms.Form.php.html#507">507: </a>
+</span><span id="508" class="l"><a class="l" href="source-Forms.Form.php.html#508">508: </a>
+</span><span id="509" class="l"><a class="l" href="source-Forms.Form.php.html#509">509: </a>    <span class="php-comment">/**
+</span></span><span id="510" class="l"><a class="l" href="source-Forms.Form.php.html#510">510: </a><span class="php-comment">     * @return bool
+</span></span><span id="511" class="l"><a class="l" href="source-Forms.Form.php.html#511">511: </a><span class="php-comment">     */</span>
+</span><span id="512" class="l"><a class="l" href="source-Forms.Form.php.html#512">512: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_hasErrors" href="source-Forms.Form.php.html#_hasErrors">hasErrors</a>()
+</span><span id="513" class="l"><a class="l" href="source-Forms.Form.php.html#513">513: </a>    {
+</span><span id="514" class="l"><a class="l" href="source-Forms.Form.php.html#514">514: </a>        <span class="php-keyword1">return</span> (bool) <span class="php-var">$this</span>-&gt;getErrors();
+</span><span id="515" class="l"><a class="l" href="source-Forms.Form.php.html#515">515: </a>    }
+</span><span id="516" class="l"><a class="l" href="source-Forms.Form.php.html#516">516: </a>
+</span><span id="517" class="l"><a class="l" href="source-Forms.Form.php.html#517">517: </a>
+</span><span id="518" class="l"><a class="l" href="source-Forms.Form.php.html#518">518: </a>    <span class="php-comment">/**
+</span></span><span id="519" class="l"><a class="l" href="source-Forms.Form.php.html#519">519: </a><span class="php-comment">     * @return void
+</span></span><span id="520" class="l"><a class="l" href="source-Forms.Form.php.html#520">520: </a><span class="php-comment">     */</span>
+</span><span id="521" class="l"><a class="l" href="source-Forms.Form.php.html#521">521: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_cleanErrors" href="source-Forms.Form.php.html#_cleanErrors">cleanErrors</a>()
+</span><span id="522" class="l"><a class="l" href="source-Forms.Form.php.html#522">522: </a>    {
+</span><span id="523" class="l"><a class="l" href="source-Forms.Form.php.html#523">523: </a>        <span class="php-var">$this</span>-&gt;errors = <span class="php-keyword1">array</span>();
+</span><span id="524" class="l"><a class="l" href="source-Forms.Form.php.html#524">524: </a>    }
+</span><span id="525" class="l"><a class="l" href="source-Forms.Form.php.html#525">525: </a>
+</span><span id="526" class="l"><a class="l" href="source-Forms.Form.php.html#526">526: </a>
+</span><span id="527" class="l"><a class="l" href="source-Forms.Form.php.html#527">527: </a>    <span class="php-comment">/**
+</span></span><span id="528" class="l"><a class="l" href="source-Forms.Form.php.html#528">528: </a><span class="php-comment">     * Returns form's validation errors.
+</span></span><span id="529" class="l"><a class="l" href="source-Forms.Form.php.html#529">529: </a><span class="php-comment">     * @return array
+</span></span><span id="530" class="l"><a class="l" href="source-Forms.Form.php.html#530">530: </a><span class="php-comment">     */</span>
+</span><span id="531" class="l"><a class="l" href="source-Forms.Form.php.html#531">531: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_getOwnErrors" href="source-Forms.Form.php.html#_getOwnErrors">getOwnErrors</a>()
+</span><span id="532" class="l"><a class="l" href="source-Forms.Form.php.html#532">532: </a>    {
+</span><span id="533" class="l"><a class="l" href="source-Forms.Form.php.html#533">533: </a>        <span class="php-keyword1">return</span> <span class="php-keyword2">array_unique</span>(<span class="php-var">$this</span>-&gt;errors);
+</span><span id="534" class="l"><a class="l" href="source-Forms.Form.php.html#534">534: </a>    }
+</span><span id="535" class="l"><a class="l" href="source-Forms.Form.php.html#535">535: </a>
+</span><span id="536" class="l"><a class="l" href="source-Forms.Form.php.html#536">536: </a>
+</span><span id="537" class="l"><a class="l" href="source-Forms.Form.php.html#537">537: </a>    <span class="php-comment">/** @deprecated */</span>
+</span><span id="538" class="l"><a class="l" href="source-Forms.Form.php.html#538">538: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_getAllErrors" href="source-Forms.Form.php.html#_getAllErrors">getAllErrors</a>()
+</span><span id="539" class="l"><a class="l" href="source-Forms.Form.php.html#539">539: </a>    {
+</span><span id="540" class="l"><a class="l" href="source-Forms.Form.php.html#540">540: </a>        <span class="php-keyword2">trigger_error</span>(__METHOD__ . <span class="php-quote">'() is deprecated; use getErrors() instead.'</span>, E_USER_DEPRECATED);
+</span><span id="541" class="l"><a class="l" href="source-Forms.Form.php.html#541">541: </a>        <span class="php-keyword1">return</span> <span class="php-var">$this</span>-&gt;getErrors();
+</span><span id="542" class="l"><a class="l" href="source-Forms.Form.php.html#542">542: </a>    }
+</span><span id="543" class="l"><a class="l" href="source-Forms.Form.php.html#543">543: </a>
+</span><span id="544" class="l"><a class="l" href="source-Forms.Form.php.html#544">544: </a>
+</span><span id="545" class="l"><a class="l" href="source-Forms.Form.php.html#545">545: </a>    <span class="php-comment">/********************* rendering ****************d*g**/</span>
+</span><span id="546" class="l"><a class="l" href="source-Forms.Form.php.html#546">546: </a>
+</span><span id="547" class="l"><a class="l" href="source-Forms.Form.php.html#547">547: </a>
+</span><span id="548" class="l"><a class="l" href="source-Forms.Form.php.html#548">548: </a>    <span class="php-comment">/**
+</span></span><span id="549" class="l"><a class="l" href="source-Forms.Form.php.html#549">549: </a><span class="php-comment">     * Returns form's HTML element template.
+</span></span><span id="550" class="l"><a class="l" href="source-Forms.Form.php.html#550">550: </a><span class="php-comment">     * @return Nette\Utils\Html
+</span></span><span id="551" class="l"><a class="l" href="source-Forms.Form.php.html#551">551: </a><span class="php-comment">     */</span>
+</span><span id="552" class="l"><a class="l" href="source-Forms.Form.php.html#552">552: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_getElementPrototype" href="source-Forms.Form.php.html#_getElementPrototype">getElementPrototype</a>()
+</span><span id="553" class="l"><a class="l" href="source-Forms.Form.php.html#553">553: </a>    {
+</span><span id="554" class="l"><a class="l" href="source-Forms.Form.php.html#554">554: </a>        <span class="php-keyword1">if</span> (!<span class="php-var">$this</span>-&gt;element) {
+</span><span id="555" class="l"><a class="l" href="source-Forms.Form.php.html#555">555: </a>            <span class="php-var">$this</span>-&gt;element = Nette\Utils\Html::el(<span class="php-quote">'form'</span>);
+</span><span id="556" class="l"><a class="l" href="source-Forms.Form.php.html#556">556: </a>            <span class="php-var">$this</span>-&gt;element-&gt;action = <span class="php-quote">''</span>; <span class="php-comment">// RFC 1808 -&gt; empty uri means 'this'</span>
+</span><span id="557" class="l"><a class="l" href="source-Forms.Form.php.html#557">557: </a>            <span class="php-var">$this</span>-&gt;element-&gt;method = self::POST;
+</span><span id="558" class="l"><a class="l" href="source-Forms.Form.php.html#558">558: </a>        }
+</span><span id="559" class="l"><a class="l" href="source-Forms.Form.php.html#559">559: </a>        <span class="php-keyword1">return</span> <span class="php-var">$this</span>-&gt;element;
+</span><span id="560" class="l"><a class="l" href="source-Forms.Form.php.html#560">560: </a>    }
+</span><span id="561" class="l"><a class="l" href="source-Forms.Form.php.html#561">561: </a>
+</span><span id="562" class="l"><a class="l" href="source-Forms.Form.php.html#562">562: </a>
+</span><span id="563" class="l"><a class="l" href="source-Forms.Form.php.html#563">563: </a>    <span class="php-comment">/**
+</span></span><span id="564" class="l"><a class="l" href="source-Forms.Form.php.html#564">564: </a><span class="php-comment">     * Sets form renderer.
+</span></span><span id="565" class="l"><a class="l" href="source-Forms.Form.php.html#565">565: </a><span class="php-comment">     * @return self
+</span></span><span id="566" class="l"><a class="l" href="source-Forms.Form.php.html#566">566: </a><span class="php-comment">     */</span>
+</span><span id="567" class="l"><a class="l" href="source-Forms.Form.php.html#567">567: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_setRenderer" href="source-Forms.Form.php.html#_setRenderer">setRenderer</a>(IFormRenderer <span class="php-var">$renderer</span> = <span class="php-keyword1">NULL</span>)
+</span><span id="568" class="l"><a class="l" href="source-Forms.Form.php.html#568">568: </a>    {
+</span><span id="569" class="l"><a class="l" href="source-Forms.Form.php.html#569">569: </a>        <span class="php-var">$this</span>-&gt;renderer = <span class="php-var">$renderer</span>;
+</span><span id="570" class="l"><a class="l" href="source-Forms.Form.php.html#570">570: </a>        <span class="php-keyword1">return</span> <span class="php-var">$this</span>;
+</span><span id="571" class="l"><a class="l" href="source-Forms.Form.php.html#571">571: </a>    }
+</span><span id="572" class="l"><a class="l" href="source-Forms.Form.php.html#572">572: </a>
+</span><span id="573" class="l"><a class="l" href="source-Forms.Form.php.html#573">573: </a>
+</span><span id="574" class="l"><a class="l" href="source-Forms.Form.php.html#574">574: </a>    <span class="php-comment">/**
+</span></span><span id="575" class="l"><a class="l" href="source-Forms.Form.php.html#575">575: </a><span class="php-comment">     * Returns form renderer.
+</span></span><span id="576" class="l"><a class="l" href="source-Forms.Form.php.html#576">576: </a><span class="php-comment">     * @return IFormRenderer
+</span></span><span id="577" class="l"><a class="l" href="source-Forms.Form.php.html#577">577: </a><span class="php-comment">     */</span>
+</span><span id="578" class="l"><a class="l" href="source-Forms.Form.php.html#578">578: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_getRenderer" href="source-Forms.Form.php.html#_getRenderer">getRenderer</a>()
+</span><span id="579" class="l"><a class="l" href="source-Forms.Form.php.html#579">579: </a>    {
+</span><span id="580" class="l"><a class="l" href="source-Forms.Form.php.html#580">580: </a>        <span class="php-keyword1">if</span> (<span class="php-var">$this</span>-&gt;renderer === <span class="php-keyword1">NULL</span>) {
+</span><span id="581" class="l"><a class="l" href="source-Forms.Form.php.html#581">581: </a>            <span class="php-var">$this</span>-&gt;renderer = <span class="php-keyword1">new</span> Rendering\DefaultFormRenderer;
+</span><span id="582" class="l"><a class="l" href="source-Forms.Form.php.html#582">582: </a>        }
+</span><span id="583" class="l"><a class="l" href="source-Forms.Form.php.html#583">583: </a>        <span class="php-keyword1">return</span> <span class="php-var">$this</span>-&gt;renderer;
+</span><span id="584" class="l"><a class="l" href="source-Forms.Form.php.html#584">584: </a>    }
+</span><span id="585" class="l"><a class="l" href="source-Forms.Form.php.html#585">585: </a>
+</span><span id="586" class="l"><a class="l" href="source-Forms.Form.php.html#586">586: </a>
+</span><span id="587" class="l"><a class="l" href="source-Forms.Form.php.html#587">587: </a>    <span class="php-comment">/**
+</span></span><span id="588" class="l"><a class="l" href="source-Forms.Form.php.html#588">588: </a><span class="php-comment">     * Renders form.
+</span></span><span id="589" class="l"><a class="l" href="source-Forms.Form.php.html#589">589: </a><span class="php-comment">     * @return void
+</span></span><span id="590" class="l"><a class="l" href="source-Forms.Form.php.html#590">590: </a><span class="php-comment">     */</span>
+</span><span id="591" class="l"><a class="l" href="source-Forms.Form.php.html#591">591: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_render" href="source-Forms.Form.php.html#_render">render</a>()
+</span><span id="592" class="l"><a class="l" href="source-Forms.Form.php.html#592">592: </a>    {
+</span><span id="593" class="l"><a class="l" href="source-Forms.Form.php.html#593">593: </a>        <span class="php-var">$args</span> = <span class="php-keyword2">func_get_args</span>();
+</span><span id="594" class="l"><a class="l" href="source-Forms.Form.php.html#594">594: </a>        <span class="php-keyword2">array_unshift</span>(<span class="php-var">$args</span>, <span class="php-var">$this</span>);
+</span><span id="595" class="l"><a class="l" href="source-Forms.Form.php.html#595">595: </a>        <span class="php-keyword1">echo</span> <span class="php-keyword2">call_user_func_array</span>(<span class="php-keyword1">array</span>(<span class="php-var">$this</span>-&gt;getRenderer(), <span class="php-quote">'render'</span>), <span class="php-var">$args</span>);
+</span><span id="596" class="l"><a class="l" href="source-Forms.Form.php.html#596">596: </a>    }
+</span><span id="597" class="l"><a class="l" href="source-Forms.Form.php.html#597">597: </a>
+</span><span id="598" class="l"><a class="l" href="source-Forms.Form.php.html#598">598: </a>
+</span><span id="599" class="l"><a class="l" href="source-Forms.Form.php.html#599">599: </a>    <span class="php-comment">/**
+</span></span><span id="600" class="l"><a class="l" href="source-Forms.Form.php.html#600">600: </a><span class="php-comment">     * Renders form to string.
+</span></span><span id="601" class="l"><a class="l" href="source-Forms.Form.php.html#601">601: </a><span class="php-comment">     * @return can throw exceptions? (hidden parameter)
+</span></span><span id="602" class="l"><a class="l" href="source-Forms.Form.php.html#602">602: </a><span class="php-comment">     * @return string
+</span></span><span id="603" class="l"><a class="l" href="source-Forms.Form.php.html#603">603: </a><span class="php-comment">     */</span>
+</span><span id="604" class="l"><a class="l" href="source-Forms.Form.php.html#604">604: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="___toString" href="source-Forms.Form.php.html#___toString">__toString</a>()
+</span><span id="605" class="l"><a class="l" href="source-Forms.Form.php.html#605">605: </a>    {
+</span><span id="606" class="l"><a class="l" href="source-Forms.Form.php.html#606">606: </a>        <span class="php-keyword1">try</span> {
+</span><span id="607" class="l"><a class="l" href="source-Forms.Form.php.html#607">607: </a>            <span class="php-keyword1">return</span> <span class="php-var">$this</span>-&gt;getRenderer()-&gt;render(<span class="php-var">$this</span>);
+</span><span id="608" class="l"><a class="l" href="source-Forms.Form.php.html#608">608: </a>
+</span><span id="609" class="l"><a class="l" href="source-Forms.Form.php.html#609">609: </a>        } <span class="php-keyword1">catch</span> (\Exception <span class="php-var">$e</span>) {
+</span><span id="610" class="l"><a class="l" href="source-Forms.Form.php.html#610">610: </a>            <span class="php-keyword1">if</span> (<span class="php-keyword2">func_num_args</span>()) {
+</span><span id="611" class="l"><a class="l" href="source-Forms.Form.php.html#611">611: </a>                <span class="php-keyword1">throw</span> <span class="php-var">$e</span>;
+</span><span id="612" class="l"><a class="l" href="source-Forms.Form.php.html#612">612: </a>            }
+</span><span id="613" class="l"><a class="l" href="source-Forms.Form.php.html#613">613: </a>            <span class="php-keyword2">trigger_error</span>(<span class="php-quote">&quot;Exception in &quot;</span> . __METHOD__ . <span class="php-quote">&quot;(): </span><span class="php-var">{$e-&gt;getMessage()}</span><span class="php-quote"> in </span><span class="php-var">{$e-&gt;getFile()}</span><span class="php-quote">:</span><span class="php-var">{$e-&gt;getLine()}</span><span class="php-quote">&quot;</span>, E_USER_ERROR);
+</span><span id="614" class="l"><a class="l" href="source-Forms.Form.php.html#614">614: </a>        }
+</span><span id="615" class="l"><a class="l" href="source-Forms.Form.php.html#615">615: </a>    }
+</span><span id="616" class="l"><a class="l" href="source-Forms.Form.php.html#616">616: </a>
+</span><span id="617" class="l"><a class="l" href="source-Forms.Form.php.html#617">617: </a>
+</span><span id="618" class="l"><a class="l" href="source-Forms.Form.php.html#618">618: </a>    <span class="php-comment">/********************* backend ****************d*g**/</span>
+</span><span id="619" class="l"><a class="l" href="source-Forms.Form.php.html#619">619: </a>
+</span><span id="620" class="l"><a class="l" href="source-Forms.Form.php.html#620">620: </a>
+</span><span id="621" class="l"><a class="l" href="source-Forms.Form.php.html#621">621: </a>    <span class="php-comment">/**
+</span></span><span id="622" class="l"><a class="l" href="source-Forms.Form.php.html#622">622: </a><span class="php-comment">     * @return Nette\Http\IRequest
+</span></span><span id="623" class="l"><a class="l" href="source-Forms.Form.php.html#623">623: </a><span class="php-comment">     */</span>
+</span><span id="624" class="l"><a class="l" href="source-Forms.Form.php.html#624">624: </a>    <span class="php-keyword1">private</span> <span class="php-keyword1">function</span> <a id="_getHttpRequest" href="source-Forms.Form.php.html#_getHttpRequest">getHttpRequest</a>()
+</span><span id="625" class="l"><a class="l" href="source-Forms.Form.php.html#625">625: </a>    {
+</span><span id="626" class="l"><a class="l" href="source-Forms.Form.php.html#626">626: </a>        <span class="php-keyword1">if</span> (!<span class="php-var">$this</span>-&gt;httpRequest) {
+</span><span id="627" class="l"><a class="l" href="source-Forms.Form.php.html#627">627: </a>            <span class="php-var">$factory</span> = <span class="php-keyword1">new</span> Nette\Http\RequestFactory;
+</span><span id="628" class="l"><a class="l" href="source-Forms.Form.php.html#628">628: </a>            <span class="php-var">$this</span>-&gt;httpRequest = <span class="php-var">$factory</span>-&gt;createHttpRequest();
+</span><span id="629" class="l"><a class="l" href="source-Forms.Form.php.html#629">629: </a>        }
+</span><span id="630" class="l"><a class="l" href="source-Forms.Form.php.html#630">630: </a>        <span class="php-keyword1">return</span> <span class="php-var">$this</span>-&gt;httpRequest;
+</span><span id="631" class="l"><a class="l" href="source-Forms.Form.php.html#631">631: </a>    }
+</span><span id="632" class="l"><a class="l" href="source-Forms.Form.php.html#632">632: </a>
+</span><span id="633" class="l"><a class="l" href="source-Forms.Form.php.html#633">633: </a>
+</span><span id="634" class="l"><a class="l" href="source-Forms.Form.php.html#634">634: </a>    <span class="php-comment">/**
+</span></span><span id="635" class="l"><a class="l" href="source-Forms.Form.php.html#635">635: </a><span class="php-comment">     * @return array
+</span></span><span id="636" class="l"><a class="l" href="source-Forms.Form.php.html#636">636: </a><span class="php-comment">     */</span>
+</span><span id="637" class="l"><a class="l" href="source-Forms.Form.php.html#637">637: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_getToggles" href="source-Forms.Form.php.html#_getToggles">getToggles</a>()
+</span><span id="638" class="l"><a class="l" href="source-Forms.Form.php.html#638">638: </a>    {
+</span><span id="639" class="l"><a class="l" href="source-Forms.Form.php.html#639">639: </a>        <span class="php-var">$toggles</span> = <span class="php-keyword1">array</span>();
+</span><span id="640" class="l"><a class="l" href="source-Forms.Form.php.html#640">640: </a>        <span class="php-keyword1">foreach</span> (<span class="php-var">$this</span>-&gt;getControls() <span class="php-keyword1">as</span> <span class="php-var">$control</span>) {
+</span><span id="641" class="l"><a class="l" href="source-Forms.Form.php.html#641">641: </a>            <span class="php-var">$toggles</span> = <span class="php-var">$control</span>-&gt;getRules()-&gt;getToggleStates(<span class="php-var">$toggles</span>);
+</span><span id="642" class="l"><a class="l" href="source-Forms.Form.php.html#642">642: </a>        }
+</span><span id="643" class="l"><a class="l" href="source-Forms.Form.php.html#643">643: </a>        <span class="php-keyword1">return</span> <span class="php-var">$toggles</span>;
+</span><span id="644" class="l"><a class="l" href="source-Forms.Form.php.html#644">644: </a>    }
+</span><span id="645" class="l"><a class="l" href="source-Forms.Form.php.html#645">645: </a>
+</span><span id="646" class="l"><a class="l" href="source-Forms.Form.php.html#646">646: </a>}
+</span><span id="647" class="l"><a class="l" href="source-Forms.Form.php.html#647">647: </a></span></code></pre>
+
+	<div id="footer">
+		Nette 2.2.2 API API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+	</div>
+</div>
+</div>
+<script src="resources/combined.js?3630868369"></script>
+<script src="elementlist.js?2087501429"></script>
+</body>
+</html>

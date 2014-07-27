@@ -1,0 +1,1211 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="generator" content="ApiGen 2.8.0">
+
+	<title>Class Nette\Http\Response | Nette 2.2.2 API</title>
+
+	<link rel="stylesheet" href="resources/style.css?3746977979">
+	<link rel="search" type="application/opensearchdescription+xml" title="Nette 2.2.2 API" href="http://api.nette.org/2.0/opensearch.xml">
+
+
+<script src='http://files.nette.org/js/analytics.js'></script><script>
+_ga.create('UA-95238-14', '.nette.org');
+_gaq.push(['_trackPageview']);
+</script>
+</head>
+
+<body>
+<div id="left">
+	<div id="menu">
+
+		<div id="groups">
+			<h3>Namespaces</h3>
+			<ul>
+				<li><a href="namespace-Latte.html">Latte<span></span></a>
+						<ul>
+				<li><a href="namespace-Latte.Loaders.html">Loaders</a>
+						</li>
+				<li><a href="namespace-Latte.Macros.html">Macros</a>
+						</li>
+				<li><a href="namespace-Latte.Runtime.html">Runtime</a>
+						</li>
+							</ul></li>
+				<li class="active"><a href="namespace-Nette.html">Nette<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.Application.html">Application<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.Application.Responses.html">Responses</a>
+						</li>
+				<li><a href="namespace-Nette.Application.Routers.html">Routers</a>
+						</li>
+				<li><a href="namespace-Nette.Application.UI.html">UI</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.Bridges.html">Bridges<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.Bridges.ApplicationLatte.html">ApplicationLatte</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.ApplicationTracy.html">ApplicationTracy</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.CacheLatte.html">CacheLatte</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.DatabaseDI.html">DatabaseDI</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.DatabaseTracy.html">DatabaseTracy</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.DITracy.html">DITracy</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.FormsLatte.html">FormsLatte</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.Framework.html">Framework</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.HttpTracy.html">HttpTracy</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.SecurityTracy.html">SecurityTracy</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.Caching.html">Caching<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.Caching.Storages.html">Storages</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.ComponentModel.html">ComponentModel</a>
+						</li>
+				<li><a href="namespace-Nette.Database.html">Database<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.Database.Drivers.html">Drivers</a>
+						</li>
+				<li><a href="namespace-Nette.Database.Reflection.html">Reflection</a>
+						</li>
+				<li><a href="namespace-Nette.Database.Table.html">Table</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.DI.html">DI<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.DI.Config.html">Config<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.DI.Config.Adapters.html">Adapters</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.DI.Extensions.html">Extensions</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.Diagnostics.html">Diagnostics</a>
+						</li>
+				<li><a href="namespace-Nette.Forms.html">Forms<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.Forms.Controls.html">Controls</a>
+						</li>
+				<li><a href="namespace-Nette.Forms.Rendering.html">Rendering</a>
+						</li>
+							</ul></li>
+				<li class="active"><a href="namespace-Nette.Http.html">Http</a>
+						</li>
+				<li><a href="namespace-Nette.Iterators.html">Iterators</a>
+						</li>
+				<li><a href="namespace-Nette.Latte.html">Latte</a>
+						</li>
+				<li><a href="namespace-Nette.Loaders.html">Loaders</a>
+						</li>
+				<li><a href="namespace-Nette.Localization.html">Localization</a>
+						</li>
+				<li><a href="namespace-Nette.Mail.html">Mail</a>
+						</li>
+				<li><a href="namespace-Nette.Neon.html">Neon</a>
+						</li>
+				<li><a href="namespace-Nette.PhpGenerator.html">PhpGenerator</a>
+						</li>
+				<li><a href="namespace-Nette.Reflection.html">Reflection</a>
+						</li>
+				<li><a href="namespace-Nette.Security.html">Security</a>
+						</li>
+				<li><a href="namespace-Nette.Templating.html">Templating</a>
+						</li>
+				<li><a href="namespace-Nette.Utils.html">Utils</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-NetteModule.html">NetteModule</a>
+						</li>
+				<li><a href="namespace-none.html">none</a>
+						</li>
+				<li><a href="namespace-Tracy.html">Tracy</a>
+						</li>
+			</ul>
+		</div>
+
+		<hr>
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="Nette.Http.Context.html">Context</a></li>
+				<li><a href="Nette.Http.FileUpload.html">FileUpload</a></li>
+				<li><a href="Nette.Http.Helpers.html">Helpers</a></li>
+				<li><a href="Nette.Http.Request.html">Request</a></li>
+				<li><a href="Nette.Http.RequestFactory.html">RequestFactory</a></li>
+				<li class="active"><a href="Nette.Http.Response.html">Response</a></li>
+				<li><a href="Nette.Http.Session.html">Session</a></li>
+				<li><a href="Nette.Http.SessionSection.html">SessionSection</a></li>
+				<li><a href="Nette.Http.Url.html">Url</a></li>
+				<li><a href="Nette.Http.UrlScript.html">UrlScript</a></li>
+				<li><a href="Nette.Http.UserStorage.html">UserStorage</a></li>
+			</ul>
+
+			<h3>Interfaces</h3>
+			<ul>
+				<li><a href="Nette.Http.IRequest.html">IRequest</a></li>
+				<li><a href="Nette.Http.IResponse.html">IResponse</a></li>
+				<li><a href="Nette.Http.ISessionStorage.html" class="deprecated">ISessionStorage</a></li>
+			</ul>
+
+
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form action="http://www.google.com/cse" id="search">
+		<input type="hidden" name="cx" value="011549293477758430224:vxofa9ufnhc">
+		<input type="hidden" name="ie" value="UTF-8">
+		<input type="text" name="q" class="text">
+		<input type="submit" value="Search">
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+				<a href="namespace-Nette.Http.html" title="Summary of Nette\Http"><span>Namespace</span></a>
+			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+			<li>
+				<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions"><span>Tree</span></a>
+			</li>
+			<li>
+				<a href="deprecated.html" title="List of deprecated elements"><span>Deprecated</span></a>
+			</li>
+		</ul>
+		<ul><li><a href="http://api.nette.org/releases"><span>Other releases</span></a></li><li><a href="http://nette.org"><span>Nette homepage</span></a></li></ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Class Response</h1>
+
+
+	<div class="description">
+	
+<p>HttpResponse class.</p>
+
+	</div>
+
+	<dl class="tree">
+		<dd style="padding-left:0px">
+			<a href="Nette.Object.html"><span>Nette\Object</span></a>
+			
+			
+			
+		</dd>
+		<dd style="padding-left:30px">
+			<img src="resources/inherit.png" alt="Extended by">
+<b><span>Nette\Http\Response</span></b>			
+			 implements 
+				<a href="Nette.Http.IResponse.html"><span>Nette\Http\IResponse</span></a>
+			
+			
+		</dd>
+	</dl>
+
+
+
+
+
+
+
+
+	<div class="info">
+		
+		
+		<b>Namespace:</b> <a href="namespace-Nette.html">Nette</a>\<a href="namespace-Nette.Http.html">Http</a><br>
+		
+
+				<b>Author:</b>
+				David Grudl<br>
+		<b>Located at</b> <a href="source-Http.Response.php.html#14-320" title="Go to source code">Http/Response.php</a><br>
+	</div>
+
+
+
+	<table class="summary" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="__construct" id="___construct">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Http.Response.html#___construct">#</a>
+		<code><a href="source-Http.Response.php.html#44-52" title="Go to source code">__construct</a>( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setCode" id="_setCode">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="Nette.Http.Response.html">Nette\Http\Response</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Http.Response.html#_setCode">#</a>
+		<code><a href="source-Http.Response.php.html#55-73" title="Go to source code">setCode</a>( <span>integer <var>$code</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Sets HTTP response code.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Sets HTTP response code.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$code</var></dt>
+					<dd><code>integer</code></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="Nette.Http.Response.html">Nette\Http\Response</a></code></code><br>
+				</div>
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><code><a href="Nette.InvalidArgumentException.html">Nette\InvalidArgumentException</a></code></code><br>if code is invalid<br>
+					<code><code><a href="Nette.InvalidStateException.html">Nette\InvalidStateException</a></code></code><br>if HTTP headers have been sent<br>
+				</div>
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="Nette.Http.IResponse.html#_setCode">Nette\Http\IResponse::setCode()</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getCode" id="_getCode">
+
+		<td class="attributes"><code>
+			 public 
+			integer
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Http.Response.html#_getCode">#</a>
+		<code><a href="source-Http.Response.php.html#76-83" title="Go to source code">getCode</a>( )</code>
+
+		<div class="description short">
+			
+<p>Returns HTTP response code.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns HTTP response code.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>integer</code><br>
+				</div>
+
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="Nette.Http.IResponse.html#_getCode">Nette\Http\IResponse::getCode()</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setHeader" id="_setHeader">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="Nette.Http.Response.html">Nette\Http\Response</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Http.Response.html#_setHeader">#</a>
+		<code><a href="source-Http.Response.php.html#86-104" title="Go to source code">setHeader</a>( <span>string <var>$name</var></span>, <span>string <var>$value</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Sends a HTTP header and replaces a previous one.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Sends a HTTP header and replaces a previous one.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$name</var></dt>
+					<dd><code>string</code><br>header name</dd>
+					<dt><var>$value</var></dt>
+					<dd><code>string</code><br>header value</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="Nette.Http.Response.html">Nette\Http\Response</a></code></code><br>
+				</div>
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><code><a href="Nette.InvalidStateException.html">Nette\InvalidStateException</a></code></code><br>if HTTP headers have been sent<br>
+				</div>
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="Nette.Http.IResponse.html#_setHeader">Nette\Http\IResponse::setHeader()</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="addHeader" id="_addHeader">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="Nette.Http.Response.html">Nette\Http\Response</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Http.Response.html#_addHeader">#</a>
+		<code><a href="source-Http.Response.php.html#107-119" title="Go to source code">addHeader</a>( <span>string <var>$name</var></span>, <span>string <var>$value</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Adds HTTP header.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Adds HTTP header.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$name</var></dt>
+					<dd><code>string</code><br>header name</dd>
+					<dt><var>$value</var></dt>
+					<dd><code>string</code><br>header value</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="Nette.Http.Response.html">Nette\Http\Response</a></code></code><br>
+				</div>
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><code><a href="Nette.InvalidStateException.html">Nette\InvalidStateException</a></code></code><br>if HTTP headers have been sent<br>
+				</div>
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="Nette.Http.IResponse.html#_addHeader">Nette\Http\IResponse::addHeader()</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setContentType" id="_setContentType">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="Nette.Http.Response.html">Nette\Http\Response</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Http.Response.html#_setContentType">#</a>
+		<code><a href="source-Http.Response.php.html#122-133" title="Go to source code">setContentType</a>( <span>string <var>$type</var></span>, <span>string <var>$charset</var> = <span class="php-keyword1">NULL</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Sends a Content-type HTTP header.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Sends a Content-type HTTP header.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$type</var></dt>
+					<dd><code>string</code><br>mime-type</dd>
+					<dt><var>$charset</var></dt>
+					<dd><code>string</code><br>charset</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="Nette.Http.Response.html">Nette\Http\Response</a></code></code><br>
+				</div>
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><code><a href="Nette.InvalidStateException.html">Nette\InvalidStateException</a></code></code><br>if HTTP headers have been sent<br>
+				</div>
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="Nette.Http.IResponse.html#_setContentType">Nette\Http\IResponse::setContentType()</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="redirect" id="_redirect">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Http.Response.html#_redirect">#</a>
+		<code><a href="source-Http.Response.php.html#136-148" title="Go to source code">redirect</a>( <span>string <var>$url</var></span>, <span>integer <var>$code</var> = <code><a href="Nette.Http.IResponse.html#S302_FOUND">Nette\Http\IResponse::<b>S302_FOUND</b></a></code></span> )</code>
+
+		<div class="description short">
+			
+<p>Redirects to a new URL. Note: call exit() after it.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Redirects to a new URL. Note: call exit() after it.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$url</var></dt>
+					<dd><code>string</code><br>URL</dd>
+					<dt><var>$code</var></dt>
+					<dd><code>integer</code><br>HTTP code</dd>
+				</dl></div>
+
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><code><a href="Nette.InvalidStateException.html">Nette\InvalidStateException</a></code></code><br>if HTTP headers have been sent<br>
+				</div>
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="Nette.Http.IResponse.html#_redirect">Nette\Http\IResponse::redirect()</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setExpiration" id="_setExpiration">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="Nette.Http.Response.html">Nette\Http\Response</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Http.Response.html#_setExpiration">#</a>
+		<code><a href="source-Http.Response.php.html#151-169" title="Go to source code">setExpiration</a>( <span>string|integer|<code><a href="Nette.Utils.DateTime.html">Nette\Utils\DateTime</a></code> <var>$time</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Sets the number of seconds before a page cached on a browser expires.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Sets the number of seconds before a page cached on a browser expires.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$time</var></dt>
+					<dd><code>string|integer|<code><a href="Nette.Utils.DateTime.html">Nette\Utils\DateTime</a></code></code><br>time, value 0 means "until the browser is closed"</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="Nette.Http.Response.html">Nette\Http\Response</a></code></code><br>
+				</div>
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><code><a href="Nette.InvalidStateException.html">Nette\InvalidStateException</a></code></code><br>if HTTP headers have been sent<br>
+				</div>
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="Nette.Http.IResponse.html#_setExpiration">Nette\Http\IResponse::setExpiration()</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="isSent" id="_isSent">
+
+		<td class="attributes"><code>
+			 public 
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Http.Response.html#_isSent">#</a>
+		<code><a href="source-Http.Response.php.html#172-179" title="Go to source code">isSent</a>( )</code>
+
+		<div class="description short">
+			
+<p>Checks if headers have been sent.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Checks if headers have been sent.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br>
+				</div>
+
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="Nette.Http.IResponse.html#_isSent">Nette\Http\IResponse::isSent()</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getHeader" id="_getHeader">
+
+		<td class="attributes"><code>
+			 public 
+			mixed
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Http.Response.html#_getHeader">#</a>
+		<code><a href="source-Http.Response.php.html#182-198" title="Go to source code">getHeader</a>( <span>string <var>$header</var></span>, <span>mixed <var>$default</var> = <span class="php-keyword1">NULL</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Return the value of the HTTP header.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Return the value of the HTTP header.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$header</var></dt>
+					<dd><code>string</code></dd>
+					<dt><var>$default</var></dt>
+					<dd><code>mixed</code></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>mixed</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getHeaders" id="_getHeaders">
+
+		<td class="attributes"><code>
+			 public 
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Http.Response.html#_getHeaders">#</a>
+		<code><a href="source-Http.Response.php.html#201-213" title="Go to source code">getHeaders</a>( )</code>
+
+		<div class="description short">
+			
+<p>Returns a list of headers to sent.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns a list of headers to sent.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>array</code><br>
+				</div>
+
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="Nette.Http.IResponse.html#_getHeaders">Nette\Http\IResponse::getHeaders()</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="date" id="_date">
+
+		<td class="attributes"><code>
+			 public static
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Http.Response.html#_date">#</a>
+		<code><a href="source-Http.Response.php.html#216-226" title="Go to source code">date</a>( <span>string|integer|<code><a href="Nette.Utils.DateTime.html">Nette\Utils\DateTime</a></code> <var>$time</var> = <span class="php-keyword1">NULL</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Returns HTTP valid date format.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns HTTP valid date format.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$time</var></dt>
+					<dd><code>string|integer|<code><a href="Nette.Utils.DateTime.html">Nette\Utils\DateTime</a></code></code></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="__destruct" id="___destruct">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Http.Response.html#___destruct">#</a>
+		<code><a href="source-Http.Response.php.html#229-241" title="Go to source code">__destruct</a>( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setCookie" id="_setCookie">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="Nette.Http.Response.html">Nette\Http\Response</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Http.Response.html#_setCookie">#</a>
+		<code><a href="source-Http.Response.php.html#244-270" title="Go to source code">setCookie</a>( <span>string <var>$name</var></span>, <span>string <var>$value</var></span>, <span>string|integer|<code><a href="Nette.Utils.DateTime.html">Nette\Utils\DateTime</a></code> <var>$time</var></span>, <span>string <var>$path</var> = <span class="php-keyword1">NULL</span></span>, <span>string <var>$domain</var> = <span class="php-keyword1">NULL</span></span>, <span>boolean <var>$secure</var> = <span class="php-keyword1">NULL</span></span>, <span>boolean <var>$httpOnly</var> = <span class="php-keyword1">NULL</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Sends a cookie.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Sends a cookie.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$name</var></dt>
+					<dd><code>string</code><br>name of the cookie</dd>
+					<dt><var>$value</var></dt>
+					<dd><code>string</code><br>value</dd>
+					<dt><var>$time</var></dt>
+					<dd><code>string|integer|<code><a href="Nette.Utils.DateTime.html">Nette\Utils\DateTime</a></code></code><br>expiration time, value 0 means "until the browser is closed"</dd>
+					<dt><var>$path</var></dt>
+					<dd><code>string</code></dd>
+					<dt><var>$domain</var></dt>
+					<dd><code>string</code></dd>
+					<dt><var>$secure</var></dt>
+					<dd><code>boolean</code></dd>
+					<dt><var>$httpOnly</var></dt>
+					<dd><code>boolean</code></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="Nette.Http.Response.html">Nette\Http\Response</a></code></code><br>
+				</div>
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><code><a href="Nette.InvalidStateException.html">Nette\InvalidStateException</a></code></code><br>if HTTP headers have been sent<br>
+				</div>
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="Nette.Http.IResponse.html#_setCookie">Nette\Http\IResponse::setCookie()</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="deleteCookie" id="_deleteCookie">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Http.Response.html#_deleteCookie">#</a>
+		<code><a href="source-Http.Response.php.html#273-285" title="Go to source code">deleteCookie</a>( <span>string <var>$name</var></span>, <span>string <var>$path</var> = <span class="php-keyword1">NULL</span></span>, <span>string <var>$domain</var> = <span class="php-keyword1">NULL</span></span>, <span>boolean <var>$secure</var> = <span class="php-keyword1">NULL</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Deletes a cookie.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Deletes a cookie.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$name</var></dt>
+					<dd><code>string</code><br>name of the cookie.</dd>
+					<dt><var>$path</var></dt>
+					<dd><code>string</code></dd>
+					<dt><var>$domain</var></dt>
+					<dd><code>string</code></dd>
+					<dt><var>$secure</var></dt>
+					<dd><code>boolean</code></dd>
+				</dl></div>
+
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><code><a href="Nette.InvalidStateException.html">Nette\InvalidStateException</a></code></code><br>if HTTP headers have been sent<br>
+				</div>
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="Nette.Http.IResponse.html#_deleteCookie">Nette\Http\IResponse::deleteCookie()</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="removeDuplicateCookies" id="_removeDuplicateCookies">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Http.Response.html#_removeDuplicateCookies">#</a>
+		<code><a href="source-Http.Response.php.html#288-308" title="Go to source code">removeDuplicateCookies</a>( )</code>
+
+		<div class="description short">
+			
+<p>Removes duplicate cookies from response.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Removes duplicate cookies from response.</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+	<table class="summary inherited">
+	<caption>Methods inherited from <a href="Nette.Object.html#methods">Nette\Object</a></caption>
+	<tr>
+		<td><code>
+			<a href="Nette.Object.html#___call">__call()</a>, 
+			<a href="Nette.Object.html#___callStatic">__callStatic()</a>, 
+			<a href="Nette.Object.html#___get">__get()</a>, 
+			<a href="Nette.Object.html#___isset">__isset()</a>, 
+			<a href="Nette.Object.html#___set">__set()</a>, 
+			<a href="Nette.Object.html#___unset">__unset()</a>, 
+			<a href="Nette.Object.html#_extensionMethod">extensionMethod()</a>, 
+			<a href="Nette.Object.html#_getReflection">getReflection()</a>
+		</code></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+	<table class="summary inherited">
+	<caption>Constants inherited from <a href="Nette.Http.IResponse.html#constants">Nette\Http\IResponse</a></caption>
+	<tr>
+		<td><code>
+			<a href="Nette.Http.IResponse.html#BROWSER"><b>BROWSER</b></a>, 
+			<a href="Nette.Http.IResponse.html#PERMANENT"><b>PERMANENT</b></a>, 
+			<a href="Nette.Http.IResponse.html#S200_OK"><b>S200_OK</b></a>, 
+			<a href="Nette.Http.IResponse.html#S204_NO_CONTENT"><b>S204_NO_CONTENT</b></a>, 
+			<a href="Nette.Http.IResponse.html#S300_MULTIPLE_CHOICES"><b>S300_MULTIPLE_CHOICES</b></a>, 
+			<a href="Nette.Http.IResponse.html#S301_MOVED_PERMANENTLY"><b>S301_MOVED_PERMANENTLY</b></a>, 
+			<a href="Nette.Http.IResponse.html#S302_FOUND"><b>S302_FOUND</b></a>, 
+			<a href="Nette.Http.IResponse.html#S303_POST_GET"><b>S303_POST_GET</b></a>, 
+			<a href="Nette.Http.IResponse.html#S303_SEE_OTHER"><b>S303_SEE_OTHER</b></a>, 
+			<a href="Nette.Http.IResponse.html#S304_NOT_MODIFIED"><b>S304_NOT_MODIFIED</b></a>, 
+			<a href="Nette.Http.IResponse.html#S307_TEMPORARY_REDIRECT"><b>S307_TEMPORARY_REDIRECT</b></a>, 
+			<a href="Nette.Http.IResponse.html#S400_BAD_REQUEST"><b>S400_BAD_REQUEST</b></a>, 
+			<a href="Nette.Http.IResponse.html#S401_UNAUTHORIZED"><b>S401_UNAUTHORIZED</b></a>, 
+			<a href="Nette.Http.IResponse.html#S403_FORBIDDEN"><b>S403_FORBIDDEN</b></a>, 
+			<a href="Nette.Http.IResponse.html#S404_NOT_FOUND"><b>S404_NOT_FOUND</b></a>, 
+			<a href="Nette.Http.IResponse.html#S405_METHOD_NOT_ALLOWED"><b>S405_METHOD_NOT_ALLOWED</b></a>, 
+			<a href="Nette.Http.IResponse.html#S410_GONE"><b>S410_GONE</b></a>, 
+			<a href="Nette.Http.IResponse.html#S500_INTERNAL_SERVER_ERROR"><b>S500_INTERNAL_SERVER_ERROR</b></a>, 
+			<a href="Nette.Http.IResponse.html#S501_NOT_IMPLEMENTED"><b>S501_NOT_IMPLEMENTED</b></a>, 
+			<a href="Nette.Http.IResponse.html#S503_SERVICE_UNAVAILABLE"><b>S503_SERVICE_UNAVAILABLE</b></a>
+		</code></td>
+	</tr>
+	</table>
+
+
+
+	<table class="summary" id="properties">
+	<caption>Properties summary</caption>
+	<tr data-order="cookieDomain" id="$cookieDomain">
+		<td class="attributes"><code>
+			public  
+			string
+		</code></td>
+
+		<td class="name">
+				<a href="source-Http.Response.php.html#28-29" title="Go to source code"><var>$cookieDomain</var></a>
+		</td>
+		<td class="value"><code><span class="php-quote">''</span></code></td>
+		<td class="description"><div>
+			<a href="Nette.Http.Response.html#$cookieDomain" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>The domain in which the cookie will be available</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>The domain in which the cookie will be available</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="cookiePath" id="$cookiePath">
+		<td class="attributes"><code>
+			public  
+			string
+		</code></td>
+
+		<td class="name">
+				<a href="source-Http.Response.php.html#31-32" title="Go to source code"><var>$cookiePath</var></a>
+		</td>
+		<td class="value"><code><span class="php-quote">'/'</span></code></td>
+		<td class="description"><div>
+			<a href="Nette.Http.Response.html#$cookiePath" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>The path in which the cookie will be available</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>The path in which the cookie will be available</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="cookieSecure" id="$cookieSecure">
+		<td class="attributes"><code>
+			public  
+			string
+		</code></td>
+
+		<td class="name">
+				<a href="source-Http.Response.php.html#34-35" title="Go to source code"><var>$cookieSecure</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">FALSE</span></code></td>
+		<td class="description"><div>
+			<a href="Nette.Http.Response.html#$cookieSecure" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Whether the cookie is available only through HTTPS</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Whether the cookie is available only through HTTPS</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="cookieHttpOnly" id="$cookieHttpOnly">
+		<td class="attributes"><code>
+			public  
+			string
+		</code></td>
+
+		<td class="name">
+				<a href="source-Http.Response.php.html#37-38" title="Go to source code"><var>$cookieHttpOnly</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">TRUE</span></code></td>
+		<td class="description"><div>
+			<a href="Nette.Http.Response.html#$cookieHttpOnly" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Whether the cookie is hidden from client-side</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Whether the cookie is hidden from client-side</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+	<table class="summary" id="magicProperties">
+	<caption>Magic properties summary</caption>
+	<tr data-order="code" id="m$code">
+		<td class="attributes"><code>
+			public  
+			integer
+		</code></td>
+
+		<td class="name">
+				<a href="source-Http.Response.php.html#19" title="Go to source code"><var>$code</var></a>
+		</td>
+		<td class="description"><div>
+			<a href="Nette.Http.Response.html#m$code" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="sent" id="m$sent">
+		<td class="attributes"><code>
+			public  read-only
+			boolean
+		</code></td>
+
+		<td class="name">
+				<a href="source-Http.Response.php.html#20" title="Go to source code"><var>$sent</var></a>
+		</td>
+		<td class="description"><div>
+			<a href="Nette.Http.Response.html#m$sent" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="headers" id="m$headers">
+		<td class="attributes"><code>
+			public  read-only
+			array
+		</code></td>
+
+		<td class="name">
+				<a href="source-Http.Response.php.html#21" title="Go to source code"><var>$headers</var></a>
+		</td>
+		<td class="description"><div>
+			<a href="Nette.Http.Response.html#m$headers" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	</table>
+
+	<table class="summary inherited">
+	<caption>Magic properties inherited from <a href="Nette.Object.html#properties">Nette\Object</a></caption>
+	<tr>
+		<td><code>
+			<a href="Nette.Object.html#m$reflection"><var>$reflection</var></a>
+		</code></td>
+	</tr>
+	</table>
+
+
+</div>
+
+	<div id="footer">
+		Nette 2.2.2 API API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+	</div>
+</div>
+</div>
+<script src="resources/combined.js?3630868369"></script>
+<script src="elementlist.js?2087501429"></script>
+</body>
+</html>

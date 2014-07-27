@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="generator" content="ApiGen 2.8.0">
+
+	<title>Class Nette\Utils\DateTime | Nette 2.2.2 API</title>
+
+	<link rel="stylesheet" href="resources/style.css?3746977979">
+	<link rel="search" type="application/opensearchdescription+xml" title="Nette 2.2.2 API" href="http://api.nette.org/2.0/opensearch.xml">
+
+
+<script src='http://files.nette.org/js/analytics.js'></script><script>
+_ga.create('UA-95238-14', '.nette.org');
+_gaq.push(['_trackPageview']);
+</script>
+</head>
+
+<body>
+<div id="left">
+	<div id="menu">
+
+		<div id="groups">
+			<h3>Namespaces</h3>
+			<ul>
+				<li><a href="namespace-Latte.html">Latte<span></span></a>
+						<ul>
+				<li><a href="namespace-Latte.Loaders.html">Loaders</a>
+						</li>
+				<li><a href="namespace-Latte.Macros.html">Macros</a>
+						</li>
+				<li><a href="namespace-Latte.Runtime.html">Runtime</a>
+						</li>
+							</ul></li>
+				<li class="active"><a href="namespace-Nette.html">Nette<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.Application.html">Application<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.Application.Responses.html">Responses</a>
+						</li>
+				<li><a href="namespace-Nette.Application.Routers.html">Routers</a>
+						</li>
+				<li><a href="namespace-Nette.Application.UI.html">UI</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.Bridges.html">Bridges<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.Bridges.ApplicationLatte.html">ApplicationLatte</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.ApplicationTracy.html">ApplicationTracy</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.CacheLatte.html">CacheLatte</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.DatabaseDI.html">DatabaseDI</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.DatabaseTracy.html">DatabaseTracy</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.DITracy.html">DITracy</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.FormsLatte.html">FormsLatte</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.Framework.html">Framework</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.HttpTracy.html">HttpTracy</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.SecurityTracy.html">SecurityTracy</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.Caching.html">Caching<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.Caching.Storages.html">Storages</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.ComponentModel.html">ComponentModel</a>
+						</li>
+				<li><a href="namespace-Nette.Database.html">Database<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.Database.Drivers.html">Drivers</a>
+						</li>
+				<li><a href="namespace-Nette.Database.Reflection.html">Reflection</a>
+						</li>
+				<li><a href="namespace-Nette.Database.Table.html">Table</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.DI.html">DI<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.DI.Config.html">Config<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.DI.Config.Adapters.html">Adapters</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.DI.Extensions.html">Extensions</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.Diagnostics.html">Diagnostics</a>
+						</li>
+				<li><a href="namespace-Nette.Forms.html">Forms<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.Forms.Controls.html">Controls</a>
+						</li>
+				<li><a href="namespace-Nette.Forms.Rendering.html">Rendering</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.Http.html">Http</a>
+						</li>
+				<li><a href="namespace-Nette.Iterators.html">Iterators</a>
+						</li>
+				<li><a href="namespace-Nette.Latte.html">Latte</a>
+						</li>
+				<li><a href="namespace-Nette.Loaders.html">Loaders</a>
+						</li>
+				<li><a href="namespace-Nette.Localization.html">Localization</a>
+						</li>
+				<li><a href="namespace-Nette.Mail.html">Mail</a>
+						</li>
+				<li><a href="namespace-Nette.Neon.html">Neon</a>
+						</li>
+				<li><a href="namespace-Nette.PhpGenerator.html">PhpGenerator</a>
+						</li>
+				<li><a href="namespace-Nette.Reflection.html">Reflection</a>
+						</li>
+				<li><a href="namespace-Nette.Security.html">Security</a>
+						</li>
+				<li><a href="namespace-Nette.Templating.html">Templating</a>
+						</li>
+				<li class="active"><a href="namespace-Nette.Utils.html">Utils</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-NetteModule.html">NetteModule</a>
+						</li>
+				<li><a href="namespace-none.html">none</a>
+						</li>
+				<li><a href="namespace-Tracy.html">Tracy</a>
+						</li>
+			</ul>
+		</div>
+
+		<hr>
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="Nette.Utils.ArrayHash.html">ArrayHash</a></li>
+				<li><a href="Nette.Utils.ArrayList.html">ArrayList</a></li>
+				<li><a href="Nette.Utils.Arrays.html">Arrays</a></li>
+				<li><a href="Nette.Utils.Callback.html">Callback</a></li>
+				<li><a href="Nette.Utils.CallbackFilterIterator.html">CallbackFilterIterator</a></li>
+				<li class="active"><a href="Nette.Utils.DateTime.html">DateTime</a></li>
+				<li><a href="Nette.Utils.FileSystem.html">FileSystem</a></li>
+				<li><a href="Nette.Utils.Finder.html">Finder</a></li>
+				<li><a href="Nette.Utils.Html.html">Html</a></li>
+				<li><a href="Nette.Utils.Image.html">Image</a></li>
+				<li><a href="Nette.Utils.Json.html">Json</a></li>
+				<li><a href="Nette.Utils.LimitedScope.html" class="deprecated">LimitedScope</a></li>
+				<li><a href="Nette.Utils.MimeTypeDetector.html" class="deprecated">MimeTypeDetector</a></li>
+				<li><a href="Nette.Utils.ObjectMixin.html">ObjectMixin</a></li>
+				<li><a href="Nette.Utils.Paginator.html">Paginator</a></li>
+				<li><a href="Nette.Utils.Random.html">Random</a></li>
+				<li><a href="Nette.Utils.RecursiveCallbackFilterIterator.html">RecursiveCallbackFilterIterator</a></li>
+				<li><a href="Nette.Utils.Strings.html">Strings</a></li>
+				<li><a href="Nette.Utils.TokenIterator.html">TokenIterator</a></li>
+				<li><a href="Nette.Utils.Tokenizer.html">Tokenizer</a></li>
+				<li><a href="Nette.Utils.Validators.html">Validators</a></li>
+			</ul>
+
+			<h3>Interfaces</h3>
+			<ul>
+				<li><a href="Nette.Utils.IHtmlString.html">IHtmlString</a></li>
+			</ul>
+
+
+			<h3>Exceptions</h3>
+			<ul>
+				<li><a href="Nette.Utils.AssertionException.html">AssertionException</a></li>
+				<li><a href="Nette.Utils.JsonException.html">JsonException</a></li>
+				<li><a href="Nette.Utils.RegexpException.html">RegexpException</a></li>
+				<li><a href="Nette.Utils.TokenizerException.html">TokenizerException</a></li>
+				<li><a href="Nette.Utils.UnknownImageFileException.html">UnknownImageFileException</a></li>
+			</ul>
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form action="http://www.google.com/cse" id="search">
+		<input type="hidden" name="cx" value="011549293477758430224:vxofa9ufnhc">
+		<input type="hidden" name="ie" value="UTF-8">
+		<input type="text" name="q" class="text">
+		<input type="submit" value="Search">
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+				<a href="namespace-Nette.Utils.html" title="Summary of Nette\Utils"><span>Namespace</span></a>
+			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+			<li>
+				<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions"><span>Tree</span></a>
+			</li>
+			<li>
+				<a href="deprecated.html" title="List of deprecated elements"><span>Deprecated</span></a>
+			</li>
+		</ul>
+		<ul><li><a href="http://api.nette.org/releases"><span>Other releases</span></a></li><li><a href="http://nette.org"><span>Nette homepage</span></a></li></ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Class DateTime</h1>
+
+
+	<div class="description">
+	
+<p>DateTime.</p>
+
+	</div>
+
+	<dl class="tree">
+		<dd style="padding-left:0px">
+			<a href="DateTime.html"><span>DateTime</span></a>
+			
+			
+			
+		</dd>
+		<dd style="padding-left:30px">
+			<img src="resources/inherit.png" alt="Extended by">
+<b><span>Nette\Utils\DateTime</span></b>			
+			
+			
+		</dd>
+	</dl>
+
+
+
+
+
+
+
+
+	<div class="info">
+		
+		
+		<b>Namespace:</b> <a href="namespace-Nette.html">Nette</a>\<a href="namespace-Nette.Utils.html">Utils</a><br>
+		
+
+				<b>Author:</b>
+				David Grudl<br>
+		<b>Located at</b> <a href="source-Utils.DateTime.php.html#13-112" title="Go to source code">Utils/DateTime.php</a><br>
+	</div>
+
+
+
+	<table class="summary" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="from" id="_from">
+
+		<td class="attributes"><code>
+			 public static
+			<code><a href="Nette.Utils.DateTime.html">Nette\Utils\DateTime</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Utils.DateTime.html#_from">#</a>
+		<code><a href="source-Utils.DateTime.php.html#39-59" title="Go to source code">from</a>( <span>string|integer|<code><a href="DateTime.html">DateTime</a></code> <var>$time</var></span> )</code>
+
+		<div class="description short">
+			
+<p>DateTime object factory.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>DateTime object factory.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$time</var></dt>
+					<dd><code>string|integer|<code><a href="DateTime.html">DateTime</a></code></code></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="Nette.Utils.DateTime.html">Nette\Utils\DateTime</a></code></code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="__toString" id="___toString">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Utils.DateTime.html#___toString">#</a>
+		<code><a href="source-Utils.DateTime.php.html#62-65" title="Go to source code">__toString</a>( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="modifyClone" id="_modifyClone">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Utils.DateTime.html#_modifyClone">#</a>
+		<code><a href="source-Utils.DateTime.php.html#68-72" title="Go to source code">modifyClone</a>( <span> <var>$modify</var> = <span class="php-quote">''</span></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setTimestamp" id="_setTimestamp">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Utils.DateTime.html#_setTimestamp">#</a>
+		<code><a href="source-Utils.DateTime.php.html#75-80" title="Go to source code">setTimestamp</a>( <span> <var>$timestamp</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+				<h4>Overrides</h4>
+				<div class="list"><code><a href="DateTime.html#_setTimestamp">DateTime::setTimestamp()</a></code></div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getTimestamp" id="_getTimestamp">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Utils.DateTime.html#_getTimestamp">#</a>
+		<code><a href="source-Utils.DateTime.php.html#83-87" title="Go to source code">getTimestamp</a>( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+				<h4>Overrides</h4>
+				<div class="list"><code><a href="DateTime.html#_getTimestamp">DateTime::getTimestamp()</a></code></div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="createFromFormat" id="_createFromFormat">
+
+		<td class="attributes"><code>
+			 public static
+			<code><a href="Nette.Utils.DateTime.html">Nette\Utils\DateTime</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Utils.DateTime.html#_createFromFormat">#</a>
+		<code><a href="source-Utils.DateTime.php.html#90-110" title="Go to source code">createFromFormat</a>( <span>string <var>$format</var></span>, <span>string <var>$time</var></span>, <span>string|<code><a href="DateTimeZone.html">DateTimeZone</a></code> <var>$timezone</var> = <span class="php-keyword1">NULL</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Returns new DateTime object formatted according to the specified format.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns new DateTime object formatted according to the specified format.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$format</var></dt>
+					<dd><code>string</code><br>The format the $time parameter should be in</dd>
+					<dt><var>$time</var></dt>
+					<dd><code>string</code><br>String representing the time</dd>
+					<dt><var>$timezone</var></dt>
+					<dd><code>string|<code><a href="DateTimeZone.html">DateTimeZone</a></code></code><br>desired timezone (default timezone is used if NULL is passed)</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="Nette.Utils.DateTime.html">Nette\Utils\DateTime</a></code></code><br>
+				</div>
+
+
+
+				<h4>Overrides</h4>
+				<div class="list"><code><a href="DateTime.html#_createFromFormat">DateTime::createFromFormat()</a></code></div>
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+	<table class="summary inherited">
+	<caption>Methods inherited from <a href="DateTime.html#methods">DateTime</a></caption>
+	<tr>
+		<td><code>
+			<a href="DateTime.html#___construct">__construct()</a>, 
+			<a href="DateTime.html#___set_state">__set_state()</a>, 
+			<a href="DateTime.html#___wakeup">__wakeup()</a>, 
+			<a href="DateTime.html#_add">add()</a>, 
+			<a href="DateTime.html#_diff">diff()</a>, 
+			<a href="DateTime.html#_format">format()</a>, 
+			<a href="DateTime.html#_getLastErrors">getLastErrors()</a>, 
+			<a href="DateTime.html#_getOffset">getOffset()</a>, 
+			<a href="DateTime.html#_getTimezone">getTimezone()</a>, 
+			<a href="DateTime.html#_modify">modify()</a>, 
+			<a href="DateTime.html#_setDate">setDate()</a>, 
+			<a href="DateTime.html#_setISODate">setISODate()</a>, 
+			<a href="DateTime.html#_setTime">setTime()</a>, 
+			<a href="DateTime.html#_setTimezone">setTimezone()</a>, 
+			<a href="DateTime.html#_sub">sub()</a>
+		</code></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+	<table class="summary" id="constants">
+	<caption>Constants summary</caption>
+	<tr data-order="MINUTE" id="MINUTE">
+
+		<td class="attributes"><code>integer</code></td>
+		<td class="name"><code>
+				<a href="source-Utils.DateTime.php.html#20-21" title="Go to source code"><b>MINUTE</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-num">60</span></code></td>
+		<td class="description"><div>
+			<a href="Nette.Utils.DateTime.html#MINUTE" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>minute in seconds</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>minute in seconds</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="HOUR" id="HOUR">
+
+		<td class="attributes"><code>integer</code></td>
+		<td class="name"><code>
+				<a href="source-Utils.DateTime.php.html#23-24" title="Go to source code"><b>HOUR</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-num">3600</span></code></td>
+		<td class="description"><div>
+			<a href="Nette.Utils.DateTime.html#HOUR" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>hour in seconds</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>hour in seconds</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="DAY" id="DAY">
+
+		<td class="attributes"><code>integer</code></td>
+		<td class="name"><code>
+				<a href="source-Utils.DateTime.php.html#26-27" title="Go to source code"><b>DAY</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-num">86400</span></code></td>
+		<td class="description"><div>
+			<a href="Nette.Utils.DateTime.html#DAY" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>day in seconds</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>day in seconds</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="WEEK" id="WEEK">
+
+		<td class="attributes"><code>integer</code></td>
+		<td class="name"><code>
+				<a href="source-Utils.DateTime.php.html#29-30" title="Go to source code"><b>WEEK</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-num">604800</span></code></td>
+		<td class="description"><div>
+			<a href="Nette.Utils.DateTime.html#WEEK" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>week in seconds</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>week in seconds</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="MONTH" id="MONTH">
+
+		<td class="attributes"><code>integer</code></td>
+		<td class="name"><code>
+				<a href="source-Utils.DateTime.php.html#32-33" title="Go to source code"><b>MONTH</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-num">2629800</span></code></td>
+		<td class="description"><div>
+			<a href="Nette.Utils.DateTime.html#MONTH" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>average month in seconds</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>average month in seconds</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="YEAR" id="YEAR">
+
+		<td class="attributes"><code>integer</code></td>
+		<td class="name"><code>
+				<a href="source-Utils.DateTime.php.html#35-36" title="Go to source code"><b>YEAR</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-num">31557600</span></code></td>
+		<td class="description"><div>
+			<a href="Nette.Utils.DateTime.html#YEAR" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>average year in seconds</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>average year in seconds</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	</table>
+
+	<table class="summary inherited">
+	<caption>Constants inherited from <a href="DateTime.html#constants">DateTime</a></caption>
+	<tr>
+		<td><code>
+			<a href="DateTime.html#ATOM"><b>ATOM</b></a>, 
+			<a href="DateTime.html#COOKIE"><b>COOKIE</b></a>, 
+			<a href="DateTime.html#ISO8601"><b>ISO8601</b></a>, 
+			<a href="DateTime.html#RFC1036"><b>RFC1036</b></a>, 
+			<a href="DateTime.html#RFC1123"><b>RFC1123</b></a>, 
+			<a href="DateTime.html#RFC2822"><b>RFC2822</b></a>, 
+			<a href="DateTime.html#RFC3339"><b>RFC3339</b></a>, 
+			<a href="DateTime.html#RFC822"><b>RFC822</b></a>, 
+			<a href="DateTime.html#RFC850"><b>RFC850</b></a>, 
+			<a href="DateTime.html#RSS"><b>RSS</b></a>, 
+			<a href="DateTime.html#W3C"><b>W3C</b></a>
+		</code></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+
+</div>
+
+	<div id="footer">
+		Nette 2.2.2 API API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+	</div>
+</div>
+</div>
+<script src="resources/combined.js?3630868369"></script>
+<script src="elementlist.js?2087501429"></script>
+</body>
+</html>

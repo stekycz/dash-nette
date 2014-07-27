@@ -1,0 +1,1847 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="generator" content="ApiGen 2.8.0">
+
+	<title>Class Nette\Http\Url | Nette 2.2.2 API</title>
+
+	<link rel="stylesheet" href="resources/style.css?3746977979">
+	<link rel="search" type="application/opensearchdescription+xml" title="Nette 2.2.2 API" href="http://api.nette.org/2.0/opensearch.xml">
+
+
+<script src='http://files.nette.org/js/analytics.js'></script><script>
+_ga.create('UA-95238-14', '.nette.org');
+_gaq.push(['_trackPageview']);
+</script>
+</head>
+
+<body>
+<div id="left">
+	<div id="menu">
+
+		<div id="groups">
+			<h3>Namespaces</h3>
+			<ul>
+				<li><a href="namespace-Latte.html">Latte<span></span></a>
+						<ul>
+				<li><a href="namespace-Latte.Loaders.html">Loaders</a>
+						</li>
+				<li><a href="namespace-Latte.Macros.html">Macros</a>
+						</li>
+				<li><a href="namespace-Latte.Runtime.html">Runtime</a>
+						</li>
+							</ul></li>
+				<li class="active"><a href="namespace-Nette.html">Nette<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.Application.html">Application<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.Application.Responses.html">Responses</a>
+						</li>
+				<li><a href="namespace-Nette.Application.Routers.html">Routers</a>
+						</li>
+				<li><a href="namespace-Nette.Application.UI.html">UI</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.Bridges.html">Bridges<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.Bridges.ApplicationLatte.html">ApplicationLatte</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.ApplicationTracy.html">ApplicationTracy</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.CacheLatte.html">CacheLatte</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.DatabaseDI.html">DatabaseDI</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.DatabaseTracy.html">DatabaseTracy</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.DITracy.html">DITracy</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.FormsLatte.html">FormsLatte</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.Framework.html">Framework</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.HttpTracy.html">HttpTracy</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.SecurityTracy.html">SecurityTracy</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.Caching.html">Caching<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.Caching.Storages.html">Storages</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.ComponentModel.html">ComponentModel</a>
+						</li>
+				<li><a href="namespace-Nette.Database.html">Database<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.Database.Drivers.html">Drivers</a>
+						</li>
+				<li><a href="namespace-Nette.Database.Reflection.html">Reflection</a>
+						</li>
+				<li><a href="namespace-Nette.Database.Table.html">Table</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.DI.html">DI<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.DI.Config.html">Config<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.DI.Config.Adapters.html">Adapters</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.DI.Extensions.html">Extensions</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.Diagnostics.html">Diagnostics</a>
+						</li>
+				<li><a href="namespace-Nette.Forms.html">Forms<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.Forms.Controls.html">Controls</a>
+						</li>
+				<li><a href="namespace-Nette.Forms.Rendering.html">Rendering</a>
+						</li>
+							</ul></li>
+				<li class="active"><a href="namespace-Nette.Http.html">Http</a>
+						</li>
+				<li><a href="namespace-Nette.Iterators.html">Iterators</a>
+						</li>
+				<li><a href="namespace-Nette.Latte.html">Latte</a>
+						</li>
+				<li><a href="namespace-Nette.Loaders.html">Loaders</a>
+						</li>
+				<li><a href="namespace-Nette.Localization.html">Localization</a>
+						</li>
+				<li><a href="namespace-Nette.Mail.html">Mail</a>
+						</li>
+				<li><a href="namespace-Nette.Neon.html">Neon</a>
+						</li>
+				<li><a href="namespace-Nette.PhpGenerator.html">PhpGenerator</a>
+						</li>
+				<li><a href="namespace-Nette.Reflection.html">Reflection</a>
+						</li>
+				<li><a href="namespace-Nette.Security.html">Security</a>
+						</li>
+				<li><a href="namespace-Nette.Templating.html">Templating</a>
+						</li>
+				<li><a href="namespace-Nette.Utils.html">Utils</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-NetteModule.html">NetteModule</a>
+						</li>
+				<li><a href="namespace-none.html">none</a>
+						</li>
+				<li><a href="namespace-Tracy.html">Tracy</a>
+						</li>
+			</ul>
+		</div>
+
+		<hr>
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="Nette.Http.Context.html">Context</a></li>
+				<li><a href="Nette.Http.FileUpload.html">FileUpload</a></li>
+				<li><a href="Nette.Http.Helpers.html">Helpers</a></li>
+				<li><a href="Nette.Http.Request.html">Request</a></li>
+				<li><a href="Nette.Http.RequestFactory.html">RequestFactory</a></li>
+				<li><a href="Nette.Http.Response.html">Response</a></li>
+				<li><a href="Nette.Http.Session.html">Session</a></li>
+				<li><a href="Nette.Http.SessionSection.html">SessionSection</a></li>
+				<li class="active"><a href="Nette.Http.Url.html">Url</a></li>
+				<li><a href="Nette.Http.UrlScript.html">UrlScript</a></li>
+				<li><a href="Nette.Http.UserStorage.html">UserStorage</a></li>
+			</ul>
+
+			<h3>Interfaces</h3>
+			<ul>
+				<li><a href="Nette.Http.IRequest.html">IRequest</a></li>
+				<li><a href="Nette.Http.IResponse.html">IResponse</a></li>
+				<li><a href="Nette.Http.ISessionStorage.html" class="deprecated">ISessionStorage</a></li>
+			</ul>
+
+
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form action="http://www.google.com/cse" id="search">
+		<input type="hidden" name="cx" value="011549293477758430224:vxofa9ufnhc">
+		<input type="hidden" name="ie" value="UTF-8">
+		<input type="text" name="q" class="text">
+		<input type="submit" value="Search">
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+				<a href="namespace-Nette.Http.html" title="Summary of Nette\Http"><span>Namespace</span></a>
+			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+			<li>
+				<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions"><span>Tree</span></a>
+			</li>
+			<li>
+				<a href="deprecated.html" title="List of deprecated elements"><span>Deprecated</span></a>
+			</li>
+		</ul>
+		<ul><li><a href="http://api.nette.org/releases"><span>Other releases</span></a></li><li><a href="http://nette.org"><span>Nette homepage</span></a></li></ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Class Url</h1>
+
+
+	<div class="description">
+	
+<p>URI Syntax (RFC 3986).</p>
+
+<pre>
+scheme  user  password  host  port  basePath   relativeUrl
+  |      |      |        |      |    |             |
+/--\   /--\ /------\ /-------\ /--\/--\/----------------------------\
+http://john:x0y17575@nette.org:8042/en/manual.php?name=param#fragment  &lt;-- absoluteUrl
+       \__________________________/\____________/^\________/^\______/
+                    |                     |           |         |
+                authority               path        query    fragment
+</pre>
+
+<ul>
+	<li>authority: [user[:password]@]host[:port]</li>
+
+	<li>hostUrl: <a
+	href="http://user:password&#64;nette.org:8042">http://user:password@nette.org:8042</a></li>
+
+	<li>basePath: /en/ (everything before relative URI not including the script
+	name)</li>
+
+	<li>baseUrl: <a
+	href="http://user:password&#64;nette.org:8042/en/">http://user:password@nette.org:8042/en/</a></li>
+
+	<li>relativeUrl: manual.php</li>
+</ul>
+
+	</div>
+
+	<dl class="tree">
+		<dd style="padding-left:0px">
+			<a href="Nette.Object.html"><span>Nette\Object</span></a>
+			
+			
+			
+		</dd>
+		<dd style="padding-left:30px">
+			<img src="resources/inherit.png" alt="Extended by">
+<b><span>Nette\Http\Url</span></b>			
+			
+			
+		</dd>
+	</dl>
+
+
+	<div>
+		<h4>Direct known subclasses</h4>
+			<a href="Nette.Http.UrlScript.html">Nette\Http\UrlScript</a>
+	</div>
+
+
+
+
+
+
+	<div class="info">
+		
+		
+		<b>Namespace:</b> <a href="namespace-Nette.html">Nette</a>\<a href="namespace-Nette.Http.html">Http</a><br>
+		
+
+				<b>Author:</b>
+				David Grudl<br>
+		<b>Located at</b> <a href="source-Http.Url.php.html#13-485" title="Go to source code">Http/Url.php</a><br>
+	</div>
+
+
+
+	<table class="summary" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="__construct" id="___construct">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Http.Url.html#___construct">#</a>
+		<code><a href="source-Http.Url.php.html#85-114" title="Go to source code">__construct</a>( <span>string <var>$url</var> = <span class="php-keyword1">NULL</span></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$url</var></dt>
+					<dd><code>string</code><br>URL</dd>
+				</dl></div>
+
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><code><a href="Nette.InvalidArgumentException.html">Nette\InvalidArgumentException</a></code></code><br>
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setScheme" id="_setScheme">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="Nette.Http.Url.html">Nette\Http\Url</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Http.Url.html#_setScheme">#</a>
+		<code><a href="source-Http.Url.php.html#117-126" title="Go to source code">setScheme</a>( <span>string <var>$value</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Sets the scheme part of URI.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Sets the scheme part of URI.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$value</var></dt>
+					<dd><code>string</code></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="Nette.Http.Url.html">Nette\Http\Url</a></code></code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getScheme" id="_getScheme">
+
+		<td class="attributes"><code>
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Http.Url.html#_getScheme">#</a>
+		<code><a href="source-Http.Url.php.html#129-136" title="Go to source code">getScheme</a>( )</code>
+
+		<div class="description short">
+			
+<p>Returns the scheme part of URI.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns the scheme part of URI.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setUser" id="_setUser">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="Nette.Http.Url.html">Nette\Http\Url</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Http.Url.html#_setUser">#</a>
+		<code><a href="source-Http.Url.php.html#139-148" title="Go to source code">setUser</a>( <span>string <var>$value</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Sets the user name part of URI.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Sets the user name part of URI.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$value</var></dt>
+					<dd><code>string</code></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="Nette.Http.Url.html">Nette\Http\Url</a></code></code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getUser" id="_getUser">
+
+		<td class="attributes"><code>
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Http.Url.html#_getUser">#</a>
+		<code><a href="source-Http.Url.php.html#151-158" title="Go to source code">getUser</a>( )</code>
+
+		<div class="description short">
+			
+<p>Returns the user name part of URI.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns the user name part of URI.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setPassword" id="_setPassword">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="Nette.Http.Url.html">Nette\Http\Url</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Http.Url.html#_setPassword">#</a>
+		<code><a href="source-Http.Url.php.html#161-170" title="Go to source code">setPassword</a>( <span>string <var>$value</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Sets the password part of URI.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Sets the password part of URI.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$value</var></dt>
+					<dd><code>string</code></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="Nette.Http.Url.html">Nette\Http\Url</a></code></code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getPassword" id="_getPassword">
+
+		<td class="attributes"><code>
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Http.Url.html#_getPassword">#</a>
+		<code><a href="source-Http.Url.php.html#173-180" title="Go to source code">getPassword</a>( )</code>
+
+		<div class="description short">
+			
+<p>Returns the password part of URI.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns the password part of URI.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setHost" id="_setHost">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="Nette.Http.Url.html">Nette\Http\Url</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Http.Url.html#_setHost">#</a>
+		<code><a href="source-Http.Url.php.html#183-192" title="Go to source code">setHost</a>( <span>string <var>$value</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Sets the host part of URI.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Sets the host part of URI.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$value</var></dt>
+					<dd><code>string</code></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="Nette.Http.Url.html">Nette\Http\Url</a></code></code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getHost" id="_getHost">
+
+		<td class="attributes"><code>
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Http.Url.html#_getHost">#</a>
+		<code><a href="source-Http.Url.php.html#195-202" title="Go to source code">getHost</a>( )</code>
+
+		<div class="description short">
+			
+<p>Returns the host part of URI.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns the host part of URI.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setPort" id="_setPort">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="Nette.Http.Url.html">Nette\Http\Url</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Http.Url.html#_setPort">#</a>
+		<code><a href="source-Http.Url.php.html#205-214" title="Go to source code">setPort</a>( <span>string <var>$value</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Sets the port part of URI.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Sets the port part of URI.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$value</var></dt>
+					<dd><code>string</code></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="Nette.Http.Url.html">Nette\Http\Url</a></code></code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getPort" id="_getPort">
+
+		<td class="attributes"><code>
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Http.Url.html#_getPort">#</a>
+		<code><a href="source-Http.Url.php.html#217-224" title="Go to source code">getPort</a>( )</code>
+
+		<div class="description short">
+			
+<p>Returns the port part of URI.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns the port part of URI.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setPath" id="_setPath">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="Nette.Http.Url.html">Nette\Http\Url</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Http.Url.html#_setPath">#</a>
+		<code><a href="source-Http.Url.php.html#227-236" title="Go to source code">setPath</a>( <span>string <var>$value</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Sets the path part of URI.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Sets the path part of URI.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$value</var></dt>
+					<dd><code>string</code></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="Nette.Http.Url.html">Nette\Http\Url</a></code></code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getPath" id="_getPath">
+
+		<td class="attributes"><code>
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Http.Url.html#_getPath">#</a>
+		<code><a href="source-Http.Url.php.html#239-246" title="Go to source code">getPath</a>( )</code>
+
+		<div class="description short">
+			
+<p>Returns the path part of URI.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns the path part of URI.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setQuery" id="_setQuery">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="Nette.Http.Url.html">Nette\Http\Url</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Http.Url.html#_setQuery">#</a>
+		<code><a href="source-Http.Url.php.html#249-258" title="Go to source code">setQuery</a>( <span>string|array <var>$value</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Sets the query part of URI.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Sets the query part of URI.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$value</var></dt>
+					<dd><code>string|array</code></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="Nette.Http.Url.html">Nette\Http\Url</a></code></code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="appendQuery" id="_appendQuery">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="Nette.Http.Url.html">Nette\Http\Url</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Http.Url.html#_appendQuery">#</a>
+		<code><a href="source-Http.Url.php.html#261-271" title="Go to source code">appendQuery</a>( <span>string|array <var>$value</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Appends the query part of URI.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Appends the query part of URI.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$value</var></dt>
+					<dd><code>string|array</code></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="Nette.Http.Url.html">Nette\Http\Url</a></code></code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getQuery" id="_getQuery">
+
+		<td class="attributes"><code>
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Http.Url.html#_getQuery">#</a>
+		<code><a href="source-Http.Url.php.html#274-281" title="Go to source code">getQuery</a>( )</code>
+
+		<div class="description short">
+			
+<p>Returns the query part of URI.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns the query part of URI.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getQueryParameter" id="_getQueryParameter">
+
+		<td class="attributes"><code>
+			 public 
+			mixed
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Http.Url.html#_getQueryParameter">#</a>
+		<code><a href="source-Http.Url.php.html#284-293" title="Go to source code">getQueryParameter</a>( <span>string <var>$name</var></span>, <span>mixed <var>$default</var> = <span class="php-keyword1">NULL</span></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$name</var></dt>
+					<dd><code>string</code></dd>
+					<dt><var>$default</var></dt>
+					<dd><code>mixed</code></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>mixed</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setQueryParameter" id="_setQueryParameter">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="Nette.Http.Url.html">Nette\Http\Url</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Http.Url.html#_setQueryParameter">#</a>
+		<code><a href="source-Http.Url.php.html#296-311" title="Go to source code">setQueryParameter</a>( <span>string <var>$name</var></span>, <span>mixed <var>$value</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$name</var></dt>
+					<dd><code>string</code></dd>
+					<dt><var>$value</var></dt>
+					<dd><code>mixed</code><br>NULL unsets the parameter</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="Nette.Http.Url.html">Nette\Http\Url</a></code></code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setFragment" id="_setFragment">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="Nette.Http.Url.html">Nette\Http\Url</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Http.Url.html#_setFragment">#</a>
+		<code><a href="source-Http.Url.php.html#314-323" title="Go to source code">setFragment</a>( <span>string <var>$value</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Sets the fragment part of URI.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Sets the fragment part of URI.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$value</var></dt>
+					<dd><code>string</code></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="Nette.Http.Url.html">Nette\Http\Url</a></code></code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getFragment" id="_getFragment">
+
+		<td class="attributes"><code>
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Http.Url.html#_getFragment">#</a>
+		<code><a href="source-Http.Url.php.html#326-333" title="Go to source code">getFragment</a>( )</code>
+
+		<div class="description short">
+			
+<p>Returns the fragment part of URI.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns the fragment part of URI.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getAbsoluteUrl" id="_getAbsoluteUrl">
+
+		<td class="attributes"><code>
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Http.Url.html#_getAbsoluteUrl">#</a>
+		<code><a href="source-Http.Url.php.html#336-345" title="Go to source code">getAbsoluteUrl</a>( )</code>
+
+		<div class="description short">
+			
+<p>Returns the entire URI including query string and fragment.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns the entire URI including query string and fragment.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getAuthority" id="_getAuthority">
+
+		<td class="attributes"><code>
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Http.Url.html#_getAuthority">#</a>
+		<code><a href="source-Http.Url.php.html#348-364" title="Go to source code">getAuthority</a>( )</code>
+
+		<div class="description short">
+			
+<p>Returns the [user[:pass]@]host[:port] part of URI.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns the [user[:pass]@]host[:port] part of URI.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getHostUrl" id="_getHostUrl">
+
+		<td class="attributes"><code>
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Http.Url.html#_getHostUrl">#</a>
+		<code><a href="source-Http.Url.php.html#367-374" title="Go to source code">getHostUrl</a>( )</code>
+
+		<div class="description short">
+			
+<p>Returns the scheme and authority part of URI.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns the scheme and authority part of URI.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getBasePath" id="_getBasePath">
+
+		<td class="attributes"><code>
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Http.Url.html#_getBasePath">#</a>
+		<code><a href="source-Http.Url.php.html#377-385" title="Go to source code">getBasePath</a>( )</code>
+
+		<div class="description short">
+			
+<p>Returns the base-path.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns the base-path.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getBaseUrl" id="_getBaseUrl">
+
+		<td class="attributes"><code>
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Http.Url.html#_getBaseUrl">#</a>
+		<code><a href="source-Http.Url.php.html#388-395" title="Go to source code">getBaseUrl</a>( )</code>
+
+		<div class="description short">
+			
+<p>Returns the base-URI.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns the base-URI.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getRelativeUrl" id="_getRelativeUrl">
+
+		<td class="attributes"><code>
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Http.Url.html#_getRelativeUrl">#</a>
+		<code><a href="source-Http.Url.php.html#398-405" title="Go to source code">getRelativeUrl</a>( )</code>
+
+		<div class="description short">
+			
+<p>Returns the relative-URI.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns the relative-URI.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="isEqual" id="_isEqual">
+
+		<td class="attributes"><code>
+			 public 
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Http.Url.html#_isEqual">#</a>
+		<code><a href="source-Http.Url.php.html#408-439" title="Go to source code">isEqual</a>( <span>string <var>$url</var></span> )</code>
+
+		<div class="description short">
+			
+<p>URI comparsion (this object must be in canonical form).</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>URI comparsion (this object must be in canonical form).</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$url</var></dt>
+					<dd><code>string</code></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="canonicalize" id="_canonicalize">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="Nette.Http.Url.html">Nette\Http\Url</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Http.Url.html#_canonicalize">#</a>
+		<code><a href="source-Http.Url.php.html#442-452" title="Go to source code">canonicalize</a>( )</code>
+
+		<div class="description short">
+			
+<p>Transform to canonical form.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Transform to canonical form.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="Nette.Http.Url.html">Nette\Http\Url</a></code></code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="__toString" id="___toString">
+
+		<td class="attributes"><code>
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Http.Url.html#___toString">#</a>
+		<code><a href="source-Http.Url.php.html#455-461" title="Go to source code">__toString</a>( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="unescape" id="_unescape">
+
+		<td class="attributes"><code>
+			 public static
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Http.Url.html#_unescape">#</a>
+		<code><a href="source-Http.Url.php.html#464-483" title="Go to source code">unescape</a>( <span>string <var>$s</var></span>, <span>string <var>$reserved</var> = <span class="php-quote">'%;/?:@&amp;=+$,'</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Similar to rawurldecode, but preserve reserved chars encoded.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Similar to rawurldecode, but preserve reserved chars encoded.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$s</var></dt>
+					<dd><code>string</code><br>to decode</dd>
+					<dt><var>$reserved</var></dt>
+					<dd><code>string</code><br>reserved characters</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+	<table class="summary inherited">
+	<caption>Methods inherited from <a href="Nette.Object.html#methods">Nette\Object</a></caption>
+	<tr>
+		<td><code>
+			<a href="Nette.Object.html#___call">__call()</a>, 
+			<a href="Nette.Object.html#___callStatic">__callStatic()</a>, 
+			<a href="Nette.Object.html#___get">__get()</a>, 
+			<a href="Nette.Object.html#___isset">__isset()</a>, 
+			<a href="Nette.Object.html#___set">__set()</a>, 
+			<a href="Nette.Object.html#___unset">__unset()</a>, 
+			<a href="Nette.Object.html#_extensionMethod">extensionMethod()</a>, 
+			<a href="Nette.Object.html#_getReflection">getReflection()</a>
+		</code></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+
+
+
+	<table class="summary" id="properties">
+	<caption>Properties summary</caption>
+	<tr data-order="defaultPorts" id="$defaultPorts">
+		<td class="attributes"><code>
+			public static 
+			array
+		</code></td>
+
+		<td class="name">
+				<a href="source-Http.Url.php.html#51-58" title="Go to source code"><var>$defaultPorts</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">array</span>(
+	<span class="php-quote">'http'</span> =&gt; <span class="php-num">80</span>,
+	<span class="php-quote">'https'</span> =&gt; <span class="php-num">443</span>,
+	<span class="php-quote">'ftp'</span> =&gt; <span class="php-num">21</span>,
+	<span class="php-quote">'news'</span> =&gt; <span class="php-num">119</span>,
+	<span class="php-quote">'nntp'</span> =&gt; <span class="php-num">119</span>,
+)</code></td>
+		<td class="description"><div>
+			<a href="Nette.Http.Url.html#$defaultPorts" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+	<table class="summary" id="magicProperties">
+	<caption>Magic properties summary</caption>
+	<tr data-order="scheme" id="m$scheme">
+		<td class="attributes"><code>
+			public  
+			string
+		</code></td>
+
+		<td class="name">
+				<a href="source-Http.Url.php.html#34" title="Go to source code"><var>$scheme</var></a>
+		</td>
+		<td class="description"><div>
+			<a href="Nette.Http.Url.html#m$scheme" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="user" id="m$user">
+		<td class="attributes"><code>
+			public  
+			string
+		</code></td>
+
+		<td class="name">
+				<a href="source-Http.Url.php.html#35" title="Go to source code"><var>$user</var></a>
+		</td>
+		<td class="description"><div>
+			<a href="Nette.Http.Url.html#m$user" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="password" id="m$password">
+		<td class="attributes"><code>
+			public  
+			string
+		</code></td>
+
+		<td class="name">
+				<a href="source-Http.Url.php.html#36" title="Go to source code"><var>$password</var></a>
+		</td>
+		<td class="description"><div>
+			<a href="Nette.Http.Url.html#m$password" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="host" id="m$host">
+		<td class="attributes"><code>
+			public  
+			string
+		</code></td>
+
+		<td class="name">
+				<a href="source-Http.Url.php.html#37" title="Go to source code"><var>$host</var></a>
+		</td>
+		<td class="description"><div>
+			<a href="Nette.Http.Url.html#m$host" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="port" id="m$port">
+		<td class="attributes"><code>
+			public  
+			string
+		</code></td>
+
+		<td class="name">
+				<a href="source-Http.Url.php.html#38" title="Go to source code"><var>$port</var></a>
+		</td>
+		<td class="description"><div>
+			<a href="Nette.Http.Url.html#m$port" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="path" id="m$path">
+		<td class="attributes"><code>
+			public  
+			string
+		</code></td>
+
+		<td class="name">
+				<a href="source-Http.Url.php.html#39" title="Go to source code"><var>$path</var></a>
+		</td>
+		<td class="description"><div>
+			<a href="Nette.Http.Url.html#m$path" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="query" id="m$query">
+		<td class="attributes"><code>
+			public  
+			string
+		</code></td>
+
+		<td class="name">
+				<a href="source-Http.Url.php.html#40" title="Go to source code"><var>$query</var></a>
+		</td>
+		<td class="description"><div>
+			<a href="Nette.Http.Url.html#m$query" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="fragment" id="m$fragment">
+		<td class="attributes"><code>
+			public  
+			string
+		</code></td>
+
+		<td class="name">
+				<a href="source-Http.Url.php.html#41" title="Go to source code"><var>$fragment</var></a>
+		</td>
+		<td class="description"><div>
+			<a href="Nette.Http.Url.html#m$fragment" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="absoluteUrl" id="m$absoluteUrl">
+		<td class="attributes"><code>
+			public  read-only
+			string
+		</code></td>
+
+		<td class="name">
+				<a href="source-Http.Url.php.html#42" title="Go to source code"><var>$absoluteUrl</var></a>
+		</td>
+		<td class="description"><div>
+			<a href="Nette.Http.Url.html#m$absoluteUrl" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="authority" id="m$authority">
+		<td class="attributes"><code>
+			public  read-only
+			string
+		</code></td>
+
+		<td class="name">
+				<a href="source-Http.Url.php.html#43" title="Go to source code"><var>$authority</var></a>
+		</td>
+		<td class="description"><div>
+			<a href="Nette.Http.Url.html#m$authority" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="hostUrl" id="m$hostUrl">
+		<td class="attributes"><code>
+			public  read-only
+			string
+		</code></td>
+
+		<td class="name">
+				<a href="source-Http.Url.php.html#44" title="Go to source code"><var>$hostUrl</var></a>
+		</td>
+		<td class="description"><div>
+			<a href="Nette.Http.Url.html#m$hostUrl" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="basePath" id="m$basePath">
+		<td class="attributes"><code>
+			public  read-only
+			string
+		</code></td>
+
+		<td class="name">
+				<a href="source-Http.Url.php.html#45" title="Go to source code"><var>$basePath</var></a>
+		</td>
+		<td class="description"><div>
+			<a href="Nette.Http.Url.html#m$basePath" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="baseUrl" id="m$baseUrl">
+		<td class="attributes"><code>
+			public  read-only
+			string
+		</code></td>
+
+		<td class="name">
+				<a href="source-Http.Url.php.html#46" title="Go to source code"><var>$baseUrl</var></a>
+		</td>
+		<td class="description"><div>
+			<a href="Nette.Http.Url.html#m$baseUrl" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="relativeUrl" id="m$relativeUrl">
+		<td class="attributes"><code>
+			public  read-only
+			string
+		</code></td>
+
+		<td class="name">
+				<a href="source-Http.Url.php.html#47" title="Go to source code"><var>$relativeUrl</var></a>
+		</td>
+		<td class="description"><div>
+			<a href="Nette.Http.Url.html#m$relativeUrl" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	</table>
+
+	<table class="summary inherited">
+	<caption>Magic properties inherited from <a href="Nette.Object.html#properties">Nette\Object</a></caption>
+	<tr>
+		<td><code>
+			<a href="Nette.Object.html#m$reflection"><var>$reflection</var></a>
+		</code></td>
+	</tr>
+	</table>
+
+
+</div>
+
+	<div id="footer">
+		Nette 2.2.2 API API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+	</div>
+</div>
+</div>
+<script src="resources/combined.js?3630868369"></script>
+<script src="elementlist.js?2087501429"></script>
+</body>
+</html>

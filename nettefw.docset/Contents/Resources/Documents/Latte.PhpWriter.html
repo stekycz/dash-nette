@@ -1,0 +1,871 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="generator" content="ApiGen 2.8.0">
+
+	<title>Class Latte\PhpWriter | Nette 2.2.2 API</title>
+
+	<link rel="stylesheet" href="resources/style.css?3746977979">
+	<link rel="search" type="application/opensearchdescription+xml" title="Nette 2.2.2 API" href="http://api.nette.org/2.0/opensearch.xml">
+
+
+<script src='http://files.nette.org/js/analytics.js'></script><script>
+_ga.create('UA-95238-14', '.nette.org');
+_gaq.push(['_trackPageview']);
+</script>
+</head>
+
+<body>
+<div id="left">
+	<div id="menu">
+
+		<div id="groups">
+			<h3>Namespaces</h3>
+			<ul>
+				<li class="active"><a href="namespace-Latte.html">Latte<span></span></a>
+						<ul>
+				<li><a href="namespace-Latte.Loaders.html">Loaders</a>
+						</li>
+				<li><a href="namespace-Latte.Macros.html">Macros</a>
+						</li>
+				<li><a href="namespace-Latte.Runtime.html">Runtime</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.html">Nette<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.Application.html">Application<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.Application.Responses.html">Responses</a>
+						</li>
+				<li><a href="namespace-Nette.Application.Routers.html">Routers</a>
+						</li>
+				<li><a href="namespace-Nette.Application.UI.html">UI</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.Bridges.html">Bridges<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.Bridges.ApplicationLatte.html">ApplicationLatte</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.ApplicationTracy.html">ApplicationTracy</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.CacheLatte.html">CacheLatte</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.DatabaseDI.html">DatabaseDI</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.DatabaseTracy.html">DatabaseTracy</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.DITracy.html">DITracy</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.FormsLatte.html">FormsLatte</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.Framework.html">Framework</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.HttpTracy.html">HttpTracy</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.SecurityTracy.html">SecurityTracy</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.Caching.html">Caching<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.Caching.Storages.html">Storages</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.ComponentModel.html">ComponentModel</a>
+						</li>
+				<li><a href="namespace-Nette.Database.html">Database<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.Database.Drivers.html">Drivers</a>
+						</li>
+				<li><a href="namespace-Nette.Database.Reflection.html">Reflection</a>
+						</li>
+				<li><a href="namespace-Nette.Database.Table.html">Table</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.DI.html">DI<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.DI.Config.html">Config<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.DI.Config.Adapters.html">Adapters</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.DI.Extensions.html">Extensions</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.Diagnostics.html">Diagnostics</a>
+						</li>
+				<li><a href="namespace-Nette.Forms.html">Forms<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.Forms.Controls.html">Controls</a>
+						</li>
+				<li><a href="namespace-Nette.Forms.Rendering.html">Rendering</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.Http.html">Http</a>
+						</li>
+				<li><a href="namespace-Nette.Iterators.html">Iterators</a>
+						</li>
+				<li><a href="namespace-Nette.Latte.html">Latte</a>
+						</li>
+				<li><a href="namespace-Nette.Loaders.html">Loaders</a>
+						</li>
+				<li><a href="namespace-Nette.Localization.html">Localization</a>
+						</li>
+				<li><a href="namespace-Nette.Mail.html">Mail</a>
+						</li>
+				<li><a href="namespace-Nette.Neon.html">Neon</a>
+						</li>
+				<li><a href="namespace-Nette.PhpGenerator.html">PhpGenerator</a>
+						</li>
+				<li><a href="namespace-Nette.Reflection.html">Reflection</a>
+						</li>
+				<li><a href="namespace-Nette.Security.html">Security</a>
+						</li>
+				<li><a href="namespace-Nette.Templating.html">Templating</a>
+						</li>
+				<li><a href="namespace-Nette.Utils.html">Utils</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-NetteModule.html">NetteModule</a>
+						</li>
+				<li><a href="namespace-none.html">none</a>
+						</li>
+				<li><a href="namespace-Tracy.html">Tracy</a>
+						</li>
+			</ul>
+		</div>
+
+		<hr>
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="Latte.Compiler.html">Compiler</a></li>
+				<li><a href="Latte.Engine.html">Engine</a></li>
+				<li><a href="Latte.Helpers.html">Helpers</a></li>
+				<li><a href="Latte.HtmlNode.html">HtmlNode</a></li>
+				<li><a href="Latte.MacroNode.html">MacroNode</a></li>
+				<li><a href="Latte.MacroTokens.html">MacroTokens</a></li>
+				<li><a href="Latte.Object.html">Object</a></li>
+				<li><a href="Latte.Parser.html">Parser</a></li>
+				<li class="active"><a href="Latte.PhpWriter.html">PhpWriter</a></li>
+				<li><a href="Latte.Token.html">Token</a></li>
+			</ul>
+
+			<h3>Interfaces</h3>
+			<ul>
+				<li><a href="Latte.ILoader.html">ILoader</a></li>
+				<li><a href="Latte.IMacro.html">IMacro</a></li>
+			</ul>
+
+
+			<h3>Exceptions</h3>
+			<ul>
+				<li><a href="Latte.CompileException.html">CompileException</a></li>
+				<li><a href="Latte.RegexpException.html">RegexpException</a></li>
+				<li><a href="Latte.RuntimeException.html">RuntimeException</a></li>
+			</ul>
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form action="http://www.google.com/cse" id="search">
+		<input type="hidden" name="cx" value="011549293477758430224:vxofa9ufnhc">
+		<input type="hidden" name="ie" value="UTF-8">
+		<input type="text" name="q" class="text">
+		<input type="submit" value="Search">
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+				<a href="namespace-Latte.html" title="Summary of Latte"><span>Namespace</span></a>
+			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+			<li>
+				<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions"><span>Tree</span></a>
+			</li>
+			<li>
+				<a href="deprecated.html" title="List of deprecated elements"><span>Deprecated</span></a>
+			</li>
+		</ul>
+		<ul><li><a href="http://api.nette.org/releases"><span>Other releases</span></a></li><li><a href="http://nette.org"><span>Nette homepage</span></a></li></ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Class PhpWriter</h1>
+
+
+	<div class="description">
+	
+<p>PHP code generator helpers.</p>
+
+	</div>
+
+	<dl class="tree">
+		<dd style="padding-left:0px">
+			<a href="Latte.Object.html"><span>Latte\Object</span></a>
+			
+			
+			
+		</dd>
+		<dd style="padding-left:30px">
+			<img src="resources/inherit.png" alt="Extended by">
+<b><span>Latte\PhpWriter</span></b>			
+			
+			
+		</dd>
+	</dl>
+
+
+
+
+
+
+
+
+	<div class="info">
+		
+		
+		<b>Namespace:</b> <a href="namespace-Latte.html">Latte</a><br>
+		
+
+				<b>Author:</b>
+				David Grudl<br>
+		<b>Located at</b> <a href="source-Latte.PhpWriter.php.html#11-395" title="Go to source code">Latte/PhpWriter.php</a><br>
+	</div>
+
+
+
+	<table class="summary" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="using" id="_using">
+
+		<td class="attributes"><code>
+			 public static
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Latte.PhpWriter.html#_using">#</a>
+		<code><a href="source-Latte.PhpWriter.php.html#28-31" title="Go to source code">using</a>( <span><code><a href="Latte.MacroNode.html">Latte\MacroNode</a></code> <var>$node</var></span>, <span><code><a href="Latte.Compiler.html">Latte\Compiler</a></code> <var>$compiler</var> = <span class="php-keyword1">NULL</span></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="__construct" id="___construct">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Latte.PhpWriter.html#___construct">#</a>
+		<code><a href="source-Latte.PhpWriter.php.html#34-39" title="Go to source code">__construct</a>( <span><code><a href="Latte.MacroTokens.html">Latte\MacroTokens</a></code> <var>$tokens</var></span>, <span> <var>$modifiers</var> = <span class="php-keyword1">NULL</span></span>, <span><code><a href="Latte.Compiler.html">Latte\Compiler</a></code> <var>$compiler</var> = <span class="php-keyword1">NULL</span></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="write" id="_write">
+
+		<td class="attributes"><code>
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Latte.PhpWriter.html#_write">#</a>
+		<code><a href="source-Latte.PhpWriter.php.html#42-98" title="Go to source code">write</a>( <span>string <var>$mask</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Expands %node.word, %node.array, %node.args, %escape(), %modify(), %var,
+%raw, %word in code.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Expands %node.word, %node.array, %node.args, %escape(), %modify(), %var,
+%raw, %word in code.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$mask</var></dt>
+					<dd><code>string</code></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="formatModifiers" id="_formatModifiers">
+
+		<td class="attributes"><code>
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Latte.PhpWriter.html#_formatModifiers">#</a>
+		<code><a href="source-Latte.PhpWriter.php.html#101-113" title="Go to source code">formatModifiers</a>( <span>string <var>$var</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Formats modifiers calling.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Formats modifiers calling.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$var</var></dt>
+					<dd><code>string</code></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="formatArgs" id="_formatArgs">
+
+		<td class="attributes"><code>
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Latte.PhpWriter.html#_formatArgs">#</a>
+		<code><a href="source-Latte.PhpWriter.php.html#116-125" title="Go to source code">formatArgs</a>( <span><code><a href="Latte.MacroTokens.html">Latte\MacroTokens</a></code> <var>$tokens</var> = <span class="php-keyword1">NULL</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Formats macro arguments to PHP code. (It advances tokenizer to the end as a
+side effect.)</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Formats macro arguments to PHP code. (It advances tokenizer to the end as a
+side effect.)</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="formatArray" id="_formatArray">
+
+		<td class="attributes"><code>
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Latte.PhpWriter.html#_formatArray">#</a>
+		<code><a href="source-Latte.PhpWriter.php.html#128-138" title="Go to source code">formatArray</a>( <span><code><a href="Latte.MacroTokens.html">Latte\MacroTokens</a></code> <var>$tokens</var> = <span class="php-keyword1">NULL</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Formats macro arguments to PHP array. (It advances tokenizer to the end as a
+side effect.)</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Formats macro arguments to PHP array. (It advances tokenizer to the end as a
+side effect.)</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="formatWord" id="_formatWord">
+
+		<td class="attributes"><code>
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Latte.PhpWriter.html#_formatWord">#</a>
+		<code><a href="source-Latte.PhpWriter.php.html#141-151" title="Go to source code">formatWord</a>( <span>string <var>$s</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Formats parameter to PHP string.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Formats parameter to PHP string.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$s</var></dt>
+					<dd><code>string</code></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="preprocess" id="_preprocess">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="Latte.MacroTokens.html">Latte\MacroTokens</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Latte.PhpWriter.html#_preprocess">#</a>
+		<code><a href="source-Latte.PhpWriter.php.html#154-165" title="Go to source code">preprocess</a>( <span><code><a href="Latte.MacroTokens.html">Latte\MacroTokens</a></code> <var>$tokens</var> = <span class="php-keyword1">NULL</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Preprocessor for tokens. (It advances tokenizer to the end as a side
+effect.)</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Preprocessor for tokens. (It advances tokenizer to the end as a side
+effect.)</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="Latte.MacroTokens.html">Latte\MacroTokens</a></code></code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="removeCommentsFilter" id="_removeCommentsFilter">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="Latte.MacroTokens.html">Latte\MacroTokens</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Latte.PhpWriter.html#_removeCommentsFilter">#</a>
+		<code><a href="source-Latte.PhpWriter.php.html#168-181" title="Go to source code">removeCommentsFilter</a>( <span><code><a href="Latte.MacroTokens.html">Latte\MacroTokens</a></code> <var>$tokens</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Removes PHP comments.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Removes PHP comments.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="Latte.MacroTokens.html">Latte\MacroTokens</a></code></code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="shortTernaryFilter" id="_shortTernaryFilter">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="Latte.MacroTokens.html">Latte\MacroTokens</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Latte.PhpWriter.html#_shortTernaryFilter">#</a>
+		<code><a href="source-Latte.PhpWriter.php.html#184-210" title="Go to source code">shortTernaryFilter</a>( <span><code><a href="Latte.MacroTokens.html">Latte\MacroTokens</a></code> <var>$tokens</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Simplified ternary expressions without third part.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Simplified ternary expressions without third part.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="Latte.MacroTokens.html">Latte\MacroTokens</a></code></code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="shortArraysFilter" id="_shortArraysFilter">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="Latte.MacroTokens.html">Latte\MacroTokens</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Latte.PhpWriter.html#_shortArraysFilter">#</a>
+		<code><a href="source-Latte.PhpWriter.php.html#213-237" title="Go to source code">shortArraysFilter</a>( <span><code><a href="Latte.MacroTokens.html">Latte\MacroTokens</a></code> <var>$tokens</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Simplified array syntax [...]</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Simplified array syntax [...]</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="Latte.MacroTokens.html">Latte\MacroTokens</a></code></code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="expandFilter" id="_expandFilter">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="Latte.MacroTokens.html">Latte\MacroTokens</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Latte.PhpWriter.html#_expandFilter">#</a>
+		<code><a href="source-Latte.PhpWriter.php.html#240-264" title="Go to source code">expandFilter</a>( <span><code><a href="Latte.MacroTokens.html">Latte\MacroTokens</a></code> <var>$tokens</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Pseudocast (expand).</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Pseudocast (expand).</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="Latte.MacroTokens.html">Latte\MacroTokens</a></code></code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="quoteFilter" id="_quoteFilter">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="Latte.MacroTokens.html">Latte\MacroTokens</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Latte.PhpWriter.html#_quoteFilter">#</a>
+		<code><a href="source-Latte.PhpWriter.php.html#267-283" title="Go to source code">quoteFilter</a>( <span><code><a href="Latte.MacroTokens.html">Latte\MacroTokens</a></code> <var>$tokens</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Quotes symbols to strings.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Quotes symbols to strings.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="Latte.MacroTokens.html">Latte\MacroTokens</a></code></code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="modifiersFilter" id="_modifiersFilter">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="Latte.MacroTokens.html">Latte\MacroTokens</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Latte.PhpWriter.html#_modifiersFilter">#</a>
+		<code><a href="source-Latte.PhpWriter.php.html#286-334" title="Go to source code">modifiersFilter</a>( <span><code><a href="Latte.MacroTokens.html">Latte\MacroTokens</a></code> <var>$tokens</var></span>, <span>string <var>$var</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Formats modifiers calling.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Formats modifiers calling.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$tokens</var></dt>
+					<dd><code><code><a href="Latte.MacroTokens.html">Latte\MacroTokens</a></code></code></dd>
+					<dt><var>$var</var></dt>
+					<dd><code>string</code></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="Latte.MacroTokens.html">Latte\MacroTokens</a></code></code><br>
+				</div>
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><code><a href="Latte.CompileException.html">Latte\CompileException</a></code></code><br>
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="escapeFilter" id="_escapeFilter">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="Latte.MacroTokens.html">Latte\MacroTokens</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Latte.PhpWriter.html#_escapeFilter">#</a>
+		<code><a href="source-Latte.PhpWriter.php.html#337-393" title="Go to source code">escapeFilter</a>( <span><code><a href="Latte.MacroTokens.html">Latte\MacroTokens</a></code> <var>$tokens</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Escapes expression in tokens.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Escapes expression in tokens.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="Latte.MacroTokens.html">Latte\MacroTokens</a></code></code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+	<table class="summary inherited">
+	<caption>Methods inherited from <a href="Latte.Object.html#methods">Latte\Object</a></caption>
+	<tr>
+		<td><code>
+			<a href="Latte.Object.html#___call">__call()</a>, 
+			<a href="Latte.Object.html#___get">__get()</a>, 
+			<a href="Latte.Object.html#___isset">__isset()</a>, 
+			<a href="Latte.Object.html#___set">__set()</a>, 
+			<a href="Latte.Object.html#___unset">__unset()</a>
+		</code></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+	<div id="footer">
+		Nette 2.2.2 API API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+	</div>
+</div>
+</div>
+<script src="resources/combined.js?3630868369"></script>
+<script src="elementlist.js?2087501429"></script>
+</body>
+</html>

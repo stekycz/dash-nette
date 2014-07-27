@@ -1,0 +1,975 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="generator" content="ApiGen 2.8.0">
+
+	<title>Class Nette\Database\Table\GroupedSelection | Nette 2.2.2 API</title>
+
+	<link rel="stylesheet" href="resources/style.css?3746977979">
+	<link rel="search" type="application/opensearchdescription+xml" title="Nette 2.2.2 API" href="http://api.nette.org/2.0/opensearch.xml">
+
+
+<script src='http://files.nette.org/js/analytics.js'></script><script>
+_ga.create('UA-95238-14', '.nette.org');
+_gaq.push(['_trackPageview']);
+</script>
+</head>
+
+<body>
+<div id="left">
+	<div id="menu">
+
+		<div id="groups">
+			<h3>Namespaces</h3>
+			<ul>
+				<li><a href="namespace-Latte.html">Latte<span></span></a>
+						<ul>
+				<li><a href="namespace-Latte.Loaders.html">Loaders</a>
+						</li>
+				<li><a href="namespace-Latte.Macros.html">Macros</a>
+						</li>
+				<li><a href="namespace-Latte.Runtime.html">Runtime</a>
+						</li>
+							</ul></li>
+				<li class="active"><a href="namespace-Nette.html">Nette<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.Application.html">Application<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.Application.Responses.html">Responses</a>
+						</li>
+				<li><a href="namespace-Nette.Application.Routers.html">Routers</a>
+						</li>
+				<li><a href="namespace-Nette.Application.UI.html">UI</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.Bridges.html">Bridges<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.Bridges.ApplicationLatte.html">ApplicationLatte</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.ApplicationTracy.html">ApplicationTracy</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.CacheLatte.html">CacheLatte</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.DatabaseDI.html">DatabaseDI</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.DatabaseTracy.html">DatabaseTracy</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.DITracy.html">DITracy</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.FormsLatte.html">FormsLatte</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.Framework.html">Framework</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.HttpTracy.html">HttpTracy</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.SecurityTracy.html">SecurityTracy</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.Caching.html">Caching<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.Caching.Storages.html">Storages</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.ComponentModel.html">ComponentModel</a>
+						</li>
+				<li class="active"><a href="namespace-Nette.Database.html">Database<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.Database.Drivers.html">Drivers</a>
+						</li>
+				<li><a href="namespace-Nette.Database.Reflection.html">Reflection</a>
+						</li>
+				<li class="active"><a href="namespace-Nette.Database.Table.html">Table</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.DI.html">DI<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.DI.Config.html">Config<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.DI.Config.Adapters.html">Adapters</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.DI.Extensions.html">Extensions</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.Diagnostics.html">Diagnostics</a>
+						</li>
+				<li><a href="namespace-Nette.Forms.html">Forms<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.Forms.Controls.html">Controls</a>
+						</li>
+				<li><a href="namespace-Nette.Forms.Rendering.html">Rendering</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.Http.html">Http</a>
+						</li>
+				<li><a href="namespace-Nette.Iterators.html">Iterators</a>
+						</li>
+				<li><a href="namespace-Nette.Latte.html">Latte</a>
+						</li>
+				<li><a href="namespace-Nette.Loaders.html">Loaders</a>
+						</li>
+				<li><a href="namespace-Nette.Localization.html">Localization</a>
+						</li>
+				<li><a href="namespace-Nette.Mail.html">Mail</a>
+						</li>
+				<li><a href="namespace-Nette.Neon.html">Neon</a>
+						</li>
+				<li><a href="namespace-Nette.PhpGenerator.html">PhpGenerator</a>
+						</li>
+				<li><a href="namespace-Nette.Reflection.html">Reflection</a>
+						</li>
+				<li><a href="namespace-Nette.Security.html">Security</a>
+						</li>
+				<li><a href="namespace-Nette.Templating.html">Templating</a>
+						</li>
+				<li><a href="namespace-Nette.Utils.html">Utils</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-NetteModule.html">NetteModule</a>
+						</li>
+				<li><a href="namespace-none.html">none</a>
+						</li>
+				<li><a href="namespace-Tracy.html">Tracy</a>
+						</li>
+			</ul>
+		</div>
+
+		<hr>
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="Nette.Database.Table.ActiveRow.html">ActiveRow</a></li>
+				<li class="active"><a href="Nette.Database.Table.GroupedSelection.html">GroupedSelection</a></li>
+				<li><a href="Nette.Database.Table.Selection.html">Selection</a></li>
+				<li><a href="Nette.Database.Table.SqlBuilder.html">SqlBuilder</a></li>
+			</ul>
+
+			<h3>Interfaces</h3>
+			<ul>
+				<li><a href="Nette.Database.Table.IRow.html">IRow</a></li>
+				<li><a href="Nette.Database.Table.IRowContainer.html">IRowContainer</a></li>
+			</ul>
+
+
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form action="http://www.google.com/cse" id="search">
+		<input type="hidden" name="cx" value="011549293477758430224:vxofa9ufnhc">
+		<input type="hidden" name="ie" value="UTF-8">
+		<input type="text" name="q" class="text">
+		<input type="submit" value="Search">
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+				<a href="namespace-Nette.Database.Table.html" title="Summary of Nette\Database\Table"><span>Namespace</span></a>
+			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+			<li>
+				<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions"><span>Tree</span></a>
+			</li>
+			<li>
+				<a href="deprecated.html" title="List of deprecated elements"><span>Deprecated</span></a>
+			</li>
+		</ul>
+		<ul><li><a href="http://api.nette.org/releases"><span>Other releases</span></a></li><li><a href="http://nette.org"><span>Nette homepage</span></a></li></ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Class GroupedSelection</h1>
+
+
+	<div class="description">
+	
+<p>Representation of filtered table grouped by some column. GroupedSelection is
+based on the great library NotORM <a
+href="http://www.notorm.com">http://www.notorm.com</a> written by Jakub
+Vrana.</p>
+
+	</div>
+
+	<dl class="tree">
+		<dd style="padding-left:0px">
+			<a href="Nette.Object.html"><span>Nette\Object</span></a>
+			
+			
+			
+		</dd>
+		<dd style="padding-left:30px">
+			<img src="resources/inherit.png" alt="Extended by">
+			<a href="Nette.Database.Table.Selection.html"><span>Nette\Database\Table\Selection</span></a>
+			
+			 implements 
+				<a href="Iterator.html"><span>Iterator</span></a>, 
+			
+				<a href="Nette.Database.Table.IRowContainer.html"><span>Nette\Database\Table\IRowContainer</span></a>, 
+			
+				<a href="ArrayAccess.html"><span>ArrayAccess</span></a>, 
+			
+				<a href="Countable.html"><span>Countable</span></a>
+			
+			
+		</dd>
+		<dd style="padding-left:60px">
+			<img src="resources/inherit.png" alt="Extended by">
+<b><span>Nette\Database\Table\GroupedSelection</span></b>			
+			
+			
+		</dd>
+	</dl>
+
+
+
+
+
+
+
+
+	<div class="info">
+		
+		
+		<b>Namespace:</b> <a href="namespace-Nette.html">Nette</a>\<a href="namespace-Nette.Database.html">Database</a>\<a href="namespace-Nette.Database.Table.html">Table</a><br>
+		
+
+				<b>Author:</b>
+				Jakub Vrana<br>
+				<b>Author:</b>
+				Jan Skrasek<br>
+		<b>Located at</b> <a href="source-Database.Table.GroupedSelection.php.html#13-249" title="Go to source code">Database/Table/GroupedSelection.php</a><br>
+	</div>
+
+
+
+	<table class="summary" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="__construct" id="___construct">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Database.Table.GroupedSelection.html#___construct">#</a>
+		<code><a href="source-Database.Table.GroupedSelection.php.html#35-46" title="Go to source code">__construct</a>( <span><code><a href="Nette.Database.Table.Selection.html">Nette\Database\Table\Selection</a></code> <var>$refTable</var></span>, <span>string <var>$table</var></span>, <span>string <var>$column</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Creates filtered and grouped table representation.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Creates filtered and grouped table representation.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$refTable</var></dt>
+					<dd><code><code><a href="Nette.Database.Table.Selection.html">Nette\Database\Table\Selection</a></code></code><br>$refTable</dd>
+					<dt><var>$table</var></dt>
+					<dd><code>string</code><br>database table name</dd>
+					<dt><var>$column</var></dt>
+					<dd><code>string</code><br>joining column</dd>
+				</dl></div>
+
+
+
+
+				<h4>Overrides</h4>
+				<div class="list"><code><a href="Nette.Database.Table.Selection.html#___construct">Nette\Database\Table\Selection::__construct()</a></code></div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="select" id="_select">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="Nette.Database.Table.GroupedSelection.html">Nette\Database\Table\GroupedSelection</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Database.Table.GroupedSelection.html#_select">#</a>
+		<code><a href="source-Database.Table.GroupedSelection.php.html#62-69" title="Go to source code">select</a>( <span>string <var>$columns</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Adds select clause, more calls appends to the end.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Adds select clause, more calls appends to the end.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$columns</var></dt>
+					<dd><code>string</code><br>for example "column, MD5(column) AS column_md5"</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="Nette.Database.Table.GroupedSelection.html">Nette\Database\Table\GroupedSelection</a></code></code><br>
+				</div>
+
+
+
+				<h4>Overrides</h4>
+				<div class="list"><code><a href="Nette.Database.Table.Selection.html#_select">Nette\Database\Table\Selection::select()</a></code></div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="order" id="_order">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="Nette.Database.Table.GroupedSelection.html">Nette\Database\Table\GroupedSelection</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Database.Table.GroupedSelection.html#_order">#</a>
+		<code><a href="source-Database.Table.GroupedSelection.php.html#72-80" title="Go to source code">order</a>( <span>string <var>$columns</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Adds order clause, more calls appends to the end.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Adds order clause, more calls appends to the end.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$columns</var></dt>
+					<dd><code>string</code><br>for example 'column1, column2 DESC'</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="Nette.Database.Table.GroupedSelection.html">Nette\Database\Table\GroupedSelection</a></code></code><br>
+				</div>
+
+
+
+				<h4>Overrides</h4>
+				<div class="list"><code><a href="Nette.Database.Table.Selection.html#_order">Nette\Database\Table\Selection::order()</a></code></div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="aggregation" id="_aggregation">
+
+		<td class="attributes"><code>
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Database.Table.GroupedSelection.html#_aggregation">#</a>
+		<code><a href="source-Database.Table.GroupedSelection.php.html#86-109" title="Go to source code">aggregation</a>( <span>string <var>$function</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Executes aggregation function.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Executes aggregation function.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$function</var></dt>
+					<dd><code>string</code><br>select call in "FUNCTION(column)" format</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>
+				</div>
+
+
+
+				<h4>Overrides</h4>
+				<div class="list"><code><a href="Nette.Database.Table.Selection.html#_aggregation">Nette\Database\Table\Selection::aggregation()</a></code></div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="count" id="_count">
+
+		<td class="attributes"><code>
+			 public 
+			integer
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Database.Table.GroupedSelection.html#_count">#</a>
+		<code><a href="source-Database.Table.GroupedSelection.php.html#112-116" title="Go to source code">count</a>( <span>string <var>$column</var> = <span class="php-keyword1">NULL</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Counts number of rows.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Counts number of rows.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$column</var></dt>
+					<dd><code>string</code><br>if it is not provided returns count of result rows, otherwise runs new sql
+counting query</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>integer</code><br>
+				</div>
+
+
+
+				<h4>Overrides</h4>
+				<div class="list"><code><a href="Nette.Database.Table.Selection.html#_count">Nette\Database\Table\Selection::count()</a></code></div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="execute" id="_execute">
+
+		<td class="attributes"><code>
+			 protected 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Database.Table.GroupedSelection.html#_execute">#</a>
+		<code><a href="source-Database.Table.GroupedSelection.php.html#122-171" title="Go to source code">execute</a>( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+				<h4>Overrides</h4>
+				<div class="list"><code><a href="Nette.Database.Table.Selection.html#_execute">Nette\Database\Table\Selection::execute()</a></code></div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getRefTable" id="_getRefTable">
+
+		<td class="attributes"><code>
+			 protected 
+			<code><a href="Nette.Database.Table.Selection.html">Nette\Database\Table\Selection</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Database.Table.GroupedSelection.html#_getRefTable">#</a>
+		<code><a href="source-Database.Table.GroupedSelection.php.html#174-184" title="Go to source code">getRefTable</a>( <span> <var>&amp; $refPath</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Returns Selection parent for caching.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns Selection parent for caching.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="Nette.Database.Table.Selection.html">Nette\Database\Table\Selection</a></code></code><br>
+				</div>
+
+
+
+				<h4>Overrides</h4>
+				<div class="list"><code><a href="Nette.Database.Table.Selection.html#_getRefTable">Nette\Database\Table\Selection::getRefTable()</a></code></div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="loadRefCache" id="_loadRefCache">
+
+		<td class="attributes"><code>
+			 protected 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Database.Table.GroupedSelection.html#_loadRefCache">#</a>
+		<code><a href="source-Database.Table.GroupedSelection.php.html#187-200" title="Go to source code">loadRefCache</a>( )</code>
+
+		<div class="description short">
+			
+<p>Loads refCache references</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Loads refCache references</p>
+
+
+
+
+
+
+
+				<h4>Overrides</h4>
+				<div class="list"><code><a href="Nette.Database.Table.Selection.html#_loadRefCache">Nette\Database\Table\Selection::loadRefCache()</a></code></div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="insert" id="_insert">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="Nette.Database.Table.IRow.html">Nette\Database\Table\IRow</a></code>|integer|boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Database.Table.GroupedSelection.html#_insert">#</a>
+		<code><a href="source-Database.Table.GroupedSelection.php.html#206-221" title="Go to source code">insert</a>( <span>array|<code><a href="Traversable.html">Traversable</a></code>|<code><a href="Nette.Database.Table.Selection.html">Nette\Database\Table\Selection</a></code> <var>$data</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Inserts row in a table.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Inserts row in a table.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$data</var></dt>
+					<dd><code>array|<code><a href="Traversable.html">Traversable</a></code>|<code><a href="Nette.Database.Table.Selection.html">Nette\Database\Table\Selection</a></code></code><br>array($column =&gt; $value)|\Traversable|Selection for INSERT ... SELECT</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="Nette.Database.Table.IRow.html">Nette\Database\Table\IRow</a></code>|integer|boolean</code><br>Returns IRow or number of affected rows for Selection or table without primary
+key<br>
+				</div>
+
+
+
+				<h4>Overrides</h4>
+				<div class="list"><code><a href="Nette.Database.Table.Selection.html#_insert">Nette\Database\Table\Selection::insert()</a></code></div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="update" id="_update">
+
+		<td class="attributes"><code>
+			 public 
+			integer
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Database.Table.GroupedSelection.html#_update">#</a>
+		<code><a href="source-Database.Table.GroupedSelection.php.html#224-234" title="Go to source code">update</a>( <span>array|<code><a href="Traversable.html">Traversable</a></code> <var>$data</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Updates all rows in result set. Joins in UPDATE are supported only in
+MySQL</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Updates all rows in result set. Joins in UPDATE are supported only in
+MySQL</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$data</var></dt>
+					<dd><code>array|<code><a href="Traversable.html">Traversable</a></code></code><br>($column =&gt; $value)</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>integer</code><br>number of affected rows<br>
+				</div>
+
+
+
+				<h4>Overrides</h4>
+				<div class="list"><code><a href="Nette.Database.Table.Selection.html#_update">Nette\Database\Table\Selection::update()</a></code></div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="delete" id="_delete">
+
+		<td class="attributes"><code>
+			 public 
+			integer
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Database.Table.GroupedSelection.html#_delete">#</a>
+		<code><a href="source-Database.Table.GroupedSelection.php.html#237-247" title="Go to source code">delete</a>( )</code>
+
+		<div class="description short">
+			
+<p>Deletes all rows in result set.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Deletes all rows in result set.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>integer</code><br>number of affected rows<br>
+				</div>
+
+
+
+				<h4>Overrides</h4>
+				<div class="list"><code><a href="Nette.Database.Table.Selection.html#_delete">Nette\Database\Table\Selection::delete()</a></code></div>
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+	<table class="summary inherited">
+	<caption>Methods inherited from <a href="Nette.Database.Table.Selection.html#methods">Nette\Database\Table\Selection</a></caption>
+	<tr>
+		<td><code>
+			<a href="Nette.Database.Table.Selection.html#___clone">__clone()</a>, 
+			<a href="Nette.Database.Table.Selection.html#___destruct">__destruct()</a>, 
+			<a href="Nette.Database.Table.Selection.html#_createGroupedSelectionInstance">createGroupedSelectionInstance()</a>, 
+			<a href="Nette.Database.Table.Selection.html#_createRow">createRow()</a>, 
+			<a href="Nette.Database.Table.Selection.html#_createSelectionInstance">createSelectionInstance()</a>, 
+			<a href="Nette.Database.Table.Selection.html#_current">current()</a>, 
+			<a href="Nette.Database.Table.Selection.html#_emptyResultSet">emptyResultSet()</a>, 
+			<a href="Nette.Database.Table.Selection.html#_fetch">fetch()</a>, 
+			<a href="Nette.Database.Table.Selection.html#_fetchAll">fetchAll()</a>, 
+			<a href="Nette.Database.Table.Selection.html#_fetchPairs">fetchPairs()</a>, 
+			<a href="Nette.Database.Table.Selection.html#_get">get()</a>, 
+			<a href="Nette.Database.Table.Selection.html#_getConnection">getConnection()</a>, 
+			<a href="Nette.Database.Table.Selection.html#_getDataRefreshed">getDataRefreshed()</a>, 
+			<a href="Nette.Database.Table.Selection.html#_getDatabaseReflection">getDatabaseReflection()</a>, 
+			<a href="Nette.Database.Table.Selection.html#_getGeneralCacheKey">getGeneralCacheKey()</a>, 
+			<a href="Nette.Database.Table.Selection.html#_getName">getName()</a>, 
+			<a href="Nette.Database.Table.Selection.html#_getPrimary">getPrimary()</a>, 
+			<a href="Nette.Database.Table.Selection.html#_getPrimarySequence">getPrimarySequence()</a>, 
+			<a href="Nette.Database.Table.Selection.html#_getReferencedTable">getReferencedTable()</a>, 
+			<a href="Nette.Database.Table.Selection.html#_getReferencingTable">getReferencingTable()</a>, 
+			<a href="Nette.Database.Table.Selection.html#_getSpecificCacheKey">getSpecificCacheKey()</a>, 
+			<a href="Nette.Database.Table.Selection.html#_getSql">getSql()</a>, 
+			<a href="Nette.Database.Table.Selection.html#_group">group()</a>, 
+			<a href="Nette.Database.Table.Selection.html#_having">having()</a>, 
+			<a href="Nette.Database.Table.Selection.html#_key">key()</a>, 
+			<a href="Nette.Database.Table.Selection.html#_limit">limit()</a>, 
+			<a href="Nette.Database.Table.Selection.html#_max">max()</a>, 
+			<a href="Nette.Database.Table.Selection.html#_min">min()</a>, 
+			<a href="Nette.Database.Table.Selection.html#_next">next()</a>, 
+			<a href="Nette.Database.Table.Selection.html#_offsetExists">offsetExists()</a>, 
+			<a href="Nette.Database.Table.Selection.html#_offsetGet">offsetGet()</a>, 
+			<a href="Nette.Database.Table.Selection.html#_offsetSet">offsetSet()</a>, 
+			<a href="Nette.Database.Table.Selection.html#_offsetUnset">offsetUnset()</a>, 
+			<a href="Nette.Database.Table.Selection.html#_page">page()</a>, 
+			<a href="Nette.Database.Table.Selection.html#_query">query()</a>, 
+			<a href="Nette.Database.Table.Selection.html#_rewind">rewind()</a>, 
+			<a href="Nette.Database.Table.Selection.html#_saveCacheState">saveCacheState()</a>, 
+			<a href="Nette.Database.Table.Selection.html#_setPrimarySequence">setPrimarySequence()</a>, 
+			<a href="Nette.Database.Table.Selection.html#_sum">sum()</a>, 
+			<a href="Nette.Database.Table.Selection.html#_valid">valid()</a>, 
+			<a href="Nette.Database.Table.Selection.html#_where">where()</a>, 
+			<a href="Nette.Database.Table.Selection.html#_wherePrimary">wherePrimary()</a>
+		</code></td>
+	</tr>
+	</table>
+	<table class="summary inherited">
+	<caption>Methods inherited from <a href="Nette.Object.html#methods">Nette\Object</a></caption>
+	<tr>
+		<td><code>
+			<a href="Nette.Object.html#___call">__call()</a>, 
+			<a href="Nette.Object.html#___callStatic">__callStatic()</a>, 
+			<a href="Nette.Object.html#___get">__get()</a>, 
+			<a href="Nette.Object.html#___isset">__isset()</a>, 
+			<a href="Nette.Object.html#___set">__set()</a>, 
+			<a href="Nette.Object.html#___unset">__unset()</a>, 
+			<a href="Nette.Object.html#_extensionMethod">extensionMethod()</a>, 
+			<a href="Nette.Object.html#_getReflection">getReflection()</a>
+		</code></td>
+	</tr>
+	</table>
+
+
+
+	<table class="summary inherited">
+	<caption>Magic methods inherited from <a href="Nette.Database.Table.IRowContainer.html#methods">Nette\Database\Table\IRowContainer</a></caption>
+	<tr>
+		<td><code>
+			<a href="Nette.Database.Table.IRowContainer.html#m_fetch">fetch()</a>
+		</code></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+	<table class="summary" id="properties">
+	<caption>Properties summary</caption>
+	<tr data-order="refTable" id="$refTable">
+		<td class="attributes"><code>
+			protected  
+			<code><a href="Nette.Database.Table.Selection.html">Nette\Database\Table\Selection</a></code>
+		</code></td>
+
+		<td class="name">
+				<a href="source-Database.Table.GroupedSelection.php.html#22-23" title="Go to source code"><var>$refTable</var></a>
+		</td>
+		<td class="value"><code></code></td>
+		<td class="description"><div>
+			<a href="Nette.Database.Table.GroupedSelection.html#$refTable" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>referenced table</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>referenced table</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="refCacheCurrent" id="$refCacheCurrent">
+		<td class="attributes"><code>
+			protected  
+			mixed
+		</code></td>
+
+		<td class="name">
+				<a href="source-Database.Table.GroupedSelection.php.html#25-26" title="Go to source code"><var>$refCacheCurrent</var></a>
+		</td>
+		<td class="value"><code></code></td>
+		<td class="description"><div>
+			<a href="Nette.Database.Table.GroupedSelection.html#$refCacheCurrent" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>current assigned referencing array</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>current assigned referencing array</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="column" id="$column">
+		<td class="attributes"><code>
+			protected  
+			string
+		</code></td>
+
+		<td class="name">
+				<a href="source-Database.Table.GroupedSelection.php.html#28-29" title="Go to source code"><var>$column</var></a>
+		</td>
+		<td class="value"><code></code></td>
+		<td class="description"><div>
+			<a href="Nette.Database.Table.GroupedSelection.html#$column" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>grouping column name</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>grouping column name</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="active" id="$active">
+		<td class="attributes"><code>
+			protected  
+			integer
+		</code></td>
+
+		<td class="name">
+				<a href="source-Database.Table.GroupedSelection.php.html#31-32" title="Go to source code"><var>$active</var></a>
+		</td>
+		<td class="value"><code></code></td>
+		<td class="description"><div>
+			<a href="Nette.Database.Table.GroupedSelection.html#$active" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>primary key</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>primary key</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	</table>
+
+	<table class="summary inherited">
+	<caption>Properties inherited from <a href="Nette.Database.Table.Selection.html#properties">Nette\Database\Table\Selection</a></caption>
+	<tr>
+		<td><code>
+			<a href="Nette.Database.Table.Selection.html#$accessedColumns"><var>$accessedColumns</var></a>, 
+			<a href="Nette.Database.Table.Selection.html#$aggregation"><var>$aggregation</var></a>, 
+			<a href="Nette.Database.Table.Selection.html#$cache"><var>$cache</var></a>, 
+			<a href="Nette.Database.Table.Selection.html#$connection"><var>$connection</var></a>, 
+			<a href="Nette.Database.Table.Selection.html#$data"><var>$data</var></a>, 
+			<a href="Nette.Database.Table.Selection.html#$dataRefreshed"><var>$dataRefreshed</var></a>, 
+			<a href="Nette.Database.Table.Selection.html#$generalCacheKey"><var>$generalCacheKey</var></a>, 
+			<a href="Nette.Database.Table.Selection.html#$globalRefCache"><var>$globalRefCache</var></a>, 
+			<a href="Nette.Database.Table.Selection.html#$keys"><var>$keys</var></a>, 
+			<a href="Nette.Database.Table.Selection.html#$name"><var>$name</var></a>, 
+			<a href="Nette.Database.Table.Selection.html#$observeCache"><var>$observeCache</var></a>, 
+			<a href="Nette.Database.Table.Selection.html#$previousAccessedColumns"><var>$previousAccessedColumns</var></a>, 
+			<a href="Nette.Database.Table.Selection.html#$primary"><var>$primary</var></a>, 
+			<a href="Nette.Database.Table.Selection.html#$primarySequence"><var>$primarySequence</var></a>, 
+			<a href="Nette.Database.Table.Selection.html#$refCache"><var>$refCache</var></a>, 
+			<a href="Nette.Database.Table.Selection.html#$reflection"><var>$reflection</var></a>, 
+			<a href="Nette.Database.Table.Selection.html#$rows"><var>$rows</var></a>, 
+			<a href="Nette.Database.Table.Selection.html#$specificCacheKey"><var>$specificCacheKey</var></a>, 
+			<a href="Nette.Database.Table.Selection.html#$sqlBuilder"><var>$sqlBuilder</var></a>
+		</code></td>
+	</tr>
+	</table>
+
+
+
+	<table class="summary inherited">
+	<caption>Magic properties inherited from <a href="Nette.Database.Table.Selection.html#properties">Nette\Database\Table\Selection</a></caption>
+	<tr>
+		<td><code>
+			<a href="Nette.Database.Table.Selection.html#m$sql"><var>$sql</var></a>
+		</code></td>
+	</tr>
+	</table>
+	<table class="summary inherited">
+	<caption>Magic properties inherited from <a href="Nette.Object.html#properties">Nette\Object</a></caption>
+	<tr>
+		<td><code>
+			<a href="Nette.Object.html#m$reflection"><var>$reflection</var></a>
+		</code></td>
+	</tr>
+	</table>
+
+
+</div>
+
+	<div id="footer">
+		Nette 2.2.2 API API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+	</div>
+</div>
+</div>
+<script src="resources/combined.js?3630868369"></script>
+<script src="elementlist.js?2087501429"></script>
+</body>
+</html>

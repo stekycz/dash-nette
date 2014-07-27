@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="generator" content="ApiGen 2.8.0">
+
+	<title>Class DateTimeZone | Nette 2.2.2 API</title>
+
+	<link rel="stylesheet" href="resources/style.css?3746977979">
+	<link rel="search" type="application/opensearchdescription+xml" title="Nette 2.2.2 API" href="http://api.nette.org/2.0/opensearch.xml">
+
+
+<script src='http://files.nette.org/js/analytics.js'></script><script>
+_ga.create('UA-95238-14', '.nette.org');
+_gaq.push(['_trackPageview']);
+</script>
+</head>
+
+<body>
+<div id="left">
+	<div id="menu">
+
+		<div id="groups">
+			<h3>Namespaces</h3>
+			<ul>
+				<li><a href="namespace-Latte.html">Latte<span></span></a>
+						<ul>
+				<li><a href="namespace-Latte.Loaders.html">Loaders</a>
+						</li>
+				<li><a href="namespace-Latte.Macros.html">Macros</a>
+						</li>
+				<li><a href="namespace-Latte.Runtime.html">Runtime</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.html">Nette<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.Application.html">Application<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.Application.Responses.html">Responses</a>
+						</li>
+				<li><a href="namespace-Nette.Application.Routers.html">Routers</a>
+						</li>
+				<li><a href="namespace-Nette.Application.UI.html">UI</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.Bridges.html">Bridges<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.Bridges.ApplicationLatte.html">ApplicationLatte</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.ApplicationTracy.html">ApplicationTracy</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.CacheLatte.html">CacheLatte</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.DatabaseDI.html">DatabaseDI</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.DatabaseTracy.html">DatabaseTracy</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.DITracy.html">DITracy</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.FormsLatte.html">FormsLatte</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.Framework.html">Framework</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.HttpTracy.html">HttpTracy</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.SecurityTracy.html">SecurityTracy</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.Caching.html">Caching<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.Caching.Storages.html">Storages</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.ComponentModel.html">ComponentModel</a>
+						</li>
+				<li><a href="namespace-Nette.Database.html">Database<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.Database.Drivers.html">Drivers</a>
+						</li>
+				<li><a href="namespace-Nette.Database.Reflection.html">Reflection</a>
+						</li>
+				<li><a href="namespace-Nette.Database.Table.html">Table</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.DI.html">DI<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.DI.Config.html">Config<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.DI.Config.Adapters.html">Adapters</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.DI.Extensions.html">Extensions</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.Diagnostics.html">Diagnostics</a>
+						</li>
+				<li><a href="namespace-Nette.Forms.html">Forms<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.Forms.Controls.html">Controls</a>
+						</li>
+				<li><a href="namespace-Nette.Forms.Rendering.html">Rendering</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.Http.html">Http</a>
+						</li>
+				<li><a href="namespace-Nette.Iterators.html">Iterators</a>
+						</li>
+				<li><a href="namespace-Nette.Latte.html">Latte</a>
+						</li>
+				<li><a href="namespace-Nette.Loaders.html">Loaders</a>
+						</li>
+				<li><a href="namespace-Nette.Localization.html">Localization</a>
+						</li>
+				<li><a href="namespace-Nette.Mail.html">Mail</a>
+						</li>
+				<li><a href="namespace-Nette.Neon.html">Neon</a>
+						</li>
+				<li><a href="namespace-Nette.PhpGenerator.html">PhpGenerator</a>
+						</li>
+				<li><a href="namespace-Nette.Reflection.html">Reflection</a>
+						</li>
+				<li><a href="namespace-Nette.Security.html">Security</a>
+						</li>
+				<li><a href="namespace-Nette.Templating.html">Templating</a>
+						</li>
+				<li><a href="namespace-Nette.Utils.html">Utils</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-NetteModule.html">NetteModule</a>
+						</li>
+				<li><a href="namespace-none.html">none</a>
+						</li>
+				<li class="active"><a href="namespace-PHP.html">PHP</a>
+						</li>
+				<li><a href="namespace-Tracy.html">Tracy</a>
+						</li>
+			</ul>
+		</div>
+
+		<hr>
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+			</ul>
+
+			<h3>Interfaces</h3>
+			<ul>
+			</ul>
+
+
+			<h3>Exceptions</h3>
+			<ul>
+			</ul>
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form action="http://www.google.com/cse" id="search">
+		<input type="hidden" name="cx" value="011549293477758430224:vxofa9ufnhc">
+		<input type="hidden" name="ie" value="UTF-8">
+		<input type="text" name="q" class="text">
+		<input type="submit" value="Search">
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+				<a href="namespace-PHP.html" title="Summary of PHP"><span>Namespace</span></a>
+			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+			<li>
+				<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions"><span>Tree</span></a>
+			</li>
+			<li>
+				<a href="deprecated.html" title="List of deprecated elements"><span>Deprecated</span></a>
+			</li>
+		</ul>
+		<ul><li><a href="http://api.nette.org/releases"><span>Other releases</span></a></li><li><a href="http://nette.org"><span>Nette homepage</span></a></li></ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Class DateTimeZone</h1>
+
+
+
+
+
+
+
+
+
+
+
+	<div class="info">
+		
+		<b>PHP Extension:</b> <a href="http://php.net/manual/book.datetime.php" title="Go to PHP documentation">Date</a><br>
+		
+		
+
+		<b>Documented at</b> <a href="http://php.net/manual/class.datetimezone.php" title="Go to PHP documentation">php.net</a><br>
+	</div>
+
+
+
+	<table class="summary" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="__construct" id="___construct">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="DateTimeZone.html#___construct">#</a>
+		<code><a href="http://php.net/manual/datetimezone.construct.php" title="Go to PHP documentation">__construct</a>( <span> <var>$timezone</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getName" id="_getName">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="DateTimeZone.html#_getName">#</a>
+		<code><a href="http://php.net/manual/datetimezone.getname.php" title="Go to PHP documentation">getName</a>( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getOffset" id="_getOffset">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="DateTimeZone.html#_getOffset">#</a>
+		<code><a href="http://php.net/manual/datetimezone.getoffset.php" title="Go to PHP documentation">getOffset</a>( <span> <var>$datetime</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getTransitions" id="_getTransitions">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="DateTimeZone.html#_getTransitions">#</a>
+		<code><a href="http://php.net/manual/datetimezone.gettransitions.php" title="Go to PHP documentation">getTransitions</a>( <span> <var>$timestamp_begin</var></span>, <span> <var>$timestamp_end</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getLocation" id="_getLocation">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="DateTimeZone.html#_getLocation">#</a>
+		<code><a href="http://php.net/manual/datetimezone.getlocation.php" title="Go to PHP documentation">getLocation</a>( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="listAbbreviations" id="_listAbbreviations">
+
+		<td class="attributes"><code>
+			 public static
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="DateTimeZone.html#_listAbbreviations">#</a>
+		<code><a href="http://php.net/manual/datetimezone.listabbreviations.php" title="Go to PHP documentation">listAbbreviations</a>( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="listIdentifiers" id="_listIdentifiers">
+
+		<td class="attributes"><code>
+			 public static
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="DateTimeZone.html#_listIdentifiers">#</a>
+		<code><a href="http://php.net/manual/datetimezone.listidentifiers.php" title="Go to PHP documentation">listIdentifiers</a>( <span> <var>$what</var></span>, <span> <var>$country</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+	<table class="summary" id="constants">
+	<caption>Constants summary</caption>
+	<tr data-order="AFRICA" id="AFRICA">
+
+		<td class="attributes"><code>integer</code></td>
+		<td class="name"><code>
+				<a href="http://php.net/manual/class.datetimezone.php#datetimezone.constants.africa" title="Go to PHP documentation"><b>AFRICA</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-num">1</span></code></td>
+		<td class="description"><div>
+			<a href="DateTimeZone.html#AFRICA" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="AMERICA" id="AMERICA">
+
+		<td class="attributes"><code>integer</code></td>
+		<td class="name"><code>
+				<a href="http://php.net/manual/class.datetimezone.php#datetimezone.constants.america" title="Go to PHP documentation"><b>AMERICA</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-num">2</span></code></td>
+		<td class="description"><div>
+			<a href="DateTimeZone.html#AMERICA" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="ANTARCTICA" id="ANTARCTICA">
+
+		<td class="attributes"><code>integer</code></td>
+		<td class="name"><code>
+				<a href="http://php.net/manual/class.datetimezone.php#datetimezone.constants.antarctica" title="Go to PHP documentation"><b>ANTARCTICA</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-num">4</span></code></td>
+		<td class="description"><div>
+			<a href="DateTimeZone.html#ANTARCTICA" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="ARCTIC" id="ARCTIC">
+
+		<td class="attributes"><code>integer</code></td>
+		<td class="name"><code>
+				<a href="http://php.net/manual/class.datetimezone.php#datetimezone.constants.arctic" title="Go to PHP documentation"><b>ARCTIC</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-num">8</span></code></td>
+		<td class="description"><div>
+			<a href="DateTimeZone.html#ARCTIC" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="ASIA" id="ASIA">
+
+		<td class="attributes"><code>integer</code></td>
+		<td class="name"><code>
+				<a href="http://php.net/manual/class.datetimezone.php#datetimezone.constants.asia" title="Go to PHP documentation"><b>ASIA</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-num">16</span></code></td>
+		<td class="description"><div>
+			<a href="DateTimeZone.html#ASIA" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="ATLANTIC" id="ATLANTIC">
+
+		<td class="attributes"><code>integer</code></td>
+		<td class="name"><code>
+				<a href="http://php.net/manual/class.datetimezone.php#datetimezone.constants.atlantic" title="Go to PHP documentation"><b>ATLANTIC</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-num">32</span></code></td>
+		<td class="description"><div>
+			<a href="DateTimeZone.html#ATLANTIC" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="AUSTRALIA" id="AUSTRALIA">
+
+		<td class="attributes"><code>integer</code></td>
+		<td class="name"><code>
+				<a href="http://php.net/manual/class.datetimezone.php#datetimezone.constants.australia" title="Go to PHP documentation"><b>AUSTRALIA</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-num">64</span></code></td>
+		<td class="description"><div>
+			<a href="DateTimeZone.html#AUSTRALIA" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="EUROPE" id="EUROPE">
+
+		<td class="attributes"><code>integer</code></td>
+		<td class="name"><code>
+				<a href="http://php.net/manual/class.datetimezone.php#datetimezone.constants.europe" title="Go to PHP documentation"><b>EUROPE</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-num">128</span></code></td>
+		<td class="description"><div>
+			<a href="DateTimeZone.html#EUROPE" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="INDIAN" id="INDIAN">
+
+		<td class="attributes"><code>integer</code></td>
+		<td class="name"><code>
+				<a href="http://php.net/manual/class.datetimezone.php#datetimezone.constants.indian" title="Go to PHP documentation"><b>INDIAN</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-num">256</span></code></td>
+		<td class="description"><div>
+			<a href="DateTimeZone.html#INDIAN" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="PACIFIC" id="PACIFIC">
+
+		<td class="attributes"><code>integer</code></td>
+		<td class="name"><code>
+				<a href="http://php.net/manual/class.datetimezone.php#datetimezone.constants.pacific" title="Go to PHP documentation"><b>PACIFIC</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-num">512</span></code></td>
+		<td class="description"><div>
+			<a href="DateTimeZone.html#PACIFIC" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="UTC" id="UTC">
+
+		<td class="attributes"><code>integer</code></td>
+		<td class="name"><code>
+				<a href="http://php.net/manual/class.datetimezone.php#datetimezone.constants.utc" title="Go to PHP documentation"><b>UTC</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-num">1024</span></code></td>
+		<td class="description"><div>
+			<a href="DateTimeZone.html#UTC" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="ALL" id="ALL">
+
+		<td class="attributes"><code>integer</code></td>
+		<td class="name"><code>
+				<a href="http://php.net/manual/class.datetimezone.php#datetimezone.constants.all" title="Go to PHP documentation"><b>ALL</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-num">2047</span></code></td>
+		<td class="description"><div>
+			<a href="DateTimeZone.html#ALL" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="ALL_WITH_BC" id="ALL_WITH_BC">
+
+		<td class="attributes"><code>integer</code></td>
+		<td class="name"><code>
+				<a href="http://php.net/manual/class.datetimezone.php#datetimezone.constants.all-with-bc" title="Go to PHP documentation"><b>ALL_WITH_BC</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-num">4095</span></code></td>
+		<td class="description"><div>
+			<a href="DateTimeZone.html#ALL_WITH_BC" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="PER_COUNTRY" id="PER_COUNTRY">
+
+		<td class="attributes"><code>integer</code></td>
+		<td class="name"><code>
+				<a href="http://php.net/manual/class.datetimezone.php#datetimezone.constants.per-country" title="Go to PHP documentation"><b>PER_COUNTRY</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-num">4096</span></code></td>
+		<td class="description"><div>
+			<a href="DateTimeZone.html#PER_COUNTRY" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+
+
+</div>
+
+	<div id="footer">
+		Nette 2.2.2 API API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+	</div>
+</div>
+</div>
+<script src="resources/combined.js?3630868369"></script>
+<script src="elementlist.js?2087501429"></script>
+</body>
+</html>

@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="generator" content="ApiGen 2.8.0">
+
+	<title>Class Tracy\Dumper | Nette 2.2.2 API</title>
+
+	<link rel="stylesheet" href="resources/style.css?3746977979">
+	<link rel="search" type="application/opensearchdescription+xml" title="Nette 2.2.2 API" href="http://api.nette.org/2.0/opensearch.xml">
+
+
+<script src='http://files.nette.org/js/analytics.js'></script><script>
+_ga.create('UA-95238-14', '.nette.org');
+_gaq.push(['_trackPageview']);
+</script>
+</head>
+
+<body>
+<div id="left">
+	<div id="menu">
+
+		<div id="groups">
+			<h3>Namespaces</h3>
+			<ul>
+				<li><a href="namespace-Latte.html">Latte<span></span></a>
+						<ul>
+				<li><a href="namespace-Latte.Loaders.html">Loaders</a>
+						</li>
+				<li><a href="namespace-Latte.Macros.html">Macros</a>
+						</li>
+				<li><a href="namespace-Latte.Runtime.html">Runtime</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.html">Nette<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.Application.html">Application<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.Application.Responses.html">Responses</a>
+						</li>
+				<li><a href="namespace-Nette.Application.Routers.html">Routers</a>
+						</li>
+				<li><a href="namespace-Nette.Application.UI.html">UI</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.Bridges.html">Bridges<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.Bridges.ApplicationLatte.html">ApplicationLatte</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.ApplicationTracy.html">ApplicationTracy</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.CacheLatte.html">CacheLatte</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.DatabaseDI.html">DatabaseDI</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.DatabaseTracy.html">DatabaseTracy</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.DITracy.html">DITracy</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.FormsLatte.html">FormsLatte</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.Framework.html">Framework</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.HttpTracy.html">HttpTracy</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.SecurityTracy.html">SecurityTracy</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.Caching.html">Caching<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.Caching.Storages.html">Storages</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.ComponentModel.html">ComponentModel</a>
+						</li>
+				<li><a href="namespace-Nette.Database.html">Database<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.Database.Drivers.html">Drivers</a>
+						</li>
+				<li><a href="namespace-Nette.Database.Reflection.html">Reflection</a>
+						</li>
+				<li><a href="namespace-Nette.Database.Table.html">Table</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.DI.html">DI<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.DI.Config.html">Config<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.DI.Config.Adapters.html">Adapters</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.DI.Extensions.html">Extensions</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.Diagnostics.html">Diagnostics</a>
+						</li>
+				<li><a href="namespace-Nette.Forms.html">Forms<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.Forms.Controls.html">Controls</a>
+						</li>
+				<li><a href="namespace-Nette.Forms.Rendering.html">Rendering</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.Http.html">Http</a>
+						</li>
+				<li><a href="namespace-Nette.Iterators.html">Iterators</a>
+						</li>
+				<li><a href="namespace-Nette.Latte.html">Latte</a>
+						</li>
+				<li><a href="namespace-Nette.Loaders.html">Loaders</a>
+						</li>
+				<li><a href="namespace-Nette.Localization.html">Localization</a>
+						</li>
+				<li><a href="namespace-Nette.Mail.html">Mail</a>
+						</li>
+				<li><a href="namespace-Nette.Neon.html">Neon</a>
+						</li>
+				<li><a href="namespace-Nette.PhpGenerator.html">PhpGenerator</a>
+						</li>
+				<li><a href="namespace-Nette.Reflection.html">Reflection</a>
+						</li>
+				<li><a href="namespace-Nette.Security.html">Security</a>
+						</li>
+				<li><a href="namespace-Nette.Templating.html">Templating</a>
+						</li>
+				<li><a href="namespace-Nette.Utils.html">Utils</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-NetteModule.html">NetteModule</a>
+						</li>
+				<li><a href="namespace-none.html">none</a>
+						</li>
+				<li class="active"><a href="namespace-Tracy.html">Tracy</a>
+						</li>
+			</ul>
+		</div>
+
+		<hr>
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="Tracy.Bar.html">Bar</a></li>
+				<li><a href="Tracy.BlueScreen.html">BlueScreen</a></li>
+				<li><a href="Tracy.Debugger.html">Debugger</a></li>
+				<li class="active"><a href="Tracy.Dumper.html">Dumper</a></li>
+				<li><a href="Tracy.FireLogger.html">FireLogger</a></li>
+				<li><a href="Tracy.Helpers.html">Helpers</a></li>
+				<li><a href="Tracy.Logger.html">Logger</a></li>
+				<li><a href="Tracy.OutputDebugger.html">OutputDebugger</a></li>
+			</ul>
+
+			<h3>Interfaces</h3>
+			<ul>
+				<li><a href="Tracy.IBarPanel.html">IBarPanel</a></li>
+			</ul>
+
+
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form action="http://www.google.com/cse" id="search">
+		<input type="hidden" name="cx" value="011549293477758430224:vxofa9ufnhc">
+		<input type="hidden" name="ie" value="UTF-8">
+		<input type="text" name="q" class="text">
+		<input type="submit" value="Search">
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+				<a href="namespace-Tracy.html" title="Summary of Tracy"><span>Namespace</span></a>
+			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+			<li>
+				<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions"><span>Tree</span></a>
+			</li>
+			<li>
+				<a href="deprecated.html" title="List of deprecated elements"><span>Deprecated</span></a>
+			</li>
+		</ul>
+		<ul><li><a href="http://api.nette.org/releases"><span>Other releases</span></a></li><li><a href="http://nette.org"><span>Nette homepage</span></a></li></ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Class Dumper</h1>
+
+
+	<div class="description">
+	
+<p>Dumps a variable.</p>
+
+	</div>
+
+
+
+
+
+
+
+
+
+	<div class="info">
+		
+		
+		<b>Namespace:</b> <a href="namespace-Tracy.html">Tracy</a><br>
+		
+
+				<b>Author:</b>
+				David Grudl<br>
+		<b>Located at</b> <a href="source-Tracy.Dumper.php.html#13-337" title="Go to source code">Tracy/Dumper.php</a><br>
+	</div>
+
+
+
+	<table class="summary" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="dump" id="_dump">
+
+		<td class="attributes"><code>
+			 public static
+			mixed
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Tracy.Dumper.html#_dump">#</a>
+		<code><a href="source-Tracy.Dumper.php.html#48-62" title="Go to source code">dump</a>( <span> <var>$var</var></span>, <span>array <var>$options</var> = <span class="php-keyword1">NULL</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Dumps variable to the output.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Dumps variable to the output.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>mixed</code><br>variable<br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="toHtml" id="_toHtml">
+
+		<td class="attributes"><code>
+			 public static
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Tracy.Dumper.html#_toHtml">#</a>
+		<code><a href="source-Tracy.Dumper.php.html#65-84" title="Go to source code">toHtml</a>( <span> <var>$var</var></span>, <span>array <var>$options</var> = <span class="php-keyword1">NULL</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Dumps variable to HTML.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Dumps variable to HTML.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="toText" id="_toText">
+
+		<td class="attributes"><code>
+			 public static
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Tracy.Dumper.html#_toText">#</a>
+		<code><a href="source-Tracy.Dumper.php.html#87-94" title="Go to source code">toText</a>( <span> <var>$var</var></span>, <span>array <var>$options</var> = <span class="php-keyword1">NULL</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Dumps variable to plain text.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Dumps variable to plain text.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="toTerminal" id="_toTerminal">
+
+		<td class="attributes"><code>
+			 public static
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Tracy.Dumper.html#_toTerminal">#</a>
+		<code><a href="source-Tracy.Dumper.php.html#97-106" title="Go to source code">toTerminal</a>( <span> <var>$var</var></span>, <span>array <var>$options</var> = <span class="php-keyword1">NULL</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Dumps variable to x-terminal.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Dumps variable to x-terminal.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+	<table class="summary" id="constants">
+	<caption>Constants summary</caption>
+	<tr data-order="DEPTH" id="DEPTH">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name"><code>
+				<a href="source-Tracy.Dumper.php.html#20" title="Go to source code"><b>DEPTH</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-quote">'depth'</span></code></td>
+		<td class="description"><div>
+			<a href="Tracy.Dumper.html#DEPTH" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="TRUNCATE" id="TRUNCATE">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name"><code>
+				<a href="source-Tracy.Dumper.php.html#21" title="Go to source code"><b>TRUNCATE</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-quote">'truncate'</span></code></td>
+		<td class="description"><div>
+			<a href="Tracy.Dumper.html#TRUNCATE" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="COLLAPSE" id="COLLAPSE">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name"><code>
+				<a href="source-Tracy.Dumper.php.html#22" title="Go to source code"><b>COLLAPSE</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-quote">'collapse'</span></code></td>
+		<td class="description"><div>
+			<a href="Tracy.Dumper.html#COLLAPSE" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="COLLAPSE_COUNT" id="COLLAPSE_COUNT">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name"><code>
+				<a href="source-Tracy.Dumper.php.html#23" title="Go to source code"><b>COLLAPSE_COUNT</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-quote">'collapsecount'</span></code></td>
+		<td class="description"><div>
+			<a href="Tracy.Dumper.html#COLLAPSE_COUNT" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="LOCATION" id="LOCATION">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name"><code>
+				<a href="source-Tracy.Dumper.php.html#24" title="Go to source code"><b>LOCATION</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-quote">'location'</span></code></td>
+		<td class="description"><div>
+			<a href="Tracy.Dumper.html#LOCATION" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+	<table class="summary" id="properties">
+	<caption>Properties summary</caption>
+	<tr data-order="terminalColors" id="$terminalColors">
+		<td class="attributes"><code>
+			public static 
+			array
+		</code></td>
+
+		<td class="name">
+				<a href="source-Tracy.Dumper.php.html#26-38" title="Go to source code"><var>$terminalColors</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">array</span>(
+	<span class="php-quote">'bool'</span> =&gt; <span class="php-quote">'1;33'</span>,
+	<span class="php-quote">'null'</span> =&gt; <span class="php-quote">'1;33'</span>,
+	<span class="php-quote">'number'</span> =&gt; <span class="php-quote">'1;32'</span>,
+	<span class="php-quote">'string'</span> =&gt; <span class="php-quote">'1;36'</span>,
+	<span class="php-quote">'array'</span> =&gt; <span class="php-quote">'1;31'</span>,
+	<span class="php-quote">'key'</span> =&gt; <span class="php-quote">'1;37'</span>,
+	<span class="php-quote">'object'</span> =&gt; <span class="php-quote">'1;31'</span>,
+	<span class="php-quote">'visibility'</span> =&gt; <span class="php-quote">'1;30'</span>,
+	<span class="php-quote">'resource'</span> =&gt; <span class="php-quote">'1;37'</span>,
+	<span class="php-quote">'indent'</span> =&gt; <span class="php-quote">'1;30'</span>,
+)</code></td>
+		<td class="description"><div>
+			<a href="Tracy.Dumper.html#$terminalColors" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="resources" id="$resources">
+		<td class="attributes"><code>
+			public static 
+			array
+		</code></td>
+
+		<td class="name">
+				<a href="source-Tracy.Dumper.php.html#40-45" title="Go to source code"><var>$resources</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">array</span>(
+	<span class="php-quote">'stream'</span> =&gt; <span class="php-quote">'stream_get_meta_data'</span>,
+	<span class="php-quote">'stream-context'</span> =&gt; <span class="php-quote">'stream_context_get_options'</span>,
+	<span class="php-quote">'curl'</span> =&gt; <span class="php-quote">'curl_getinfo'</span>,
+)</code></td>
+		<td class="description"><div>
+			<a href="Tracy.Dumper.html#$resources" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+</div>
+
+	<div id="footer">
+		Nette 2.2.2 API API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+	</div>
+</div>
+</div>
+<script src="resources/combined.js?3630868369"></script>
+<script src="elementlist.js?2087501429"></script>
+</body>
+</html>

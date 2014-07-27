@@ -1,0 +1,3069 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="generator" content="ApiGen 2.8.0">
+
+	<title>Tree | Nette 2.2.2 API</title>
+
+	<link rel="stylesheet" href="resources/style.css?3746977979">
+	<link rel="search" type="application/opensearchdescription+xml" title="Nette 2.2.2 API" href="http://api.nette.org/2.0/opensearch.xml">
+
+
+<script src='http://files.nette.org/js/analytics.js'></script><script>
+_ga.create('UA-95238-14', '.nette.org');
+_gaq.push(['_trackPageview']);
+</script>
+</head>
+
+<body>
+<div id="left">
+	<div id="menu">
+
+		<div id="groups">
+			<h3>Namespaces</h3>
+			<ul>
+				<li><a href="namespace-Latte.html">Latte<span></span></a>
+						<ul>
+				<li><a href="namespace-Latte.Loaders.html">Loaders</a>
+						</li>
+				<li><a href="namespace-Latte.Macros.html">Macros</a>
+						</li>
+				<li><a href="namespace-Latte.Runtime.html">Runtime</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.html">Nette<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.Application.html">Application<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.Application.Responses.html">Responses</a>
+						</li>
+				<li><a href="namespace-Nette.Application.Routers.html">Routers</a>
+						</li>
+				<li><a href="namespace-Nette.Application.UI.html">UI</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.Bridges.html">Bridges<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.Bridges.ApplicationLatte.html">ApplicationLatte</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.ApplicationTracy.html">ApplicationTracy</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.CacheLatte.html">CacheLatte</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.DatabaseDI.html">DatabaseDI</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.DatabaseTracy.html">DatabaseTracy</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.DITracy.html">DITracy</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.FormsLatte.html">FormsLatte</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.Framework.html">Framework</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.HttpTracy.html">HttpTracy</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.SecurityTracy.html">SecurityTracy</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.Caching.html">Caching<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.Caching.Storages.html">Storages</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.ComponentModel.html">ComponentModel</a>
+						</li>
+				<li><a href="namespace-Nette.Database.html">Database<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.Database.Drivers.html">Drivers</a>
+						</li>
+				<li><a href="namespace-Nette.Database.Reflection.html">Reflection</a>
+						</li>
+				<li><a href="namespace-Nette.Database.Table.html">Table</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.DI.html">DI<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.DI.Config.html">Config<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.DI.Config.Adapters.html">Adapters</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.DI.Extensions.html">Extensions</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.Diagnostics.html">Diagnostics</a>
+						</li>
+				<li><a href="namespace-Nette.Forms.html">Forms<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.Forms.Controls.html">Controls</a>
+						</li>
+				<li><a href="namespace-Nette.Forms.Rendering.html">Rendering</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.Http.html">Http</a>
+						</li>
+				<li><a href="namespace-Nette.Iterators.html">Iterators</a>
+						</li>
+				<li><a href="namespace-Nette.Latte.html">Latte</a>
+						</li>
+				<li><a href="namespace-Nette.Loaders.html">Loaders</a>
+						</li>
+				<li><a href="namespace-Nette.Localization.html">Localization</a>
+						</li>
+				<li><a href="namespace-Nette.Mail.html">Mail</a>
+						</li>
+				<li><a href="namespace-Nette.Neon.html">Neon</a>
+						</li>
+				<li><a href="namespace-Nette.PhpGenerator.html">PhpGenerator</a>
+						</li>
+				<li><a href="namespace-Nette.Reflection.html">Reflection</a>
+						</li>
+				<li><a href="namespace-Nette.Security.html">Security</a>
+						</li>
+				<li><a href="namespace-Nette.Templating.html">Templating</a>
+						</li>
+				<li><a href="namespace-Nette.Utils.html">Utils</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-NetteModule.html">NetteModule</a>
+						</li>
+				<li><a href="namespace-none.html">none</a>
+						</li>
+				<li><a href="namespace-Tracy.html">Tracy</a>
+						</li>
+			</ul>
+		</div>
+
+		<hr>
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="Latte.Compiler.html">Latte\Compiler</a></li>
+				<li><a href="Latte.Engine.html">Latte\Engine</a></li>
+				<li><a href="Latte.Helpers.html">Latte\Helpers</a></li>
+				<li><a href="Latte.HtmlNode.html">Latte\HtmlNode</a></li>
+				<li><a href="Latte.Loaders.FileLoader.html">Latte\Loaders\FileLoader</a></li>
+				<li><a href="Latte.Loaders.StringLoader.html">Latte\Loaders\StringLoader</a></li>
+				<li><a href="Latte.MacroNode.html">Latte\MacroNode</a></li>
+				<li><a href="Latte.Macros.BlockMacros.html">Latte\Macros\BlockMacros</a></li>
+				<li><a href="Latte.Macros.CoreMacros.html">Latte\Macros\CoreMacros</a></li>
+				<li><a href="Latte.Macros.MacroSet.html">Latte\Macros\MacroSet</a></li>
+				<li><a href="Latte.MacroTokens.html">Latte\MacroTokens</a></li>
+				<li><a href="Latte.Object.html">Latte\Object</a></li>
+				<li><a href="Latte.Parser.html">Latte\Parser</a></li>
+				<li><a href="Latte.PhpWriter.html">Latte\PhpWriter</a></li>
+				<li><a href="Latte.Runtime.CachingIterator.html">Latte\Runtime\CachingIterator</a></li>
+				<li><a href="Latte.Runtime.Filters.html">Latte\Runtime\Filters</a></li>
+				<li><a href="Latte.Runtime.Html.html">Latte\Runtime\Html</a></li>
+				<li><a href="Latte.Token.html">Latte\Token</a></li>
+				<li><a href="Nette.Application.Application.html">Nette\Application\Application</a></li>
+				<li><a href="Nette.Application.PresenterFactory.html">Nette\Application\PresenterFactory</a></li>
+				<li><a href="Nette.Application.Request.html">Nette\Application\Request</a></li>
+				<li><a href="Nette.Application.Responses.FileResponse.html">Nette\Application\Responses\FileResponse</a></li>
+				<li><a href="Nette.Application.Responses.ForwardResponse.html">Nette\Application\Responses\ForwardResponse</a></li>
+				<li><a href="Nette.Application.Responses.JsonResponse.html">Nette\Application\Responses\JsonResponse</a></li>
+				<li><a href="Nette.Application.Responses.RedirectResponse.html">Nette\Application\Responses\RedirectResponse</a></li>
+				<li><a href="Nette.Application.Responses.TextResponse.html">Nette\Application\Responses\TextResponse</a></li>
+				<li><a href="Nette.Application.Routers.CliRouter.html">Nette\Application\Routers\CliRouter</a></li>
+				<li><a href="Nette.Application.Routers.Route.html">Nette\Application\Routers\Route</a></li>
+				<li><a href="Nette.Application.Routers.RouteList.html">Nette\Application\Routers\RouteList</a></li>
+				<li><a href="Nette.Application.Routers.SimpleRouter.html">Nette\Application\Routers\SimpleRouter</a></li>
+				<li><a href="Nette.Application.UI.Control.html">Nette\Application\UI\Control</a></li>
+				<li><a href="Nette.Application.UI.Form.html">Nette\Application\UI\Form</a></li>
+				<li><a href="Nette.Application.UI.Multiplier.html">Nette\Application\UI\Multiplier</a></li>
+				<li><a href="Nette.Application.UI.Presenter.html">Nette\Application\UI\Presenter</a></li>
+				<li><a href="Nette.Application.UI.PresenterComponent.html">Nette\Application\UI\PresenterComponent</a></li>
+				<li><a href="Nette.Bridges.ApplicationLatte.Loader.html">Nette\Bridges\ApplicationLatte\Loader</a></li>
+				<li><a href="Nette.Bridges.ApplicationLatte.Template.html">Nette\Bridges\ApplicationLatte\Template</a></li>
+				<li><a href="Nette.Bridges.ApplicationLatte.TemplateFactory.html">Nette\Bridges\ApplicationLatte\TemplateFactory</a></li>
+				<li><a href="Nette.Bridges.ApplicationLatte.UIMacros.html">Nette\Bridges\ApplicationLatte\UIMacros</a></li>
+				<li><a href="Nette.Bridges.ApplicationTracy.RoutingPanel.html">Nette\Bridges\ApplicationTracy\RoutingPanel</a></li>
+				<li><a href="Nette.Bridges.CacheLatte.CacheMacro.html">Nette\Bridges\CacheLatte\CacheMacro</a></li>
+				<li><a href="Nette.Bridges.DatabaseDI.DatabaseExtension.html">Nette\Bridges\DatabaseDI\DatabaseExtension</a></li>
+				<li><a href="Nette.Bridges.DatabaseTracy.ConnectionPanel.html">Nette\Bridges\DatabaseTracy\ConnectionPanel</a></li>
+				<li><a href="Nette.Bridges.DITracy.ContainerPanel.html">Nette\Bridges\DITracy\ContainerPanel</a></li>
+				<li><a href="Nette.Bridges.FormsLatte.FormMacros.html">Nette\Bridges\FormsLatte\FormMacros</a></li>
+				<li><a href="Nette.Bridges.Framework.NetteAccessor.html">Nette\Bridges\Framework\NetteAccessor</a></li>
+				<li><a href="Nette.Bridges.Framework.NetteExtension.html">Nette\Bridges\Framework\NetteExtension</a></li>
+				<li><a href="Nette.Bridges.Framework.TracyBridge.html">Nette\Bridges\Framework\TracyBridge</a></li>
+				<li><a href="Nette.Bridges.HttpTracy.SessionPanel.html">Nette\Bridges\HttpTracy\SessionPanel</a></li>
+				<li><a href="Nette.Bridges.SecurityTracy.UserPanel.html">Nette\Bridges\SecurityTracy\UserPanel</a></li>
+				<li><a href="Nette.Caching.Cache.html">Nette\Caching\Cache</a></li>
+				<li><a href="Nette.Caching.OutputHelper.html">Nette\Caching\OutputHelper</a></li>
+				<li><a href="Nette.Caching.Storages.DevNullStorage.html">Nette\Caching\Storages\DevNullStorage</a></li>
+				<li><a href="Nette.Caching.Storages.FileJournal.html">Nette\Caching\Storages\FileJournal</a></li>
+				<li><a href="Nette.Caching.Storages.FileStorage.html">Nette\Caching\Storages\FileStorage</a></li>
+				<li><a href="Nette.Caching.Storages.MemcachedStorage.html">Nette\Caching\Storages\MemcachedStorage</a></li>
+				<li><a href="Nette.Caching.Storages.MemoryStorage.html">Nette\Caching\Storages\MemoryStorage</a></li>
+				<li><a href="Nette.Caching.Storages.PhpFileStorage.html" class="deprecated">Nette\Caching\Storages\PhpFileStorage</a></li>
+				<li><a href="Nette.Caching.Storages.SQLiteStorage.html">Nette\Caching\Storages\SQLiteStorage</a></li>
+				<li><a href="Nette.Callback.html" class="deprecated">Nette\Callback</a></li>
+				<li><a href="Nette.ComponentModel.Component.html">Nette\ComponentModel\Component</a></li>
+				<li><a href="Nette.ComponentModel.Container.html">Nette\ComponentModel\Container</a></li>
+				<li><a href="Nette.Configurator.html">Nette\Configurator</a></li>
+				<li><a href="Nette.Database.Connection.html">Nette\Database\Connection</a></li>
+				<li><a href="Nette.Database.Context.html">Nette\Database\Context</a></li>
+				<li><a href="Nette.Database.Drivers.MsSqlDriver.html">Nette\Database\Drivers\MsSqlDriver</a></li>
+				<li><a href="Nette.Database.Drivers.MySqlDriver.html">Nette\Database\Drivers\MySqlDriver</a></li>
+				<li><a href="Nette.Database.Drivers.OciDriver.html">Nette\Database\Drivers\OciDriver</a></li>
+				<li><a href="Nette.Database.Drivers.OdbcDriver.html">Nette\Database\Drivers\OdbcDriver</a></li>
+				<li><a href="Nette.Database.Drivers.PgSqlDriver.html">Nette\Database\Drivers\PgSqlDriver</a></li>
+				<li><a href="Nette.Database.Drivers.Sqlite2Driver.html">Nette\Database\Drivers\Sqlite2Driver</a></li>
+				<li><a href="Nette.Database.Drivers.SqliteDriver.html">Nette\Database\Drivers\SqliteDriver</a></li>
+				<li><a href="Nette.Database.Drivers.SqlsrvDriver.html">Nette\Database\Drivers\SqlsrvDriver</a></li>
+				<li><a href="Nette.Database.Helpers.html">Nette\Database\Helpers</a></li>
+				<li><a href="Nette.Database.Reflection.ConventionalReflection.html">Nette\Database\Reflection\ConventionalReflection</a></li>
+				<li><a href="Nette.Database.Reflection.DiscoveredReflection.html">Nette\Database\Reflection\DiscoveredReflection</a></li>
+				<li><a href="Nette.Database.ResultSet.html">Nette\Database\ResultSet</a></li>
+				<li><a href="Nette.Database.Row.html">Nette\Database\Row</a></li>
+				<li><a href="Nette.Database.SqlLiteral.html">Nette\Database\SqlLiteral</a></li>
+				<li><a href="Nette.Database.SqlPreprocessor.html">Nette\Database\SqlPreprocessor</a></li>
+				<li><a href="Nette.Database.Table.ActiveRow.html">Nette\Database\Table\ActiveRow</a></li>
+				<li><a href="Nette.Database.Table.GroupedSelection.html">Nette\Database\Table\GroupedSelection</a></li>
+				<li><a href="Nette.Database.Table.Selection.html">Nette\Database\Table\Selection</a></li>
+				<li><a href="Nette.Database.Table.SqlBuilder.html">Nette\Database\Table\SqlBuilder</a></li>
+				<li><a href="Nette.DI.Compiler.html">Nette\DI\Compiler</a></li>
+				<li><a href="Nette.DI.CompilerExtension.html">Nette\DI\CompilerExtension</a></li>
+				<li><a href="Nette.DI.Config.Adapters.IniAdapter.html">Nette\DI\Config\Adapters\IniAdapter</a></li>
+				<li><a href="Nette.DI.Config.Adapters.NeonAdapter.html">Nette\DI\Config\Adapters\NeonAdapter</a></li>
+				<li><a href="Nette.DI.Config.Adapters.PhpAdapter.html">Nette\DI\Config\Adapters\PhpAdapter</a></li>
+				<li><a href="Nette.DI.Config.Helpers.html">Nette\DI\Config\Helpers</a></li>
+				<li><a href="Nette.DI.Config.Loader.html">Nette\DI\Config\Loader</a></li>
+				<li><a href="Nette.DI.Container.html">Nette\DI\Container</a></li>
+				<li><a href="Nette.DI.ContainerBuilder.html">Nette\DI\ContainerBuilder</a></li>
+				<li><a href="Nette.DI.ContainerFactory.html">Nette\DI\ContainerFactory</a></li>
+				<li><a href="Nette.DI.Extensions.ConstantsExtension.html">Nette\DI\Extensions\ConstantsExtension</a></li>
+				<li><a href="Nette.DI.Extensions.ExtensionsExtension.html">Nette\DI\Extensions\ExtensionsExtension</a></li>
+				<li><a href="Nette.DI.Extensions.PhpExtension.html">Nette\DI\Extensions\PhpExtension</a></li>
+				<li><a href="Nette.DI.Helpers.html">Nette\DI\Helpers</a></li>
+				<li><a href="Nette.DI.ServiceDefinition.html">Nette\DI\ServiceDefinition</a></li>
+				<li><a href="Nette.DI.Statement.html">Nette\DI\Statement</a></li>
+				<li><a href="Nette.Diagnostics.Debugger.html" class="deprecated">Nette\Diagnostics\Debugger</a></li>
+				<li><a href="Nette.Diagnostics.Helpers.html" class="deprecated">Nette\Diagnostics\Helpers</a></li>
+				<li><a href="Nette.Environment.html" class="deprecated">Nette\Environment</a></li>
+				<li><a href="Nette.Forms.Container.html">Nette\Forms\Container</a></li>
+				<li><a href="Nette.Forms.ControlGroup.html">Nette\Forms\ControlGroup</a></li>
+				<li><a href="Nette.Forms.Controls.BaseControl.html">Nette\Forms\Controls\BaseControl</a></li>
+				<li><a href="Nette.Forms.Controls.Button.html">Nette\Forms\Controls\Button</a></li>
+				<li><a href="Nette.Forms.Controls.Checkbox.html">Nette\Forms\Controls\Checkbox</a></li>
+				<li><a href="Nette.Forms.Controls.CheckboxList.html">Nette\Forms\Controls\CheckboxList</a></li>
+				<li><a href="Nette.Forms.Controls.ChoiceControl.html">Nette\Forms\Controls\ChoiceControl</a></li>
+				<li><a href="Nette.Forms.Controls.CsrfProtection.html">Nette\Forms\Controls\CsrfProtection</a></li>
+				<li><a href="Nette.Forms.Controls.HiddenField.html">Nette\Forms\Controls\HiddenField</a></li>
+				<li><a href="Nette.Forms.Controls.ImageButton.html">Nette\Forms\Controls\ImageButton</a></li>
+				<li><a href="Nette.Forms.Controls.MultiChoiceControl.html">Nette\Forms\Controls\MultiChoiceControl</a></li>
+				<li><a href="Nette.Forms.Controls.MultiSelectBox.html">Nette\Forms\Controls\MultiSelectBox</a></li>
+				<li><a href="Nette.Forms.Controls.RadioList.html">Nette\Forms\Controls\RadioList</a></li>
+				<li><a href="Nette.Forms.Controls.SelectBox.html">Nette\Forms\Controls\SelectBox</a></li>
+				<li><a href="Nette.Forms.Controls.SubmitButton.html">Nette\Forms\Controls\SubmitButton</a></li>
+				<li><a href="Nette.Forms.Controls.TextArea.html">Nette\Forms\Controls\TextArea</a></li>
+				<li><a href="Nette.Forms.Controls.TextBase.html">Nette\Forms\Controls\TextBase</a></li>
+				<li><a href="Nette.Forms.Controls.TextInput.html">Nette\Forms\Controls\TextInput</a></li>
+				<li><a href="Nette.Forms.Controls.UploadControl.html">Nette\Forms\Controls\UploadControl</a></li>
+				<li><a href="Nette.Forms.Form.html">Nette\Forms\Form</a></li>
+				<li><a href="Nette.Forms.Helpers.html">Nette\Forms\Helpers</a></li>
+				<li><a href="Nette.Forms.Rendering.DefaultFormRenderer.html">Nette\Forms\Rendering\DefaultFormRenderer</a></li>
+				<li><a href="Nette.Forms.Rule.html">Nette\Forms\Rule</a></li>
+				<li><a href="Nette.Forms.Rules.html">Nette\Forms\Rules</a></li>
+				<li><a href="Nette.Framework.html">Nette\Framework</a></li>
+				<li><a href="Nette.FreezableObject.html" class="deprecated">Nette\FreezableObject</a></li>
+				<li><a href="Nette.Http.Context.html">Nette\Http\Context</a></li>
+				<li><a href="Nette.Http.FileUpload.html">Nette\Http\FileUpload</a></li>
+				<li><a href="Nette.Http.Helpers.html">Nette\Http\Helpers</a></li>
+				<li><a href="Nette.Http.Request.html">Nette\Http\Request</a></li>
+				<li><a href="Nette.Http.RequestFactory.html">Nette\Http\RequestFactory</a></li>
+				<li><a href="Nette.Http.Response.html">Nette\Http\Response</a></li>
+				<li><a href="Nette.Http.Session.html">Nette\Http\Session</a></li>
+				<li><a href="Nette.Http.SessionSection.html">Nette\Http\SessionSection</a></li>
+				<li><a href="Nette.Http.Url.html">Nette\Http\Url</a></li>
+				<li><a href="Nette.Http.UrlScript.html">Nette\Http\UrlScript</a></li>
+				<li><a href="Nette.Http.UserStorage.html">Nette\Http\UserStorage</a></li>
+				<li><a href="Nette.Iterators.CachingIterator.html">Nette\Iterators\CachingIterator</a></li>
+				<li><a href="Nette.Iterators.Filter.html">Nette\Iterators\Filter</a></li>
+				<li><a href="Nette.Iterators.Mapper.html">Nette\Iterators\Mapper</a></li>
+				<li><a href="Nette.Iterators.RecursiveFilter.html">Nette\Iterators\RecursiveFilter</a></li>
+				<li><a href="Nette.Latte.Engine.html" class="deprecated">Nette\Latte\Engine</a></li>
+				<li><a href="Nette.Loaders.NetteLoader.html">Nette\Loaders\NetteLoader</a></li>
+				<li><a href="Nette.Loaders.RobotLoader.html">Nette\Loaders\RobotLoader</a></li>
+				<li><a href="Nette.Mail.Message.html">Nette\Mail\Message</a></li>
+				<li><a href="Nette.Mail.MimePart.html">Nette\Mail\MimePart</a></li>
+				<li><a href="Nette.Mail.SendmailMailer.html">Nette\Mail\SendmailMailer</a></li>
+				<li><a href="Nette.Mail.SmtpMailer.html">Nette\Mail\SmtpMailer</a></li>
+				<li><a href="Nette.Neon.Encoder.html">Nette\Neon\Encoder</a></li>
+				<li><a href="Nette.Neon.Entity.html">Nette\Neon\Entity</a></li>
+				<li><a href="Nette.Neon.Neon.html">Nette\Neon\Neon</a></li>
+				<li><a href="Nette.Object.html">Nette\Object</a></li>
+				<li><a href="Nette.PhpGenerator.ClassType.html">Nette\PhpGenerator\ClassType</a></li>
+				<li><a href="Nette.PhpGenerator.Helpers.html">Nette\PhpGenerator\Helpers</a></li>
+				<li><a href="Nette.PhpGenerator.Method.html">Nette\PhpGenerator\Method</a></li>
+				<li><a href="Nette.PhpGenerator.Parameter.html">Nette\PhpGenerator\Parameter</a></li>
+				<li><a href="Nette.PhpGenerator.PhpLiteral.html">Nette\PhpGenerator\PhpLiteral</a></li>
+				<li><a href="Nette.PhpGenerator.Property.html">Nette\PhpGenerator\Property</a></li>
+				<li><a href="Nette.Reflection.Annotation.html">Nette\Reflection\Annotation</a></li>
+				<li><a href="Nette.Reflection.AnnotationsParser.html">Nette\Reflection\AnnotationsParser</a></li>
+				<li><a href="Nette.Reflection.ClassType.html">Nette\Reflection\ClassType</a></li>
+				<li><a href="Nette.Reflection.Extension.html">Nette\Reflection\Extension</a></li>
+				<li><a href="Nette.Reflection.GlobalFunction.html">Nette\Reflection\GlobalFunction</a></li>
+				<li><a href="Nette.Reflection.Method.html">Nette\Reflection\Method</a></li>
+				<li><a href="Nette.Reflection.Parameter.html">Nette\Reflection\Parameter</a></li>
+				<li><a href="Nette.Reflection.Property.html">Nette\Reflection\Property</a></li>
+				<li><a href="Nette.Security.Identity.html">Nette\Security\Identity</a></li>
+				<li><a href="Nette.Security.Passwords.html">Nette\Security\Passwords</a></li>
+				<li><a href="Nette.Security.Permission.html">Nette\Security\Permission</a></li>
+				<li><a href="Nette.Security.SimpleAuthenticator.html">Nette\Security\SimpleAuthenticator</a></li>
+				<li><a href="Nette.Security.User.html">Nette\Security\User</a></li>
+				<li><a href="Nette.Templating.FileTemplate.html" class="deprecated">Nette\Templating\FileTemplate</a></li>
+				<li><a href="Nette.Templating.Helpers.html" class="deprecated">Nette\Templating\Helpers</a></li>
+				<li><a href="Nette.Templating.Template.html" class="deprecated">Nette\Templating\Template</a></li>
+				<li><a href="Nette.Utils.ArrayHash.html">Nette\Utils\ArrayHash</a></li>
+				<li><a href="Nette.Utils.ArrayList.html">Nette\Utils\ArrayList</a></li>
+				<li><a href="Nette.Utils.Arrays.html">Nette\Utils\Arrays</a></li>
+				<li><a href="Nette.Utils.Callback.html">Nette\Utils\Callback</a></li>
+				<li><a href="Nette.Utils.CallbackFilterIterator.html">Nette\Utils\CallbackFilterIterator</a></li>
+				<li><a href="Nette.Utils.DateTime.html">Nette\Utils\DateTime</a></li>
+				<li><a href="Nette.Utils.FileSystem.html">Nette\Utils\FileSystem</a></li>
+				<li><a href="Nette.Utils.Finder.html">Nette\Utils\Finder</a></li>
+				<li><a href="Nette.Utils.Html.html">Nette\Utils\Html</a></li>
+				<li><a href="Nette.Utils.Image.html">Nette\Utils\Image</a></li>
+				<li><a href="Nette.Utils.Json.html">Nette\Utils\Json</a></li>
+				<li><a href="Nette.Utils.LimitedScope.html" class="deprecated">Nette\Utils\LimitedScope</a></li>
+				<li><a href="Nette.Utils.MimeTypeDetector.html" class="deprecated">Nette\Utils\MimeTypeDetector</a></li>
+				<li><a href="Nette.Utils.ObjectMixin.html">Nette\Utils\ObjectMixin</a></li>
+				<li><a href="Nette.Utils.Paginator.html">Nette\Utils\Paginator</a></li>
+				<li><a href="Nette.Utils.Random.html">Nette\Utils\Random</a></li>
+				<li><a href="Nette.Utils.RecursiveCallbackFilterIterator.html">Nette\Utils\RecursiveCallbackFilterIterator</a></li>
+				<li><a href="Nette.Utils.Strings.html">Nette\Utils\Strings</a></li>
+				<li><a href="Nette.Utils.TokenIterator.html">Nette\Utils\TokenIterator</a></li>
+				<li><a href="Nette.Utils.Tokenizer.html">Nette\Utils\Tokenizer</a></li>
+				<li><a href="Nette.Utils.Validators.html">Nette\Utils\Validators</a></li>
+				<li><a href="NetteModule.ErrorPresenter.html">NetteModule\ErrorPresenter</a></li>
+				<li><a href="NetteModule.MicroPresenter.html">NetteModule\MicroPresenter</a></li>
+				<li><a href="Tracy.Bar.html">Tracy\Bar</a></li>
+				<li><a href="Tracy.BlueScreen.html">Tracy\BlueScreen</a></li>
+				<li><a href="Tracy.Debugger.html">Tracy\Debugger</a></li>
+				<li><a href="Tracy.Dumper.html">Tracy\Dumper</a></li>
+				<li><a href="Tracy.FireLogger.html">Tracy\FireLogger</a></li>
+				<li><a href="Tracy.Helpers.html">Tracy\Helpers</a></li>
+				<li><a href="Tracy.Logger.html">Tracy\Logger</a></li>
+				<li><a href="Tracy.OutputDebugger.html">Tracy\OutputDebugger</a></li>
+			</ul>
+
+			<h3>Interfaces</h3>
+			<ul>
+				<li><a href="Latte.ILoader.html">Latte\ILoader</a></li>
+				<li><a href="Latte.IMacro.html">Latte\IMacro</a></li>
+				<li><a href="Latte.Runtime.IHtmlString.html">Latte\Runtime\IHtmlString</a></li>
+				<li><a href="Nette.Application.IPresenter.html">Nette\Application\IPresenter</a></li>
+				<li><a href="Nette.Application.IPresenterFactory.html">Nette\Application\IPresenterFactory</a></li>
+				<li><a href="Nette.Application.IResponse.html">Nette\Application\IResponse</a></li>
+				<li><a href="Nette.Application.IRouter.html">Nette\Application\IRouter</a></li>
+				<li><a href="Nette.Application.UI.IRenderable.html">Nette\Application\UI\IRenderable</a></li>
+				<li><a href="Nette.Application.UI.ISignalReceiver.html">Nette\Application\UI\ISignalReceiver</a></li>
+				<li><a href="Nette.Application.UI.IStatePersistent.html">Nette\Application\UI\IStatePersistent</a></li>
+				<li><a href="Nette.Application.UI.ITemplate.html">Nette\Application\UI\ITemplate</a></li>
+				<li><a href="Nette.Application.UI.ITemplateFactory.html">Nette\Application\UI\ITemplateFactory</a></li>
+				<li><a href="Nette.Bridges.ApplicationLatte.ILatteFactory.html">Nette\Bridges\ApplicationLatte\ILatteFactory</a></li>
+				<li><a href="Nette.Caching.IStorage.html">Nette\Caching\IStorage</a></li>
+				<li><a href="Nette.Caching.Storages.IJournal.html">Nette\Caching\Storages\IJournal</a></li>
+				<li><a href="Nette.ComponentModel.IComponent.html">Nette\ComponentModel\IComponent</a></li>
+				<li><a href="Nette.ComponentModel.IContainer.html">Nette\ComponentModel\IContainer</a></li>
+				<li><a href="Nette.Database.IReflection.html">Nette\Database\IReflection</a></li>
+				<li><a href="Nette.Database.IRow.html">Nette\Database\IRow</a></li>
+				<li><a href="Nette.Database.IRowContainer.html">Nette\Database\IRowContainer</a></li>
+				<li><a href="Nette.Database.ISupplementalDriver.html">Nette\Database\ISupplementalDriver</a></li>
+				<li><a href="Nette.Database.Table.IRow.html">Nette\Database\Table\IRow</a></li>
+				<li><a href="Nette.Database.Table.IRowContainer.html">Nette\Database\Table\IRowContainer</a></li>
+				<li><a href="Nette.DI.Config.IAdapter.html">Nette\DI\Config\IAdapter</a></li>
+				<li><a href="Nette.Diagnostics.IBarPanel.html" class="deprecated">Nette\Diagnostics\IBarPanel</a></li>
+				<li><a href="Nette.Forms.IControl.html">Nette\Forms\IControl</a></li>
+				<li><a href="Nette.Forms.IFormRenderer.html">Nette\Forms\IFormRenderer</a></li>
+				<li><a href="Nette.Forms.ISubmitterControl.html">Nette\Forms\ISubmitterControl</a></li>
+				<li><a href="Nette.Http.IRequest.html">Nette\Http\IRequest</a></li>
+				<li><a href="Nette.Http.IResponse.html">Nette\Http\IResponse</a></li>
+				<li><a href="Nette.Http.ISessionStorage.html" class="deprecated">Nette\Http\ISessionStorage</a></li>
+				<li><a href="Nette.IFreezable.html" class="deprecated">Nette\IFreezable</a></li>
+				<li><a href="Nette.Localization.ITranslator.html">Nette\Localization\ITranslator</a></li>
+				<li><a href="Nette.Mail.IMailer.html">Nette\Mail\IMailer</a></li>
+				<li><a href="Nette.Reflection.IAnnotation.html">Nette\Reflection\IAnnotation</a></li>
+				<li><a href="Nette.Security.IAuthenticator.html">Nette\Security\IAuthenticator</a></li>
+				<li><a href="Nette.Security.IAuthorizator.html">Nette\Security\IAuthorizator</a></li>
+				<li><a href="Nette.Security.IIdentity.html">Nette\Security\IIdentity</a></li>
+				<li><a href="Nette.Security.IResource.html">Nette\Security\IResource</a></li>
+				<li><a href="Nette.Security.IRole.html">Nette\Security\IRole</a></li>
+				<li><a href="Nette.Security.IUserStorage.html">Nette\Security\IUserStorage</a></li>
+				<li><a href="Nette.Templating.IFileTemplate.html" class="deprecated">Nette\Templating\IFileTemplate</a></li>
+				<li><a href="Nette.Templating.ITemplate.html" class="deprecated">Nette\Templating\ITemplate</a></li>
+				<li><a href="Nette.Utils.IHtmlString.html">Nette\Utils\IHtmlString</a></li>
+				<li><a href="Tracy.IBarPanel.html">Tracy\IBarPanel</a></li>
+			</ul>
+
+
+			<h3>Exceptions</h3>
+			<ul>
+				<li><a href="Latte.CompileException.html">Latte\CompileException</a></li>
+				<li><a href="Latte.RegexpException.html">Latte\RegexpException</a></li>
+				<li><a href="Latte.RuntimeException.html">Latte\RuntimeException</a></li>
+				<li><a href="Nette.Application.AbortException.html">Nette\Application\AbortException</a></li>
+				<li><a href="Nette.Application.ApplicationException.html">Nette\Application\ApplicationException</a></li>
+				<li><a href="Nette.Application.BadRequestException.html">Nette\Application\BadRequestException</a></li>
+				<li><a href="Nette.Application.ForbiddenRequestException.html">Nette\Application\ForbiddenRequestException</a></li>
+				<li><a href="Nette.Application.InvalidPresenterException.html">Nette\Application\InvalidPresenterException</a></li>
+				<li><a href="Nette.Application.UI.BadSignalException.html">Nette\Application\UI\BadSignalException</a></li>
+				<li><a href="Nette.Application.UI.InvalidLinkException.html">Nette\Application\UI\InvalidLinkException</a></li>
+				<li><a href="Nette.ArgumentOutOfRangeException.html">Nette\ArgumentOutOfRangeException</a></li>
+				<li><a href="Nette.Database.Reflection.AmbiguousReferenceKeyException.html">Nette\Database\Reflection\AmbiguousReferenceKeyException</a></li>
+				<li><a href="Nette.Database.Reflection.MissingReferenceException.html">Nette\Database\Reflection\MissingReferenceException</a></li>
+				<li><a href="Nette.DeprecatedException.html">Nette\DeprecatedException</a></li>
+				<li><a href="Nette.DI.MissingServiceException.html">Nette\DI\MissingServiceException</a></li>
+				<li><a href="Nette.DI.ServiceCreationException.html">Nette\DI\ServiceCreationException</a></li>
+				<li><a href="Nette.DirectoryNotFoundException.html">Nette\DirectoryNotFoundException</a></li>
+				<li><a href="Nette.FileNotFoundException.html">Nette\FileNotFoundException</a></li>
+				<li><a href="Nette.InvalidArgumentException.html">Nette\InvalidArgumentException</a></li>
+				<li><a href="Nette.InvalidStateException.html">Nette\InvalidStateException</a></li>
+				<li><a href="Nette.IOException.html">Nette\IOException</a></li>
+				<li><a href="Nette.Mail.SmtpException.html">Nette\Mail\SmtpException</a></li>
+				<li><a href="Nette.MemberAccessException.html">Nette\MemberAccessException</a></li>
+				<li><a href="Nette.Neon.Exception.html">Nette\Neon\Exception</a></li>
+				<li><a href="Nette.NotImplementedException.html">Nette\NotImplementedException</a></li>
+				<li><a href="Nette.NotSupportedException.html">Nette\NotSupportedException</a></li>
+				<li><a href="Nette.OutOfRangeException.html">Nette\OutOfRangeException</a></li>
+				<li><a href="Nette.Security.AuthenticationException.html">Nette\Security\AuthenticationException</a></li>
+				<li><a href="Nette.StaticClassException.html">Nette\StaticClassException</a></li>
+				<li><a href="Nette.UnexpectedValueException.html">Nette\UnexpectedValueException</a></li>
+				<li><a href="Nette.Utils.AssertionException.html">Nette\Utils\AssertionException</a></li>
+				<li><a href="Nette.Utils.JsonException.html">Nette\Utils\JsonException</a></li>
+				<li><a href="Nette.Utils.RegexpException.html">Nette\Utils\RegexpException</a></li>
+				<li><a href="Nette.Utils.TokenizerException.html">Nette\Utils\TokenizerException</a></li>
+				<li><a href="Nette.Utils.UnknownImageFileException.html">Nette\Utils\UnknownImageFileException</a></li>
+			</ul>
+
+
+			<h3>Functions</h3>
+			<ul>
+			</ul>
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form action="http://www.google.com/cse" id="search">
+		<input type="hidden" name="cx" value="011549293477758430224:vxofa9ufnhc">
+		<input type="hidden" name="ie" value="UTF-8">
+		<input type="text" name="q" class="text">
+		<input type="submit" value="Search">
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+<span>Namespace</span>			</li>
+			<li>
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+			<li class="active">
+<span>Tree</span>			</li>
+			<li>
+				<a href="deprecated.html" title="List of deprecated elements"><span>Deprecated</span></a>
+			</li>
+		</ul>
+		<ul><li><a href="http://api.nette.org/releases"><span>Other releases</span></a></li><li><a href="http://nette.org"><span>Nette homepage</span></a></li></ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content">
+	<h1>Tree</h1>
+
+		<h3>Classes</h3>
+<div class="tree">
+	<ul>
+
+			<li><div class="notlast"><a href="ArrayIterator.html"><span>ArrayIterator</span></a>
+			 implements 
+				<a href="Iterator.html"><span>Iterator</span></a>, 
+			
+				<a href="Traversable.html"><span>Traversable</span></a>, 
+			
+				<a href="ArrayAccess.html"><span>ArrayAccess</span></a>, 
+			
+				<a href="SeekableIterator.html"><span>SeekableIterator</span></a>, 
+			
+				<a href="Serializable.html"><span>Serializable</span></a>, 
+			
+				<a href="Countable.html"><span>Countable</span></a>
+			
+			
+			</div>
+
+				<ul>
+
+			<li class="last"><div class="last"><a href="RecursiveArrayIterator.html"><span>RecursiveArrayIterator</span></a>
+			 implements 
+				<a href="RecursiveIterator.html"><span>RecursiveIterator</span></a>
+			
+			
+			</div>
+
+				</ul></li>
+
+			<li><div class="notlast"><a href="Closure.html"><span>Closure</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="DateInterval.html"><span>DateInterval</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="DateTime.html"><span>DateTime</span></a>
+			
+			
+			</div>
+
+				<ul>
+
+			<li class="last"><div class="last"><a href="Nette.Utils.DateTime.html"><span>Nette\Utils\DateTime</span></a>
+			
+			
+			</div>
+
+				</ul></li>
+
+			<li><div class="notlast"><a href="DateTimeZone.html"><span>DateTimeZone</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="IteratorIterator.html"><span>IteratorIterator</span></a>
+			 implements 
+				<a href="Iterator.html"><span>Iterator</span></a>, 
+			
+				<a href="Traversable.html"><span>Traversable</span></a>, 
+			
+				<a href="OuterIterator.html"><span>OuterIterator</span></a>
+			
+			
+			</div>
+
+				<ul>
+
+			<li><div class="notlast"><a href="CachingIterator.html"><span>CachingIterator</span></a>
+			 implements 
+				<a href="ArrayAccess.html"><span>ArrayAccess</span></a>, 
+			
+				<a href="Countable.html"><span>Countable</span></a>
+			
+			
+			</div>
+
+				<ul>
+
+			<li><div class="notlast"><a href="Latte.Runtime.CachingIterator.html"><span>Latte\Runtime\CachingIterator</span></a>
+			 implements 
+				<a href="Countable.html"><span>Countable</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li class="last"><div class="last"><a href="Nette.Iterators.CachingIterator.html"><span>Nette\Iterators\CachingIterator</span></a>
+			 implements 
+				<a href="Countable.html"><span>Countable</span></a>
+			
+			
+			</div>
+
+				</ul></li>
+
+			<li><div class="notlast"><a href="FilterIterator.html"><span>FilterIterator</span></a>
+			
+			
+			</div>
+
+				<ul>
+
+			<li><div class="notlast"><a href="Nette.Iterators.Filter.html"><span>Nette\Iterators\Filter</span></a>
+			
+			
+			</div>
+
+				<ul>
+
+			<li class="last"><div class="last"><a href="Nette.Iterators.RecursiveFilter.html"><span>Nette\Iterators\RecursiveFilter</span></a>
+			 implements 
+				<a href="RecursiveIterator.html"><span>RecursiveIterator</span></a>
+			
+			
+			</div>
+
+				</ul></li>
+
+			<li class="last"><div class="last"><a href="Nette.Utils.CallbackFilterIterator.html"><span>Nette\Utils\CallbackFilterIterator</span></a>
+			
+			
+			</div>
+
+				<ul>
+
+			<li class="last"><div class="last"><a href="Nette.Utils.RecursiveCallbackFilterIterator.html"><span>Nette\Utils\RecursiveCallbackFilterIterator</span></a>
+			 implements 
+				<a href="RecursiveIterator.html"><span>RecursiveIterator</span></a>
+			
+			
+			</div>
+
+				</ul></li></ul></li>
+
+			<li class="last"><div class="last"><a href="Nette.Iterators.Mapper.html"><span>Nette\Iterators\Mapper</span></a>
+			
+			
+			</div>
+
+				</ul></li>
+
+			<li><div class="notlast"><a href="Latte.Helpers.html"><span>Latte\Helpers</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="Latte.Object.html"><span>Latte\Object</span></a>
+			
+			
+			</div>
+
+				<ul>
+
+			<li><div class="notlast"><a href="Latte.Compiler.html"><span>Latte\Compiler</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="Latte.Engine.html"><span>Latte\Engine</span></a>
+			
+			
+			</div>
+
+				<ul>
+
+			<li class="last"><div class="last"><a href="Nette.Latte.Engine.html"><span class="deprecated">Nette\Latte\Engine</span></a>
+			
+			
+			</div>
+
+				</ul></li>
+
+			<li><div class="notlast"><a href="Latte.HtmlNode.html"><span>Latte\HtmlNode</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="Latte.Loaders.FileLoader.html"><span>Latte\Loaders\FileLoader</span></a>
+			 implements 
+				<a href="Latte.ILoader.html"><span>Latte\ILoader</span></a>
+			
+			
+			</div>
+
+				<ul>
+
+			<li class="last"><div class="last"><a href="Nette.Bridges.ApplicationLatte.Loader.html"><span>Nette\Bridges\ApplicationLatte\Loader</span></a>
+			
+			
+			</div>
+
+				</ul></li>
+
+			<li><div class="notlast"><a href="Latte.Loaders.StringLoader.html"><span>Latte\Loaders\StringLoader</span></a>
+			 implements 
+				<a href="Latte.ILoader.html"><span>Latte\ILoader</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="Latte.MacroNode.html"><span>Latte\MacroNode</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="Latte.Macros.MacroSet.html"><span>Latte\Macros\MacroSet</span></a>
+			 implements 
+				<a href="Latte.IMacro.html"><span>Latte\IMacro</span></a>
+			
+			
+			</div>
+
+				<ul>
+
+			<li><div class="notlast"><a href="Latte.Macros.BlockMacros.html"><span>Latte\Macros\BlockMacros</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="Latte.Macros.CoreMacros.html"><span>Latte\Macros\CoreMacros</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="Nette.Bridges.ApplicationLatte.UIMacros.html"><span>Nette\Bridges\ApplicationLatte\UIMacros</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li class="last"><div class="last"><a href="Nette.Bridges.FormsLatte.FormMacros.html"><span>Nette\Bridges\FormsLatte\FormMacros</span></a>
+			
+			
+			</div>
+
+				</ul></li>
+
+			<li><div class="notlast"><a href="Latte.Parser.html"><span>Latte\Parser</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="Latte.PhpWriter.html"><span>Latte\PhpWriter</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="Latte.Runtime.Html.html"><span>Latte\Runtime\Html</span></a>
+			 implements 
+				<a href="Latte.Runtime.IHtmlString.html"><span>Latte\Runtime\IHtmlString</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="Latte.Token.html"><span>Latte\Token</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li class="last"><div class="last"><span>Latte\TokenIterator</span>			
+			
+			</div>
+
+				<ul>
+
+			<li class="last"><div class="last"><a href="Latte.MacroTokens.html"><span>Latte\MacroTokens</span></a>
+			
+			
+			</div>
+
+				</ul></li></ul></li>
+
+			<li><div class="notlast"><a href="Latte.Runtime.Filters.html"><span>Latte\Runtime\Filters</span></a>
+			
+			
+			</div>
+
+				<ul>
+
+			<li class="last"><div class="last"><a href="Nette.Templating.Helpers.html"><span class="deprecated">Nette\Templating\Helpers</span></a>
+			
+			
+			</div>
+
+				</ul></li>
+
+			<li><div class="notlast"><a href="Nette.Bridges.Framework.TracyBridge.html"><span>Nette\Bridges\Framework\TracyBridge</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="Nette.DI.Config.Helpers.html"><span>Nette\DI\Config\Helpers</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="Nette.DI.Helpers.html"><span>Nette\DI\Helpers</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="Nette.Database.Helpers.html"><span>Nette\Database\Helpers</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="Nette.Database.Table.ActiveRow.html"><span>Nette\Database\Table\ActiveRow</span></a>
+			 implements 
+				<a href="IteratorAggregate.html"><span>IteratorAggregate</span></a>, 
+			
+				<a href="Nette.Database.Table.IRow.html"><span>Nette\Database\Table\IRow</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="Nette.Environment.html"><span class="deprecated">Nette\Environment</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="Nette.Framework.html"><span>Nette\Framework</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="Nette.Http.Helpers.html"><span>Nette\Http\Helpers</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="Nette.Loaders.NetteLoader.html"><span>Nette\Loaders\NetteLoader</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="Nette.Neon.Encoder.html"><span>Nette\Neon\Encoder</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="Nette.Neon.Neon.html"><span>Nette\Neon\Neon</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="Nette.Object.html"><span>Nette\Object</span></a>
+			
+			
+			</div>
+
+				<ul>
+
+			<li><div class="notlast"><a href="NetteModule.ErrorPresenter.html"><span>NetteModule\ErrorPresenter</span></a>
+			 implements 
+				<a href="Nette.Application.IPresenter.html"><span>Nette\Application\IPresenter</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="NetteModule.MicroPresenter.html"><span>NetteModule\MicroPresenter</span></a>
+			 implements 
+				<a href="Nette.Application.IPresenter.html"><span>Nette\Application\IPresenter</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="Nette.Application.Application.html"><span>Nette\Application\Application</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="Nette.Application.PresenterFactory.html"><span>Nette\Application\PresenterFactory</span></a>
+			 implements 
+				<a href="Nette.Application.IPresenterFactory.html"><span>Nette\Application\IPresenterFactory</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="Nette.Application.Request.html"><span>Nette\Application\Request</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="Nette.Application.Responses.FileResponse.html"><span>Nette\Application\Responses\FileResponse</span></a>
+			 implements 
+				<a href="Nette.Application.IResponse.html"><span>Nette\Application\IResponse</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="Nette.Application.Responses.ForwardResponse.html"><span>Nette\Application\Responses\ForwardResponse</span></a>
+			 implements 
+				<a href="Nette.Application.IResponse.html"><span>Nette\Application\IResponse</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="Nette.Application.Responses.JsonResponse.html"><span>Nette\Application\Responses\JsonResponse</span></a>
+			 implements 
+				<a href="Nette.Application.IResponse.html"><span>Nette\Application\IResponse</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="Nette.Application.Responses.RedirectResponse.html"><span>Nette\Application\Responses\RedirectResponse</span></a>
+			 implements 
+				<a href="Nette.Application.IResponse.html"><span>Nette\Application\IResponse</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="Nette.Application.Responses.TextResponse.html"><span>Nette\Application\Responses\TextResponse</span></a>
+			 implements 
+				<a href="Nette.Application.IResponse.html"><span>Nette\Application\IResponse</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="Nette.Application.Routers.CliRouter.html"><span>Nette\Application\Routers\CliRouter</span></a>
+			 implements 
+				<a href="Nette.Application.IRouter.html"><span>Nette\Application\IRouter</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="Nette.Application.Routers.Route.html"><span>Nette\Application\Routers\Route</span></a>
+			 implements 
+				<a href="Nette.Application.IRouter.html"><span>Nette\Application\IRouter</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="Nette.Application.Routers.SimpleRouter.html"><span>Nette\Application\Routers\SimpleRouter</span></a>
+			 implements 
+				<a href="Nette.Application.IRouter.html"><span>Nette\Application\IRouter</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="Nette.Bridges.ApplicationLatte.Template.html"><span>Nette\Bridges\ApplicationLatte\Template</span></a>
+			 implements 
+				<a href="Nette.Application.UI.ITemplate.html"><span>Nette\Application\UI\ITemplate</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="Nette.Bridges.ApplicationLatte.TemplateFactory.html"><span>Nette\Bridges\ApplicationLatte\TemplateFactory</span></a>
+			 implements 
+				<a href="Nette.Application.UI.ITemplateFactory.html"><span>Nette\Application\UI\ITemplateFactory</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="Nette.Bridges.ApplicationTracy.RoutingPanel.html"><span>Nette\Bridges\ApplicationTracy\RoutingPanel</span></a>
+			 implements 
+				<a href="Tracy.IBarPanel.html"><span>Tracy\IBarPanel</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="Nette.Bridges.CacheLatte.CacheMacro.html"><span>Nette\Bridges\CacheLatte\CacheMacro</span></a>
+			 implements 
+				<a href="Latte.IMacro.html"><span>Latte\IMacro</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="Nette.Bridges.DITracy.ContainerPanel.html"><span>Nette\Bridges\DITracy\ContainerPanel</span></a>
+			 implements 
+				<a href="Tracy.IBarPanel.html"><span>Tracy\IBarPanel</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="Nette.Bridges.DatabaseTracy.ConnectionPanel.html"><span>Nette\Bridges\DatabaseTracy\ConnectionPanel</span></a>
+			 implements 
+				<a href="Tracy.IBarPanel.html"><span>Tracy\IBarPanel</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="Nette.Bridges.Framework.NetteAccessor.html"><span>Nette\Bridges\Framework\NetteAccessor</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="Nette.Bridges.HttpTracy.SessionPanel.html"><span>Nette\Bridges\HttpTracy\SessionPanel</span></a>
+			 implements 
+				<a href="Tracy.IBarPanel.html"><span>Tracy\IBarPanel</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="Nette.Bridges.SecurityTracy.UserPanel.html"><span>Nette\Bridges\SecurityTracy\UserPanel</span></a>
+			 implements 
+				<a href="Tracy.IBarPanel.html"><span>Tracy\IBarPanel</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="Nette.Caching.Cache.html"><span>Nette\Caching\Cache</span></a>
+			 implements 
+				<a href="ArrayAccess.html"><span>ArrayAccess</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="Nette.Caching.OutputHelper.html"><span>Nette\Caching\OutputHelper</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="Nette.Caching.Storages.DevNullStorage.html"><span>Nette\Caching\Storages\DevNullStorage</span></a>
+			 implements 
+				<a href="Nette.Caching.IStorage.html"><span>Nette\Caching\IStorage</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="Nette.Caching.Storages.FileJournal.html"><span>Nette\Caching\Storages\FileJournal</span></a>
+			 implements 
+				<a href="Nette.Caching.Storages.IJournal.html"><span>Nette\Caching\Storages\IJournal</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="Nette.Caching.Storages.FileStorage.html"><span>Nette\Caching\Storages\FileStorage</span></a>
+			 implements 
+				<a href="Nette.Caching.IStorage.html"><span>Nette\Caching\IStorage</span></a>
+			
+			
+			</div>
+
+				<ul>
+
+			<li class="last"><div class="last"><a href="Nette.Caching.Storages.PhpFileStorage.html"><span class="deprecated">Nette\Caching\Storages\PhpFileStorage</span></a>
+			
+			
+			</div>
+
+				</ul></li>
+
+			<li><div class="notlast"><a href="Nette.Caching.Storages.MemcachedStorage.html"><span>Nette\Caching\Storages\MemcachedStorage</span></a>
+			 implements 
+				<a href="Nette.Caching.IStorage.html"><span>Nette\Caching\IStorage</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="Nette.Caching.Storages.MemoryStorage.html"><span>Nette\Caching\Storages\MemoryStorage</span></a>
+			 implements 
+				<a href="Nette.Caching.IStorage.html"><span>Nette\Caching\IStorage</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="Nette.Caching.Storages.SQLiteStorage.html"><span>Nette\Caching\Storages\SQLiteStorage</span></a>
+			 implements 
+				<a href="Nette.Caching.IStorage.html"><span>Nette\Caching\IStorage</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="Nette.Callback.html"><span class="deprecated">Nette\Callback</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="Nette.ComponentModel.Component.html"><span>Nette\ComponentModel\Component</span></a>
+			 implements 
+				<a href="Nette.ComponentModel.IComponent.html"><span>Nette\ComponentModel\IComponent</span></a>
+			
+			
+			</div>
+
+				<ul>
+
+			<li><div class="notlast"><a href="Nette.ComponentModel.Container.html"><span>Nette\ComponentModel\Container</span></a>
+			 implements 
+				<a href="Nette.ComponentModel.IContainer.html"><span>Nette\ComponentModel\IContainer</span></a>
+			
+			
+			</div>
+
+				<ul>
+
+			<li><div class="notlast"><a href="Nette.Application.UI.PresenterComponent.html"><span>Nette\Application\UI\PresenterComponent</span></a>
+			 implements 
+				<a href="Nette.Application.UI.ISignalReceiver.html"><span>Nette\Application\UI\ISignalReceiver</span></a>, 
+			
+				<a href="Nette.Application.UI.IStatePersistent.html"><span>Nette\Application\UI\IStatePersistent</span></a>, 
+			
+				<a href="ArrayAccess.html"><span>ArrayAccess</span></a>
+			
+			
+			</div>
+
+				<ul>
+
+			<li><div class="notlast"><a href="Nette.Application.UI.Control.html"><span>Nette\Application\UI\Control</span></a>
+			 implements 
+				<a href="Nette.Application.UI.IRenderable.html"><span>Nette\Application\UI\IRenderable</span></a>
+			
+			
+			</div>
+
+				<ul>
+
+			<li class="last"><div class="last"><a href="Nette.Application.UI.Presenter.html"><span>Nette\Application\UI\Presenter</span></a>
+			 implements 
+				<a href="Nette.Application.IPresenter.html"><span>Nette\Application\IPresenter</span></a>
+			
+			
+			</div>
+
+				</ul></li>
+
+			<li class="last"><div class="last"><a href="Nette.Application.UI.Multiplier.html"><span>Nette\Application\UI\Multiplier</span></a>
+			
+			
+			</div>
+
+				</ul></li>
+
+			<li class="last"><div class="last"><a href="Nette.Forms.Container.html"><span>Nette\Forms\Container</span></a>
+			 implements 
+				<a href="ArrayAccess.html"><span>ArrayAccess</span></a>
+			
+			
+			</div>
+
+				<ul>
+
+			<li class="last"><div class="last"><a href="Nette.Forms.Form.html"><span>Nette\Forms\Form</span></a>
+			 implements 
+				<a href="Nette.Utils.IHtmlString.html"><span>Nette\Utils\IHtmlString</span></a>
+			
+			
+			</div>
+
+				<ul>
+
+			<li class="last"><div class="last"><a href="Nette.Application.UI.Form.html"><span>Nette\Application\UI\Form</span></a>
+			 implements 
+				<a href="Nette.Application.UI.ISignalReceiver.html"><span>Nette\Application\UI\ISignalReceiver</span></a>
+			
+			
+			</div>
+
+				</ul></li></ul></li></ul></li>
+
+			<li class="last"><div class="last"><a href="Nette.Forms.Controls.BaseControl.html"><span>Nette\Forms\Controls\BaseControl</span></a>
+			 implements 
+				<a href="Nette.Forms.IControl.html"><span>Nette\Forms\IControl</span></a>
+			
+			
+			</div>
+
+				<ul>
+
+			<li><div class="notlast"><a href="Nette.Forms.Controls.Button.html"><span>Nette\Forms\Controls\Button</span></a>
+			
+			
+			</div>
+
+				<ul>
+
+			<li class="last"><div class="last"><a href="Nette.Forms.Controls.SubmitButton.html"><span>Nette\Forms\Controls\SubmitButton</span></a>
+			 implements 
+				<a href="Nette.Forms.ISubmitterControl.html"><span>Nette\Forms\ISubmitterControl</span></a>
+			
+			
+			</div>
+
+				<ul>
+
+			<li class="last"><div class="last"><a href="Nette.Forms.Controls.ImageButton.html"><span>Nette\Forms\Controls\ImageButton</span></a>
+			
+			
+			</div>
+
+				</ul></li></ul></li>
+
+			<li><div class="notlast"><a href="Nette.Forms.Controls.Checkbox.html"><span>Nette\Forms\Controls\Checkbox</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="Nette.Forms.Controls.ChoiceControl.html"><span>Nette\Forms\Controls\ChoiceControl</span></a>
+			
+			
+			</div>
+
+				<ul>
+
+			<li><div class="notlast"><a href="Nette.Forms.Controls.RadioList.html"><span>Nette\Forms\Controls\RadioList</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li class="last"><div class="last"><a href="Nette.Forms.Controls.SelectBox.html"><span>Nette\Forms\Controls\SelectBox</span></a>
+			
+			
+			</div>
+
+				</ul></li>
+
+			<li><div class="notlast"><a href="Nette.Forms.Controls.HiddenField.html"><span>Nette\Forms\Controls\HiddenField</span></a>
+			
+			
+			</div>
+
+				<ul>
+
+			<li class="last"><div class="last"><a href="Nette.Forms.Controls.CsrfProtection.html"><span>Nette\Forms\Controls\CsrfProtection</span></a>
+			
+			
+			</div>
+
+				</ul></li>
+
+			<li><div class="notlast"><a href="Nette.Forms.Controls.MultiChoiceControl.html"><span>Nette\Forms\Controls\MultiChoiceControl</span></a>
+			
+			
+			</div>
+
+				<ul>
+
+			<li><div class="notlast"><a href="Nette.Forms.Controls.CheckboxList.html"><span>Nette\Forms\Controls\CheckboxList</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li class="last"><div class="last"><a href="Nette.Forms.Controls.MultiSelectBox.html"><span>Nette\Forms\Controls\MultiSelectBox</span></a>
+			
+			
+			</div>
+
+				</ul></li>
+
+			<li><div class="notlast"><a href="Nette.Forms.Controls.TextBase.html"><span>Nette\Forms\Controls\TextBase</span></a>
+			
+			
+			</div>
+
+				<ul>
+
+			<li><div class="notlast"><a href="Nette.Forms.Controls.TextArea.html"><span>Nette\Forms\Controls\TextArea</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li class="last"><div class="last"><a href="Nette.Forms.Controls.TextInput.html"><span>Nette\Forms\Controls\TextInput</span></a>
+			
+			
+			</div>
+
+				</ul></li>
+
+			<li class="last"><div class="last"><a href="Nette.Forms.Controls.UploadControl.html"><span>Nette\Forms\Controls\UploadControl</span></a>
+			
+			
+			</div>
+
+				</ul></li></ul></li>
+
+			<li><div class="notlast"><a href="Nette.Configurator.html"><span>Nette\Configurator</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="Nette.DI.Compiler.html"><span>Nette\DI\Compiler</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="Nette.DI.CompilerExtension.html"><span>Nette\DI\CompilerExtension</span></a>
+			
+			
+			</div>
+
+				<ul>
+
+			<li><div class="notlast"><a href="Nette.Bridges.DatabaseDI.DatabaseExtension.html"><span>Nette\Bridges\DatabaseDI\DatabaseExtension</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="Nette.Bridges.Framework.NetteExtension.html"><span>Nette\Bridges\Framework\NetteExtension</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="Nette.DI.Extensions.ConstantsExtension.html"><span>Nette\DI\Extensions\ConstantsExtension</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="Nette.DI.Extensions.ExtensionsExtension.html"><span>Nette\DI\Extensions\ExtensionsExtension</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li class="last"><div class="last"><a href="Nette.DI.Extensions.PhpExtension.html"><span>Nette\DI\Extensions\PhpExtension</span></a>
+			
+			
+			</div>
+
+				</ul></li>
+
+			<li><div class="notlast"><a href="Nette.DI.Config.Adapters.IniAdapter.html"><span>Nette\DI\Config\Adapters\IniAdapter</span></a>
+			 implements 
+				<a href="Nette.DI.Config.IAdapter.html"><span>Nette\DI\Config\IAdapter</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="Nette.DI.Config.Adapters.NeonAdapter.html"><span>Nette\DI\Config\Adapters\NeonAdapter</span></a>
+			 implements 
+				<a href="Nette.DI.Config.IAdapter.html"><span>Nette\DI\Config\IAdapter</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="Nette.DI.Config.Adapters.PhpAdapter.html"><span>Nette\DI\Config\Adapters\PhpAdapter</span></a>
+			 implements 
+				<a href="Nette.DI.Config.IAdapter.html"><span>Nette\DI\Config\IAdapter</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="Nette.DI.Config.Loader.html"><span>Nette\DI\Config\Loader</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="Nette.DI.Container.html"><span>Nette\DI\Container</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="Nette.DI.ContainerBuilder.html"><span>Nette\DI\ContainerBuilder</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="Nette.DI.ContainerFactory.html"><span>Nette\DI\ContainerFactory</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="Nette.DI.ServiceDefinition.html"><span>Nette\DI\ServiceDefinition</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="Nette.DI.Statement.html"><span>Nette\DI\Statement</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="Nette.Database.Connection.html"><span>Nette\Database\Connection</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="Nette.Database.Context.html"><span>Nette\Database\Context</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="Nette.Database.Drivers.MsSqlDriver.html"><span>Nette\Database\Drivers\MsSqlDriver</span></a>
+			 implements 
+				<a href="Nette.Database.ISupplementalDriver.html"><span>Nette\Database\ISupplementalDriver</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="Nette.Database.Drivers.MySqlDriver.html"><span>Nette\Database\Drivers\MySqlDriver</span></a>
+			 implements 
+				<a href="Nette.Database.ISupplementalDriver.html"><span>Nette\Database\ISupplementalDriver</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="Nette.Database.Drivers.OciDriver.html"><span>Nette\Database\Drivers\OciDriver</span></a>
+			 implements 
+				<a href="Nette.Database.ISupplementalDriver.html"><span>Nette\Database\ISupplementalDriver</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="Nette.Database.Drivers.OdbcDriver.html"><span>Nette\Database\Drivers\OdbcDriver</span></a>
+			 implements 
+				<a href="Nette.Database.ISupplementalDriver.html"><span>Nette\Database\ISupplementalDriver</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="Nette.Database.Drivers.PgSqlDriver.html"><span>Nette\Database\Drivers\PgSqlDriver</span></a>
+			 implements 
+				<a href="Nette.Database.ISupplementalDriver.html"><span>Nette\Database\ISupplementalDriver</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="Nette.Database.Drivers.SqliteDriver.html"><span>Nette\Database\Drivers\SqliteDriver</span></a>
+			 implements 
+				<a href="Nette.Database.ISupplementalDriver.html"><span>Nette\Database\ISupplementalDriver</span></a>
+			
+			
+			</div>
+
+				<ul>
+
+			<li class="last"><div class="last"><a href="Nette.Database.Drivers.Sqlite2Driver.html"><span>Nette\Database\Drivers\Sqlite2Driver</span></a>
+			
+			
+			</div>
+
+				</ul></li>
+
+			<li><div class="notlast"><a href="Nette.Database.Drivers.SqlsrvDriver.html"><span>Nette\Database\Drivers\SqlsrvDriver</span></a>
+			 implements 
+				<a href="Nette.Database.ISupplementalDriver.html"><span>Nette\Database\ISupplementalDriver</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="Nette.Database.Reflection.ConventionalReflection.html"><span>Nette\Database\Reflection\ConventionalReflection</span></a>
+			 implements 
+				<a href="Nette.Database.IReflection.html"><span>Nette\Database\IReflection</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="Nette.Database.Reflection.DiscoveredReflection.html"><span>Nette\Database\Reflection\DiscoveredReflection</span></a>
+			 implements 
+				<a href="Nette.Database.IReflection.html"><span>Nette\Database\IReflection</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="Nette.Database.ResultSet.html"><span>Nette\Database\ResultSet</span></a>
+			 implements 
+				<a href="Iterator.html"><span>Iterator</span></a>, 
+			
+				<a href="Nette.Database.IRowContainer.html"><span>Nette\Database\IRowContainer</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="Nette.Database.SqlLiteral.html"><span>Nette\Database\SqlLiteral</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="Nette.Database.SqlPreprocessor.html"><span>Nette\Database\SqlPreprocessor</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="Nette.Database.Table.Selection.html"><span>Nette\Database\Table\Selection</span></a>
+			 implements 
+				<a href="Iterator.html"><span>Iterator</span></a>, 
+			
+				<a href="Nette.Database.Table.IRowContainer.html"><span>Nette\Database\Table\IRowContainer</span></a>, 
+			
+				<a href="ArrayAccess.html"><span>ArrayAccess</span></a>, 
+			
+				<a href="Countable.html"><span>Countable</span></a>
+			
+			
+			</div>
+
+				<ul>
+
+			<li class="last"><div class="last"><a href="Nette.Database.Table.GroupedSelection.html"><span>Nette\Database\Table\GroupedSelection</span></a>
+			
+			
+			</div>
+
+				</ul></li>
+
+			<li><div class="notlast"><a href="Nette.Database.Table.SqlBuilder.html"><span>Nette\Database\Table\SqlBuilder</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="Nette.Forms.ControlGroup.html"><span>Nette\Forms\ControlGroup</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="Nette.Forms.Helpers.html"><span>Nette\Forms\Helpers</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="Nette.Forms.Rendering.DefaultFormRenderer.html"><span>Nette\Forms\Rendering\DefaultFormRenderer</span></a>
+			 implements 
+				<a href="Nette.Forms.IFormRenderer.html"><span>Nette\Forms\IFormRenderer</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="Nette.Forms.Rule.html"><span>Nette\Forms\Rule</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="Nette.Forms.Rules.html"><span>Nette\Forms\Rules</span></a>
+			 implements 
+				<a href="IteratorAggregate.html"><span>IteratorAggregate</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="Nette.FreezableObject.html"><span class="deprecated">Nette\FreezableObject</span></a>
+			 implements 
+				<a href="Nette.IFreezable.html"><span class="deprecated">Nette\IFreezable</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="Nette.Http.Context.html"><span>Nette\Http\Context</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="Nette.Http.FileUpload.html"><span>Nette\Http\FileUpload</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="Nette.Http.Request.html"><span>Nette\Http\Request</span></a>
+			 implements 
+				<a href="Nette.Http.IRequest.html"><span>Nette\Http\IRequest</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="Nette.Http.RequestFactory.html"><span>Nette\Http\RequestFactory</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="Nette.Http.Response.html"><span>Nette\Http\Response</span></a>
+			 implements 
+				<a href="Nette.Http.IResponse.html"><span>Nette\Http\IResponse</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="Nette.Http.Session.html"><span>Nette\Http\Session</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="Nette.Http.SessionSection.html"><span>Nette\Http\SessionSection</span></a>
+			 implements 
+				<a href="IteratorAggregate.html"><span>IteratorAggregate</span></a>, 
+			
+				<a href="ArrayAccess.html"><span>ArrayAccess</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="Nette.Http.Url.html"><span>Nette\Http\Url</span></a>
+			
+			
+			</div>
+
+				<ul>
+
+			<li class="last"><div class="last"><a href="Nette.Http.UrlScript.html"><span>Nette\Http\UrlScript</span></a>
+			
+			
+			</div>
+
+				</ul></li>
+
+			<li><div class="notlast"><a href="Nette.Http.UserStorage.html"><span>Nette\Http\UserStorage</span></a>
+			 implements 
+				<a href="Nette.Security.IUserStorage.html"><span>Nette\Security\IUserStorage</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="Nette.Loaders.RobotLoader.html"><span>Nette\Loaders\RobotLoader</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="Nette.Mail.MimePart.html"><span>Nette\Mail\MimePart</span></a>
+			
+			
+			</div>
+
+				<ul>
+
+			<li class="last"><div class="last"><a href="Nette.Mail.Message.html"><span>Nette\Mail\Message</span></a>
+			
+			
+			</div>
+
+				</ul></li>
+
+			<li><div class="notlast"><a href="Nette.Mail.SendmailMailer.html"><span>Nette\Mail\SendmailMailer</span></a>
+			 implements 
+				<a href="Nette.Mail.IMailer.html"><span>Nette\Mail\IMailer</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="Nette.Mail.SmtpMailer.html"><span>Nette\Mail\SmtpMailer</span></a>
+			 implements 
+				<a href="Nette.Mail.IMailer.html"><span>Nette\Mail\IMailer</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="Nette.PhpGenerator.ClassType.html"><span>Nette\PhpGenerator\ClassType</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="Nette.PhpGenerator.Method.html"><span>Nette\PhpGenerator\Method</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="Nette.PhpGenerator.Parameter.html"><span>Nette\PhpGenerator\Parameter</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="Nette.PhpGenerator.Property.html"><span>Nette\PhpGenerator\Property</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="Nette.Reflection.Annotation.html"><span>Nette\Reflection\Annotation</span></a>
+			 implements 
+				<a href="Nette.Reflection.IAnnotation.html"><span>Nette\Reflection\IAnnotation</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="Nette.Security.Identity.html"><span>Nette\Security\Identity</span></a>
+			 implements 
+				<a href="Nette.Security.IIdentity.html"><span>Nette\Security\IIdentity</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="Nette.Security.Permission.html"><span>Nette\Security\Permission</span></a>
+			 implements 
+				<a href="Nette.Security.IAuthorizator.html"><span>Nette\Security\IAuthorizator</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="Nette.Security.SimpleAuthenticator.html"><span>Nette\Security\SimpleAuthenticator</span></a>
+			 implements 
+				<a href="Nette.Security.IAuthenticator.html"><span>Nette\Security\IAuthenticator</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="Nette.Security.User.html"><span>Nette\Security\User</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="Nette.Templating.Template.html"><span class="deprecated">Nette\Templating\Template</span></a>
+			 implements 
+				<a href="Nette.Templating.ITemplate.html"><span class="deprecated">Nette\Templating\ITemplate</span></a>
+			
+			
+			</div>
+
+				<ul>
+
+			<li class="last"><div class="last"><a href="Nette.Templating.FileTemplate.html"><span class="deprecated">Nette\Templating\FileTemplate</span></a>
+			 implements 
+				<a href="Nette.Templating.IFileTemplate.html"><span class="deprecated">Nette\Templating\IFileTemplate</span></a>
+			
+			
+			</div>
+
+				</ul></li>
+
+			<li><div class="notlast"><a href="Nette.Utils.ArrayList.html"><span>Nette\Utils\ArrayList</span></a>
+			 implements 
+				<a href="ArrayAccess.html"><span>ArrayAccess</span></a>, 
+			
+				<a href="Countable.html"><span>Countable</span></a>, 
+			
+				<a href="IteratorAggregate.html"><span>IteratorAggregate</span></a>
+			
+			
+			</div>
+
+				<ul>
+
+			<li class="last"><div class="last"><a href="Nette.Application.Routers.RouteList.html"><span>Nette\Application\Routers\RouteList</span></a>
+			 implements 
+				<a href="Nette.Application.IRouter.html"><span>Nette\Application\IRouter</span></a>
+			
+			
+			</div>
+
+				</ul></li>
+
+			<li><div class="notlast"><a href="Nette.Utils.Finder.html"><span>Nette\Utils\Finder</span></a>
+			 implements 
+				<a href="IteratorAggregate.html"><span>IteratorAggregate</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="Nette.Utils.Html.html"><span>Nette\Utils\Html</span></a>
+			 implements 
+				<a href="ArrayAccess.html"><span>ArrayAccess</span></a>, 
+			
+				<a href="Countable.html"><span>Countable</span></a>, 
+			
+				<a href="IteratorAggregate.html"><span>IteratorAggregate</span></a>, 
+			
+				<a href="Nette.Utils.IHtmlString.html"><span>Nette\Utils\IHtmlString</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="Nette.Utils.Image.html"><span>Nette\Utils\Image</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="Nette.Utils.Paginator.html"><span>Nette\Utils\Paginator</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li class="last"><div class="last"><a href="Nette.Utils.Validators.html"><span>Nette\Utils\Validators</span></a>
+			
+			
+			</div>
+
+				</ul></li>
+
+			<li><div class="notlast"><a href="Nette.PhpGenerator.Helpers.html"><span>Nette\PhpGenerator\Helpers</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="Nette.PhpGenerator.PhpLiteral.html"><span>Nette\PhpGenerator\PhpLiteral</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="Nette.Reflection.AnnotationsParser.html"><span>Nette\Reflection\AnnotationsParser</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="Nette.Security.Passwords.html"><span>Nette\Security\Passwords</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="Nette.Utils.Arrays.html"><span>Nette\Utils\Arrays</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="Nette.Utils.Callback.html"><span>Nette\Utils\Callback</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="Nette.Utils.FileSystem.html"><span>Nette\Utils\FileSystem</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="Nette.Utils.Json.html"><span>Nette\Utils\Json</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="Nette.Utils.LimitedScope.html"><span class="deprecated">Nette\Utils\LimitedScope</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="Nette.Utils.MimeTypeDetector.html"><span class="deprecated">Nette\Utils\MimeTypeDetector</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="Nette.Utils.ObjectMixin.html"><span>Nette\Utils\ObjectMixin</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="Nette.Utils.Random.html"><span>Nette\Utils\Random</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="Nette.Utils.Strings.html"><span>Nette\Utils\Strings</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="Nette.Utils.TokenIterator.html"><span>Nette\Utils\TokenIterator</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="Nette.Utils.Tokenizer.html"><span>Nette\Utils\Tokenizer</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="PDO.html"><span>PDO</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="PDOStatement.html"><span>PDOStatement</span></a>
+			 implements 
+				<a href="Traversable.html"><span>Traversable</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="ReflectionClass.html"><span>ReflectionClass</span></a>
+			 implements 
+				<a href="Reflector.html"><span>Reflector</span></a>
+			
+			
+			</div>
+
+				<ul>
+
+			<li class="last"><div class="last"><a href="Nette.Reflection.ClassType.html"><span>Nette\Reflection\ClassType</span></a>
+			
+			
+			</div>
+
+				</ul></li>
+
+			<li><div class="notlast"><a href="ReflectionExtension.html"><span>ReflectionExtension</span></a>
+			 implements 
+				<a href="Reflector.html"><span>Reflector</span></a>
+			
+			
+			</div>
+
+				<ul>
+
+			<li class="last"><div class="last"><a href="Nette.Reflection.Extension.html"><span>Nette\Reflection\Extension</span></a>
+			
+			
+			</div>
+
+				</ul></li>
+
+			<li><div class="notlast"><a href="ReflectionFunctionAbstract.html"><span>ReflectionFunctionAbstract</span></a>
+			 implements 
+				<a href="Reflector.html"><span>Reflector</span></a>
+			
+			
+			</div>
+
+				<ul>
+
+			<li><div class="notlast"><a href="ReflectionFunction.html"><span>ReflectionFunction</span></a>
+			
+			
+			</div>
+
+				<ul>
+
+			<li class="last"><div class="last"><a href="Nette.Reflection.GlobalFunction.html"><span>Nette\Reflection\GlobalFunction</span></a>
+			
+			
+			</div>
+
+				</ul></li>
+
+			<li class="last"><div class="last"><a href="ReflectionMethod.html"><span>ReflectionMethod</span></a>
+			
+			
+			</div>
+
+				<ul>
+
+			<li class="last"><div class="last"><a href="Nette.Reflection.Method.html"><span>Nette\Reflection\Method</span></a>
+			
+			
+			</div>
+
+				</ul></li></ul></li>
+
+			<li><div class="notlast"><a href="ReflectionParameter.html"><span>ReflectionParameter</span></a>
+			 implements 
+				<a href="Reflector.html"><span>Reflector</span></a>
+			
+			
+			</div>
+
+				<ul>
+
+			<li class="last"><div class="last"><a href="Nette.Reflection.Parameter.html"><span>Nette\Reflection\Parameter</span></a>
+			
+			
+			</div>
+
+				</ul></li>
+
+			<li><div class="notlast"><a href="ReflectionProperty.html"><span>ReflectionProperty</span></a>
+			 implements 
+				<a href="Reflector.html"><span>Reflector</span></a>
+			
+			
+			</div>
+
+				<ul>
+
+			<li class="last"><div class="last"><a href="Nette.Reflection.Property.html"><span>Nette\Reflection\Property</span></a>
+			
+			
+			</div>
+
+				</ul></li>
+
+			<li><div class="notlast"><a href="SplObjectStorage.html"><span>SplObjectStorage</span></a>
+			 implements 
+				<a href="Countable.html"><span>Countable</span></a>, 
+			
+				<a href="Iterator.html"><span>Iterator</span></a>, 
+			
+				<a href="Traversable.html"><span>Traversable</span></a>, 
+			
+				<a href="Serializable.html"><span>Serializable</span></a>, 
+			
+				<a href="ArrayAccess.html"><span>ArrayAccess</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="Tracy.Bar.html"><span>Tracy\Bar</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="Tracy.BlueScreen.html"><span>Tracy\BlueScreen</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="Tracy.Debugger.html"><span>Tracy\Debugger</span></a>
+			
+			
+			</div>
+
+				<ul>
+
+			<li class="last"><div class="last"><a href="Nette.Diagnostics.Debugger.html"><span class="deprecated">Nette\Diagnostics\Debugger</span></a>
+			
+			
+			</div>
+
+				</ul></li>
+
+			<li><div class="notlast"><a href="Tracy.Dumper.html"><span>Tracy\Dumper</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="Tracy.FireLogger.html"><span>Tracy\FireLogger</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="Tracy.Helpers.html"><span>Tracy\Helpers</span></a>
+			
+			
+			</div>
+
+				<ul>
+
+			<li class="last"><div class="last"><a href="Nette.Diagnostics.Helpers.html"><span class="deprecated">Nette\Diagnostics\Helpers</span></a>
+			
+			
+			</div>
+
+				</ul></li>
+
+			<li><div class="notlast"><a href="Tracy.Logger.html"><span>Tracy\Logger</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="Tracy.OutputDebugger.html"><span>Tracy\OutputDebugger</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li class="last"><div class="last"><a href="stdClass.html"><span>stdClass</span></a>
+			
+			
+			</div>
+
+				<ul>
+
+			<li><div class="notlast"><a href="Nette.Neon.Entity.html"><span>Nette\Neon\Entity</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li class="last"><div class="last"><a href="Nette.Utils.ArrayHash.html"><span>Nette\Utils\ArrayHash</span></a>
+			 implements 
+				<a href="ArrayAccess.html"><span>ArrayAccess</span></a>, 
+			
+				<a href="Countable.html"><span>Countable</span></a>, 
+			
+				<a href="IteratorAggregate.html"><span>IteratorAggregate</span></a>
+			
+			
+			</div>
+
+				<ul>
+
+			<li class="last"><div class="last"><a href="Nette.Database.Row.html"><span>Nette\Database\Row</span></a>
+			 implements 
+				<a href="Nette.Database.IRow.html"><span>Nette\Database\IRow</span></a>
+			
+			
+			</div>
+
+		</li>
+		</ul></li></ul></li>
+	</ul>
+</div>
+
+		<h3>Interfaces</h3>
+<div class="tree">
+	<ul>
+
+			<li><div class="notlast"><a href="ArrayAccess.html"><span>ArrayAccess</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="Countable.html"><span>Countable</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="Iterator.html"><span>Iterator</span></a>
+			 implements 
+				<a href="Traversable.html"><span>Traversable</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="IteratorAggregate.html"><span>IteratorAggregate</span></a>
+			 implements 
+				<a href="Traversable.html"><span>Traversable</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="Latte.ILoader.html"><span>Latte\ILoader</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="Latte.IMacro.html"><span>Latte\IMacro</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="Latte.Runtime.IHtmlString.html"><span>Latte\Runtime\IHtmlString</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="Nette.Application.IPresenter.html"><span>Nette\Application\IPresenter</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="Nette.Application.IPresenterFactory.html"><span>Nette\Application\IPresenterFactory</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="Nette.Application.IResponse.html"><span>Nette\Application\IResponse</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="Nette.Application.IRouter.html"><span>Nette\Application\IRouter</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="Nette.Application.UI.IRenderable.html"><span>Nette\Application\UI\IRenderable</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="Nette.Application.UI.ISignalReceiver.html"><span>Nette\Application\UI\ISignalReceiver</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="Nette.Application.UI.IStatePersistent.html"><span>Nette\Application\UI\IStatePersistent</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="Nette.Application.UI.ITemplate.html"><span>Nette\Application\UI\ITemplate</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="Nette.Application.UI.ITemplateFactory.html"><span>Nette\Application\UI\ITemplateFactory</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="Nette.Bridges.ApplicationLatte.ILatteFactory.html"><span>Nette\Bridges\ApplicationLatte\ILatteFactory</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="Nette.Caching.IStorage.html"><span>Nette\Caching\IStorage</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="Nette.Caching.Storages.IJournal.html"><span>Nette\Caching\Storages\IJournal</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="Nette.ComponentModel.IComponent.html"><span>Nette\ComponentModel\IComponent</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="Nette.ComponentModel.IContainer.html"><span>Nette\ComponentModel\IContainer</span></a>
+			 implements 
+				<a href="Nette.ComponentModel.IComponent.html"><span>Nette\ComponentModel\IComponent</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="Nette.DI.Config.IAdapter.html"><span>Nette\DI\Config\IAdapter</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="Nette.Database.IReflection.html"><span>Nette\Database\IReflection</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="Nette.Database.IRow.html"><span>Nette\Database\IRow</span></a>
+			 implements 
+				<a href="Traversable.html"><span>Traversable</span></a>, 
+			
+				<a href="ArrayAccess.html"><span>ArrayAccess</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="Nette.Database.IRowContainer.html"><span>Nette\Database\IRowContainer</span></a>
+			 implements 
+				<a href="Traversable.html"><span>Traversable</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="Nette.Database.ISupplementalDriver.html"><span>Nette\Database\ISupplementalDriver</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="Nette.Database.Table.IRow.html"><span>Nette\Database\Table\IRow</span></a>
+			 implements 
+				<a href="Nette.Database.IRow.html"><span>Nette\Database\IRow</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="Nette.Database.Table.IRowContainer.html"><span>Nette\Database\Table\IRowContainer</span></a>
+			 implements 
+				<a href="Nette.Database.IRowContainer.html"><span>Nette\Database\IRowContainer</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="Nette.Diagnostics.IBarPanel.html"><span class="deprecated">Nette\Diagnostics\IBarPanel</span></a>
+			 implements 
+				<a href="Tracy.IBarPanel.html"><span>Tracy\IBarPanel</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="Nette.Forms.IControl.html"><span>Nette\Forms\IControl</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="Nette.Forms.IFormRenderer.html"><span>Nette\Forms\IFormRenderer</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="Nette.Forms.ISubmitterControl.html"><span>Nette\Forms\ISubmitterControl</span></a>
+			 implements 
+				<a href="Nette.Forms.IControl.html"><span>Nette\Forms\IControl</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="Nette.Http.IRequest.html"><span>Nette\Http\IRequest</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="Nette.Http.IResponse.html"><span>Nette\Http\IResponse</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="Nette.Http.ISessionStorage.html"><span class="deprecated">Nette\Http\ISessionStorage</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="Nette.IFreezable.html"><span class="deprecated">Nette\IFreezable</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="Nette.Localization.ITranslator.html"><span>Nette\Localization\ITranslator</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="Nette.Mail.IMailer.html"><span>Nette\Mail\IMailer</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="Nette.Reflection.IAnnotation.html"><span>Nette\Reflection\IAnnotation</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="Nette.Security.IAuthenticator.html"><span>Nette\Security\IAuthenticator</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="Nette.Security.IAuthorizator.html"><span>Nette\Security\IAuthorizator</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="Nette.Security.IIdentity.html"><span>Nette\Security\IIdentity</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="Nette.Security.IResource.html"><span>Nette\Security\IResource</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="Nette.Security.IRole.html"><span>Nette\Security\IRole</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="Nette.Security.IUserStorage.html"><span>Nette\Security\IUserStorage</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="Nette.Templating.IFileTemplate.html"><span class="deprecated">Nette\Templating\IFileTemplate</span></a>
+			 implements 
+				<a href="Nette.Templating.ITemplate.html"><span class="deprecated">Nette\Templating\ITemplate</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="Nette.Templating.ITemplate.html"><span class="deprecated">Nette\Templating\ITemplate</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="Nette.Utils.IHtmlString.html"><span>Nette\Utils\IHtmlString</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="OuterIterator.html"><span>OuterIterator</span></a>
+			 implements 
+				<a href="Iterator.html"><span>Iterator</span></a>, 
+			
+				<a href="Traversable.html"><span>Traversable</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="RecursiveIterator.html"><span>RecursiveIterator</span></a>
+			 implements 
+				<a href="Iterator.html"><span>Iterator</span></a>, 
+			
+				<a href="Traversable.html"><span>Traversable</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="Reflector.html"><span>Reflector</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="SeekableIterator.html"><span>SeekableIterator</span></a>
+			 implements 
+				<a href="Iterator.html"><span>Iterator</span></a>, 
+			
+				<a href="Traversable.html"><span>Traversable</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="Serializable.html"><span>Serializable</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="Tracy.IBarPanel.html"><span>Tracy\IBarPanel</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li class="last"><div class="last"><a href="Traversable.html"><span>Traversable</span></a>
+			
+			
+			</div>
+
+		</li>
+		
+	</ul>
+</div>
+
+
+		<h3>Exceptions</h3>
+<div class="tree">
+	<ul>
+
+			<li class="last"><div class="last"><a href="Exception.html"><span>Exception</span></a>
+			
+			
+			</div>
+
+				<ul>
+
+			<li><div class="notlast"><a href="Latte.CompileException.html"><span>Latte\CompileException</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="Latte.RegexpException.html"><span>Latte\RegexpException</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="Latte.RuntimeException.html"><span>Latte\RuntimeException</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="LogicException.html"><span>LogicException</span></a>
+			
+			
+			</div>
+
+				<ul>
+
+			<li><div class="notlast"><a href="InvalidArgumentException.html"><span>InvalidArgumentException</span></a>
+			
+			
+			</div>
+
+				<ul>
+
+			<li><div class="notlast"><a href="Nette.ArgumentOutOfRangeException.html"><span>Nette\ArgumentOutOfRangeException</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li class="last"><div class="last"><a href="Nette.InvalidArgumentException.html"><span>Nette\InvalidArgumentException</span></a>
+			
+			
+			</div>
+
+				</ul></li>
+
+			<li><div class="notlast"><a href="Nette.MemberAccessException.html"><span>Nette\MemberAccessException</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="Nette.NotImplementedException.html"><span>Nette\NotImplementedException</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="Nette.NotSupportedException.html"><span>Nette\NotSupportedException</span></a>
+			
+			
+			</div>
+
+				<ul>
+
+			<li class="last"><div class="last"><a href="Nette.DeprecatedException.html"><span>Nette\DeprecatedException</span></a>
+			
+			
+			</div>
+
+				</ul></li>
+
+			<li><div class="notlast"><a href="Nette.StaticClassException.html"><span>Nette\StaticClassException</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li class="last"><div class="last"><a href="OutOfRangeException.html"><span>OutOfRangeException</span></a>
+			
+			
+			</div>
+
+				<ul>
+
+			<li class="last"><div class="last"><a href="Nette.OutOfRangeException.html"><span>Nette\OutOfRangeException</span></a>
+			
+			
+			</div>
+
+				</ul></li></ul></li>
+
+			<li><div class="notlast"><a href="Nette.Application.AbortException.html"><span>Nette\Application\AbortException</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="Nette.Application.ApplicationException.html"><span>Nette\Application\ApplicationException</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="Nette.Application.BadRequestException.html"><span>Nette\Application\BadRequestException</span></a>
+			
+			
+			</div>
+
+				<ul>
+
+			<li><div class="notlast"><a href="Nette.Application.ForbiddenRequestException.html"><span>Nette\Application\ForbiddenRequestException</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li class="last"><div class="last"><a href="Nette.Application.UI.BadSignalException.html"><span>Nette\Application\UI\BadSignalException</span></a>
+			
+			
+			</div>
+
+				</ul></li>
+
+			<li><div class="notlast"><a href="Nette.Application.InvalidPresenterException.html"><span>Nette\Application\InvalidPresenterException</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="Nette.Application.UI.InvalidLinkException.html"><span>Nette\Application\UI\InvalidLinkException</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="Nette.Mail.SmtpException.html"><span>Nette\Mail\SmtpException</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="Nette.Neon.Exception.html"><span>Nette\Neon\Exception</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="Nette.Security.AuthenticationException.html"><span>Nette\Security\AuthenticationException</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="Nette.Utils.AssertionException.html"><span>Nette\Utils\AssertionException</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="Nette.Utils.JsonException.html"><span>Nette\Utils\JsonException</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="Nette.Utils.RegexpException.html"><span>Nette\Utils\RegexpException</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="Nette.Utils.TokenizerException.html"><span>Nette\Utils\TokenizerException</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="Nette.Utils.UnknownImageFileException.html"><span>Nette\Utils\UnknownImageFileException</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li class="last"><div class="last"><a href="RuntimeException.html"><span>RuntimeException</span></a>
+			
+			
+			</div>
+
+				<ul>
+
+			<li><div class="notlast"><a href="Nette.IOException.html"><span>Nette\IOException</span></a>
+			
+			
+			</div>
+
+				<ul>
+
+			<li><div class="notlast"><a href="Nette.DirectoryNotFoundException.html"><span>Nette\DirectoryNotFoundException</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li class="last"><div class="last"><a href="Nette.FileNotFoundException.html"><span>Nette\FileNotFoundException</span></a>
+			
+			
+			</div>
+
+				</ul></li>
+
+			<li><div class="notlast"><a href="Nette.InvalidStateException.html"><span>Nette\InvalidStateException</span></a>
+			
+			
+			</div>
+
+				<ul>
+
+			<li><div class="notlast"><a href="Nette.DI.MissingServiceException.html"><span>Nette\DI\MissingServiceException</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li class="last"><div class="last"><a href="Nette.DI.ServiceCreationException.html"><span>Nette\DI\ServiceCreationException</span></a>
+			
+			
+			</div>
+
+				</ul></li>
+
+			<li><div class="notlast"><a href="PDOException.html"><span>PDOException</span></a>
+			
+			
+			</div>
+
+				<ul>
+
+			<li><div class="notlast"><a href="Nette.Database.Reflection.AmbiguousReferenceKeyException.html"><span>Nette\Database\Reflection\AmbiguousReferenceKeyException</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li class="last"><div class="last"><a href="Nette.Database.Reflection.MissingReferenceException.html"><span>Nette\Database\Reflection\MissingReferenceException</span></a>
+			
+			
+			</div>
+
+				</ul></li>
+
+			<li class="last"><div class="last"><a href="UnexpectedValueException.html"><span>UnexpectedValueException</span></a>
+			
+			
+			</div>
+
+				<ul>
+
+			<li class="last"><div class="last"><a href="Nette.UnexpectedValueException.html"><span>Nette\UnexpectedValueException</span></a>
+			
+			
+			</div>
+
+		</li>
+		</ul></li></ul></li></ul></li>
+	</ul>
+</div>
+</div>
+
+	<div id="footer">
+		Nette 2.2.2 API API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+	</div>
+</div>
+</div>
+<script src="resources/combined.js?3630868369"></script>
+<script src="elementlist.js?2087501429"></script>
+</body>
+</html>

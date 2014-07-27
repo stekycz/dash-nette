@@ -1,0 +1,982 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="generator" content="ApiGen 2.8.0">
+
+	<title>Class Nette\Utils\Validators | Nette 2.2.2 API</title>
+
+	<link rel="stylesheet" href="resources/style.css?3746977979">
+	<link rel="search" type="application/opensearchdescription+xml" title="Nette 2.2.2 API" href="http://api.nette.org/2.0/opensearch.xml">
+
+
+<script src='http://files.nette.org/js/analytics.js'></script><script>
+_ga.create('UA-95238-14', '.nette.org');
+_gaq.push(['_trackPageview']);
+</script>
+</head>
+
+<body>
+<div id="left">
+	<div id="menu">
+
+		<div id="groups">
+			<h3>Namespaces</h3>
+			<ul>
+				<li><a href="namespace-Latte.html">Latte<span></span></a>
+						<ul>
+				<li><a href="namespace-Latte.Loaders.html">Loaders</a>
+						</li>
+				<li><a href="namespace-Latte.Macros.html">Macros</a>
+						</li>
+				<li><a href="namespace-Latte.Runtime.html">Runtime</a>
+						</li>
+							</ul></li>
+				<li class="active"><a href="namespace-Nette.html">Nette<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.Application.html">Application<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.Application.Responses.html">Responses</a>
+						</li>
+				<li><a href="namespace-Nette.Application.Routers.html">Routers</a>
+						</li>
+				<li><a href="namespace-Nette.Application.UI.html">UI</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.Bridges.html">Bridges<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.Bridges.ApplicationLatte.html">ApplicationLatte</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.ApplicationTracy.html">ApplicationTracy</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.CacheLatte.html">CacheLatte</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.DatabaseDI.html">DatabaseDI</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.DatabaseTracy.html">DatabaseTracy</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.DITracy.html">DITracy</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.FormsLatte.html">FormsLatte</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.Framework.html">Framework</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.HttpTracy.html">HttpTracy</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.SecurityTracy.html">SecurityTracy</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.Caching.html">Caching<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.Caching.Storages.html">Storages</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.ComponentModel.html">ComponentModel</a>
+						</li>
+				<li><a href="namespace-Nette.Database.html">Database<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.Database.Drivers.html">Drivers</a>
+						</li>
+				<li><a href="namespace-Nette.Database.Reflection.html">Reflection</a>
+						</li>
+				<li><a href="namespace-Nette.Database.Table.html">Table</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.DI.html">DI<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.DI.Config.html">Config<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.DI.Config.Adapters.html">Adapters</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.DI.Extensions.html">Extensions</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.Diagnostics.html">Diagnostics</a>
+						</li>
+				<li><a href="namespace-Nette.Forms.html">Forms<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.Forms.Controls.html">Controls</a>
+						</li>
+				<li><a href="namespace-Nette.Forms.Rendering.html">Rendering</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.Http.html">Http</a>
+						</li>
+				<li><a href="namespace-Nette.Iterators.html">Iterators</a>
+						</li>
+				<li><a href="namespace-Nette.Latte.html">Latte</a>
+						</li>
+				<li><a href="namespace-Nette.Loaders.html">Loaders</a>
+						</li>
+				<li><a href="namespace-Nette.Localization.html">Localization</a>
+						</li>
+				<li><a href="namespace-Nette.Mail.html">Mail</a>
+						</li>
+				<li><a href="namespace-Nette.Neon.html">Neon</a>
+						</li>
+				<li><a href="namespace-Nette.PhpGenerator.html">PhpGenerator</a>
+						</li>
+				<li><a href="namespace-Nette.Reflection.html">Reflection</a>
+						</li>
+				<li><a href="namespace-Nette.Security.html">Security</a>
+						</li>
+				<li><a href="namespace-Nette.Templating.html">Templating</a>
+						</li>
+				<li class="active"><a href="namespace-Nette.Utils.html">Utils</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-NetteModule.html">NetteModule</a>
+						</li>
+				<li><a href="namespace-none.html">none</a>
+						</li>
+				<li><a href="namespace-Tracy.html">Tracy</a>
+						</li>
+			</ul>
+		</div>
+
+		<hr>
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="Nette.Utils.ArrayHash.html">ArrayHash</a></li>
+				<li><a href="Nette.Utils.ArrayList.html">ArrayList</a></li>
+				<li><a href="Nette.Utils.Arrays.html">Arrays</a></li>
+				<li><a href="Nette.Utils.Callback.html">Callback</a></li>
+				<li><a href="Nette.Utils.CallbackFilterIterator.html">CallbackFilterIterator</a></li>
+				<li><a href="Nette.Utils.DateTime.html">DateTime</a></li>
+				<li><a href="Nette.Utils.FileSystem.html">FileSystem</a></li>
+				<li><a href="Nette.Utils.Finder.html">Finder</a></li>
+				<li><a href="Nette.Utils.Html.html">Html</a></li>
+				<li><a href="Nette.Utils.Image.html">Image</a></li>
+				<li><a href="Nette.Utils.Json.html">Json</a></li>
+				<li><a href="Nette.Utils.LimitedScope.html" class="deprecated">LimitedScope</a></li>
+				<li><a href="Nette.Utils.MimeTypeDetector.html" class="deprecated">MimeTypeDetector</a></li>
+				<li><a href="Nette.Utils.ObjectMixin.html">ObjectMixin</a></li>
+				<li><a href="Nette.Utils.Paginator.html">Paginator</a></li>
+				<li><a href="Nette.Utils.Random.html">Random</a></li>
+				<li><a href="Nette.Utils.RecursiveCallbackFilterIterator.html">RecursiveCallbackFilterIterator</a></li>
+				<li><a href="Nette.Utils.Strings.html">Strings</a></li>
+				<li><a href="Nette.Utils.TokenIterator.html">TokenIterator</a></li>
+				<li><a href="Nette.Utils.Tokenizer.html">Tokenizer</a></li>
+				<li class="active"><a href="Nette.Utils.Validators.html">Validators</a></li>
+			</ul>
+
+			<h3>Interfaces</h3>
+			<ul>
+				<li><a href="Nette.Utils.IHtmlString.html">IHtmlString</a></li>
+			</ul>
+
+
+			<h3>Exceptions</h3>
+			<ul>
+				<li><a href="Nette.Utils.AssertionException.html">AssertionException</a></li>
+				<li><a href="Nette.Utils.JsonException.html">JsonException</a></li>
+				<li><a href="Nette.Utils.RegexpException.html">RegexpException</a></li>
+				<li><a href="Nette.Utils.TokenizerException.html">TokenizerException</a></li>
+				<li><a href="Nette.Utils.UnknownImageFileException.html">UnknownImageFileException</a></li>
+			</ul>
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form action="http://www.google.com/cse" id="search">
+		<input type="hidden" name="cx" value="011549293477758430224:vxofa9ufnhc">
+		<input type="hidden" name="ie" value="UTF-8">
+		<input type="text" name="q" class="text">
+		<input type="submit" value="Search">
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+				<a href="namespace-Nette.Utils.html" title="Summary of Nette\Utils"><span>Namespace</span></a>
+			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+			<li>
+				<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions"><span>Tree</span></a>
+			</li>
+			<li>
+				<a href="deprecated.html" title="List of deprecated elements"><span>Deprecated</span></a>
+			</li>
+		</ul>
+		<ul><li><a href="http://api.nette.org/releases"><span>Other releases</span></a></li><li><a href="http://nette.org"><span>Nette homepage</span></a></li></ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Class Validators</h1>
+
+
+	<div class="description">
+	
+<p>Validation utilites.</p>
+
+	</div>
+
+	<dl class="tree">
+		<dd style="padding-left:0px">
+			<a href="Nette.Object.html"><span>Nette\Object</span></a>
+			
+			
+			
+		</dd>
+		<dd style="padding-left:30px">
+			<img src="resources/inherit.png" alt="Extended by">
+<b><span>Nette\Utils\Validators</span></b>			
+			
+			
+		</dd>
+	</dl>
+
+
+
+
+
+
+
+
+	<div class="info">
+		
+		
+		<b>Namespace:</b> <a href="namespace-Nette.html">Nette</a>\<a href="namespace-Nette.Utils.html">Utils</a><br>
+		
+
+				<b>Author:</b>
+				David Grudl<br>
+		<b>Located at</b> <a href="source-Utils.Validators.php.html#13-282" title="Go to source code">Utils/Validators.php</a><br>
+	</div>
+
+
+
+	<table class="summary" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="assert" id="_assert">
+
+		<td class="attributes"><code>
+			 public static
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Utils.Validators.html#_assert">#</a>
+		<code><a href="source-Utils.Validators.php.html#68-90" title="Go to source code">assert</a>( <span>mixed <var>$value</var></span>, <span>string <var>$expected</var></span>, <span>string <var>$label</var> = <span class="php-quote">'variable'</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Throws exception if a variable is of unexpected type.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Throws exception if a variable is of unexpected type.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$value</var></dt>
+					<dd><code>mixed</code></dd>
+					<dt><var>$expected</var></dt>
+					<dd><code>string</code><br>expected types separated by pipe</dd>
+					<dt><var>$label</var></dt>
+					<dd><code>string</code><br>label</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="assertField" id="_assertField">
+
+		<td class="attributes"><code>
+			 public static
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Utils.Validators.html#_assertField">#</a>
+		<code><a href="source-Utils.Validators.php.html#93-109" title="Go to source code">assertField</a>( <span>array <var>$arr</var></span>, <span>string <var>$field</var></span>, <span>string <var>$expected</var> = <span class="php-keyword1">NULL</span></span>, <span> <var>$label</var> = <span class="php-quote">&quot;item '%' in array&quot;</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Throws exception if an array field is missing or of unexpected type.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Throws exception if an array field is missing or of unexpected type.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$arr</var></dt>
+					<dd><code>array</code></dd>
+					<dt><var>$field</var></dt>
+					<dd><code>string</code><br>item</dd>
+					<dt><var>$expected</var></dt>
+					<dd><code>string</code><br>expected types separated by pipe</dd>
+					<dt><var>$label</var></dt>
+					<dd></dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="is" id="_is">
+
+		<td class="attributes"><code>
+			 public static
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Utils.Validators.html#_is">#</a>
+		<code><a href="source-Utils.Validators.php.html#112-154" title="Go to source code">is</a>( <span>mixed <var>$value</var></span>, <span>string <var>$expected</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Finds whether a variable is of expected type.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Finds whether a variable is of expected type.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$value</var></dt>
+					<dd><code>mixed</code></dd>
+					<dt><var>$expected</var></dt>
+					<dd><code>string</code><br>expected types separated by pipe with optional ranges</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="isNumericInt" id="_isNumericInt">
+
+		<td class="attributes"><code>
+			 public static
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Utils.Validators.html#_isNumericInt">#</a>
+		<code><a href="source-Utils.Validators.php.html#157-164" title="Go to source code">isNumericInt</a>( <span> <var>$value</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Finds whether a value is an integer.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Finds whether a value is an integer.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="isNumeric" id="_isNumeric">
+
+		<td class="attributes"><code>
+			 public static
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Utils.Validators.html#_isNumeric">#</a>
+		<code><a href="source-Utils.Validators.php.html#167-174" title="Go to source code">isNumeric</a>( <span> <var>$value</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Finds whether a string is a floating point number in decimal base.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Finds whether a string is a floating point number in decimal base.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="isCallable" id="_isCallable">
+
+		<td class="attributes"><code>
+			 public static
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Utils.Validators.html#_isCallable">#</a>
+		<code><a href="source-Utils.Validators.php.html#177-184" title="Go to source code">isCallable</a>( <span> <var>$value</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Finds whether a value is a syntactically correct callback.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Finds whether a value is a syntactically correct callback.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="isUnicode" id="_isUnicode">
+
+		<td class="attributes"><code>
+			 public static
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Utils.Validators.html#_isUnicode">#</a>
+		<code><a href="source-Utils.Validators.php.html#187-195" title="Go to source code">isUnicode</a>( <span>string <var>$value</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Finds whether a value is an UTF-8 encoded string.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Finds whether a value is an UTF-8 encoded string.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$value</var></dt>
+					<dd><code>string</code></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="isNone" id="_isNone">
+
+		<td class="attributes"><code>
+			 public static
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Utils.Validators.html#_isNone">#</a>
+		<code><a href="source-Utils.Validators.php.html#198-205" title="Go to source code">isNone</a>( <span> <var>$value</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Finds whether a value is "falsy".</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Finds whether a value is "falsy".</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="isList" id="_isList">
+
+		<td class="attributes"><code>
+			 public static
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Utils.Validators.html#_isList">#</a>
+		<code><a href="source-Utils.Validators.php.html#208-216" title="Go to source code">isList</a>( <span>array <var>$value</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Finds whether a variable is a zero-based integer indexed array.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Finds whether a variable is a zero-based integer indexed array.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$value</var></dt>
+					<dd><code>array</code></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="isInRange" id="_isInRange">
+
+		<td class="attributes"><code>
+			 public static
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Utils.Validators.html#_isInRange">#</a>
+		<code><a href="source-Utils.Validators.php.html#219-229" title="Go to source code">isInRange</a>( <span>mixed <var>$value</var></span>, <span>array <var>$range</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Is a value in specified range?</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Is a value in specified range?</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$value</var></dt>
+					<dd><code>mixed</code></dd>
+					<dt><var>$range</var></dt>
+					<dd><code>array</code><br>min and max value pair</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="isEmail" id="_isEmail">
+
+		<td class="attributes"><code>
+			 public static
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Utils.Validators.html#_isEmail">#</a>
+		<code><a href="source-Utils.Validators.php.html#232-245" title="Go to source code">isEmail</a>( <span>string <var>$value</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Finds whether a string is a valid email address.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Finds whether a string is a valid email address.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$value</var></dt>
+					<dd><code>string</code></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="isUrl" id="_isUrl">
+
+		<td class="attributes"><code>
+			 public static
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Utils.Validators.html#_isUrl">#</a>
+		<code><a href="source-Utils.Validators.php.html#248-259" title="Go to source code">isUrl</a>( <span>string <var>$value</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Finds whether a string is a valid URL.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Finds whether a string is a valid URL.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$value</var></dt>
+					<dd><code>string</code></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="isType" id="_isType">
+
+		<td class="attributes"><code>
+			 public static
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Utils.Validators.html#_isType">#</a>
+		<code><a href="source-Utils.Validators.php.html#262-270" title="Go to source code">isType</a>( <span>string <var>$type</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Checks whether the input is a class, interface or trait.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Checks whether the input is a class, interface or trait.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$type</var></dt>
+					<dd><code>string</code></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="isPhpIdentifier" id="_isPhpIdentifier">
+
+		<td class="attributes"><code>
+			 public static
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Utils.Validators.html#_isPhpIdentifier">#</a>
+		<code><a href="source-Utils.Validators.php.html#273-280" title="Go to source code">isPhpIdentifier</a>( <span> <var>$value</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Checks whether the input is a valid PHP identifier.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Checks whether the input is a valid PHP identifier.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+	<table class="summary inherited">
+	<caption>Methods inherited from <a href="Nette.Object.html#methods">Nette\Object</a></caption>
+	<tr>
+		<td><code>
+			<a href="Nette.Object.html#___call">__call()</a>, 
+			<a href="Nette.Object.html#___callStatic">__callStatic()</a>, 
+			<a href="Nette.Object.html#___get">__get()</a>, 
+			<a href="Nette.Object.html#___isset">__isset()</a>, 
+			<a href="Nette.Object.html#___set">__set()</a>, 
+			<a href="Nette.Object.html#___unset">__unset()</a>, 
+			<a href="Nette.Object.html#_extensionMethod">extensionMethod()</a>, 
+			<a href="Nette.Object.html#_getReflection">getReflection()</a>
+		</code></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+
+
+
+	<table class="summary" id="properties">
+	<caption>Properties summary</caption>
+	<tr data-order="validators" id="$validators">
+		<td class="attributes"><code>
+			protected static 
+			array
+		</code></td>
+
+		<td class="name">
+				<a href="source-Utils.Validators.php.html#20-51" title="Go to source code"><var>$validators</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">array</span>(
+	<span class="php-quote">'bool'</span> =&gt; <span class="php-quote">'is_bool'</span>,
+	<span class="php-quote">'boolean'</span> =&gt; <span class="php-quote">'is_bool'</span>,
+	<span class="php-quote">'int'</span> =&gt; <span class="php-quote">'is_int'</span>,
+	<span class="php-quote">'integer'</span> =&gt; <span class="php-quote">'is_int'</span>,
+	<span class="php-quote">'float'</span> =&gt; <span class="php-quote">'is_float'</span>,
+	<span class="php-quote">'number'</span> =&gt; <span class="php-keyword1">NULL</span>, <span class="php-comment">// is_int || is_float,</span>
+	<span class="php-quote">'numeric'</span> =&gt; <span class="php-keyword1">array</span>(__CLASS__, <span class="php-quote">'isNumeric'</span>),
+	<span class="php-quote">'numericint'</span> =&gt; <span class="php-keyword1">array</span>(__CLASS__, <span class="php-quote">'isNumericInt'</span>),
+	<span class="php-quote">'string'</span> =&gt;  <span class="php-quote">'is_string'</span>,
+	<span class="php-quote">'unicode'</span> =&gt; <span class="php-keyword1">array</span>(__CLASS__, <span class="php-quote">'isUnicode'</span>),
+	<span class="php-quote">'array'</span> =&gt; <span class="php-quote">'is_array'</span>,
+	<span class="php-quote">'list'</span> =&gt; <span class="php-keyword1">array</span>(<span class="php-quote">'Nette\Utils\Arrays'</span>, <span class="php-quote">'isList'</span>),
+	<span class="php-quote">'object'</span> =&gt; <span class="php-quote">'is_object'</span>,
+	<span class="php-quote">'resource'</span> =&gt; <span class="php-quote">'is_resource'</span>,
+	<span class="php-quote">'scalar'</span> =&gt; <span class="php-quote">'is_scalar'</span>,
+	<span class="php-quote">'callable'</span> =&gt; <span class="php-keyword1">array</span>(__CLASS__, <span class="php-quote">'isCallable'</span>),
+	<span class="php-quote">'null'</span> =&gt; <span class="php-quote">'is_null'</span>,
+	<span class="php-quote">'email'</span> =&gt; <span class="php-keyword1">array</span>(__CLASS__, <span class="php-quote">'isEmail'</span>),
+	<span class="php-quote">'url'</span> =&gt; <span class="php-keyword1">array</span>(__CLASS__, <span class="php-quote">'isUrl'</span>),
+	<span class="php-quote">'none'</span> =&gt; <span class="php-keyword1">array</span>(__CLASS__, <span class="php-quote">'isNone'</span>),
+	<span class="php-quote">'type'</span> =&gt; <span class="php-keyword1">array</span>(__CLASS__, <span class="php-quote">'isType'</span>),
+	<span class="php-quote">'identifier'</span> =&gt; <span class="php-keyword1">array</span>(__CLASS__, <span class="php-quote">'isPhpIdentifier'</span>),
+	<span class="php-quote">'pattern'</span> =&gt; <span class="php-keyword1">NULL</span>,
+	<span class="php-quote">'alnum'</span> =&gt; <span class="php-quote">'ctype_alnum'</span>,
+	<span class="php-quote">'alpha'</span> =&gt; <span class="php-quote">'ctype_alpha'</span>,
+	<span class="php-quote">'digit'</span> =&gt; <span class="php-quote">'ctype_digit'</span>,
+	<span class="php-quote">'lower'</span> =&gt; <span class="php-quote">'ctype_lower'</span>,
+	<span class="php-quote">'upper'</span> =&gt; <span class="php-quote">'ctype_upper'</span>,
+	<span class="php-quote">'space'</span> =&gt; <span class="php-quote">'ctype_space'</span>,
+	<span class="php-quote">'xdigit'</span> =&gt; <span class="php-quote">'ctype_xdigit'</span>,
+)</code></td>
+		<td class="description"><div>
+			<a href="Nette.Utils.Validators.html#$validators" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="counters" id="$counters">
+		<td class="attributes"><code>
+			protected static 
+			array
+		</code></td>
+
+		<td class="name">
+				<a href="source-Utils.Validators.php.html#53-65" title="Go to source code"><var>$counters</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">array</span>(
+	<span class="php-quote">'string'</span> =&gt;  <span class="php-quote">'strlen'</span>,
+	<span class="php-quote">'unicode'</span> =&gt; <span class="php-keyword1">array</span>(<span class="php-quote">'Nette\Utils\Strings'</span>, <span class="php-quote">'length'</span>),
+	<span class="php-quote">'array'</span> =&gt; <span class="php-quote">'count'</span>,
+	<span class="php-quote">'list'</span> =&gt; <span class="php-quote">'count'</span>,
+	<span class="php-quote">'alnum'</span> =&gt; <span class="php-quote">'strlen'</span>,
+	<span class="php-quote">'alpha'</span> =&gt; <span class="php-quote">'strlen'</span>,
+	<span class="php-quote">'digit'</span> =&gt; <span class="php-quote">'strlen'</span>,
+	<span class="php-quote">'lower'</span> =&gt; <span class="php-quote">'strlen'</span>,
+	<span class="php-quote">'space'</span> =&gt; <span class="php-quote">'strlen'</span>,
+	<span class="php-quote">'upper'</span> =&gt; <span class="php-quote">'strlen'</span>,
+	<span class="php-quote">'xdigit'</span> =&gt; <span class="php-quote">'strlen'</span>,
+)</code></td>
+		<td class="description"><div>
+			<a href="Nette.Utils.Validators.html#$counters" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+	<table class="summary inherited">
+	<caption>Magic properties inherited from <a href="Nette.Object.html#properties">Nette\Object</a></caption>
+	<tr>
+		<td><code>
+			<a href="Nette.Object.html#m$reflection"><var>$reflection</var></a>
+		</code></td>
+	</tr>
+	</table>
+
+
+</div>
+
+	<div id="footer">
+		Nette 2.2.2 API API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+	</div>
+</div>
+</div>
+<script src="resources/combined.js?3630868369"></script>
+<script src="elementlist.js?2087501429"></script>
+</body>
+</html>

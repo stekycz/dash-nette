@@ -1,0 +1,1196 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="generator" content="ApiGen 2.8.0">
+
+	<title>Deprecated Class Nette\Environment | Nette 2.2.2 API</title>
+
+	<link rel="stylesheet" href="resources/style.css?3746977979">
+	<link rel="search" type="application/opensearchdescription+xml" title="Nette 2.2.2 API" href="http://api.nette.org/2.0/opensearch.xml">
+
+
+<script src='http://files.nette.org/js/analytics.js'></script><script>
+_ga.create('UA-95238-14', '.nette.org');
+_gaq.push(['_trackPageview']);
+</script>
+</head>
+
+<body>
+<div id="left">
+	<div id="menu">
+
+		<div id="groups">
+			<h3>Namespaces</h3>
+			<ul>
+				<li><a href="namespace-Latte.html">Latte<span></span></a>
+						<ul>
+				<li><a href="namespace-Latte.Loaders.html">Loaders</a>
+						</li>
+				<li><a href="namespace-Latte.Macros.html">Macros</a>
+						</li>
+				<li><a href="namespace-Latte.Runtime.html">Runtime</a>
+						</li>
+							</ul></li>
+				<li class="active"><a href="namespace-Nette.html">Nette<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.Application.html">Application<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.Application.Responses.html">Responses</a>
+						</li>
+				<li><a href="namespace-Nette.Application.Routers.html">Routers</a>
+						</li>
+				<li><a href="namespace-Nette.Application.UI.html">UI</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.Bridges.html">Bridges<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.Bridges.ApplicationLatte.html">ApplicationLatte</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.ApplicationTracy.html">ApplicationTracy</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.CacheLatte.html">CacheLatte</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.DatabaseDI.html">DatabaseDI</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.DatabaseTracy.html">DatabaseTracy</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.DITracy.html">DITracy</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.FormsLatte.html">FormsLatte</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.Framework.html">Framework</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.HttpTracy.html">HttpTracy</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.SecurityTracy.html">SecurityTracy</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.Caching.html">Caching<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.Caching.Storages.html">Storages</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.ComponentModel.html">ComponentModel</a>
+						</li>
+				<li><a href="namespace-Nette.Database.html">Database<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.Database.Drivers.html">Drivers</a>
+						</li>
+				<li><a href="namespace-Nette.Database.Reflection.html">Reflection</a>
+						</li>
+				<li><a href="namespace-Nette.Database.Table.html">Table</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.DI.html">DI<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.DI.Config.html">Config<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.DI.Config.Adapters.html">Adapters</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.DI.Extensions.html">Extensions</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.Diagnostics.html">Diagnostics</a>
+						</li>
+				<li><a href="namespace-Nette.Forms.html">Forms<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.Forms.Controls.html">Controls</a>
+						</li>
+				<li><a href="namespace-Nette.Forms.Rendering.html">Rendering</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.Http.html">Http</a>
+						</li>
+				<li><a href="namespace-Nette.Iterators.html">Iterators</a>
+						</li>
+				<li><a href="namespace-Nette.Latte.html">Latte</a>
+						</li>
+				<li><a href="namespace-Nette.Loaders.html">Loaders</a>
+						</li>
+				<li><a href="namespace-Nette.Localization.html">Localization</a>
+						</li>
+				<li><a href="namespace-Nette.Mail.html">Mail</a>
+						</li>
+				<li><a href="namespace-Nette.Neon.html">Neon</a>
+						</li>
+				<li><a href="namespace-Nette.PhpGenerator.html">PhpGenerator</a>
+						</li>
+				<li><a href="namespace-Nette.Reflection.html">Reflection</a>
+						</li>
+				<li><a href="namespace-Nette.Security.html">Security</a>
+						</li>
+				<li><a href="namespace-Nette.Templating.html">Templating</a>
+						</li>
+				<li><a href="namespace-Nette.Utils.html">Utils</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-NetteModule.html">NetteModule</a>
+						</li>
+				<li><a href="namespace-none.html">none</a>
+						</li>
+				<li><a href="namespace-Tracy.html">Tracy</a>
+						</li>
+			</ul>
+		</div>
+
+		<hr>
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="Nette.Callback.html" class="deprecated">Callback</a></li>
+				<li><a href="Nette.Configurator.html">Configurator</a></li>
+				<li class="active"><a href="Nette.Environment.html" class="deprecated">Environment</a></li>
+				<li><a href="Nette.Framework.html">Framework</a></li>
+				<li><a href="Nette.FreezableObject.html" class="deprecated">FreezableObject</a></li>
+				<li><a href="Nette.Object.html">Object</a></li>
+			</ul>
+
+			<h3>Interfaces</h3>
+			<ul>
+				<li><a href="Nette.IFreezable.html" class="deprecated">IFreezable</a></li>
+			</ul>
+
+
+			<h3>Exceptions</h3>
+			<ul>
+				<li><a href="Nette.ArgumentOutOfRangeException.html">ArgumentOutOfRangeException</a></li>
+				<li><a href="Nette.DeprecatedException.html">DeprecatedException</a></li>
+				<li><a href="Nette.DirectoryNotFoundException.html">DirectoryNotFoundException</a></li>
+				<li><a href="Nette.FileNotFoundException.html">FileNotFoundException</a></li>
+				<li><a href="Nette.InvalidArgumentException.html">InvalidArgumentException</a></li>
+				<li><a href="Nette.InvalidStateException.html">InvalidStateException</a></li>
+				<li><a href="Nette.IOException.html">IOException</a></li>
+				<li><a href="Nette.MemberAccessException.html">MemberAccessException</a></li>
+				<li><a href="Nette.NotImplementedException.html">NotImplementedException</a></li>
+				<li><a href="Nette.NotSupportedException.html">NotSupportedException</a></li>
+				<li><a href="Nette.OutOfRangeException.html">OutOfRangeException</a></li>
+				<li><a href="Nette.StaticClassException.html">StaticClassException</a></li>
+				<li><a href="Nette.UnexpectedValueException.html">UnexpectedValueException</a></li>
+			</ul>
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form action="http://www.google.com/cse" id="search">
+		<input type="hidden" name="cx" value="011549293477758430224:vxofa9ufnhc">
+		<input type="hidden" name="ie" value="UTF-8">
+		<input type="text" name="q" class="text">
+		<input type="submit" value="Search">
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+				<a href="namespace-Nette.html" title="Summary of Nette"><span>Namespace</span></a>
+			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+			<li>
+				<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions"><span>Tree</span></a>
+			</li>
+			<li>
+				<a href="deprecated.html" title="List of deprecated elements"><span>Deprecated</span></a>
+			</li>
+		</ul>
+		<ul><li><a href="http://api.nette.org/releases"><span>Other releases</span></a></li><li><a href="http://nette.org"><span>Nette homepage</span></a></li></ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1 class="deprecated">Class Environment</h1>
+
+
+	<div class="description">
+	
+<p>Nette environment and configuration.</p>
+
+	</div>
+
+
+
+
+
+
+
+
+
+	<div class="info">
+		
+		
+		<b>Namespace:</b> <a href="namespace-Nette.html">Nette</a><br>
+		
+
+				<b>Deprecated</b>
+				<br>
+				<b>Author:</b>
+				David Grudl<br>
+		<b>Located at</b> <a href="source-deprecated.Environment.php.html#13-331" title="Go to source code">deprecated/Environment.php</a><br>
+	</div>
+
+
+
+	<table class="summary" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="__construct" id="___construct" class="deprecated">
+
+		<td class="attributes"><code>
+			final public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Environment.html#___construct">#</a>
+		<code><a href="source-deprecated.Environment.php.html#36-42" title="Go to source code">__construct</a>( )</code>
+
+		<div class="description short">
+			
+<p>Static class - cannot be instantiated.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Static class - cannot be instantiated.</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="isConsole" id="_isConsole" class="deprecated">
+
+		<td class="attributes"><code>
+			 public static
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Environment.html#_isConsole">#</a>
+		<code><a href="source-deprecated.Environment.php.html#48-55" title="Go to source code">isConsole</a>( )</code>
+
+		<div class="description short">
+			
+<p>Detects console (non-HTTP) mode.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Detects console (non-HTTP) mode.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="isProduction" id="_isProduction" class="deprecated">
+
+		<td class="attributes"><code>
+			 public static
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Environment.html#_isProduction">#</a>
+		<code><a href="source-deprecated.Environment.php.html#58-68" title="Go to source code">isProduction</a>( )</code>
+
+		<div class="description short">
+			
+<p>Determines whether a server is running in production mode.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Determines whether a server is running in production mode.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setProductionMode" id="_setProductionMode" class="deprecated">
+
+		<td class="attributes"><code>
+			 public static
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Environment.html#_setProductionMode">#</a>
+		<code><a href="source-deprecated.Environment.php.html#71-79" title="Go to source code">setProductionMode</a>( <span>boolean <var>$value</var> = <span class="php-keyword1">TRUE</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Enables or disables production mode.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Enables or disables production mode.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$value</var></dt>
+					<dd><code>boolean</code></dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setVariable" id="_setVariable" class="deprecated">
+
+		<td class="attributes"><code>
+			 public static
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Environment.html#_setVariable">#</a>
+		<code><a href="source-deprecated.Environment.php.html#85-98" title="Go to source code">setVariable</a>( <span>string <var>$name</var></span>, <span>mixed <var>$value</var></span>, <span>boolean <var>$expand</var> = <span class="php-keyword1">TRUE</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Sets the environment variable.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Sets the environment variable.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$name</var></dt>
+					<dd><code>string</code></dd>
+					<dt><var>$value</var></dt>
+					<dd><code>mixed</code></dd>
+					<dt><var>$expand</var></dt>
+					<dd><code>boolean</code></dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getVariable" id="_getVariable" class="deprecated">
+
+		<td class="attributes"><code>
+			 public static
+			mixed
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Environment.html#_getVariable">#</a>
+		<code><a href="source-deprecated.Environment.php.html#101-117" title="Go to source code">getVariable</a>( <span>string <var>$name</var></span>, <span>mixed <var>$default</var> = <span class="php-keyword1">NULL</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Returns the value of an environment variable or $default if there is no
+element set.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns the value of an environment variable or $default if there is no
+element set.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$name</var></dt>
+					<dd><code>string</code></dd>
+					<dt><var>$default</var></dt>
+					<dd><code>mixed</code><br>default value to use if key not found</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>mixed</code><br>
+				</div>
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><code><a href="Nette.InvalidStateException.html">Nette\InvalidStateException</a></code></code><br>
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getVariables" id="_getVariables" class="deprecated">
+
+		<td class="attributes"><code>
+			 public static
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Environment.html#_getVariables">#</a>
+		<code><a href="source-deprecated.Environment.php.html#120-127" title="Go to source code">getVariables</a>( )</code>
+
+		<div class="description short">
+			
+<p>Returns the all environment variables.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns the all environment variables.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>array</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="expand" id="_expand" class="deprecated">
+
+		<td class="attributes"><code>
+			 public static
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Environment.html#_expand">#</a>
+		<code><a href="source-deprecated.Environment.php.html#130-139" title="Go to source code">expand</a>( <span>string <var>$s</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Returns expanded variable.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns expanded variable.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$s</var></dt>
+					<dd><code>string</code></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>
+				</div>
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><code><a href="Nette.InvalidStateException.html">Nette\InvalidStateException</a></code></code><br>
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setContext" id="_setContext" class="deprecated">
+
+		<td class="attributes"><code>
+			 public static
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Environment.html#_setContext">#</a>
+		<code><a href="source-deprecated.Environment.php.html#145-155" title="Go to source code">setContext</a>( <span><code><a href="Nette.DI.Container.html">Nette\DI\Container</a></code> <var>$context</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Sets initial instance of context.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Sets initial instance of context.</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getContext" id="_getContext" class="deprecated">
+
+		<td class="attributes"><code>
+			 public static
+			SystemContainer|<code><a href="Nette.DI.Container.html">Nette\DI\Container</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Environment.html#_getContext">#</a>
+		<code><a href="source-deprecated.Environment.php.html#158-168" title="Go to source code">getContext</a>( )</code>
+
+		<div class="description short">
+			
+<p>Get initial instance of context.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Get initial instance of context.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>SystemContainer|<code><a href="Nette.DI.Container.html">Nette\DI\Container</a></code></code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getService" id="_getService" class="deprecated">
+
+		<td class="attributes"><code>
+			 public static
+			object
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Environment.html#_getService">#</a>
+		<code><a href="source-deprecated.Environment.php.html#171-179" title="Go to source code">getService</a>( <span>string <var>$name</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Gets the service object of the specified type.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Gets the service object of the specified type.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$name</var></dt>
+					<dd><code>string</code><br>service name</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>object</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="__callStatic" id="___callStatic" class="deprecated">
+
+		<td class="attributes"><code>
+			 public static
+			object
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Environment.html#___callStatic">#</a>
+		<code><a href="source-deprecated.Environment.php.html#182-195" title="Go to source code">__callStatic</a>( <span>string <var>$name</var></span>, <span>array <var>$args</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Calling to undefined static method.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Calling to undefined static method.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$name</var></dt>
+					<dd><code>string</code><br>method name</dd>
+					<dt><var>$args</var></dt>
+					<dd><code>array</code><br>arguments</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>object</code><br>service<br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getHttpRequest" id="_getHttpRequest" class="deprecated">
+
+		<td class="attributes"><code>
+			 public static
+			<code><a href="Nette.Http.Request.html">Nette\Http\Request</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Environment.html#_getHttpRequest">#</a>
+		<code><a href="source-deprecated.Environment.php.html#198-204" title="Go to source code">getHttpRequest</a>( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="Nette.Http.Request.html">Nette\Http\Request</a></code></code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getHttpContext" id="_getHttpContext" class="deprecated">
+
+		<td class="attributes"><code>
+			 public static
+			<code><a href="Nette.Http.Context.html">Nette\Http\Context</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Environment.html#_getHttpContext">#</a>
+		<code><a href="source-deprecated.Environment.php.html#207-213" title="Go to source code">getHttpContext</a>( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="Nette.Http.Context.html">Nette\Http\Context</a></code></code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getHttpResponse" id="_getHttpResponse" class="deprecated">
+
+		<td class="attributes"><code>
+			 public static
+			<code><a href="Nette.Http.Response.html">Nette\Http\Response</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Environment.html#_getHttpResponse">#</a>
+		<code><a href="source-deprecated.Environment.php.html#216-222" title="Go to source code">getHttpResponse</a>( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="Nette.Http.Response.html">Nette\Http\Response</a></code></code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getApplication" id="_getApplication" class="deprecated">
+
+		<td class="attributes"><code>
+			 public static
+			<code><a href="Nette.Application.Application.html">Nette\Application\Application</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Environment.html#_getApplication">#</a>
+		<code><a href="source-deprecated.Environment.php.html#225-231" title="Go to source code">getApplication</a>( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="Nette.Application.Application.html">Nette\Application\Application</a></code></code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getUser" id="_getUser" class="deprecated">
+
+		<td class="attributes"><code>
+			 public static
+			<code><a href="Nette.Security.User.html">Nette\Security\User</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Environment.html#_getUser">#</a>
+		<code><a href="source-deprecated.Environment.php.html#234-240" title="Go to source code">getUser</a>( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="Nette.Security.User.html">Nette\Security\User</a></code></code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getRobotLoader" id="_getRobotLoader" class="deprecated">
+
+		<td class="attributes"><code>
+			 public static
+			<code><a href="Nette.Loaders.RobotLoader.html">Nette\Loaders\RobotLoader</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Environment.html#_getRobotLoader">#</a>
+		<code><a href="source-deprecated.Environment.php.html#243-249" title="Go to source code">getRobotLoader</a>( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="Nette.Loaders.RobotLoader.html">Nette\Loaders\RobotLoader</a></code></code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getCache" id="_getCache" class="deprecated">
+
+		<td class="attributes"><code>
+			 public static
+			<code><a href="Nette.Caching.Cache.html">Nette\Caching\Cache</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Environment.html#_getCache">#</a>
+		<code><a href="source-deprecated.Environment.php.html#255-262" title="Go to source code">getCache</a>( <span>string <var>$namespace</var> = <span class="php-quote">''</span></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$namespace</var></dt>
+					<dd><code>string</code></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="Nette.Caching.Cache.html">Nette\Caching\Cache</a></code></code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getSession" id="_getSession" class="deprecated">
+
+		<td class="attributes"><code>
+			 public static
+			<code><a href="Nette.Http.Session.html">Nette\Http\Session</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Environment.html#_getSession">#</a>
+		<code><a href="source-deprecated.Environment.php.html#265-275" title="Go to source code">getSession</a>( <span>string <var>$namespace</var> = <span class="php-keyword1">NULL</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Returns instance of session or session namespace.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns instance of session or session namespace.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$namespace</var></dt>
+					<dd><code>string</code></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="Nette.Http.Session.html">Nette\Http\Session</a></code></code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="loadConfig" id="_loadConfig" class="deprecated">
+
+		<td class="attributes"><code>
+			 public static
+			<code><a href="Nette.Utils.ArrayHash.html">Nette\Utils\ArrayHash</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Environment.html#_loadConfig">#</a>
+		<code><a href="source-deprecated.Environment.php.html#281-312" title="Go to source code">loadConfig</a>( <span>string <var>$file</var> = <span class="php-keyword1">NULL</span></span>, <span>string <var>$section</var> = <span class="php-keyword1">NULL</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Loads global configuration from file and process it.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Loads global configuration from file and process it.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$file</var></dt>
+					<dd><code>string</code></dd>
+					<dt><var>$section</var></dt>
+					<dd><code>string</code></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="Nette.Utils.ArrayHash.html">Nette\Utils\ArrayHash</a></code></code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getConfig" id="_getConfig" class="deprecated">
+
+		<td class="attributes"><code>
+			 public static
+			mixed
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Environment.html#_getConfig">#</a>
+		<code><a href="source-deprecated.Environment.php.html#315-329" title="Go to source code">getConfig</a>( <span>string <var>$key</var> = <span class="php-keyword1">NULL</span></span>, <span>mixed <var>$default</var> = <span class="php-keyword1">NULL</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Returns the global configuration.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns the global configuration.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$key</var></dt>
+					<dd><code>string</code><br>key</dd>
+					<dt><var>$default</var></dt>
+					<dd><code>mixed</code><br>default value</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>mixed</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+	<table class="summary" id="constants">
+	<caption>Constants summary</caption>
+	<tr data-order="DEVELOPMENT" id="DEVELOPMENT">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name"><code>
+				<a href="source-deprecated.Environment.php.html#21-22" title="Go to source code"><b>DEVELOPMENT</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-quote">'development'</span></code></td>
+		<td class="description"><div>
+			<a href="Nette.Environment.html#DEVELOPMENT" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>environment name</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>environment name</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="PRODUCTION" id="PRODUCTION">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name"><code>
+				<a href="source-deprecated.Environment.php.html#22-23" title="Go to source code"><b>PRODUCTION</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-quote">'production'</span></code></td>
+		<td class="description"><div>
+			<a href="Nette.Environment.html#PRODUCTION" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>environment name</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>environment name</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="CONSOLE" id="CONSOLE">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name"><code>
+				<a href="source-deprecated.Environment.php.html#23-24" title="Go to source code"><b>CONSOLE</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-quote">'console'</span></code></td>
+		<td class="description"><div>
+			<a href="Nette.Environment.html#CONSOLE" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>environment name</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>environment name</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+
+
+</div>
+
+	<div id="footer">
+		Nette 2.2.2 API API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+	</div>
+</div>
+</div>
+<script src="resources/combined.js?3630868369"></script>
+<script src="elementlist.js?2087501429"></script>
+</body>
+</html>

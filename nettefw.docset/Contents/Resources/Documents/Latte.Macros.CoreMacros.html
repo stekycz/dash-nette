@@ -1,0 +1,1066 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="generator" content="ApiGen 2.8.0">
+
+	<title>Class Latte\Macros\CoreMacros | Nette 2.2.2 API</title>
+
+	<link rel="stylesheet" href="resources/style.css?3746977979">
+	<link rel="search" type="application/opensearchdescription+xml" title="Nette 2.2.2 API" href="http://api.nette.org/2.0/opensearch.xml">
+
+
+<script src='http://files.nette.org/js/analytics.js'></script><script>
+_ga.create('UA-95238-14', '.nette.org');
+_gaq.push(['_trackPageview']);
+</script>
+</head>
+
+<body>
+<div id="left">
+	<div id="menu">
+
+		<div id="groups">
+			<h3>Namespaces</h3>
+			<ul>
+				<li class="active"><a href="namespace-Latte.html">Latte<span></span></a>
+						<ul>
+				<li><a href="namespace-Latte.Loaders.html">Loaders</a>
+						</li>
+				<li class="active"><a href="namespace-Latte.Macros.html">Macros</a>
+						</li>
+				<li><a href="namespace-Latte.Runtime.html">Runtime</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.html">Nette<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.Application.html">Application<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.Application.Responses.html">Responses</a>
+						</li>
+				<li><a href="namespace-Nette.Application.Routers.html">Routers</a>
+						</li>
+				<li><a href="namespace-Nette.Application.UI.html">UI</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.Bridges.html">Bridges<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.Bridges.ApplicationLatte.html">ApplicationLatte</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.ApplicationTracy.html">ApplicationTracy</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.CacheLatte.html">CacheLatte</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.DatabaseDI.html">DatabaseDI</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.DatabaseTracy.html">DatabaseTracy</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.DITracy.html">DITracy</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.FormsLatte.html">FormsLatte</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.Framework.html">Framework</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.HttpTracy.html">HttpTracy</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.SecurityTracy.html">SecurityTracy</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.Caching.html">Caching<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.Caching.Storages.html">Storages</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.ComponentModel.html">ComponentModel</a>
+						</li>
+				<li><a href="namespace-Nette.Database.html">Database<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.Database.Drivers.html">Drivers</a>
+						</li>
+				<li><a href="namespace-Nette.Database.Reflection.html">Reflection</a>
+						</li>
+				<li><a href="namespace-Nette.Database.Table.html">Table</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.DI.html">DI<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.DI.Config.html">Config<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.DI.Config.Adapters.html">Adapters</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.DI.Extensions.html">Extensions</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.Diagnostics.html">Diagnostics</a>
+						</li>
+				<li><a href="namespace-Nette.Forms.html">Forms<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.Forms.Controls.html">Controls</a>
+						</li>
+				<li><a href="namespace-Nette.Forms.Rendering.html">Rendering</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.Http.html">Http</a>
+						</li>
+				<li><a href="namespace-Nette.Iterators.html">Iterators</a>
+						</li>
+				<li><a href="namespace-Nette.Latte.html">Latte</a>
+						</li>
+				<li><a href="namespace-Nette.Loaders.html">Loaders</a>
+						</li>
+				<li><a href="namespace-Nette.Localization.html">Localization</a>
+						</li>
+				<li><a href="namespace-Nette.Mail.html">Mail</a>
+						</li>
+				<li><a href="namespace-Nette.Neon.html">Neon</a>
+						</li>
+				<li><a href="namespace-Nette.PhpGenerator.html">PhpGenerator</a>
+						</li>
+				<li><a href="namespace-Nette.Reflection.html">Reflection</a>
+						</li>
+				<li><a href="namespace-Nette.Security.html">Security</a>
+						</li>
+				<li><a href="namespace-Nette.Templating.html">Templating</a>
+						</li>
+				<li><a href="namespace-Nette.Utils.html">Utils</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-NetteModule.html">NetteModule</a>
+						</li>
+				<li><a href="namespace-none.html">none</a>
+						</li>
+				<li><a href="namespace-Tracy.html">Tracy</a>
+						</li>
+			</ul>
+		</div>
+
+		<hr>
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="Latte.Macros.BlockMacros.html">BlockMacros</a></li>
+				<li class="active"><a href="Latte.Macros.CoreMacros.html">CoreMacros</a></li>
+				<li><a href="Latte.Macros.MacroSet.html">MacroSet</a></li>
+			</ul>
+
+
+
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form action="http://www.google.com/cse" id="search">
+		<input type="hidden" name="cx" value="011549293477758430224:vxofa9ufnhc">
+		<input type="hidden" name="ie" value="UTF-8">
+		<input type="text" name="q" class="text">
+		<input type="submit" value="Search">
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+				<a href="namespace-Latte.Macros.html" title="Summary of Latte\Macros"><span>Namespace</span></a>
+			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+			<li>
+				<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions"><span>Tree</span></a>
+			</li>
+			<li>
+				<a href="deprecated.html" title="List of deprecated elements"><span>Deprecated</span></a>
+			</li>
+		</ul>
+		<ul><li><a href="http://api.nette.org/releases"><span>Other releases</span></a></li><li><a href="http://nette.org"><span>Nette homepage</span></a></li></ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Class CoreMacros</h1>
+
+
+	<div class="description">
+	
+<p>Basic macros for Latte.</p>
+
+<ul>
+	<li>{if ?} ... {elseif ?} ... {else} ... {/if}</li>
+
+	<li>{ifset ?} ... {elseifset ?} ... {/ifset}</li>
+
+	<li>{for ?} ... {/for}</li>
+
+	<li>{foreach ?} ... {/foreach}</li>
+
+	<li>{$variable} with escaping</li>
+
+	<li>{=expression} echo with escaping</li>
+
+	<li>{?expression} evaluate PHP statement</li>
+
+	<li>{_expression} echo translation with escaping</li>
+
+	<li>{attr ?} HTML element attributes</li>
+
+	<li>{capture ?} ... {/capture} capture block to parameter</li>
+
+	<li>{var var =&gt; value} set template parameter</li>
+
+	<li>{default var =&gt; value} set default template parameter</li>
+
+	<li>{dump $var}</li>
+
+	<li>{debugbreak}</li>
+
+	<li>{contentType ...} HTTP Content-Type header</li>
+
+	<li>{status ...} HTTP status</li>
+
+	<li>{l} {r} to display { }</li>
+</ul>
+
+	</div>
+
+	<dl class="tree">
+		<dd style="padding-left:0px">
+			<a href="Latte.Object.html"><span>Latte\Object</span></a>
+			
+			
+			
+		</dd>
+		<dd style="padding-left:30px">
+			<img src="resources/inherit.png" alt="Extended by">
+			<a href="Latte.Macros.MacroSet.html"><span>Latte\Macros\MacroSet</span></a>
+			
+			 implements 
+				<a href="Latte.IMacro.html"><span>Latte\IMacro</span></a>
+			
+			
+		</dd>
+		<dd style="padding-left:60px">
+			<img src="resources/inherit.png" alt="Extended by">
+<b><span>Latte\Macros\CoreMacros</span></b>			
+			
+			
+		</dd>
+	</dl>
+
+
+
+
+
+
+
+
+	<div class="info">
+		
+		
+		<b>Namespace:</b> <a href="namespace-Latte.html">Latte</a>\<a href="namespace-Latte.Macros.html">Macros</a><br>
+		
+
+				<b>Author:</b>
+				David Grudl<br>
+		<b>Located at</b> <a href="source-Latte.Macros.CoreMacros.php.html#16-422" title="Go to source code">Latte/Macros/CoreMacros.php</a><br>
+	</div>
+
+
+
+	<table class="summary" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="install" id="_install">
+
+		<td class="attributes"><code>
+			 public static
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Latte.Macros.CoreMacros.html#_install">#</a>
+		<code><a href="source-Latte.Macros.CoreMacros.php.html#43-85" title="Go to source code">install</a>( <span><code><a href="Latte.Compiler.html">Latte\Compiler</a></code> <var>$compiler</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="finalize" id="_finalize">
+
+		<td class="attributes"><code>
+			 public 
+			array(prolog,
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Latte.Macros.CoreMacros.html#_finalize">#</a>
+		<code><a href="source-Latte.Macros.CoreMacros.php.html#88-98" title="Go to source code">finalize</a>( )</code>
+
+		<div class="description short">
+			
+<p>Finishes template parsing.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Finishes template parsing.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>array(prolog,</code><br>epilog)<br>
+				</div>
+
+
+
+				<h4>Overrides</h4>
+				<div class="list"><code><a href="Latte.Macros.MacroSet.html#_finalize">Latte\Macros\MacroSet::finalize()</a></code></div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="macroIf" id="_macroIf">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Latte.Macros.CoreMacros.html#_macroIf">#</a>
+		<code><a href="source-Latte.Macros.CoreMacros.php.html#104-116" title="Go to source code">macroIf</a>( <span><code><a href="Latte.MacroNode.html">Latte\MacroNode</a></code> <var>$node</var></span>, <span><code><a href="Latte.PhpWriter.html">Latte\PhpWriter</a></code> <var>$writer</var></span> )</code>
+
+		<div class="description short">
+			
+<p>{if ...}</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>{if ...}</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="macroEndIf" id="_macroEndIf">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Latte.Macros.CoreMacros.html#_macroEndIf">#</a>
+		<code><a href="source-Latte.Macros.CoreMacros.php.html#119-135" title="Go to source code">macroEndIf</a>( <span><code><a href="Latte.MacroNode.html">Latte\MacroNode</a></code> <var>$node</var></span>, <span><code><a href="Latte.PhpWriter.html">Latte\PhpWriter</a></code> <var>$writer</var></span> )</code>
+
+		<div class="description short">
+			
+<p>{/if ...}</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>{/if ...}</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="macroElse" id="_macroElse">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Latte.Macros.CoreMacros.html#_macroElse">#</a>
+		<code><a href="source-Latte.Macros.CoreMacros.php.html#138-152" title="Go to source code">macroElse</a>( <span><code><a href="Latte.MacroNode.html">Latte\MacroNode</a></code> <var>$node</var></span>, <span><code><a href="Latte.PhpWriter.html">Latte\PhpWriter</a></code> <var>$writer</var></span> )</code>
+
+		<div class="description short">
+			
+<p>{else}</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>{else}</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="macroIfContent" id="_macroIfContent">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Latte.Macros.CoreMacros.html#_macroIfContent">#</a>
+		<code><a href="source-Latte.Macros.CoreMacros.php.html#155-167" title="Go to source code">macroIfContent</a>( <span><code><a href="Latte.MacroNode.html">Latte\MacroNode</a></code> <var>$node</var></span>, <span><code><a href="Latte.PhpWriter.html">Latte\PhpWriter</a></code> <var>$writer</var></span> )</code>
+
+		<div class="description short">
+			
+<p>n:ifcontent</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>n:ifcontent</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="macroEndIfContent" id="_macroEndIfContent">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Latte.Macros.CoreMacros.html#_macroEndIfContent">#</a>
+		<code><a href="source-Latte.Macros.CoreMacros.php.html#170-182" title="Go to source code">macroEndIfContent</a>( <span><code><a href="Latte.MacroNode.html">Latte\MacroNode</a></code> <var>$node</var></span>, <span><code><a href="Latte.PhpWriter.html">Latte\PhpWriter</a></code> <var>$writer</var></span> )</code>
+
+		<div class="description short">
+			
+<p>n:ifcontent</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>n:ifcontent</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="macroTranslate" id="_macroTranslate">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Latte.Macros.CoreMacros.html#_macroTranslate">#</a>
+		<code><a href="source-Latte.Macros.CoreMacros.php.html#185-199" title="Go to source code">macroTranslate</a>( <span><code><a href="Latte.MacroNode.html">Latte\MacroNode</a></code> <var>$node</var></span>, <span><code><a href="Latte.PhpWriter.html">Latte\PhpWriter</a></code> <var>$writer</var></span> )</code>
+
+		<div class="description short">
+			
+<p>{_$var |modifiers}</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>{_$var |modifiers}</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="macroInclude" id="_macroInclude">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Latte.Macros.CoreMacros.html#_macroInclude">#</a>
+		<code><a href="source-Latte.Macros.CoreMacros.php.html#202-215" title="Go to source code">macroInclude</a>( <span><code><a href="Latte.MacroNode.html">Latte\MacroNode</a></code> <var>$node</var></span>, <span><code><a href="Latte.PhpWriter.html">Latte\PhpWriter</a></code> <var>$writer</var></span> )</code>
+
+		<div class="description short">
+			
+<p>{include "file" [,] [params]}</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>{include "file" [,] [params]}</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="macroUse" id="_macroUse">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Latte.Macros.CoreMacros.html#_macroUse">#</a>
+		<code><a href="source-Latte.Macros.CoreMacros.php.html#218-225" title="Go to source code">macroUse</a>( <span><code><a href="Latte.MacroNode.html">Latte\MacroNode</a></code> <var>$node</var></span>, <span><code><a href="Latte.PhpWriter.html">Latte\PhpWriter</a></code> <var>$writer</var></span> )</code>
+
+		<div class="description short">
+			
+<p>{use class MacroSet}</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>{use class MacroSet}</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="macroCapture" id="_macroCapture">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Latte.Macros.CoreMacros.html#_macroCapture">#</a>
+		<code><a href="source-Latte.Macros.CoreMacros.php.html#228-239" title="Go to source code">macroCapture</a>( <span><code><a href="Latte.MacroNode.html">Latte\MacroNode</a></code> <var>$node</var></span>, <span><code><a href="Latte.PhpWriter.html">Latte\PhpWriter</a></code> <var>$writer</var></span> )</code>
+
+		<div class="description short">
+			
+<p>{capture $variable}</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>{capture $variable}</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="macroCaptureEnd" id="_macroCaptureEnd">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Latte.Macros.CoreMacros.html#_macroCaptureEnd">#</a>
+		<code><a href="source-Latte.Macros.CoreMacros.php.html#242-248" title="Go to source code">macroCaptureEnd</a>( <span><code><a href="Latte.MacroNode.html">Latte\MacroNode</a></code> <var>$node</var></span>, <span><code><a href="Latte.PhpWriter.html">Latte\PhpWriter</a></code> <var>$writer</var></span> )</code>
+
+		<div class="description short">
+			
+<p>{/capture}</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>{/capture}</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="macroEndForeach" id="_macroEndForeach">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Latte.Macros.CoreMacros.html#_macroEndForeach">#</a>
+		<code><a href="source-Latte.Macros.CoreMacros.php.html#251-264" title="Go to source code">macroEndForeach</a>( <span><code><a href="Latte.MacroNode.html">Latte\MacroNode</a></code> <var>$node</var></span>, <span><code><a href="Latte.PhpWriter.html">Latte\PhpWriter</a></code> <var>$writer</var></span> )</code>
+
+		<div class="description short">
+			
+<p>{foreach ...}</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>{foreach ...}</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="macroBreakContinueIf" id="_macroBreakContinueIf">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Latte.Macros.CoreMacros.html#_macroBreakContinueIf">#</a>
+		<code><a href="source-Latte.Macros.CoreMacros.php.html#267-278" title="Go to source code">macroBreakContinueIf</a>( <span><code><a href="Latte.MacroNode.html">Latte\MacroNode</a></code> <var>$node</var></span>, <span><code><a href="Latte.PhpWriter.html">Latte\PhpWriter</a></code> <var>$writer</var></span> )</code>
+
+		<div class="description short">
+			
+<p>{breakIf ...} {continueIf ...}</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>{breakIf ...} {continueIf ...}</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="macroClass" id="_macroClass">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Latte.Macros.CoreMacros.html#_macroClass">#</a>
+		<code><a href="source-Latte.Macros.CoreMacros.php.html#281-287" title="Go to source code">macroClass</a>( <span><code><a href="Latte.MacroNode.html">Latte\MacroNode</a></code> <var>$node</var></span>, <span><code><a href="Latte.PhpWriter.html">Latte\PhpWriter</a></code> <var>$writer</var></span> )</code>
+
+		<div class="description short">
+			
+<p>n:class="..."</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>n:class="..."</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="macroAttr" id="_macroAttr">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Latte.Macros.CoreMacros.html#_macroAttr">#</a>
+		<code><a href="source-Latte.Macros.CoreMacros.php.html#290-296" title="Go to source code">macroAttr</a>( <span><code><a href="Latte.MacroNode.html">Latte\MacroNode</a></code> <var>$node</var></span>, <span><code><a href="Latte.PhpWriter.html">Latte\PhpWriter</a></code> <var>$writer</var></span> )</code>
+
+		<div class="description short">
+			
+<p>n:attr="..."</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>n:attr="..."</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="macroDump" id="_macroDump">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Latte.Macros.CoreMacros.html#_macroDump">#</a>
+		<code><a href="source-Latte.Macros.CoreMacros.php.html#299-307" title="Go to source code">macroDump</a>( <span><code><a href="Latte.MacroNode.html">Latte\MacroNode</a></code> <var>$node</var></span>, <span><code><a href="Latte.PhpWriter.html">Latte\PhpWriter</a></code> <var>$writer</var></span> )</code>
+
+		<div class="description short">
+			
+<p>{dump ...}</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>{dump ...}</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="macroDebugbreak" id="_macroDebugbreak">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Latte.Macros.CoreMacros.html#_macroDebugbreak">#</a>
+		<code><a href="source-Latte.Macros.CoreMacros.php.html#310-317" title="Go to source code">macroDebugbreak</a>( <span><code><a href="Latte.MacroNode.html">Latte\MacroNode</a></code> <var>$node</var></span>, <span><code><a href="Latte.PhpWriter.html">Latte\PhpWriter</a></code> <var>$writer</var></span> )</code>
+
+		<div class="description short">
+			
+<p>{debugbreak ...}</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>{debugbreak ...}</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="macroVar" id="_macroVar">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Latte.Macros.CoreMacros.html#_macroVar">#</a>
+		<code><a href="source-Latte.Macros.CoreMacros.php.html#320-365" title="Go to source code">macroVar</a>( <span><code><a href="Latte.MacroNode.html">Latte\MacroNode</a></code> <var>$node</var></span>, <span><code><a href="Latte.PhpWriter.html">Latte\PhpWriter</a></code> <var>$writer</var></span> )</code>
+
+		<div class="description short">
+			
+<p>{var ...} {default ...}</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>{var ...} {default ...}</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="macroExpr" id="_macroExpr">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Latte.Macros.CoreMacros.html#_macroExpr">#</a>
+		<code><a href="source-Latte.Macros.CoreMacros.php.html#368-375" title="Go to source code">macroExpr</a>( <span><code><a href="Latte.MacroNode.html">Latte\MacroNode</a></code> <var>$node</var></span>, <span><code><a href="Latte.PhpWriter.html">Latte\PhpWriter</a></code> <var>$writer</var></span> )</code>
+
+		<div class="description short">
+			
+<p>{= ...} {? ...}</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>{= ...} {? ...}</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="macroContentType" id="_macroContentType">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Latte.Macros.CoreMacros.html#_macroContentType">#</a>
+		<code><a href="source-Latte.Macros.CoreMacros.php.html#378-409" title="Go to source code">macroContentType</a>( <span><code><a href="Latte.MacroNode.html">Latte\MacroNode</a></code> <var>$node</var></span>, <span><code><a href="Latte.PhpWriter.html">Latte\PhpWriter</a></code> <var>$writer</var></span> )</code>
+
+		<div class="description short">
+			
+<p>{contentType ...}</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>{contentType ...}</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="macroStatus" id="_macroStatus">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Latte.Macros.CoreMacros.html#_macroStatus">#</a>
+		<code><a href="source-Latte.Macros.CoreMacros.php.html#412-420" title="Go to source code">macroStatus</a>( <span><code><a href="Latte.MacroNode.html">Latte\MacroNode</a></code> <var>$node</var></span>, <span><code><a href="Latte.PhpWriter.html">Latte\PhpWriter</a></code> <var>$writer</var></span> )</code>
+
+		<div class="description short">
+			
+<p>{status ...}</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>{status ...}</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+	<table class="summary inherited">
+	<caption>Methods inherited from <a href="Latte.Macros.MacroSet.html#methods">Latte\Macros\MacroSet</a></caption>
+	<tr>
+		<td><code>
+			<a href="Latte.Macros.MacroSet.html#___construct">__construct()</a>, 
+			<a href="Latte.Macros.MacroSet.html#_addMacro">addMacro()</a>, 
+			<a href="Latte.Macros.MacroSet.html#_getCompiler">getCompiler()</a>, 
+			<a href="Latte.Macros.MacroSet.html#_initialize">initialize()</a>, 
+			<a href="Latte.Macros.MacroSet.html#_nodeClosed">nodeClosed()</a>, 
+			<a href="Latte.Macros.MacroSet.html#_nodeOpened">nodeOpened()</a>
+		</code></td>
+	</tr>
+	</table>
+	<table class="summary inherited">
+	<caption>Methods inherited from <a href="Latte.Object.html#methods">Latte\Object</a></caption>
+	<tr>
+		<td><code>
+			<a href="Latte.Object.html#___call">__call()</a>, 
+			<a href="Latte.Object.html#___get">__get()</a>, 
+			<a href="Latte.Object.html#___isset">__isset()</a>, 
+			<a href="Latte.Object.html#___set">__set()</a>, 
+			<a href="Latte.Object.html#___unset">__unset()</a>
+		</code></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+	<div id="footer">
+		Nette 2.2.2 API API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+	</div>
+</div>
+</div>
+<script src="resources/combined.js?3630868369"></script>
+<script src="elementlist.js?2087501429"></script>
+</body>
+</html>

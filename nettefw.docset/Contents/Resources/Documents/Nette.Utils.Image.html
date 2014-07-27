@@ -1,0 +1,4333 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="generator" content="ApiGen 2.8.0">
+
+	<title>Class Nette\Utils\Image | Nette 2.2.2 API</title>
+
+	<link rel="stylesheet" href="resources/style.css?3746977979">
+	<link rel="search" type="application/opensearchdescription+xml" title="Nette 2.2.2 API" href="http://api.nette.org/2.0/opensearch.xml">
+
+
+<script src='http://files.nette.org/js/analytics.js'></script><script>
+_ga.create('UA-95238-14', '.nette.org');
+_gaq.push(['_trackPageview']);
+</script>
+</head>
+
+<body>
+<div id="left">
+	<div id="menu">
+
+		<div id="groups">
+			<h3>Namespaces</h3>
+			<ul>
+				<li><a href="namespace-Latte.html">Latte<span></span></a>
+						<ul>
+				<li><a href="namespace-Latte.Loaders.html">Loaders</a>
+						</li>
+				<li><a href="namespace-Latte.Macros.html">Macros</a>
+						</li>
+				<li><a href="namespace-Latte.Runtime.html">Runtime</a>
+						</li>
+							</ul></li>
+				<li class="active"><a href="namespace-Nette.html">Nette<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.Application.html">Application<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.Application.Responses.html">Responses</a>
+						</li>
+				<li><a href="namespace-Nette.Application.Routers.html">Routers</a>
+						</li>
+				<li><a href="namespace-Nette.Application.UI.html">UI</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.Bridges.html">Bridges<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.Bridges.ApplicationLatte.html">ApplicationLatte</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.ApplicationTracy.html">ApplicationTracy</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.CacheLatte.html">CacheLatte</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.DatabaseDI.html">DatabaseDI</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.DatabaseTracy.html">DatabaseTracy</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.DITracy.html">DITracy</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.FormsLatte.html">FormsLatte</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.Framework.html">Framework</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.HttpTracy.html">HttpTracy</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.SecurityTracy.html">SecurityTracy</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.Caching.html">Caching<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.Caching.Storages.html">Storages</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.ComponentModel.html">ComponentModel</a>
+						</li>
+				<li><a href="namespace-Nette.Database.html">Database<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.Database.Drivers.html">Drivers</a>
+						</li>
+				<li><a href="namespace-Nette.Database.Reflection.html">Reflection</a>
+						</li>
+				<li><a href="namespace-Nette.Database.Table.html">Table</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.DI.html">DI<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.DI.Config.html">Config<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.DI.Config.Adapters.html">Adapters</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.DI.Extensions.html">Extensions</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.Diagnostics.html">Diagnostics</a>
+						</li>
+				<li><a href="namespace-Nette.Forms.html">Forms<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.Forms.Controls.html">Controls</a>
+						</li>
+				<li><a href="namespace-Nette.Forms.Rendering.html">Rendering</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.Http.html">Http</a>
+						</li>
+				<li><a href="namespace-Nette.Iterators.html">Iterators</a>
+						</li>
+				<li><a href="namespace-Nette.Latte.html">Latte</a>
+						</li>
+				<li><a href="namespace-Nette.Loaders.html">Loaders</a>
+						</li>
+				<li><a href="namespace-Nette.Localization.html">Localization</a>
+						</li>
+				<li><a href="namespace-Nette.Mail.html">Mail</a>
+						</li>
+				<li><a href="namespace-Nette.Neon.html">Neon</a>
+						</li>
+				<li><a href="namespace-Nette.PhpGenerator.html">PhpGenerator</a>
+						</li>
+				<li><a href="namespace-Nette.Reflection.html">Reflection</a>
+						</li>
+				<li><a href="namespace-Nette.Security.html">Security</a>
+						</li>
+				<li><a href="namespace-Nette.Templating.html">Templating</a>
+						</li>
+				<li class="active"><a href="namespace-Nette.Utils.html">Utils</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-NetteModule.html">NetteModule</a>
+						</li>
+				<li><a href="namespace-none.html">none</a>
+						</li>
+				<li><a href="namespace-Tracy.html">Tracy</a>
+						</li>
+			</ul>
+		</div>
+
+		<hr>
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="Nette.Utils.ArrayHash.html">ArrayHash</a></li>
+				<li><a href="Nette.Utils.ArrayList.html">ArrayList</a></li>
+				<li><a href="Nette.Utils.Arrays.html">Arrays</a></li>
+				<li><a href="Nette.Utils.Callback.html">Callback</a></li>
+				<li><a href="Nette.Utils.CallbackFilterIterator.html">CallbackFilterIterator</a></li>
+				<li><a href="Nette.Utils.DateTime.html">DateTime</a></li>
+				<li><a href="Nette.Utils.FileSystem.html">FileSystem</a></li>
+				<li><a href="Nette.Utils.Finder.html">Finder</a></li>
+				<li><a href="Nette.Utils.Html.html">Html</a></li>
+				<li class="active"><a href="Nette.Utils.Image.html">Image</a></li>
+				<li><a href="Nette.Utils.Json.html">Json</a></li>
+				<li><a href="Nette.Utils.LimitedScope.html" class="deprecated">LimitedScope</a></li>
+				<li><a href="Nette.Utils.MimeTypeDetector.html" class="deprecated">MimeTypeDetector</a></li>
+				<li><a href="Nette.Utils.ObjectMixin.html">ObjectMixin</a></li>
+				<li><a href="Nette.Utils.Paginator.html">Paginator</a></li>
+				<li><a href="Nette.Utils.Random.html">Random</a></li>
+				<li><a href="Nette.Utils.RecursiveCallbackFilterIterator.html">RecursiveCallbackFilterIterator</a></li>
+				<li><a href="Nette.Utils.Strings.html">Strings</a></li>
+				<li><a href="Nette.Utils.TokenIterator.html">TokenIterator</a></li>
+				<li><a href="Nette.Utils.Tokenizer.html">Tokenizer</a></li>
+				<li><a href="Nette.Utils.Validators.html">Validators</a></li>
+			</ul>
+
+			<h3>Interfaces</h3>
+			<ul>
+				<li><a href="Nette.Utils.IHtmlString.html">IHtmlString</a></li>
+			</ul>
+
+
+			<h3>Exceptions</h3>
+			<ul>
+				<li><a href="Nette.Utils.AssertionException.html">AssertionException</a></li>
+				<li><a href="Nette.Utils.JsonException.html">JsonException</a></li>
+				<li><a href="Nette.Utils.RegexpException.html">RegexpException</a></li>
+				<li><a href="Nette.Utils.TokenizerException.html">TokenizerException</a></li>
+				<li><a href="Nette.Utils.UnknownImageFileException.html">UnknownImageFileException</a></li>
+			</ul>
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form action="http://www.google.com/cse" id="search">
+		<input type="hidden" name="cx" value="011549293477758430224:vxofa9ufnhc">
+		<input type="hidden" name="ie" value="UTF-8">
+		<input type="text" name="q" class="text">
+		<input type="submit" value="Search">
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+				<a href="namespace-Nette.Utils.html" title="Summary of Nette\Utils"><span>Namespace</span></a>
+			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+			<li>
+				<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions"><span>Tree</span></a>
+			</li>
+			<li>
+				<a href="deprecated.html" title="List of deprecated elements"><span>Deprecated</span></a>
+			</li>
+		</ul>
+		<ul><li><a href="http://api.nette.org/releases"><span>Other releases</span></a></li><li><a href="http://nette.org"><span>Nette homepage</span></a></li></ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Class Image</h1>
+
+
+	<div class="description">
+	
+<p>Basic manipulation with images.</p>
+
+<pre>
+<span class="php-var">$image</span> = Image::fromFile(<span
+class="php-quote">'nette.jpg'</span>);
+<span
+class="php-var">$image</span>-&gt;resize(<span class="php-num">150</span>, <span
+class="php-num">100</span>);
+<span
+class="php-var">$image</span>-&gt;sharpen();
+<span
+class="php-var">$image</span>-&gt;send();
+</pre>
+
+	</div>
+
+	<dl class="tree">
+		<dd style="padding-left:0px">
+			<a href="Nette.Object.html"><span>Nette\Object</span></a>
+			
+			
+			
+		</dd>
+		<dd style="padding-left:30px">
+			<img src="resources/inherit.png" alt="Extended by">
+<b><span>Nette\Utils\Image</span></b>			
+			
+			
+		</dd>
+	</dl>
+
+
+
+
+
+
+
+
+	<div class="info">
+		
+		
+		<b>Namespace:</b> <a href="namespace-Nette.html">Nette</a>\<a href="namespace-Nette.Utils.html">Utils</a><br>
+		
+
+				<b>Author:</b>
+				David Grudl<br>
+		<b>Located at</b> <a href="source-Utils.Image.php.html#13-636" title="Go to source code">Utils/Image.php</a><br>
+	</div>
+
+
+
+	<table class="summary" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="rgb" id="_rgb">
+
+		<td class="attributes"><code>
+			 public static
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Utils.Image.html#_rgb">#</a>
+		<code><a href="source-Utils.Image.php.html#129-145" title="Go to source code">rgb</a>( <span>integer <var>$red</var></span>, <span>integer <var>$green</var></span>, <span>integer <var>$blue</var></span>, <span>integer <var>$transparency</var> = <span class="php-num">0</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Returns RGB color.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns RGB color.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$red</var></dt>
+					<dd><code>integer</code><br>red 0..255</dd>
+					<dt><var>$green</var></dt>
+					<dd><code>integer</code><br>green 0..255</dd>
+					<dt><var>$blue</var></dt>
+					<dd><code>integer</code><br>blue 0..255</dd>
+					<dt><var>$transparency</var></dt>
+					<dd><code>integer</code><br>transparency 0..127</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>array</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="fromFile" id="_fromFile">
+
+		<td class="attributes"><code>
+			 public static
+			<code><a href="Nette.Utils.Image.html">Nette\Utils\Image</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Utils.Image.html#_fromFile">#</a>
+		<code><a href="source-Utils.Image.php.html#148-177" title="Go to source code">fromFile</a>( <span>string <var>$file</var></span>, <span>mixed <var>&amp; $format</var> = <span class="php-keyword1">NULL</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Opens image from file.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Opens image from file.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$file</var></dt>
+					<dd><code>string</code></dd>
+					<dt><var>$format</var></dt>
+					<dd><code>mixed</code><br>detected image format</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="Nette.Utils.Image.html">Nette\Utils\Image</a></code></code><br>
+				</div>
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><code><a href="Nette.NotSupportedException.html">Nette\NotSupportedException</a></code></code><br>if gd extension is not loaded<br>
+					<code><code><a href="Nette.Utils.UnknownImageFileException.html">Nette\Utils\UnknownImageFileException</a></code></code><br>if file not found or file type is not known<br>
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getFormatFromString" id="_getFormatFromString">
+
+		<td class="attributes"><code>
+			 public static
+			mixed
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Utils.Image.html#_getFormatFromString">#</a>
+		<code><a href="source-Utils.Image.php.html#180-190" title="Go to source code">getFormatFromString</a>( <span>string <var>$s</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Get format from the image stream in the string.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Get format from the image stream in the string.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$s</var></dt>
+					<dd><code>string</code></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>mixed</code><br>detected image format<br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="fromString" id="_fromString">
+
+		<td class="attributes"><code>
+			 public static
+			<code><a href="Nette.Utils.Image.html">Nette\Utils\Image</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Utils.Image.html#_fromString">#</a>
+		<code><a href="source-Utils.Image.php.html#193-208" title="Go to source code">fromString</a>( <span>string <var>$s</var></span>, <span>mixed <var>&amp; $format</var> = <span class="php-keyword1">NULL</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Create a new image from the image stream in the string.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Create a new image from the image stream in the string.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$s</var></dt>
+					<dd><code>string</code></dd>
+					<dt><var>$format</var></dt>
+					<dd><code>mixed</code><br>detected image format</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="Nette.Utils.Image.html">Nette\Utils\Image</a></code></code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="fromBlank" id="_fromBlank">
+
+		<td class="attributes"><code>
+			 public static
+			<code><a href="Nette.Utils.Image.html">Nette\Utils\Image</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Utils.Image.html#_fromBlank">#</a>
+		<code><a href="source-Utils.Image.php.html#211-239" title="Go to source code">fromBlank</a>( <span>integer <var>$width</var></span>, <span>integer <var>$height</var></span>, <span>array <var>$color</var> = <span class="php-keyword1">NULL</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Creates blank image.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Creates blank image.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$width</var></dt>
+					<dd><code>integer</code></dd>
+					<dt><var>$height</var></dt>
+					<dd><code>integer</code></dd>
+					<dt><var>$color</var></dt>
+					<dd><code>array</code></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="Nette.Utils.Image.html">Nette\Utils\Image</a></code></code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="__construct" id="___construct">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Utils.Image.html#___construct">#</a>
+		<code><a href="source-Utils.Image.php.html#242-250" title="Go to source code">__construct</a>( <span>resource <var>$image</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Wraps GD image.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Wraps GD image.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$image</var></dt>
+					<dd><code>resource</code></dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getWidth" id="_getWidth">
+
+		<td class="attributes"><code>
+			 public 
+			integer
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Utils.Image.html#_getWidth">#</a>
+		<code><a href="source-Utils.Image.php.html#253-260" title="Go to source code">getWidth</a>( )</code>
+
+		<div class="description short">
+			
+<p>Returns image width.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns image width.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>integer</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getHeight" id="_getHeight">
+
+		<td class="attributes"><code>
+			 public 
+			integer
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Utils.Image.html#_getHeight">#</a>
+		<code><a href="source-Utils.Image.php.html#263-270" title="Go to source code">getHeight</a>( )</code>
+
+		<div class="description short">
+			
+<p>Returns image height.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns image height.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>integer</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setImageResource" id="_setImageResource">
+
+		<td class="attributes"><code>
+			 protected 
+			<code><a href="Nette.Utils.Image.html">Nette\Utils\Image</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Utils.Image.html#_setImageResource">#</a>
+		<code><a href="source-Utils.Image.php.html#273-285" title="Go to source code">setImageResource</a>( <span>resource <var>$image</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Sets image resource.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Sets image resource.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$image</var></dt>
+					<dd><code>resource</code></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="Nette.Utils.Image.html">Nette\Utils\Image</a></code></code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getImageResource" id="_getImageResource">
+
+		<td class="attributes"><code>
+			 public 
+			resource
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Utils.Image.html#_getImageResource">#</a>
+		<code><a href="source-Utils.Image.php.html#288-295" title="Go to source code">getImageResource</a>( )</code>
+
+		<div class="description short">
+			
+<p>Returns image GD resource.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns image GD resource.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>resource</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="resize" id="_resize">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="Nette.Utils.Image.html">Nette\Utils\Image</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Utils.Image.html#_resize">#</a>
+		<code><a href="source-Utils.Image.php.html#298-333" title="Go to source code">resize</a>( <span>mixed <var>$width</var></span>, <span>mixed <var>$height</var></span>, <span>integer <var>$flags</var> = <code><a href="Nette.Utils.Image.html#FIT">Nette\Utils\Image::<b>FIT</b></a></code></span> )</code>
+
+		<div class="description short">
+			
+<p>Resizes image.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Resizes image.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$width</var></dt>
+					<dd><code>mixed</code><br>width in pixels or percent</dd>
+					<dt><var>$height</var></dt>
+					<dd><code>mixed</code><br>height in pixels or percent</dd>
+					<dt><var>$flags</var></dt>
+					<dd><code>integer</code><br>flags</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="Nette.Utils.Image.html">Nette\Utils\Image</a></code></code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="calculateSize" id="_calculateSize">
+
+		<td class="attributes"><code>
+			 public static
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Utils.Image.html#_calculateSize">#</a>
+		<code><a href="source-Utils.Image.php.html#336-399" title="Go to source code">calculateSize</a>( <span>mixed <var>$srcWidth</var></span>, <span>mixed <var>$srcHeight</var></span>, <span>mixed <var>$newWidth</var></span>, <span>mixed <var>$newHeight</var></span>, <span>integer <var>$flags</var> = <code><a href="Nette.Utils.Image.html#FIT">Nette\Utils\Image::<b>FIT</b></a></code></span> )</code>
+
+		<div class="description short">
+			
+<p>Calculates dimensions of resized image.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Calculates dimensions of resized image.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$srcWidth</var></dt>
+					<dd><code>mixed</code><br>source width</dd>
+					<dt><var>$srcHeight</var></dt>
+					<dd><code>mixed</code><br>source height</dd>
+					<dt><var>$newWidth</var></dt>
+					<dd><code>mixed</code><br>width in pixels or percent</dd>
+					<dt><var>$newHeight</var></dt>
+					<dd><code>mixed</code><br>height in pixels or percent</dd>
+					<dt><var>$flags</var></dt>
+					<dd><code>integer</code><br>flags</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>array</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="crop" id="_crop">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="Nette.Utils.Image.html">Nette\Utils\Image</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Utils.Image.html#_crop">#</a>
+		<code><a href="source-Utils.Image.php.html#402-417" title="Go to source code">crop</a>( <span>mixed <var>$left</var></span>, <span>mixed <var>$top</var></span>, <span>mixed <var>$width</var></span>, <span>mixed <var>$height</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Crops image.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Crops image.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$left</var></dt>
+					<dd><code>mixed</code><br>x-offset in pixels or percent</dd>
+					<dt><var>$top</var></dt>
+					<dd><code>mixed</code><br>y-offset in pixels or percent</dd>
+					<dt><var>$width</var></dt>
+					<dd><code>mixed</code><br>width in pixels or percent</dd>
+					<dt><var>$height</var></dt>
+					<dd><code>mixed</code><br>height in pixels or percent</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="Nette.Utils.Image.html">Nette\Utils\Image</a></code></code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="calculateCutout" id="_calculateCutout">
+
+		<td class="attributes"><code>
+			 public static
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Utils.Image.html#_calculateCutout">#</a>
+		<code><a href="source-Utils.Image.php.html#420-453" title="Go to source code">calculateCutout</a>( <span>mixed <var>$srcWidth</var></span>, <span>mixed <var>$srcHeight</var></span>, <span>mixed <var>$left</var></span>, <span>mixed <var>$top</var></span>, <span>mixed <var>$newWidth</var></span>, <span>mixed <var>$newHeight</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Calculates dimensions of cutout in image.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Calculates dimensions of cutout in image.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$srcWidth</var></dt>
+					<dd><code>mixed</code><br>source width</dd>
+					<dt><var>$srcHeight</var></dt>
+					<dd><code>mixed</code><br>source height</dd>
+					<dt><var>$left</var></dt>
+					<dd><code>mixed</code><br>x-offset in pixels or percent</dd>
+					<dt><var>$top</var></dt>
+					<dd><code>mixed</code><br>y-offset in pixels or percent</dd>
+					<dt><var>$newWidth</var></dt>
+					<dd><code>mixed</code><br>width in pixels or percent</dd>
+					<dt><var>$newHeight</var></dt>
+					<dd><code>mixed</code><br>height in pixels or percent</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>array</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="sharpen" id="_sharpen">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="Nette.Utils.Image.html">Nette\Utils\Image</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Utils.Image.html#_sharpen">#</a>
+		<code><a href="source-Utils.Image.php.html#456-468" title="Go to source code">sharpen</a>( )</code>
+
+		<div class="description short">
+			
+<p>Sharpen image.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Sharpen image.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="Nette.Utils.Image.html">Nette\Utils\Image</a></code></code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="place" id="_place">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="Nette.Utils.Image.html">Nette\Utils\Image</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Utils.Image.html#_place">#</a>
+		<code><a href="source-Utils.Image.php.html#471-505" title="Go to source code">place</a>( <span><code><a href="Nette.Utils.Image.html">Nette\Utils\Image</a></code> <var>$image</var></span>, <span>mixed <var>$left</var> = <span class="php-num">0</span></span>, <span>mixed <var>$top</var> = <span class="php-num">0</span></span>, <span>integer <var>$opacity</var> = <span class="php-num">100</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Puts another image into this image.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Puts another image into this image.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$image</var></dt>
+					<dd><code><code><a href="Nette.Utils.Image.html">Nette\Utils\Image</a></code></code></dd>
+					<dt><var>$left</var></dt>
+					<dd><code>mixed</code><br>x-coordinate in pixels or percent</dd>
+					<dt><var>$top</var></dt>
+					<dd><code>mixed</code><br>y-coordinate in pixels or percent</dd>
+					<dt><var>$opacity</var></dt>
+					<dd><code>integer</code><br>opacity 0..100</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="Nette.Utils.Image.html">Nette\Utils\Image</a></code></code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="save" id="_save">
+
+		<td class="attributes"><code>
+			 public 
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Utils.Image.html#_save">#</a>
+		<code><a href="source-Utils.Image.php.html#508-546" title="Go to source code">save</a>( <span>string <var>$file</var> = <span class="php-keyword1">NULL</span></span>, <span>integer <var>$quality</var> = <span class="php-keyword1">NULL</span></span>, <span>integer <var>$type</var> = <span class="php-keyword1">NULL</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Saves image to the file.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Saves image to the file.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$file</var></dt>
+					<dd><code>string</code><br>filename</dd>
+					<dt><var>$quality</var></dt>
+					<dd><code>integer</code><br>quality 0..100 (for JPEG and PNG)</dd>
+					<dt><var>$type</var></dt>
+					<dd><code>integer</code><br>optional image type</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br>TRUE on success or FALSE on failure.<br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="toString" id="_toString">
+
+		<td class="attributes"><code>
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Utils.Image.html#_toString">#</a>
+		<code><a href="source-Utils.Image.php.html#549-560" title="Go to source code">toString</a>( <span>integer <var>$type</var> = <code><a href="Nette.Utils.Image.html#JPEG">Nette\Utils\Image::<b>JPEG</b></a></code></span>, <span>integer <var>$quality</var> = <span class="php-keyword1">NULL</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Outputs image to string.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Outputs image to string.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$type</var></dt>
+					<dd><code>integer</code><br>image type</dd>
+					<dt><var>$quality</var></dt>
+					<dd><code>integer</code><br>quality 0..100 (for JPEG and PNG)</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="__toString" id="___toString">
+
+		<td class="attributes"><code>
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Utils.Image.html#___toString">#</a>
+		<code><a href="source-Utils.Image.php.html#563-577" title="Go to source code">__toString</a>( )</code>
+
+		<div class="description short">
+			
+<p>Outputs image to string.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Outputs image to string.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="send" id="_send">
+
+		<td class="attributes"><code>
+			 public 
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Utils.Image.html#_send">#</a>
+		<code><a href="source-Utils.Image.php.html#580-593" title="Go to source code">send</a>( <span>integer <var>$type</var> = <code><a href="Nette.Utils.Image.html#JPEG">Nette\Utils\Image::<b>JPEG</b></a></code></span>, <span>integer <var>$quality</var> = <span class="php-keyword1">NULL</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Outputs image to browser.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Outputs image to browser.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$type</var></dt>
+					<dd><code>integer</code><br>image type</dd>
+					<dt><var>$quality</var></dt>
+					<dd><code>integer</code><br>quality 0..100 (for JPEG and PNG)</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br>TRUE on success or FALSE on failure.<br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="__call" id="___call">
+
+		<td class="attributes"><code>
+			 public 
+			mixed
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Utils.Image.html#___call">#</a>
+		<code><a href="source-Utils.Image.php.html#596-626" title="Go to source code">__call</a>( <span>string <var>$name</var></span>, <span>array <var>$args</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Call to undefined method.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Call to undefined method.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$name</var></dt>
+					<dd><code>string</code><br>method name</dd>
+					<dt><var>$args</var></dt>
+					<dd><code>array</code><br>arguments</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>mixed</code><br>
+				</div>
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code>MemberAccessException</code><br>
+				</div>
+
+
+				<h4>Overrides</h4>
+				<div class="list"><code><a href="Nette.Object.html#___call">Nette\Object::__call()</a></code></div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="__clone" id="___clone">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Utils.Image.html#___clone">#</a>
+		<code><a href="source-Utils.Image.php.html#629-634" title="Go to source code">__clone</a>( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+	<table class="summary inherited">
+	<caption>Methods inherited from <a href="Nette.Object.html#methods">Nette\Object</a></caption>
+	<tr>
+		<td><code>
+			<a href="Nette.Object.html#___callStatic">__callStatic()</a>, 
+			<a href="Nette.Object.html#___get">__get()</a>, 
+			<a href="Nette.Object.html#___isset">__isset()</a>, 
+			<a href="Nette.Object.html#___set">__set()</a>, 
+			<a href="Nette.Object.html#___unset">__unset()</a>, 
+			<a href="Nette.Object.html#_extensionMethod">extensionMethod()</a>, 
+			<a href="Nette.Object.html#_getReflection">getReflection()</a>
+		</code></td>
+	</tr>
+	</table>
+
+
+	<table class="summary" id="methods">
+	<caption>Magic methods summary</caption>
+	<tr data-order="alphaBlending" id="m_alphaBlending">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Utils.Image.html#m_alphaBlending">#</a>
+		<code><a href="source-Utils.Image.php.html#25" title="Go to source code">alphaBlending</a>( <span>boolean <var>$on</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$on</var></dt>
+					<dd><code>boolean</code><br>$on</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="antialias" id="m_antialias">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Utils.Image.html#m_antialias">#</a>
+		<code><a href="source-Utils.Image.php.html#26" title="Go to source code">antialias</a>( <span>boolean <var>$on</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$on</var></dt>
+					<dd><code>boolean</code><br>$on</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="arc" id="m_arc">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Utils.Image.html#m_arc">#</a>
+		<code><a href="source-Utils.Image.php.html#27" title="Go to source code">arc</a>( <span> <var>$x</var></span>, <span> <var>$y</var></span>, <span> <var>$w</var></span>, <span> <var>$h</var></span>, <span> <var>$s</var></span>, <span> <var>$e</var></span>, <span> <var>$color</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$x</var></dt>
+					<dd><code></code><br>$x</dd>
+					<dt><var>$y</var></dt>
+					<dd><code></code><br>$y</dd>
+					<dt><var>$w</var></dt>
+					<dd><code></code><br>$w</dd>
+					<dt><var>$h</var></dt>
+					<dd><code></code><br>$h</dd>
+					<dt><var>$s</var></dt>
+					<dd><code></code><br>$s</dd>
+					<dt><var>$e</var></dt>
+					<dd><code></code><br>$e</dd>
+					<dt><var>$color</var></dt>
+					<dd><code></code><br>$color</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="char" id="m_char">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Utils.Image.html#m_char">#</a>
+		<code><a href="source-Utils.Image.php.html#28" title="Go to source code">char</a>( <span> <var>$font</var></span>, <span> <var>$x</var></span>, <span> <var>$y</var></span>, <span> <var>$char</var></span>, <span> <var>$color</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$font</var></dt>
+					<dd><code></code><br>$font</dd>
+					<dt><var>$x</var></dt>
+					<dd><code></code><br>$x</dd>
+					<dt><var>$y</var></dt>
+					<dd><code></code><br>$y</dd>
+					<dt><var>$char</var></dt>
+					<dd><code></code><br>$char</dd>
+					<dt><var>$color</var></dt>
+					<dd><code></code><br>$color</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="charUp" id="m_charUp">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Utils.Image.html#m_charUp">#</a>
+		<code><a href="source-Utils.Image.php.html#29" title="Go to source code">charUp</a>( <span> <var>$font</var></span>, <span> <var>$x</var></span>, <span> <var>$y</var></span>, <span> <var>$char</var></span>, <span> <var>$color</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$font</var></dt>
+					<dd><code></code><br>$font</dd>
+					<dt><var>$x</var></dt>
+					<dd><code></code><br>$x</dd>
+					<dt><var>$y</var></dt>
+					<dd><code></code><br>$y</dd>
+					<dt><var>$char</var></dt>
+					<dd><code></code><br>$char</dd>
+					<dt><var>$color</var></dt>
+					<dd><code></code><br>$color</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="colorAllocate" id="m_colorAllocate">
+
+		<td class="attributes"><code>
+			 public 
+			integer
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Utils.Image.html#m_colorAllocate">#</a>
+		<code><a href="source-Utils.Image.php.html#30" title="Go to source code">colorAllocate</a>( <span> <var>$red</var></span>, <span> <var>$green</var></span>, <span> <var>$blue</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$red</var></dt>
+					<dd><code></code><br>$red</dd>
+					<dt><var>$green</var></dt>
+					<dd><code></code><br>$green</dd>
+					<dt><var>$blue</var></dt>
+					<dd><code></code><br>$blue</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>integer</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="colorAllocateAlpha" id="m_colorAllocateAlpha">
+
+		<td class="attributes"><code>
+			 public 
+			integer
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Utils.Image.html#m_colorAllocateAlpha">#</a>
+		<code><a href="source-Utils.Image.php.html#31" title="Go to source code">colorAllocateAlpha</a>( <span> <var>$red</var></span>, <span> <var>$green</var></span>, <span> <var>$blue</var></span>, <span> <var>$alpha</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$red</var></dt>
+					<dd><code></code><br>$red</dd>
+					<dt><var>$green</var></dt>
+					<dd><code></code><br>$green</dd>
+					<dt><var>$blue</var></dt>
+					<dd><code></code><br>$blue</dd>
+					<dt><var>$alpha</var></dt>
+					<dd><code></code><br>$alpha</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>integer</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="colorAt" id="m_colorAt">
+
+		<td class="attributes"><code>
+			 public 
+			integer
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Utils.Image.html#m_colorAt">#</a>
+		<code><a href="source-Utils.Image.php.html#32" title="Go to source code">colorAt</a>( <span> <var>$x</var></span>, <span> <var>$y</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$x</var></dt>
+					<dd><code></code><br>$x</dd>
+					<dt><var>$y</var></dt>
+					<dd><code></code><br>$y</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>integer</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="colorClosest" id="m_colorClosest">
+
+		<td class="attributes"><code>
+			 public 
+			integer
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Utils.Image.html#m_colorClosest">#</a>
+		<code><a href="source-Utils.Image.php.html#33" title="Go to source code">colorClosest</a>( <span> <var>$red</var></span>, <span> <var>$green</var></span>, <span> <var>$blue</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$red</var></dt>
+					<dd><code></code><br>$red</dd>
+					<dt><var>$green</var></dt>
+					<dd><code></code><br>$green</dd>
+					<dt><var>$blue</var></dt>
+					<dd><code></code><br>$blue</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>integer</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="colorClosestAlpha" id="m_colorClosestAlpha">
+
+		<td class="attributes"><code>
+			 public 
+			integer
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Utils.Image.html#m_colorClosestAlpha">#</a>
+		<code><a href="source-Utils.Image.php.html#34" title="Go to source code">colorClosestAlpha</a>( <span> <var>$red</var></span>, <span> <var>$green</var></span>, <span> <var>$blue</var></span>, <span> <var>$alpha</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$red</var></dt>
+					<dd><code></code><br>$red</dd>
+					<dt><var>$green</var></dt>
+					<dd><code></code><br>$green</dd>
+					<dt><var>$blue</var></dt>
+					<dd><code></code><br>$blue</dd>
+					<dt><var>$alpha</var></dt>
+					<dd><code></code><br>$alpha</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>integer</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="colorClosestHWB" id="m_colorClosestHWB">
+
+		<td class="attributes"><code>
+			 public 
+			integer
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Utils.Image.html#m_colorClosestHWB">#</a>
+		<code><a href="source-Utils.Image.php.html#35" title="Go to source code">colorClosestHWB</a>( <span> <var>$red</var></span>, <span> <var>$green</var></span>, <span> <var>$blue</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$red</var></dt>
+					<dd><code></code><br>$red</dd>
+					<dt><var>$green</var></dt>
+					<dd><code></code><br>$green</dd>
+					<dt><var>$blue</var></dt>
+					<dd><code></code><br>$blue</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>integer</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="colorDeallocate" id="m_colorDeallocate">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Utils.Image.html#m_colorDeallocate">#</a>
+		<code><a href="source-Utils.Image.php.html#36" title="Go to source code">colorDeallocate</a>( <span> <var>$color</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$color</var></dt>
+					<dd><code></code><br>$color</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="colorExact" id="m_colorExact">
+
+		<td class="attributes"><code>
+			 public 
+			integer
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Utils.Image.html#m_colorExact">#</a>
+		<code><a href="source-Utils.Image.php.html#37" title="Go to source code">colorExact</a>( <span> <var>$red</var></span>, <span> <var>$green</var></span>, <span> <var>$blue</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$red</var></dt>
+					<dd><code></code><br>$red</dd>
+					<dt><var>$green</var></dt>
+					<dd><code></code><br>$green</dd>
+					<dt><var>$blue</var></dt>
+					<dd><code></code><br>$blue</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>integer</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="colorExactAlpha" id="m_colorExactAlpha">
+
+		<td class="attributes"><code>
+			 public 
+			integer
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Utils.Image.html#m_colorExactAlpha">#</a>
+		<code><a href="source-Utils.Image.php.html#38" title="Go to source code">colorExactAlpha</a>( <span> <var>$red</var></span>, <span> <var>$green</var></span>, <span> <var>$blue</var></span>, <span> <var>$alpha</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$red</var></dt>
+					<dd><code></code><br>$red</dd>
+					<dt><var>$green</var></dt>
+					<dd><code></code><br>$green</dd>
+					<dt><var>$blue</var></dt>
+					<dd><code></code><br>$blue</dd>
+					<dt><var>$alpha</var></dt>
+					<dd><code></code><br>$alpha</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>integer</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="colorMatch" id="m_colorMatch">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Utils.Image.html#m_colorMatch">#</a>
+		<code><a href="source-Utils.Image.php.html#39" title="Go to source code">colorMatch</a>( <span><code><a href="Nette.Utils.Image.html">Nette\Utils\Image</a></code> <var>$image2</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$image2</var></dt>
+					<dd><code><code><a href="Nette.Utils.Image.html">Nette\Utils\Image</a></code></code><br>$image2</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="colorResolve" id="m_colorResolve">
+
+		<td class="attributes"><code>
+			 public 
+			integer
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Utils.Image.html#m_colorResolve">#</a>
+		<code><a href="source-Utils.Image.php.html#40" title="Go to source code">colorResolve</a>( <span> <var>$red</var></span>, <span> <var>$green</var></span>, <span> <var>$blue</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$red</var></dt>
+					<dd><code></code><br>$red</dd>
+					<dt><var>$green</var></dt>
+					<dd><code></code><br>$green</dd>
+					<dt><var>$blue</var></dt>
+					<dd><code></code><br>$blue</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>integer</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="colorResolveAlpha" id="m_colorResolveAlpha">
+
+		<td class="attributes"><code>
+			 public 
+			integer
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Utils.Image.html#m_colorResolveAlpha">#</a>
+		<code><a href="source-Utils.Image.php.html#41" title="Go to source code">colorResolveAlpha</a>( <span> <var>$red</var></span>, <span> <var>$green</var></span>, <span> <var>$blue</var></span>, <span> <var>$alpha</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$red</var></dt>
+					<dd><code></code><br>$red</dd>
+					<dt><var>$green</var></dt>
+					<dd><code></code><br>$green</dd>
+					<dt><var>$blue</var></dt>
+					<dd><code></code><br>$blue</dd>
+					<dt><var>$alpha</var></dt>
+					<dd><code></code><br>$alpha</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>integer</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="colorSet" id="m_colorSet">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Utils.Image.html#m_colorSet">#</a>
+		<code><a href="source-Utils.Image.php.html#42" title="Go to source code">colorSet</a>( <span> <var>$index</var></span>, <span> <var>$red</var></span>, <span> <var>$green</var></span>, <span> <var>$blue</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$index</var></dt>
+					<dd><code></code><br>$index</dd>
+					<dt><var>$red</var></dt>
+					<dd><code></code><br>$red</dd>
+					<dt><var>$green</var></dt>
+					<dd><code></code><br>$green</dd>
+					<dt><var>$blue</var></dt>
+					<dd><code></code><br>$blue</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="colorsForIndex" id="m_colorsForIndex">
+
+		<td class="attributes"><code>
+			 public 
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Utils.Image.html#m_colorsForIndex">#</a>
+		<code><a href="source-Utils.Image.php.html#43" title="Go to source code">colorsForIndex</a>( <span> <var>$index</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$index</var></dt>
+					<dd><code></code><br>$index</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>array</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="colorsTotal" id="m_colorsTotal">
+
+		<td class="attributes"><code>
+			 public 
+			integer
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Utils.Image.html#m_colorsTotal">#</a>
+		<code><a href="source-Utils.Image.php.html#44" title="Go to source code">colorsTotal</a>( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>integer</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="colorTransparent" id="m_colorTransparent">
+
+		<td class="attributes"><code>
+			 public 
+			integer
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Utils.Image.html#m_colorTransparent">#</a>
+		<code><a href="source-Utils.Image.php.html#45" title="Go to source code">colorTransparent</a>( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>integer</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="convolution" id="m_convolution">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Utils.Image.html#m_convolution">#</a>
+		<code><a href="source-Utils.Image.php.html#46" title="Go to source code">convolution</a>( <span>array <var>$matrix</var></span>, <span>float <var>$div</var></span>, <span>float <var>$offset</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$matrix</var></dt>
+					<dd><code>array</code><br>$matrix</dd>
+					<dt><var>$div</var></dt>
+					<dd><code>float</code><br>$div</dd>
+					<dt><var>$offset</var></dt>
+					<dd><code>float</code><br>$offset</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="copy" id="m_copy">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Utils.Image.html#m_copy">#</a>
+		<code><a href="source-Utils.Image.php.html#47" title="Go to source code">copy</a>( <span><code><a href="Nette.Utils.Image.html">Nette\Utils\Image</a></code> <var>$src</var></span>, <span> <var>$dstX</var></span>, <span> <var>$dstY</var></span>, <span> <var>$srcX</var></span>, <span> <var>$srcY</var></span>, <span> <var>$srcW</var></span>, <span> <var>$srcH</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$src</var></dt>
+					<dd><code><code><a href="Nette.Utils.Image.html">Nette\Utils\Image</a></code></code><br>$src</dd>
+					<dt><var>$dstX</var></dt>
+					<dd><code></code><br>$dstX</dd>
+					<dt><var>$dstY</var></dt>
+					<dd><code></code><br>$dstY</dd>
+					<dt><var>$srcX</var></dt>
+					<dd><code></code><br>$srcX</dd>
+					<dt><var>$srcY</var></dt>
+					<dd><code></code><br>$srcY</dd>
+					<dt><var>$srcW</var></dt>
+					<dd><code></code><br>$srcW</dd>
+					<dt><var>$srcH</var></dt>
+					<dd><code></code><br>$srcH</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="copyMerge" id="m_copyMerge">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Utils.Image.html#m_copyMerge">#</a>
+		<code><a href="source-Utils.Image.php.html#48" title="Go to source code">copyMerge</a>( <span><code><a href="Nette.Utils.Image.html">Nette\Utils\Image</a></code> <var>$src</var></span>, <span> <var>$dstX</var></span>, <span> <var>$dstY</var></span>, <span> <var>$srcX</var></span>, <span> <var>$srcY</var></span>, <span> <var>$srcW</var></span>, <span> <var>$srcH</var></span>, <span> <var>$opacity</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$src</var></dt>
+					<dd><code><code><a href="Nette.Utils.Image.html">Nette\Utils\Image</a></code></code><br>$src</dd>
+					<dt><var>$dstX</var></dt>
+					<dd><code></code><br>$dstX</dd>
+					<dt><var>$dstY</var></dt>
+					<dd><code></code><br>$dstY</dd>
+					<dt><var>$srcX</var></dt>
+					<dd><code></code><br>$srcX</dd>
+					<dt><var>$srcY</var></dt>
+					<dd><code></code><br>$srcY</dd>
+					<dt><var>$srcW</var></dt>
+					<dd><code></code><br>$srcW</dd>
+					<dt><var>$srcH</var></dt>
+					<dd><code></code><br>$srcH</dd>
+					<dt><var>$opacity</var></dt>
+					<dd><code></code><br>$opacity</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="copyMergeGray" id="m_copyMergeGray">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Utils.Image.html#m_copyMergeGray">#</a>
+		<code><a href="source-Utils.Image.php.html#49" title="Go to source code">copyMergeGray</a>( <span><code><a href="Nette.Utils.Image.html">Nette\Utils\Image</a></code> <var>$src</var></span>, <span> <var>$dstX</var></span>, <span> <var>$dstY</var></span>, <span> <var>$srcX</var></span>, <span> <var>$srcY</var></span>, <span> <var>$srcW</var></span>, <span> <var>$srcH</var></span>, <span> <var>$opacity</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$src</var></dt>
+					<dd><code><code><a href="Nette.Utils.Image.html">Nette\Utils\Image</a></code></code><br>$src</dd>
+					<dt><var>$dstX</var></dt>
+					<dd><code></code><br>$dstX</dd>
+					<dt><var>$dstY</var></dt>
+					<dd><code></code><br>$dstY</dd>
+					<dt><var>$srcX</var></dt>
+					<dd><code></code><br>$srcX</dd>
+					<dt><var>$srcY</var></dt>
+					<dd><code></code><br>$srcY</dd>
+					<dt><var>$srcW</var></dt>
+					<dd><code></code><br>$srcW</dd>
+					<dt><var>$srcH</var></dt>
+					<dd><code></code><br>$srcH</dd>
+					<dt><var>$opacity</var></dt>
+					<dd><code></code><br>$opacity</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="copyResampled" id="m_copyResampled">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Utils.Image.html#m_copyResampled">#</a>
+		<code><a href="source-Utils.Image.php.html#50" title="Go to source code">copyResampled</a>( <span><code><a href="Nette.Utils.Image.html">Nette\Utils\Image</a></code> <var>$src</var></span>, <span> <var>$dstX</var></span>, <span> <var>$dstY</var></span>, <span> <var>$srcX</var></span>, <span> <var>$srcY</var></span>, <span> <var>$dstW</var></span>, <span> <var>$dstH</var></span>, <span> <var>$srcW</var></span>, <span> <var>$srcH</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$src</var></dt>
+					<dd><code><code><a href="Nette.Utils.Image.html">Nette\Utils\Image</a></code></code><br>$src</dd>
+					<dt><var>$dstX</var></dt>
+					<dd><code></code><br>$dstX</dd>
+					<dt><var>$dstY</var></dt>
+					<dd><code></code><br>$dstY</dd>
+					<dt><var>$srcX</var></dt>
+					<dd><code></code><br>$srcX</dd>
+					<dt><var>$srcY</var></dt>
+					<dd><code></code><br>$srcY</dd>
+					<dt><var>$dstW</var></dt>
+					<dd><code></code><br>$dstW</dd>
+					<dt><var>$dstH</var></dt>
+					<dd><code></code><br>$dstH</dd>
+					<dt><var>$srcW</var></dt>
+					<dd><code></code><br>$srcW</dd>
+					<dt><var>$srcH</var></dt>
+					<dd><code></code><br>$srcH</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="copyResized" id="m_copyResized">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Utils.Image.html#m_copyResized">#</a>
+		<code><a href="source-Utils.Image.php.html#51" title="Go to source code">copyResized</a>( <span><code><a href="Nette.Utils.Image.html">Nette\Utils\Image</a></code> <var>$src</var></span>, <span> <var>$dstX</var></span>, <span> <var>$dstY</var></span>, <span> <var>$srcX</var></span>, <span> <var>$srcY</var></span>, <span> <var>$dstW</var></span>, <span> <var>$dstH</var></span>, <span> <var>$srcW</var></span>, <span> <var>$srcH</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$src</var></dt>
+					<dd><code><code><a href="Nette.Utils.Image.html">Nette\Utils\Image</a></code></code><br>$src</dd>
+					<dt><var>$dstX</var></dt>
+					<dd><code></code><br>$dstX</dd>
+					<dt><var>$dstY</var></dt>
+					<dd><code></code><br>$dstY</dd>
+					<dt><var>$srcX</var></dt>
+					<dd><code></code><br>$srcX</dd>
+					<dt><var>$srcY</var></dt>
+					<dd><code></code><br>$srcY</dd>
+					<dt><var>$dstW</var></dt>
+					<dd><code></code><br>$dstW</dd>
+					<dt><var>$dstH</var></dt>
+					<dd><code></code><br>$dstH</dd>
+					<dt><var>$srcW</var></dt>
+					<dd><code></code><br>$srcW</dd>
+					<dt><var>$srcH</var></dt>
+					<dd><code></code><br>$srcH</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="dashedLine" id="m_dashedLine">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Utils.Image.html#m_dashedLine">#</a>
+		<code><a href="source-Utils.Image.php.html#52" title="Go to source code">dashedLine</a>( <span> <var>$x1</var></span>, <span> <var>$y1</var></span>, <span> <var>$x2</var></span>, <span> <var>$y2</var></span>, <span> <var>$color</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$x1</var></dt>
+					<dd><code></code><br>$x1</dd>
+					<dt><var>$y1</var></dt>
+					<dd><code></code><br>$y1</dd>
+					<dt><var>$x2</var></dt>
+					<dd><code></code><br>$x2</dd>
+					<dt><var>$y2</var></dt>
+					<dd><code></code><br>$y2</dd>
+					<dt><var>$color</var></dt>
+					<dd><code></code><br>$color</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="ellipse" id="m_ellipse">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Utils.Image.html#m_ellipse">#</a>
+		<code><a href="source-Utils.Image.php.html#53" title="Go to source code">ellipse</a>( <span> <var>$cx</var></span>, <span> <var>$cy</var></span>, <span> <var>$w</var></span>, <span> <var>$h</var></span>, <span> <var>$color</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$cx</var></dt>
+					<dd><code></code><br>$cx</dd>
+					<dt><var>$cy</var></dt>
+					<dd><code></code><br>$cy</dd>
+					<dt><var>$w</var></dt>
+					<dd><code></code><br>$w</dd>
+					<dt><var>$h</var></dt>
+					<dd><code></code><br>$h</dd>
+					<dt><var>$color</var></dt>
+					<dd><code></code><br>$color</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="fill" id="m_fill">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Utils.Image.html#m_fill">#</a>
+		<code><a href="source-Utils.Image.php.html#54" title="Go to source code">fill</a>( <span> <var>$x</var></span>, <span> <var>$y</var></span>, <span> <var>$color</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$x</var></dt>
+					<dd><code></code><br>$x</dd>
+					<dt><var>$y</var></dt>
+					<dd><code></code><br>$y</dd>
+					<dt><var>$color</var></dt>
+					<dd><code></code><br>$color</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="filledArc" id="m_filledArc">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Utils.Image.html#m_filledArc">#</a>
+		<code><a href="source-Utils.Image.php.html#55" title="Go to source code">filledArc</a>( <span> <var>$cx</var></span>, <span> <var>$cy</var></span>, <span> <var>$w</var></span>, <span> <var>$h</var></span>, <span> <var>$s</var></span>, <span> <var>$e</var></span>, <span> <var>$color</var></span>, <span> <var>$style</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$cx</var></dt>
+					<dd><code></code><br>$cx</dd>
+					<dt><var>$cy</var></dt>
+					<dd><code></code><br>$cy</dd>
+					<dt><var>$w</var></dt>
+					<dd><code></code><br>$w</dd>
+					<dt><var>$h</var></dt>
+					<dd><code></code><br>$h</dd>
+					<dt><var>$s</var></dt>
+					<dd><code></code><br>$s</dd>
+					<dt><var>$e</var></dt>
+					<dd><code></code><br>$e</dd>
+					<dt><var>$color</var></dt>
+					<dd><code></code><br>$color</dd>
+					<dt><var>$style</var></dt>
+					<dd><code></code><br>$style</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="filledEllipse" id="m_filledEllipse">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Utils.Image.html#m_filledEllipse">#</a>
+		<code><a href="source-Utils.Image.php.html#56" title="Go to source code">filledEllipse</a>( <span> <var>$cx</var></span>, <span> <var>$cy</var></span>, <span> <var>$w</var></span>, <span> <var>$h</var></span>, <span> <var>$color</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$cx</var></dt>
+					<dd><code></code><br>$cx</dd>
+					<dt><var>$cy</var></dt>
+					<dd><code></code><br>$cy</dd>
+					<dt><var>$w</var></dt>
+					<dd><code></code><br>$w</dd>
+					<dt><var>$h</var></dt>
+					<dd><code></code><br>$h</dd>
+					<dt><var>$color</var></dt>
+					<dd><code></code><br>$color</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="filledPolygon" id="m_filledPolygon">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Utils.Image.html#m_filledPolygon">#</a>
+		<code><a href="source-Utils.Image.php.html#57" title="Go to source code">filledPolygon</a>( <span>array <var>$points</var></span>, <span> <var>$numPoints</var></span>, <span> <var>$color</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$points</var></dt>
+					<dd><code>array</code><br>$points</dd>
+					<dt><var>$numPoints</var></dt>
+					<dd><code></code><br>$numPoints</dd>
+					<dt><var>$color</var></dt>
+					<dd><code></code><br>$color</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="filledRectangle" id="m_filledRectangle">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Utils.Image.html#m_filledRectangle">#</a>
+		<code><a href="source-Utils.Image.php.html#58" title="Go to source code">filledRectangle</a>( <span> <var>$x1</var></span>, <span> <var>$y1</var></span>, <span> <var>$x2</var></span>, <span> <var>$y2</var></span>, <span> <var>$color</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$x1</var></dt>
+					<dd><code></code><br>$x1</dd>
+					<dt><var>$y1</var></dt>
+					<dd><code></code><br>$y1</dd>
+					<dt><var>$x2</var></dt>
+					<dd><code></code><br>$x2</dd>
+					<dt><var>$y2</var></dt>
+					<dd><code></code><br>$y2</dd>
+					<dt><var>$color</var></dt>
+					<dd><code></code><br>$color</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="fillToBorder" id="m_fillToBorder">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Utils.Image.html#m_fillToBorder">#</a>
+		<code><a href="source-Utils.Image.php.html#59" title="Go to source code">fillToBorder</a>( <span> <var>$x</var></span>, <span> <var>$y</var></span>, <span> <var>$border</var></span>, <span> <var>$color</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$x</var></dt>
+					<dd><code></code><br>$x</dd>
+					<dt><var>$y</var></dt>
+					<dd><code></code><br>$y</dd>
+					<dt><var>$border</var></dt>
+					<dd><code></code><br>$border</dd>
+					<dt><var>$color</var></dt>
+					<dd><code></code><br>$color</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="filter" id="m_filter">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Utils.Image.html#m_filter">#</a>
+		<code><a href="source-Utils.Image.php.html#60" title="Go to source code">filter</a>( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="fontHeight" id="m_fontHeight">
+
+		<td class="attributes"><code>
+			 public 
+			integer
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Utils.Image.html#m_fontHeight">#</a>
+		<code><a href="source-Utils.Image.php.html#61" title="Go to source code">fontHeight</a>( <span> <var>$font</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$font</var></dt>
+					<dd><code></code><br>$font</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>integer</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="fontWidth" id="m_fontWidth">
+
+		<td class="attributes"><code>
+			 public 
+			integer
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Utils.Image.html#m_fontWidth">#</a>
+		<code><a href="source-Utils.Image.php.html#62" title="Go to source code">fontWidth</a>( <span> <var>$font</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$font</var></dt>
+					<dd><code></code><br>$font</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>integer</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="ftBBox" id="m_ftBBox">
+
+		<td class="attributes"><code>
+			 public 
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Utils.Image.html#m_ftBBox">#</a>
+		<code><a href="source-Utils.Image.php.html#63" title="Go to source code">ftBBox</a>( <span> <var>$size</var></span>, <span> <var>$angle</var></span>, <span>string <var>$fontFile</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$size</var></dt>
+					<dd><code></code><br>$size</dd>
+					<dt><var>$angle</var></dt>
+					<dd><code></code><br>$angle</dd>
+					<dt><var>$fontFile</var></dt>
+					<dd><code>string</code><br>$fontFile</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>array</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="ftText" id="m_ftText">
+
+		<td class="attributes"><code>
+			 public 
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Utils.Image.html#m_ftText">#</a>
+		<code><a href="source-Utils.Image.php.html#64" title="Go to source code">ftText</a>( <span> <var>$size</var></span>, <span> <var>$angle</var></span>, <span> <var>$x</var></span>, <span> <var>$y</var></span>, <span> <var>$col</var></span>, <span>string <var>$fontFile</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$size</var></dt>
+					<dd><code></code><br>$size</dd>
+					<dt><var>$angle</var></dt>
+					<dd><code></code><br>$angle</dd>
+					<dt><var>$x</var></dt>
+					<dd><code></code><br>$x</dd>
+					<dt><var>$y</var></dt>
+					<dd><code></code><br>$y</dd>
+					<dt><var>$col</var></dt>
+					<dd><code></code><br>$col</dd>
+					<dt><var>$fontFile</var></dt>
+					<dd><code>string</code><br>$fontFile</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>array</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="gammaCorrect" id="m_gammaCorrect">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Utils.Image.html#m_gammaCorrect">#</a>
+		<code><a href="source-Utils.Image.php.html#65" title="Go to source code">gammaCorrect</a>( <span>float <var>$inputgamma</var></span>, <span>float <var>$outputgamma</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$inputgamma</var></dt>
+					<dd><code>float</code><br>$inputgamma</dd>
+					<dt><var>$outputgamma</var></dt>
+					<dd><code>float</code><br>$outputgamma</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="interlace" id="m_interlace">
+
+		<td class="attributes"><code>
+			 public 
+			integer
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Utils.Image.html#m_interlace">#</a>
+		<code><a href="source-Utils.Image.php.html#66" title="Go to source code">interlace</a>( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>integer</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="isTrueColor" id="m_isTrueColor">
+
+		<td class="attributes"><code>
+			 public 
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Utils.Image.html#m_isTrueColor">#</a>
+		<code><a href="source-Utils.Image.php.html#67" title="Go to source code">isTrueColor</a>( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="layerEffect" id="m_layerEffect">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Utils.Image.html#m_layerEffect">#</a>
+		<code><a href="source-Utils.Image.php.html#68" title="Go to source code">layerEffect</a>( <span> <var>$effect</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$effect</var></dt>
+					<dd><code></code><br>$effect</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="line" id="m_line">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Utils.Image.html#m_line">#</a>
+		<code><a href="source-Utils.Image.php.html#69" title="Go to source code">line</a>( <span> <var>$x1</var></span>, <span> <var>$y1</var></span>, <span> <var>$x2</var></span>, <span> <var>$y2</var></span>, <span> <var>$color</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$x1</var></dt>
+					<dd><code></code><br>$x1</dd>
+					<dt><var>$y1</var></dt>
+					<dd><code></code><br>$y1</dd>
+					<dt><var>$x2</var></dt>
+					<dd><code></code><br>$x2</dd>
+					<dt><var>$y2</var></dt>
+					<dd><code></code><br>$y2</dd>
+					<dt><var>$color</var></dt>
+					<dd><code></code><br>$color</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="loadFont" id="m_loadFont">
+
+		<td class="attributes"><code>
+			 public 
+			integer
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Utils.Image.html#m_loadFont">#</a>
+		<code><a href="source-Utils.Image.php.html#70" title="Go to source code">loadFont</a>( <span>string <var>$file</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$file</var></dt>
+					<dd><code>string</code><br>$file</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>integer</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="paletteCopy" id="m_paletteCopy">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Utils.Image.html#m_paletteCopy">#</a>
+		<code><a href="source-Utils.Image.php.html#71" title="Go to source code">paletteCopy</a>( <span><code><a href="Nette.Utils.Image.html">Nette\Utils\Image</a></code> <var>$source</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$source</var></dt>
+					<dd><code><code><a href="Nette.Utils.Image.html">Nette\Utils\Image</a></code></code><br>$source</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="polygon" id="m_polygon">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Utils.Image.html#m_polygon">#</a>
+		<code><a href="source-Utils.Image.php.html#72" title="Go to source code">polygon</a>( <span>array <var>$points</var></span>, <span> <var>$numPoints</var></span>, <span> <var>$color</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$points</var></dt>
+					<dd><code>array</code><br>$points</dd>
+					<dt><var>$numPoints</var></dt>
+					<dd><code></code><br>$numPoints</dd>
+					<dt><var>$color</var></dt>
+					<dd><code></code><br>$color</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="psBBox" id="m_psBBox">
+
+		<td class="attributes"><code>
+			 public 
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Utils.Image.html#m_psBBox">#</a>
+		<code><a href="source-Utils.Image.php.html#73" title="Go to source code">psBBox</a>( <span>string <var>$text</var></span>, <span> <var>$font</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$text</var></dt>
+					<dd><code>string</code><br>$text</dd>
+					<dt><var>$font</var></dt>
+					<dd><code></code><br>$font</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>array</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="psEncodeFont" id="m_psEncodeFont">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Utils.Image.html#m_psEncodeFont">#</a>
+		<code><a href="source-Utils.Image.php.html#74" title="Go to source code">psEncodeFont</a>( <span> <var>$fontIndex</var></span>, <span>string <var>$encodingfile</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$fontIndex</var></dt>
+					<dd><code></code><br>$fontIndex</dd>
+					<dt><var>$encodingfile</var></dt>
+					<dd><code>string</code><br>$encodingfile</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="psExtendFont" id="m_psExtendFont">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Utils.Image.html#m_psExtendFont">#</a>
+		<code><a href="source-Utils.Image.php.html#75" title="Go to source code">psExtendFont</a>( <span> <var>$fontIndex</var></span>, <span>float <var>$extend</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$fontIndex</var></dt>
+					<dd><code></code><br>$fontIndex</dd>
+					<dt><var>$extend</var></dt>
+					<dd><code>float</code><br>$extend</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="psFreeFont" id="m_psFreeFont">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Utils.Image.html#m_psFreeFont">#</a>
+		<code><a href="source-Utils.Image.php.html#76" title="Go to source code">psFreeFont</a>( <span> <var>$fontindex</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$fontindex</var></dt>
+					<dd><code></code><br>$fontindex</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="psLoadFont" id="m_psLoadFont">
+
+		<td class="attributes"><code>
+			 public 
+			resource
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Utils.Image.html#m_psLoadFont">#</a>
+		<code><a href="source-Utils.Image.php.html#77" title="Go to source code">psLoadFont</a>( <span>string <var>$filename</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$filename</var></dt>
+					<dd><code>string</code><br>$filename</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>resource</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="psSlantFont" id="m_psSlantFont">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Utils.Image.html#m_psSlantFont">#</a>
+		<code><a href="source-Utils.Image.php.html#78" title="Go to source code">psSlantFont</a>( <span> <var>$fontIndex</var></span>, <span>float <var>$slant</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$fontIndex</var></dt>
+					<dd><code></code><br>$fontIndex</dd>
+					<dt><var>$slant</var></dt>
+					<dd><code>float</code><br>$slant</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="psText" id="m_psText">
+
+		<td class="attributes"><code>
+			 public 
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Utils.Image.html#m_psText">#</a>
+		<code><a href="source-Utils.Image.php.html#79" title="Go to source code">psText</a>( <span>string <var>$text</var></span>, <span> <var>$font</var></span>, <span> <var>$size</var></span>, <span> <var>$color</var></span>, <span> <var>$backgroundColor</var></span>, <span> <var>$x</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$text</var></dt>
+					<dd><code>string</code><br>$text</dd>
+					<dt><var>$font</var></dt>
+					<dd><code></code><br>$font</dd>
+					<dt><var>$size</var></dt>
+					<dd><code></code><br>$size</dd>
+					<dt><var>$color</var></dt>
+					<dd><code></code><br>$color</dd>
+					<dt><var>$backgroundColor</var></dt>
+					<dd><code></code><br>$backgroundColor</dd>
+					<dt><var>$x</var></dt>
+					<dd><code></code><br>$x</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>array</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="rectangle" id="m_rectangle">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Utils.Image.html#m_rectangle">#</a>
+		<code><a href="source-Utils.Image.php.html#80" title="Go to source code">rectangle</a>( <span> <var>$x1</var></span>, <span> <var>$y1</var></span>, <span> <var>$x2</var></span>, <span> <var>$y2</var></span>, <span> <var>$col</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$x1</var></dt>
+					<dd><code></code><br>$x1</dd>
+					<dt><var>$y1</var></dt>
+					<dd><code></code><br>$y1</dd>
+					<dt><var>$x2</var></dt>
+					<dd><code></code><br>$x2</dd>
+					<dt><var>$y2</var></dt>
+					<dd><code></code><br>$y2</dd>
+					<dt><var>$col</var></dt>
+					<dd><code></code><br>$col</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="rotate" id="m_rotate">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="Nette.Utils.Image.html">Nette\Utils\Image</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Utils.Image.html#m_rotate">#</a>
+		<code><a href="source-Utils.Image.php.html#81" title="Go to source code">rotate</a>( <span>float <var>$angle</var></span>, <span> <var>$backgroundColor</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$angle</var></dt>
+					<dd><code>float</code><br>$angle</dd>
+					<dt><var>$backgroundColor</var></dt>
+					<dd><code></code><br>$backgroundColor</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="Nette.Utils.Image.html">Nette\Utils\Image</a></code></code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="saveAlpha" id="m_saveAlpha">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Utils.Image.html#m_saveAlpha">#</a>
+		<code><a href="source-Utils.Image.php.html#82" title="Go to source code">saveAlpha</a>( <span>boolean <var>$saveflag</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$saveflag</var></dt>
+					<dd><code>boolean</code><br>$saveflag</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setBrush" id="m_setBrush">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Utils.Image.html#m_setBrush">#</a>
+		<code><a href="source-Utils.Image.php.html#83" title="Go to source code">setBrush</a>( <span><code><a href="Nette.Utils.Image.html">Nette\Utils\Image</a></code> <var>$brush</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$brush</var></dt>
+					<dd><code><code><a href="Nette.Utils.Image.html">Nette\Utils\Image</a></code></code><br>$brush</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setPixel" id="m_setPixel">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Utils.Image.html#m_setPixel">#</a>
+		<code><a href="source-Utils.Image.php.html#84" title="Go to source code">setPixel</a>( <span> <var>$x</var></span>, <span> <var>$y</var></span>, <span> <var>$color</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$x</var></dt>
+					<dd><code></code><br>$x</dd>
+					<dt><var>$y</var></dt>
+					<dd><code></code><br>$y</dd>
+					<dt><var>$color</var></dt>
+					<dd><code></code><br>$color</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setStyle" id="m_setStyle">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Utils.Image.html#m_setStyle">#</a>
+		<code><a href="source-Utils.Image.php.html#85" title="Go to source code">setStyle</a>( <span>array <var>$style</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$style</var></dt>
+					<dd><code>array</code><br>$style</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setThickness" id="m_setThickness">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Utils.Image.html#m_setThickness">#</a>
+		<code><a href="source-Utils.Image.php.html#86" title="Go to source code">setThickness</a>( <span> <var>$thickness</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$thickness</var></dt>
+					<dd><code></code><br>$thickness</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setTile" id="m_setTile">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Utils.Image.html#m_setTile">#</a>
+		<code><a href="source-Utils.Image.php.html#87" title="Go to source code">setTile</a>( <span><code><a href="Nette.Utils.Image.html">Nette\Utils\Image</a></code> <var>$tile</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$tile</var></dt>
+					<dd><code><code><a href="Nette.Utils.Image.html">Nette\Utils\Image</a></code></code><br>$tile</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="string" id="m_string">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Utils.Image.html#m_string">#</a>
+		<code><a href="source-Utils.Image.php.html#88" title="Go to source code">string</a>( <span> <var>$font</var></span>, <span> <var>$x</var></span>, <span> <var>$y</var></span>, <span>string <var>$s</var></span>, <span> <var>$col</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$font</var></dt>
+					<dd><code></code><br>$font</dd>
+					<dt><var>$x</var></dt>
+					<dd><code></code><br>$x</dd>
+					<dt><var>$y</var></dt>
+					<dd><code></code><br>$y</dd>
+					<dt><var>$s</var></dt>
+					<dd><code>string</code><br>$s</dd>
+					<dt><var>$col</var></dt>
+					<dd><code></code><br>$col</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="stringUp" id="m_stringUp">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Utils.Image.html#m_stringUp">#</a>
+		<code><a href="source-Utils.Image.php.html#89" title="Go to source code">stringUp</a>( <span> <var>$font</var></span>, <span> <var>$x</var></span>, <span> <var>$y</var></span>, <span>string <var>$s</var></span>, <span> <var>$col</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$font</var></dt>
+					<dd><code></code><br>$font</dd>
+					<dt><var>$x</var></dt>
+					<dd><code></code><br>$x</dd>
+					<dt><var>$y</var></dt>
+					<dd><code></code><br>$y</dd>
+					<dt><var>$s</var></dt>
+					<dd><code>string</code><br>$s</dd>
+					<dt><var>$col</var></dt>
+					<dd><code></code><br>$col</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="trueColorToPalette" id="m_trueColorToPalette">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Utils.Image.html#m_trueColorToPalette">#</a>
+		<code><a href="source-Utils.Image.php.html#90" title="Go to source code">trueColorToPalette</a>( <span>boolean <var>$dither</var></span>, <span> <var>$ncolors</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$dither</var></dt>
+					<dd><code>boolean</code><br>$dither</dd>
+					<dt><var>$ncolors</var></dt>
+					<dd><code></code><br>$ncolors</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="ttfBBox" id="m_ttfBBox">
+
+		<td class="attributes"><code>
+			 public 
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Utils.Image.html#m_ttfBBox">#</a>
+		<code><a href="source-Utils.Image.php.html#91" title="Go to source code">ttfBBox</a>( <span> <var>$size</var></span>, <span> <var>$angle</var></span>, <span>string <var>$fontfile</var></span>, <span>string <var>$text</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$size</var></dt>
+					<dd><code></code><br>$size</dd>
+					<dt><var>$angle</var></dt>
+					<dd><code></code><br>$angle</dd>
+					<dt><var>$fontfile</var></dt>
+					<dd><code>string</code><br>$fontfile</dd>
+					<dt><var>$text</var></dt>
+					<dd><code>string</code><br>$text</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>array</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="ttfText" id="m_ttfText">
+
+		<td class="attributes"><code>
+			 public 
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Utils.Image.html#m_ttfText">#</a>
+		<code><a href="source-Utils.Image.php.html#92" title="Go to source code">ttfText</a>( <span> <var>$size</var></span>, <span> <var>$angle</var></span>, <span> <var>$x</var></span>, <span> <var>$y</var></span>, <span> <var>$color</var></span>, <span>string <var>$fontfile</var></span>, <span>string <var>$text</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$size</var></dt>
+					<dd><code></code><br>$size</dd>
+					<dt><var>$angle</var></dt>
+					<dd><code></code><br>$angle</dd>
+					<dt><var>$x</var></dt>
+					<dd><code></code><br>$x</dd>
+					<dt><var>$y</var></dt>
+					<dd><code></code><br>$y</dd>
+					<dt><var>$color</var></dt>
+					<dd><code></code><br>$color</dd>
+					<dt><var>$fontfile</var></dt>
+					<dd><code>string</code><br>$fontfile</dd>
+					<dt><var>$text</var></dt>
+					<dd><code>string</code><br>$text</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>array</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="types" id="m_types">
+
+		<td class="attributes"><code>
+			 public 
+			integer
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Utils.Image.html#m_types">#</a>
+		<code><a href="source-Utils.Image.php.html#93" title="Go to source code">types</a>( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>integer</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+
+	<table class="summary" id="constants">
+	<caption>Constants summary</caption>
+	<tr data-order="SHRINK_ONLY" id="SHRINK_ONLY">
+
+		<td class="attributes"><code>integer</code></td>
+		<td class="name"><code>
+				<a href="source-Utils.Image.php.html#100-101" title="Go to source code"><b>SHRINK_ONLY</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-num">1</span></code></td>
+		<td class="description"><div>
+			<a href="Nette.Utils.Image.html#SHRINK_ONLY" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p><code><a href="Nette.Utils.Image.html#_resize">Nette\Utils\Image::resize()</a></code> only shrinks images</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p><code><a href="Nette.Utils.Image.html#_resize">Nette\Utils\Image::resize()</a></code> only shrinks images</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="STRETCH" id="STRETCH">
+
+		<td class="attributes"><code>integer</code></td>
+		<td class="name"><code>
+				<a href="source-Utils.Image.php.html#103-104" title="Go to source code"><b>STRETCH</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-num">2</span></code></td>
+		<td class="description"><div>
+			<a href="Nette.Utils.Image.html#STRETCH" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p><code><a href="Nette.Utils.Image.html#_resize">Nette\Utils\Image::resize()</a></code> will ignore aspect ratio</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p><code><a href="Nette.Utils.Image.html#_resize">Nette\Utils\Image::resize()</a></code> will ignore aspect ratio</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="FIT" id="FIT">
+
+		<td class="attributes"><code>integer</code></td>
+		<td class="name"><code>
+				<a href="source-Utils.Image.php.html#106-107" title="Go to source code"><b>FIT</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-num">0</span></code></td>
+		<td class="description"><div>
+			<a href="Nette.Utils.Image.html#FIT" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p><code><a href="Nette.Utils.Image.html#_resize">Nette\Utils\Image::resize()</a></code> fits in given area so its dimensions are less than or equal
+to the required dimensions</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p><code><a href="Nette.Utils.Image.html#_resize">Nette\Utils\Image::resize()</a></code> fits in given area so its dimensions are less than or equal
+to the required dimensions</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="FILL" id="FILL">
+
+		<td class="attributes"><code>integer</code></td>
+		<td class="name"><code>
+				<a href="source-Utils.Image.php.html#109-110" title="Go to source code"><b>FILL</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-num">4</span></code></td>
+		<td class="description"><div>
+			<a href="Nette.Utils.Image.html#FILL" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p><code><a href="Nette.Utils.Image.html#_resize">Nette\Utils\Image::resize()</a></code> fills given area so its dimensions are greater than or equal
+to the required dimensions</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p><code><a href="Nette.Utils.Image.html#_resize">Nette\Utils\Image::resize()</a></code> fills given area so its dimensions are greater than or equal
+to the required dimensions</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="EXACT" id="EXACT">
+
+		<td class="attributes"><code>integer</code></td>
+		<td class="name"><code>
+				<a href="source-Utils.Image.php.html#112-113" title="Go to source code"><b>EXACT</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-num">8</span></code></td>
+		<td class="description"><div>
+			<a href="Nette.Utils.Image.html#EXACT" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p><code><a href="Nette.Utils.Image.html#_resize">Nette\Utils\Image::resize()</a></code> fills given area exactly</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p><code><a href="Nette.Utils.Image.html#_resize">Nette\Utils\Image::resize()</a></code> fills given area exactly</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="JPEG" id="JPEG">
+
+		<td class="attributes"><code>integer</code></td>
+		<td class="name"><code>
+				<a href="source-Utils.Image.php.html#115-116" title="Go to source code"><b>JPEG</b></a>
+		</code></td>
+		<td class="value"><code>IMAGETYPE_JPEG</code></td>
+		<td class="description"><div>
+			<a href="Nette.Utils.Image.html#JPEG" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+					<h4>Int</h4>
+					<div class="list">
+							image types <code><a href="Nette.Utils.Image.html#_send">Nette\Utils\Image::send()</a></code><br>
+					</div>
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="PNG" id="PNG">
+
+		<td class="attributes"><code>integer</code></td>
+		<td class="name"><code>
+				<a href="source-Utils.Image.php.html#116-117" title="Go to source code"><b>PNG</b></a>
+		</code></td>
+		<td class="value"><code>IMAGETYPE_PNG</code></td>
+		<td class="description"><div>
+			<a href="Nette.Utils.Image.html#PNG" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+					<h4>Int</h4>
+					<div class="list">
+							image types <code><a href="Nette.Utils.Image.html#_send">Nette\Utils\Image::send()</a></code><br>
+					</div>
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="GIF" id="GIF">
+
+		<td class="attributes"><code>integer</code></td>
+		<td class="name"><code>
+				<a href="source-Utils.Image.php.html#117-118" title="Go to source code"><b>GIF</b></a>
+		</code></td>
+		<td class="value"><code>IMAGETYPE_GIF</code></td>
+		<td class="description"><div>
+			<a href="Nette.Utils.Image.html#GIF" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+					<h4>Int</h4>
+					<div class="list">
+							image types <code><a href="Nette.Utils.Image.html#_send">Nette\Utils\Image::send()</a></code><br>
+					</div>
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="EMPTY_GIF" id="EMPTY_GIF">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name"><code>
+				<a href="source-Utils.Image.php.html#120" title="Go to source code"><b>EMPTY_GIF</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-quote">&quot;GIF89a\x01\x00\x01\x00\x80\x00\x00\x00\x00\x00\x00\x00\x00!\xf9\x04\x01\x00\x00\x00\x00,\x00\x00\x00\x00\x01\x00\x01\x00\x00\x02\x02D\x01\x00;&quot;</span></code></td>
+		<td class="description"><div>
+			<a href="Nette.Utils.Image.html#EMPTY_GIF" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="ENLARGE" id="ENLARGE">
+
+		<td class="attributes"><code>integer</code></td>
+		<td class="name"><code>
+				<a href="source-Utils.Image.php.html#122-123" title="Go to source code"><b>ENLARGE</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-num">0</span></code></td>
+		<td class="description"><div>
+			<a href="Nette.Utils.Image.html#ENLARGE" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+					<h4>Deprecated</h4>
+					<div class="list">
+					</div>
+			</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+	<table class="summary" id="magicProperties">
+	<caption>Magic properties summary</caption>
+	<tr data-order="width" id="m$width">
+		<td class="attributes"><code>
+			public  read-only
+			integer
+		</code></td>
+
+		<td class="name">
+				<a href="source-Utils.Image.php.html#94" title="Go to source code"><var>$width</var></a>
+		</td>
+		<td class="description"><div>
+			<a href="Nette.Utils.Image.html#m$width" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="height" id="m$height">
+		<td class="attributes"><code>
+			public  read-only
+			integer
+		</code></td>
+
+		<td class="name">
+				<a href="source-Utils.Image.php.html#95" title="Go to source code"><var>$height</var></a>
+		</td>
+		<td class="description"><div>
+			<a href="Nette.Utils.Image.html#m$height" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="imageResource" id="m$imageResource">
+		<td class="attributes"><code>
+			public  read-only
+			resource
+		</code></td>
+
+		<td class="name">
+				<a href="source-Utils.Image.php.html#96" title="Go to source code"><var>$imageResource</var></a>
+		</td>
+		<td class="description"><div>
+			<a href="Nette.Utils.Image.html#m$imageResource" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	</table>
+
+	<table class="summary inherited">
+	<caption>Magic properties inherited from <a href="Nette.Object.html#properties">Nette\Object</a></caption>
+	<tr>
+		<td><code>
+			<a href="Nette.Object.html#m$reflection"><var>$reflection</var></a>
+		</code></td>
+	</tr>
+	</table>
+
+
+</div>
+
+	<div id="footer">
+		Nette 2.2.2 API API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+	</div>
+</div>
+</div>
+<script src="resources/combined.js?3630868369"></script>
+<script src="elementlist.js?2087501429"></script>
+</body>
+</html>

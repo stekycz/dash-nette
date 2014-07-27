@@ -1,0 +1,802 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="generator" content="ApiGen 2.8.0">
+	<meta name="robots" content="noindex">
+
+	<title>File Tracy/Debugger.php | Nette 2.2.2 API</title>
+
+	<link rel="stylesheet" href="resources/style.css?3746977979">
+	<link rel="search" type="application/opensearchdescription+xml" title="Nette 2.2.2 API" href="http://api.nette.org/2.0/opensearch.xml">
+
+
+<script src='http://files.nette.org/js/analytics.js'></script><script>
+_ga.create('UA-95238-14', '.nette.org');
+_gaq.push(['_trackPageview']);
+</script>
+</head>
+
+<body>
+<div id="left">
+	<div id="menu">
+
+		<div id="groups">
+			<h3>Namespaces</h3>
+			<ul>
+				<li><a href="namespace-Latte.html">Latte<span></span></a>
+						<ul>
+				<li><a href="namespace-Latte.Loaders.html">Loaders</a>
+						</li>
+				<li><a href="namespace-Latte.Macros.html">Macros</a>
+						</li>
+				<li><a href="namespace-Latte.Runtime.html">Runtime</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.html">Nette<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.Application.html">Application<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.Application.Responses.html">Responses</a>
+						</li>
+				<li><a href="namespace-Nette.Application.Routers.html">Routers</a>
+						</li>
+				<li><a href="namespace-Nette.Application.UI.html">UI</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.Bridges.html">Bridges<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.Bridges.ApplicationLatte.html">ApplicationLatte</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.ApplicationTracy.html">ApplicationTracy</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.CacheLatte.html">CacheLatte</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.DatabaseDI.html">DatabaseDI</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.DatabaseTracy.html">DatabaseTracy</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.DITracy.html">DITracy</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.FormsLatte.html">FormsLatte</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.Framework.html">Framework</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.HttpTracy.html">HttpTracy</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.SecurityTracy.html">SecurityTracy</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.Caching.html">Caching<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.Caching.Storages.html">Storages</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.ComponentModel.html">ComponentModel</a>
+						</li>
+				<li><a href="namespace-Nette.Database.html">Database<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.Database.Drivers.html">Drivers</a>
+						</li>
+				<li><a href="namespace-Nette.Database.Reflection.html">Reflection</a>
+						</li>
+				<li><a href="namespace-Nette.Database.Table.html">Table</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.DI.html">DI<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.DI.Config.html">Config<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.DI.Config.Adapters.html">Adapters</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.DI.Extensions.html">Extensions</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.Diagnostics.html">Diagnostics</a>
+						</li>
+				<li><a href="namespace-Nette.Forms.html">Forms<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.Forms.Controls.html">Controls</a>
+						</li>
+				<li><a href="namespace-Nette.Forms.Rendering.html">Rendering</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.Http.html">Http</a>
+						</li>
+				<li><a href="namespace-Nette.Iterators.html">Iterators</a>
+						</li>
+				<li><a href="namespace-Nette.Latte.html">Latte</a>
+						</li>
+				<li><a href="namespace-Nette.Loaders.html">Loaders</a>
+						</li>
+				<li><a href="namespace-Nette.Localization.html">Localization</a>
+						</li>
+				<li><a href="namespace-Nette.Mail.html">Mail</a>
+						</li>
+				<li><a href="namespace-Nette.Neon.html">Neon</a>
+						</li>
+				<li><a href="namespace-Nette.PhpGenerator.html">PhpGenerator</a>
+						</li>
+				<li><a href="namespace-Nette.Reflection.html">Reflection</a>
+						</li>
+				<li><a href="namespace-Nette.Security.html">Security</a>
+						</li>
+				<li><a href="namespace-Nette.Templating.html">Templating</a>
+						</li>
+				<li><a href="namespace-Nette.Utils.html">Utils</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-NetteModule.html">NetteModule</a>
+						</li>
+				<li><a href="namespace-none.html">none</a>
+						</li>
+				<li class="active"><a href="namespace-Tracy.html">Tracy</a>
+						</li>
+			</ul>
+		</div>
+
+		<hr>
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="Tracy.Bar.html">Bar</a></li>
+				<li><a href="Tracy.BlueScreen.html">BlueScreen</a></li>
+				<li class="active"><a href="Tracy.Debugger.html">Debugger</a></li>
+				<li><a href="Tracy.Dumper.html">Dumper</a></li>
+				<li><a href="Tracy.FireLogger.html">FireLogger</a></li>
+				<li><a href="Tracy.Helpers.html">Helpers</a></li>
+				<li><a href="Tracy.Logger.html">Logger</a></li>
+				<li><a href="Tracy.OutputDebugger.html">OutputDebugger</a></li>
+			</ul>
+
+			<h3>Interfaces</h3>
+			<ul>
+				<li><a href="Tracy.IBarPanel.html">IBarPanel</a></li>
+			</ul>
+
+
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form action="http://www.google.com/cse" id="search">
+		<input type="hidden" name="cx" value="011549293477758430224:vxofa9ufnhc">
+		<input type="hidden" name="ie" value="UTF-8">
+		<input type="text" name="q" class="text">
+		<input type="submit" value="Search">
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+				<a href="namespace-Tracy.html" title="Summary of Tracy"><span>Namespace</span></a>
+			</li>
+			<li>
+				<a href="Tracy.Debugger.html" title="Summary of Tracy\Debugger"><span>Class</span></a>
+			</li>
+		</ul>
+		<ul>
+			<li>
+				<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions"><span>Tree</span></a>
+			</li>
+			<li>
+				<a href="deprecated.html" title="List of deprecated elements"><span>Deprecated</span></a>
+			</li>
+		</ul>
+		<ul><li><a href="http://api.nette.org/releases"><span>Other releases</span></a></li><li><a href="http://nette.org"><span>Nette homepage</span></a></li></ul>
+		<ul>
+		</ul>
+	</div>
+
+<pre><code><span id="1" class="l"><a class="l" href="source-Tracy.Debugger.php.html#1">  1: </a><span class="xlang">&lt;?php</span>
+</span><span id="2" class="l"><a class="l" href="source-Tracy.Debugger.php.html#2">  2: </a>
+</span><span id="3" class="l"><a class="l" href="source-Tracy.Debugger.php.html#3">  3: </a><span class="php-comment">/**
+</span></span><span id="4" class="l"><a class="l" href="source-Tracy.Debugger.php.html#4">  4: </a><span class="php-comment"> * This file is part of the Tracy (http://tracy.nette.org)
+</span></span><span id="5" class="l"><a class="l" href="source-Tracy.Debugger.php.html#5">  5: </a><span class="php-comment"> * Copyright (c) 2004 David Grudl (http://davidgrudl.com)
+</span></span><span id="6" class="l"><a class="l" href="source-Tracy.Debugger.php.html#6">  6: </a><span class="php-comment"> */</span>
+</span><span id="7" class="l"><a class="l" href="source-Tracy.Debugger.php.html#7">  7: </a>
+</span><span id="8" class="l"><a class="l" href="source-Tracy.Debugger.php.html#8">  8: </a><span class="php-keyword1">namespace</span> Tracy;
+</span><span id="9" class="l"><a class="l" href="source-Tracy.Debugger.php.html#9">  9: </a>
+</span><span id="10" class="l"><a class="l" href="source-Tracy.Debugger.php.html#10"> 10: </a><span class="php-keyword1">use</span> Tracy,
+</span><span id="11" class="l"><a class="l" href="source-Tracy.Debugger.php.html#11"> 11: </a>    ErrorException;
+</span><span id="12" class="l"><a class="l" href="source-Tracy.Debugger.php.html#12"> 12: </a>
+</span><span id="13" class="l"><a class="l" href="source-Tracy.Debugger.php.html#13"> 13: </a>
+</span><span id="14" class="l"><a class="l" href="source-Tracy.Debugger.php.html#14"> 14: </a><span class="php-comment">/**
+</span></span><span id="15" class="l"><a class="l" href="source-Tracy.Debugger.php.html#15"> 15: </a><span class="php-comment"> * Debugger: displays and logs errors.
+</span></span><span id="16" class="l"><a class="l" href="source-Tracy.Debugger.php.html#16"> 16: </a><span class="php-comment"> *
+</span></span><span id="17" class="l"><a class="l" href="source-Tracy.Debugger.php.html#17"> 17: </a><span class="php-comment"> * Behavior is determined by two factors: mode &amp; output
+</span></span><span id="18" class="l"><a class="l" href="source-Tracy.Debugger.php.html#18"> 18: </a><span class="php-comment"> * - modes: production / development
+</span></span><span id="19" class="l"><a class="l" href="source-Tracy.Debugger.php.html#19"> 19: </a><span class="php-comment"> * - output: HTML / AJAX / CLI / other (e.g. XML)
+</span></span><span id="20" class="l"><a class="l" href="source-Tracy.Debugger.php.html#20"> 20: </a><span class="php-comment"> *
+</span></span><span id="21" class="l"><a class="l" href="source-Tracy.Debugger.php.html#21"> 21: </a><span class="php-comment"> * @author     David Grudl
+</span></span><span id="22" class="l"><a class="l" href="source-Tracy.Debugger.php.html#22"> 22: </a><span class="php-comment"> */</span>
+</span><span id="23" class="l"><a class="l" href="source-Tracy.Debugger.php.html#23"> 23: </a><span class="php-keyword1">class</span> <a id="Debugger" href="source-Tracy.Debugger.php.html#Debugger">Debugger</a>
+</span><span id="24" class="l"><a class="l" href="source-Tracy.Debugger.php.html#24"> 24: </a>{
+</span><span id="25" class="l"><a class="l" href="source-Tracy.Debugger.php.html#25"> 25: </a>    <span class="php-comment">/** @var string */</span>
+</span><span id="26" class="l"><a class="l" href="source-Tracy.Debugger.php.html#26"> 26: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">static</span> <span class="php-var"><a id="$version" href="source-Tracy.Debugger.php.html#$version">$version</a></span> = <span class="php-quote">'2.2.2'</span>;
+</span><span id="27" class="l"><a class="l" href="source-Tracy.Debugger.php.html#27"> 27: </a>
+</span><span id="28" class="l"><a class="l" href="source-Tracy.Debugger.php.html#28"> 28: </a>    <span class="php-comment">/** @var bool in production mode is suppressed any debugging output */</span>
+</span><span id="29" class="l"><a class="l" href="source-Tracy.Debugger.php.html#29"> 29: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">static</span> <span class="php-var"><a id="$productionMode" href="source-Tracy.Debugger.php.html#$productionMode">$productionMode</a></span> = self::DETECT;
+</span><span id="30" class="l"><a class="l" href="source-Tracy.Debugger.php.html#30"> 30: </a>
+</span><span id="31" class="l"><a class="l" href="source-Tracy.Debugger.php.html#31"> 31: </a>    <span class="php-comment">/** @var int timestamp with microseconds of the start of the request */</span>
+</span><span id="32" class="l"><a class="l" href="source-Tracy.Debugger.php.html#32"> 32: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">static</span> <span class="php-var"><a id="$time" href="source-Tracy.Debugger.php.html#$time">$time</a></span>;
+</span><span id="33" class="l"><a class="l" href="source-Tracy.Debugger.php.html#33"> 33: </a>
+</span><span id="34" class="l"><a class="l" href="source-Tracy.Debugger.php.html#34"> 34: </a>    <span class="php-comment">/** @var string  requested URI or command line */</span>
+</span><span id="35" class="l"><a class="l" href="source-Tracy.Debugger.php.html#35"> 35: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">static</span> <span class="php-var"><a id="$source" href="source-Tracy.Debugger.php.html#$source">$source</a></span>;
+</span><span id="36" class="l"><a class="l" href="source-Tracy.Debugger.php.html#36"> 36: </a>
+</span><span id="37" class="l"><a class="l" href="source-Tracy.Debugger.php.html#37"> 37: </a>    <span class="php-comment">/** @var string URI pattern mask to open editor */</span>
+</span><span id="38" class="l"><a class="l" href="source-Tracy.Debugger.php.html#38"> 38: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">static</span> <span class="php-var"><a id="$editor" href="source-Tracy.Debugger.php.html#$editor">$editor</a></span> = <span class="php-quote">'editor://open/?file=%file&amp;line=%line'</span>;
+</span><span id="39" class="l"><a class="l" href="source-Tracy.Debugger.php.html#39"> 39: </a>
+</span><span id="40" class="l"><a class="l" href="source-Tracy.Debugger.php.html#40"> 40: </a>    <span class="php-comment">/** @var string command to open browser (use 'start &quot;&quot;' in Windows) */</span>
+</span><span id="41" class="l"><a class="l" href="source-Tracy.Debugger.php.html#41"> 41: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">static</span> <span class="php-var"><a id="$browser" href="source-Tracy.Debugger.php.html#$browser">$browser</a></span>;
+</span><span id="42" class="l"><a class="l" href="source-Tracy.Debugger.php.html#42"> 42: </a>
+</span><span id="43" class="l"><a class="l" href="source-Tracy.Debugger.php.html#43"> 43: </a>    <span class="php-comment">/********************* Debugger::dump() ****************d*g**/</span>
+</span><span id="44" class="l"><a class="l" href="source-Tracy.Debugger.php.html#44"> 44: </a>
+</span><span id="45" class="l"><a class="l" href="source-Tracy.Debugger.php.html#45"> 45: </a>    <span class="php-comment">/** @var int  how many nested levels of array/object properties display {@link Debugger::dump()} */</span>
+</span><span id="46" class="l"><a class="l" href="source-Tracy.Debugger.php.html#46"> 46: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">static</span> <span class="php-var"><a id="$maxDepth" href="source-Tracy.Debugger.php.html#$maxDepth">$maxDepth</a></span> = <span class="php-num">3</span>;
+</span><span id="47" class="l"><a class="l" href="source-Tracy.Debugger.php.html#47"> 47: </a>
+</span><span id="48" class="l"><a class="l" href="source-Tracy.Debugger.php.html#48"> 48: </a>    <span class="php-comment">/** @var int  how long strings display {@link Debugger::dump()} */</span>
+</span><span id="49" class="l"><a class="l" href="source-Tracy.Debugger.php.html#49"> 49: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">static</span> <span class="php-var"><a id="$maxLen" href="source-Tracy.Debugger.php.html#$maxLen">$maxLen</a></span> = <span class="php-num">150</span>;
+</span><span id="50" class="l"><a class="l" href="source-Tracy.Debugger.php.html#50"> 50: </a>
+</span><span id="51" class="l"><a class="l" href="source-Tracy.Debugger.php.html#51"> 51: </a>    <span class="php-comment">/** @var bool display location? {@link Debugger::dump()} */</span>
+</span><span id="52" class="l"><a class="l" href="source-Tracy.Debugger.php.html#52"> 52: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">static</span> <span class="php-var"><a id="$showLocation" href="source-Tracy.Debugger.php.html#$showLocation">$showLocation</a></span> = <span class="php-keyword1">FALSE</span>;
+</span><span id="53" class="l"><a class="l" href="source-Tracy.Debugger.php.html#53"> 53: </a>
+</span><span id="54" class="l"><a class="l" href="source-Tracy.Debugger.php.html#54"> 54: </a>    <span class="php-comment">/********************* errors and exceptions reporting ****************d*g**/</span>
+</span><span id="55" class="l"><a class="l" href="source-Tracy.Debugger.php.html#55"> 55: </a>
+</span><span id="56" class="l"><a class="l" href="source-Tracy.Debugger.php.html#56"> 56: </a>    <span class="php-comment">/** server modes {@link Debugger::enable()} */</span>
+</span><span id="57" class="l"><a class="l" href="source-Tracy.Debugger.php.html#57"> 57: </a>    <span class="php-keyword1">const</span> <a id="DEVELOPMENT" href="source-Tracy.Debugger.php.html#DEVELOPMENT">DEVELOPMENT</a> = <span class="php-keyword1">FALSE</span>,
+</span><span id="58" class="l"><a class="l" href="source-Tracy.Debugger.php.html#58"> 58: </a>        <a id="PRODUCTION" href="source-Tracy.Debugger.php.html#PRODUCTION">PRODUCTION</a> = <span class="php-keyword1">TRUE</span>,
+</span><span id="59" class="l"><a class="l" href="source-Tracy.Debugger.php.html#59"> 59: </a>        <a id="DETECT" href="source-Tracy.Debugger.php.html#DETECT">DETECT</a> = <span class="php-keyword1">NULL</span>;
+</span><span id="60" class="l"><a class="l" href="source-Tracy.Debugger.php.html#60"> 60: </a>
+</span><span id="61" class="l"><a class="l" href="source-Tracy.Debugger.php.html#61"> 61: </a>    <span class="php-comment">/** @var BlueScreen */</span>
+</span><span id="62" class="l"><a class="l" href="source-Tracy.Debugger.php.html#62"> 62: </a>    <span class="php-keyword1">private</span> <span class="php-keyword1">static</span> <span class="php-var"><a id="$blueScreen" href="source-Tracy.Debugger.php.html#$blueScreen">$blueScreen</a></span>;
+</span><span id="63" class="l"><a class="l" href="source-Tracy.Debugger.php.html#63"> 63: </a>
+</span><span id="64" class="l"><a class="l" href="source-Tracy.Debugger.php.html#64"> 64: </a>    <span class="php-comment">/** @var bool|int determines whether any error will cause immediate death; if integer that it's matched against error severity */</span>
+</span><span id="65" class="l"><a class="l" href="source-Tracy.Debugger.php.html#65"> 65: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">static</span> <span class="php-var"><a id="$strictMode" href="source-Tracy.Debugger.php.html#$strictMode">$strictMode</a></span> = <span class="php-keyword1">FALSE</span>; <span class="php-comment">// $immediateDeath</span>
+</span><span id="66" class="l"><a class="l" href="source-Tracy.Debugger.php.html#66"> 66: </a>
+</span><span id="67" class="l"><a class="l" href="source-Tracy.Debugger.php.html#67"> 67: </a>    <span class="php-comment">/** @var bool disables the @ (shut-up) operator so that notices and warnings are no longer hidden */</span>
+</span><span id="68" class="l"><a class="l" href="source-Tracy.Debugger.php.html#68"> 68: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">static</span> <span class="php-var"><a id="$scream" href="source-Tracy.Debugger.php.html#$scream">$scream</a></span> = <span class="php-keyword1">FALSE</span>;
+</span><span id="69" class="l"><a class="l" href="source-Tracy.Debugger.php.html#69"> 69: </a>
+</span><span id="70" class="l"><a class="l" href="source-Tracy.Debugger.php.html#70"> 70: </a>    <span class="php-comment">/** @var array of callables specifies the functions that are automatically called after fatal error */</span>
+</span><span id="71" class="l"><a class="l" href="source-Tracy.Debugger.php.html#71"> 71: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">static</span> <span class="php-var"><a id="$onFatalError" href="source-Tracy.Debugger.php.html#$onFatalError">$onFatalError</a></span> = <span class="php-keyword1">array</span>();
+</span><span id="72" class="l"><a class="l" href="source-Tracy.Debugger.php.html#72"> 72: </a>
+</span><span id="73" class="l"><a class="l" href="source-Tracy.Debugger.php.html#73"> 73: </a>    <span class="php-comment">/** @var bool {@link Debugger::enable()} */</span>
+</span><span id="74" class="l"><a class="l" href="source-Tracy.Debugger.php.html#74"> 74: </a>    <span class="php-keyword1">private</span> <span class="php-keyword1">static</span> <span class="php-var"><a id="$enabled" href="source-Tracy.Debugger.php.html#$enabled">$enabled</a></span> = <span class="php-keyword1">FALSE</span>;
+</span><span id="75" class="l"><a class="l" href="source-Tracy.Debugger.php.html#75"> 75: </a>
+</span><span id="76" class="l"><a class="l" href="source-Tracy.Debugger.php.html#76"> 76: </a>    <span class="php-comment">/** @internal */</span>
+</span><span id="77" class="l"><a class="l" href="source-Tracy.Debugger.php.html#77"> 77: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">static</span> <span class="php-var"><a id="$errorTypes" href="source-Tracy.Debugger.php.html#$errorTypes">$errorTypes</a></span> = <span class="php-keyword1">array</span>(
+</span><span id="78" class="l"><a class="l" href="source-Tracy.Debugger.php.html#78"> 78: </a>        E_ERROR =&gt; <span class="php-quote">'Fatal Error'</span>,
+</span><span id="79" class="l"><a class="l" href="source-Tracy.Debugger.php.html#79"> 79: </a>        E_USER_ERROR =&gt; <span class="php-quote">'User Error'</span>,
+</span><span id="80" class="l"><a class="l" href="source-Tracy.Debugger.php.html#80"> 80: </a>        E_RECOVERABLE_ERROR =&gt; <span class="php-quote">'Recoverable Error'</span>,
+</span><span id="81" class="l"><a class="l" href="source-Tracy.Debugger.php.html#81"> 81: </a>        E_CORE_ERROR =&gt; <span class="php-quote">'Core Error'</span>,
+</span><span id="82" class="l"><a class="l" href="source-Tracy.Debugger.php.html#82"> 82: </a>        E_COMPILE_ERROR =&gt; <span class="php-quote">'Compile Error'</span>,
+</span><span id="83" class="l"><a class="l" href="source-Tracy.Debugger.php.html#83"> 83: </a>        E_PARSE =&gt; <span class="php-quote">'Parse Error'</span>,
+</span><span id="84" class="l"><a class="l" href="source-Tracy.Debugger.php.html#84"> 84: </a>        E_WARNING =&gt; <span class="php-quote">'Warning'</span>,
+</span><span id="85" class="l"><a class="l" href="source-Tracy.Debugger.php.html#85"> 85: </a>        E_CORE_WARNING =&gt; <span class="php-quote">'Core Warning'</span>,
+</span><span id="86" class="l"><a class="l" href="source-Tracy.Debugger.php.html#86"> 86: </a>        E_COMPILE_WARNING =&gt; <span class="php-quote">'Compile Warning'</span>,
+</span><span id="87" class="l"><a class="l" href="source-Tracy.Debugger.php.html#87"> 87: </a>        E_USER_WARNING =&gt; <span class="php-quote">'User Warning'</span>,
+</span><span id="88" class="l"><a class="l" href="source-Tracy.Debugger.php.html#88"> 88: </a>        E_NOTICE =&gt; <span class="php-quote">'Notice'</span>,
+</span><span id="89" class="l"><a class="l" href="source-Tracy.Debugger.php.html#89"> 89: </a>        E_USER_NOTICE =&gt; <span class="php-quote">'User Notice'</span>,
+</span><span id="90" class="l"><a class="l" href="source-Tracy.Debugger.php.html#90"> 90: </a>        E_STRICT =&gt; <span class="php-quote">'Strict standards'</span>,
+</span><span id="91" class="l"><a class="l" href="source-Tracy.Debugger.php.html#91"> 91: </a>        E_DEPRECATED =&gt; <span class="php-quote">'Deprecated'</span>,
+</span><span id="92" class="l"><a class="l" href="source-Tracy.Debugger.php.html#92"> 92: </a>        E_USER_DEPRECATED =&gt; <span class="php-quote">'User Deprecated'</span>,
+</span><span id="93" class="l"><a class="l" href="source-Tracy.Debugger.php.html#93"> 93: </a>    );
+</span><span id="94" class="l"><a class="l" href="source-Tracy.Debugger.php.html#94"> 94: </a>
+</span><span id="95" class="l"><a class="l" href="source-Tracy.Debugger.php.html#95"> 95: </a>    <span class="php-comment">/********************* logging ****************d*g**/</span>
+</span><span id="96" class="l"><a class="l" href="source-Tracy.Debugger.php.html#96"> 96: </a>
+</span><span id="97" class="l"><a class="l" href="source-Tracy.Debugger.php.html#97"> 97: </a>    <span class="php-comment">/** @var Logger */</span>
+</span><span id="98" class="l"><a class="l" href="source-Tracy.Debugger.php.html#98"> 98: </a>    <span class="php-keyword1">private</span> <span class="php-keyword1">static</span> <span class="php-var"><a id="$logger" href="source-Tracy.Debugger.php.html#$logger">$logger</a></span>;
+</span><span id="99" class="l"><a class="l" href="source-Tracy.Debugger.php.html#99"> 99: </a>
+</span><span id="100" class="l"><a class="l" href="source-Tracy.Debugger.php.html#100">100: </a>    <span class="php-comment">/** @var FireLogger */</span>
+</span><span id="101" class="l"><a class="l" href="source-Tracy.Debugger.php.html#101">101: </a>    <span class="php-keyword1">private</span> <span class="php-keyword1">static</span> <span class="php-var"><a id="$fireLogger" href="source-Tracy.Debugger.php.html#$fireLogger">$fireLogger</a></span>;
+</span><span id="102" class="l"><a class="l" href="source-Tracy.Debugger.php.html#102">102: </a>
+</span><span id="103" class="l"><a class="l" href="source-Tracy.Debugger.php.html#103">103: </a>    <span class="php-comment">/** @var string name of the directory where errors should be logged */</span>
+</span><span id="104" class="l"><a class="l" href="source-Tracy.Debugger.php.html#104">104: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">static</span> <span class="php-var"><a id="$logDirectory" href="source-Tracy.Debugger.php.html#$logDirectory">$logDirectory</a></span>;
+</span><span id="105" class="l"><a class="l" href="source-Tracy.Debugger.php.html#105">105: </a>
+</span><span id="106" class="l"><a class="l" href="source-Tracy.Debugger.php.html#106">106: </a>    <span class="php-comment">/** @var string|array email(s) to which send error notifications */</span>
+</span><span id="107" class="l"><a class="l" href="source-Tracy.Debugger.php.html#107">107: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">static</span> <span class="php-var"><a id="$email" href="source-Tracy.Debugger.php.html#$email">$email</a></span>;
+</span><span id="108" class="l"><a class="l" href="source-Tracy.Debugger.php.html#108">108: </a>
+</span><span id="109" class="l"><a class="l" href="source-Tracy.Debugger.php.html#109">109: </a>    <span class="php-comment">/** @deprecated */</span>
+</span><span id="110" class="l"><a class="l" href="source-Tracy.Debugger.php.html#110">110: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">static</span> <span class="php-var"><a id="$mailer" href="source-Tracy.Debugger.php.html#$mailer">$mailer</a></span> = <span class="php-keyword1">array</span>(<span class="php-quote">'Tracy\Logger'</span>, <span class="php-quote">'defaultMailer'</span>);
+</span><span id="111" class="l"><a class="l" href="source-Tracy.Debugger.php.html#111">111: </a>
+</span><span id="112" class="l"><a class="l" href="source-Tracy.Debugger.php.html#112">112: </a>    <span class="php-comment">/** @deprecated */</span>
+</span><span id="113" class="l"><a class="l" href="source-Tracy.Debugger.php.html#113">113: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">static</span> <span class="php-var"><a id="$emailSnooze" href="source-Tracy.Debugger.php.html#$emailSnooze">$emailSnooze</a></span> = <span class="php-num">172800</span>;
+</span><span id="114" class="l"><a class="l" href="source-Tracy.Debugger.php.html#114">114: </a>
+</span><span id="115" class="l"><a class="l" href="source-Tracy.Debugger.php.html#115">115: </a>    <span class="php-comment">/** {@link Debugger::log()} and {@link Debugger::fireLog()} */</span>
+</span><span id="116" class="l"><a class="l" href="source-Tracy.Debugger.php.html#116">116: </a>    <span class="php-keyword1">const</span> <a id="DEBUG" href="source-Tracy.Debugger.php.html#DEBUG">DEBUG</a> = <span class="php-quote">'debug'</span>,
+</span><span id="117" class="l"><a class="l" href="source-Tracy.Debugger.php.html#117">117: </a>        <a id="INFO" href="source-Tracy.Debugger.php.html#INFO">INFO</a> = <span class="php-quote">'info'</span>,
+</span><span id="118" class="l"><a class="l" href="source-Tracy.Debugger.php.html#118">118: </a>        <a id="WARNING" href="source-Tracy.Debugger.php.html#WARNING">WARNING</a> = <span class="php-quote">'warning'</span>,
+</span><span id="119" class="l"><a class="l" href="source-Tracy.Debugger.php.html#119">119: </a>        <a id="ERROR" href="source-Tracy.Debugger.php.html#ERROR">ERROR</a> = <span class="php-quote">'error'</span>,
+</span><span id="120" class="l"><a class="l" href="source-Tracy.Debugger.php.html#120">120: </a>        <a id="EXCEPTION" href="source-Tracy.Debugger.php.html#EXCEPTION">EXCEPTION</a> = <span class="php-quote">'exception'</span>,
+</span><span id="121" class="l"><a class="l" href="source-Tracy.Debugger.php.html#121">121: </a>        <a id="CRITICAL" href="source-Tracy.Debugger.php.html#CRITICAL">CRITICAL</a> = <span class="php-quote">'critical'</span>;
+</span><span id="122" class="l"><a class="l" href="source-Tracy.Debugger.php.html#122">122: </a>
+</span><span id="123" class="l"><a class="l" href="source-Tracy.Debugger.php.html#123">123: </a>    <span class="php-comment">/********************* debug bar ****************d*g**/</span>
+</span><span id="124" class="l"><a class="l" href="source-Tracy.Debugger.php.html#124">124: </a>
+</span><span id="125" class="l"><a class="l" href="source-Tracy.Debugger.php.html#125">125: </a>    <span class="php-comment">/** @var Bar */</span>
+</span><span id="126" class="l"><a class="l" href="source-Tracy.Debugger.php.html#126">126: </a>    <span class="php-keyword1">private</span> <span class="php-keyword1">static</span> <span class="php-var"><a id="$bar" href="source-Tracy.Debugger.php.html#$bar">$bar</a></span>;
+</span><span id="127" class="l"><a class="l" href="source-Tracy.Debugger.php.html#127">127: </a>
+</span><span id="128" class="l"><a class="l" href="source-Tracy.Debugger.php.html#128">128: </a>
+</span><span id="129" class="l"><a class="l" href="source-Tracy.Debugger.php.html#129">129: </a>    <span class="php-comment">/**
+</span></span><span id="130" class="l"><a class="l" href="source-Tracy.Debugger.php.html#130">130: </a><span class="php-comment">     * Static class - cannot be instantiated.
+</span></span><span id="131" class="l"><a class="l" href="source-Tracy.Debugger.php.html#131">131: </a><span class="php-comment">     */</span>
+</span><span id="132" class="l"><a class="l" href="source-Tracy.Debugger.php.html#132">132: </a>    <span class="php-keyword1">final</span> <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="___construct" href="source-Tracy.Debugger.php.html#___construct">__construct</a>()
+</span><span id="133" class="l"><a class="l" href="source-Tracy.Debugger.php.html#133">133: </a>    {
+</span><span id="134" class="l"><a class="l" href="source-Tracy.Debugger.php.html#134">134: </a>        <span class="php-keyword1">throw</span> <span class="php-keyword1">new</span> \LogicException;
+</span><span id="135" class="l"><a class="l" href="source-Tracy.Debugger.php.html#135">135: </a>    }
+</span><span id="136" class="l"><a class="l" href="source-Tracy.Debugger.php.html#136">136: </a>
+</span><span id="137" class="l"><a class="l" href="source-Tracy.Debugger.php.html#137">137: </a>
+</span><span id="138" class="l"><a class="l" href="source-Tracy.Debugger.php.html#138">138: </a>    <span class="php-comment">/**
+</span></span><span id="139" class="l"><a class="l" href="source-Tracy.Debugger.php.html#139">139: </a><span class="php-comment">     * Enables displaying or logging errors and exceptions.
+</span></span><span id="140" class="l"><a class="l" href="source-Tracy.Debugger.php.html#140">140: </a><span class="php-comment">     * @param  mixed         production, development mode, autodetection or IP address(es) whitelist.
+</span></span><span id="141" class="l"><a class="l" href="source-Tracy.Debugger.php.html#141">141: </a><span class="php-comment">     * @param  string        error log directory; enables logging in production mode, FALSE means that logging is disabled
+</span></span><span id="142" class="l"><a class="l" href="source-Tracy.Debugger.php.html#142">142: </a><span class="php-comment">     * @param  string        administrator email; enables email sending in production mode
+</span></span><span id="143" class="l"><a class="l" href="source-Tracy.Debugger.php.html#143">143: </a><span class="php-comment">     * @return void
+</span></span><span id="144" class="l"><a class="l" href="source-Tracy.Debugger.php.html#144">144: </a><span class="php-comment">     */</span>
+</span><span id="145" class="l"><a class="l" href="source-Tracy.Debugger.php.html#145">145: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">static</span> <span class="php-keyword1">function</span> <a id="_enable" href="source-Tracy.Debugger.php.html#_enable">enable</a>(<span class="php-var">$mode</span> = <span class="php-keyword1">NULL</span>, <span class="php-var">$logDirectory</span> = <span class="php-keyword1">NULL</span>, <span class="php-var">$email</span> = <span class="php-keyword1">NULL</span>)
+</span><span id="146" class="l"><a class="l" href="source-Tracy.Debugger.php.html#146">146: </a>    {
+</span><span id="147" class="l"><a class="l" href="source-Tracy.Debugger.php.html#147">147: </a>        self::<span class="php-var">$enabled</span> = <span class="php-keyword1">TRUE</span>;
+</span><span id="148" class="l"><a class="l" href="source-Tracy.Debugger.php.html#148">148: </a>        self::<span class="php-var">$time</span> = <span class="php-keyword1">isset</span>(<span class="php-var">$_SERVER</span>[<span class="php-quote">'REQUEST_TIME_FLOAT'</span>]) ? <span class="php-var">$_SERVER</span>[<span class="php-quote">'REQUEST_TIME_FLOAT'</span>] : <span class="php-keyword2">microtime</span>(<span class="php-keyword1">TRUE</span>);
+</span><span id="149" class="l"><a class="l" href="source-Tracy.Debugger.php.html#149">149: </a>        <span class="php-keyword1">if</span> (<span class="php-keyword1">isset</span>(<span class="php-var">$_SERVER</span>[<span class="php-quote">'REQUEST_URI'</span>])) {
+</span><span id="150" class="l"><a class="l" href="source-Tracy.Debugger.php.html#150">150: </a>            self::<span class="php-var">$source</span> = (!<span class="php-keyword1">empty</span>(<span class="php-var">$_SERVER</span>[<span class="php-quote">'HTTPS'</span>]) &amp;&amp; <span class="php-keyword2">strcasecmp</span>(<span class="php-var">$_SERVER</span>[<span class="php-quote">'HTTPS'</span>], <span class="php-quote">'off'</span>) ? <span class="php-quote">'https://'</span> : <span class="php-quote">'http://'</span>)
+</span><span id="151" class="l"><a class="l" href="source-Tracy.Debugger.php.html#151">151: </a>                . (<span class="php-keyword1">isset</span>(<span class="php-var">$_SERVER</span>[<span class="php-quote">'HTTP_HOST'</span>]) ? <span class="php-var">$_SERVER</span>[<span class="php-quote">'HTTP_HOST'</span>] : <span class="php-quote">''</span>)
+</span><span id="152" class="l"><a class="l" href="source-Tracy.Debugger.php.html#152">152: </a>                . <span class="php-var">$_SERVER</span>[<span class="php-quote">'REQUEST_URI'</span>];
+</span><span id="153" class="l"><a class="l" href="source-Tracy.Debugger.php.html#153">153: </a>        } <span class="php-keyword1">else</span> {
+</span><span id="154" class="l"><a class="l" href="source-Tracy.Debugger.php.html#154">154: </a>            self::<span class="php-var">$source</span> = <span class="php-keyword1">empty</span>(<span class="php-var">$_SERVER</span>[<span class="php-quote">'argv'</span>]) ? <span class="php-quote">'CLI'</span> : <span class="php-quote">'CLI: '</span> . <span class="php-keyword2">implode</span>(<span class="php-quote">' '</span>, <span class="php-var">$_SERVER</span>[<span class="php-quote">'argv'</span>]);
+</span><span id="155" class="l"><a class="l" href="source-Tracy.Debugger.php.html#155">155: </a>        }
+</span><span id="156" class="l"><a class="l" href="source-Tracy.Debugger.php.html#156">156: </a>        <span class="php-keyword2">error_reporting</span>(E_ALL | E_STRICT);
+</span><span id="157" class="l"><a class="l" href="source-Tracy.Debugger.php.html#157">157: </a>
+</span><span id="158" class="l"><a class="l" href="source-Tracy.Debugger.php.html#158">158: </a>        <span class="php-comment">// production/development mode detection</span>
+</span><span id="159" class="l"><a class="l" href="source-Tracy.Debugger.php.html#159">159: </a>        <span class="php-keyword1">if</span> (<span class="php-keyword2">is_bool</span>(<span class="php-var">$mode</span>)) {
+</span><span id="160" class="l"><a class="l" href="source-Tracy.Debugger.php.html#160">160: </a>            self::<span class="php-var">$productionMode</span> = <span class="php-var">$mode</span>;
+</span><span id="161" class="l"><a class="l" href="source-Tracy.Debugger.php.html#161">161: </a>
+</span><span id="162" class="l"><a class="l" href="source-Tracy.Debugger.php.html#162">162: </a>        } <span class="php-keyword1">elseif</span> (<span class="php-var">$mode</span> !== self::DETECT || self::<span class="php-var">$productionMode</span> === <span class="php-keyword1">NULL</span>) { <span class="php-comment">// IP addresses or computer names whitelist detection</span>
+</span><span id="163" class="l"><a class="l" href="source-Tracy.Debugger.php.html#163">163: </a>            <span class="php-var">$list</span> = <span class="php-keyword2">is_string</span>(<span class="php-var">$mode</span>) ? <span class="php-keyword2">preg_split</span>(<span class="php-quote">'#[,\s]+#'</span>, <span class="php-var">$mode</span>) : (<span class="php-keyword1">array</span>) <span class="php-var">$mode</span>;
+</span><span id="164" class="l"><a class="l" href="source-Tracy.Debugger.php.html#164">164: </a>            <span class="php-keyword1">if</span> (!<span class="php-keyword1">isset</span>(<span class="php-var">$_SERVER</span>[<span class="php-quote">'HTTP_X_FORWARDED_FOR'</span>])) {
+</span><span id="165" class="l"><a class="l" href="source-Tracy.Debugger.php.html#165">165: </a>                <span class="php-var">$list</span>[] = <span class="php-quote">'127.0.0.1'</span>;
+</span><span id="166" class="l"><a class="l" href="source-Tracy.Debugger.php.html#166">166: </a>                <span class="php-var">$list</span>[] = <span class="php-quote">'::1'</span>;
+</span><span id="167" class="l"><a class="l" href="source-Tracy.Debugger.php.html#167">167: </a>            }
+</span><span id="168" class="l"><a class="l" href="source-Tracy.Debugger.php.html#168">168: </a>            self::<span class="php-var">$productionMode</span> = !<span class="php-keyword2">in_array</span>(<span class="php-keyword1">isset</span>(<span class="php-var">$_SERVER</span>[<span class="php-quote">'REMOTE_ADDR'</span>]) ? <span class="php-var">$_SERVER</span>[<span class="php-quote">'REMOTE_ADDR'</span>] : <span class="php-keyword2">php_uname</span>(<span class="php-quote">'n'</span>), <span class="php-var">$list</span>, <span class="php-keyword1">TRUE</span>);
+</span><span id="169" class="l"><a class="l" href="source-Tracy.Debugger.php.html#169">169: </a>        }
+</span><span id="170" class="l"><a class="l" href="source-Tracy.Debugger.php.html#170">170: </a>
+</span><span id="171" class="l"><a class="l" href="source-Tracy.Debugger.php.html#171">171: </a>        <span class="php-comment">// logging configuration</span>
+</span><span id="172" class="l"><a class="l" href="source-Tracy.Debugger.php.html#172">172: </a>        <span class="php-keyword1">if</span> (<span class="php-var">$email</span> !== <span class="php-keyword1">NULL</span>) {
+</span><span id="173" class="l"><a class="l" href="source-Tracy.Debugger.php.html#173">173: </a>            self::<span class="php-var">$email</span> = <span class="php-var">$email</span>;
+</span><span id="174" class="l"><a class="l" href="source-Tracy.Debugger.php.html#174">174: </a>        }
+</span><span id="175" class="l"><a class="l" href="source-Tracy.Debugger.php.html#175">175: </a>        <span class="php-keyword1">if</span> (<span class="php-keyword2">is_string</span>(<span class="php-var">$logDirectory</span>)) {
+</span><span id="176" class="l"><a class="l" href="source-Tracy.Debugger.php.html#176">176: </a>            self::<span class="php-var">$logDirectory</span> = <span class="php-keyword2">realpath</span>(<span class="php-var">$logDirectory</span>);
+</span><span id="177" class="l"><a class="l" href="source-Tracy.Debugger.php.html#177">177: </a>            <span class="php-keyword1">if</span> (self::<span class="php-var">$logDirectory</span> === <span class="php-keyword1">FALSE</span>) {
+</span><span id="178" class="l"><a class="l" href="source-Tracy.Debugger.php.html#178">178: </a>                self::_exceptionHandler(<span class="php-keyword1">new</span> \RuntimeException(<span class="php-quote">&quot;Log directory is not found or is not directory.&quot;</span>));
+</span><span id="179" class="l"><a class="l" href="source-Tracy.Debugger.php.html#179">179: </a>            }
+</span><span id="180" class="l"><a class="l" href="source-Tracy.Debugger.php.html#180">180: </a>        } <span class="php-keyword1">elseif</span> (<span class="php-var">$logDirectory</span> === <span class="php-keyword1">FALSE</span>) {
+</span><span id="181" class="l"><a class="l" href="source-Tracy.Debugger.php.html#181">181: </a>            self::<span class="php-var">$logDirectory</span> = <span class="php-keyword1">NULL</span>;
+</span><span id="182" class="l"><a class="l" href="source-Tracy.Debugger.php.html#182">182: </a>        }
+</span><span id="183" class="l"><a class="l" href="source-Tracy.Debugger.php.html#183">183: </a>        <span class="php-keyword1">if</span> (self::<span class="php-var">$logDirectory</span>) {
+</span><span id="184" class="l"><a class="l" href="source-Tracy.Debugger.php.html#184">184: </a>            <span class="php-keyword2">ini_set</span>(<span class="php-quote">'error_log'</span>, self::<span class="php-var">$logDirectory</span> . <span class="php-quote">'/php_error.log'</span>);
+</span><span id="185" class="l"><a class="l" href="source-Tracy.Debugger.php.html#185">185: </a>        }
+</span><span id="186" class="l"><a class="l" href="source-Tracy.Debugger.php.html#186">186: </a>
+</span><span id="187" class="l"><a class="l" href="source-Tracy.Debugger.php.html#187">187: </a>        <span class="php-comment">// php configuration</span>
+</span><span id="188" class="l"><a class="l" href="source-Tracy.Debugger.php.html#188">188: </a>        <span class="php-keyword1">if</span> (<span class="php-keyword2">function_exists</span>(<span class="php-quote">'ini_set'</span>)) {
+</span><span id="189" class="l"><a class="l" href="source-Tracy.Debugger.php.html#189">189: </a>            <span class="php-keyword2">ini_set</span>(<span class="php-quote">'display_errors'</span>, !self::<span class="php-var">$productionMode</span>); <span class="php-comment">// or 'stderr'</span>
+</span><span id="190" class="l"><a class="l" href="source-Tracy.Debugger.php.html#190">190: </a>            <span class="php-keyword2">ini_set</span>(<span class="php-quote">'html_errors'</span>, <span class="php-keyword1">FALSE</span>);
+</span><span id="191" class="l"><a class="l" href="source-Tracy.Debugger.php.html#191">191: </a>            <span class="php-keyword2">ini_set</span>(<span class="php-quote">'log_errors'</span>, <span class="php-keyword1">FALSE</span>);
+</span><span id="192" class="l"><a class="l" href="source-Tracy.Debugger.php.html#192">192: </a>
+</span><span id="193" class="l"><a class="l" href="source-Tracy.Debugger.php.html#193">193: </a>        } <span class="php-keyword1">elseif</span> (<span class="php-keyword2">ini_get</span>(<span class="php-quote">'display_errors'</span>) != !self::<span class="php-var">$productionMode</span> &amp;&amp; <span class="php-keyword2">ini_get</span>(<span class="php-quote">'display_errors'</span>) !== (self::<span class="php-var">$productionMode</span> ? <span class="php-quote">'stderr'</span> : <span class="php-quote">'stdout'</span>)) { <span class="php-comment">// intentionally ==</span>
+</span><span id="194" class="l"><a class="l" href="source-Tracy.Debugger.php.html#194">194: </a>            self::_exceptionHandler(<span class="php-keyword1">new</span> \RuntimeException(<span class="php-quote">&quot;Unable to set 'display_errors' because function ini_set() is disabled.&quot;</span>));
+</span><span id="195" class="l"><a class="l" href="source-Tracy.Debugger.php.html#195">195: </a>        }
+</span><span id="196" class="l"><a class="l" href="source-Tracy.Debugger.php.html#196">196: </a>
+</span><span id="197" class="l"><a class="l" href="source-Tracy.Debugger.php.html#197">197: </a>        <span class="php-keyword2">register_shutdown_function</span>(<span class="php-keyword1">array</span>(__CLASS__, <span class="php-quote">'_shutdownHandler'</span>));
+</span><span id="198" class="l"><a class="l" href="source-Tracy.Debugger.php.html#198">198: </a>        <span class="php-keyword2">set_exception_handler</span>(<span class="php-keyword1">array</span>(__CLASS__, <span class="php-quote">'_exceptionHandler'</span>));
+</span><span id="199" class="l"><a class="l" href="source-Tracy.Debugger.php.html#199">199: </a>        <span class="php-keyword2">set_error_handler</span>(<span class="php-keyword1">array</span>(__CLASS__, <span class="php-quote">'_errorHandler'</span>));
+</span><span id="200" class="l"><a class="l" href="source-Tracy.Debugger.php.html#200">200: </a>
+</span><span id="201" class="l"><a class="l" href="source-Tracy.Debugger.php.html#201">201: </a>        <span class="php-keyword1">foreach</span> (<span class="php-keyword1">array</span>(<span class="php-quote">'Tracy\Bar'</span>, <span class="php-quote">'Tracy\BlueScreen'</span>, <span class="php-quote">'Tracy\DefaultBarPanel'</span>, <span class="php-quote">'Tracy\Dumper'</span>,
+</span><span id="202" class="l"><a class="l" href="source-Tracy.Debugger.php.html#202">202: </a>            <span class="php-quote">'Tracy\FireLogger'</span>, <span class="php-quote">'Tracy\Helpers'</span>, <span class="php-quote">'Tracy\Logger'</span>, ) <span class="php-keyword1">as</span> <span class="php-var">$class</span>) {
+</span><span id="203" class="l"><a class="l" href="source-Tracy.Debugger.php.html#203">203: </a>            <span class="php-keyword2">class_exists</span>(<span class="php-var">$class</span>);
+</span><span id="204" class="l"><a class="l" href="source-Tracy.Debugger.php.html#204">204: </a>        }
+</span><span id="205" class="l"><a class="l" href="source-Tracy.Debugger.php.html#205">205: </a>    }
+</span><span id="206" class="l"><a class="l" href="source-Tracy.Debugger.php.html#206">206: </a>
+</span><span id="207" class="l"><a class="l" href="source-Tracy.Debugger.php.html#207">207: </a>
+</span><span id="208" class="l"><a class="l" href="source-Tracy.Debugger.php.html#208">208: </a>    <span class="php-comment">/**
+</span></span><span id="209" class="l"><a class="l" href="source-Tracy.Debugger.php.html#209">209: </a><span class="php-comment">     * @return BlueScreen
+</span></span><span id="210" class="l"><a class="l" href="source-Tracy.Debugger.php.html#210">210: </a><span class="php-comment">     */</span>
+</span><span id="211" class="l"><a class="l" href="source-Tracy.Debugger.php.html#211">211: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">static</span> <span class="php-keyword1">function</span> <a id="_getBlueScreen" href="source-Tracy.Debugger.php.html#_getBlueScreen">getBlueScreen</a>()
+</span><span id="212" class="l"><a class="l" href="source-Tracy.Debugger.php.html#212">212: </a>    {
+</span><span id="213" class="l"><a class="l" href="source-Tracy.Debugger.php.html#213">213: </a>        <span class="php-keyword1">if</span> (!self::<span class="php-var">$blueScreen</span>) {
+</span><span id="214" class="l"><a class="l" href="source-Tracy.Debugger.php.html#214">214: </a>            self::<span class="php-var">$blueScreen</span> = <span class="php-keyword1">new</span> BlueScreen;
+</span><span id="215" class="l"><a class="l" href="source-Tracy.Debugger.php.html#215">215: </a>            self::<span class="php-var">$blueScreen</span>-&gt;info = <span class="php-keyword1">array</span>(
+</span><span id="216" class="l"><a class="l" href="source-Tracy.Debugger.php.html#216">216: </a>                <span class="php-quote">'PHP '</span> . PHP_VERSION,
+</span><span id="217" class="l"><a class="l" href="source-Tracy.Debugger.php.html#217">217: </a>                <span class="php-keyword1">isset</span>(<span class="php-var">$_SERVER</span>[<span class="php-quote">'SERVER_SOFTWARE'</span>]) ? <span class="php-var">$_SERVER</span>[<span class="php-quote">'SERVER_SOFTWARE'</span>] : <span class="php-keyword1">NULL</span>,
+</span><span id="218" class="l"><a class="l" href="source-Tracy.Debugger.php.html#218">218: </a>                <span class="php-quote">'Tracy '</span> . self::<span class="php-var">$version</span>,
+</span><span id="219" class="l"><a class="l" href="source-Tracy.Debugger.php.html#219">219: </a>            );
+</span><span id="220" class="l"><a class="l" href="source-Tracy.Debugger.php.html#220">220: </a>        }
+</span><span id="221" class="l"><a class="l" href="source-Tracy.Debugger.php.html#221">221: </a>        <span class="php-keyword1">return</span> self::<span class="php-var">$blueScreen</span>;
+</span><span id="222" class="l"><a class="l" href="source-Tracy.Debugger.php.html#222">222: </a>    }
+</span><span id="223" class="l"><a class="l" href="source-Tracy.Debugger.php.html#223">223: </a>
+</span><span id="224" class="l"><a class="l" href="source-Tracy.Debugger.php.html#224">224: </a>
+</span><span id="225" class="l"><a class="l" href="source-Tracy.Debugger.php.html#225">225: </a>    <span class="php-comment">/**
+</span></span><span id="226" class="l"><a class="l" href="source-Tracy.Debugger.php.html#226">226: </a><span class="php-comment">     * @return Bar
+</span></span><span id="227" class="l"><a class="l" href="source-Tracy.Debugger.php.html#227">227: </a><span class="php-comment">     */</span>
+</span><span id="228" class="l"><a class="l" href="source-Tracy.Debugger.php.html#228">228: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">static</span> <span class="php-keyword1">function</span> <a id="_getBar" href="source-Tracy.Debugger.php.html#_getBar">getBar</a>()
+</span><span id="229" class="l"><a class="l" href="source-Tracy.Debugger.php.html#229">229: </a>    {
+</span><span id="230" class="l"><a class="l" href="source-Tracy.Debugger.php.html#230">230: </a>        <span class="php-keyword1">if</span> (!self::<span class="php-var">$bar</span>) {
+</span><span id="231" class="l"><a class="l" href="source-Tracy.Debugger.php.html#231">231: </a>            self::<span class="php-var">$bar</span> = <span class="php-keyword1">new</span> Bar;
+</span><span id="232" class="l"><a class="l" href="source-Tracy.Debugger.php.html#232">232: </a>            self::<span class="php-var">$bar</span>-&gt;addPanel(<span class="php-keyword1">new</span> DefaultBarPanel(<span class="php-quote">'time'</span>));
+</span><span id="233" class="l"><a class="l" href="source-Tracy.Debugger.php.html#233">233: </a>            self::<span class="php-var">$bar</span>-&gt;addPanel(<span class="php-keyword1">new</span> DefaultBarPanel(<span class="php-quote">'memory'</span>));
+</span><span id="234" class="l"><a class="l" href="source-Tracy.Debugger.php.html#234">234: </a>            self::<span class="php-var">$bar</span>-&gt;addPanel(<span class="php-keyword1">new</span> DefaultBarPanel(<span class="php-quote">'errors'</span>), __CLASS__ . <span class="php-quote">':errors'</span>); <span class="php-comment">// filled by _errorHandler()</span>
+</span><span id="235" class="l"><a class="l" href="source-Tracy.Debugger.php.html#235">235: </a>            self::<span class="php-var">$bar</span>-&gt;addPanel(<span class="php-keyword1">new</span> DefaultBarPanel(<span class="php-quote">'dumps'</span>), __CLASS__ . <span class="php-quote">':dumps'</span>); <span class="php-comment">// filled by barDump()</span>
+</span><span id="236" class="l"><a class="l" href="source-Tracy.Debugger.php.html#236">236: </a>            self::<span class="php-var">$bar</span>-&gt;info = <span class="php-keyword1">array</span>(
+</span><span id="237" class="l"><a class="l" href="source-Tracy.Debugger.php.html#237">237: </a>                <span class="php-quote">'PHP '</span> . PHP_VERSION,
+</span><span id="238" class="l"><a class="l" href="source-Tracy.Debugger.php.html#238">238: </a>                <span class="php-keyword1">isset</span>(<span class="php-var">$_SERVER</span>[<span class="php-quote">'SERVER_SOFTWARE'</span>]) ? <span class="php-var">$_SERVER</span>[<span class="php-quote">'SERVER_SOFTWARE'</span>] : <span class="php-keyword1">NULL</span>,
+</span><span id="239" class="l"><a class="l" href="source-Tracy.Debugger.php.html#239">239: </a>                <span class="php-quote">'Tracy '</span> . self::<span class="php-var">$version</span>,
+</span><span id="240" class="l"><a class="l" href="source-Tracy.Debugger.php.html#240">240: </a>            );
+</span><span id="241" class="l"><a class="l" href="source-Tracy.Debugger.php.html#241">241: </a>        }
+</span><span id="242" class="l"><a class="l" href="source-Tracy.Debugger.php.html#242">242: </a>        <span class="php-keyword1">return</span> self::<span class="php-var">$bar</span>;
+</span><span id="243" class="l"><a class="l" href="source-Tracy.Debugger.php.html#243">243: </a>    }
+</span><span id="244" class="l"><a class="l" href="source-Tracy.Debugger.php.html#244">244: </a>
+</span><span id="245" class="l"><a class="l" href="source-Tracy.Debugger.php.html#245">245: </a>
+</span><span id="246" class="l"><a class="l" href="source-Tracy.Debugger.php.html#246">246: </a>    <span class="php-comment">/**
+</span></span><span id="247" class="l"><a class="l" href="source-Tracy.Debugger.php.html#247">247: </a><span class="php-comment">     * @return void
+</span></span><span id="248" class="l"><a class="l" href="source-Tracy.Debugger.php.html#248">248: </a><span class="php-comment">     */</span>
+</span><span id="249" class="l"><a class="l" href="source-Tracy.Debugger.php.html#249">249: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">static</span> <span class="php-keyword1">function</span> <a id="_setLogger" href="source-Tracy.Debugger.php.html#_setLogger">setLogger</a>(<span class="php-var">$logger</span>)
+</span><span id="250" class="l"><a class="l" href="source-Tracy.Debugger.php.html#250">250: </a>    {
+</span><span id="251" class="l"><a class="l" href="source-Tracy.Debugger.php.html#251">251: </a>        self::<span class="php-var">$logger</span> = <span class="php-var">$logger</span>;
+</span><span id="252" class="l"><a class="l" href="source-Tracy.Debugger.php.html#252">252: </a>    }
+</span><span id="253" class="l"><a class="l" href="source-Tracy.Debugger.php.html#253">253: </a>
+</span><span id="254" class="l"><a class="l" href="source-Tracy.Debugger.php.html#254">254: </a>
+</span><span id="255" class="l"><a class="l" href="source-Tracy.Debugger.php.html#255">255: </a>    <span class="php-comment">/**
+</span></span><span id="256" class="l"><a class="l" href="source-Tracy.Debugger.php.html#256">256: </a><span class="php-comment">     * @return Logger
+</span></span><span id="257" class="l"><a class="l" href="source-Tracy.Debugger.php.html#257">257: </a><span class="php-comment">     */</span>
+</span><span id="258" class="l"><a class="l" href="source-Tracy.Debugger.php.html#258">258: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">static</span> <span class="php-keyword1">function</span> <a id="_getLogger" href="source-Tracy.Debugger.php.html#_getLogger">getLogger</a>()
+</span><span id="259" class="l"><a class="l" href="source-Tracy.Debugger.php.html#259">259: </a>    {
+</span><span id="260" class="l"><a class="l" href="source-Tracy.Debugger.php.html#260">260: </a>        <span class="php-keyword1">if</span> (!self::<span class="php-var">$logger</span>) {
+</span><span id="261" class="l"><a class="l" href="source-Tracy.Debugger.php.html#261">261: </a>            self::<span class="php-var">$logger</span> = <span class="php-keyword1">new</span> Logger;
+</span><span id="262" class="l"><a class="l" href="source-Tracy.Debugger.php.html#262">262: </a>            self::<span class="php-var">$logger</span>-&gt;directory = &amp; self::<span class="php-var">$logDirectory</span>;
+</span><span id="263" class="l"><a class="l" href="source-Tracy.Debugger.php.html#263">263: </a>            self::<span class="php-var">$logger</span>-&gt;email = &amp; self::<span class="php-var">$email</span>;
+</span><span id="264" class="l"><a class="l" href="source-Tracy.Debugger.php.html#264">264: </a>            self::<span class="php-var">$logger</span>-&gt;mailer = &amp; self::<span class="php-var">$mailer</span>;
+</span><span id="265" class="l"><a class="l" href="source-Tracy.Debugger.php.html#265">265: </a>            self::<span class="php-var">$logger</span>-&gt;emailSnooze = &amp; self::<span class="php-var">$emailSnooze</span>;
+</span><span id="266" class="l"><a class="l" href="source-Tracy.Debugger.php.html#266">266: </a>        }
+</span><span id="267" class="l"><a class="l" href="source-Tracy.Debugger.php.html#267">267: </a>        <span class="php-keyword1">return</span> self::<span class="php-var">$logger</span>;
+</span><span id="268" class="l"><a class="l" href="source-Tracy.Debugger.php.html#268">268: </a>    }
+</span><span id="269" class="l"><a class="l" href="source-Tracy.Debugger.php.html#269">269: </a>
+</span><span id="270" class="l"><a class="l" href="source-Tracy.Debugger.php.html#270">270: </a>
+</span><span id="271" class="l"><a class="l" href="source-Tracy.Debugger.php.html#271">271: </a>    <span class="php-comment">/**
+</span></span><span id="272" class="l"><a class="l" href="source-Tracy.Debugger.php.html#272">272: </a><span class="php-comment">     * @return FireLogger
+</span></span><span id="273" class="l"><a class="l" href="source-Tracy.Debugger.php.html#273">273: </a><span class="php-comment">     */</span>
+</span><span id="274" class="l"><a class="l" href="source-Tracy.Debugger.php.html#274">274: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">static</span> <span class="php-keyword1">function</span> <a id="_getFireLogger" href="source-Tracy.Debugger.php.html#_getFireLogger">getFireLogger</a>()
+</span><span id="275" class="l"><a class="l" href="source-Tracy.Debugger.php.html#275">275: </a>    {
+</span><span id="276" class="l"><a class="l" href="source-Tracy.Debugger.php.html#276">276: </a>        <span class="php-keyword1">if</span> (!self::<span class="php-var">$fireLogger</span>) {
+</span><span id="277" class="l"><a class="l" href="source-Tracy.Debugger.php.html#277">277: </a>            self::<span class="php-var">$fireLogger</span> = <span class="php-keyword1">new</span> FireLogger;
+</span><span id="278" class="l"><a class="l" href="source-Tracy.Debugger.php.html#278">278: </a>        }
+</span><span id="279" class="l"><a class="l" href="source-Tracy.Debugger.php.html#279">279: </a>        <span class="php-keyword1">return</span> self::<span class="php-var">$fireLogger</span>;
+</span><span id="280" class="l"><a class="l" href="source-Tracy.Debugger.php.html#280">280: </a>    }
+</span><span id="281" class="l"><a class="l" href="source-Tracy.Debugger.php.html#281">281: </a>
+</span><span id="282" class="l"><a class="l" href="source-Tracy.Debugger.php.html#282">282: </a>
+</span><span id="283" class="l"><a class="l" href="source-Tracy.Debugger.php.html#283">283: </a>    <span class="php-comment">/**
+</span></span><span id="284" class="l"><a class="l" href="source-Tracy.Debugger.php.html#284">284: </a><span class="php-comment">     * Is Debug enabled?
+</span></span><span id="285" class="l"><a class="l" href="source-Tracy.Debugger.php.html#285">285: </a><span class="php-comment">     * @return bool
+</span></span><span id="286" class="l"><a class="l" href="source-Tracy.Debugger.php.html#286">286: </a><span class="php-comment">     */</span>
+</span><span id="287" class="l"><a class="l" href="source-Tracy.Debugger.php.html#287">287: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">static</span> <span class="php-keyword1">function</span> <a id="_isEnabled" href="source-Tracy.Debugger.php.html#_isEnabled">isEnabled</a>()
+</span><span id="288" class="l"><a class="l" href="source-Tracy.Debugger.php.html#288">288: </a>    {
+</span><span id="289" class="l"><a class="l" href="source-Tracy.Debugger.php.html#289">289: </a>        <span class="php-keyword1">return</span> self::<span class="php-var">$enabled</span>;
+</span><span id="290" class="l"><a class="l" href="source-Tracy.Debugger.php.html#290">290: </a>    }
+</span><span id="291" class="l"><a class="l" href="source-Tracy.Debugger.php.html#291">291: </a>
+</span><span id="292" class="l"><a class="l" href="source-Tracy.Debugger.php.html#292">292: </a>
+</span><span id="293" class="l"><a class="l" href="source-Tracy.Debugger.php.html#293">293: </a>    <span class="php-comment">/**
+</span></span><span id="294" class="l"><a class="l" href="source-Tracy.Debugger.php.html#294">294: </a><span class="php-comment">     * Logs message or exception to file (if not disabled) and sends email notification (if enabled).
+</span></span><span id="295" class="l"><a class="l" href="source-Tracy.Debugger.php.html#295">295: </a><span class="php-comment">     * @param  string|Exception
+</span></span><span id="296" class="l"><a class="l" href="source-Tracy.Debugger.php.html#296">296: </a><span class="php-comment">     * @param  int  one of constant Debugger::INFO, WARNING, ERROR (sends email), EXCEPTION (sends email), CRITICAL (sends email)
+</span></span><span id="297" class="l"><a class="l" href="source-Tracy.Debugger.php.html#297">297: </a><span class="php-comment">     * @return string logged error filename
+</span></span><span id="298" class="l"><a class="l" href="source-Tracy.Debugger.php.html#298">298: </a><span class="php-comment">     */</span>
+</span><span id="299" class="l"><a class="l" href="source-Tracy.Debugger.php.html#299">299: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">static</span> <span class="php-keyword1">function</span> <span class="php-keyword2">log</span>(<span class="php-var">$message</span>, <span class="php-var">$priority</span> = self::INFO)
+</span><span id="300" class="l"><a class="l" href="source-Tracy.Debugger.php.html#300">300: </a>    {
+</span><span id="301" class="l"><a class="l" href="source-Tracy.Debugger.php.html#301">301: </a>        <span class="php-keyword1">if</span> (!self::<span class="php-var">$logDirectory</span>) {
+</span><span id="302" class="l"><a class="l" href="source-Tracy.Debugger.php.html#302">302: </a>            <span class="php-keyword1">return</span>;
+</span><span id="303" class="l"><a class="l" href="source-Tracy.Debugger.php.html#303">303: </a>        }
+</span><span id="304" class="l"><a class="l" href="source-Tracy.Debugger.php.html#304">304: </a>
+</span><span id="305" class="l"><a class="l" href="source-Tracy.Debugger.php.html#305">305: </a>        <span class="php-var">$exceptionFilename</span> = <span class="php-keyword1">NULL</span>;
+</span><span id="306" class="l"><a class="l" href="source-Tracy.Debugger.php.html#306">306: </a>        <span class="php-keyword1">if</span> (<span class="php-var">$message</span> <span class="php-keyword1">instanceof</span> \Exception) {
+</span><span id="307" class="l"><a class="l" href="source-Tracy.Debugger.php.html#307">307: </a>            <span class="php-var">$exception</span> = <span class="php-var">$message</span>;
+</span><span id="308" class="l"><a class="l" href="source-Tracy.Debugger.php.html#308">308: </a>            <span class="php-keyword1">while</span> (<span class="php-var">$exception</span>) {
+</span><span id="309" class="l"><a class="l" href="source-Tracy.Debugger.php.html#309">309: </a>                <span class="php-var">$tmp</span>[] = (<span class="php-var">$exception</span> <span class="php-keyword1">instanceof</span> ErrorException
+</span><span id="310" class="l"><a class="l" href="source-Tracy.Debugger.php.html#310">310: </a>                    ? <span class="php-quote">'Fatal error: '</span> . <span class="php-var">$exception</span>-&gt;getMessage()
+</span><span id="311" class="l"><a class="l" href="source-Tracy.Debugger.php.html#311">311: </a>                    : <span class="php-keyword2">get_class</span>(<span class="php-var">$exception</span>) . <span class="php-quote">': '</span> . <span class="php-var">$exception</span>-&gt;getMessage())
+</span><span id="312" class="l"><a class="l" href="source-Tracy.Debugger.php.html#312">312: </a>                    . <span class="php-quote">' in '</span> . <span class="php-var">$exception</span>-&gt;getFile() . <span class="php-quote">':'</span> . <span class="php-var">$exception</span>-&gt;getLine();
+</span><span id="313" class="l"><a class="l" href="source-Tracy.Debugger.php.html#313">313: </a>                <span class="php-var">$exception</span> = <span class="php-var">$exception</span>-&gt;getPrevious();
+</span><span id="314" class="l"><a class="l" href="source-Tracy.Debugger.php.html#314">314: </a>            }
+</span><span id="315" class="l"><a class="l" href="source-Tracy.Debugger.php.html#315">315: </a>            <span class="php-var">$exception</span> = <span class="php-var">$message</span>;
+</span><span id="316" class="l"><a class="l" href="source-Tracy.Debugger.php.html#316">316: </a>            <span class="php-var">$message</span> = <span class="php-keyword2">implode</span>(<span class="php-var">$tmp</span>, <span class="php-quote">&quot;\ncaused by &quot;</span>);
+</span><span id="317" class="l"><a class="l" href="source-Tracy.Debugger.php.html#317">317: </a>
+</span><span id="318" class="l"><a class="l" href="source-Tracy.Debugger.php.html#318">318: </a>            <span class="php-var">$hash</span> = <span class="php-keyword2">md5</span>(<span class="php-keyword2">preg_replace</span>(<span class="php-quote">'~(Resource id #)\d+~'</span>, <span class="php-quote">'$1'</span>, <span class="php-var">$exception</span>));
+</span><span id="319" class="l"><a class="l" href="source-Tracy.Debugger.php.html#319">319: </a>            <span class="php-var">$exceptionFilename</span> = <span class="php-quote">'exception-'</span> . @<span class="php-keyword2">date</span>(<span class="php-quote">'Y-m-d-H-i-s'</span>) . <span class="php-quote">&quot;-</span><span class="php-var">$hash</span><span class="php-quote">.html&quot;</span>;
+</span><span id="320" class="l"><a class="l" href="source-Tracy.Debugger.php.html#320">320: </a>            <span class="php-keyword1">foreach</span> (<span class="php-keyword1">new</span> \DirectoryIterator(self::<span class="php-var">$logDirectory</span>) <span class="php-keyword1">as</span> <span class="php-var">$entry</span>) {
+</span><span id="321" class="l"><a class="l" href="source-Tracy.Debugger.php.html#321">321: </a>                <span class="php-keyword1">if</span> (<span class="php-keyword2">strpos</span>(<span class="php-var">$entry</span>, <span class="php-var">$hash</span>)) {
+</span><span id="322" class="l"><a class="l" href="source-Tracy.Debugger.php.html#322">322: </a>                    <span class="php-var">$exceptionFilename</span> = <span class="php-var">$entry</span>;
+</span><span id="323" class="l"><a class="l" href="source-Tracy.Debugger.php.html#323">323: </a>                    <span class="php-var">$saved</span> = <span class="php-keyword1">TRUE</span>;
+</span><span id="324" class="l"><a class="l" href="source-Tracy.Debugger.php.html#324">324: </a>                    <span class="php-keyword1">break</span>;
+</span><span id="325" class="l"><a class="l" href="source-Tracy.Debugger.php.html#325">325: </a>                }
+</span><span id="326" class="l"><a class="l" href="source-Tracy.Debugger.php.html#326">326: </a>            }
+</span><span id="327" class="l"><a class="l" href="source-Tracy.Debugger.php.html#327">327: </a>        } <span class="php-keyword1">elseif</span> (!<span class="php-keyword2">is_string</span>(<span class="php-var">$message</span>)) {
+</span><span id="328" class="l"><a class="l" href="source-Tracy.Debugger.php.html#328">328: </a>            <span class="php-var">$message</span> = Dumper::toText(<span class="php-var">$message</span>);
+</span><span id="329" class="l"><a class="l" href="source-Tracy.Debugger.php.html#329">329: </a>        }
+</span><span id="330" class="l"><a class="l" href="source-Tracy.Debugger.php.html#330">330: </a>
+</span><span id="331" class="l"><a class="l" href="source-Tracy.Debugger.php.html#331">331: </a>        <span class="php-keyword1">if</span> (<span class="php-var">$exceptionFilename</span>) {
+</span><span id="332" class="l"><a class="l" href="source-Tracy.Debugger.php.html#332">332: </a>            <span class="php-var">$exceptionFilename</span> = self::<span class="php-var">$logDirectory</span> . <span class="php-quote">'/'</span> . <span class="php-var">$exceptionFilename</span>;
+</span><span id="333" class="l"><a class="l" href="source-Tracy.Debugger.php.html#333">333: </a>            <span class="php-keyword1">if</span> (<span class="php-keyword1">empty</span>(<span class="php-var">$saved</span>) &amp;&amp; <span class="php-var">$logHandle</span> = @<span class="php-keyword2">fopen</span>(<span class="php-var">$exceptionFilename</span>, <span class="php-quote">'w'</span>)) {
+</span><span id="334" class="l"><a class="l" href="source-Tracy.Debugger.php.html#334">334: </a>                <span class="php-keyword2">ob_start</span>(); <span class="php-comment">// double buffer prevents sending HTTP headers in some PHP</span>
+</span><span id="335" class="l"><a class="l" href="source-Tracy.Debugger.php.html#335">335: </a>                <span class="php-keyword2">ob_start</span>(<span class="php-keyword1">function</span>(<span class="php-var">$buffer</span>) <span class="php-keyword1">use</span> (<span class="php-var">$logHandle</span>) { <span class="php-keyword2">fwrite</span>(<span class="php-var">$logHandle</span>, <span class="php-var">$buffer</span>); }, <span class="php-num">4096</span>);
+</span><span id="336" class="l"><a class="l" href="source-Tracy.Debugger.php.html#336">336: </a>                self::getBlueScreen()-&gt;render(<span class="php-var">$exception</span>);
+</span><span id="337" class="l"><a class="l" href="source-Tracy.Debugger.php.html#337">337: </a>                <span class="php-keyword2">ob_end_flush</span>();
+</span><span id="338" class="l"><a class="l" href="source-Tracy.Debugger.php.html#338">338: </a>                <span class="php-keyword2">ob_end_clean</span>();
+</span><span id="339" class="l"><a class="l" href="source-Tracy.Debugger.php.html#339">339: </a>                <span class="php-keyword2">fclose</span>(<span class="php-var">$logHandle</span>);
+</span><span id="340" class="l"><a class="l" href="source-Tracy.Debugger.php.html#340">340: </a>            }
+</span><span id="341" class="l"><a class="l" href="source-Tracy.Debugger.php.html#341">341: </a>        }
+</span><span id="342" class="l"><a class="l" href="source-Tracy.Debugger.php.html#342">342: </a>
+</span><span id="343" class="l"><a class="l" href="source-Tracy.Debugger.php.html#343">343: </a>        self::getLogger()-&gt;<span class="php-keyword2">log</span>(<span class="php-keyword1">array</span>(
+</span><span id="344" class="l"><a class="l" href="source-Tracy.Debugger.php.html#344">344: </a>            @<span class="php-keyword2">date</span>(<span class="php-quote">'[Y-m-d H-i-s]'</span>),
+</span><span id="345" class="l"><a class="l" href="source-Tracy.Debugger.php.html#345">345: </a>            <span class="php-keyword2">trim</span>(<span class="php-var">$message</span>),
+</span><span id="346" class="l"><a class="l" href="source-Tracy.Debugger.php.html#346">346: </a>            self::<span class="php-var">$source</span> ? <span class="php-quote">' @  '</span> . self::<span class="php-var">$source</span> : <span class="php-keyword1">NULL</span>,
+</span><span id="347" class="l"><a class="l" href="source-Tracy.Debugger.php.html#347">347: </a>            <span class="php-var">$exceptionFilename</span> ? <span class="php-quote">' @@  '</span> . <span class="php-keyword2">basename</span>(<span class="php-var">$exceptionFilename</span>) : <span class="php-keyword1">NULL</span>
+</span><span id="348" class="l"><a class="l" href="source-Tracy.Debugger.php.html#348">348: </a>        ), <span class="php-var">$priority</span>);
+</span><span id="349" class="l"><a class="l" href="source-Tracy.Debugger.php.html#349">349: </a>
+</span><span id="350" class="l"><a class="l" href="source-Tracy.Debugger.php.html#350">350: </a>        <span class="php-keyword1">return</span> <span class="php-var">$exceptionFilename</span> ? <span class="php-keyword2">strtr</span>(<span class="php-var">$exceptionFilename</span>, <span class="php-quote">'\\/'</span>, DIRECTORY_SEPARATOR . DIRECTORY_SEPARATOR) : <span class="php-keyword1">NULL</span>;
+</span><span id="351" class="l"><a class="l" href="source-Tracy.Debugger.php.html#351">351: </a>    }
+</span><span id="352" class="l"><a class="l" href="source-Tracy.Debugger.php.html#352">352: </a>
+</span><span id="353" class="l"><a class="l" href="source-Tracy.Debugger.php.html#353">353: </a>
+</span><span id="354" class="l"><a class="l" href="source-Tracy.Debugger.php.html#354">354: </a>    <span class="php-comment">/**
+</span></span><span id="355" class="l"><a class="l" href="source-Tracy.Debugger.php.html#355">355: </a><span class="php-comment">     * Shutdown handler to catch fatal errors and execute of the planned activities.
+</span></span><span id="356" class="l"><a class="l" href="source-Tracy.Debugger.php.html#356">356: </a><span class="php-comment">     * @return void
+</span></span><span id="357" class="l"><a class="l" href="source-Tracy.Debugger.php.html#357">357: </a><span class="php-comment">     * @internal
+</span></span><span id="358" class="l"><a class="l" href="source-Tracy.Debugger.php.html#358">358: </a><span class="php-comment">     */</span>
+</span><span id="359" class="l"><a class="l" href="source-Tracy.Debugger.php.html#359">359: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">static</span> <span class="php-keyword1">function</span> <a id="__shutdownHandler" href="source-Tracy.Debugger.php.html#__shutdownHandler">_shutdownHandler</a>()
+</span><span id="360" class="l"><a class="l" href="source-Tracy.Debugger.php.html#360">360: </a>    {
+</span><span id="361" class="l"><a class="l" href="source-Tracy.Debugger.php.html#361">361: </a>        <span class="php-keyword1">if</span> (!self::<span class="php-var">$enabled</span>) {
+</span><span id="362" class="l"><a class="l" href="source-Tracy.Debugger.php.html#362">362: </a>            <span class="php-keyword1">return</span>;
+</span><span id="363" class="l"><a class="l" href="source-Tracy.Debugger.php.html#363">363: </a>        }
+</span><span id="364" class="l"><a class="l" href="source-Tracy.Debugger.php.html#364">364: </a>
+</span><span id="365" class="l"><a class="l" href="source-Tracy.Debugger.php.html#365">365: </a>        <span class="php-var">$error</span> = <span class="php-keyword2">error_get_last</span>();
+</span><span id="366" class="l"><a class="l" href="source-Tracy.Debugger.php.html#366">366: </a>        <span class="php-keyword1">if</span> (<span class="php-keyword2">in_array</span>(<span class="php-var">$error</span>[<span class="php-quote">'type'</span>], <span class="php-keyword1">array</span>(E_ERROR, E_CORE_ERROR, E_COMPILE_ERROR, E_PARSE), <span class="php-keyword1">TRUE</span>)) {
+</span><span id="367" class="l"><a class="l" href="source-Tracy.Debugger.php.html#367">367: </a>            self::_exceptionHandler(Helpers::fixStack(<span class="php-keyword1">new</span> ErrorException(<span class="php-var">$error</span>[<span class="php-quote">'message'</span>], <span class="php-num">0</span>, <span class="php-var">$error</span>[<span class="php-quote">'type'</span>], <span class="php-var">$error</span>[<span class="php-quote">'file'</span>], <span class="php-var">$error</span>[<span class="php-quote">'line'</span>])), <span class="php-keyword1">FALSE</span>);
+</span><span id="368" class="l"><a class="l" href="source-Tracy.Debugger.php.html#368">368: </a>
+</span><span id="369" class="l"><a class="l" href="source-Tracy.Debugger.php.html#369">369: </a>        } <span class="php-keyword1">elseif</span> (!<span class="php-keyword2">connection_aborted</span>() &amp;&amp; !self::<span class="php-var">$productionMode</span> &amp;&amp; self::isHtmlMode()) {
+</span><span id="370" class="l"><a class="l" href="source-Tracy.Debugger.php.html#370">370: </a>            self::getBar()-&gt;render();
+</span><span id="371" class="l"><a class="l" href="source-Tracy.Debugger.php.html#371">371: </a>        }
+</span><span id="372" class="l"><a class="l" href="source-Tracy.Debugger.php.html#372">372: </a>    }
+</span><span id="373" class="l"><a class="l" href="source-Tracy.Debugger.php.html#373">373: </a>
+</span><span id="374" class="l"><a class="l" href="source-Tracy.Debugger.php.html#374">374: </a>
+</span><span id="375" class="l"><a class="l" href="source-Tracy.Debugger.php.html#375">375: </a>    <span class="php-comment">/**
+</span></span><span id="376" class="l"><a class="l" href="source-Tracy.Debugger.php.html#376">376: </a><span class="php-comment">     * Handler to catch uncaught exception.
+</span></span><span id="377" class="l"><a class="l" href="source-Tracy.Debugger.php.html#377">377: </a><span class="php-comment">     * @param  \Exception
+</span></span><span id="378" class="l"><a class="l" href="source-Tracy.Debugger.php.html#378">378: </a><span class="php-comment">     * @return void
+</span></span><span id="379" class="l"><a class="l" href="source-Tracy.Debugger.php.html#379">379: </a><span class="php-comment">     * @internal
+</span></span><span id="380" class="l"><a class="l" href="source-Tracy.Debugger.php.html#380">380: </a><span class="php-comment">     */</span>
+</span><span id="381" class="l"><a class="l" href="source-Tracy.Debugger.php.html#381">381: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">static</span> <span class="php-keyword1">function</span> <a id="__exceptionHandler" href="source-Tracy.Debugger.php.html#__exceptionHandler">_exceptionHandler</a>(\Exception <span class="php-var">$exception</span>, <span class="php-var">$exit</span> = <span class="php-keyword1">TRUE</span>)
+</span><span id="382" class="l"><a class="l" href="source-Tracy.Debugger.php.html#382">382: </a>    {
+</span><span id="383" class="l"><a class="l" href="source-Tracy.Debugger.php.html#383">383: </a>        <span class="php-keyword1">if</span> (!self::<span class="php-var">$enabled</span>) {
+</span><span id="384" class="l"><a class="l" href="source-Tracy.Debugger.php.html#384">384: </a>            <span class="php-keyword1">return</span>;
+</span><span id="385" class="l"><a class="l" href="source-Tracy.Debugger.php.html#385">385: </a>        }
+</span><span id="386" class="l"><a class="l" href="source-Tracy.Debugger.php.html#386">386: </a>        self::<span class="php-var">$enabled</span> = <span class="php-keyword1">FALSE</span>; <span class="php-comment">// prevent double rendering</span>
+</span><span id="387" class="l"><a class="l" href="source-Tracy.Debugger.php.html#387">387: </a>
+</span><span id="388" class="l"><a class="l" href="source-Tracy.Debugger.php.html#388">388: </a>        <span class="php-keyword1">if</span> (!<span class="php-keyword2">headers_sent</span>()) {
+</span><span id="389" class="l"><a class="l" href="source-Tracy.Debugger.php.html#389">389: </a>            <span class="php-var">$protocol</span> = <span class="php-keyword1">isset</span>(<span class="php-var">$_SERVER</span>[<span class="php-quote">'SERVER_PROTOCOL'</span>]) ? <span class="php-var">$_SERVER</span>[<span class="php-quote">'SERVER_PROTOCOL'</span>] : <span class="php-quote">'HTTP/1.1'</span>;
+</span><span id="390" class="l"><a class="l" href="source-Tracy.Debugger.php.html#390">390: </a>            <span class="php-var">$code</span> = <span class="php-keyword1">isset</span>(<span class="php-var">$_SERVER</span>[<span class="php-quote">'HTTP_USER_AGENT'</span>]) &amp;&amp; <span class="php-keyword2">strpos</span>(<span class="php-var">$_SERVER</span>[<span class="php-quote">'HTTP_USER_AGENT'</span>], <span class="php-quote">'MSIE '</span>) !== <span class="php-keyword1">FALSE</span> ? <span class="php-num">503</span> : <span class="php-num">500</span>;
+</span><span id="391" class="l"><a class="l" href="source-Tracy.Debugger.php.html#391">391: </a>            <span class="php-keyword2">header</span>(<span class="php-quote">&quot;</span><span class="php-var">$protocol</span><span class="php-quote"> </span><span class="php-var">$code</span><span class="php-quote">&quot;</span>, <span class="php-keyword1">TRUE</span>, <span class="php-var">$code</span>);
+</span><span id="392" class="l"><a class="l" href="source-Tracy.Debugger.php.html#392">392: </a>            <span class="php-keyword1">if</span> (self::isHtmlMode()) {
+</span><span id="393" class="l"><a class="l" href="source-Tracy.Debugger.php.html#393">393: </a>                <span class="php-keyword2">header</span>(<span class="php-quote">'Content-Type: text/html; charset=UTF-8'</span>);
+</span><span id="394" class="l"><a class="l" href="source-Tracy.Debugger.php.html#394">394: </a>            }
+</span><span id="395" class="l"><a class="l" href="source-Tracy.Debugger.php.html#395">395: </a>        }
+</span><span id="396" class="l"><a class="l" href="source-Tracy.Debugger.php.html#396">396: </a>
+</span><span id="397" class="l"><a class="l" href="source-Tracy.Debugger.php.html#397">397: </a>        <span class="php-var">$logMsg</span> = <span class="php-quote">'Unable to log error. Check if directory is writable and path is absolute.'</span>;
+</span><span id="398" class="l"><a class="l" href="source-Tracy.Debugger.php.html#398">398: </a>        <span class="php-keyword1">if</span> (self::<span class="php-var">$productionMode</span>) {
+</span><span id="399" class="l"><a class="l" href="source-Tracy.Debugger.php.html#399">399: </a>            <span class="php-keyword1">try</span> {
+</span><span id="400" class="l"><a class="l" href="source-Tracy.Debugger.php.html#400">400: </a>                self::<span class="php-keyword2">log</span>(<span class="php-var">$exception</span>, self::EXCEPTION);
+</span><span id="401" class="l"><a class="l" href="source-Tracy.Debugger.php.html#401">401: </a>            } <span class="php-keyword1">catch</span> (\Exception <span class="php-var">$e</span>) {
+</span><span id="402" class="l"><a class="l" href="source-Tracy.Debugger.php.html#402">402: </a>            }
+</span><span id="403" class="l"><a class="l" href="source-Tracy.Debugger.php.html#403">403: </a>
+</span><span id="404" class="l"><a class="l" href="source-Tracy.Debugger.php.html#404">404: </a>            <span class="php-var">$error</span> = <span class="php-keyword1">isset</span>(<span class="php-var">$e</span>) ? <span class="php-var">$logMsg</span> : <span class="php-keyword1">NULL</span>;
+</span><span id="405" class="l"><a class="l" href="source-Tracy.Debugger.php.html#405">405: </a>            <span class="php-keyword1">if</span> (self::isHtmlMode()) {
+</span><span id="406" class="l"><a class="l" href="source-Tracy.Debugger.php.html#406">406: </a>                <span class="php-keyword1">require</span> __DIR__ . <span class="php-quote">'/templates/error.phtml'</span>;
+</span><span id="407" class="l"><a class="l" href="source-Tracy.Debugger.php.html#407">407: </a>            } <span class="php-keyword1">else</span> {
+</span><span id="408" class="l"><a class="l" href="source-Tracy.Debugger.php.html#408">408: </a>                <span class="php-keyword1">echo</span> <span class="php-quote">&quot;ERROR: application encountered an error and can not continue.\n</span><span class="php-var">$error</span><span class="php-quote">\n&quot;</span>;
+</span><span id="409" class="l"><a class="l" href="source-Tracy.Debugger.php.html#409">409: </a>            }
+</span><span id="410" class="l"><a class="l" href="source-Tracy.Debugger.php.html#410">410: </a>
+</span><span id="411" class="l"><a class="l" href="source-Tracy.Debugger.php.html#411">411: </a>        } <span class="php-keyword1">elseif</span> (!<span class="php-keyword2">connection_aborted</span>() &amp;&amp; self::isHtmlMode()) {
+</span><span id="412" class="l"><a class="l" href="source-Tracy.Debugger.php.html#412">412: </a>            self::getBlueScreen()-&gt;render(<span class="php-var">$exception</span>);
+</span><span id="413" class="l"><a class="l" href="source-Tracy.Debugger.php.html#413">413: </a>            self::getBar()-&gt;render();
+</span><span id="414" class="l"><a class="l" href="source-Tracy.Debugger.php.html#414">414: </a>
+</span><span id="415" class="l"><a class="l" href="source-Tracy.Debugger.php.html#415">415: </a>        } <span class="php-keyword1">elseif</span> (<span class="php-keyword2">connection_aborted</span>() || !self::fireLog(<span class="php-var">$exception</span>)) {
+</span><span id="416" class="l"><a class="l" href="source-Tracy.Debugger.php.html#416">416: </a>            <span class="php-keyword1">try</span> {
+</span><span id="417" class="l"><a class="l" href="source-Tracy.Debugger.php.html#417">417: </a>                <span class="php-var">$file</span> = self::<span class="php-keyword2">log</span>(<span class="php-var">$exception</span>, self::EXCEPTION);
+</span><span id="418" class="l"><a class="l" href="source-Tracy.Debugger.php.html#418">418: </a>                <span class="php-keyword1">if</span> (<span class="php-var">$file</span> &amp;&amp; !<span class="php-keyword2">headers_sent</span>()) {
+</span><span id="419" class="l"><a class="l" href="source-Tracy.Debugger.php.html#419">419: </a>                    <span class="php-keyword2">header</span>(<span class="php-quote">&quot;X-Tracy-Error-Log: </span><span class="php-var">$file</span><span class="php-quote">&quot;</span>);
+</span><span id="420" class="l"><a class="l" href="source-Tracy.Debugger.php.html#420">420: </a>                }
+</span><span id="421" class="l"><a class="l" href="source-Tracy.Debugger.php.html#421">421: </a>                <span class="php-keyword1">echo</span> <span class="php-quote">&quot;</span><span class="php-var">$exception</span><span class="php-quote">\n&quot;</span> . (<span class="php-var">$file</span> ? <span class="php-quote">&quot;(stored in </span><span class="php-var">$file</span><span class="php-quote">)\n&quot;</span> : <span class="php-quote">''</span>);
+</span><span id="422" class="l"><a class="l" href="source-Tracy.Debugger.php.html#422">422: </a>                <span class="php-keyword1">if</span> (<span class="php-var">$file</span> &amp;&amp; self::<span class="php-var">$browser</span>) {
+</span><span id="423" class="l"><a class="l" href="source-Tracy.Debugger.php.html#423">423: </a>                    <span class="php-keyword2">exec</span>(self::<span class="php-var">$browser</span> . <span class="php-quote">' '</span> . <span class="php-keyword2">escapeshellarg</span>(<span class="php-var">$file</span>));
+</span><span id="424" class="l"><a class="l" href="source-Tracy.Debugger.php.html#424">424: </a>                }
+</span><span id="425" class="l"><a class="l" href="source-Tracy.Debugger.php.html#425">425: </a>            } <span class="php-keyword1">catch</span> (\Exception <span class="php-var">$e</span>) {
+</span><span id="426" class="l"><a class="l" href="source-Tracy.Debugger.php.html#426">426: </a>                <span class="php-keyword1">echo</span> <span class="php-quote">&quot;</span><span class="php-var">$exception</span><span class="php-quote">\n</span><span class="php-var">$logMsg</span><span class="php-quote"> </span><span class="php-var">{$e-&gt;getMessage()}</span><span class="php-quote">\n&quot;</span>;
+</span><span id="427" class="l"><a class="l" href="source-Tracy.Debugger.php.html#427">427: </a>            }
+</span><span id="428" class="l"><a class="l" href="source-Tracy.Debugger.php.html#428">428: </a>        }
+</span><span id="429" class="l"><a class="l" href="source-Tracy.Debugger.php.html#429">429: </a>
+</span><span id="430" class="l"><a class="l" href="source-Tracy.Debugger.php.html#430">430: </a>        <span class="php-keyword1">try</span> {
+</span><span id="431" class="l"><a class="l" href="source-Tracy.Debugger.php.html#431">431: </a>            <span class="php-keyword1">foreach</span> (self::<span class="php-var">$onFatalError</span> <span class="php-keyword1">as</span> <span class="php-var">$handler</span>) {
+</span><span id="432" class="l"><a class="l" href="source-Tracy.Debugger.php.html#432">432: </a>                <span class="php-keyword2">call_user_func</span>(<span class="php-var">$handler</span>, <span class="php-var">$exception</span>);
+</span><span id="433" class="l"><a class="l" href="source-Tracy.Debugger.php.html#433">433: </a>            }
+</span><span id="434" class="l"><a class="l" href="source-Tracy.Debugger.php.html#434">434: </a>        } <span class="php-keyword1">catch</span> (\Exception <span class="php-var">$e</span>) {
+</span><span id="435" class="l"><a class="l" href="source-Tracy.Debugger.php.html#435">435: </a>            <span class="php-keyword1">try</span> {
+</span><span id="436" class="l"><a class="l" href="source-Tracy.Debugger.php.html#436">436: </a>                self::<span class="php-keyword2">log</span>(<span class="php-var">$e</span>, self::EXCEPTION);
+</span><span id="437" class="l"><a class="l" href="source-Tracy.Debugger.php.html#437">437: </a>            } <span class="php-keyword1">catch</span> (\Exception <span class="php-var">$e</span>) {}
+</span><span id="438" class="l"><a class="l" href="source-Tracy.Debugger.php.html#438">438: </a>        }
+</span><span id="439" class="l"><a class="l" href="source-Tracy.Debugger.php.html#439">439: </a>
+</span><span id="440" class="l"><a class="l" href="source-Tracy.Debugger.php.html#440">440: </a>        <span class="php-keyword1">if</span> (<span class="php-var">$exit</span>) {
+</span><span id="441" class="l"><a class="l" href="source-Tracy.Debugger.php.html#441">441: </a>            <span class="php-keyword1">exit</span>(<span class="php-num">254</span>);
+</span><span id="442" class="l"><a class="l" href="source-Tracy.Debugger.php.html#442">442: </a>        }
+</span><span id="443" class="l"><a class="l" href="source-Tracy.Debugger.php.html#443">443: </a>    }
+</span><span id="444" class="l"><a class="l" href="source-Tracy.Debugger.php.html#444">444: </a>
+</span><span id="445" class="l"><a class="l" href="source-Tracy.Debugger.php.html#445">445: </a>
+</span><span id="446" class="l"><a class="l" href="source-Tracy.Debugger.php.html#446">446: </a>    <span class="php-comment">/**
+</span></span><span id="447" class="l"><a class="l" href="source-Tracy.Debugger.php.html#447">447: </a><span class="php-comment">     * Handler to catch warnings and notices.
+</span></span><span id="448" class="l"><a class="l" href="source-Tracy.Debugger.php.html#448">448: </a><span class="php-comment">     * @param  int    level of the error raised
+</span></span><span id="449" class="l"><a class="l" href="source-Tracy.Debugger.php.html#449">449: </a><span class="php-comment">     * @param  string error message
+</span></span><span id="450" class="l"><a class="l" href="source-Tracy.Debugger.php.html#450">450: </a><span class="php-comment">     * @param  string file that the error was raised in
+</span></span><span id="451" class="l"><a class="l" href="source-Tracy.Debugger.php.html#451">451: </a><span class="php-comment">     * @param  int    line number the error was raised at
+</span></span><span id="452" class="l"><a class="l" href="source-Tracy.Debugger.php.html#452">452: </a><span class="php-comment">     * @param  array  an array of variables that existed in the scope the error was triggered in
+</span></span><span id="453" class="l"><a class="l" href="source-Tracy.Debugger.php.html#453">453: </a><span class="php-comment">     * @return bool   FALSE to call normal error handler, NULL otherwise
+</span></span><span id="454" class="l"><a class="l" href="source-Tracy.Debugger.php.html#454">454: </a><span class="php-comment">     * @throws ErrorException
+</span></span><span id="455" class="l"><a class="l" href="source-Tracy.Debugger.php.html#455">455: </a><span class="php-comment">     * @internal
+</span></span><span id="456" class="l"><a class="l" href="source-Tracy.Debugger.php.html#456">456: </a><span class="php-comment">     */</span>
+</span><span id="457" class="l"><a class="l" href="source-Tracy.Debugger.php.html#457">457: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">static</span> <span class="php-keyword1">function</span> <a id="__errorHandler" href="source-Tracy.Debugger.php.html#__errorHandler">_errorHandler</a>(<span class="php-var">$severity</span>, <span class="php-var">$message</span>, <span class="php-var">$file</span>, <span class="php-var">$line</span>, <span class="php-var">$context</span>)
+</span><span id="458" class="l"><a class="l" href="source-Tracy.Debugger.php.html#458">458: </a>    {
+</span><span id="459" class="l"><a class="l" href="source-Tracy.Debugger.php.html#459">459: </a>        <span class="php-keyword1">if</span> (self::<span class="php-var">$scream</span>) {
+</span><span id="460" class="l"><a class="l" href="source-Tracy.Debugger.php.html#460">460: </a>            <span class="php-keyword2">error_reporting</span>(E_ALL | E_STRICT);
+</span><span id="461" class="l"><a class="l" href="source-Tracy.Debugger.php.html#461">461: </a>        }
+</span><span id="462" class="l"><a class="l" href="source-Tracy.Debugger.php.html#462">462: </a>
+</span><span id="463" class="l"><a class="l" href="source-Tracy.Debugger.php.html#463">463: </a>        <span class="php-keyword1">if</span> (<span class="php-var">$severity</span> === E_RECOVERABLE_ERROR || <span class="php-var">$severity</span> === E_USER_ERROR) {
+</span><span id="464" class="l"><a class="l" href="source-Tracy.Debugger.php.html#464">464: </a>            <span class="php-keyword1">if</span> (Helpers::findTrace(<span class="php-keyword2">debug_backtrace</span>(PHP_VERSION_ID &gt;= <span class="php-num">50306</span> ? DEBUG_BACKTRACE_IGNORE_ARGS : <span class="php-keyword1">FALSE</span>), <span class="php-quote">'*::__toString'</span>)) {
+</span><span id="465" class="l"><a class="l" href="source-Tracy.Debugger.php.html#465">465: </a>                <span class="php-var">$previous</span> = <span class="php-keyword1">isset</span>(<span class="php-var">$context</span>[<span class="php-quote">'e'</span>]) &amp;&amp; <span class="php-var">$context</span>[<span class="php-quote">'e'</span>] <span class="php-keyword1">instanceof</span> \Exception ? <span class="php-var">$context</span>[<span class="php-quote">'e'</span>] : <span class="php-keyword1">NULL</span>;
+</span><span id="466" class="l"><a class="l" href="source-Tracy.Debugger.php.html#466">466: </a>                <span class="php-var">$e</span> = <span class="php-keyword1">new</span> ErrorException(<span class="php-var">$message</span>, <span class="php-num">0</span>, <span class="php-var">$severity</span>, <span class="php-var">$file</span>, <span class="php-var">$line</span>, <span class="php-var">$previous</span>);
+</span><span id="467" class="l"><a class="l" href="source-Tracy.Debugger.php.html#467">467: </a>                <span class="php-var">$e</span>-&gt;context = <span class="php-var">$context</span>;
+</span><span id="468" class="l"><a class="l" href="source-Tracy.Debugger.php.html#468">468: </a>                self::_exceptionHandler(<span class="php-var">$e</span>);
+</span><span id="469" class="l"><a class="l" href="source-Tracy.Debugger.php.html#469">469: </a>            }
+</span><span id="470" class="l"><a class="l" href="source-Tracy.Debugger.php.html#470">470: </a>
+</span><span id="471" class="l"><a class="l" href="source-Tracy.Debugger.php.html#471">471: </a>            <span class="php-var">$e</span> = <span class="php-keyword1">new</span> ErrorException(<span class="php-var">$message</span>, <span class="php-num">0</span>, <span class="php-var">$severity</span>, <span class="php-var">$file</span>, <span class="php-var">$line</span>);
+</span><span id="472" class="l"><a class="l" href="source-Tracy.Debugger.php.html#472">472: </a>            <span class="php-var">$e</span>-&gt;context = <span class="php-var">$context</span>;
+</span><span id="473" class="l"><a class="l" href="source-Tracy.Debugger.php.html#473">473: </a>            <span class="php-keyword1">throw</span> <span class="php-var">$e</span>;
+</span><span id="474" class="l"><a class="l" href="source-Tracy.Debugger.php.html#474">474: </a>
+</span><span id="475" class="l"><a class="l" href="source-Tracy.Debugger.php.html#475">475: </a>        } <span class="php-keyword1">elseif</span> ((<span class="php-var">$severity</span> &amp; <span class="php-keyword2">error_reporting</span>()) !== <span class="php-var">$severity</span>) {
+</span><span id="476" class="l"><a class="l" href="source-Tracy.Debugger.php.html#476">476: </a>            <span class="php-keyword1">return</span> <span class="php-keyword1">FALSE</span>; <span class="php-comment">// calls normal error handler to fill-in error_get_last()</span>
+</span><span id="477" class="l"><a class="l" href="source-Tracy.Debugger.php.html#477">477: </a>
+</span><span id="478" class="l"><a class="l" href="source-Tracy.Debugger.php.html#478">478: </a>        } <span class="php-keyword1">elseif</span> (!self::<span class="php-var">$productionMode</span> &amp;&amp; (<span class="php-keyword2">is_bool</span>(self::<span class="php-var">$strictMode</span>) ? self::<span class="php-var">$strictMode</span> : ((self::<span class="php-var">$strictMode</span> &amp; <span class="php-var">$severity</span>) === <span class="php-var">$severity</span>))) {
+</span><span id="479" class="l"><a class="l" href="source-Tracy.Debugger.php.html#479">479: </a>            <span class="php-var">$e</span> = <span class="php-keyword1">new</span> ErrorException(<span class="php-var">$message</span>, <span class="php-num">0</span>, <span class="php-var">$severity</span>, <span class="php-var">$file</span>, <span class="php-var">$line</span>);
+</span><span id="480" class="l"><a class="l" href="source-Tracy.Debugger.php.html#480">480: </a>            <span class="php-var">$e</span>-&gt;context = <span class="php-var">$context</span>;
+</span><span id="481" class="l"><a class="l" href="source-Tracy.Debugger.php.html#481">481: </a>            self::_exceptionHandler(<span class="php-var">$e</span>);
+</span><span id="482" class="l"><a class="l" href="source-Tracy.Debugger.php.html#482">482: </a>        }
+</span><span id="483" class="l"><a class="l" href="source-Tracy.Debugger.php.html#483">483: </a>
+</span><span id="484" class="l"><a class="l" href="source-Tracy.Debugger.php.html#484">484: </a>        <span class="php-var">$message</span> = <span class="php-quote">'PHP '</span> . (<span class="php-keyword1">isset</span>(self::<span class="php-var">$errorTypes</span>[<span class="php-var">$severity</span>]) ? self::<span class="php-var">$errorTypes</span>[<span class="php-var">$severity</span>] : <span class="php-quote">'Unknown error'</span>) . <span class="php-quote">&quot;: </span><span class="php-var">$message</span><span class="php-quote">&quot;</span>;
+</span><span id="485" class="l"><a class="l" href="source-Tracy.Debugger.php.html#485">485: </a>        <span class="php-var">$count</span> = &amp; self::getBar()-&gt;getPanel(__CLASS__ . <span class="php-quote">':errors'</span>)-&gt;data[<span class="php-quote">&quot;</span><span class="php-var">$file</span><span class="php-quote">|</span><span class="php-var">$line</span><span class="php-quote">|</span><span class="php-var">$message</span><span class="php-quote">&quot;</span>];
+</span><span id="486" class="l"><a class="l" href="source-Tracy.Debugger.php.html#486">486: </a>
+</span><span id="487" class="l"><a class="l" href="source-Tracy.Debugger.php.html#487">487: </a>        <span class="php-keyword1">if</span> (<span class="php-var">$count</span>++) { <span class="php-comment">// repeated error</span>
+</span><span id="488" class="l"><a class="l" href="source-Tracy.Debugger.php.html#488">488: </a>            <span class="php-keyword1">return</span> <span class="php-keyword1">NULL</span>;
+</span><span id="489" class="l"><a class="l" href="source-Tracy.Debugger.php.html#489">489: </a>
+</span><span id="490" class="l"><a class="l" href="source-Tracy.Debugger.php.html#490">490: </a>        } <span class="php-keyword1">elseif</span> (self::<span class="php-var">$productionMode</span>) {
+</span><span id="491" class="l"><a class="l" href="source-Tracy.Debugger.php.html#491">491: </a>            self::<span class="php-keyword2">log</span>(<span class="php-quote">&quot;</span><span class="php-var">$message</span><span class="php-quote"> in </span><span class="php-var">$file</span><span class="php-quote">:</span><span class="php-var">$line</span><span class="php-quote">&quot;</span>, self::ERROR);
+</span><span id="492" class="l"><a class="l" href="source-Tracy.Debugger.php.html#492">492: </a>            <span class="php-keyword1">return</span> <span class="php-keyword1">NULL</span>;
+</span><span id="493" class="l"><a class="l" href="source-Tracy.Debugger.php.html#493">493: </a>
+</span><span id="494" class="l"><a class="l" href="source-Tracy.Debugger.php.html#494">494: </a>        } <span class="php-keyword1">else</span> {
+</span><span id="495" class="l"><a class="l" href="source-Tracy.Debugger.php.html#495">495: </a>            self::fireLog(<span class="php-keyword1">new</span> ErrorException(<span class="php-var">$message</span>, <span class="php-num">0</span>, <span class="php-var">$severity</span>, <span class="php-var">$file</span>, <span class="php-var">$line</span>));
+</span><span id="496" class="l"><a class="l" href="source-Tracy.Debugger.php.html#496">496: </a>            <span class="php-keyword1">return</span> self::isHtmlMode() ? <span class="php-keyword1">NULL</span> : <span class="php-keyword1">FALSE</span>; <span class="php-comment">// FALSE calls normal error handler</span>
+</span><span id="497" class="l"><a class="l" href="source-Tracy.Debugger.php.html#497">497: </a>        }
+</span><span id="498" class="l"><a class="l" href="source-Tracy.Debugger.php.html#498">498: </a>    }
+</span><span id="499" class="l"><a class="l" href="source-Tracy.Debugger.php.html#499">499: </a>
+</span><span id="500" class="l"><a class="l" href="source-Tracy.Debugger.php.html#500">500: </a>
+</span><span id="501" class="l"><a class="l" href="source-Tracy.Debugger.php.html#501">501: </a>    <span class="php-comment">/********************* useful tools ****************d*g**/</span>
+</span><span id="502" class="l"><a class="l" href="source-Tracy.Debugger.php.html#502">502: </a>
+</span><span id="503" class="l"><a class="l" href="source-Tracy.Debugger.php.html#503">503: </a>
+</span><span id="504" class="l"><a class="l" href="source-Tracy.Debugger.php.html#504">504: </a>    <span class="php-comment">/**
+</span></span><span id="505" class="l"><a class="l" href="source-Tracy.Debugger.php.html#505">505: </a><span class="php-comment">     * Dumps information about a variable in readable format.
+</span></span><span id="506" class="l"><a class="l" href="source-Tracy.Debugger.php.html#506">506: </a><span class="php-comment">     * @tracySkipLocation
+</span></span><span id="507" class="l"><a class="l" href="source-Tracy.Debugger.php.html#507">507: </a><span class="php-comment">     * @param  mixed  variable to dump
+</span></span><span id="508" class="l"><a class="l" href="source-Tracy.Debugger.php.html#508">508: </a><span class="php-comment">     * @param  bool   return output instead of printing it? (bypasses $productionMode)
+</span></span><span id="509" class="l"><a class="l" href="source-Tracy.Debugger.php.html#509">509: </a><span class="php-comment">     * @return mixed  variable itself or dump
+</span></span><span id="510" class="l"><a class="l" href="source-Tracy.Debugger.php.html#510">510: </a><span class="php-comment">     */</span>
+</span><span id="511" class="l"><a class="l" href="source-Tracy.Debugger.php.html#511">511: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">static</span> <span class="php-keyword1">function</span> <a id="_dump" href="source-Tracy.Debugger.php.html#_dump">dump</a>(<span class="php-var">$var</span>, <span class="php-var">$return</span> = <span class="php-keyword1">FALSE</span>)
+</span><span id="512" class="l"><a class="l" href="source-Tracy.Debugger.php.html#512">512: </a>    {
+</span><span id="513" class="l"><a class="l" href="source-Tracy.Debugger.php.html#513">513: </a>        <span class="php-keyword1">if</span> (<span class="php-var">$return</span>) {
+</span><span id="514" class="l"><a class="l" href="source-Tracy.Debugger.php.html#514">514: </a>            <span class="php-keyword2">ob_start</span>();
+</span><span id="515" class="l"><a class="l" href="source-Tracy.Debugger.php.html#515">515: </a>            Dumper::dump(<span class="php-var">$var</span>, <span class="php-keyword1">array</span>(
+</span><span id="516" class="l"><a class="l" href="source-Tracy.Debugger.php.html#516">516: </a>                Dumper::DEPTH =&gt; self::<span class="php-var">$maxDepth</span>,
+</span><span id="517" class="l"><a class="l" href="source-Tracy.Debugger.php.html#517">517: </a>                Dumper::TRUNCATE =&gt; self::<span class="php-var">$maxLen</span>,
+</span><span id="518" class="l"><a class="l" href="source-Tracy.Debugger.php.html#518">518: </a>            ));
+</span><span id="519" class="l"><a class="l" href="source-Tracy.Debugger.php.html#519">519: </a>            <span class="php-keyword1">return</span> <span class="php-keyword2">ob_get_clean</span>();
+</span><span id="520" class="l"><a class="l" href="source-Tracy.Debugger.php.html#520">520: </a>
+</span><span id="521" class="l"><a class="l" href="source-Tracy.Debugger.php.html#521">521: </a>        } <span class="php-keyword1">elseif</span> (!self::<span class="php-var">$productionMode</span>) {
+</span><span id="522" class="l"><a class="l" href="source-Tracy.Debugger.php.html#522">522: </a>            Dumper::dump(<span class="php-var">$var</span>, <span class="php-keyword1">array</span>(
+</span><span id="523" class="l"><a class="l" href="source-Tracy.Debugger.php.html#523">523: </a>                Dumper::DEPTH =&gt; self::<span class="php-var">$maxDepth</span>,
+</span><span id="524" class="l"><a class="l" href="source-Tracy.Debugger.php.html#524">524: </a>                Dumper::TRUNCATE =&gt; self::<span class="php-var">$maxLen</span>,
+</span><span id="525" class="l"><a class="l" href="source-Tracy.Debugger.php.html#525">525: </a>                Dumper::LOCATION =&gt; self::<span class="php-var">$showLocation</span>,
+</span><span id="526" class="l"><a class="l" href="source-Tracy.Debugger.php.html#526">526: </a>            ));
+</span><span id="527" class="l"><a class="l" href="source-Tracy.Debugger.php.html#527">527: </a>        }
+</span><span id="528" class="l"><a class="l" href="source-Tracy.Debugger.php.html#528">528: </a>
+</span><span id="529" class="l"><a class="l" href="source-Tracy.Debugger.php.html#529">529: </a>        <span class="php-keyword1">return</span> <span class="php-var">$var</span>;
+</span><span id="530" class="l"><a class="l" href="source-Tracy.Debugger.php.html#530">530: </a>    }
+</span><span id="531" class="l"><a class="l" href="source-Tracy.Debugger.php.html#531">531: </a>
+</span><span id="532" class="l"><a class="l" href="source-Tracy.Debugger.php.html#532">532: </a>
+</span><span id="533" class="l"><a class="l" href="source-Tracy.Debugger.php.html#533">533: </a>    <span class="php-comment">/**
+</span></span><span id="534" class="l"><a class="l" href="source-Tracy.Debugger.php.html#534">534: </a><span class="php-comment">     * Starts/stops stopwatch.
+</span></span><span id="535" class="l"><a class="l" href="source-Tracy.Debugger.php.html#535">535: </a><span class="php-comment">     * @param  string  name
+</span></span><span id="536" class="l"><a class="l" href="source-Tracy.Debugger.php.html#536">536: </a><span class="php-comment">     * @return float   elapsed seconds
+</span></span><span id="537" class="l"><a class="l" href="source-Tracy.Debugger.php.html#537">537: </a><span class="php-comment">     */</span>
+</span><span id="538" class="l"><a class="l" href="source-Tracy.Debugger.php.html#538">538: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">static</span> <span class="php-keyword1">function</span> <a id="_timer" href="source-Tracy.Debugger.php.html#_timer">timer</a>(<span class="php-var">$name</span> = <span class="php-keyword1">NULL</span>)
+</span><span id="539" class="l"><a class="l" href="source-Tracy.Debugger.php.html#539">539: </a>    {
+</span><span id="540" class="l"><a class="l" href="source-Tracy.Debugger.php.html#540">540: </a>        <span class="php-keyword1">static</span> <span class="php-var"><a id="$time" href="source-Tracy.Debugger.php.html#$time">$time</a></span> = <span class="php-keyword1">array</span>();
+</span><span id="541" class="l"><a class="l" href="source-Tracy.Debugger.php.html#541">541: </a>        <span class="php-var">$now</span> = <span class="php-keyword2">microtime</span>(<span class="php-keyword1">TRUE</span>);
+</span><span id="542" class="l"><a class="l" href="source-Tracy.Debugger.php.html#542">542: </a>        <span class="php-var">$delta</span> = <span class="php-keyword1">isset</span>(<span class="php-var">$time</span>[<span class="php-var">$name</span>]) ? <span class="php-var">$now</span> - <span class="php-var">$time</span>[<span class="php-var">$name</span>] : <span class="php-num">0</span>;
+</span><span id="543" class="l"><a class="l" href="source-Tracy.Debugger.php.html#543">543: </a>        <span class="php-var">$time</span>[<span class="php-var">$name</span>] = <span class="php-var">$now</span>;
+</span><span id="544" class="l"><a class="l" href="source-Tracy.Debugger.php.html#544">544: </a>        <span class="php-keyword1">return</span> <span class="php-var">$delta</span>;
+</span><span id="545" class="l"><a class="l" href="source-Tracy.Debugger.php.html#545">545: </a>    }
+</span><span id="546" class="l"><a class="l" href="source-Tracy.Debugger.php.html#546">546: </a>
+</span><span id="547" class="l"><a class="l" href="source-Tracy.Debugger.php.html#547">547: </a>
+</span><span id="548" class="l"><a class="l" href="source-Tracy.Debugger.php.html#548">548: </a>    <span class="php-comment">/**
+</span></span><span id="549" class="l"><a class="l" href="source-Tracy.Debugger.php.html#549">549: </a><span class="php-comment">     * Dumps information about a variable in Tracy Debug Bar.
+</span></span><span id="550" class="l"><a class="l" href="source-Tracy.Debugger.php.html#550">550: </a><span class="php-comment">     * @tracySkipLocation
+</span></span><span id="551" class="l"><a class="l" href="source-Tracy.Debugger.php.html#551">551: </a><span class="php-comment">     * @param  mixed  variable to dump
+</span></span><span id="552" class="l"><a class="l" href="source-Tracy.Debugger.php.html#552">552: </a><span class="php-comment">     * @param  string optional title
+</span></span><span id="553" class="l"><a class="l" href="source-Tracy.Debugger.php.html#553">553: </a><span class="php-comment">     * @param  array  dumper options
+</span></span><span id="554" class="l"><a class="l" href="source-Tracy.Debugger.php.html#554">554: </a><span class="php-comment">     * @return mixed  variable itself
+</span></span><span id="555" class="l"><a class="l" href="source-Tracy.Debugger.php.html#555">555: </a><span class="php-comment">     */</span>
+</span><span id="556" class="l"><a class="l" href="source-Tracy.Debugger.php.html#556">556: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">static</span> <span class="php-keyword1">function</span> <a id="_barDump" href="source-Tracy.Debugger.php.html#_barDump">barDump</a>(<span class="php-var">$var</span>, <span class="php-var">$title</span> = <span class="php-keyword1">NULL</span>, <span class="php-keyword1">array</span> <span class="php-var">$options</span> = <span class="php-keyword1">NULL</span>)
+</span><span id="557" class="l"><a class="l" href="source-Tracy.Debugger.php.html#557">557: </a>    {
+</span><span id="558" class="l"><a class="l" href="source-Tracy.Debugger.php.html#558">558: </a>        <span class="php-keyword1">if</span> (!self::<span class="php-var">$productionMode</span>) {
+</span><span id="559" class="l"><a class="l" href="source-Tracy.Debugger.php.html#559">559: </a>            self::getBar()-&gt;getPanel(__CLASS__ . <span class="php-quote">':dumps'</span>)-&gt;data[] = <span class="php-keyword1">array</span>(<span class="php-quote">'title'</span> =&gt; <span class="php-var">$title</span>, <span class="php-quote">'dump'</span> =&gt; Dumper::toHtml(<span class="php-var">$var</span>, (<span class="php-keyword1">array</span>) <span class="php-var">$options</span> + <span class="php-keyword1">array</span>(
+</span><span id="560" class="l"><a class="l" href="source-Tracy.Debugger.php.html#560">560: </a>                Dumper::DEPTH =&gt; self::<span class="php-var">$maxDepth</span>,
+</span><span id="561" class="l"><a class="l" href="source-Tracy.Debugger.php.html#561">561: </a>                Dumper::TRUNCATE =&gt; self::<span class="php-var">$maxLen</span>,
+</span><span id="562" class="l"><a class="l" href="source-Tracy.Debugger.php.html#562">562: </a>                Dumper::LOCATION =&gt; self::<span class="php-var">$showLocation</span>,
+</span><span id="563" class="l"><a class="l" href="source-Tracy.Debugger.php.html#563">563: </a>            )));
+</span><span id="564" class="l"><a class="l" href="source-Tracy.Debugger.php.html#564">564: </a>        }
+</span><span id="565" class="l"><a class="l" href="source-Tracy.Debugger.php.html#565">565: </a>        <span class="php-keyword1">return</span> <span class="php-var">$var</span>;
+</span><span id="566" class="l"><a class="l" href="source-Tracy.Debugger.php.html#566">566: </a>    }
+</span><span id="567" class="l"><a class="l" href="source-Tracy.Debugger.php.html#567">567: </a>
+</span><span id="568" class="l"><a class="l" href="source-Tracy.Debugger.php.html#568">568: </a>
+</span><span id="569" class="l"><a class="l" href="source-Tracy.Debugger.php.html#569">569: </a>    <span class="php-comment">/**
+</span></span><span id="570" class="l"><a class="l" href="source-Tracy.Debugger.php.html#570">570: </a><span class="php-comment">     * Sends message to FireLogger console.
+</span></span><span id="571" class="l"><a class="l" href="source-Tracy.Debugger.php.html#571">571: </a><span class="php-comment">     * @param  mixed   message to log
+</span></span><span id="572" class="l"><a class="l" href="source-Tracy.Debugger.php.html#572">572: </a><span class="php-comment">     * @return bool    was successful?
+</span></span><span id="573" class="l"><a class="l" href="source-Tracy.Debugger.php.html#573">573: </a><span class="php-comment">     */</span>
+</span><span id="574" class="l"><a class="l" href="source-Tracy.Debugger.php.html#574">574: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">static</span> <span class="php-keyword1">function</span> <a id="_fireLog" href="source-Tracy.Debugger.php.html#_fireLog">fireLog</a>(<span class="php-var">$message</span>)
+</span><span id="575" class="l"><a class="l" href="source-Tracy.Debugger.php.html#575">575: </a>    {
+</span><span id="576" class="l"><a class="l" href="source-Tracy.Debugger.php.html#576">576: </a>        <span class="php-keyword1">if</span> (!self::<span class="php-var">$productionMode</span>) {
+</span><span id="577" class="l"><a class="l" href="source-Tracy.Debugger.php.html#577">577: </a>            <span class="php-keyword1">return</span> self::getFireLogger()-&gt;<span class="php-keyword2">log</span>(<span class="php-var">$message</span>);
+</span><span id="578" class="l"><a class="l" href="source-Tracy.Debugger.php.html#578">578: </a>        }
+</span><span id="579" class="l"><a class="l" href="source-Tracy.Debugger.php.html#579">579: </a>    }
+</span><span id="580" class="l"><a class="l" href="source-Tracy.Debugger.php.html#580">580: </a>
+</span><span id="581" class="l"><a class="l" href="source-Tracy.Debugger.php.html#581">581: </a>
+</span><span id="582" class="l"><a class="l" href="source-Tracy.Debugger.php.html#582">582: </a>    <span class="php-keyword1">private</span> <span class="php-keyword1">static</span> <span class="php-keyword1">function</span> <a id="_isHtmlMode" href="source-Tracy.Debugger.php.html#_isHtmlMode">isHtmlMode</a>()
+</span><span id="583" class="l"><a class="l" href="source-Tracy.Debugger.php.html#583">583: </a>    {
+</span><span id="584" class="l"><a class="l" href="source-Tracy.Debugger.php.html#584">584: </a>        <span class="php-keyword1">return</span> <span class="php-keyword1">empty</span>(<span class="php-var">$_SERVER</span>[<span class="php-quote">'HTTP_X_REQUESTED_WITH'</span>])
+</span><span id="585" class="l"><a class="l" href="source-Tracy.Debugger.php.html#585">585: </a>            &amp;&amp; PHP_SAPI !== <span class="php-quote">'cli'</span>
+</span><span id="586" class="l"><a class="l" href="source-Tracy.Debugger.php.html#586">586: </a>            &amp;&amp; !<span class="php-keyword2">preg_match</span>(<span class="php-quote">'#^Content-Type: (?!text/html)#im'</span>, <span class="php-keyword2">implode</span>(<span class="php-quote">&quot;\n&quot;</span>, <span class="php-keyword2">headers_list</span>()));
+</span><span id="587" class="l"><a class="l" href="source-Tracy.Debugger.php.html#587">587: </a>    }
+</span><span id="588" class="l"><a class="l" href="source-Tracy.Debugger.php.html#588">588: </a>
+</span><span id="589" class="l"><a class="l" href="source-Tracy.Debugger.php.html#589">589: </a>}
+</span><span id="590" class="l"><a class="l" href="source-Tracy.Debugger.php.html#590">590: </a></span></code></pre>
+
+	<div id="footer">
+		Nette 2.2.2 API API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+	</div>
+</div>
+</div>
+<script src="resources/combined.js?3630868369"></script>
+<script src="elementlist.js?2087501429"></script>
+</body>
+</html>

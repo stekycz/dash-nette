@@ -1,0 +1,1377 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="generator" content="ApiGen 2.8.0">
+
+	<title>Class Nette\Caching\Cache | Nette 2.2.2 API</title>
+
+	<link rel="stylesheet" href="resources/style.css?3746977979">
+	<link rel="search" type="application/opensearchdescription+xml" title="Nette 2.2.2 API" href="http://api.nette.org/2.0/opensearch.xml">
+
+
+<script src='http://files.nette.org/js/analytics.js'></script><script>
+_ga.create('UA-95238-14', '.nette.org');
+_gaq.push(['_trackPageview']);
+</script>
+</head>
+
+<body>
+<div id="left">
+	<div id="menu">
+
+		<div id="groups">
+			<h3>Namespaces</h3>
+			<ul>
+				<li><a href="namespace-Latte.html">Latte<span></span></a>
+						<ul>
+				<li><a href="namespace-Latte.Loaders.html">Loaders</a>
+						</li>
+				<li><a href="namespace-Latte.Macros.html">Macros</a>
+						</li>
+				<li><a href="namespace-Latte.Runtime.html">Runtime</a>
+						</li>
+							</ul></li>
+				<li class="active"><a href="namespace-Nette.html">Nette<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.Application.html">Application<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.Application.Responses.html">Responses</a>
+						</li>
+				<li><a href="namespace-Nette.Application.Routers.html">Routers</a>
+						</li>
+				<li><a href="namespace-Nette.Application.UI.html">UI</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.Bridges.html">Bridges<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.Bridges.ApplicationLatte.html">ApplicationLatte</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.ApplicationTracy.html">ApplicationTracy</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.CacheLatte.html">CacheLatte</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.DatabaseDI.html">DatabaseDI</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.DatabaseTracy.html">DatabaseTracy</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.DITracy.html">DITracy</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.FormsLatte.html">FormsLatte</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.Framework.html">Framework</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.HttpTracy.html">HttpTracy</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.SecurityTracy.html">SecurityTracy</a>
+						</li>
+							</ul></li>
+				<li class="active"><a href="namespace-Nette.Caching.html">Caching<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.Caching.Storages.html">Storages</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.ComponentModel.html">ComponentModel</a>
+						</li>
+				<li><a href="namespace-Nette.Database.html">Database<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.Database.Drivers.html">Drivers</a>
+						</li>
+				<li><a href="namespace-Nette.Database.Reflection.html">Reflection</a>
+						</li>
+				<li><a href="namespace-Nette.Database.Table.html">Table</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.DI.html">DI<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.DI.Config.html">Config<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.DI.Config.Adapters.html">Adapters</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.DI.Extensions.html">Extensions</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.Diagnostics.html">Diagnostics</a>
+						</li>
+				<li><a href="namespace-Nette.Forms.html">Forms<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.Forms.Controls.html">Controls</a>
+						</li>
+				<li><a href="namespace-Nette.Forms.Rendering.html">Rendering</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.Http.html">Http</a>
+						</li>
+				<li><a href="namespace-Nette.Iterators.html">Iterators</a>
+						</li>
+				<li><a href="namespace-Nette.Latte.html">Latte</a>
+						</li>
+				<li><a href="namespace-Nette.Loaders.html">Loaders</a>
+						</li>
+				<li><a href="namespace-Nette.Localization.html">Localization</a>
+						</li>
+				<li><a href="namespace-Nette.Mail.html">Mail</a>
+						</li>
+				<li><a href="namespace-Nette.Neon.html">Neon</a>
+						</li>
+				<li><a href="namespace-Nette.PhpGenerator.html">PhpGenerator</a>
+						</li>
+				<li><a href="namespace-Nette.Reflection.html">Reflection</a>
+						</li>
+				<li><a href="namespace-Nette.Security.html">Security</a>
+						</li>
+				<li><a href="namespace-Nette.Templating.html">Templating</a>
+						</li>
+				<li><a href="namespace-Nette.Utils.html">Utils</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-NetteModule.html">NetteModule</a>
+						</li>
+				<li><a href="namespace-none.html">none</a>
+						</li>
+				<li><a href="namespace-Tracy.html">Tracy</a>
+						</li>
+			</ul>
+		</div>
+
+		<hr>
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li class="active"><a href="Nette.Caching.Cache.html">Cache</a></li>
+				<li><a href="Nette.Caching.OutputHelper.html">OutputHelper</a></li>
+			</ul>
+
+			<h3>Interfaces</h3>
+			<ul>
+				<li><a href="Nette.Caching.IStorage.html">IStorage</a></li>
+			</ul>
+
+
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form action="http://www.google.com/cse" id="search">
+		<input type="hidden" name="cx" value="011549293477758430224:vxofa9ufnhc">
+		<input type="hidden" name="ie" value="UTF-8">
+		<input type="text" name="q" class="text">
+		<input type="submit" value="Search">
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+				<a href="namespace-Nette.Caching.html" title="Summary of Nette\Caching"><span>Namespace</span></a>
+			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+			<li>
+				<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions"><span>Tree</span></a>
+			</li>
+			<li>
+				<a href="deprecated.html" title="List of deprecated elements"><span>Deprecated</span></a>
+			</li>
+		</ul>
+		<ul><li><a href="http://api.nette.org/releases"><span>Other releases</span></a></li><li><a href="http://nette.org"><span>Nette homepage</span></a></li></ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Class Cache</h1>
+
+
+	<div class="description">
+	
+<p>Implements the cache for a application.</p>
+
+	</div>
+
+	<dl class="tree">
+		<dd style="padding-left:0px">
+			<a href="Nette.Object.html"><span>Nette\Object</span></a>
+			
+			
+			
+		</dd>
+		<dd style="padding-left:30px">
+			<img src="resources/inherit.png" alt="Extended by">
+<b><span>Nette\Caching\Cache</span></b>			
+			 implements 
+				<a href="ArrayAccess.html"><span>ArrayAccess</span></a>
+			
+			
+		</dd>
+	</dl>
+
+
+
+
+
+
+
+
+	<div class="info">
+		
+		
+		<b>Namespace:</b> <a href="namespace-Nette.html">Nette</a>\<a href="namespace-Nette.Caching.html">Caching</a><br>
+		
+
+				<b>Author:</b>
+				David Grudl<br>
+		<b>Located at</b> <a href="source-Caching.Cache.php.html#14-377" title="Go to source code">Caching/Cache.php</a><br>
+	</div>
+
+
+
+	<table class="summary" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="__construct" id="___construct">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Caching.Cache.html#___construct">#</a>
+		<code><a href="source-Caching.Cache.php.html#52-56" title="Go to source code">__construct</a>( <span><code><a href="Nette.Caching.IStorage.html">Nette\Caching\IStorage</a></code> <var>$storage</var></span>, <span> <var>$namespace</var> = <span class="php-keyword1">NULL</span></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getStorage" id="_getStorage">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="Nette.Caching.IStorage.html">Nette\Caching\IStorage</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Caching.Cache.html#_getStorage">#</a>
+		<code><a href="source-Caching.Cache.php.html#59-66" title="Go to source code">getStorage</a>( )</code>
+
+		<div class="description short">
+			
+<p>Returns cache storage.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns cache storage.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="Nette.Caching.IStorage.html">Nette\Caching\IStorage</a></code></code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getNamespace" id="_getNamespace">
+
+		<td class="attributes"><code>
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Caching.Cache.html#_getNamespace">#</a>
+		<code><a href="source-Caching.Cache.php.html#69-76" title="Go to source code">getNamespace</a>( )</code>
+
+		<div class="description short">
+			
+<p>Returns cache namespace.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns cache namespace.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="derive" id="_derive">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="Nette.Caching.Cache.html">Nette\Caching\Cache</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Caching.Cache.html#_derive">#</a>
+		<code><a href="source-Caching.Cache.php.html#79-88" title="Go to source code">derive</a>( <span>string <var>$namespace</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Returns new nested cache object.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns new nested cache object.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$namespace</var></dt>
+					<dd><code>string</code></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="Nette.Caching.Cache.html">Nette\Caching\Cache</a></code></code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="load" id="_load">
+
+		<td class="attributes"><code>
+			 public 
+			mixed|null
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Caching.Cache.html#_load">#</a>
+		<code><a href="source-Caching.Cache.php.html#91-104" title="Go to source code">load</a>( <span>mixed <var>$key</var></span>, <span>callable <var>$fallback</var> = <span class="php-keyword1">NULL</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Reads the specified item from the cache or generate it.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Reads the specified item from the cache or generate it.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$key</var></dt>
+					<dd><code>mixed</code><br>key</dd>
+					<dt><var>$fallback</var></dt>
+					<dd><code>callable</code></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>mixed|null</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="save" id="_save">
+
+		<td class="attributes"><code>
+			 public 
+			mixed
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Caching.Cache.html#_save">#</a>
+		<code><a href="source-Caching.Cache.php.html#107-140" title="Go to source code">save</a>( <span>mixed <var>$key</var></span>, <span>mixed <var>$data</var></span>, <span>array <var>$dependencies</var> = <span class="php-keyword1">NULL</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Writes item into the cache. Dependencies are:</p>
+
+<ul>
+	<li>Cache::PRIORITY =&gt; (int) priority</li>
+
+	<li>Cache::EXPIRATION =&gt; (timestamp) expiration</li>
+
+	<li>Cache::SLIDING =&gt; (bool) use sliding expiration?</li>
+
+	<li>Cache::TAGS =&gt; (array) tags</li>
+
+	<li>Cache::FILES =&gt; (array|string) file names</li>
+
+	<li>Cache::ITEMS =&gt; (array|string) cache items</li>
+
+	<li>Cache::CONSTS =&gt; (array|string) cache items</li>
+</ul>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Writes item into the cache. Dependencies are:</p>
+
+<ul>
+	<li>Cache::PRIORITY =&gt; (int) priority</li>
+
+	<li>Cache::EXPIRATION =&gt; (timestamp) expiration</li>
+
+	<li>Cache::SLIDING =&gt; (bool) use sliding expiration?</li>
+
+	<li>Cache::TAGS =&gt; (array) tags</li>
+
+	<li>Cache::FILES =&gt; (array|string) file names</li>
+
+	<li>Cache::ITEMS =&gt; (array|string) cache items</li>
+
+	<li>Cache::CONSTS =&gt; (array|string) cache items</li>
+</ul>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$key</var></dt>
+					<dd><code>mixed</code><br>key</dd>
+					<dt><var>$data</var></dt>
+					<dd><code>mixed</code><br>value</dd>
+					<dt><var>$dependencies</var></dt>
+					<dd><code>array</code><br>dependencies</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>mixed</code><br>value itself<br>
+				</div>
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><code><a href="Nette.InvalidArgumentException.html">Nette\InvalidArgumentException</a></code></code><br>
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="remove" id="_remove">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Caching.Cache.html#_remove">#</a>
+		<code><a href="source-Caching.Cache.php.html#179-187" title="Go to source code">remove</a>( <span>mixed <var>$key</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Removes item from the cache.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Removes item from the cache.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$key</var></dt>
+					<dd><code>mixed</code><br>key</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="clean" id="_clean">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Caching.Cache.html#_clean">#</a>
+		<code><a href="source-Caching.Cache.php.html#190-202" title="Go to source code">clean</a>( <span>array <var>$conditions</var> = <span class="php-keyword1">NULL</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Removes items from the cache by conditions. Conditions are:</p>
+
+<ul>
+	<li>Cache::PRIORITY =&gt; (int) priority</li>
+
+	<li>Cache::TAGS =&gt; (array) tags</li>
+
+	<li>Cache::ALL =&gt; TRUE</li>
+</ul>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Removes items from the cache by conditions. Conditions are:</p>
+
+<ul>
+	<li>Cache::PRIORITY =&gt; (int) priority</li>
+
+	<li>Cache::TAGS =&gt; (array) tags</li>
+
+	<li>Cache::ALL =&gt; TRUE</li>
+</ul>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="call" id="_call">
+
+		<td class="attributes"><code>
+			 public 
+			mixed
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Caching.Cache.html#_call">#</a>
+		<code><a href="source-Caching.Cache.php.html#205-217" title="Go to source code">call</a>( <span>mixed <var>$function</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Caches results of function/method calls.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Caches results of function/method calls.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$function</var></dt>
+					<dd><code>mixed</code></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>mixed</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="wrap" id="_wrap">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="Closure.html">Closure</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Caching.Cache.html#_wrap">#</a>
+		<code><a href="source-Caching.Cache.php.html#220-237" title="Go to source code">wrap</a>( <span>mixed <var>$function</var></span>, <span>array <var>$dependencies</var> = <span class="php-keyword1">NULL</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Caches results of function/method calls.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Caches results of function/method calls.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$function</var></dt>
+					<dd><code>mixed</code></dd>
+					<dt><var>$dependencies</var></dt>
+					<dd><code>array</code><br>dependencies</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="Closure.html">Closure</a></code></code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="start" id="_start">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="Nette.Caching.OutputHelper.html">Nette\Caching\OutputHelper</a></code>|null
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Caching.Cache.html#_start">#</a>
+		<code><a href="source-Caching.Cache.php.html#240-252" title="Go to source code">start</a>( <span>mixed <var>$key</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Starts the output cache.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Starts the output cache.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$key</var></dt>
+					<dd><code>mixed</code><br>key</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="Nette.Caching.OutputHelper.html">Nette\Caching\OutputHelper</a></code>|null</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="generateKey" id="_generateKey">
+
+		<td class="attributes"><code>
+			 protected 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Caching.Cache.html#_generateKey">#</a>
+		<code><a href="source-Caching.Cache.php.html#255-264" title="Go to source code">generateKey</a>( <span>string <var>$key</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Generates internal cache key.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Generates internal cache key.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$key</var></dt>
+					<dd><code>string</code></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="offsetSet" id="_offsetSet">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Caching.Cache.html#_offsetSet">#</a>
+		<code><a href="source-Caching.Cache.php.html#270-280" title="Go to source code">offsetSet</a>( <span>mixed <var>$key</var></span>, <span>mixed <var>$data</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Inserts (replaces) item into the cache (\ArrayAccess implementation).</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Inserts (replaces) item into the cache (\ArrayAccess implementation).</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$key</var></dt>
+					<dd><code>mixed</code><br>key</dd>
+					<dt><var>$data</var></dt>
+					<dd><code>mixed</code></dd>
+				</dl></div>
+
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><code><a href="Nette.InvalidArgumentException.html">Nette\InvalidArgumentException</a></code></code><br>
+				</div>
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="ArrayAccess.html#_offsetSet">ArrayAccess::offsetSet()</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="offsetGet" id="_offsetGet">
+
+		<td class="attributes"><code>
+			 public 
+			mixed|null
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Caching.Cache.html#_offsetGet">#</a>
+		<code><a href="source-Caching.Cache.php.html#283-297" title="Go to source code">offsetGet</a>( <span>mixed <var>$key</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Retrieves the specified item from the cache or NULL if the key is not found
+(\ArrayAccess implementation).</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Retrieves the specified item from the cache or NULL if the key is not found
+(\ArrayAccess implementation).</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$key</var></dt>
+					<dd><code>mixed</code><br>key</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>mixed|null</code><br>
+				</div>
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><code><a href="Nette.InvalidArgumentException.html">Nette\InvalidArgumentException</a></code></code><br>
+				</div>
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="ArrayAccess.html#_offsetGet">ArrayAccess::offsetGet()</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="offsetExists" id="_offsetExists">
+
+		<td class="attributes"><code>
+			 public 
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Caching.Cache.html#_offsetExists">#</a>
+		<code><a href="source-Caching.Cache.php.html#300-310" title="Go to source code">offsetExists</a>( <span>mixed <var>$key</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Exists item in cache? (\ArrayAccess implementation).</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Exists item in cache? (\ArrayAccess implementation).</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$key</var></dt>
+					<dd><code>mixed</code><br>key</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br>
+				</div>
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><code><a href="Nette.InvalidArgumentException.html">Nette\InvalidArgumentException</a></code></code><br>
+				</div>
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="ArrayAccess.html#_offsetExists">ArrayAccess::offsetExists()</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="offsetUnset" id="_offsetUnset">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Caching.Cache.html#_offsetUnset">#</a>
+		<code><a href="source-Caching.Cache.php.html#313-322" title="Go to source code">offsetUnset</a>( <span>mixed <var>$key</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Removes the specified item from the cache.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Removes the specified item from the cache.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$key</var></dt>
+					<dd><code>mixed</code><br>key</dd>
+				</dl></div>
+
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><code><a href="Nette.InvalidArgumentException.html">Nette\InvalidArgumentException</a></code></code><br>
+				</div>
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="ArrayAccess.html#_offsetUnset">ArrayAccess::offsetUnset()</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="release" id="_release">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Caching.Cache.html#_release">#</a>
+		<code><a href="source-Caching.Cache.php.html#325-332" title="Go to source code">release</a>( )</code>
+
+		<div class="description short">
+			
+<p>Discards the internal cache used by ArrayAccess.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Discards the internal cache used by ArrayAccess.</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="checkCallbacks" id="_checkCallbacks">
+
+		<td class="attributes"><code>
+			 public static
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Caching.Cache.html#_checkCallbacks">#</a>
+		<code><a href="source-Caching.Cache.php.html#338-351" title="Go to source code">checkCallbacks</a>( <span>array <var>$callbacks</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Checks CALLBACKS dependencies.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Checks CALLBACKS dependencies.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$callbacks</var></dt>
+					<dd><code>array</code></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+	<table class="summary inherited">
+	<caption>Methods inherited from <a href="Nette.Object.html#methods">Nette\Object</a></caption>
+	<tr>
+		<td><code>
+			<a href="Nette.Object.html#___call">__call()</a>, 
+			<a href="Nette.Object.html#___callStatic">__callStatic()</a>, 
+			<a href="Nette.Object.html#___get">__get()</a>, 
+			<a href="Nette.Object.html#___isset">__isset()</a>, 
+			<a href="Nette.Object.html#___set">__set()</a>, 
+			<a href="Nette.Object.html#___unset">__unset()</a>, 
+			<a href="Nette.Object.html#_extensionMethod">extensionMethod()</a>, 
+			<a href="Nette.Object.html#_getReflection">getReflection()</a>
+		</code></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+	<table class="summary" id="constants">
+	<caption>Constants summary</caption>
+	<tr data-order="PRIORITY" id="PRIORITY">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name"><code>
+				<a href="source-Caching.Cache.php.html#24-25" title="Go to source code"><b>PRIORITY</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-quote">'priority'</span></code></td>
+		<td class="description"><div>
+			<a href="Nette.Caching.Cache.html#PRIORITY" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>dependency</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>dependency</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="EXPIRATION" id="EXPIRATION">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name"><code>
+				<a href="source-Caching.Cache.php.html#25-26" title="Go to source code"><b>EXPIRATION</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-quote">'expire'</span></code></td>
+		<td class="description"><div>
+			<a href="Nette.Caching.Cache.html#EXPIRATION" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>dependency</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>dependency</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="EXPIRE" id="EXPIRE">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name"><code>
+				<a href="source-Caching.Cache.php.html#26-27" title="Go to source code"><b>EXPIRE</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-quote">'expire'</span></code></td>
+		<td class="description"><div>
+			<a href="Nette.Caching.Cache.html#EXPIRE" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>dependency</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>dependency</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="SLIDING" id="SLIDING">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name"><code>
+				<a href="source-Caching.Cache.php.html#27-28" title="Go to source code"><b>SLIDING</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-quote">'sliding'</span></code></td>
+		<td class="description"><div>
+			<a href="Nette.Caching.Cache.html#SLIDING" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>dependency</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>dependency</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="TAGS" id="TAGS">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name"><code>
+				<a href="source-Caching.Cache.php.html#28-29" title="Go to source code"><b>TAGS</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-quote">'tags'</span></code></td>
+		<td class="description"><div>
+			<a href="Nette.Caching.Cache.html#TAGS" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>dependency</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>dependency</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="FILES" id="FILES">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name"><code>
+				<a href="source-Caching.Cache.php.html#29-30" title="Go to source code"><b>FILES</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-quote">'files'</span></code></td>
+		<td class="description"><div>
+			<a href="Nette.Caching.Cache.html#FILES" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>dependency</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>dependency</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="ITEMS" id="ITEMS">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name"><code>
+				<a href="source-Caching.Cache.php.html#30-31" title="Go to source code"><b>ITEMS</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-quote">'items'</span></code></td>
+		<td class="description"><div>
+			<a href="Nette.Caching.Cache.html#ITEMS" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>dependency</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>dependency</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="CONSTS" id="CONSTS">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name"><code>
+				<a href="source-Caching.Cache.php.html#31-32" title="Go to source code"><b>CONSTS</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-quote">'consts'</span></code></td>
+		<td class="description"><div>
+			<a href="Nette.Caching.Cache.html#CONSTS" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>dependency</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>dependency</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="CALLBACKS" id="CALLBACKS">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name"><code>
+				<a href="source-Caching.Cache.php.html#32-33" title="Go to source code"><b>CALLBACKS</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-quote">'callbacks'</span></code></td>
+		<td class="description"><div>
+			<a href="Nette.Caching.Cache.html#CALLBACKS" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>dependency</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>dependency</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="ALL" id="ALL">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name"><code>
+				<a href="source-Caching.Cache.php.html#33-34" title="Go to source code"><b>ALL</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-quote">'all'</span></code></td>
+		<td class="description"><div>
+			<a href="Nette.Caching.Cache.html#ALL" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>dependency</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>dependency</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+	<table class="summary" id="magicProperties">
+	<caption>Magic properties summary</caption>
+	<tr data-order="storage" id="m$storage">
+		<td class="attributes"><code>
+			public  read-only
+			<code><a href="Nette.Caching.IStorage.html">Nette\Caching\IStorage</a></code>
+		</code></td>
+
+		<td class="name">
+				<a href="source-Caching.Cache.php.html#19" title="Go to source code"><var>$storage</var></a>
+		</td>
+		<td class="description"><div>
+			<a href="Nette.Caching.Cache.html#m$storage" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="namespace" id="m$namespace">
+		<td class="attributes"><code>
+			public  read-only
+			string
+		</code></td>
+
+		<td class="name">
+				<a href="source-Caching.Cache.php.html#20" title="Go to source code"><var>$namespace</var></a>
+		</td>
+		<td class="description"><div>
+			<a href="Nette.Caching.Cache.html#m$namespace" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	</table>
+
+	<table class="summary inherited">
+	<caption>Magic properties inherited from <a href="Nette.Object.html#properties">Nette\Object</a></caption>
+	<tr>
+		<td><code>
+			<a href="Nette.Object.html#m$reflection"><var>$reflection</var></a>
+		</code></td>
+	</tr>
+	</table>
+
+
+</div>
+
+	<div id="footer">
+		Nette 2.2.2 API API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+	</div>
+</div>
+</div>
+<script src="resources/combined.js?3630868369"></script>
+<script src="elementlist.js?2087501429"></script>
+</body>
+</html>

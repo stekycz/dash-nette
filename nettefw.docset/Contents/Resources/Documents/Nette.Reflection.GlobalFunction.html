@@ -1,0 +1,1232 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="generator" content="ApiGen 2.8.0">
+
+	<title>Class Nette\Reflection\GlobalFunction | Nette 2.2.2 API</title>
+
+	<link rel="stylesheet" href="resources/style.css?3746977979">
+	<link rel="search" type="application/opensearchdescription+xml" title="Nette 2.2.2 API" href="http://api.nette.org/2.0/opensearch.xml">
+
+
+<script src='http://files.nette.org/js/analytics.js'></script><script>
+_ga.create('UA-95238-14', '.nette.org');
+_gaq.push(['_trackPageview']);
+</script>
+</head>
+
+<body>
+<div id="left">
+	<div id="menu">
+
+		<div id="groups">
+			<h3>Namespaces</h3>
+			<ul>
+				<li><a href="namespace-Latte.html">Latte<span></span></a>
+						<ul>
+				<li><a href="namespace-Latte.Loaders.html">Loaders</a>
+						</li>
+				<li><a href="namespace-Latte.Macros.html">Macros</a>
+						</li>
+				<li><a href="namespace-Latte.Runtime.html">Runtime</a>
+						</li>
+							</ul></li>
+				<li class="active"><a href="namespace-Nette.html">Nette<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.Application.html">Application<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.Application.Responses.html">Responses</a>
+						</li>
+				<li><a href="namespace-Nette.Application.Routers.html">Routers</a>
+						</li>
+				<li><a href="namespace-Nette.Application.UI.html">UI</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.Bridges.html">Bridges<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.Bridges.ApplicationLatte.html">ApplicationLatte</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.ApplicationTracy.html">ApplicationTracy</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.CacheLatte.html">CacheLatte</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.DatabaseDI.html">DatabaseDI</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.DatabaseTracy.html">DatabaseTracy</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.DITracy.html">DITracy</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.FormsLatte.html">FormsLatte</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.Framework.html">Framework</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.HttpTracy.html">HttpTracy</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.SecurityTracy.html">SecurityTracy</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.Caching.html">Caching<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.Caching.Storages.html">Storages</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.ComponentModel.html">ComponentModel</a>
+						</li>
+				<li><a href="namespace-Nette.Database.html">Database<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.Database.Drivers.html">Drivers</a>
+						</li>
+				<li><a href="namespace-Nette.Database.Reflection.html">Reflection</a>
+						</li>
+				<li><a href="namespace-Nette.Database.Table.html">Table</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.DI.html">DI<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.DI.Config.html">Config<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.DI.Config.Adapters.html">Adapters</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.DI.Extensions.html">Extensions</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.Diagnostics.html">Diagnostics</a>
+						</li>
+				<li><a href="namespace-Nette.Forms.html">Forms<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.Forms.Controls.html">Controls</a>
+						</li>
+				<li><a href="namespace-Nette.Forms.Rendering.html">Rendering</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.Http.html">Http</a>
+						</li>
+				<li><a href="namespace-Nette.Iterators.html">Iterators</a>
+						</li>
+				<li><a href="namespace-Nette.Latte.html">Latte</a>
+						</li>
+				<li><a href="namespace-Nette.Loaders.html">Loaders</a>
+						</li>
+				<li><a href="namespace-Nette.Localization.html">Localization</a>
+						</li>
+				<li><a href="namespace-Nette.Mail.html">Mail</a>
+						</li>
+				<li><a href="namespace-Nette.Neon.html">Neon</a>
+						</li>
+				<li><a href="namespace-Nette.PhpGenerator.html">PhpGenerator</a>
+						</li>
+				<li class="active"><a href="namespace-Nette.Reflection.html">Reflection</a>
+						</li>
+				<li><a href="namespace-Nette.Security.html">Security</a>
+						</li>
+				<li><a href="namespace-Nette.Templating.html">Templating</a>
+						</li>
+				<li><a href="namespace-Nette.Utils.html">Utils</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-NetteModule.html">NetteModule</a>
+						</li>
+				<li><a href="namespace-none.html">none</a>
+						</li>
+				<li><a href="namespace-Tracy.html">Tracy</a>
+						</li>
+			</ul>
+		</div>
+
+		<hr>
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="Nette.Reflection.Annotation.html">Annotation</a></li>
+				<li><a href="Nette.Reflection.AnnotationsParser.html">AnnotationsParser</a></li>
+				<li><a href="Nette.Reflection.ClassType.html">ClassType</a></li>
+				<li><a href="Nette.Reflection.Extension.html">Extension</a></li>
+				<li class="active"><a href="Nette.Reflection.GlobalFunction.html">GlobalFunction</a></li>
+				<li><a href="Nette.Reflection.Method.html">Method</a></li>
+				<li><a href="Nette.Reflection.Parameter.html">Parameter</a></li>
+				<li><a href="Nette.Reflection.Property.html">Property</a></li>
+			</ul>
+
+			<h3>Interfaces</h3>
+			<ul>
+				<li><a href="Nette.Reflection.IAnnotation.html">IAnnotation</a></li>
+			</ul>
+
+
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form action="http://www.google.com/cse" id="search">
+		<input type="hidden" name="cx" value="011549293477758430224:vxofa9ufnhc">
+		<input type="hidden" name="ie" value="UTF-8">
+		<input type="text" name="q" class="text">
+		<input type="submit" value="Search">
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+				<a href="namespace-Nette.Reflection.html" title="Summary of Nette\Reflection"><span>Namespace</span></a>
+			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+			<li>
+				<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions"><span>Tree</span></a>
+			</li>
+			<li>
+				<a href="deprecated.html" title="List of deprecated elements"><span>Deprecated</span></a>
+			</li>
+		</ul>
+		<ul><li><a href="http://api.nette.org/releases"><span>Other releases</span></a></li><li><a href="http://nette.org"><span>Nette homepage</span></a></li></ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Class GlobalFunction</h1>
+
+
+	<div class="description">
+	
+<p>Reports information about a function.</p>
+
+	</div>
+
+	<dl class="tree">
+		<dd style="padding-left:0px">
+			<a href="ReflectionFunctionAbstract.html"><span>ReflectionFunctionAbstract</span></a>
+			
+			 implements 
+				<a href="Reflector.html"><span>Reflector</span></a>
+			
+			
+		</dd>
+		<dd style="padding-left:30px">
+			<img src="resources/inherit.png" alt="Extended by">
+			<a href="ReflectionFunction.html"><span>ReflectionFunction</span></a>
+			
+			
+			
+		</dd>
+		<dd style="padding-left:60px">
+			<img src="resources/inherit.png" alt="Extended by">
+<b><span>Nette\Reflection\GlobalFunction</span></b>			
+			
+			
+		</dd>
+	</dl>
+
+
+
+
+
+
+
+
+	<div class="info">
+		
+		
+		<b>Namespace:</b> <a href="namespace-Nette.html">Nette</a>\<a href="namespace-Nette.Reflection.html">Reflection</a><br>
+		
+
+				<b>Author:</b>
+				David Grudl<br>
+		<b>Located at</b> <a href="source-Reflection.GlobalFunction.php.html#14-176" title="Go to source code">Reflection/GlobalFunction.php</a><br>
+	</div>
+
+
+
+	<table class="summary" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="__construct" id="___construct">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Reflection.GlobalFunction.html#___construct">#</a>
+		<code><a href="source-Reflection.GlobalFunction.php.html#44-47" title="Go to source code">__construct</a>( <span> <var>$name</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+				<h4>Overrides</h4>
+				<div class="list"><code><a href="ReflectionFunction.html#___construct">ReflectionFunction::__construct()</a></code></div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="toCallback" id="_toCallback" class="deprecated">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Reflection.GlobalFunction.html#_toCallback">#</a>
+		<code><a href="source-Reflection.GlobalFunction.php.html#50-56" title="Go to source code">toCallback</a>( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+				<h4>Deprecated</h4>
+				<div class="list">
+				</div>
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="__toString" id="___toString">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Reflection.GlobalFunction.html#___toString">#</a>
+		<code><a href="source-Reflection.GlobalFunction.php.html#59-62" title="Go to source code">__toString</a>( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+				<h4>Overrides</h4>
+				<div class="list"><code><a href="ReflectionFunction.html#___toString">ReflectionFunction::__toString()</a></code></div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getClosure" id="_getClosure">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Reflection.GlobalFunction.html#_getClosure">#</a>
+		<code><a href="source-Reflection.GlobalFunction.php.html#65-70" title="Go to source code">getClosure</a>( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getExtension" id="_getExtension">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="Nette.Reflection.Extension.html">Nette\Reflection\Extension</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Reflection.GlobalFunction.html#_getExtension">#</a>
+		<code><a href="source-Reflection.GlobalFunction.php.html#76-82" title="Go to source code">getExtension</a>( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="Nette.Reflection.Extension.html">Nette\Reflection\Extension</a></code></code><br>
+				</div>
+
+
+
+				<h4>Overrides</h4>
+				<div class="list"><code><a href="ReflectionFunctionAbstract.html#_getExtension">ReflectionFunctionAbstract::getExtension()</a></code></div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getParameters" id="_getParameters">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="Nette.Reflection.Parameter.html">Nette\Reflection\Parameter</a>[]</code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Reflection.GlobalFunction.html#_getParameters">#</a>
+		<code><a href="source-Reflection.GlobalFunction.php.html#85-94" title="Go to source code">getParameters</a>( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="Nette.Reflection.Parameter.html">Nette\Reflection\Parameter</a>[]</code></code><br>
+				</div>
+
+
+
+				<h4>Overrides</h4>
+				<div class="list"><code><a href="ReflectionFunctionAbstract.html#_getParameters">ReflectionFunctionAbstract::getParameters()</a></code></div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="hasAnnotation" id="_hasAnnotation">
+
+		<td class="attributes"><code>
+			 public 
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Reflection.GlobalFunction.html#_hasAnnotation">#</a>
+		<code><a href="source-Reflection.GlobalFunction.php.html#100-109" title="Go to source code">hasAnnotation</a>( <span>string <var>$name</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Has method specified annotation?</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Has method specified annotation?</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$name</var></dt>
+					<dd><code>string</code></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getAnnotation" id="_getAnnotation">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="Nette.Reflection.IAnnotation.html">Nette\Reflection\IAnnotation</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Reflection.GlobalFunction.html#_getAnnotation">#</a>
+		<code><a href="source-Reflection.GlobalFunction.php.html#112-121" title="Go to source code">getAnnotation</a>( <span>string <var>$name</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Returns an annotation value.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns an annotation value.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$name</var></dt>
+					<dd><code>string</code></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="Nette.Reflection.IAnnotation.html">Nette\Reflection\IAnnotation</a></code></code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getAnnotations" id="_getAnnotations">
+
+		<td class="attributes"><code>
+			 public 
+			IAnnotation[][]
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Reflection.GlobalFunction.html#_getAnnotations">#</a>
+		<code><a href="source-Reflection.GlobalFunction.php.html#124-131" title="Go to source code">getAnnotations</a>( )</code>
+
+		<div class="description short">
+			
+<p>Returns all annotations.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns all annotations.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>IAnnotation[][]</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getDescription" id="_getDescription">
+
+		<td class="attributes"><code>
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Reflection.GlobalFunction.html#_getDescription">#</a>
+		<code><a href="source-Reflection.GlobalFunction.php.html#134-141" title="Go to source code">getDescription</a>( )</code>
+
+		<div class="description short">
+			
+<p>Returns value of annotation 'description'.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns value of annotation 'description'.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="__call" id="___call">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Reflection.GlobalFunction.html#___call">#</a>
+		<code><a href="source-Reflection.GlobalFunction.php.html#147-150" title="Go to source code">__call</a>( <span> <var>$name</var></span>, <span> <var>$args</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="__get" id="___get">
+
+		<td class="attributes"><code>
+			 public 
+			
+			&amp;
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Reflection.GlobalFunction.html#___get">#</a>
+		<code><a href="source-Reflection.GlobalFunction.php.html#153-156" title="Go to source code">__get</a>( <span> <var>$name</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="__set" id="___set">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Reflection.GlobalFunction.html#___set">#</a>
+		<code><a href="source-Reflection.GlobalFunction.php.html#159-162" title="Go to source code">__set</a>( <span> <var>$name</var></span>, <span> <var>$value</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="__isset" id="___isset">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Reflection.GlobalFunction.html#___isset">#</a>
+		<code><a href="source-Reflection.GlobalFunction.php.html#165-168" title="Go to source code">__isset</a>( <span> <var>$name</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="__unset" id="___unset">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Reflection.GlobalFunction.html#___unset">#</a>
+		<code><a href="source-Reflection.GlobalFunction.php.html#171-174" title="Go to source code">__unset</a>( <span> <var>$name</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+	<table class="summary inherited">
+	<caption>Methods inherited from <a href="ReflectionFunction.html#methods">ReflectionFunction</a></caption>
+	<tr>
+		<td><code>
+			<a href="ReflectionFunction.html#_export">export()</a>, 
+			<a href="ReflectionFunction.html#_invoke">invoke()</a>, 
+			<a href="ReflectionFunction.html#_invokeArgs">invokeArgs()</a>, 
+			<a href="ReflectionFunction.html#_isDisabled">isDisabled()</a>
+		</code></td>
+	</tr>
+	</table>
+	<table class="summary inherited">
+	<caption>Methods inherited from <a href="ReflectionFunctionAbstract.html#methods">ReflectionFunctionAbstract</a></caption>
+	<tr>
+		<td><code>
+			<a href="ReflectionFunctionAbstract.html#_getDocComment">getDocComment()</a>, 
+			<a href="ReflectionFunctionAbstract.html#_getEndLine">getEndLine()</a>, 
+			<a href="ReflectionFunctionAbstract.html#_getExtensionName">getExtensionName()</a>, 
+			<a href="ReflectionFunctionAbstract.html#_getFileName">getFileName()</a>, 
+			<a href="ReflectionFunctionAbstract.html#_getName">getName()</a>, 
+			<a href="ReflectionFunctionAbstract.html#_getNamespaceName">getNamespaceName()</a>, 
+			<a href="ReflectionFunctionAbstract.html#_getNumberOfParameters">getNumberOfParameters()</a>, 
+			<a href="ReflectionFunctionAbstract.html#_getNumberOfRequiredParameters">getNumberOfRequiredParameters()</a>, 
+			<a href="ReflectionFunctionAbstract.html#_getShortName">getShortName()</a>, 
+			<a href="ReflectionFunctionAbstract.html#_getStartLine">getStartLine()</a>, 
+			<a href="ReflectionFunctionAbstract.html#_getStaticVariables">getStaticVariables()</a>, 
+			<a href="ReflectionFunctionAbstract.html#_inNamespace">inNamespace()</a>, 
+			<a href="ReflectionFunctionAbstract.html#_isClosure">isClosure()</a>, 
+			<a href="ReflectionFunctionAbstract.html#_isDeprecated">isDeprecated()</a>, 
+			<a href="ReflectionFunctionAbstract.html#_isInternal">isInternal()</a>, 
+			<a href="ReflectionFunctionAbstract.html#_isUserDefined">isUserDefined()</a>, 
+			<a href="ReflectionFunctionAbstract.html#_returnsReference">returnsReference()</a>
+		</code></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+	<table class="summary inherited">
+	<caption>Constants inherited from <a href="ReflectionFunction.html#constants">ReflectionFunction</a></caption>
+	<tr>
+		<td><code>
+			<a href="ReflectionFunction.html#IS_DEPRECATED"><b>IS_DEPRECATED</b></a>
+		</code></td>
+	</tr>
+	</table>
+
+
+
+
+	<table class="summary inherited">
+	<caption>Properties inherited from <a href="ReflectionFunction.html#properties">ReflectionFunction</a></caption>
+	<tr>
+		<td><code>
+			<a href="ReflectionFunction.html#$name"><var>$name</var></a>
+		</code></td>
+	</tr>
+	</table>
+
+
+	<table class="summary" id="magicProperties">
+	<caption>Magic properties summary</caption>
+	<tr data-order="defaultParameters" id="m$defaultParameters">
+		<td class="attributes"><code>
+			public  read-only
+			array
+		</code></td>
+
+		<td class="name">
+				<a href="source-Reflection.GlobalFunction.php.html#18" title="Go to source code"><var>$defaultParameters</var></a>
+		</td>
+		<td class="description"><div>
+			<a href="Nette.Reflection.GlobalFunction.html#m$defaultParameters" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="closure" id="m$closure">
+		<td class="attributes"><code>
+			public  read-only
+			boolean
+		</code></td>
+
+		<td class="name">
+				<a href="source-Reflection.GlobalFunction.php.html#19" title="Go to source code"><var>$closure</var></a>
+		</td>
+		<td class="description"><div>
+			<a href="Nette.Reflection.GlobalFunction.html#m$closure" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="extension" id="m$extension">
+		<td class="attributes"><code>
+			public  read-only
+			<code><a href="Nette.Reflection.Extension.html">Nette\Reflection\Extension</a></code>
+		</code></td>
+
+		<td class="name">
+				<a href="source-Reflection.GlobalFunction.php.html#20" title="Go to source code"><var>$extension</var></a>
+		</td>
+		<td class="description"><div>
+			<a href="Nette.Reflection.GlobalFunction.html#m$extension" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="disabled" id="m$disabled">
+		<td class="attributes"><code>
+			public  read-only
+			boolean
+		</code></td>
+
+		<td class="name">
+				<a href="source-Reflection.GlobalFunction.php.html#22" title="Go to source code"><var>$disabled</var></a>
+		</td>
+		<td class="description"><div>
+			<a href="Nette.Reflection.GlobalFunction.html#m$disabled" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="deprecated" id="m$deprecated">
+		<td class="attributes"><code>
+			public  read-only
+			boolean
+		</code></td>
+
+		<td class="name">
+				<a href="source-Reflection.GlobalFunction.php.html#23" title="Go to source code"><var>$deprecated</var></a>
+		</td>
+		<td class="description"><div>
+			<a href="Nette.Reflection.GlobalFunction.html#m$deprecated" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="internal" id="m$internal">
+		<td class="attributes"><code>
+			public  read-only
+			boolean
+		</code></td>
+
+		<td class="name">
+				<a href="source-Reflection.GlobalFunction.php.html#24" title="Go to source code"><var>$internal</var></a>
+		</td>
+		<td class="description"><div>
+			<a href="Nette.Reflection.GlobalFunction.html#m$internal" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="userDefined" id="m$userDefined">
+		<td class="attributes"><code>
+			public  read-only
+			boolean
+		</code></td>
+
+		<td class="name">
+				<a href="source-Reflection.GlobalFunction.php.html#25" title="Go to source code"><var>$userDefined</var></a>
+		</td>
+		<td class="description"><div>
+			<a href="Nette.Reflection.GlobalFunction.html#m$userDefined" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="docComment" id="m$docComment">
+		<td class="attributes"><code>
+			public  read-only
+			string
+		</code></td>
+
+		<td class="name">
+				<a href="source-Reflection.GlobalFunction.php.html#26" title="Go to source code"><var>$docComment</var></a>
+		</td>
+		<td class="description"><div>
+			<a href="Nette.Reflection.GlobalFunction.html#m$docComment" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="endLine" id="m$endLine">
+		<td class="attributes"><code>
+			public  read-only
+			integer
+		</code></td>
+
+		<td class="name">
+				<a href="source-Reflection.GlobalFunction.php.html#27" title="Go to source code"><var>$endLine</var></a>
+		</td>
+		<td class="description"><div>
+			<a href="Nette.Reflection.GlobalFunction.html#m$endLine" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="extensionName" id="m$extensionName">
+		<td class="attributes"><code>
+			public  read-only
+			string
+		</code></td>
+
+		<td class="name">
+				<a href="source-Reflection.GlobalFunction.php.html#28" title="Go to source code"><var>$extensionName</var></a>
+		</td>
+		<td class="description"><div>
+			<a href="Nette.Reflection.GlobalFunction.html#m$extensionName" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="fileName" id="m$fileName">
+		<td class="attributes"><code>
+			public  read-only
+			string
+		</code></td>
+
+		<td class="name">
+				<a href="source-Reflection.GlobalFunction.php.html#29" title="Go to source code"><var>$fileName</var></a>
+		</td>
+		<td class="description"><div>
+			<a href="Nette.Reflection.GlobalFunction.html#m$fileName" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="name" id="m$name">
+		<td class="attributes"><code>
+			public  read-only
+			string
+		</code></td>
+
+		<td class="name">
+				<a href="source-Reflection.GlobalFunction.php.html#30" title="Go to source code"><var>$name</var></a>
+		</td>
+		<td class="description"><div>
+			<a href="Nette.Reflection.GlobalFunction.html#m$name" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="namespaceName" id="m$namespaceName">
+		<td class="attributes"><code>
+			public  read-only
+			string
+		</code></td>
+
+		<td class="name">
+				<a href="source-Reflection.GlobalFunction.php.html#31" title="Go to source code"><var>$namespaceName</var></a>
+		</td>
+		<td class="description"><div>
+			<a href="Nette.Reflection.GlobalFunction.html#m$namespaceName" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="numberOfParameters" id="m$numberOfParameters">
+		<td class="attributes"><code>
+			public  read-only
+			integer
+		</code></td>
+
+		<td class="name">
+				<a href="source-Reflection.GlobalFunction.php.html#32" title="Go to source code"><var>$numberOfParameters</var></a>
+		</td>
+		<td class="description"><div>
+			<a href="Nette.Reflection.GlobalFunction.html#m$numberOfParameters" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="numberOfRequiredParameters" id="m$numberOfRequiredParameters">
+		<td class="attributes"><code>
+			public  read-only
+			integer
+		</code></td>
+
+		<td class="name">
+				<a href="source-Reflection.GlobalFunction.php.html#33" title="Go to source code"><var>$numberOfRequiredParameters</var></a>
+		</td>
+		<td class="description"><div>
+			<a href="Nette.Reflection.GlobalFunction.html#m$numberOfRequiredParameters" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="shortName" id="m$shortName">
+		<td class="attributes"><code>
+			public  read-only
+			string
+		</code></td>
+
+		<td class="name">
+				<a href="source-Reflection.GlobalFunction.php.html#34" title="Go to source code"><var>$shortName</var></a>
+		</td>
+		<td class="description"><div>
+			<a href="Nette.Reflection.GlobalFunction.html#m$shortName" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="startLine" id="m$startLine">
+		<td class="attributes"><code>
+			public  read-only
+			integer
+		</code></td>
+
+		<td class="name">
+				<a href="source-Reflection.GlobalFunction.php.html#35" title="Go to source code"><var>$startLine</var></a>
+		</td>
+		<td class="description"><div>
+			<a href="Nette.Reflection.GlobalFunction.html#m$startLine" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="staticVariables" id="m$staticVariables">
+		<td class="attributes"><code>
+			public  read-only
+			array
+		</code></td>
+
+		<td class="name">
+				<a href="source-Reflection.GlobalFunction.php.html#36" title="Go to source code"><var>$staticVariables</var></a>
+		</td>
+		<td class="description"><div>
+			<a href="Nette.Reflection.GlobalFunction.html#m$staticVariables" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+</div>
+
+	<div id="footer">
+		Nette 2.2.2 API API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+	</div>
+</div>
+</div>
+<script src="resources/combined.js?3630868369"></script>
+<script src="elementlist.js?2087501429"></script>
+</body>
+</html>

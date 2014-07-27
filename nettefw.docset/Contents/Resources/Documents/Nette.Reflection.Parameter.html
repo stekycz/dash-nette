@@ -1,0 +1,927 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="generator" content="ApiGen 2.8.0">
+
+	<title>Class Nette\Reflection\Parameter | Nette 2.2.2 API</title>
+
+	<link rel="stylesheet" href="resources/style.css?3746977979">
+	<link rel="search" type="application/opensearchdescription+xml" title="Nette 2.2.2 API" href="http://api.nette.org/2.0/opensearch.xml">
+
+
+<script src='http://files.nette.org/js/analytics.js'></script><script>
+_ga.create('UA-95238-14', '.nette.org');
+_gaq.push(['_trackPageview']);
+</script>
+</head>
+
+<body>
+<div id="left">
+	<div id="menu">
+
+		<div id="groups">
+			<h3>Namespaces</h3>
+			<ul>
+				<li><a href="namespace-Latte.html">Latte<span></span></a>
+						<ul>
+				<li><a href="namespace-Latte.Loaders.html">Loaders</a>
+						</li>
+				<li><a href="namespace-Latte.Macros.html">Macros</a>
+						</li>
+				<li><a href="namespace-Latte.Runtime.html">Runtime</a>
+						</li>
+							</ul></li>
+				<li class="active"><a href="namespace-Nette.html">Nette<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.Application.html">Application<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.Application.Responses.html">Responses</a>
+						</li>
+				<li><a href="namespace-Nette.Application.Routers.html">Routers</a>
+						</li>
+				<li><a href="namespace-Nette.Application.UI.html">UI</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.Bridges.html">Bridges<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.Bridges.ApplicationLatte.html">ApplicationLatte</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.ApplicationTracy.html">ApplicationTracy</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.CacheLatte.html">CacheLatte</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.DatabaseDI.html">DatabaseDI</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.DatabaseTracy.html">DatabaseTracy</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.DITracy.html">DITracy</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.FormsLatte.html">FormsLatte</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.Framework.html">Framework</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.HttpTracy.html">HttpTracy</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.SecurityTracy.html">SecurityTracy</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.Caching.html">Caching<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.Caching.Storages.html">Storages</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.ComponentModel.html">ComponentModel</a>
+						</li>
+				<li><a href="namespace-Nette.Database.html">Database<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.Database.Drivers.html">Drivers</a>
+						</li>
+				<li><a href="namespace-Nette.Database.Reflection.html">Reflection</a>
+						</li>
+				<li><a href="namespace-Nette.Database.Table.html">Table</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.DI.html">DI<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.DI.Config.html">Config<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.DI.Config.Adapters.html">Adapters</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.DI.Extensions.html">Extensions</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.Diagnostics.html">Diagnostics</a>
+						</li>
+				<li><a href="namespace-Nette.Forms.html">Forms<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.Forms.Controls.html">Controls</a>
+						</li>
+				<li><a href="namespace-Nette.Forms.Rendering.html">Rendering</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.Http.html">Http</a>
+						</li>
+				<li><a href="namespace-Nette.Iterators.html">Iterators</a>
+						</li>
+				<li><a href="namespace-Nette.Latte.html">Latte</a>
+						</li>
+				<li><a href="namespace-Nette.Loaders.html">Loaders</a>
+						</li>
+				<li><a href="namespace-Nette.Localization.html">Localization</a>
+						</li>
+				<li><a href="namespace-Nette.Mail.html">Mail</a>
+						</li>
+				<li><a href="namespace-Nette.Neon.html">Neon</a>
+						</li>
+				<li><a href="namespace-Nette.PhpGenerator.html">PhpGenerator</a>
+						</li>
+				<li class="active"><a href="namespace-Nette.Reflection.html">Reflection</a>
+						</li>
+				<li><a href="namespace-Nette.Security.html">Security</a>
+						</li>
+				<li><a href="namespace-Nette.Templating.html">Templating</a>
+						</li>
+				<li><a href="namespace-Nette.Utils.html">Utils</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-NetteModule.html">NetteModule</a>
+						</li>
+				<li><a href="namespace-none.html">none</a>
+						</li>
+				<li><a href="namespace-Tracy.html">Tracy</a>
+						</li>
+			</ul>
+		</div>
+
+		<hr>
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="Nette.Reflection.Annotation.html">Annotation</a></li>
+				<li><a href="Nette.Reflection.AnnotationsParser.html">AnnotationsParser</a></li>
+				<li><a href="Nette.Reflection.ClassType.html">ClassType</a></li>
+				<li><a href="Nette.Reflection.Extension.html">Extension</a></li>
+				<li><a href="Nette.Reflection.GlobalFunction.html">GlobalFunction</a></li>
+				<li><a href="Nette.Reflection.Method.html">Method</a></li>
+				<li class="active"><a href="Nette.Reflection.Parameter.html">Parameter</a></li>
+				<li><a href="Nette.Reflection.Property.html">Property</a></li>
+			</ul>
+
+			<h3>Interfaces</h3>
+			<ul>
+				<li><a href="Nette.Reflection.IAnnotation.html">IAnnotation</a></li>
+			</ul>
+
+
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form action="http://www.google.com/cse" id="search">
+		<input type="hidden" name="cx" value="011549293477758430224:vxofa9ufnhc">
+		<input type="hidden" name="ie" value="UTF-8">
+		<input type="text" name="q" class="text">
+		<input type="submit" value="Search">
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+				<a href="namespace-Nette.Reflection.html" title="Summary of Nette\Reflection"><span>Namespace</span></a>
+			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+			<li>
+				<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions"><span>Tree</span></a>
+			</li>
+			<li>
+				<a href="deprecated.html" title="List of deprecated elements"><span>Deprecated</span></a>
+			</li>
+		</ul>
+		<ul><li><a href="http://api.nette.org/releases"><span>Other releases</span></a></li><li><a href="http://nette.org"><span>Nette homepage</span></a></li></ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Class Parameter</h1>
+
+
+	<div class="description">
+	
+<p>Reports information about a method's parameter.</p>
+
+	</div>
+
+	<dl class="tree">
+		<dd style="padding-left:0px">
+			<a href="ReflectionParameter.html"><span>ReflectionParameter</span></a>
+			
+			 implements 
+				<a href="Reflector.html"><span>Reflector</span></a>
+			
+			
+		</dd>
+		<dd style="padding-left:30px">
+			<img src="resources/inherit.png" alt="Extended by">
+<b><span>Nette\Reflection\Parameter</span></b>			
+			
+			
+		</dd>
+	</dl>
+
+
+
+
+
+
+
+
+	<div class="info">
+		
+		
+		<b>Namespace:</b> <a href="namespace-Nette.html">Nette</a>\<a href="namespace-Nette.Reflection.html">Reflection</a><br>
+		
+
+				<b>Author:</b>
+				David Grudl<br>
+		<b>Located at</b> <a href="source-Reflection.Parameter.php.html#14-142" title="Go to source code">Reflection/Parameter.php</a><br>
+	</div>
+
+
+
+	<table class="summary" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="__construct" id="___construct">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Reflection.Parameter.html#___construct">#</a>
+		<code><a href="source-Reflection.Parameter.php.html#36-39" title="Go to source code">__construct</a>( <span> <var>$function</var></span>, <span> <var>$parameter</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+				<h4>Overrides</h4>
+				<div class="list"><code><a href="ReflectionParameter.html#___construct">ReflectionParameter::__construct()</a></code></div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getClass" id="_getClass">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="Nette.Reflection.ClassType.html">Nette\Reflection\ClassType</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Reflection.Parameter.html#_getClass">#</a>
+		<code><a href="source-Reflection.Parameter.php.html#42-48" title="Go to source code">getClass</a>( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="Nette.Reflection.ClassType.html">Nette\Reflection\ClassType</a></code></code><br>
+				</div>
+
+
+
+				<h4>Overrides</h4>
+				<div class="list"><code><a href="ReflectionParameter.html#_getClass">ReflectionParameter::getClass()</a></code></div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getClassName" id="_getClassName">
+
+		<td class="attributes"><code>
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Reflection.Parameter.html#_getClassName">#</a>
+		<code><a href="source-Reflection.Parameter.php.html#51-64" title="Go to source code">getClassName</a>( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getDeclaringClass" id="_getDeclaringClass">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="Nette.Reflection.ClassType.html">Nette\Reflection\ClassType</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Reflection.Parameter.html#_getDeclaringClass">#</a>
+		<code><a href="source-Reflection.Parameter.php.html#67-73" title="Go to source code">getDeclaringClass</a>( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="Nette.Reflection.ClassType.html">Nette\Reflection\ClassType</a></code></code><br>
+				</div>
+
+
+
+				<h4>Overrides</h4>
+				<div class="list"><code><a href="ReflectionParameter.html#_getDeclaringClass">ReflectionParameter::getDeclaringClass()</a></code></div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getDeclaringFunction" id="_getDeclaringFunction">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="Nette.Reflection.Method.html">Nette\Reflection\Method</a></code>|<code><a href="Nette.Reflection.GlobalFunction.html">Nette\Reflection\GlobalFunction</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Reflection.Parameter.html#_getDeclaringFunction">#</a>
+		<code><a href="source-Reflection.Parameter.php.html#76-84" title="Go to source code">getDeclaringFunction</a>( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="Nette.Reflection.Method.html">Nette\Reflection\Method</a></code>|<code><a href="Nette.Reflection.GlobalFunction.html">Nette\Reflection\GlobalFunction</a></code></code><br>
+				</div>
+
+
+
+				<h4>Overrides</h4>
+				<div class="list"><code><a href="ReflectionParameter.html#_getDeclaringFunction">ReflectionParameter::getDeclaringFunction()</a></code></div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="isDefaultValueAvailable" id="_isDefaultValueAvailable">
+
+		<td class="attributes"><code>
+			 public 
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Reflection.Parameter.html#_isDefaultValueAvailable">#</a>
+		<code><a href="source-Reflection.Parameter.php.html#87-101" title="Go to source code">isDefaultValueAvailable</a>( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br>
+				</div>
+
+
+
+				<h4>Overrides</h4>
+				<div class="list"><code><a href="ReflectionParameter.html#_isDefaultValueAvailable">ReflectionParameter::isDefaultValueAvailable()</a></code></div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="__toString" id="___toString">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Reflection.Parameter.html#___toString">#</a>
+		<code><a href="source-Reflection.Parameter.php.html#104-107" title="Go to source code">__toString</a>( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+				<h4>Overrides</h4>
+				<div class="list"><code><a href="ReflectionParameter.html#___toString">ReflectionParameter::__toString()</a></code></div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="__call" id="___call">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Reflection.Parameter.html#___call">#</a>
+		<code><a href="source-Reflection.Parameter.php.html#113-116" title="Go to source code">__call</a>( <span> <var>$name</var></span>, <span> <var>$args</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="__get" id="___get">
+
+		<td class="attributes"><code>
+			 public 
+			
+			&amp;
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Reflection.Parameter.html#___get">#</a>
+		<code><a href="source-Reflection.Parameter.php.html#119-122" title="Go to source code">__get</a>( <span> <var>$name</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="__set" id="___set">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Reflection.Parameter.html#___set">#</a>
+		<code><a href="source-Reflection.Parameter.php.html#125-128" title="Go to source code">__set</a>( <span> <var>$name</var></span>, <span> <var>$value</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="__isset" id="___isset">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Reflection.Parameter.html#___isset">#</a>
+		<code><a href="source-Reflection.Parameter.php.html#131-134" title="Go to source code">__isset</a>( <span> <var>$name</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="__unset" id="___unset">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Reflection.Parameter.html#___unset">#</a>
+		<code><a href="source-Reflection.Parameter.php.html#137-140" title="Go to source code">__unset</a>( <span> <var>$name</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+	<table class="summary inherited">
+	<caption>Methods inherited from <a href="ReflectionParameter.html#methods">ReflectionParameter</a></caption>
+	<tr>
+		<td><code>
+			<a href="ReflectionParameter.html#_allowsNull">allowsNull()</a>, 
+			<a href="ReflectionParameter.html#_export">export()</a>, 
+			<a href="ReflectionParameter.html#_getDefaultValue">getDefaultValue()</a>, 
+			<a href="ReflectionParameter.html#_getName">getName()</a>, 
+			<a href="ReflectionParameter.html#_getPosition">getPosition()</a>, 
+			<a href="ReflectionParameter.html#_isArray">isArray()</a>, 
+			<a href="ReflectionParameter.html#_isOptional">isOptional()</a>, 
+			<a href="ReflectionParameter.html#_isPassedByReference">isPassedByReference()</a>
+		</code></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+
+
+
+
+	<table class="summary inherited">
+	<caption>Properties inherited from <a href="ReflectionParameter.html#properties">ReflectionParameter</a></caption>
+	<tr>
+		<td><code>
+			<a href="ReflectionParameter.html#$name"><var>$name</var></a>
+		</code></td>
+	</tr>
+	</table>
+
+
+	<table class="summary" id="magicProperties">
+	<caption>Magic properties summary</caption>
+	<tr data-order="class" id="m$class">
+		<td class="attributes"><code>
+			public  read-only
+			<code><a href="Nette.Reflection.ClassType.html">Nette\Reflection\ClassType</a></code>
+		</code></td>
+
+		<td class="name">
+				<a href="source-Reflection.Parameter.php.html#18" title="Go to source code"><var>$class</var></a>
+		</td>
+		<td class="description"><div>
+			<a href="Nette.Reflection.Parameter.html#m$class" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="className" id="m$className">
+		<td class="attributes"><code>
+			public  read-only
+			string
+		</code></td>
+
+		<td class="name">
+				<a href="source-Reflection.Parameter.php.html#19" title="Go to source code"><var>$className</var></a>
+		</td>
+		<td class="description"><div>
+			<a href="Nette.Reflection.Parameter.html#m$className" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="declaringClass" id="m$declaringClass">
+		<td class="attributes"><code>
+			public  read-only
+			<code><a href="Nette.Reflection.ClassType.html">Nette\Reflection\ClassType</a></code>
+		</code></td>
+
+		<td class="name">
+				<a href="source-Reflection.Parameter.php.html#20" title="Go to source code"><var>$declaringClass</var></a>
+		</td>
+		<td class="description"><div>
+			<a href="Nette.Reflection.Parameter.html#m$declaringClass" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="declaringFunction" id="m$declaringFunction">
+		<td class="attributes"><code>
+			public  read-only
+			<code><a href="Nette.Reflection.Method.html">Nette\Reflection\Method</a></code>
+		</code></td>
+
+		<td class="name">
+				<a href="source-Reflection.Parameter.php.html#21" title="Go to source code"><var>$declaringFunction</var></a>
+		</td>
+		<td class="description"><div>
+			<a href="Nette.Reflection.Parameter.html#m$declaringFunction" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="name" id="m$name">
+		<td class="attributes"><code>
+			public  read-only
+			string
+		</code></td>
+
+		<td class="name">
+				<a href="source-Reflection.Parameter.php.html#22" title="Go to source code"><var>$name</var></a>
+		</td>
+		<td class="description"><div>
+			<a href="Nette.Reflection.Parameter.html#m$name" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="passedByReference" id="m$passedByReference">
+		<td class="attributes"><code>
+			public  read-only
+			boolean
+		</code></td>
+
+		<td class="name">
+				<a href="source-Reflection.Parameter.php.html#23" title="Go to source code"><var>$passedByReference</var></a>
+		</td>
+		<td class="description"><div>
+			<a href="Nette.Reflection.Parameter.html#m$passedByReference" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="array" id="m$array">
+		<td class="attributes"><code>
+			public  read-only
+			boolean
+		</code></td>
+
+		<td class="name">
+				<a href="source-Reflection.Parameter.php.html#24" title="Go to source code"><var>$array</var></a>
+		</td>
+		<td class="description"><div>
+			<a href="Nette.Reflection.Parameter.html#m$array" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="position" id="m$position">
+		<td class="attributes"><code>
+			public  read-only
+			integer
+		</code></td>
+
+		<td class="name">
+				<a href="source-Reflection.Parameter.php.html#25" title="Go to source code"><var>$position</var></a>
+		</td>
+		<td class="description"><div>
+			<a href="Nette.Reflection.Parameter.html#m$position" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="optional" id="m$optional">
+		<td class="attributes"><code>
+			public  read-only
+			boolean
+		</code></td>
+
+		<td class="name">
+				<a href="source-Reflection.Parameter.php.html#26" title="Go to source code"><var>$optional</var></a>
+		</td>
+		<td class="description"><div>
+			<a href="Nette.Reflection.Parameter.html#m$optional" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="defaultValueAvailable" id="m$defaultValueAvailable">
+		<td class="attributes"><code>
+			public  read-only
+			boolean
+		</code></td>
+
+		<td class="name">
+				<a href="source-Reflection.Parameter.php.html#27" title="Go to source code"><var>$defaultValueAvailable</var></a>
+		</td>
+		<td class="description"><div>
+			<a href="Nette.Reflection.Parameter.html#m$defaultValueAvailable" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="defaultValue" id="m$defaultValue">
+		<td class="attributes"><code>
+			public  read-only
+			mixed
+		</code></td>
+
+		<td class="name">
+				<a href="source-Reflection.Parameter.php.html#28" title="Go to source code"><var>$defaultValue</var></a>
+		</td>
+		<td class="description"><div>
+			<a href="Nette.Reflection.Parameter.html#m$defaultValue" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+</div>
+
+	<div id="footer">
+		Nette 2.2.2 API API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+	</div>
+</div>
+</div>
+<script src="resources/combined.js?3630868369"></script>
+<script src="elementlist.js?2087501429"></script>
+</body>
+</html>

@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="generator" content="ApiGen 2.8.0">
+	<meta name="robots" content="noindex">
+
+	<title>File Caching/Storages/FileStorage.php | Nette 2.2.2 API</title>
+
+	<link rel="stylesheet" href="resources/style.css?3746977979">
+	<link rel="search" type="application/opensearchdescription+xml" title="Nette 2.2.2 API" href="http://api.nette.org/2.0/opensearch.xml">
+
+
+<script src='http://files.nette.org/js/analytics.js'></script><script>
+_ga.create('UA-95238-14', '.nette.org');
+_gaq.push(['_trackPageview']);
+</script>
+</head>
+
+<body>
+<div id="left">
+	<div id="menu">
+
+		<div id="groups">
+			<h3>Namespaces</h3>
+			<ul>
+				<li><a href="namespace-Latte.html">Latte<span></span></a>
+						<ul>
+				<li><a href="namespace-Latte.Loaders.html">Loaders</a>
+						</li>
+				<li><a href="namespace-Latte.Macros.html">Macros</a>
+						</li>
+				<li><a href="namespace-Latte.Runtime.html">Runtime</a>
+						</li>
+							</ul></li>
+				<li class="active"><a href="namespace-Nette.html">Nette<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.Application.html">Application<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.Application.Responses.html">Responses</a>
+						</li>
+				<li><a href="namespace-Nette.Application.Routers.html">Routers</a>
+						</li>
+				<li><a href="namespace-Nette.Application.UI.html">UI</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.Bridges.html">Bridges<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.Bridges.ApplicationLatte.html">ApplicationLatte</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.ApplicationTracy.html">ApplicationTracy</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.CacheLatte.html">CacheLatte</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.DatabaseDI.html">DatabaseDI</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.DatabaseTracy.html">DatabaseTracy</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.DITracy.html">DITracy</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.FormsLatte.html">FormsLatte</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.Framework.html">Framework</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.HttpTracy.html">HttpTracy</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.SecurityTracy.html">SecurityTracy</a>
+						</li>
+							</ul></li>
+				<li class="active"><a href="namespace-Nette.Caching.html">Caching<span></span></a>
+						<ul>
+				<li class="active"><a href="namespace-Nette.Caching.Storages.html">Storages</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.ComponentModel.html">ComponentModel</a>
+						</li>
+				<li><a href="namespace-Nette.Database.html">Database<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.Database.Drivers.html">Drivers</a>
+						</li>
+				<li><a href="namespace-Nette.Database.Reflection.html">Reflection</a>
+						</li>
+				<li><a href="namespace-Nette.Database.Table.html">Table</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.DI.html">DI<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.DI.Config.html">Config<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.DI.Config.Adapters.html">Adapters</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.DI.Extensions.html">Extensions</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.Diagnostics.html">Diagnostics</a>
+						</li>
+				<li><a href="namespace-Nette.Forms.html">Forms<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.Forms.Controls.html">Controls</a>
+						</li>
+				<li><a href="namespace-Nette.Forms.Rendering.html">Rendering</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.Http.html">Http</a>
+						</li>
+				<li><a href="namespace-Nette.Iterators.html">Iterators</a>
+						</li>
+				<li><a href="namespace-Nette.Latte.html">Latte</a>
+						</li>
+				<li><a href="namespace-Nette.Loaders.html">Loaders</a>
+						</li>
+				<li><a href="namespace-Nette.Localization.html">Localization</a>
+						</li>
+				<li><a href="namespace-Nette.Mail.html">Mail</a>
+						</li>
+				<li><a href="namespace-Nette.Neon.html">Neon</a>
+						</li>
+				<li><a href="namespace-Nette.PhpGenerator.html">PhpGenerator</a>
+						</li>
+				<li><a href="namespace-Nette.Reflection.html">Reflection</a>
+						</li>
+				<li><a href="namespace-Nette.Security.html">Security</a>
+						</li>
+				<li><a href="namespace-Nette.Templating.html">Templating</a>
+						</li>
+				<li><a href="namespace-Nette.Utils.html">Utils</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-NetteModule.html">NetteModule</a>
+						</li>
+				<li><a href="namespace-none.html">none</a>
+						</li>
+				<li><a href="namespace-Tracy.html">Tracy</a>
+						</li>
+			</ul>
+		</div>
+
+		<hr>
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="Nette.Caching.Storages.DevNullStorage.html">DevNullStorage</a></li>
+				<li><a href="Nette.Caching.Storages.FileJournal.html">FileJournal</a></li>
+				<li class="active"><a href="Nette.Caching.Storages.FileStorage.html">FileStorage</a></li>
+				<li><a href="Nette.Caching.Storages.MemcachedStorage.html">MemcachedStorage</a></li>
+				<li><a href="Nette.Caching.Storages.MemoryStorage.html">MemoryStorage</a></li>
+				<li><a href="Nette.Caching.Storages.PhpFileStorage.html" class="deprecated">PhpFileStorage</a></li>
+				<li><a href="Nette.Caching.Storages.SQLiteStorage.html">SQLiteStorage</a></li>
+			</ul>
+
+			<h3>Interfaces</h3>
+			<ul>
+				<li><a href="Nette.Caching.Storages.IJournal.html">IJournal</a></li>
+			</ul>
+
+
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form action="http://www.google.com/cse" id="search">
+		<input type="hidden" name="cx" value="011549293477758430224:vxofa9ufnhc">
+		<input type="hidden" name="ie" value="UTF-8">
+		<input type="text" name="q" class="text">
+		<input type="submit" value="Search">
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+				<a href="namespace-Nette.Caching.Storages.html" title="Summary of Nette\Caching\Storages"><span>Namespace</span></a>
+			</li>
+			<li>
+				<a href="Nette.Caching.Storages.FileStorage.html" title="Summary of Nette\Caching\Storages\FileStorage"><span>Class</span></a>
+			</li>
+		</ul>
+		<ul>
+			<li>
+				<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions"><span>Tree</span></a>
+			</li>
+			<li>
+				<a href="deprecated.html" title="List of deprecated elements"><span>Deprecated</span></a>
+			</li>
+		</ul>
+		<ul><li><a href="http://api.nette.org/releases"><span>Other releases</span></a></li><li><a href="http://nette.org"><span>Nette homepage</span></a></li></ul>
+		<ul>
+		</ul>
+	</div>
+
+<pre><code><span id="1" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#1">  1: </a><span class="xlang">&lt;?php</span>
+</span><span id="2" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#2">  2: </a>
+</span><span id="3" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#3">  3: </a><span class="php-comment">/**
+</span></span><span id="4" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#4">  4: </a><span class="php-comment"> * This file is part of the Nette Framework (http://nette.org)
+</span></span><span id="5" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#5">  5: </a><span class="php-comment"> * Copyright (c) 2004 David Grudl (http://davidgrudl.com)
+</span></span><span id="6" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#6">  6: </a><span class="php-comment"> */</span>
+</span><span id="7" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#7">  7: </a>
+</span><span id="8" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#8">  8: </a><span class="php-keyword1">namespace</span> Nette\Caching\Storages;
+</span><span id="9" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#9">  9: </a>
+</span><span id="10" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#10"> 10: </a><span class="php-keyword1">use</span> Nette,
+</span><span id="11" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#11"> 11: </a>    Nette\Caching\Cache;
+</span><span id="12" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#12"> 12: </a>
+</span><span id="13" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#13"> 13: </a>
+</span><span id="14" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#14"> 14: </a><span class="php-comment">/**
+</span></span><span id="15" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#15"> 15: </a><span class="php-comment"> * Cache file storage.
+</span></span><span id="16" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#16"> 16: </a><span class="php-comment"> *
+</span></span><span id="17" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#17"> 17: </a><span class="php-comment"> * @author     David Grudl
+</span></span><span id="18" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#18"> 18: </a><span class="php-comment"> */</span>
+</span><span id="19" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#19"> 19: </a><span class="php-keyword1">class</span> <a id="FileStorage" href="source-Caching.Storages.FileStorage.php.html#FileStorage">FileStorage</a> <span class="php-keyword1">extends</span> Nette\Object <span class="php-keyword1">implements</span> Nette\Caching\IStorage
+</span><span id="20" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#20"> 20: </a>{
+</span><span id="21" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#21"> 21: </a>    <span class="php-comment">/**
+</span></span><span id="22" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#22"> 22: </a><span class="php-comment">     * Atomic thread safe logic:
+</span></span><span id="23" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#23"> 23: </a><span class="php-comment">     *
+</span></span><span id="24" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#24"> 24: </a><span class="php-comment">     * 1) reading: open(r+b), lock(SH), read
+</span></span><span id="25" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#25"> 25: </a><span class="php-comment">     *     - delete?: delete*, close
+</span></span><span id="26" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#26"> 26: </a><span class="php-comment">     * 2) deleting: delete*
+</span></span><span id="27" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#27"> 27: </a><span class="php-comment">     * 3) writing: open(r+b || wb), lock(EX), truncate*, write data, write meta, close
+</span></span><span id="28" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#28"> 28: </a><span class="php-comment">     *
+</span></span><span id="29" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#29"> 29: </a><span class="php-comment">     * delete* = try unlink, if fails (on NTFS) { lock(EX), truncate, close, unlink } else close (on ext3)
+</span></span><span id="30" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#30"> 30: </a><span class="php-comment">     */</span>
+</span><span id="31" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#31"> 31: </a>
+</span><span id="32" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#32"> 32: </a>    <span class="php-comment">/** @internal cache file structure */</span>
+</span><span id="33" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#33"> 33: </a>    <span class="php-keyword1">const</span> <a id="META_HEADER_LEN" href="source-Caching.Storages.FileStorage.php.html#META_HEADER_LEN">META_HEADER_LEN</a> = <span class="php-num">28</span>, <span class="php-comment">// 22b signature + 6b meta-struct size + serialized meta-struct + data</span>
+</span><span id="34" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#34"> 34: </a>    <span class="php-comment">// meta structure: array of</span>
+</span><span id="35" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#35"> 35: </a>        <a id="META_TIME" href="source-Caching.Storages.FileStorage.php.html#META_TIME">META_TIME</a> = <span class="php-quote">'time'</span>, <span class="php-comment">// timestamp</span>
+</span><span id="36" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#36"> 36: </a>        <a id="META_SERIALIZED" href="source-Caching.Storages.FileStorage.php.html#META_SERIALIZED">META_SERIALIZED</a> = <span class="php-quote">'serialized'</span>, <span class="php-comment">// is content serialized?</span>
+</span><span id="37" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#37"> 37: </a>        <a id="META_EXPIRE" href="source-Caching.Storages.FileStorage.php.html#META_EXPIRE">META_EXPIRE</a> = <span class="php-quote">'expire'</span>, <span class="php-comment">// expiration timestamp</span>
+</span><span id="38" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#38"> 38: </a>        <a id="META_DELTA" href="source-Caching.Storages.FileStorage.php.html#META_DELTA">META_DELTA</a> = <span class="php-quote">'delta'</span>, <span class="php-comment">// relative (sliding) expiration</span>
+</span><span id="39" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#39"> 39: </a>        <a id="META_ITEMS" href="source-Caching.Storages.FileStorage.php.html#META_ITEMS">META_ITEMS</a> = <span class="php-quote">'di'</span>, <span class="php-comment">// array of dependent items (file =&gt; timestamp)</span>
+</span><span id="40" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#40"> 40: </a>        META_CALLBACKS = <span class="php-quote">'callbacks'</span>; <span class="php-comment">// array of callbacks (function, args)</span>
+</span><span id="41" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#41"> 41: </a>
+</span><span id="42" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#42"> 42: </a>    <span class="php-comment">/** additional cache structure */</span>
+</span><span id="43" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#43"> 43: </a>    <span class="php-keyword1">const</span> <span class="php-keyword2">FILE</span> = <span class="php-quote">'file'</span>,
+</span><span id="44" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#44"> 44: </a>        <a id="HANDLE" href="source-Caching.Storages.FileStorage.php.html#HANDLE">HANDLE</a> = <span class="php-quote">'handle'</span>;
+</span><span id="45" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#45"> 45: </a>
+</span><span id="46" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#46"> 46: </a>
+</span><span id="47" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#47"> 47: </a>    <span class="php-comment">/** @var float  probability that the clean() routine is started */</span>
+</span><span id="48" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#48"> 48: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">static</span> <span class="php-var"><a id="$gcProbability" href="source-Caching.Storages.FileStorage.php.html#$gcProbability">$gcProbability</a></span> = <span class="php-num">0.001</span>;
+</span><span id="49" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#49"> 49: </a>
+</span><span id="50" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#50"> 50: </a>    <span class="php-comment">/** @var bool */</span>
+</span><span id="51" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#51"> 51: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">static</span> <span class="php-var"><a id="$useDirectories" href="source-Caching.Storages.FileStorage.php.html#$useDirectories">$useDirectories</a></span> = <span class="php-keyword1">TRUE</span>;
+</span><span id="52" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#52"> 52: </a>
+</span><span id="53" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#53"> 53: </a>    <span class="php-comment">/** @var string */</span>
+</span><span id="54" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#54"> 54: </a>    <span class="php-keyword1">private</span> <span class="php-var"><a id="$dir" href="source-Caching.Storages.FileStorage.php.html#$dir">$dir</a></span>;
+</span><span id="55" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#55"> 55: </a>
+</span><span id="56" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#56"> 56: </a>    <span class="php-comment">/** @var bool */</span>
+</span><span id="57" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#57"> 57: </a>    <span class="php-keyword1">private</span> <span class="php-var"><a id="$useDirs" href="source-Caching.Storages.FileStorage.php.html#$useDirs">$useDirs</a></span>;
+</span><span id="58" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#58"> 58: </a>
+</span><span id="59" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#59"> 59: </a>    <span class="php-comment">/** @var IJournal */</span>
+</span><span id="60" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#60"> 60: </a>    <span class="php-keyword1">private</span> <span class="php-var"><a id="$journal" href="source-Caching.Storages.FileStorage.php.html#$journal">$journal</a></span>;
+</span><span id="61" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#61"> 61: </a>
+</span><span id="62" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#62"> 62: </a>    <span class="php-comment">/** @var array */</span>
+</span><span id="63" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#63"> 63: </a>    <span class="php-keyword1">private</span> <span class="php-var"><a id="$locks" href="source-Caching.Storages.FileStorage.php.html#$locks">$locks</a></span>;
+</span><span id="64" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#64"> 64: </a>
+</span><span id="65" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#65"> 65: </a>
+</span><span id="66" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#66"> 66: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="___construct" href="source-Caching.Storages.FileStorage.php.html#___construct">__construct</a>(<span class="php-var">$dir</span>, IJournal <span class="php-var">$journal</span> = <span class="php-keyword1">NULL</span>)
+</span><span id="67" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#67"> 67: </a>    {
+</span><span id="68" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#68"> 68: </a>        <span class="php-var">$this</span>-&gt;<span class="php-keyword2">dir</span> = <span class="php-keyword2">realpath</span>(<span class="php-var">$dir</span>);
+</span><span id="69" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#69"> 69: </a>        <span class="php-keyword1">if</span> (<span class="php-var">$this</span>-&gt;<span class="php-keyword2">dir</span> === <span class="php-keyword1">FALSE</span>) {
+</span><span id="70" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#70"> 70: </a>            <span class="php-keyword1">throw</span> <span class="php-keyword1">new</span> Nette\DirectoryNotFoundException(<span class="php-quote">&quot;Directory '</span><span class="php-var">$dir</span><span class="php-quote">' not found.&quot;</span>);
+</span><span id="71" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#71"> 71: </a>        }
+</span><span id="72" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#72"> 72: </a>
+</span><span id="73" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#73"> 73: </a>        <span class="php-var">$this</span>-&gt;useDirs = (bool) <span class="php-keyword1">static</span>::<span class="php-var">$useDirectories</span>;
+</span><span id="74" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#74"> 74: </a>        <span class="php-var">$this</span>-&gt;journal = <span class="php-var">$journal</span>;
+</span><span id="75" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#75"> 75: </a>
+</span><span id="76" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#76"> 76: </a>        <span class="php-keyword1">if</span> (<span class="php-keyword2">mt_rand</span>() / <span class="php-keyword2">mt_getrandmax</span>() &lt; <span class="php-keyword1">static</span>::<span class="php-var">$gcProbability</span>) {
+</span><span id="77" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#77"> 77: </a>            <span class="php-var">$this</span>-&gt;clean(<span class="php-keyword1">array</span>());
+</span><span id="78" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#78"> 78: </a>        }
+</span><span id="79" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#79"> 79: </a>    }
+</span><span id="80" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#80"> 80: </a>
+</span><span id="81" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#81"> 81: </a>
+</span><span id="82" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#82"> 82: </a>    <span class="php-comment">/**
+</span></span><span id="83" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#83"> 83: </a><span class="php-comment">     * Read from cache.
+</span></span><span id="84" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#84"> 84: </a><span class="php-comment">     * @param  string key
+</span></span><span id="85" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#85"> 85: </a><span class="php-comment">     * @return mixed|NULL
+</span></span><span id="86" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#86"> 86: </a><span class="php-comment">     */</span>
+</span><span id="87" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#87"> 87: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_read" href="source-Caching.Storages.FileStorage.php.html#_read">read</a>(<span class="php-var">$key</span>)
+</span><span id="88" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#88"> 88: </a>    {
+</span><span id="89" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#89"> 89: </a>        <span class="php-var">$meta</span> = <span class="php-var">$this</span>-&gt;readMetaAndLock(<span class="php-var">$this</span>-&gt;getCacheFile(<span class="php-var">$key</span>), LOCK_SH);
+</span><span id="90" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#90"> 90: </a>        <span class="php-keyword1">if</span> (<span class="php-var">$meta</span> &amp;&amp; <span class="php-var">$this</span>-&gt;verify(<span class="php-var">$meta</span>)) {
+</span><span id="91" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#91"> 91: </a>            <span class="php-keyword1">return</span> <span class="php-var">$this</span>-&gt;readData(<span class="php-var">$meta</span>); <span class="php-comment">// calls fclose()</span>
+</span><span id="92" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#92"> 92: </a>
+</span><span id="93" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#93"> 93: </a>        } <span class="php-keyword1">else</span> {
+</span><span id="94" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#94"> 94: </a>            <span class="php-keyword1">return</span> <span class="php-keyword1">NULL</span>;
+</span><span id="95" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#95"> 95: </a>        }
+</span><span id="96" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#96"> 96: </a>    }
+</span><span id="97" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#97"> 97: </a>
+</span><span id="98" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#98"> 98: </a>
+</span><span id="99" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#99"> 99: </a>    <span class="php-comment">/**
+</span></span><span id="100" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#100">100: </a><span class="php-comment">     * Verifies dependencies.
+</span></span><span id="101" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#101">101: </a><span class="php-comment">     * @param  array
+</span></span><span id="102" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#102">102: </a><span class="php-comment">     * @return bool
+</span></span><span id="103" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#103">103: </a><span class="php-comment">     */</span>
+</span><span id="104" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#104">104: </a>    <span class="php-keyword1">private</span> <span class="php-keyword1">function</span> <a id="_verify" href="source-Caching.Storages.FileStorage.php.html#_verify">verify</a>(<span class="php-var">$meta</span>)
+</span><span id="105" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#105">105: </a>    {
+</span><span id="106" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#106">106: </a>        <span class="php-keyword1">do</span> {
+</span><span id="107" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#107">107: </a>            <span class="php-keyword1">if</span> (!<span class="php-keyword1">empty</span>(<span class="php-var">$meta</span>[self::META_DELTA])) {
+</span><span id="108" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#108">108: </a>                <span class="php-comment">// meta[file] was added by readMetaAndLock()</span>
+</span><span id="109" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#109">109: </a>                <span class="php-keyword1">if</span> (<span class="php-keyword2">filemtime</span>(<span class="php-var">$meta</span>[self::<span class="php-keyword2">FILE</span>]) + <span class="php-var">$meta</span>[self::META_DELTA] &lt; <span class="php-keyword2">time</span>()) {
+</span><span id="110" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#110">110: </a>                    <span class="php-keyword1">break</span>;
+</span><span id="111" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#111">111: </a>                }
+</span><span id="112" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#112">112: </a>                <span class="php-keyword2">touch</span>(<span class="php-var">$meta</span>[self::<span class="php-keyword2">FILE</span>]);
+</span><span id="113" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#113">113: </a>
+</span><span id="114" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#114">114: </a>            } <span class="php-keyword1">elseif</span> (!<span class="php-keyword1">empty</span>(<span class="php-var">$meta</span>[self::META_EXPIRE]) &amp;&amp; <span class="php-var">$meta</span>[self::META_EXPIRE] &lt; <span class="php-keyword2">time</span>()) {
+</span><span id="115" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#115">115: </a>                <span class="php-keyword1">break</span>;
+</span><span id="116" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#116">116: </a>            }
+</span><span id="117" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#117">117: </a>
+</span><span id="118" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#118">118: </a>            <span class="php-keyword1">if</span> (!<span class="php-keyword1">empty</span>(<span class="php-var">$meta</span>[self::META_CALLBACKS]) &amp;&amp; !Cache::checkCallbacks(<span class="php-var">$meta</span>[self::META_CALLBACKS])) {
+</span><span id="119" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#119">119: </a>                <span class="php-keyword1">break</span>;
+</span><span id="120" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#120">120: </a>            }
+</span><span id="121" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#121">121: </a>
+</span><span id="122" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#122">122: </a>            <span class="php-keyword1">if</span> (!<span class="php-keyword1">empty</span>(<span class="php-var">$meta</span>[self::META_ITEMS])) {
+</span><span id="123" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#123">123: </a>                <span class="php-keyword1">foreach</span> (<span class="php-var">$meta</span>[self::META_ITEMS] <span class="php-keyword1">as</span> <span class="php-var">$depFile</span> =&gt; <span class="php-var">$time</span>) {
+</span><span id="124" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#124">124: </a>                    <span class="php-var">$m</span> = <span class="php-var">$this</span>-&gt;readMetaAndLock(<span class="php-var">$depFile</span>, LOCK_SH);
+</span><span id="125" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#125">125: </a>                    <span class="php-keyword1">if</span> (<span class="php-var">$m</span>[self::META_TIME] !== <span class="php-var">$time</span> || (<span class="php-var">$m</span> &amp;&amp; !<span class="php-var">$this</span>-&gt;verify(<span class="php-var">$m</span>))) {
+</span><span id="126" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#126">126: </a>                        <span class="php-keyword1">break</span> <span class="php-num">2</span>;
+</span><span id="127" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#127">127: </a>                    }
+</span><span id="128" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#128">128: </a>                }
+</span><span id="129" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#129">129: </a>            }
+</span><span id="130" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#130">130: </a>
+</span><span id="131" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#131">131: </a>            <span class="php-keyword1">return</span> <span class="php-keyword1">TRUE</span>;
+</span><span id="132" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#132">132: </a>        } <span class="php-keyword1">while</span> (<span class="php-keyword1">FALSE</span>);
+</span><span id="133" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#133">133: </a>
+</span><span id="134" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#134">134: </a>        <span class="php-var">$this</span>-&gt;<span class="php-keyword2">delete</span>(<span class="php-var">$meta</span>[self::<span class="php-keyword2">FILE</span>], <span class="php-var">$meta</span>[self::HANDLE]); <span class="php-comment">// meta[handle] &amp; meta[file] was added by readMetaAndLock()</span>
+</span><span id="135" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#135">135: </a>        <span class="php-keyword1">return</span> <span class="php-keyword1">FALSE</span>;
+</span><span id="136" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#136">136: </a>    }
+</span><span id="137" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#137">137: </a>
+</span><span id="138" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#138">138: </a>
+</span><span id="139" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#139">139: </a>    <span class="php-comment">/**
+</span></span><span id="140" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#140">140: </a><span class="php-comment">     * Prevents item reading and writing. Lock is released by write() or remove().
+</span></span><span id="141" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#141">141: </a><span class="php-comment">     * @param  string key
+</span></span><span id="142" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#142">142: </a><span class="php-comment">     * @return void
+</span></span><span id="143" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#143">143: </a><span class="php-comment">     */</span>
+</span><span id="144" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#144">144: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_lock" href="source-Caching.Storages.FileStorage.php.html#_lock">lock</a>(<span class="php-var">$key</span>)
+</span><span id="145" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#145">145: </a>    {
+</span><span id="146" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#146">146: </a>        <span class="php-var">$cacheFile</span> = <span class="php-var">$this</span>-&gt;getCacheFile(<span class="php-var">$key</span>);
+</span><span id="147" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#147">147: </a>        <span class="php-keyword1">if</span> (<span class="php-var">$this</span>-&gt;useDirs &amp;&amp; !<span class="php-keyword2">is_dir</span>(<span class="php-var">$dir</span> = <span class="php-keyword2">dirname</span>(<span class="php-var">$cacheFile</span>))) {
+</span><span id="148" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#148">148: </a>            @<span class="php-keyword2">mkdir</span>(<span class="php-var">$dir</span>); <span class="php-comment">// @ - directory may already exist</span>
+</span><span id="149" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#149">149: </a>        }
+</span><span id="150" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#150">150: </a>        <span class="php-var">$handle</span> = <span class="php-keyword2">fopen</span>(<span class="php-var">$cacheFile</span>, <span class="php-quote">'c+b'</span>);
+</span><span id="151" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#151">151: </a>        <span class="php-keyword1">if</span> (<span class="php-var">$handle</span>) {
+</span><span id="152" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#152">152: </a>            <span class="php-var">$this</span>-&gt;locks[<span class="php-var">$key</span>] = <span class="php-var">$handle</span>;
+</span><span id="153" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#153">153: </a>            <span class="php-keyword2">flock</span>(<span class="php-var">$handle</span>, LOCK_EX);
+</span><span id="154" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#154">154: </a>        }
+</span><span id="155" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#155">155: </a>    }
+</span><span id="156" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#156">156: </a>
+</span><span id="157" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#157">157: </a>
+</span><span id="158" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#158">158: </a>    <span class="php-comment">/**
+</span></span><span id="159" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#159">159: </a><span class="php-comment">     * Writes item into the cache.
+</span></span><span id="160" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#160">160: </a><span class="php-comment">     * @param  string key
+</span></span><span id="161" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#161">161: </a><span class="php-comment">     * @param  mixed  data
+</span></span><span id="162" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#162">162: </a><span class="php-comment">     * @param  array  dependencies
+</span></span><span id="163" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#163">163: </a><span class="php-comment">     * @return void
+</span></span><span id="164" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#164">164: </a><span class="php-comment">     */</span>
+</span><span id="165" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#165">165: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_write" href="source-Caching.Storages.FileStorage.php.html#_write">write</a>(<span class="php-var">$key</span>, <span class="php-var">$data</span>, <span class="php-keyword1">array</span> <span class="php-var">$dp</span>)
+</span><span id="166" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#166">166: </a>    {
+</span><span id="167" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#167">167: </a>        <span class="php-var">$meta</span> = <span class="php-keyword1">array</span>(
+</span><span id="168" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#168">168: </a>            self::META_TIME =&gt; <span class="php-keyword2">microtime</span>(),
+</span><span id="169" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#169">169: </a>        );
+</span><span id="170" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#170">170: </a>
+</span><span id="171" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#171">171: </a>        <span class="php-keyword1">if</span> (<span class="php-keyword1">isset</span>(<span class="php-var">$dp</span>[Cache::EXPIRATION])) {
+</span><span id="172" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#172">172: </a>            <span class="php-keyword1">if</span> (<span class="php-keyword1">empty</span>(<span class="php-var">$dp</span>[Cache::SLIDING])) {
+</span><span id="173" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#173">173: </a>                <span class="php-var">$meta</span>[self::META_EXPIRE] = <span class="php-var">$dp</span>[Cache::EXPIRATION] + <span class="php-keyword2">time</span>(); <span class="php-comment">// absolute time</span>
+</span><span id="174" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#174">174: </a>            } <span class="php-keyword1">else</span> {
+</span><span id="175" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#175">175: </a>                <span class="php-var">$meta</span>[self::META_DELTA] = (int) <span class="php-var">$dp</span>[Cache::EXPIRATION]; <span class="php-comment">// sliding time</span>
+</span><span id="176" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#176">176: </a>            }
+</span><span id="177" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#177">177: </a>        }
+</span><span id="178" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#178">178: </a>
+</span><span id="179" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#179">179: </a>        <span class="php-keyword1">if</span> (<span class="php-keyword1">isset</span>(<span class="php-var">$dp</span>[Cache::ITEMS])) {
+</span><span id="180" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#180">180: </a>            <span class="php-keyword1">foreach</span> ((<span class="php-keyword1">array</span>) <span class="php-var">$dp</span>[Cache::ITEMS] <span class="php-keyword1">as</span> <span class="php-var">$item</span>) {
+</span><span id="181" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#181">181: </a>                <span class="php-var">$depFile</span> = <span class="php-var">$this</span>-&gt;getCacheFile(<span class="php-var">$item</span>);
+</span><span id="182" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#182">182: </a>                <span class="php-var">$m</span> = <span class="php-var">$this</span>-&gt;readMetaAndLock(<span class="php-var">$depFile</span>, LOCK_SH);
+</span><span id="183" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#183">183: </a>                <span class="php-var">$meta</span>[self::META_ITEMS][<span class="php-var">$depFile</span>] = <span class="php-var">$m</span>[self::META_TIME]; <span class="php-comment">// may be NULL</span>
+</span><span id="184" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#184">184: </a>                <span class="php-keyword1">unset</span>(<span class="php-var">$m</span>);
+</span><span id="185" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#185">185: </a>            }
+</span><span id="186" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#186">186: </a>        }
+</span><span id="187" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#187">187: </a>
+</span><span id="188" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#188">188: </a>        <span class="php-keyword1">if</span> (<span class="php-keyword1">isset</span>(<span class="php-var">$dp</span>[Cache::CALLBACKS])) {
+</span><span id="189" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#189">189: </a>            <span class="php-var">$meta</span>[self::META_CALLBACKS] = <span class="php-var">$dp</span>[Cache::CALLBACKS];
+</span><span id="190" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#190">190: </a>        }
+</span><span id="191" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#191">191: </a>
+</span><span id="192" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#192">192: </a>        <span class="php-keyword1">if</span> (!<span class="php-keyword1">isset</span>(<span class="php-var">$this</span>-&gt;locks[<span class="php-var">$key</span>])) {
+</span><span id="193" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#193">193: </a>            <span class="php-var">$this</span>-&gt;lock(<span class="php-var">$key</span>);
+</span><span id="194" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#194">194: </a>            <span class="php-keyword1">if</span> (!<span class="php-keyword1">isset</span>(<span class="php-var">$this</span>-&gt;locks[<span class="php-var">$key</span>])) {
+</span><span id="195" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#195">195: </a>                <span class="php-keyword1">return</span>;
+</span><span id="196" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#196">196: </a>            }
+</span><span id="197" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#197">197: </a>        }
+</span><span id="198" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#198">198: </a>        <span class="php-var">$handle</span> = <span class="php-var">$this</span>-&gt;locks[<span class="php-var">$key</span>];
+</span><span id="199" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#199">199: </a>        <span class="php-keyword1">unset</span>(<span class="php-var">$this</span>-&gt;locks[<span class="php-var">$key</span>]);
+</span><span id="200" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#200">200: </a>
+</span><span id="201" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#201">201: </a>        <span class="php-var">$cacheFile</span> = <span class="php-var">$this</span>-&gt;getCacheFile(<span class="php-var">$key</span>);
+</span><span id="202" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#202">202: </a>
+</span><span id="203" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#203">203: </a>        <span class="php-keyword1">if</span> (<span class="php-keyword1">isset</span>(<span class="php-var">$dp</span>[Cache::TAGS]) || <span class="php-keyword1">isset</span>(<span class="php-var">$dp</span>[Cache::PRIORITY])) {
+</span><span id="204" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#204">204: </a>            <span class="php-keyword1">if</span> (!<span class="php-var">$this</span>-&gt;journal) {
+</span><span id="205" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#205">205: </a>                <span class="php-keyword1">throw</span> <span class="php-keyword1">new</span> Nette\InvalidStateException(<span class="php-quote">'CacheJournal has not been provided.'</span>);
+</span><span id="206" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#206">206: </a>            }
+</span><span id="207" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#207">207: </a>            <span class="php-var">$this</span>-&gt;journal-&gt;write(<span class="php-var">$cacheFile</span>, <span class="php-var">$dp</span>);
+</span><span id="208" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#208">208: </a>        }
+</span><span id="209" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#209">209: </a>
+</span><span id="210" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#210">210: </a>        <span class="php-keyword2">ftruncate</span>(<span class="php-var">$handle</span>, <span class="php-num">0</span>);
+</span><span id="211" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#211">211: </a>
+</span><span id="212" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#212">212: </a>        <span class="php-keyword1">if</span> (!<span class="php-keyword2">is_string</span>(<span class="php-var">$data</span>)) {
+</span><span id="213" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#213">213: </a>            <span class="php-var">$data</span> = <span class="php-keyword2">serialize</span>(<span class="php-var">$data</span>);
+</span><span id="214" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#214">214: </a>            <span class="php-var">$meta</span>[self::META_SERIALIZED] = <span class="php-keyword1">TRUE</span>;
+</span><span id="215" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#215">215: </a>        }
+</span><span id="216" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#216">216: </a>
+</span><span id="217" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#217">217: </a>        <span class="php-var">$head</span> = <span class="php-keyword2">serialize</span>(<span class="php-var">$meta</span>) . <span class="php-quote">'?&gt;'</span>;
+</span><span id="218" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#218">218: </a>        <span class="php-var">$head</span> = <span class="php-quote">'&lt;?php //netteCache[01]'</span> . <span class="php-keyword2">str_pad</span>((string) <span class="php-keyword2">strlen</span>(<span class="php-var">$head</span>), <span class="php-num">6</span>, <span class="php-quote">'0'</span>, STR_PAD_LEFT) . <span class="php-var">$head</span>;
+</span><span id="219" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#219">219: </a>        <span class="php-var">$headLen</span> = <span class="php-keyword2">strlen</span>(<span class="php-var">$head</span>);
+</span><span id="220" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#220">220: </a>        <span class="php-var">$dataLen</span> = <span class="php-keyword2">strlen</span>(<span class="php-var">$data</span>);
+</span><span id="221" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#221">221: </a>
+</span><span id="222" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#222">222: </a>        <span class="php-keyword1">do</span> {
+</span><span id="223" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#223">223: </a>            <span class="php-keyword1">if</span> (<span class="php-keyword2">fwrite</span>(<span class="php-var">$handle</span>, <span class="php-keyword2">str_repeat</span>(<span class="php-quote">&quot;\x00&quot;</span>, <span class="php-var">$headLen</span>), <span class="php-var">$headLen</span>) !== <span class="php-var">$headLen</span>) {
+</span><span id="224" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#224">224: </a>                <span class="php-keyword1">break</span>;
+</span><span id="225" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#225">225: </a>            }
+</span><span id="226" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#226">226: </a>
+</span><span id="227" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#227">227: </a>            <span class="php-keyword1">if</span> (<span class="php-keyword2">fwrite</span>(<span class="php-var">$handle</span>, <span class="php-var">$data</span>, <span class="php-var">$dataLen</span>) !== <span class="php-var">$dataLen</span>) {
+</span><span id="228" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#228">228: </a>                <span class="php-keyword1">break</span>;
+</span><span id="229" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#229">229: </a>            }
+</span><span id="230" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#230">230: </a>
+</span><span id="231" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#231">231: </a>            <span class="php-keyword2">fseek</span>(<span class="php-var">$handle</span>, <span class="php-num">0</span>);
+</span><span id="232" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#232">232: </a>            <span class="php-keyword1">if</span> (<span class="php-keyword2">fwrite</span>(<span class="php-var">$handle</span>, <span class="php-var">$head</span>, <span class="php-var">$headLen</span>) !== <span class="php-var">$headLen</span>) {
+</span><span id="233" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#233">233: </a>                <span class="php-keyword1">break</span>;
+</span><span id="234" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#234">234: </a>            }
+</span><span id="235" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#235">235: </a>
+</span><span id="236" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#236">236: </a>            <span class="php-keyword2">flock</span>(<span class="php-var">$handle</span>, LOCK_UN);
+</span><span id="237" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#237">237: </a>            <span class="php-keyword2">fclose</span>(<span class="php-var">$handle</span>);
+</span><span id="238" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#238">238: </a>            <span class="php-keyword1">return</span>;
+</span><span id="239" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#239">239: </a>        } <span class="php-keyword1">while</span> (<span class="php-keyword1">FALSE</span>);
+</span><span id="240" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#240">240: </a>
+</span><span id="241" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#241">241: </a>        <span class="php-var">$this</span>-&gt;<span class="php-keyword2">delete</span>(<span class="php-var">$cacheFile</span>, <span class="php-var">$handle</span>);
+</span><span id="242" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#242">242: </a>    }
+</span><span id="243" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#243">243: </a>
+</span><span id="244" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#244">244: </a>
+</span><span id="245" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#245">245: </a>    <span class="php-comment">/**
+</span></span><span id="246" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#246">246: </a><span class="php-comment">     * Removes item from the cache.
+</span></span><span id="247" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#247">247: </a><span class="php-comment">     * @param  string key
+</span></span><span id="248" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#248">248: </a><span class="php-comment">     * @return void
+</span></span><span id="249" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#249">249: </a><span class="php-comment">     */</span>
+</span><span id="250" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#250">250: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_remove" href="source-Caching.Storages.FileStorage.php.html#_remove">remove</a>(<span class="php-var">$key</span>)
+</span><span id="251" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#251">251: </a>    {
+</span><span id="252" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#252">252: </a>        <span class="php-keyword1">unset</span>(<span class="php-var">$this</span>-&gt;locks[<span class="php-var">$key</span>]);
+</span><span id="253" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#253">253: </a>        <span class="php-var">$this</span>-&gt;<span class="php-keyword2">delete</span>(<span class="php-var">$this</span>-&gt;getCacheFile(<span class="php-var">$key</span>));
+</span><span id="254" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#254">254: </a>    }
+</span><span id="255" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#255">255: </a>
+</span><span id="256" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#256">256: </a>
+</span><span id="257" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#257">257: </a>    <span class="php-comment">/**
+</span></span><span id="258" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#258">258: </a><span class="php-comment">     * Removes items from the cache by conditions &amp; garbage collector.
+</span></span><span id="259" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#259">259: </a><span class="php-comment">     * @param  array  conditions
+</span></span><span id="260" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#260">260: </a><span class="php-comment">     * @return void
+</span></span><span id="261" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#261">261: </a><span class="php-comment">     */</span>
+</span><span id="262" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#262">262: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_clean" href="source-Caching.Storages.FileStorage.php.html#_clean">clean</a>(<span class="php-keyword1">array</span> <span class="php-var">$conditions</span>)
+</span><span id="263" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#263">263: </a>    {
+</span><span id="264" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#264">264: </a>        <span class="php-var">$all</span> = !<span class="php-keyword1">empty</span>(<span class="php-var">$conditions</span>[Cache::ALL]);
+</span><span id="265" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#265">265: </a>        <span class="php-var">$collector</span> = <span class="php-keyword1">empty</span>(<span class="php-var">$conditions</span>);
+</span><span id="266" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#266">266: </a>
+</span><span id="267" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#267">267: </a>        <span class="php-comment">// cleaning using file iterator</span>
+</span><span id="268" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#268">268: </a>        <span class="php-keyword1">if</span> (<span class="php-var">$all</span> || <span class="php-var">$collector</span>) {
+</span><span id="269" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#269">269: </a>            <span class="php-var">$now</span> = <span class="php-keyword2">time</span>();
+</span><span id="270" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#270">270: </a>            <span class="php-keyword1">foreach</span> (Nette\Utils\Finder::find(<span class="php-quote">'_*'</span>)-&gt;from(<span class="php-var">$this</span>-&gt;<span class="php-keyword2">dir</span>)-&gt;childFirst() <span class="php-keyword1">as</span> <span class="php-var">$entry</span>) {
+</span><span id="271" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#271">271: </a>                <span class="php-var">$path</span> = (string) <span class="php-var">$entry</span>;
+</span><span id="272" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#272">272: </a>                <span class="php-keyword1">if</span> (<span class="php-var">$entry</span>-&gt;isDir()) { <span class="php-comment">// collector: remove empty dirs</span>
+</span><span id="273" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#273">273: </a>                    @<span class="php-keyword2">rmdir</span>(<span class="php-var">$path</span>); <span class="php-comment">// @ - removing dirs is not necessary</span>
+</span><span id="274" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#274">274: </a>                    <span class="php-keyword1">continue</span>;
+</span><span id="275" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#275">275: </a>                }
+</span><span id="276" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#276">276: </a>                <span class="php-keyword1">if</span> (<span class="php-var">$all</span>) {
+</span><span id="277" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#277">277: </a>                    <span class="php-var">$this</span>-&gt;<span class="php-keyword2">delete</span>(<span class="php-var">$path</span>);
+</span><span id="278" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#278">278: </a>
+</span><span id="279" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#279">279: </a>                } <span class="php-keyword1">else</span> { <span class="php-comment">// collector</span>
+</span><span id="280" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#280">280: </a>                    <span class="php-var">$meta</span> = <span class="php-var">$this</span>-&gt;readMetaAndLock(<span class="php-var">$path</span>, LOCK_SH);
+</span><span id="281" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#281">281: </a>                    <span class="php-keyword1">if</span> (!<span class="php-var">$meta</span>) {
+</span><span id="282" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#282">282: </a>                        <span class="php-keyword1">continue</span>;
+</span><span id="283" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#283">283: </a>                    }
+</span><span id="284" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#284">284: </a>
+</span><span id="285" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#285">285: </a>                    <span class="php-keyword1">if</span> ((!<span class="php-keyword1">empty</span>(<span class="php-var">$meta</span>[self::META_DELTA]) &amp;&amp; <span class="php-keyword2">filemtime</span>(<span class="php-var">$meta</span>[self::<span class="php-keyword2">FILE</span>]) + <span class="php-var">$meta</span>[self::META_DELTA] &lt; <span class="php-var">$now</span>)
+</span><span id="286" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#286">286: </a>                        || (!<span class="php-keyword1">empty</span>(<span class="php-var">$meta</span>[self::META_EXPIRE]) &amp;&amp; <span class="php-var">$meta</span>[self::META_EXPIRE] &lt; <span class="php-var">$now</span>)
+</span><span id="287" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#287">287: </a>                    ) {
+</span><span id="288" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#288">288: </a>                        <span class="php-var">$this</span>-&gt;<span class="php-keyword2">delete</span>(<span class="php-var">$path</span>, <span class="php-var">$meta</span>[self::HANDLE]);
+</span><span id="289" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#289">289: </a>                        <span class="php-keyword1">continue</span>;
+</span><span id="290" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#290">290: </a>                    }
+</span><span id="291" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#291">291: </a>
+</span><span id="292" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#292">292: </a>                    <span class="php-keyword2">flock</span>(<span class="php-var">$meta</span>[self::HANDLE], LOCK_UN);
+</span><span id="293" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#293">293: </a>                    <span class="php-keyword2">fclose</span>(<span class="php-var">$meta</span>[self::HANDLE]);
+</span><span id="294" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#294">294: </a>                }
+</span><span id="295" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#295">295: </a>            }
+</span><span id="296" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#296">296: </a>
+</span><span id="297" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#297">297: </a>            <span class="php-keyword1">if</span> (<span class="php-var">$this</span>-&gt;journal) {
+</span><span id="298" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#298">298: </a>                <span class="php-var">$this</span>-&gt;journal-&gt;clean(<span class="php-var">$conditions</span>);
+</span><span id="299" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#299">299: </a>            }
+</span><span id="300" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#300">300: </a>            <span class="php-keyword1">return</span>;
+</span><span id="301" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#301">301: </a>        }
+</span><span id="302" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#302">302: </a>
+</span><span id="303" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#303">303: </a>        <span class="php-comment">// cleaning using journal</span>
+</span><span id="304" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#304">304: </a>        <span class="php-keyword1">if</span> (<span class="php-var">$this</span>-&gt;journal) {
+</span><span id="305" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#305">305: </a>            <span class="php-keyword1">foreach</span> (<span class="php-var">$this</span>-&gt;journal-&gt;clean(<span class="php-var">$conditions</span>) <span class="php-keyword1">as</span> <span class="php-var">$file</span>) {
+</span><span id="306" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#306">306: </a>                <span class="php-var">$this</span>-&gt;<span class="php-keyword2">delete</span>(<span class="php-var">$file</span>);
+</span><span id="307" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#307">307: </a>            }
+</span><span id="308" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#308">308: </a>        }
+</span><span id="309" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#309">309: </a>    }
+</span><span id="310" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#310">310: </a>
+</span><span id="311" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#311">311: </a>
+</span><span id="312" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#312">312: </a>    <span class="php-comment">/**
+</span></span><span id="313" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#313">313: </a><span class="php-comment">     * Reads cache data from disk.
+</span></span><span id="314" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#314">314: </a><span class="php-comment">     * @param  string  file path
+</span></span><span id="315" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#315">315: </a><span class="php-comment">     * @param  int     lock mode
+</span></span><span id="316" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#316">316: </a><span class="php-comment">     * @return array|NULL
+</span></span><span id="317" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#317">317: </a><span class="php-comment">     */</span>
+</span><span id="318" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#318">318: </a>    <span class="php-keyword1">protected</span> <span class="php-keyword1">function</span> <a id="_readMetaAndLock" href="source-Caching.Storages.FileStorage.php.html#_readMetaAndLock">readMetaAndLock</a>(<span class="php-var">$file</span>, <span class="php-var">$lock</span>)
+</span><span id="319" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#319">319: </a>    {
+</span><span id="320" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#320">320: </a>        <span class="php-var">$handle</span> = @<span class="php-keyword2">fopen</span>(<span class="php-var">$file</span>, <span class="php-quote">'r+b'</span>); <span class="php-comment">// @ - file may not exist</span>
+</span><span id="321" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#321">321: </a>        <span class="php-keyword1">if</span> (!<span class="php-var">$handle</span>) {
+</span><span id="322" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#322">322: </a>            <span class="php-keyword1">return</span> <span class="php-keyword1">NULL</span>;
+</span><span id="323" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#323">323: </a>        }
+</span><span id="324" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#324">324: </a>
+</span><span id="325" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#325">325: </a>        <span class="php-keyword2">flock</span>(<span class="php-var">$handle</span>, <span class="php-var">$lock</span>);
+</span><span id="326" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#326">326: </a>
+</span><span id="327" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#327">327: </a>        <span class="php-var">$head</span> = <span class="php-keyword2">stream_get_contents</span>(<span class="php-var">$handle</span>, self::META_HEADER_LEN);
+</span><span id="328" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#328">328: </a>        <span class="php-keyword1">if</span> (<span class="php-var">$head</span> &amp;&amp; <span class="php-keyword2">strlen</span>(<span class="php-var">$head</span>) === self::META_HEADER_LEN) {
+</span><span id="329" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#329">329: </a>            <span class="php-var">$size</span> = (int) <span class="php-keyword2">substr</span>(<span class="php-var">$head</span>, -<span class="php-num">6</span>);
+</span><span id="330" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#330">330: </a>            <span class="php-var">$meta</span> = <span class="php-keyword2">stream_get_contents</span>(<span class="php-var">$handle</span>, <span class="php-var">$size</span>, self::META_HEADER_LEN);
+</span><span id="331" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#331">331: </a>            <span class="php-var">$meta</span> = @<span class="php-keyword2">unserialize</span>(<span class="php-var">$meta</span>); <span class="php-comment">// intentionally @</span>
+</span><span id="332" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#332">332: </a>            <span class="php-keyword1">if</span> (<span class="php-keyword2">is_array</span>(<span class="php-var">$meta</span>)) {
+</span><span id="333" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#333">333: </a>                <span class="php-var">$meta</span>[self::<span class="php-keyword2">FILE</span>] = <span class="php-var">$file</span>;
+</span><span id="334" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#334">334: </a>                <span class="php-var">$meta</span>[self::HANDLE] = <span class="php-var">$handle</span>;
+</span><span id="335" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#335">335: </a>                <span class="php-keyword1">return</span> <span class="php-var">$meta</span>;
+</span><span id="336" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#336">336: </a>            }
+</span><span id="337" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#337">337: </a>        }
+</span><span id="338" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#338">338: </a>
+</span><span id="339" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#339">339: </a>        <span class="php-keyword2">flock</span>(<span class="php-var">$handle</span>, LOCK_UN);
+</span><span id="340" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#340">340: </a>        <span class="php-keyword2">fclose</span>(<span class="php-var">$handle</span>);
+</span><span id="341" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#341">341: </a>        <span class="php-keyword1">return</span> <span class="php-keyword1">NULL</span>;
+</span><span id="342" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#342">342: </a>    }
+</span><span id="343" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#343">343: </a>
+</span><span id="344" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#344">344: </a>
+</span><span id="345" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#345">345: </a>    <span class="php-comment">/**
+</span></span><span id="346" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#346">346: </a><span class="php-comment">     * Reads cache data from disk and closes cache file handle.
+</span></span><span id="347" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#347">347: </a><span class="php-comment">     * @param  array
+</span></span><span id="348" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#348">348: </a><span class="php-comment">     * @return mixed
+</span></span><span id="349" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#349">349: </a><span class="php-comment">     */</span>
+</span><span id="350" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#350">350: </a>    <span class="php-keyword1">protected</span> <span class="php-keyword1">function</span> <a id="_readData" href="source-Caching.Storages.FileStorage.php.html#_readData">readData</a>(<span class="php-var">$meta</span>)
+</span><span id="351" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#351">351: </a>    {
+</span><span id="352" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#352">352: </a>        <span class="php-var">$data</span> = <span class="php-keyword2">stream_get_contents</span>(<span class="php-var">$meta</span>[self::HANDLE]);
+</span><span id="353" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#353">353: </a>        <span class="php-keyword2">flock</span>(<span class="php-var">$meta</span>[self::HANDLE], LOCK_UN);
+</span><span id="354" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#354">354: </a>        <span class="php-keyword2">fclose</span>(<span class="php-var">$meta</span>[self::HANDLE]);
+</span><span id="355" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#355">355: </a>
+</span><span id="356" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#356">356: </a>        <span class="php-keyword1">if</span> (<span class="php-keyword1">empty</span>(<span class="php-var">$meta</span>[self::META_SERIALIZED])) {
+</span><span id="357" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#357">357: </a>            <span class="php-keyword1">return</span> <span class="php-var">$data</span>;
+</span><span id="358" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#358">358: </a>        } <span class="php-keyword1">else</span> {
+</span><span id="359" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#359">359: </a>            <span class="php-keyword1">return</span> @<span class="php-keyword2">unserialize</span>(<span class="php-var">$data</span>); <span class="php-comment">// intentionally @</span>
+</span><span id="360" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#360">360: </a>        }
+</span><span id="361" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#361">361: </a>    }
+</span><span id="362" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#362">362: </a>
+</span><span id="363" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#363">363: </a>
+</span><span id="364" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#364">364: </a>    <span class="php-comment">/**
+</span></span><span id="365" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#365">365: </a><span class="php-comment">     * Returns file name.
+</span></span><span id="366" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#366">366: </a><span class="php-comment">     * @param  string
+</span></span><span id="367" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#367">367: </a><span class="php-comment">     * @return string
+</span></span><span id="368" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#368">368: </a><span class="php-comment">     */</span>
+</span><span id="369" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#369">369: </a>    <span class="php-keyword1">protected</span> <span class="php-keyword1">function</span> <a id="_getCacheFile" href="source-Caching.Storages.FileStorage.php.html#_getCacheFile">getCacheFile</a>(<span class="php-var">$key</span>)
+</span><span id="370" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#370">370: </a>    {
+</span><span id="371" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#371">371: </a>        <span class="php-var">$file</span> = <span class="php-keyword2">urlencode</span>(<span class="php-var">$key</span>);
+</span><span id="372" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#372">372: </a>        <span class="php-keyword1">if</span> (<span class="php-var">$this</span>-&gt;useDirs &amp;&amp; <span class="php-var">$a</span> = <span class="php-keyword2">strrpos</span>(<span class="php-var">$file</span>, <span class="php-quote">'%00'</span>)) { <span class="php-comment">// %00 = urlencode(Nette\Caching\Cache::NAMESPACE_SEPARATOR)</span>
+</span><span id="373" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#373">373: </a>            <span class="php-var">$file</span> = <span class="php-keyword2">substr_replace</span>(<span class="php-var">$file</span>, <span class="php-quote">'/_'</span>, <span class="php-var">$a</span>, <span class="php-num">3</span>);
+</span><span id="374" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#374">374: </a>        }
+</span><span id="375" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#375">375: </a>        <span class="php-keyword1">return</span> <span class="php-var">$this</span>-&gt;<span class="php-keyword2">dir</span> . <span class="php-quote">'/_'</span> . <span class="php-var">$file</span>;
+</span><span id="376" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#376">376: </a>    }
+</span><span id="377" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#377">377: </a>
+</span><span id="378" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#378">378: </a>
+</span><span id="379" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#379">379: </a>    <span class="php-comment">/**
+</span></span><span id="380" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#380">380: </a><span class="php-comment">     * Deletes and closes file.
+</span></span><span id="381" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#381">381: </a><span class="php-comment">     * @param  string
+</span></span><span id="382" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#382">382: </a><span class="php-comment">     * @param  resource
+</span></span><span id="383" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#383">383: </a><span class="php-comment">     * @return void
+</span></span><span id="384" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#384">384: </a><span class="php-comment">     */</span>
+</span><span id="385" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#385">385: </a>    <span class="php-keyword1">private</span> <span class="php-keyword1">static</span> <span class="php-keyword1">function</span> <span class="php-keyword2">delete</span>(<span class="php-var">$file</span>, <span class="php-var">$handle</span> = <span class="php-keyword1">NULL</span>)
+</span><span id="386" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#386">386: </a>    {
+</span><span id="387" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#387">387: </a>        <span class="php-keyword1">if</span> (@<span class="php-keyword2">unlink</span>(<span class="php-var">$file</span>)) { <span class="php-comment">// @ - file may not already exist</span>
+</span><span id="388" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#388">388: </a>            <span class="php-keyword1">if</span> (<span class="php-var">$handle</span>) {
+</span><span id="389" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#389">389: </a>                <span class="php-keyword2">flock</span>(<span class="php-var">$handle</span>, LOCK_UN);
+</span><span id="390" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#390">390: </a>                <span class="php-keyword2">fclose</span>(<span class="php-var">$handle</span>);
+</span><span id="391" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#391">391: </a>            }
+</span><span id="392" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#392">392: </a>            <span class="php-keyword1">return</span>;
+</span><span id="393" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#393">393: </a>        }
+</span><span id="394" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#394">394: </a>
+</span><span id="395" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#395">395: </a>        <span class="php-keyword1">if</span> (!<span class="php-var">$handle</span>) {
+</span><span id="396" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#396">396: </a>            <span class="php-var">$handle</span> = @<span class="php-keyword2">fopen</span>(<span class="php-var">$file</span>, <span class="php-quote">'r+'</span>); <span class="php-comment">// @ - file may not exist</span>
+</span><span id="397" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#397">397: </a>        }
+</span><span id="398" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#398">398: </a>        <span class="php-keyword1">if</span> (<span class="php-var">$handle</span>) {
+</span><span id="399" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#399">399: </a>            <span class="php-keyword2">flock</span>(<span class="php-var">$handle</span>, LOCK_EX);
+</span><span id="400" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#400">400: </a>            <span class="php-keyword2">ftruncate</span>(<span class="php-var">$handle</span>, <span class="php-num">0</span>);
+</span><span id="401" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#401">401: </a>            <span class="php-keyword2">flock</span>(<span class="php-var">$handle</span>, LOCK_UN);
+</span><span id="402" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#402">402: </a>            <span class="php-keyword2">fclose</span>(<span class="php-var">$handle</span>);
+</span><span id="403" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#403">403: </a>            @<span class="php-keyword2">unlink</span>(<span class="php-var">$file</span>); <span class="php-comment">// @ - file may not already exist</span>
+</span><span id="404" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#404">404: </a>        }
+</span><span id="405" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#405">405: </a>    }
+</span><span id="406" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#406">406: </a>
+</span><span id="407" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#407">407: </a>}
+</span><span id="408" class="l"><a class="l" href="source-Caching.Storages.FileStorage.php.html#408">408: </a></span></code></pre>
+
+	<div id="footer">
+		Nette 2.2.2 API API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+	</div>
+</div>
+</div>
+<script src="resources/combined.js?3630868369"></script>
+<script src="elementlist.js?2087501429"></script>
+</body>
+</html>

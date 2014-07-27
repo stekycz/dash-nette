@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="generator" content="ApiGen 2.8.0">
+	<meta name="robots" content="noindex">
+
+	<title>File Bridges/Framework/TracyBridge.php | Nette 2.2.2 API</title>
+
+	<link rel="stylesheet" href="resources/style.css?3746977979">
+	<link rel="search" type="application/opensearchdescription+xml" title="Nette 2.2.2 API" href="http://api.nette.org/2.0/opensearch.xml">
+
+
+<script src='http://files.nette.org/js/analytics.js'></script><script>
+_ga.create('UA-95238-14', '.nette.org');
+_gaq.push(['_trackPageview']);
+</script>
+</head>
+
+<body>
+<div id="left">
+	<div id="menu">
+
+		<div id="groups">
+			<h3>Namespaces</h3>
+			<ul>
+				<li><a href="namespace-Latte.html">Latte<span></span></a>
+						<ul>
+				<li><a href="namespace-Latte.Loaders.html">Loaders</a>
+						</li>
+				<li><a href="namespace-Latte.Macros.html">Macros</a>
+						</li>
+				<li><a href="namespace-Latte.Runtime.html">Runtime</a>
+						</li>
+							</ul></li>
+				<li class="active"><a href="namespace-Nette.html">Nette<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.Application.html">Application<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.Application.Responses.html">Responses</a>
+						</li>
+				<li><a href="namespace-Nette.Application.Routers.html">Routers</a>
+						</li>
+				<li><a href="namespace-Nette.Application.UI.html">UI</a>
+						</li>
+							</ul></li>
+				<li class="active"><a href="namespace-Nette.Bridges.html">Bridges<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.Bridges.ApplicationLatte.html">ApplicationLatte</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.ApplicationTracy.html">ApplicationTracy</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.CacheLatte.html">CacheLatte</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.DatabaseDI.html">DatabaseDI</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.DatabaseTracy.html">DatabaseTracy</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.DITracy.html">DITracy</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.FormsLatte.html">FormsLatte</a>
+						</li>
+				<li class="active"><a href="namespace-Nette.Bridges.Framework.html">Framework</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.HttpTracy.html">HttpTracy</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.SecurityTracy.html">SecurityTracy</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.Caching.html">Caching<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.Caching.Storages.html">Storages</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.ComponentModel.html">ComponentModel</a>
+						</li>
+				<li><a href="namespace-Nette.Database.html">Database<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.Database.Drivers.html">Drivers</a>
+						</li>
+				<li><a href="namespace-Nette.Database.Reflection.html">Reflection</a>
+						</li>
+				<li><a href="namespace-Nette.Database.Table.html">Table</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.DI.html">DI<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.DI.Config.html">Config<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.DI.Config.Adapters.html">Adapters</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.DI.Extensions.html">Extensions</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.Diagnostics.html">Diagnostics</a>
+						</li>
+				<li><a href="namespace-Nette.Forms.html">Forms<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.Forms.Controls.html">Controls</a>
+						</li>
+				<li><a href="namespace-Nette.Forms.Rendering.html">Rendering</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.Http.html">Http</a>
+						</li>
+				<li><a href="namespace-Nette.Iterators.html">Iterators</a>
+						</li>
+				<li><a href="namespace-Nette.Latte.html">Latte</a>
+						</li>
+				<li><a href="namespace-Nette.Loaders.html">Loaders</a>
+						</li>
+				<li><a href="namespace-Nette.Localization.html">Localization</a>
+						</li>
+				<li><a href="namespace-Nette.Mail.html">Mail</a>
+						</li>
+				<li><a href="namespace-Nette.Neon.html">Neon</a>
+						</li>
+				<li><a href="namespace-Nette.PhpGenerator.html">PhpGenerator</a>
+						</li>
+				<li><a href="namespace-Nette.Reflection.html">Reflection</a>
+						</li>
+				<li><a href="namespace-Nette.Security.html">Security</a>
+						</li>
+				<li><a href="namespace-Nette.Templating.html">Templating</a>
+						</li>
+				<li><a href="namespace-Nette.Utils.html">Utils</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-NetteModule.html">NetteModule</a>
+						</li>
+				<li><a href="namespace-none.html">none</a>
+						</li>
+				<li><a href="namespace-Tracy.html">Tracy</a>
+						</li>
+			</ul>
+		</div>
+
+		<hr>
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="Nette.Bridges.Framework.NetteAccessor.html">NetteAccessor</a></li>
+				<li><a href="Nette.Bridges.Framework.NetteExtension.html">NetteExtension</a></li>
+				<li class="active"><a href="Nette.Bridges.Framework.TracyBridge.html">TracyBridge</a></li>
+			</ul>
+
+
+
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form action="http://www.google.com/cse" id="search">
+		<input type="hidden" name="cx" value="011549293477758430224:vxofa9ufnhc">
+		<input type="hidden" name="ie" value="UTF-8">
+		<input type="text" name="q" class="text">
+		<input type="submit" value="Search">
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+				<a href="namespace-Nette.Bridges.Framework.html" title="Summary of Nette\Bridges\Framework"><span>Namespace</span></a>
+			</li>
+			<li>
+				<a href="Nette.Bridges.Framework.TracyBridge.html" title="Summary of Nette\Bridges\Framework\TracyBridge"><span>Class</span></a>
+			</li>
+		</ul>
+		<ul>
+			<li>
+				<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions"><span>Tree</span></a>
+			</li>
+			<li>
+				<a href="deprecated.html" title="List of deprecated elements"><span>Deprecated</span></a>
+			</li>
+		</ul>
+		<ul><li><a href="http://api.nette.org/releases"><span>Other releases</span></a></li><li><a href="http://nette.org"><span>Nette homepage</span></a></li></ul>
+		<ul>
+		</ul>
+	</div>
+
+<pre><code><span id="1" class="l"><a class="l" href="source-Bridges.Framework.TracyBridge.php.html#1"> 1: </a><span class="xlang">&lt;?php</span>
+</span><span id="2" class="l"><a class="l" href="source-Bridges.Framework.TracyBridge.php.html#2"> 2: </a>
+</span><span id="3" class="l"><a class="l" href="source-Bridges.Framework.TracyBridge.php.html#3"> 3: </a><span class="php-comment">/**
+</span></span><span id="4" class="l"><a class="l" href="source-Bridges.Framework.TracyBridge.php.html#4"> 4: </a><span class="php-comment"> * This file is part of the Nette Framework (http://nette.org)
+</span></span><span id="5" class="l"><a class="l" href="source-Bridges.Framework.TracyBridge.php.html#5"> 5: </a><span class="php-comment"> * Copyright (c) 2004 David Grudl (http://davidgrudl.com)
+</span></span><span id="6" class="l"><a class="l" href="source-Bridges.Framework.TracyBridge.php.html#6"> 6: </a><span class="php-comment"> */</span>
+</span><span id="7" class="l"><a class="l" href="source-Bridges.Framework.TracyBridge.php.html#7"> 7: </a>
+</span><span id="8" class="l"><a class="l" href="source-Bridges.Framework.TracyBridge.php.html#8"> 8: </a><span class="php-keyword1">namespace</span> Nette\Bridges\Framework;
+</span><span id="9" class="l"><a class="l" href="source-Bridges.Framework.TracyBridge.php.html#9"> 9: </a>
+</span><span id="10" class="l"><a class="l" href="source-Bridges.Framework.TracyBridge.php.html#10">10: </a><span class="php-keyword1">use</span> Nette,
+</span><span id="11" class="l"><a class="l" href="source-Bridges.Framework.TracyBridge.php.html#11">11: </a>    Tracy,
+</span><span id="12" class="l"><a class="l" href="source-Bridges.Framework.TracyBridge.php.html#12">12: </a>    Tracy\Helpers,
+</span><span id="13" class="l"><a class="l" href="source-Bridges.Framework.TracyBridge.php.html#13">13: </a>    Tracy\BlueScreen,
+</span><span id="14" class="l"><a class="l" href="source-Bridges.Framework.TracyBridge.php.html#14">14: </a>    Latte;
+</span><span id="15" class="l"><a class="l" href="source-Bridges.Framework.TracyBridge.php.html#15">15: </a>
+</span><span id="16" class="l"><a class="l" href="source-Bridges.Framework.TracyBridge.php.html#16">16: </a>
+</span><span id="17" class="l"><a class="l" href="source-Bridges.Framework.TracyBridge.php.html#17">17: </a><span class="php-comment">/**
+</span></span><span id="18" class="l"><a class="l" href="source-Bridges.Framework.TracyBridge.php.html#18">18: </a><span class="php-comment"> * Initializes Tracy
+</span></span><span id="19" class="l"><a class="l" href="source-Bridges.Framework.TracyBridge.php.html#19">19: </a><span class="php-comment"> */</span>
+</span><span id="20" class="l"><a class="l" href="source-Bridges.Framework.TracyBridge.php.html#20">20: </a><span class="php-keyword1">class</span> <a id="TracyBridge" href="source-Bridges.Framework.TracyBridge.php.html#TracyBridge">TracyBridge</a>
+</span><span id="21" class="l"><a class="l" href="source-Bridges.Framework.TracyBridge.php.html#21">21: </a>{
+</span><span id="22" class="l"><a class="l" href="source-Bridges.Framework.TracyBridge.php.html#22">22: </a>
+</span><span id="23" class="l"><a class="l" href="source-Bridges.Framework.TracyBridge.php.html#23">23: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">static</span> <span class="php-keyword1">function</span> <a id="_initialize" href="source-Bridges.Framework.TracyBridge.php.html#_initialize">initialize</a>()
+</span><span id="24" class="l"><a class="l" href="source-Bridges.Framework.TracyBridge.php.html#24">24: </a>    {
+</span><span id="25" class="l"><a class="l" href="source-Bridges.Framework.TracyBridge.php.html#25">25: </a>        <span class="php-var">$blueScreen</span> = Tracy\Debugger::getBlueScreen();
+</span><span id="26" class="l"><a class="l" href="source-Bridges.Framework.TracyBridge.php.html#26">26: </a>        <span class="php-keyword1">if</span> (<span class="php-keyword2">preg_match</span>(<span class="php-quote">'#(.+)/Bridges/Framework$#'</span>, <span class="php-keyword2">strtr</span>(__DIR__, <span class="php-quote">'\\'</span>, <span class="php-quote">'/'</span>), <span class="php-var">$m</span>)) {
+</span><span id="27" class="l"><a class="l" href="source-Bridges.Framework.TracyBridge.php.html#27">27: </a>            <span class="php-keyword1">if</span> (<span class="php-keyword2">preg_match</span>(<span class="php-quote">'#(.+)/nette/bootstrap/src$#'</span>, <span class="php-var">$m</span>[<span class="php-num">1</span>], <span class="php-var">$m2</span>)) {
+</span><span id="28" class="l"><a class="l" href="source-Bridges.Framework.TracyBridge.php.html#28">28: </a>                <span class="php-var">$blueScreen</span>-&gt;collapsePaths[] = <span class="php-quote">&quot;</span><span class="php-var">$m2</span><span class="php-quote">[1]/nette&quot;</span>;
+</span><span id="29" class="l"><a class="l" href="source-Bridges.Framework.TracyBridge.php.html#29">29: </a>                <span class="php-var">$blueScreen</span>-&gt;collapsePaths[] = <span class="php-quote">&quot;</span><span class="php-var">$m2</span><span class="php-quote">[1]/latte&quot;</span>;
+</span><span id="30" class="l"><a class="l" href="source-Bridges.Framework.TracyBridge.php.html#30">30: </a>            } <span class="php-keyword1">else</span> {
+</span><span id="31" class="l"><a class="l" href="source-Bridges.Framework.TracyBridge.php.html#31">31: </a>                <span class="php-var">$blueScreen</span>-&gt;collapsePaths[] = <span class="php-var">$m</span>[<span class="php-num">1</span>];
+</span><span id="32" class="l"><a class="l" href="source-Bridges.Framework.TracyBridge.php.html#32">32: </a>            }
+</span><span id="33" class="l"><a class="l" href="source-Bridges.Framework.TracyBridge.php.html#33">33: </a>        }
+</span><span id="34" class="l"><a class="l" href="source-Bridges.Framework.TracyBridge.php.html#34">34: </a>
+</span><span id="35" class="l"><a class="l" href="source-Bridges.Framework.TracyBridge.php.html#35">35: </a>        <span class="php-keyword1">if</span> (<span class="php-keyword2">class_exists</span>(<span class="php-quote">'Nette\Framework'</span>)) {
+</span><span id="36" class="l"><a class="l" href="source-Bridges.Framework.TracyBridge.php.html#36">36: </a>            <span class="php-var">$bar</span> = Tracy\Debugger::getBar();
+</span><span id="37" class="l"><a class="l" href="source-Bridges.Framework.TracyBridge.php.html#37">37: </a>            <span class="php-var">$bar</span>-&gt;info[] = <span class="php-var">$blueScreen</span>-&gt;info[] = <span class="php-quote">'Nette Framework '</span> . Nette\Framework::VERSION . <span class="php-quote">' ('</span> . Nette\Framework::REVISION . <span class="php-quote">')'</span>;
+</span><span id="38" class="l"><a class="l" href="source-Bridges.Framework.TracyBridge.php.html#38">38: </a>        }
+</span><span id="39" class="l"><a class="l" href="source-Bridges.Framework.TracyBridge.php.html#39">39: </a>
+</span><span id="40" class="l"><a class="l" href="source-Bridges.Framework.TracyBridge.php.html#40">40: </a>        <span class="php-var">$blueScreen</span>-&gt;addPanel(<span class="php-keyword1">function</span>(<span class="php-var">$e</span>) {
+</span><span id="41" class="l"><a class="l" href="source-Bridges.Framework.TracyBridge.php.html#41">41: </a>            <span class="php-keyword1">if</span> (<span class="php-var">$e</span> <span class="php-keyword1">instanceof</span> Latte\CompileException) {
+</span><span id="42" class="l"><a class="l" href="source-Bridges.Framework.TracyBridge.php.html#42">42: </a>                <span class="php-keyword1">return</span> <span class="php-keyword1">array</span>(
+</span><span id="43" class="l"><a class="l" href="source-Bridges.Framework.TracyBridge.php.html#43">43: </a>                    <span class="php-quote">'tab'</span> =&gt; <span class="php-quote">'Template'</span>,
+</span><span id="44" class="l"><a class="l" href="source-Bridges.Framework.TracyBridge.php.html#44">44: </a>                    <span class="php-quote">'panel'</span> =&gt; <span class="php-quote">'&lt;p&gt;'</span> . (<span class="php-keyword2">is_file</span>(<span class="php-var">$e</span>-&gt;sourceName) ? <span class="php-quote">'&lt;b&gt;File:&lt;/b&gt; '</span> . Helpers::editorLink(<span class="php-var">$e</span>-&gt;sourceName, <span class="php-var">$e</span>-&gt;sourceLine) : <span class="php-keyword2">htmlspecialchars</span>(<span class="php-var">$e</span>-&gt;sourceName)) . <span class="php-quote">'&lt;/p&gt;'</span>
+</span><span id="45" class="l"><a class="l" href="source-Bridges.Framework.TracyBridge.php.html#45">45: </a>                        . (<span class="php-var">$e</span>-&gt;sourceCode ? <span class="php-quote">'&lt;pre&gt;'</span> . BlueScreen::highlightLine(<span class="php-keyword2">htmlspecialchars</span>(<span class="php-var">$e</span>-&gt;sourceCode), <span class="php-var">$e</span>-&gt;sourceLine) . <span class="php-quote">'&lt;/pre&gt;'</span> : <span class="php-quote">''</span>),
+</span><span id="46" class="l"><a class="l" href="source-Bridges.Framework.TracyBridge.php.html#46">46: </a>                );
+</span><span id="47" class="l"><a class="l" href="source-Bridges.Framework.TracyBridge.php.html#47">47: </a>            } <span class="php-keyword1">elseif</span> (<span class="php-var">$e</span> <span class="php-keyword1">instanceof</span> Nette\Neon\Exception &amp;&amp; <span class="php-keyword2">preg_match</span>(<span class="php-quote">'#line (\d+)#'</span>, <span class="php-var">$e</span>-&gt;getMessage(), <span class="php-var">$m</span>)) {
+</span><span id="48" class="l"><a class="l" href="source-Bridges.Framework.TracyBridge.php.html#48">48: </a>                <span class="php-keyword1">if</span> (<span class="php-var">$item</span> = Helpers::findTrace(<span class="php-var">$e</span>-&gt;getTrace(), <span class="php-quote">'Nette\DI\Config\Adapters\NeonAdapter::load'</span>)) {
+</span><span id="49" class="l"><a class="l" href="source-Bridges.Framework.TracyBridge.php.html#49">49: </a>                    <span class="php-keyword1">return</span> <span class="php-keyword1">array</span>(
+</span><span id="50" class="l"><a class="l" href="source-Bridges.Framework.TracyBridge.php.html#50">50: </a>                        <span class="php-quote">'tab'</span> =&gt; <span class="php-quote">'NEON'</span>,
+</span><span id="51" class="l"><a class="l" href="source-Bridges.Framework.TracyBridge.php.html#51">51: </a>                        <span class="php-quote">'panel'</span> =&gt; <span class="php-quote">'&lt;p&gt;&lt;b&gt;File:&lt;/b&gt; '</span> . Helpers::editorLink(<span class="php-var">$item</span>[<span class="php-quote">'args'</span>][<span class="php-num">0</span>], <span class="php-var">$m</span>[<span class="php-num">1</span>]) . <span class="php-quote">'&lt;/p&gt;'</span>
+</span><span id="52" class="l"><a class="l" href="source-Bridges.Framework.TracyBridge.php.html#52">52: </a>                            . BlueScreen::highlightFile(<span class="php-var">$item</span>[<span class="php-quote">'args'</span>][<span class="php-num">0</span>], <span class="php-var">$m</span>[<span class="php-num">1</span>])
+</span><span id="53" class="l"><a class="l" href="source-Bridges.Framework.TracyBridge.php.html#53">53: </a>                    );
+</span><span id="54" class="l"><a class="l" href="source-Bridges.Framework.TracyBridge.php.html#54">54: </a>                } <span class="php-keyword1">elseif</span> (<span class="php-var">$item</span> = Helpers::findTrace(<span class="php-var">$e</span>-&gt;getTrace(), <span class="php-quote">'Nette\Neon\Decoder::decode'</span>)) {
+</span><span id="55" class="l"><a class="l" href="source-Bridges.Framework.TracyBridge.php.html#55">55: </a>                    <span class="php-keyword1">return</span> <span class="php-keyword1">array</span>(
+</span><span id="56" class="l"><a class="l" href="source-Bridges.Framework.TracyBridge.php.html#56">56: </a>                        <span class="php-quote">'tab'</span> =&gt; <span class="php-quote">'NEON'</span>,
+</span><span id="57" class="l"><a class="l" href="source-Bridges.Framework.TracyBridge.php.html#57">57: </a>                        <span class="php-quote">'panel'</span> =&gt; BlueScreen::highlightPhp(<span class="php-var">$item</span>[<span class="php-quote">'args'</span>][<span class="php-num">0</span>], <span class="php-var">$m</span>[<span class="php-num">1</span>])
+</span><span id="58" class="l"><a class="l" href="source-Bridges.Framework.TracyBridge.php.html#58">58: </a>                    );
+</span><span id="59" class="l"><a class="l" href="source-Bridges.Framework.TracyBridge.php.html#59">59: </a>                }
+</span><span id="60" class="l"><a class="l" href="source-Bridges.Framework.TracyBridge.php.html#60">60: </a>            }
+</span><span id="61" class="l"><a class="l" href="source-Bridges.Framework.TracyBridge.php.html#61">61: </a>        });
+</span><span id="62" class="l"><a class="l" href="source-Bridges.Framework.TracyBridge.php.html#62">62: </a>    }
+</span><span id="63" class="l"><a class="l" href="source-Bridges.Framework.TracyBridge.php.html#63">63: </a>
+</span><span id="64" class="l"><a class="l" href="source-Bridges.Framework.TracyBridge.php.html#64">64: </a>}
+</span><span id="65" class="l"><a class="l" href="source-Bridges.Framework.TracyBridge.php.html#65">65: </a></span></code></pre>
+
+	<div id="footer">
+		Nette 2.2.2 API API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+	</div>
+</div>
+</div>
+<script src="resources/combined.js?3630868369"></script>
+<script src="elementlist.js?2087501429"></script>
+</body>
+</html>

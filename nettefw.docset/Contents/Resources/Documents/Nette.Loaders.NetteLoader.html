@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="generator" content="ApiGen 2.8.0">
+
+	<title>Class Nette\Loaders\NetteLoader | Nette 2.2.2 API</title>
+
+	<link rel="stylesheet" href="resources/style.css?3746977979">
+	<link rel="search" type="application/opensearchdescription+xml" title="Nette 2.2.2 API" href="http://api.nette.org/2.0/opensearch.xml">
+
+
+<script src='http://files.nette.org/js/analytics.js'></script><script>
+_ga.create('UA-95238-14', '.nette.org');
+_gaq.push(['_trackPageview']);
+</script>
+</head>
+
+<body>
+<div id="left">
+	<div id="menu">
+
+		<div id="groups">
+			<h3>Namespaces</h3>
+			<ul>
+				<li><a href="namespace-Latte.html">Latte<span></span></a>
+						<ul>
+				<li><a href="namespace-Latte.Loaders.html">Loaders</a>
+						</li>
+				<li><a href="namespace-Latte.Macros.html">Macros</a>
+						</li>
+				<li><a href="namespace-Latte.Runtime.html">Runtime</a>
+						</li>
+							</ul></li>
+				<li class="active"><a href="namespace-Nette.html">Nette<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.Application.html">Application<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.Application.Responses.html">Responses</a>
+						</li>
+				<li><a href="namespace-Nette.Application.Routers.html">Routers</a>
+						</li>
+				<li><a href="namespace-Nette.Application.UI.html">UI</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.Bridges.html">Bridges<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.Bridges.ApplicationLatte.html">ApplicationLatte</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.ApplicationTracy.html">ApplicationTracy</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.CacheLatte.html">CacheLatte</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.DatabaseDI.html">DatabaseDI</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.DatabaseTracy.html">DatabaseTracy</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.DITracy.html">DITracy</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.FormsLatte.html">FormsLatte</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.Framework.html">Framework</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.HttpTracy.html">HttpTracy</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.SecurityTracy.html">SecurityTracy</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.Caching.html">Caching<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.Caching.Storages.html">Storages</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.ComponentModel.html">ComponentModel</a>
+						</li>
+				<li><a href="namespace-Nette.Database.html">Database<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.Database.Drivers.html">Drivers</a>
+						</li>
+				<li><a href="namespace-Nette.Database.Reflection.html">Reflection</a>
+						</li>
+				<li><a href="namespace-Nette.Database.Table.html">Table</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.DI.html">DI<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.DI.Config.html">Config<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.DI.Config.Adapters.html">Adapters</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.DI.Extensions.html">Extensions</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.Diagnostics.html">Diagnostics</a>
+						</li>
+				<li><a href="namespace-Nette.Forms.html">Forms<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.Forms.Controls.html">Controls</a>
+						</li>
+				<li><a href="namespace-Nette.Forms.Rendering.html">Rendering</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.Http.html">Http</a>
+						</li>
+				<li><a href="namespace-Nette.Iterators.html">Iterators</a>
+						</li>
+				<li><a href="namespace-Nette.Latte.html">Latte</a>
+						</li>
+				<li class="active"><a href="namespace-Nette.Loaders.html">Loaders</a>
+						</li>
+				<li><a href="namespace-Nette.Localization.html">Localization</a>
+						</li>
+				<li><a href="namespace-Nette.Mail.html">Mail</a>
+						</li>
+				<li><a href="namespace-Nette.Neon.html">Neon</a>
+						</li>
+				<li><a href="namespace-Nette.PhpGenerator.html">PhpGenerator</a>
+						</li>
+				<li><a href="namespace-Nette.Reflection.html">Reflection</a>
+						</li>
+				<li><a href="namespace-Nette.Security.html">Security</a>
+						</li>
+				<li><a href="namespace-Nette.Templating.html">Templating</a>
+						</li>
+				<li><a href="namespace-Nette.Utils.html">Utils</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-NetteModule.html">NetteModule</a>
+						</li>
+				<li><a href="namespace-none.html">none</a>
+						</li>
+				<li><a href="namespace-Tracy.html">Tracy</a>
+						</li>
+			</ul>
+		</div>
+
+		<hr>
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li class="active"><a href="Nette.Loaders.NetteLoader.html">NetteLoader</a></li>
+				<li><a href="Nette.Loaders.RobotLoader.html">RobotLoader</a></li>
+			</ul>
+
+
+
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form action="http://www.google.com/cse" id="search">
+		<input type="hidden" name="cx" value="011549293477758430224:vxofa9ufnhc">
+		<input type="hidden" name="ie" value="UTF-8">
+		<input type="text" name="q" class="text">
+		<input type="submit" value="Search">
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+				<a href="namespace-Nette.Loaders.html" title="Summary of Nette\Loaders"><span>Namespace</span></a>
+			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+			<li>
+				<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions"><span>Tree</span></a>
+			</li>
+			<li>
+				<a href="deprecated.html" title="List of deprecated elements"><span>Deprecated</span></a>
+			</li>
+		</ul>
+		<ul><li><a href="http://api.nette.org/releases"><span>Other releases</span></a></li><li><a href="http://nette.org"><span>Nette homepage</span></a></li></ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Class NetteLoader</h1>
+
+
+	<div class="description">
+	
+<p>Nette auto loader is responsible for loading Nette classes and
+interfaces.</p>
+
+	</div>
+
+
+
+
+
+
+
+
+
+	<div class="info">
+		
+		
+		<b>Namespace:</b> <a href="namespace-Nette.html">Nette</a>\<a href="namespace-Nette.Loaders.html">Loaders</a><br>
+		
+
+				<b>Author:</b>
+				David Grudl<br>
+		<b>Located at</b> <a href="source-Loaders.NetteLoader.php.html#13-210" title="Go to source code">Loaders/NetteLoader.php</a><br>
+	</div>
+
+
+
+	<table class="summary" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="getInstance" id="_getInstance">
+
+		<td class="attributes"><code>
+			 public static
+			<code><a href="Nette.Loaders.NetteLoader.html">Nette\Loaders\NetteLoader</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Loaders.NetteLoader.html#_getInstance">#</a>
+		<code><a href="source-Loaders.NetteLoader.php.html#166-176" title="Go to source code">getInstance</a>( )</code>
+
+		<div class="description short">
+			
+<p>Returns singleton instance with lazy instantiation.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns singleton instance with lazy instantiation.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="Nette.Loaders.NetteLoader.html">Nette\Loaders\NetteLoader</a></code></code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="register" id="_register">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Loaders.NetteLoader.html#_register">#</a>
+		<code><a href="source-Loaders.NetteLoader.php.html#179-187" title="Go to source code">register</a>( <span>boolean <var>$prepend</var> = <span class="php-keyword1">FALSE</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Register autoloader.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Register autoloader.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$prepend</var></dt>
+					<dd><code>boolean</code><br>prepend autoloader?</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="tryLoad" id="_tryLoad">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Loaders.NetteLoader.html#_tryLoad">#</a>
+		<code><a href="source-Loaders.NetteLoader.php.html#190-208" title="Go to source code">tryLoad</a>( <span>string <var>$type</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Handles autoloading of classes or interfaces.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Handles autoloading of classes or interfaces.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$type</var></dt>
+					<dd><code>string</code></dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+
+
+
+
+	<table class="summary" id="properties">
+	<caption>Properties summary</caption>
+	<tr data-order="renamed" id="$renamed">
+		<td class="attributes"><code>
+			public  
+			array
+		</code></td>
+
+		<td class="name">
+				<a href="source-Loaders.NetteLoader.php.html#23-66" title="Go to source code"><var>$renamed</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">array</span>(
+	<span class="php-quote">'Nette\Config\Configurator'</span> =&gt; <span class="php-quote">'Nette\Configurator'</span>,
+	<span class="php-quote">'Nette\Config\CompilerExtension'</span> =&gt; <span class="php-quote">'Nette\DI\CompilerExtension'</span>,
+	<span class="php-quote">'Nette\Http\User'</span> =&gt; <span class="php-quote">'Nette\Security\User'</span>,
+	<span class="php-quote">'Nette\Templating\DefaultHelpers'</span> =&gt; <span class="php-quote">'Nette\Templating\Helpers'</span>,
+	<span class="php-quote">'Nette\Templating\FilterException'</span> =&gt; <span class="php-quote">'Latte\CompileException'</span>,
+	<span class="php-quote">'Nette\Utils\PhpGenerator\ClassType'</span> =&gt; <span class="php-quote">'Nette\PhpGenerator\ClassType'</span>,
+	<span class="php-quote">'Nette\Utils\PhpGenerator\Helpers'</span> =&gt; <span class="php-quote">'Nette\PhpGenerator\Helpers'</span>,
+	<span class="php-quote">'Nette\Utils\PhpGenerator\Method'</span> =&gt; <span class="php-quote">'Nette\PhpGenerator\Method'</span>,
+	<span class="php-quote">'Nette\Utils\PhpGenerator\Parameter'</span> =&gt; <span class="php-quote">'Nette\PhpGenerator\Parameter'</span>,
+	<span class="php-quote">'Nette\Utils\PhpGenerator\PhpLiteral'</span> =&gt; <span class="php-quote">'Nette\PhpGenerator\PhpLiteral'</span>,
+	<span class="php-quote">'Nette\Utils\PhpGenerator\Property'</span> =&gt; <span class="php-quote">'Nette\PhpGenerator\Property'</span>,
+	<span class="php-quote">'Nette\Diagnostics\Bar'</span> =&gt; <span class="php-quote">'Tracy\Bar'</span>,
+	<span class="php-quote">'Nette\Diagnostics\BlueScreen'</span> =&gt; <span class="php-quote">'Tracy\BlueScreen'</span>,
+	<span class="php-quote">'Nette\Diagnostics\DefaultBarPanel'</span> =&gt; <span class="php-quote">'Tracy\DefaultBarPanel'</span>,
+	<span class="php-quote">'Nette\Diagnostics\Dumper'</span> =&gt; <span class="php-quote">'Tracy\Dumper'</span>,
+	<span class="php-quote">'Nette\Diagnostics\FireLogger'</span> =&gt; <span class="php-quote">'Tracy\FireLogger'</span>,
+	<span class="php-quote">'Nette\Diagnostics\Logger'</span> =&gt; <span class="php-quote">'Tracy\Logger'</span>,
+	<span class="php-quote">'Nette\Diagnostics\OutputDebugger'</span> =&gt; <span class="php-quote">'Tracy\OutputDebugger'</span>,
+	<span class="php-quote">'Nette\Latte\ParseException'</span> =&gt; <span class="php-quote">'Latte\CompileException'</span>,
+	<span class="php-quote">'Nette\Latte\CompileException'</span> =&gt; <span class="php-quote">'Latte\CompileException'</span>,
+	<span class="php-quote">'Nette\Latte\Compiler'</span> =&gt; <span class="php-quote">'Latte\Compiler'</span>,
+	<span class="php-quote">'Nette\Latte\HtmlNode'</span> =&gt; <span class="php-quote">'Latte\HtmlNode'</span>,
+	<span class="php-quote">'Nette\Latte\IMacro'</span> =&gt; <span class="php-quote">'Latte\IMacro'</span>,
+	<span class="php-quote">'Nette\Latte\MacroNode'</span> =&gt; <span class="php-quote">'Latte\MacroNode'</span>,
+	<span class="php-quote">'Nette\Latte\MacroTokens'</span> =&gt; <span class="php-quote">'Latte\MacroTokens'</span>,
+	<span class="php-quote">'Nette\Latte\Parser'</span> =&gt; <span class="php-quote">'Latte\Parser'</span>,
+	<span class="php-quote">'Nette\Latte\PhpWriter'</span> =&gt; <span class="php-quote">'Latte\PhpWriter'</span>,
+	<span class="php-quote">'Nette\Latte\Token'</span> =&gt; <span class="php-quote">'Latte\Token'</span>,
+	<span class="php-quote">'Nette\Latte\Macros\CoreMacros'</span> =&gt; <span class="php-quote">'Latte\Macros\CoreMacros'</span>,
+	<span class="php-quote">'Nette\Latte\Macros\MacroSet'</span> =&gt; <span class="php-quote">'Latte\Macros\MacroSet'</span>,
+	<span class="php-quote">'Nette\Latte\Macros\CacheMacro'</span> =&gt; <span class="php-quote">'Nette\Bridges\CacheLatte\CacheMacro'</span>,
+	<span class="php-quote">'Nette\Latte\Macros\FormMacros'</span> =&gt; <span class="php-quote">'Nette\Bridges\FormsLatte\FormMacros'</span>,
+	<span class="php-quote">'Nette\Latte\Macros\UIMacros'</span> =&gt; <span class="php-quote">'Nette\Bridges\ApplicationLatte\UIMacros'</span>,
+	<span class="php-quote">'Nette\ArrayHash'</span> =&gt; <span class="php-quote">'Nette\Utils\ArrayHash'</span>,
+	<span class="php-quote">'Nette\ArrayList'</span> =&gt; <span class="php-quote">'Nette\Utils\ArrayList'</span>,
+	<span class="php-quote">'Nette\DateTime'</span> =&gt; <span class="php-quote">'Nette\Utils\DateTime'</span>,
+	<span class="php-quote">'Nette\Image'</span> =&gt; <span class="php-quote">'Nette\Utils\Image'</span>,
+	<span class="php-quote">'Nette\ObjectMixin'</span> =&gt; <span class="php-quote">'Nette\Utils\ObjectMixin'</span>,
+	<span class="php-quote">'Nette\Utils\NeonException'</span> =&gt; <span class="php-quote">'Nette\Neon\Exception'</span>,
+	<span class="php-quote">'Nette\Utils\NeonEntity'</span> =&gt; <span class="php-quote">'Nette\Neon\Entity'</span>,
+	<span class="php-quote">'Nette\Utils\Neon'</span> =&gt; <span class="php-quote">'Nette\Neon\Neon'</span>,
+)</code></td>
+		<td class="description"><div>
+			<a href="Nette.Loaders.NetteLoader.html#$renamed" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="list" id="$list">
+		<td class="attributes"><code>
+			public  
+			array
+		</code></td>
+
+		<td class="name">
+				<a href="source-Loaders.NetteLoader.php.html#68-163" title="Go to source code"><var>$list</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">array</span>(
+	<span class="php-quote">'Latte\CompileException'</span> =&gt; <span class="php-quote">'Latte/exceptions'</span>,
+	<span class="php-quote">'Latte\Compiler'</span> =&gt; <span class="php-quote">'Latte/Compiler'</span>,
+	<span class="php-quote">'Latte\Engine'</span> =&gt; <span class="php-quote">'Latte/Engine'</span>,
+	<span class="php-quote">'Latte\Helpers'</span> =&gt; <span class="php-quote">'Latte/Helpers'</span>,
+	<span class="php-quote">'Latte\HtmlNode'</span> =&gt; <span class="php-quote">'Latte/HtmlNode'</span>,
+	<span class="php-quote">'Latte\ILoader'</span> =&gt; <span class="php-quote">'Latte/ILoader'</span>,
+	<span class="php-quote">'Latte\IMacro'</span> =&gt; <span class="php-quote">'Latte/IMacro'</span>,
+	<span class="php-quote">'Latte\Loaders\FileLoader'</span> =&gt; <span class="php-quote">'Latte/Loaders/FileLoader'</span>,
+	<span class="php-quote">'Latte\Loaders\StringLoader'</span> =&gt; <span class="php-quote">'Latte/Loaders/StringLoader'</span>,
+	<span class="php-quote">'Latte\MacroNode'</span> =&gt; <span class="php-quote">'Latte/MacroNode'</span>,
+	<span class="php-quote">'Latte\MacroTokens'</span> =&gt; <span class="php-quote">'Latte/MacroTokens'</span>,
+	<span class="php-quote">'Latte\Macros\BlockMacros'</span> =&gt; <span class="php-quote">'Latte/Macros/BlockMacros'</span>,
+	<span class="php-quote">'Latte\Macros\CoreMacros'</span> =&gt; <span class="php-quote">'Latte/Macros/CoreMacros'</span>,
+	<span class="php-quote">'Latte\Macros\MacroSet'</span> =&gt; <span class="php-quote">'Latte/Macros/MacroSet'</span>,
+	<span class="php-quote">'Latte\Object'</span> =&gt; <span class="php-quote">'Latte/Object'</span>,
+	<span class="php-quote">'Latte\Parser'</span> =&gt; <span class="php-quote">'Latte/Parser'</span>,
+	<span class="php-quote">'Latte\PhpWriter'</span> =&gt; <span class="php-quote">'Latte/PhpWriter'</span>,
+	<span class="php-quote">'Latte\RegexpException'</span> =&gt; <span class="php-quote">'Latte/exceptions'</span>,
+	<span class="php-quote">'Latte\RuntimeException'</span> =&gt; <span class="php-quote">'Latte/exceptions'</span>,
+	<span class="php-quote">'Latte\Runtime\CachingIterator'</span> =&gt; <span class="php-quote">'Latte/Runtime/CachingIterator'</span>,
+	<span class="php-quote">'Latte\Runtime\Filters'</span> =&gt; <span class="php-quote">'Latte/Runtime/Filters'</span>,
+	<span class="php-quote">'Latte\Runtime\Html'</span> =&gt; <span class="php-quote">'Latte/Runtime/Html'</span>,
+	<span class="php-quote">'Latte\Runtime\IHtmlString'</span> =&gt; <span class="php-quote">'Latte/Runtime/IHtmlString'</span>,
+	<span class="php-quote">'Latte\Template'</span> =&gt; <span class="php-quote">'Latte/Template'</span>,
+	<span class="php-quote">'Latte\Token'</span> =&gt; <span class="php-quote">'Latte/Token'</span>,
+	<span class="php-quote">'Latte\TokenIterator'</span> =&gt; <span class="php-quote">'Latte/TokenIterator'</span>,
+	<span class="php-quote">'Latte\Tokenizer'</span> =&gt; <span class="php-quote">'Latte/Tokenizer'</span>,
+	<span class="php-quote">'NetteModule\ErrorPresenter'</span> =&gt; <span class="php-quote">'Application/ErrorPresenter'</span>,
+	<span class="php-quote">'NetteModule\MicroPresenter'</span> =&gt; <span class="php-quote">'Application/MicroPresenter'</span>,
+	<span class="php-quote">'Nette\Application\AbortException'</span> =&gt; <span class="php-quote">'Application/exceptions'</span>,
+	<span class="php-quote">'Nette\Application\ApplicationException'</span> =&gt; <span class="php-quote">'Application/exceptions'</span>,
+	<span class="php-quote">'Nette\Application\BadRequestException'</span> =&gt; <span class="php-quote">'Application/exceptions'</span>,
+	<span class="php-quote">'Nette\Application\ForbiddenRequestException'</span> =&gt; <span class="php-quote">'Application/exceptions'</span>,
+	<span class="php-quote">'Nette\Application\InvalidPresenterException'</span> =&gt; <span class="php-quote">'Application/exceptions'</span>,
+	<span class="php-quote">'Nette\ArgumentOutOfRangeException'</span> =&gt; <span class="php-quote">'Utils/exceptions'</span>,
+	<span class="php-quote">'Nette\Caching\Storages\PhpFileStorage'</span> =&gt; <span class="php-quote">'deprecated/Caching/PhpFileStorage'</span>,
+	<span class="php-quote">'Nette\Callback'</span> =&gt; <span class="php-quote">'deprecated/Callback'</span>,
+	<span class="php-quote">'Nette\Configurator'</span> =&gt; <span class="php-quote">'Bootstrap/Configurator'</span>,
+	<span class="php-quote">'Nette\DI\MissingServiceException'</span> =&gt; <span class="php-quote">'DI/exceptions'</span>,
+	<span class="php-quote">'Nette\DI\ServiceCreationException'</span> =&gt; <span class="php-quote">'DI/exceptions'</span>,
+	<span class="php-quote">'Nette\Database\Reflection\AmbiguousReferenceKeyException'</span> =&gt; <span class="php-quote">'Database/Reflection/exceptions'</span>,
+	<span class="php-quote">'Nette\Database\Reflection\MissingReferenceException'</span> =&gt; <span class="php-quote">'Database/Reflection/exceptions'</span>,
+	<span class="php-quote">'Nette\DeprecatedException'</span> =&gt; <span class="php-quote">'Utils/exceptions'</span>,
+	<span class="php-quote">'Nette\Diagnostics\Debugger'</span> =&gt; <span class="php-quote">'deprecated/Diagnostics/Debugger'</span>,
+	<span class="php-quote">'Nette\Diagnostics\Helpers'</span> =&gt; <span class="php-quote">'deprecated/Diagnostics/Helpers'</span>,
+	<span class="php-quote">'Nette\Diagnostics\IBarPanel'</span> =&gt; <span class="php-quote">'deprecated/Diagnostics/IBarPanel'</span>,
+	<span class="php-quote">'Nette\DirectoryNotFoundException'</span> =&gt; <span class="php-quote">'Utils/exceptions'</span>,
+	<span class="php-quote">'Nette\Environment'</span> =&gt; <span class="php-quote">'deprecated/Environment'</span>,
+	<span class="php-quote">'Nette\FileNotFoundException'</span> =&gt; <span class="php-quote">'Utils/exceptions'</span>,
+	<span class="php-quote">'Nette\FreezableObject'</span> =&gt; <span class="php-quote">'deprecated/FreezableObject'</span>,
+	<span class="php-quote">'Nette\IFreezable'</span> =&gt; <span class="php-quote">'deprecated/IFreezable'</span>,
+	<span class="php-quote">'Nette\IOException'</span> =&gt; <span class="php-quote">'Utils/exceptions'</span>,
+	<span class="php-quote">'Nette\InvalidArgumentException'</span> =&gt; <span class="php-quote">'Utils/exceptions'</span>,
+	<span class="php-quote">'Nette\InvalidStateException'</span> =&gt; <span class="php-quote">'Utils/exceptions'</span>,
+	<span class="php-quote">'Nette\Latte\Engine'</span> =&gt; <span class="php-quote">'deprecated/Latte/Engine'</span>,
+	<span class="php-quote">'Nette\Loaders\RobotLoader'</span> =&gt; <span class="php-quote">'RobotLoader/RobotLoader'</span>,
+	<span class="php-quote">'Nette\Localization\ITranslator'</span> =&gt; <span class="php-quote">'Utils/ITranslator'</span>,
+	<span class="php-quote">'Nette\Mail\SmtpException'</span> =&gt; <span class="php-quote">'Mail/SmtpMailer'</span>,
+	<span class="php-quote">'Nette\MemberAccessException'</span> =&gt; <span class="php-quote">'Utils/exceptions'</span>,
+	<span class="php-quote">'Nette\NotImplementedException'</span> =&gt; <span class="php-quote">'Utils/exceptions'</span>,
+	<span class="php-quote">'Nette\NotSupportedException'</span> =&gt; <span class="php-quote">'Utils/exceptions'</span>,
+	<span class="php-quote">'Nette\Object'</span> =&gt; <span class="php-quote">'Utils/Object'</span>,
+	<span class="php-quote">'Nette\OutOfRangeException'</span> =&gt; <span class="php-quote">'Utils/exceptions'</span>,
+	<span class="php-quote">'Nette\StaticClassException'</span> =&gt; <span class="php-quote">'Utils/exceptions'</span>,
+	<span class="php-quote">'Nette\Templating\FileTemplate'</span> =&gt; <span class="php-quote">'deprecated/Templating/FileTemplate'</span>,
+	<span class="php-quote">'Nette\Templating\Helpers'</span> =&gt; <span class="php-quote">'deprecated/Templating/Helpers'</span>,
+	<span class="php-quote">'Nette\Templating\IFileTemplate'</span> =&gt; <span class="php-quote">'deprecated/Templating/IFileTemplate'</span>,
+	<span class="php-quote">'Nette\Templating\ITemplate'</span> =&gt; <span class="php-quote">'deprecated/Templating/ITemplate'</span>,
+	<span class="php-quote">'Nette\Templating\Template'</span> =&gt; <span class="php-quote">'deprecated/Templating/Template'</span>,
+	<span class="php-quote">'Nette\UnexpectedValueException'</span> =&gt; <span class="php-quote">'Utils/exceptions'</span>,
+	<span class="php-quote">'Nette\Utils\AssertionException'</span> =&gt; <span class="php-quote">'Utils/Validators'</span>,
+	<span class="php-quote">'Nette\Utils\CallbackFilterIterator'</span> =&gt; <span class="php-quote">'Finder/CallbackFilterIterator'</span>,
+	<span class="php-quote">'Nette\Utils\Finder'</span> =&gt; <span class="php-quote">'Finder/Finder'</span>,
+	<span class="php-quote">'Nette\Utils\JsonException'</span> =&gt; <span class="php-quote">'Utils/Json'</span>,
+	<span class="php-quote">'Nette\Utils\LimitedScope'</span> =&gt; <span class="php-quote">'deprecated/Utils/LimitedScope'</span>,
+	<span class="php-quote">'Nette\Utils\MimeTypeDetector'</span> =&gt; <span class="php-quote">'deprecated/Utils/MimeTypeDetector'</span>,
+	<span class="php-quote">'Nette\Utils\RecursiveCallbackFilterIterator'</span> =&gt; <span class="php-quote">'Finder/RecursiveCallbackFilterIterator'</span>,
+	<span class="php-quote">'Nette\Utils\RegexpException'</span> =&gt; <span class="php-quote">'Utils/Strings'</span>,
+	<span class="php-quote">'Nette\Utils\SafeStream'</span> =&gt; <span class="php-quote">'SafeStream/SafeStream'</span>,
+	<span class="php-quote">'Nette\Utils\TokenIterator'</span> =&gt; <span class="php-quote">'Tokenizer/TokenIterator'</span>,
+	<span class="php-quote">'Nette\Utils\Tokenizer'</span> =&gt; <span class="php-quote">'Tokenizer/Tokenizer'</span>,
+	<span class="php-quote">'Nette\Utils\TokenizerException'</span> =&gt; <span class="php-quote">'Tokenizer/TokenizerException'</span>,
+	<span class="php-quote">'Nette\Utils\UnknownImageFileException'</span> =&gt; <span class="php-quote">'Utils/Image'</span>,
+	<span class="php-quote">'Tracy\Bar'</span> =&gt; <span class="php-quote">'Tracy/Bar'</span>,
+	<span class="php-quote">'Tracy\BlueScreen'</span> =&gt; <span class="php-quote">'Tracy/BlueScreen'</span>,
+	<span class="php-quote">'Tracy\Debugger'</span> =&gt; <span class="php-quote">'Tracy/Debugger'</span>,
+	<span class="php-quote">'Tracy\DefaultBarPanel'</span> =&gt; <span class="php-quote">'Tracy/DefaultBarPanel'</span>,
+	<span class="php-quote">'Tracy\Dumper'</span> =&gt; <span class="php-quote">'Tracy/Dumper'</span>,
+	<span class="php-quote">'Tracy\FireLogger'</span> =&gt; <span class="php-quote">'Tracy/FireLogger'</span>,
+	<span class="php-quote">'Tracy\Helpers'</span> =&gt; <span class="php-quote">'Tracy/Helpers'</span>,
+	<span class="php-quote">'Tracy\IBarPanel'</span> =&gt; <span class="php-quote">'Tracy/IBarPanel'</span>,
+	<span class="php-quote">'Tracy\Logger'</span> =&gt; <span class="php-quote">'Tracy/Logger'</span>,
+	<span class="php-quote">'Tracy\OutputDebugger'</span> =&gt; <span class="php-quote">'Tracy/OutputDebugger'</span>,
+)</code></td>
+		<td class="description"><div>
+			<a href="Nette.Loaders.NetteLoader.html#$list" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+</div>
+
+	<div id="footer">
+		Nette 2.2.2 API API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+	</div>
+</div>
+</div>
+<script src="resources/combined.js?3630868369"></script>
+<script src="elementlist.js?2087501429"></script>
+</body>
+</html>

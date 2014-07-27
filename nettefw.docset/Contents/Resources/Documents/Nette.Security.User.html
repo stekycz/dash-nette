@@ -1,0 +1,1279 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="generator" content="ApiGen 2.8.0">
+
+	<title>Class Nette\Security\User | Nette 2.2.2 API</title>
+
+	<link rel="stylesheet" href="resources/style.css?3746977979">
+	<link rel="search" type="application/opensearchdescription+xml" title="Nette 2.2.2 API" href="http://api.nette.org/2.0/opensearch.xml">
+
+
+<script src='http://files.nette.org/js/analytics.js'></script><script>
+_ga.create('UA-95238-14', '.nette.org');
+_gaq.push(['_trackPageview']);
+</script>
+</head>
+
+<body>
+<div id="left">
+	<div id="menu">
+
+		<div id="groups">
+			<h3>Namespaces</h3>
+			<ul>
+				<li><a href="namespace-Latte.html">Latte<span></span></a>
+						<ul>
+				<li><a href="namespace-Latte.Loaders.html">Loaders</a>
+						</li>
+				<li><a href="namespace-Latte.Macros.html">Macros</a>
+						</li>
+				<li><a href="namespace-Latte.Runtime.html">Runtime</a>
+						</li>
+							</ul></li>
+				<li class="active"><a href="namespace-Nette.html">Nette<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.Application.html">Application<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.Application.Responses.html">Responses</a>
+						</li>
+				<li><a href="namespace-Nette.Application.Routers.html">Routers</a>
+						</li>
+				<li><a href="namespace-Nette.Application.UI.html">UI</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.Bridges.html">Bridges<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.Bridges.ApplicationLatte.html">ApplicationLatte</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.ApplicationTracy.html">ApplicationTracy</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.CacheLatte.html">CacheLatte</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.DatabaseDI.html">DatabaseDI</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.DatabaseTracy.html">DatabaseTracy</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.DITracy.html">DITracy</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.FormsLatte.html">FormsLatte</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.Framework.html">Framework</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.HttpTracy.html">HttpTracy</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.SecurityTracy.html">SecurityTracy</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.Caching.html">Caching<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.Caching.Storages.html">Storages</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.ComponentModel.html">ComponentModel</a>
+						</li>
+				<li><a href="namespace-Nette.Database.html">Database<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.Database.Drivers.html">Drivers</a>
+						</li>
+				<li><a href="namespace-Nette.Database.Reflection.html">Reflection</a>
+						</li>
+				<li><a href="namespace-Nette.Database.Table.html">Table</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.DI.html">DI<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.DI.Config.html">Config<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.DI.Config.Adapters.html">Adapters</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.DI.Extensions.html">Extensions</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.Diagnostics.html">Diagnostics</a>
+						</li>
+				<li><a href="namespace-Nette.Forms.html">Forms<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.Forms.Controls.html">Controls</a>
+						</li>
+				<li><a href="namespace-Nette.Forms.Rendering.html">Rendering</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.Http.html">Http</a>
+						</li>
+				<li><a href="namespace-Nette.Iterators.html">Iterators</a>
+						</li>
+				<li><a href="namespace-Nette.Latte.html">Latte</a>
+						</li>
+				<li><a href="namespace-Nette.Loaders.html">Loaders</a>
+						</li>
+				<li><a href="namespace-Nette.Localization.html">Localization</a>
+						</li>
+				<li><a href="namespace-Nette.Mail.html">Mail</a>
+						</li>
+				<li><a href="namespace-Nette.Neon.html">Neon</a>
+						</li>
+				<li><a href="namespace-Nette.PhpGenerator.html">PhpGenerator</a>
+						</li>
+				<li><a href="namespace-Nette.Reflection.html">Reflection</a>
+						</li>
+				<li class="active"><a href="namespace-Nette.Security.html">Security</a>
+						</li>
+				<li><a href="namespace-Nette.Templating.html">Templating</a>
+						</li>
+				<li><a href="namespace-Nette.Utils.html">Utils</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-NetteModule.html">NetteModule</a>
+						</li>
+				<li><a href="namespace-none.html">none</a>
+						</li>
+				<li><a href="namespace-Tracy.html">Tracy</a>
+						</li>
+			</ul>
+		</div>
+
+		<hr>
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="Nette.Security.Identity.html">Identity</a></li>
+				<li><a href="Nette.Security.Passwords.html">Passwords</a></li>
+				<li><a href="Nette.Security.Permission.html">Permission</a></li>
+				<li><a href="Nette.Security.SimpleAuthenticator.html">SimpleAuthenticator</a></li>
+				<li class="active"><a href="Nette.Security.User.html">User</a></li>
+			</ul>
+
+			<h3>Interfaces</h3>
+			<ul>
+				<li><a href="Nette.Security.IAuthenticator.html">IAuthenticator</a></li>
+				<li><a href="Nette.Security.IAuthorizator.html">IAuthorizator</a></li>
+				<li><a href="Nette.Security.IIdentity.html">IIdentity</a></li>
+				<li><a href="Nette.Security.IResource.html">IResource</a></li>
+				<li><a href="Nette.Security.IRole.html">IRole</a></li>
+				<li><a href="Nette.Security.IUserStorage.html">IUserStorage</a></li>
+			</ul>
+
+
+			<h3>Exceptions</h3>
+			<ul>
+				<li><a href="Nette.Security.AuthenticationException.html">AuthenticationException</a></li>
+			</ul>
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form action="http://www.google.com/cse" id="search">
+		<input type="hidden" name="cx" value="011549293477758430224:vxofa9ufnhc">
+		<input type="hidden" name="ie" value="UTF-8">
+		<input type="text" name="q" class="text">
+		<input type="submit" value="Search">
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+				<a href="namespace-Nette.Security.html" title="Summary of Nette\Security"><span>Namespace</span></a>
+			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+			<li>
+				<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions"><span>Tree</span></a>
+			</li>
+			<li>
+				<a href="deprecated.html" title="List of deprecated elements"><span>Deprecated</span></a>
+			</li>
+		</ul>
+		<ul><li><a href="http://api.nette.org/releases"><span>Other releases</span></a></li><li><a href="http://nette.org"><span>Nette homepage</span></a></li></ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Class User</h1>
+
+
+	<div class="description">
+	
+<p>User authentication and authorization.</p>
+
+	</div>
+
+	<dl class="tree">
+		<dd style="padding-left:0px">
+			<a href="Nette.Object.html"><span>Nette\Object</span></a>
+			
+			
+			
+		</dd>
+		<dd style="padding-left:30px">
+			<img src="resources/inherit.png" alt="Extended by">
+<b><span>Nette\Security\User</span></b>			
+			
+			
+		</dd>
+	</dl>
+
+
+
+
+
+
+
+
+	<div class="info">
+		
+		
+		<b>Namespace:</b> <a href="namespace-Nette.html">Nette</a>\<a href="namespace-Nette.Security.html">Security</a><br>
+		
+
+				<b>Author:</b>
+				David Grudl<br>
+		<b>Located at</b> <a href="source-Security.User.php.html#13-263" title="Go to source code">Security/User.php</a><br>
+	</div>
+
+
+
+	<table class="summary" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="__construct" id="___construct">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Security.User.html#___construct">#</a>
+		<code><a href="source-Security.User.php.html#56-61" title="Go to source code">__construct</a>( <span><code><a href="Nette.Security.IUserStorage.html">Nette\Security\IUserStorage</a></code> <var>$storage</var></span>, <span><code><a href="Nette.Security.IAuthenticator.html">Nette\Security\IAuthenticator</a></code> <var>$authenticator</var> = <span class="php-keyword1">NULL</span></span>, <span><code><a href="Nette.Security.IAuthorizator.html">Nette\Security\IAuthorizator</a></code> <var>$authorizator</var> = <span class="php-keyword1">NULL</span></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getStorage" id="_getStorage">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="Nette.Security.IUserStorage.html">Nette\Security\IUserStorage</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Security.User.html#_getStorage">#</a>
+		<code><a href="source-Security.User.php.html#64-70" title="Go to source code">getStorage</a>( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="Nette.Security.IUserStorage.html">Nette\Security\IUserStorage</a></code></code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="login" id="_login">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Security.User.html#_login">#</a>
+		<code><a href="source-Security.User.php.html#76-92" title="Go to source code">login</a>( <span>mixed <var>$id</var> = <span class="php-keyword1">NULL</span></span>, <span>mixed <var>$password</var> = <span class="php-keyword1">NULL</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Conducts the authentication process. Parameters are optional.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Conducts the authentication process. Parameters are optional.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$id</var></dt>
+					<dd><code>mixed</code><br>optional parameter (e.g. username or IIdentity)</dd>
+					<dt><var>$password</var></dt>
+					<dd><code>mixed</code><br>optional parameter (e.g. password)</dd>
+				</dl></div>
+
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><code><a href="Nette.Security.AuthenticationException.html">Nette\Security\AuthenticationException</a></code></code><br>if authentication was not successful<br>
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="logout" id="_logout">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Security.User.html#_logout">#</a>
+		<code><a href="source-Security.User.php.html#95-109" title="Go to source code">logout</a>( <span>boolean <var>$clearIdentity</var> = <span class="php-keyword1">FALSE</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Logs out the user from the current session.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Logs out the user from the current session.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$clearIdentity</var></dt>
+					<dd><code>boolean</code><br>clear the identity from persistent storage?</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="isLoggedIn" id="_isLoggedIn">
+
+		<td class="attributes"><code>
+			 public 
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Security.User.html#_isLoggedIn">#</a>
+		<code><a href="source-Security.User.php.html#112-119" title="Go to source code">isLoggedIn</a>( )</code>
+
+		<div class="description short">
+			
+<p>Is this user authenticated?</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Is this user authenticated?</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getIdentity" id="_getIdentity">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="Nette.Security.IIdentity.html">Nette\Security\IIdentity</a></code>|null
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Security.User.html#_getIdentity">#</a>
+		<code><a href="source-Security.User.php.html#122-129" title="Go to source code">getIdentity</a>( )</code>
+
+		<div class="description short">
+			
+<p>Returns current user identity, if any.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns current user identity, if any.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="Nette.Security.IIdentity.html">Nette\Security\IIdentity</a></code>|null</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getId" id="_getId">
+
+		<td class="attributes"><code>
+			 public 
+			mixed
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Security.User.html#_getId">#</a>
+		<code><a href="source-Security.User.php.html#132-140" title="Go to source code">getId</a>( )</code>
+
+		<div class="description short">
+			
+<p>Returns current user ID, if any.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns current user ID, if any.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>mixed</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setAuthenticator" id="_setAuthenticator">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="Nette.Security.User.html">Nette\Security\User</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Security.User.html#_setAuthenticator">#</a>
+		<code><a href="source-Security.User.php.html#143-151" title="Go to source code">setAuthenticator</a>( <span><code><a href="Nette.Security.IAuthenticator.html">Nette\Security\IAuthenticator</a></code> <var>$handler</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Sets authentication handler.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Sets authentication handler.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="Nette.Security.User.html">Nette\Security\User</a></code></code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getAuthenticator" id="_getAuthenticator">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="Nette.Security.IAuthenticator.html">Nette\Security\IAuthenticator</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Security.User.html#_getAuthenticator">#</a>
+		<code><a href="source-Security.User.php.html#154-164" title="Go to source code">getAuthenticator</a>( <span> <var>$need</var> = <span class="php-keyword1">TRUE</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Returns authentication handler.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns authentication handler.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="Nette.Security.IAuthenticator.html">Nette\Security\IAuthenticator</a></code></code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setExpiration" id="_setExpiration">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="Nette.Security.User.html">Nette\Security\User</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Security.User.html#_setExpiration">#</a>
+		<code><a href="source-Security.User.php.html#167-179" title="Go to source code">setExpiration</a>( <span>string|integer|<code><a href="DateTime.html">DateTime</a></code> <var>$time</var></span>, <span>boolean <var>$whenBrowserIsClosed</var> = <span class="php-keyword1">TRUE</span></span>, <span>boolean <var>$clearIdentity</var> = <span class="php-keyword1">FALSE</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Enables log out after inactivity.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Enables log out after inactivity.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$time</var></dt>
+					<dd><code>string|integer|<code><a href="DateTime.html">DateTime</a></code></code><br>number of seconds or timestamp</dd>
+					<dt><var>$whenBrowserIsClosed</var></dt>
+					<dd><code>boolean</code><br>log out when the browser is closed?</dd>
+					<dt><var>$clearIdentity</var></dt>
+					<dd><code>boolean</code><br>clear the identity from persistent storage?</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="Nette.Security.User.html">Nette\Security\User</a></code></code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getLogoutReason" id="_getLogoutReason">
+
+		<td class="attributes"><code>
+			 public 
+			integer
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Security.User.html#_getLogoutReason">#</a>
+		<code><a href="source-Security.User.php.html#182-189" title="Go to source code">getLogoutReason</a>( )</code>
+
+		<div class="description short">
+			
+<p>Why was user logged out?</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Why was user logged out?</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>integer</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getRoles" id="_getRoles">
+
+		<td class="attributes"><code>
+			 public 
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Security.User.html#_getRoles">#</a>
+		<code><a href="source-Security.User.php.html#195-207" title="Go to source code">getRoles</a>( )</code>
+
+		<div class="description short">
+			
+<p>Returns a list of effective roles that a user has been granted.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns a list of effective roles that a user has been granted.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>array</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="isInRole" id="_isInRole">
+
+		<td class="attributes"><code>
+			 public 
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Security.User.html#_isInRole">#</a>
+		<code><a href="source-Security.User.php.html#210-218" title="Go to source code">isInRole</a>( <span>string <var>$role</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Is a user in the specified effective role?</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Is a user in the specified effective role?</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$role</var></dt>
+					<dd><code>string</code></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="isAllowed" id="_isAllowed">
+
+		<td class="attributes"><code>
+			 public 
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Security.User.html#_isAllowed">#</a>
+		<code><a href="source-Security.User.php.html#221-237" title="Go to source code">isAllowed</a>( <span>string <var>$resource</var> = <code><a href="Nette.Security.IAuthorizator.html#ALL">Nette\Security\IAuthorizator::<b>ALL</b></a></code></span>, <span>string <var>$privilege</var> = <code><a href="Nette.Security.IAuthorizator.html#ALL">Nette\Security\IAuthorizator::<b>ALL</b></a></code></span> )</code>
+
+		<div class="description short">
+			
+<p>Has a user effective access to the Resource? If $resource is NULL, then the
+query applies to all resources.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Has a user effective access to the Resource? If $resource is NULL, then the
+query applies to all resources.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$resource</var></dt>
+					<dd><code>string</code><br>resource</dd>
+					<dt><var>$privilege</var></dt>
+					<dd><code>string</code><br>privilege</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setAuthorizator" id="_setAuthorizator">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="Nette.Security.User.html">Nette\Security\User</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Security.User.html#_setAuthorizator">#</a>
+		<code><a href="source-Security.User.php.html#240-248" title="Go to source code">setAuthorizator</a>( <span><code><a href="Nette.Security.IAuthorizator.html">Nette\Security\IAuthorizator</a></code> <var>$handler</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Sets authorization handler.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Sets authorization handler.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="Nette.Security.User.html">Nette\Security\User</a></code></code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getAuthorizator" id="_getAuthorizator">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="Nette.Security.IAuthorizator.html">Nette\Security\IAuthorizator</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Security.User.html#_getAuthorizator">#</a>
+		<code><a href="source-Security.User.php.html#251-261" title="Go to source code">getAuthorizator</a>( <span> <var>$need</var> = <span class="php-keyword1">TRUE</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Returns current authorization handler.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns current authorization handler.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="Nette.Security.IAuthorizator.html">Nette\Security\IAuthorizator</a></code></code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+	<table class="summary inherited">
+	<caption>Methods inherited from <a href="Nette.Object.html#methods">Nette\Object</a></caption>
+	<tr>
+		<td><code>
+			<a href="Nette.Object.html#___call">__call()</a>, 
+			<a href="Nette.Object.html#___callStatic">__callStatic()</a>, 
+			<a href="Nette.Object.html#___get">__get()</a>, 
+			<a href="Nette.Object.html#___isset">__isset()</a>, 
+			<a href="Nette.Object.html#___set">__set()</a>, 
+			<a href="Nette.Object.html#___unset">__unset()</a>, 
+			<a href="Nette.Object.html#_extensionMethod">extensionMethod()</a>, 
+			<a href="Nette.Object.html#_getReflection">getReflection()</a>
+		</code></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+	<table class="summary" id="constants">
+	<caption>Constants summary</caption>
+	<tr data-order="MANUAL" id="MANUAL">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name"><code>
+				<a href="source-Security.User.php.html#29-30" title="Go to source code"><b>MANUAL</b></a>
+		</code></td>
+		<td class="value"><code><code><a href="Nette.Security.IUserStorage.html#MANUAL">Nette\Security\IUserStorage::<b>MANUAL</b></a></code></code></td>
+		<td class="description"><div>
+			<a href="Nette.Security.User.html#MANUAL" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+					<h4>Deprecated</h4>
+					<div class="list">
+					</div>
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="INACTIVITY" id="INACTIVITY">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name"><code>
+				<a href="source-Security.User.php.html#30-31" title="Go to source code"><b>INACTIVITY</b></a>
+		</code></td>
+		<td class="value"><code><code><a href="Nette.Security.IUserStorage.html#INACTIVITY">Nette\Security\IUserStorage::<b>INACTIVITY</b></a></code></code></td>
+		<td class="description"><div>
+			<a href="Nette.Security.User.html#INACTIVITY" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+					<h4>Deprecated</h4>
+					<div class="list">
+					</div>
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="BROWSER_CLOSED" id="BROWSER_CLOSED">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name"><code>
+				<a href="source-Security.User.php.html#31-32" title="Go to source code"><b>BROWSER_CLOSED</b></a>
+		</code></td>
+		<td class="value"><code><code><a href="Nette.Security.IUserStorage.html#BROWSER_CLOSED">Nette\Security\IUserStorage::<b>BROWSER_CLOSED</b></a></code></code></td>
+		<td class="description"><div>
+			<a href="Nette.Security.User.html#BROWSER_CLOSED" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+					<h4>Deprecated</h4>
+					<div class="list">
+					</div>
+			</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+	<table class="summary" id="properties">
+	<caption>Properties summary</caption>
+	<tr data-order="guestRole" id="$guestRole">
+		<td class="attributes"><code>
+			public  
+			string
+		</code></td>
+
+		<td class="name">
+				<a href="source-Security.User.php.html#34-35" title="Go to source code"><var>$guestRole</var></a>
+		</td>
+		<td class="value"><code><span class="php-quote">'guest'</span></code></td>
+		<td class="description"><div>
+			<a href="Nette.Security.User.html#$guestRole" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>default role for unauthenticated user</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>default role for unauthenticated user</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="authenticatedRole" id="$authenticatedRole">
+		<td class="attributes"><code>
+			public  
+			string
+		</code></td>
+
+		<td class="name">
+				<a href="source-Security.User.php.html#37-38" title="Go to source code"><var>$authenticatedRole</var></a>
+		</td>
+		<td class="value"><code><span class="php-quote">'authenticated'</span></code></td>
+		<td class="description"><div>
+			<a href="Nette.Security.User.html#$authenticatedRole" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>default role for authenticated user without own identity</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>default role for authenticated user without own identity</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="onLoggedIn" id="$onLoggedIn">
+		<td class="attributes"><code>
+			public  
+			array
+		</code></td>
+
+		<td class="name">
+				<a href="source-Security.User.php.html#40-41" title="Go to source code"><var>$onLoggedIn</var></a>
+		</td>
+		<td class="value"><code></code></td>
+		<td class="description"><div>
+			<a href="Nette.Security.User.html#$onLoggedIn" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>of function(User $sender); Occurs when the user is successfully logged in</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>of function(User $sender); Occurs when the user is successfully logged in</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="onLoggedOut" id="$onLoggedOut">
+		<td class="attributes"><code>
+			public  
+			array
+		</code></td>
+
+		<td class="name">
+				<a href="source-Security.User.php.html#43-44" title="Go to source code"><var>$onLoggedOut</var></a>
+		</td>
+		<td class="value"><code></code></td>
+		<td class="description"><div>
+			<a href="Nette.Security.User.html#$onLoggedOut" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>of function(User $sender); Occurs when the user is logged out</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>of function(User $sender); Occurs when the user is logged out</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+	<table class="summary" id="magicProperties">
+	<caption>Magic properties summary</caption>
+	<tr data-order="authenticator" id="m$authenticator">
+		<td class="attributes"><code>
+			public  
+			<code><a href="Nette.Security.IAuthenticator.html">Nette\Security\IAuthenticator</a></code>
+		</code></td>
+
+		<td class="name">
+				<a href="source-Security.User.php.html#24" title="Go to source code"><var>$authenticator</var></a>
+		</td>
+		<td class="description"><div>
+			<a href="Nette.Security.User.html#m$authenticator" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="authorizator" id="m$authorizator">
+		<td class="attributes"><code>
+			public  
+			<code><a href="Nette.Security.IAuthorizator.html">Nette\Security\IAuthorizator</a></code>
+		</code></td>
+
+		<td class="name">
+				<a href="source-Security.User.php.html#25" title="Go to source code"><var>$authorizator</var></a>
+		</td>
+		<td class="description"><div>
+			<a href="Nette.Security.User.html#m$authorizator" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="loggedIn" id="m$loggedIn">
+		<td class="attributes"><code>
+			public  read-only
+			boolean
+		</code></td>
+
+		<td class="name">
+				<a href="source-Security.User.php.html#18" title="Go to source code"><var>$loggedIn</var></a>
+		</td>
+		<td class="description"><div>
+			<a href="Nette.Security.User.html#m$loggedIn" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="identity" id="m$identity">
+		<td class="attributes"><code>
+			public  read-only
+			<code><a href="Nette.Security.IIdentity.html">Nette\Security\IIdentity</a></code>
+		</code></td>
+
+		<td class="name">
+				<a href="source-Security.User.php.html#19" title="Go to source code"><var>$identity</var></a>
+		</td>
+		<td class="description"><div>
+			<a href="Nette.Security.User.html#m$identity" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="id" id="m$id">
+		<td class="attributes"><code>
+			public  read-only
+			mixed
+		</code></td>
+
+		<td class="name">
+				<a href="source-Security.User.php.html#20" title="Go to source code"><var>$id</var></a>
+		</td>
+		<td class="description"><div>
+			<a href="Nette.Security.User.html#m$id" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="roles" id="m$roles">
+		<td class="attributes"><code>
+			public  read-only
+			array
+		</code></td>
+
+		<td class="name">
+				<a href="source-Security.User.php.html#21" title="Go to source code"><var>$roles</var></a>
+		</td>
+		<td class="description"><div>
+			<a href="Nette.Security.User.html#m$roles" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="logoutReason" id="m$logoutReason">
+		<td class="attributes"><code>
+			public  read-only
+			integer
+		</code></td>
+
+		<td class="name">
+				<a href="source-Security.User.php.html#22" title="Go to source code"><var>$logoutReason</var></a>
+		</td>
+		<td class="description"><div>
+			<a href="Nette.Security.User.html#m$logoutReason" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="storage" id="m$storage">
+		<td class="attributes"><code>
+			public  read-only
+			<code><a href="Nette.Security.IUserStorage.html">Nette\Security\IUserStorage</a></code>
+		</code></td>
+
+		<td class="name">
+				<a href="source-Security.User.php.html#23" title="Go to source code"><var>$storage</var></a>
+		</td>
+		<td class="description"><div>
+			<a href="Nette.Security.User.html#m$storage" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	</table>
+
+	<table class="summary inherited">
+	<caption>Magic properties inherited from <a href="Nette.Object.html#properties">Nette\Object</a></caption>
+	<tr>
+		<td><code>
+			<a href="Nette.Object.html#m$reflection"><var>$reflection</var></a>
+		</code></td>
+	</tr>
+	</table>
+
+
+</div>
+
+	<div id="footer">
+		Nette 2.2.2 API API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+	</div>
+</div>
+</div>
+<script src="resources/combined.js?3630868369"></script>
+<script src="elementlist.js?2087501429"></script>
+</body>
+</html>

@@ -1,0 +1,1777 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="generator" content="ApiGen 2.8.0">
+
+	<title>Class Nette\Utils\Html | Nette 2.2.2 API</title>
+
+	<link rel="stylesheet" href="resources/style.css?3746977979">
+	<link rel="search" type="application/opensearchdescription+xml" title="Nette 2.2.2 API" href="http://api.nette.org/2.0/opensearch.xml">
+
+
+<script src='http://files.nette.org/js/analytics.js'></script><script>
+_ga.create('UA-95238-14', '.nette.org');
+_gaq.push(['_trackPageview']);
+</script>
+</head>
+
+<body>
+<div id="left">
+	<div id="menu">
+
+		<div id="groups">
+			<h3>Namespaces</h3>
+			<ul>
+				<li><a href="namespace-Latte.html">Latte<span></span></a>
+						<ul>
+				<li><a href="namespace-Latte.Loaders.html">Loaders</a>
+						</li>
+				<li><a href="namespace-Latte.Macros.html">Macros</a>
+						</li>
+				<li><a href="namespace-Latte.Runtime.html">Runtime</a>
+						</li>
+							</ul></li>
+				<li class="active"><a href="namespace-Nette.html">Nette<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.Application.html">Application<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.Application.Responses.html">Responses</a>
+						</li>
+				<li><a href="namespace-Nette.Application.Routers.html">Routers</a>
+						</li>
+				<li><a href="namespace-Nette.Application.UI.html">UI</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.Bridges.html">Bridges<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.Bridges.ApplicationLatte.html">ApplicationLatte</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.ApplicationTracy.html">ApplicationTracy</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.CacheLatte.html">CacheLatte</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.DatabaseDI.html">DatabaseDI</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.DatabaseTracy.html">DatabaseTracy</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.DITracy.html">DITracy</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.FormsLatte.html">FormsLatte</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.Framework.html">Framework</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.HttpTracy.html">HttpTracy</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.SecurityTracy.html">SecurityTracy</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.Caching.html">Caching<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.Caching.Storages.html">Storages</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.ComponentModel.html">ComponentModel</a>
+						</li>
+				<li><a href="namespace-Nette.Database.html">Database<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.Database.Drivers.html">Drivers</a>
+						</li>
+				<li><a href="namespace-Nette.Database.Reflection.html">Reflection</a>
+						</li>
+				<li><a href="namespace-Nette.Database.Table.html">Table</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.DI.html">DI<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.DI.Config.html">Config<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.DI.Config.Adapters.html">Adapters</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.DI.Extensions.html">Extensions</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.Diagnostics.html">Diagnostics</a>
+						</li>
+				<li><a href="namespace-Nette.Forms.html">Forms<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.Forms.Controls.html">Controls</a>
+						</li>
+				<li><a href="namespace-Nette.Forms.Rendering.html">Rendering</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.Http.html">Http</a>
+						</li>
+				<li><a href="namespace-Nette.Iterators.html">Iterators</a>
+						</li>
+				<li><a href="namespace-Nette.Latte.html">Latte</a>
+						</li>
+				<li><a href="namespace-Nette.Loaders.html">Loaders</a>
+						</li>
+				<li><a href="namespace-Nette.Localization.html">Localization</a>
+						</li>
+				<li><a href="namespace-Nette.Mail.html">Mail</a>
+						</li>
+				<li><a href="namespace-Nette.Neon.html">Neon</a>
+						</li>
+				<li><a href="namespace-Nette.PhpGenerator.html">PhpGenerator</a>
+						</li>
+				<li><a href="namespace-Nette.Reflection.html">Reflection</a>
+						</li>
+				<li><a href="namespace-Nette.Security.html">Security</a>
+						</li>
+				<li><a href="namespace-Nette.Templating.html">Templating</a>
+						</li>
+				<li class="active"><a href="namespace-Nette.Utils.html">Utils</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-NetteModule.html">NetteModule</a>
+						</li>
+				<li><a href="namespace-none.html">none</a>
+						</li>
+				<li><a href="namespace-Tracy.html">Tracy</a>
+						</li>
+			</ul>
+		</div>
+
+		<hr>
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="Nette.Utils.ArrayHash.html">ArrayHash</a></li>
+				<li><a href="Nette.Utils.ArrayList.html">ArrayList</a></li>
+				<li><a href="Nette.Utils.Arrays.html">Arrays</a></li>
+				<li><a href="Nette.Utils.Callback.html">Callback</a></li>
+				<li><a href="Nette.Utils.CallbackFilterIterator.html">CallbackFilterIterator</a></li>
+				<li><a href="Nette.Utils.DateTime.html">DateTime</a></li>
+				<li><a href="Nette.Utils.FileSystem.html">FileSystem</a></li>
+				<li><a href="Nette.Utils.Finder.html">Finder</a></li>
+				<li class="active"><a href="Nette.Utils.Html.html">Html</a></li>
+				<li><a href="Nette.Utils.Image.html">Image</a></li>
+				<li><a href="Nette.Utils.Json.html">Json</a></li>
+				<li><a href="Nette.Utils.LimitedScope.html" class="deprecated">LimitedScope</a></li>
+				<li><a href="Nette.Utils.MimeTypeDetector.html" class="deprecated">MimeTypeDetector</a></li>
+				<li><a href="Nette.Utils.ObjectMixin.html">ObjectMixin</a></li>
+				<li><a href="Nette.Utils.Paginator.html">Paginator</a></li>
+				<li><a href="Nette.Utils.Random.html">Random</a></li>
+				<li><a href="Nette.Utils.RecursiveCallbackFilterIterator.html">RecursiveCallbackFilterIterator</a></li>
+				<li><a href="Nette.Utils.Strings.html">Strings</a></li>
+				<li><a href="Nette.Utils.TokenIterator.html">TokenIterator</a></li>
+				<li><a href="Nette.Utils.Tokenizer.html">Tokenizer</a></li>
+				<li><a href="Nette.Utils.Validators.html">Validators</a></li>
+			</ul>
+
+			<h3>Interfaces</h3>
+			<ul>
+				<li><a href="Nette.Utils.IHtmlString.html">IHtmlString</a></li>
+			</ul>
+
+
+			<h3>Exceptions</h3>
+			<ul>
+				<li><a href="Nette.Utils.AssertionException.html">AssertionException</a></li>
+				<li><a href="Nette.Utils.JsonException.html">JsonException</a></li>
+				<li><a href="Nette.Utils.RegexpException.html">RegexpException</a></li>
+				<li><a href="Nette.Utils.TokenizerException.html">TokenizerException</a></li>
+				<li><a href="Nette.Utils.UnknownImageFileException.html">UnknownImageFileException</a></li>
+			</ul>
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form action="http://www.google.com/cse" id="search">
+		<input type="hidden" name="cx" value="011549293477758430224:vxofa9ufnhc">
+		<input type="hidden" name="ie" value="UTF-8">
+		<input type="text" name="q" class="text">
+		<input type="submit" value="Search">
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+				<a href="namespace-Nette.Utils.html" title="Summary of Nette\Utils"><span>Namespace</span></a>
+			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+			<li>
+				<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions"><span>Tree</span></a>
+			</li>
+			<li>
+				<a href="deprecated.html" title="List of deprecated elements"><span>Deprecated</span></a>
+			</li>
+		</ul>
+		<ul><li><a href="http://api.nette.org/releases"><span>Other releases</span></a></li><li><a href="http://nette.org"><span>Nette homepage</span></a></li></ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Class Html</h1>
+
+
+	<div class="description">
+	
+<p>HTML helper.</p>
+
+<pre>
+<span class="php-var">$el</span> = Html::el(<span
+class="php-quote">'a'</span>)-&gt;href(<span
+class="php-var">$link</span>)-&gt;setText(<span
+class="php-quote">'Nette'</span>);
+<span class="php-var">$el</span>-&gt;<span
+class="php-keyword1">class</span> = <span
+class="php-quote">'myclass'</span>;
+<span class="php-keyword1">echo</span> <span
+class="php-var">$el</span>;
+
+<span class="php-keyword1">echo</span> <span
+class="php-var">$el</span>-&gt;startTag(), <span
+class="php-var">$el</span>-&gt;endTag();
+</pre>
+
+	</div>
+
+	<dl class="tree">
+		<dd style="padding-left:0px">
+			<a href="Nette.Object.html"><span>Nette\Object</span></a>
+			
+			
+			
+		</dd>
+		<dd style="padding-left:30px">
+			<img src="resources/inherit.png" alt="Extended by">
+<b><span>Nette\Utils\Html</span></b>			
+			 implements 
+				<a href="ArrayAccess.html"><span>ArrayAccess</span></a>, 
+			
+				<a href="Countable.html"><span>Countable</span></a>, 
+			
+				<a href="IteratorAggregate.html"><span>IteratorAggregate</span></a>, 
+			
+				<a href="Nette.Utils.IHtmlString.html"><span>Nette\Utils\IHtmlString</span></a>
+			
+			
+		</dd>
+	</dl>
+
+
+
+
+
+
+
+
+	<div class="info">
+		
+		
+		<b>Namespace:</b> <a href="namespace-Nette.html">Nette</a>\<a href="namespace-Nette.Utils.html">Utils</a><br>
+		
+
+				<b>Author:</b>
+				David Grudl<br>
+		<b>Located at</b> <a href="source-Utils.Html.php.html#13-580" title="Go to source code">Utils/Html.php</a><br>
+	</div>
+
+
+
+	<table class="summary" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="el" id="_el">
+
+		<td class="attributes"><code>
+			 public static
+			<code><a href="Nette.Utils.Html.html">Nette\Utils\Html</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Utils.Html.html#_el">#</a>
+		<code><a href="source-Utils.Html.php.html#48-74" title="Go to source code">el</a>( <span>string <var>$name</var> = <span class="php-keyword1">NULL</span></span>, <span>array|string <var>$attrs</var> = <span class="php-keyword1">NULL</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Static factory.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Static factory.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$name</var></dt>
+					<dd><code>string</code><br>element name (or NULL)</dd>
+					<dt><var>$attrs</var></dt>
+					<dd><code>array|string</code><br>element's attributes (or textual content)</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="Nette.Utils.Html.html">Nette\Utils\Html</a></code></code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setName" id="_setName">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="Nette.Utils.Html.html">Nette\Utils\Html</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Utils.Html.html#_setName">#</a>
+		<code><a href="source-Utils.Html.php.html#77-93" title="Go to source code">setName</a>( <span>string <var>$name</var></span>, <span>boolean <var>$isEmpty</var> = <span class="php-keyword1">NULL</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Changes element's name.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Changes element's name.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$name</var></dt>
+					<dd><code>string</code></dd>
+					<dt><var>$isEmpty</var></dt>
+					<dd><code>boolean</code><br>Is element empty?</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="Nette.Utils.Html.html">Nette\Utils\Html</a></code></code><br>
+				</div>
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><code><a href="Nette.InvalidArgumentException.html">Nette\InvalidArgumentException</a></code></code><br>
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getName" id="_getName">
+
+		<td class="attributes"><code>
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Utils.Html.html#_getName">#</a>
+		<code><a href="source-Utils.Html.php.html#96-103" title="Go to source code">getName</a>( )</code>
+
+		<div class="description short">
+			
+<p>Returns element's name.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns element's name.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="isEmpty" id="_isEmpty">
+
+		<td class="attributes"><code>
+			 public 
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Utils.Html.html#_isEmpty">#</a>
+		<code><a href="source-Utils.Html.php.html#106-113" title="Go to source code">isEmpty</a>( )</code>
+
+		<div class="description short">
+			
+<p>Is element empty?</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Is element empty?</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="addAttributes" id="_addAttributes">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="Nette.Utils.Html.html">Nette\Utils\Html</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Utils.Html.html#_addAttributes">#</a>
+		<code><a href="source-Utils.Html.php.html#116-125" title="Go to source code">addAttributes</a>( <span>array <var>$attrs</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Sets multiple attributes.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Sets multiple attributes.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$attrs</var></dt>
+					<dd><code>array</code></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="Nette.Utils.Html.html">Nette\Utils\Html</a></code></code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="__set" id="___set">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Utils.Html.html#___set">#</a>
+		<code><a href="source-Utils.Html.php.html#128-137" title="Go to source code">__set</a>( <span>string <var>$name</var></span>, <span>mixed <var>$value</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Overloaded setter for element's attribute.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Overloaded setter for element's attribute.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$name</var></dt>
+					<dd><code>string</code><br>HTML attribute name</dd>
+					<dt><var>$value</var></dt>
+					<dd><code>mixed</code><br>HTML attribute value</dd>
+				</dl></div>
+
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code>MemberAccessException</code><br>if the property is not defined or is read-only<br>
+				</div>
+
+
+				<h4>Overrides</h4>
+				<div class="list"><code><a href="Nette.Object.html#___set">Nette\Object::__set()</a></code></div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="__get" id="___get">
+
+		<td class="attributes"><code>
+			 public 
+			mixed
+			&amp;
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Utils.Html.html#___get">#</a>
+		<code><a href="source-Utils.Html.php.html#140-148" title="Go to source code">__get</a>( <span>string <var>$name</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Overloaded getter for element's attribute.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Overloaded getter for element's attribute.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$name</var></dt>
+					<dd><code>string</code><br>HTML attribute name</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>mixed</code><br>HTML attribute value<br>
+				</div>
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code>MemberAccessException</code><br>if the property is not defined.<br>
+				</div>
+
+
+				<h4>Overrides</h4>
+				<div class="list"><code><a href="Nette.Object.html#___get">Nette\Object::__get()</a></code></div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="__isset" id="___isset">
+
+		<td class="attributes"><code>
+			 public 
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Utils.Html.html#___isset">#</a>
+		<code><a href="source-Utils.Html.php.html#151-159" title="Go to source code">__isset</a>( <span>string <var>$name</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Overloaded tester for element's attribute.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Overloaded tester for element's attribute.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$name</var></dt>
+					<dd><code>string</code><br>HTML attribute name</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br>
+				</div>
+
+
+
+				<h4>Overrides</h4>
+				<div class="list"><code><a href="Nette.Object.html#___isset">Nette\Object::__isset()</a></code></div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="__unset" id="___unset">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Utils.Html.html#___unset">#</a>
+		<code><a href="source-Utils.Html.php.html#162-170" title="Go to source code">__unset</a>( <span>string <var>$name</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Overloaded unsetter for element's attribute.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Overloaded unsetter for element's attribute.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$name</var></dt>
+					<dd><code>string</code><br>HTML attribute name</dd>
+				</dl></div>
+
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code>MemberAccessException</code><br>
+				</div>
+
+
+				<h4>Overrides</h4>
+				<div class="list"><code><a href="Nette.Object.html#___unset">Nette\Object::__unset()</a></code></div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="__call" id="___call">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="Nette.Utils.Html.html">Nette\Utils\Html</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Utils.Html.html#___call">#</a>
+		<code><a href="source-Utils.Html.php.html#173-209" title="Go to source code">__call</a>( <span>string <var>$m</var></span>, <span>array <var>$args</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Overloaded setter for element's attribute.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Overloaded setter for element's attribute.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$m</var></dt>
+					<dd><code>string</code><br>HTML attribute name</dd>
+					<dt><var>$args</var></dt>
+					<dd><code>array</code><br>(string) HTML attribute value or pair?</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="Nette.Utils.Html.html">Nette\Utils\Html</a></code></code><br>
+				</div>
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code>MemberAccessException</code><br>
+				</div>
+
+
+				<h4>Overrides</h4>
+				<div class="list"><code><a href="Nette.Object.html#___call">Nette\Object::__call()</a></code></div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="href" id="_href">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="Nette.Utils.Html.html">Nette\Utils\Html</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Utils.Html.html#_href">#</a>
+		<code><a href="source-Utils.Html.php.html#212-228" title="Go to source code">href</a>( <span>string <var>$path</var></span>, <span>array <var>$query</var> = <span class="php-keyword1">NULL</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Special setter for element's attribute.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Special setter for element's attribute.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$path</var></dt>
+					<dd><code>string</code><br>path</dd>
+					<dt><var>$query</var></dt>
+					<dd><code>array</code><br>query</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="Nette.Utils.Html.html">Nette\Utils\Html</a></code></code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setHtml" id="_setHtml">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="Nette.Utils.Html.html">Nette\Utils\Html</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Utils.Html.html#_setHtml">#</a>
+		<code><a href="source-Utils.Html.php.html#231-245" title="Go to source code">setHtml</a>( <span>string <var>$html</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Sets element's HTML content.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Sets element's HTML content.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$html</var></dt>
+					<dd><code>string</code></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="Nette.Utils.Html.html">Nette\Utils\Html</a></code></code><br>
+				</div>
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><code><a href="Nette.InvalidArgumentException.html">Nette\InvalidArgumentException</a></code></code><br>
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getHtml" id="_getHtml">
+
+		<td class="attributes"><code>
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Utils.Html.html#_getHtml">#</a>
+		<code><a href="source-Utils.Html.php.html#248-263" title="Go to source code">getHtml</a>( )</code>
+
+		<div class="description short">
+			
+<p>Returns element's HTML content.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns element's HTML content.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setText" id="_setText">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="Nette.Utils.Html.html">Nette\Utils\Html</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Utils.Html.html#_setText">#</a>
+		<code><a href="source-Utils.Html.php.html#266-278" title="Go to source code">setText</a>( <span>string <var>$text</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Sets element's textual content.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Sets element's textual content.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$text</var></dt>
+					<dd><code>string</code></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="Nette.Utils.Html.html">Nette\Utils\Html</a></code></code><br>
+				</div>
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><code><a href="Nette.InvalidArgumentException.html">Nette\InvalidArgumentException</a></code></code><br>
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getText" id="_getText">
+
+		<td class="attributes"><code>
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Utils.Html.html#_getText">#</a>
+		<code><a href="source-Utils.Html.php.html#281-288" title="Go to source code">getText</a>( )</code>
+
+		<div class="description short">
+			
+<p>Returns element's textual content.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns element's textual content.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="add" id="_add">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="Nette.Utils.Html.html">Nette\Utils\Html</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Utils.Html.html#_add">#</a>
+		<code><a href="source-Utils.Html.php.html#291-299" title="Go to source code">add</a>( <span><code><a href="Nette.Utils.Html.html">Nette\Utils\Html</a></code>|string <var>$child</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Adds new element's child.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Adds new element's child.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$child</var></dt>
+					<dd><code><code><a href="Nette.Utils.Html.html">Nette\Utils\Html</a></code>|string</code><br>child node</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="Nette.Utils.Html.html">Nette\Utils\Html</a></code></code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="create" id="_create">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="Nette.Utils.Html.html">Nette\Utils\Html</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Utils.Html.html#_create">#</a>
+		<code><a href="source-Utils.Html.php.html#302-312" title="Go to source code">create</a>( <span>string <var>$name</var></span>, <span>array|string <var>$attrs</var> = <span class="php-keyword1">NULL</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Creates and adds a new Html child.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Creates and adds a new Html child.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$name</var></dt>
+					<dd><code>string</code><br>elements's name</dd>
+					<dt><var>$attrs</var></dt>
+					<dd><code>array|string</code><br>element's attributes (or textual content)</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="Nette.Utils.Html.html">Nette\Utils\Html</a></code></code><br>created element<br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="insert" id="_insert">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="Nette.Utils.Html.html">Nette\Utils\Html</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Utils.Html.html#_insert">#</a>
+		<code><a href="source-Utils.Html.php.html#315-338" title="Go to source code">insert</a>( <span>integer <var>$index</var></span>, <span><code><a href="Nette.Utils.Html.html">Nette\Utils\Html</a></code> <var>$child</var></span>, <span>boolean <var>$replace</var> = <span class="php-keyword1">FALSE</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Inserts child node.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Inserts child node.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$index</var></dt>
+					<dd><code>integer</code></dd>
+					<dt><var>$child</var></dt>
+					<dd><code><code><a href="Nette.Utils.Html.html">Nette\Utils\Html</a></code></code><br>node</dd>
+					<dt><var>$replace</var></dt>
+					<dd><code>boolean</code></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="Nette.Utils.Html.html">Nette\Utils\Html</a></code></code><br>
+				</div>
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><code><a href="Exception.html">Exception</a></code></code><br>
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="offsetSet" id="_offsetSet">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Utils.Html.html#_offsetSet">#</a>
+		<code><a href="source-Utils.Html.php.html#341-350" title="Go to source code">offsetSet</a>( <span>integer <var>$index</var></span>, <span><code><a href="Nette.Utils.Html.html">Nette\Utils\Html</a></code> <var>$child</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Inserts (replaces) child node (\ArrayAccess implementation).</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Inserts (replaces) child node (\ArrayAccess implementation).</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$index</var></dt>
+					<dd><code>integer</code></dd>
+					<dt><var>$child</var></dt>
+					<dd><code><code><a href="Nette.Utils.Html.html">Nette\Utils\Html</a></code></code><br>node</dd>
+				</dl></div>
+
+
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="ArrayAccess.html#_offsetSet">ArrayAccess::offsetSet()</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="offsetGet" id="_offsetGet">
+
+		<td class="attributes"><code>
+			 public 
+			mixed
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Utils.Html.html#_offsetGet">#</a>
+		<code><a href="source-Utils.Html.php.html#353-361" title="Go to source code">offsetGet</a>( <span>integer <var>$index</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Returns child node (\ArrayAccess implementation).</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns child node (\ArrayAccess implementation).</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$index</var></dt>
+					<dd><code>integer</code><br>index</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>mixed</code><br>
+				</div>
+
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="ArrayAccess.html#_offsetGet">ArrayAccess::offsetGet()</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="offsetExists" id="_offsetExists">
+
+		<td class="attributes"><code>
+			 public 
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Utils.Html.html#_offsetExists">#</a>
+		<code><a href="source-Utils.Html.php.html#364-372" title="Go to source code">offsetExists</a>( <span>integer <var>$index</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Exists child node? (\ArrayAccess implementation).</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Exists child node? (\ArrayAccess implementation).</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$index</var></dt>
+					<dd><code>integer</code><br>index</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br>
+				</div>
+
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="ArrayAccess.html#_offsetExists">ArrayAccess::offsetExists()</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="offsetUnset" id="_offsetUnset">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Utils.Html.html#_offsetUnset">#</a>
+		<code><a href="source-Utils.Html.php.html#375-385" title="Go to source code">offsetUnset</a>( <span>integer <var>$index</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Removes child node (\ArrayAccess implementation).</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Removes child node (\ArrayAccess implementation).</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$index</var></dt>
+					<dd><code>integer</code><br>index</dd>
+				</dl></div>
+
+
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="ArrayAccess.html#_offsetUnset">ArrayAccess::offsetUnset()</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="count" id="_count">
+
+		<td class="attributes"><code>
+			 public 
+			integer
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Utils.Html.html#_count">#</a>
+		<code><a href="source-Utils.Html.php.html#388-395" title="Go to source code">count</a>( )</code>
+
+		<div class="description short">
+			
+<p>Required by the \Countable interface.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Required by the \Countable interface.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>integer</code><br>
+				</div>
+
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="Countable.html#_count">Countable::count()</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="removeChildren" id="_removeChildren">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Utils.Html.html#_removeChildren">#</a>
+		<code><a href="source-Utils.Html.php.html#398-405" title="Go to source code">removeChildren</a>( )</code>
+
+		<div class="description short">
+			
+<p>Removed all children.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Removed all children.</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getIterator" id="_getIterator">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="ArrayIterator.html">ArrayIterator</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Utils.Html.html#_getIterator">#</a>
+		<code><a href="source-Utils.Html.php.html#408-418" title="Go to source code">getIterator</a>( )</code>
+
+		<div class="description short">
+			
+<p>Iterates over a elements.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Iterates over a elements.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="ArrayIterator.html">ArrayIterator</a></code></code><br>
+				</div>
+
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="IteratorAggregate.html#_getIterator">IteratorAggregate::getIterator()</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getChildren" id="_getChildren">
+
+		<td class="attributes"><code>
+			 public 
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Utils.Html.html#_getChildren">#</a>
+		<code><a href="source-Utils.Html.php.html#421-428" title="Go to source code">getChildren</a>( )</code>
+
+		<div class="description short">
+			
+<p>Returns all of children.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns all of children.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>array</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="render" id="_render">
+
+		<td class="attributes"><code>
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Utils.Html.html#_render">#</a>
+		<code><a href="source-Utils.Html.php.html#431-461" title="Go to source code">render</a>( <span>integer <var>$indent</var> = <span class="php-keyword1">NULL</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Renders element's start tag, content and end tag.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Renders element's start tag, content and end tag.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$indent</var></dt>
+					<dd><code>integer</code><br>indent</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="__toString" id="___toString">
+
+		<td class="attributes"><code>
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Utils.Html.html#___toString">#</a>
+		<code><a href="source-Utils.Html.php.html#464-467" title="Go to source code">__toString</a>( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>in HTML format<br>
+				</div>
+
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="Nette.Utils.IHtmlString.html#___toString">Nette\Utils\IHtmlString::__toString()</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="startTag" id="_startTag">
+
+		<td class="attributes"><code>
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Utils.Html.html#_startTag">#</a>
+		<code><a href="source-Utils.Html.php.html#470-482" title="Go to source code">startTag</a>( )</code>
+
+		<div class="description short">
+			
+<p>Returns element's start tag.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns element's start tag.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="endTag" id="_endTag">
+
+		<td class="attributes"><code>
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Utils.Html.html#_endTag">#</a>
+		<code><a href="source-Utils.Html.php.html#485-492" title="Go to source code">endTag</a>( )</code>
+
+		<div class="description short">
+			
+<p>Returns element's end tag.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns element's end tag.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="attributes" id="_attributes">
+
+		<td class="attributes"><code>
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Utils.Html.html#_attributes">#</a>
+		<code><a href="source-Utils.Html.php.html#495-565" title="Go to source code">attributes</a>( )</code>
+
+		<div class="description short">
+			
+<p>Returns element's attributes.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns element's attributes.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="__clone" id="___clone">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Utils.Html.html#___clone">#</a>
+		<code><a href="source-Utils.Html.php.html#568-578" title="Go to source code">__clone</a>( )</code>
+
+		<div class="description short">
+			
+<p>Clones all children too.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Clones all children too.</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+	<table class="summary inherited">
+	<caption>Methods inherited from <a href="Nette.Object.html#methods">Nette\Object</a></caption>
+	<tr>
+		<td><code>
+			<a href="Nette.Object.html#___callStatic">__callStatic()</a>, 
+			<a href="Nette.Object.html#_extensionMethod">extensionMethod()</a>, 
+			<a href="Nette.Object.html#_getReflection">getReflection()</a>
+		</code></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+
+
+
+	<table class="summary" id="properties">
+	<caption>Properties summary</caption>
+	<tr data-order="attrs" id="$attrs">
+		<td class="attributes"><code>
+			public  
+			array
+		</code></td>
+
+		<td class="name">
+				<a href="source-Utils.Html.php.html#34-35" title="Go to source code"><var>$attrs</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">array</span>()</code></td>
+		<td class="description"><div>
+			<a href="Nette.Utils.Html.html#$attrs" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>element's attributes</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>element's attributes</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="children" id="$children">
+		<td class="attributes"><code>
+			protected  
+			array
+		</code></td>
+
+		<td class="name">
+				<a href="source-Utils.Html.php.html#37-38" title="Go to source code"><var>$children</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">array</span>()</code></td>
+		<td class="description"><div>
+			<a href="Nette.Utils.Html.html#$children" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>of Html | string nodes</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>of Html | string nodes</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="xhtml" id="$xhtml">
+		<td class="attributes"><code>
+			public static 
+			boolean
+		</code></td>
+
+		<td class="name">
+				<a href="source-Utils.Html.php.html#40-41" title="Go to source code"><var>$xhtml</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">FALSE</span></code></td>
+		<td class="description"><div>
+			<a href="Nette.Utils.Html.html#$xhtml" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>use XHTML syntax?</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>use XHTML syntax?</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="emptyElements" id="$emptyElements">
+		<td class="attributes"><code>
+			public static 
+			array
+		</code></td>
+
+		<td class="name">
+				<a href="source-Utils.Html.php.html#43-45" title="Go to source code"><var>$emptyElements</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">array</span>(<span class="php-quote">'img'</span>=&gt;<span class="php-num">1</span>,<span class="php-quote">'hr'</span>=&gt;<span class="php-num">1</span>,<span class="php-quote">'br'</span>=&gt;<span class="php-num">1</span>,<span class="php-quote">'input'</span>=&gt;<span class="php-num">1</span>,<span class="php-quote">'meta'</span>=&gt;<span class="php-num">1</span>,<span class="php-quote">'area'</span>=&gt;<span class="php-num">1</span>,<span class="php-quote">'embed'</span>=&gt;<span class="php-num">1</span>,<span class="php-quote">'keygen'</span>=&gt;<span class="php-num">1</span>,
+	<span class="php-quote">'source'</span>=&gt;<span class="php-num">1</span>,<span class="php-quote">'base'</span>=&gt;<span class="php-num">1</span>,<span class="php-quote">'col'</span>=&gt;<span class="php-num">1</span>,<span class="php-quote">'link'</span>=&gt;<span class="php-num">1</span>,<span class="php-quote">'param'</span>=&gt;<span class="php-num">1</span>,<span class="php-quote">'basefont'</span>=&gt;<span class="php-num">1</span>,<span class="php-quote">'frame'</span>=&gt;<span class="php-num">1</span>,<span class="php-quote">'isindex'</span>=&gt;<span class="php-num">1</span>,<span class="php-quote">'wbr'</span>=&gt;<span class="php-num">1</span>,<span class="php-quote">'command'</span>=&gt;<span class="php-num">1</span>,<span class="php-quote">'track'</span>=&gt;<span class="php-num">1</span>)</code></td>
+		<td class="description"><div>
+			<a href="Nette.Utils.Html.html#$emptyElements" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>empty (void) elements</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>empty (void) elements</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+	<table class="summary inherited">
+	<caption>Magic properties inherited from <a href="Nette.Object.html#properties">Nette\Object</a></caption>
+	<tr>
+		<td><code>
+			<a href="Nette.Object.html#m$reflection"><var>$reflection</var></a>
+		</code></td>
+	</tr>
+	</table>
+
+
+</div>
+
+	<div id="footer">
+		Nette 2.2.2 API API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+	</div>
+</div>
+</div>
+<script src="resources/combined.js?3630868369"></script>
+<script src="elementlist.js?2087501429"></script>
+</body>
+</html>

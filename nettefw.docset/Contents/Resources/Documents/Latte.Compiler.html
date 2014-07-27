@@ -1,0 +1,1138 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="generator" content="ApiGen 2.8.0">
+
+	<title>Class Latte\Compiler | Nette 2.2.2 API</title>
+
+	<link rel="stylesheet" href="resources/style.css?3746977979">
+	<link rel="search" type="application/opensearchdescription+xml" title="Nette 2.2.2 API" href="http://api.nette.org/2.0/opensearch.xml">
+
+
+<script src='http://files.nette.org/js/analytics.js'></script><script>
+_ga.create('UA-95238-14', '.nette.org');
+_gaq.push(['_trackPageview']);
+</script>
+</head>
+
+<body>
+<div id="left">
+	<div id="menu">
+
+		<div id="groups">
+			<h3>Namespaces</h3>
+			<ul>
+				<li class="active"><a href="namespace-Latte.html">Latte<span></span></a>
+						<ul>
+				<li><a href="namespace-Latte.Loaders.html">Loaders</a>
+						</li>
+				<li><a href="namespace-Latte.Macros.html">Macros</a>
+						</li>
+				<li><a href="namespace-Latte.Runtime.html">Runtime</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.html">Nette<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.Application.html">Application<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.Application.Responses.html">Responses</a>
+						</li>
+				<li><a href="namespace-Nette.Application.Routers.html">Routers</a>
+						</li>
+				<li><a href="namespace-Nette.Application.UI.html">UI</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.Bridges.html">Bridges<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.Bridges.ApplicationLatte.html">ApplicationLatte</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.ApplicationTracy.html">ApplicationTracy</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.CacheLatte.html">CacheLatte</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.DatabaseDI.html">DatabaseDI</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.DatabaseTracy.html">DatabaseTracy</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.DITracy.html">DITracy</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.FormsLatte.html">FormsLatte</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.Framework.html">Framework</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.HttpTracy.html">HttpTracy</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.SecurityTracy.html">SecurityTracy</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.Caching.html">Caching<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.Caching.Storages.html">Storages</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.ComponentModel.html">ComponentModel</a>
+						</li>
+				<li><a href="namespace-Nette.Database.html">Database<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.Database.Drivers.html">Drivers</a>
+						</li>
+				<li><a href="namespace-Nette.Database.Reflection.html">Reflection</a>
+						</li>
+				<li><a href="namespace-Nette.Database.Table.html">Table</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.DI.html">DI<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.DI.Config.html">Config<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.DI.Config.Adapters.html">Adapters</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.DI.Extensions.html">Extensions</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.Diagnostics.html">Diagnostics</a>
+						</li>
+				<li><a href="namespace-Nette.Forms.html">Forms<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.Forms.Controls.html">Controls</a>
+						</li>
+				<li><a href="namespace-Nette.Forms.Rendering.html">Rendering</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.Http.html">Http</a>
+						</li>
+				<li><a href="namespace-Nette.Iterators.html">Iterators</a>
+						</li>
+				<li><a href="namespace-Nette.Latte.html">Latte</a>
+						</li>
+				<li><a href="namespace-Nette.Loaders.html">Loaders</a>
+						</li>
+				<li><a href="namespace-Nette.Localization.html">Localization</a>
+						</li>
+				<li><a href="namespace-Nette.Mail.html">Mail</a>
+						</li>
+				<li><a href="namespace-Nette.Neon.html">Neon</a>
+						</li>
+				<li><a href="namespace-Nette.PhpGenerator.html">PhpGenerator</a>
+						</li>
+				<li><a href="namespace-Nette.Reflection.html">Reflection</a>
+						</li>
+				<li><a href="namespace-Nette.Security.html">Security</a>
+						</li>
+				<li><a href="namespace-Nette.Templating.html">Templating</a>
+						</li>
+				<li><a href="namespace-Nette.Utils.html">Utils</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-NetteModule.html">NetteModule</a>
+						</li>
+				<li><a href="namespace-none.html">none</a>
+						</li>
+				<li><a href="namespace-Tracy.html">Tracy</a>
+						</li>
+			</ul>
+		</div>
+
+		<hr>
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li class="active"><a href="Latte.Compiler.html">Compiler</a></li>
+				<li><a href="Latte.Engine.html">Engine</a></li>
+				<li><a href="Latte.Helpers.html">Helpers</a></li>
+				<li><a href="Latte.HtmlNode.html">HtmlNode</a></li>
+				<li><a href="Latte.MacroNode.html">MacroNode</a></li>
+				<li><a href="Latte.MacroTokens.html">MacroTokens</a></li>
+				<li><a href="Latte.Object.html">Object</a></li>
+				<li><a href="Latte.Parser.html">Parser</a></li>
+				<li><a href="Latte.PhpWriter.html">PhpWriter</a></li>
+				<li><a href="Latte.Token.html">Token</a></li>
+			</ul>
+
+			<h3>Interfaces</h3>
+			<ul>
+				<li><a href="Latte.ILoader.html">ILoader</a></li>
+				<li><a href="Latte.IMacro.html">IMacro</a></li>
+			</ul>
+
+
+			<h3>Exceptions</h3>
+			<ul>
+				<li><a href="Latte.CompileException.html">CompileException</a></li>
+				<li><a href="Latte.RegexpException.html">RegexpException</a></li>
+				<li><a href="Latte.RuntimeException.html">RuntimeException</a></li>
+			</ul>
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form action="http://www.google.com/cse" id="search">
+		<input type="hidden" name="cx" value="011549293477758430224:vxofa9ufnhc">
+		<input type="hidden" name="ie" value="UTF-8">
+		<input type="text" name="q" class="text">
+		<input type="submit" value="Search">
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+				<a href="namespace-Latte.html" title="Summary of Latte"><span>Namespace</span></a>
+			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+			<li>
+				<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions"><span>Tree</span></a>
+			</li>
+			<li>
+				<a href="deprecated.html" title="List of deprecated elements"><span>Deprecated</span></a>
+			</li>
+		</ul>
+		<ul><li><a href="http://api.nette.org/releases"><span>Other releases</span></a></li><li><a href="http://nette.org"><span>Nette homepage</span></a></li></ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Class Compiler</h1>
+
+
+	<div class="description">
+	
+<p>Latte compiler.</p>
+
+	</div>
+
+	<dl class="tree">
+		<dd style="padding-left:0px">
+			<a href="Latte.Object.html"><span>Latte\Object</span></a>
+			
+			
+			
+		</dd>
+		<dd style="padding-left:30px">
+			<img src="resources/inherit.png" alt="Extended by">
+<b><span>Latte\Compiler</span></b>			
+			
+			
+		</dd>
+	</dl>
+
+
+
+
+
+
+
+
+	<div class="info">
+		
+		
+		<b>Namespace:</b> <a href="namespace-Latte.html">Latte</a><br>
+		
+
+				<b>Author:</b>
+				David Grudl<br>
+		<b>Located at</b> <a href="source-Latte.Compiler.php.html#11-573" title="Go to source code">Latte/Compiler.php</a><br>
+	</div>
+
+
+
+	<table class="summary" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="__construct" id="___construct">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Latte.Compiler.html#___construct">#</a>
+		<code><a href="source-Latte.Compiler.php.html#68-71" title="Go to source code">__construct</a>( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="addMacro" id="_addMacro">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="Latte.Compiler.html">Latte\Compiler</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Latte.Compiler.html#_addMacro">#</a>
+		<code><a href="source-Latte.Compiler.php.html#74-84" title="Go to source code">addMacro</a>( <span>string <var>$name</var></span>, <span><code><a href="Latte.IMacro.html">Latte\IMacro</a></code> <var>$macro</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Adds new macro.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Adds new macro.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$name</var></dt>
+					<dd><code>string</code></dd>
+					<dt><var>$macro</var></dt>
+					<dd></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="Latte.Compiler.html">Latte\Compiler</a></code></code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="compile" id="_compile">
+
+		<td class="attributes"><code>
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Latte.Compiler.html#_compile">#</a>
+		<code><a href="source-Latte.Compiler.php.html#87-130" title="Go to source code">compile</a>( <span>array <var>$tokens</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Compiles tokens to PHP code.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Compiles tokens to PHP code.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$tokens</var></dt>
+					<dd><code><code><a href="Latte.Token.html">Latte\Token</a>[]</code></code></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setContentType" id="_setContentType">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="Latte.Compiler.html">Latte\Compiler</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Latte.Compiler.html#_setContentType">#</a>
+		<code><a href="source-Latte.Compiler.php.html#133-141" title="Go to source code">setContentType</a>( <span> <var>$type</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="Latte.Compiler.html">Latte\Compiler</a></code></code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getContentType" id="_getContentType">
+
+		<td class="attributes"><code>
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Latte.Compiler.html#_getContentType">#</a>
+		<code><a href="source-Latte.Compiler.php.html#144-150" title="Go to source code">getContentType</a>( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setContext" id="_setContext">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="Latte.Compiler.html">Latte\Compiler</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Latte.Compiler.html#_setContext">#</a>
+		<code><a href="source-Latte.Compiler.php.html#153-160" title="Go to source code">setContext</a>( <span> <var>$context</var></span>, <span> <var>$sub</var> = <span class="php-keyword1">NULL</span></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="Latte.Compiler.html">Latte\Compiler</a></code></code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getContext" id="_getContext">
+
+		<td class="attributes"><code>
+			 public 
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Latte.Compiler.html#_getContext">#</a>
+		<code><a href="source-Latte.Compiler.php.html#163-169" title="Go to source code">getContext</a>( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>array</code><br>[context, subcontext]<br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getTemplateId" id="_getTemplateId">
+
+		<td class="attributes"><code>
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Latte.Compiler.html#_getTemplateId">#</a>
+		<code><a href="source-Latte.Compiler.php.html#172-178" title="Go to source code">getTemplateId</a>( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getMacroNode" id="_getMacroNode">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="Latte.MacroNode.html">Latte\MacroNode</a></code>|null
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Latte.Compiler.html#_getMacroNode">#</a>
+		<code><a href="source-Latte.Compiler.php.html#181-187" title="Go to source code">getMacroNode</a>( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="Latte.MacroNode.html">Latte\MacroNode</a></code>|null</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getLine" id="_getLine">
+
+		<td class="attributes"><code>
+			 public 
+			integer
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Latte.Compiler.html#_getLine">#</a>
+		<code><a href="source-Latte.Compiler.php.html#190-197" title="Go to source code">getLine</a>( )</code>
+
+		<div class="description short">
+			
+<p>Returns current line number.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns current line number.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>integer</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="expandTokens" id="_expandTokens">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Latte.Compiler.html#_expandTokens">#</a>
+		<code><a href="source-Latte.Compiler.php.html#200-203" title="Go to source code">expandTokens</a>( <span> <var>$s</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="openMacro" id="_openMacro">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="Latte.MacroNode.html">Latte\MacroNode</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Latte.Compiler.html#_openMacro">#</a>
+		<code><a href="source-Latte.Compiler.php.html#364-383" title="Go to source code">openMacro</a>( <span>string <var>$name</var></span>, <span>string <var>$args</var> = <span class="php-keyword1">NULL</span></span>, <span>string <var>$modifiers</var> = <span class="php-keyword1">NULL</span></span>, <span>boolean <var>$isRightmost</var> = <span class="php-keyword1">FALSE</span></span>, <span> <var>$nPrefix</var> = <span class="php-keyword1">NULL</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Generates code for {macro ...} to the output.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Generates code for {macro ...} to the output.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$name</var></dt>
+					<dd><code>string</code></dd>
+					<dt><var>$args</var></dt>
+					<dd><code>string</code></dd>
+					<dt><var>$modifiers</var></dt>
+					<dd><code>string</code></dd>
+					<dt><var>$isRightmost</var></dt>
+					<dd><code>boolean</code></dd>
+					<dt><var>$nPrefix</var></dt>
+					<dd></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="Latte.MacroNode.html">Latte\MacroNode</a></code></code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="closeMacro" id="_closeMacro">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="Latte.MacroNode.html">Latte\MacroNode</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Latte.Compiler.html#_closeMacro">#</a>
+		<code><a href="source-Latte.Compiler.php.html#386-423" title="Go to source code">closeMacro</a>( <span>string <var>$name</var></span>, <span>string <var>$args</var> = <span class="php-keyword1">NULL</span></span>, <span>string <var>$modifiers</var> = <span class="php-keyword1">NULL</span></span>, <span>boolean <var>$isRightmost</var> = <span class="php-keyword1">FALSE</span></span>, <span> <var>$nPrefix</var> = <span class="php-keyword1">NULL</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Generates code for {/macro ...} to the output.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Generates code for {/macro ...} to the output.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$name</var></dt>
+					<dd><code>string</code></dd>
+					<dt><var>$args</var></dt>
+					<dd><code>string</code></dd>
+					<dt><var>$modifiers</var></dt>
+					<dd><code>string</code></dd>
+					<dt><var>$isRightmost</var></dt>
+					<dd><code>boolean</code></dd>
+					<dt><var>$nPrefix</var></dt>
+					<dd></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="Latte.MacroNode.html">Latte\MacroNode</a></code></code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="writeAttrsMacro" id="_writeAttrsMacro">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Latte.Compiler.html#_writeAttrsMacro">#</a>
+		<code><a href="source-Latte.Compiler.php.html#441-515" title="Go to source code">writeAttrsMacro</a>( <span>string <var>$code</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Generates code for macro &lt;tag n:attr&gt; to the output.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Generates code for macro &lt;tag n:attr&gt; to the output.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$code</var></dt>
+					<dd><code>string</code></dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="expandMacro" id="_expandMacro">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="Latte.MacroNode.html">Latte\MacroNode</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Latte.Compiler.html#_expandMacro">#</a>
+		<code><a href="source-Latte.Compiler.php.html#518-560" title="Go to source code">expandMacro</a>( <span>string <var>$name</var></span>, <span>string <var>$args</var></span>, <span>string <var>$modifiers</var> = <span class="php-keyword1">NULL</span></span>, <span> <var>$nPrefix</var> = <span class="php-keyword1">NULL</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Expands macro and returns node &amp; code.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Expands macro and returns node &amp; code.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$name</var></dt>
+					<dd><code>string</code></dd>
+					<dt><var>$args</var></dt>
+					<dd><code>string</code></dd>
+					<dt><var>$modifiers</var></dt>
+					<dd><code>string</code></dd>
+					<dt><var>$nPrefix</var></dt>
+					<dd></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="Latte.MacroNode.html">Latte\MacroNode</a></code></code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+	<table class="summary inherited">
+	<caption>Methods inherited from <a href="Latte.Object.html#methods">Latte\Object</a></caption>
+	<tr>
+		<td><code>
+			<a href="Latte.Object.html#___call">__call()</a>, 
+			<a href="Latte.Object.html#___get">__get()</a>, 
+			<a href="Latte.Object.html#___isset">__isset()</a>, 
+			<a href="Latte.Object.html#___set">__set()</a>, 
+			<a href="Latte.Object.html#___unset">__unset()</a>
+		</code></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+	<table class="summary" id="constants">
+	<caption>Constants summary</caption>
+	<tr data-order="CONTENT_HTML" id="CONTENT_HTML">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name"><code>
+				<a href="source-Latte.Compiler.php.html#51-52" title="Go to source code"><b>CONTENT_HTML</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-quote">'html'</span></code></td>
+		<td class="description"><div>
+			<a href="Latte.Compiler.html#CONTENT_HTML" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Context-aware escaping content types</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Context-aware escaping content types</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="CONTENT_XHTML" id="CONTENT_XHTML">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name"><code>
+				<a href="source-Latte.Compiler.php.html#52-53" title="Go to source code"><b>CONTENT_XHTML</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-quote">'xhtml'</span></code></td>
+		<td class="description"><div>
+			<a href="Latte.Compiler.html#CONTENT_XHTML" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Context-aware escaping content types</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Context-aware escaping content types</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="CONTENT_XML" id="CONTENT_XML">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name"><code>
+				<a href="source-Latte.Compiler.php.html#53-54" title="Go to source code"><b>CONTENT_XML</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-quote">'xml'</span></code></td>
+		<td class="description"><div>
+			<a href="Latte.Compiler.html#CONTENT_XML" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Context-aware escaping content types</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Context-aware escaping content types</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="CONTENT_JS" id="CONTENT_JS">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name"><code>
+				<a href="source-Latte.Compiler.php.html#54-55" title="Go to source code"><b>CONTENT_JS</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-quote">'js'</span></code></td>
+		<td class="description"><div>
+			<a href="Latte.Compiler.html#CONTENT_JS" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Context-aware escaping content types</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Context-aware escaping content types</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="CONTENT_CSS" id="CONTENT_CSS">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name"><code>
+				<a href="source-Latte.Compiler.php.html#55-56" title="Go to source code"><b>CONTENT_CSS</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-quote">'css'</span></code></td>
+		<td class="description"><div>
+			<a href="Latte.Compiler.html#CONTENT_CSS" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Context-aware escaping content types</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Context-aware escaping content types</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="CONTENT_URL" id="CONTENT_URL">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name"><code>
+				<a href="source-Latte.Compiler.php.html#56-57" title="Go to source code"><b>CONTENT_URL</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-quote">'url'</span></code></td>
+		<td class="description"><div>
+			<a href="Latte.Compiler.html#CONTENT_URL" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Context-aware escaping content types</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Context-aware escaping content types</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="CONTENT_ICAL" id="CONTENT_ICAL">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name"><code>
+				<a href="source-Latte.Compiler.php.html#57-58" title="Go to source code"><b>CONTENT_ICAL</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-quote">'ical'</span></code></td>
+		<td class="description"><div>
+			<a href="Latte.Compiler.html#CONTENT_ICAL" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Context-aware escaping content types</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Context-aware escaping content types</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="CONTENT_TEXT" id="CONTENT_TEXT">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name"><code>
+				<a href="source-Latte.Compiler.php.html#58-59" title="Go to source code"><b>CONTENT_TEXT</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-quote">'text'</span></code></td>
+		<td class="description"><div>
+			<a href="Latte.Compiler.html#CONTENT_TEXT" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Context-aware escaping content types</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Context-aware escaping content types</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="CONTEXT_COMMENT" id="CONTEXT_COMMENT">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name"><code>
+				<a href="source-Latte.Compiler.php.html#61-62" title="Go to source code"><b>CONTEXT_COMMENT</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-quote">'comment'</span></code></td>
+		<td class="description"><div>
+			<a href="Latte.Compiler.html#CONTEXT_COMMENT" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="CONTEXT_SINGLE_QUOTED_ATTR" id="CONTEXT_SINGLE_QUOTED_ATTR">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name"><code>
+				<a href="source-Latte.Compiler.php.html#62-63" title="Go to source code"><b>CONTEXT_SINGLE_QUOTED_ATTR</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-quote">&quot;'&quot;</span></code></td>
+		<td class="description"><div>
+			<a href="Latte.Compiler.html#CONTEXT_SINGLE_QUOTED_ATTR" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="CONTEXT_DOUBLE_QUOTED_ATTR" id="CONTEXT_DOUBLE_QUOTED_ATTR">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name"><code>
+				<a href="source-Latte.Compiler.php.html#63-64" title="Go to source code"><b>CONTEXT_DOUBLE_QUOTED_ATTR</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-quote">'&quot;'</span></code></td>
+		<td class="description"><div>
+			<a href="Latte.Compiler.html#CONTEXT_DOUBLE_QUOTED_ATTR" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="CONTEXT_UNQUOTED_ATTR" id="CONTEXT_UNQUOTED_ATTR">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name"><code>
+				<a href="source-Latte.Compiler.php.html#64-65" title="Go to source code"><b>CONTEXT_UNQUOTED_ATTR</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-quote">'='</span></code></td>
+		<td class="description"><div>
+			<a href="Latte.Compiler.html#CONTEXT_UNQUOTED_ATTR" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+
+
+</div>
+
+	<div id="footer">
+		Nette 2.2.2 API API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+	</div>
+</div>
+</div>
+<script src="resources/combined.js?3630868369"></script>
+<script src="elementlist.js?2087501429"></script>
+</body>
+</html>

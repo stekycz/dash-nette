@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="generator" content="ApiGen 2.8.0">
+
+	<title>Class Latte\Macros\BlockMacros | Nette 2.2.2 API</title>
+
+	<link rel="stylesheet" href="resources/style.css?3746977979">
+	<link rel="search" type="application/opensearchdescription+xml" title="Nette 2.2.2 API" href="http://api.nette.org/2.0/opensearch.xml">
+
+
+<script src='http://files.nette.org/js/analytics.js'></script><script>
+_ga.create('UA-95238-14', '.nette.org');
+_gaq.push(['_trackPageview']);
+</script>
+</head>
+
+<body>
+<div id="left">
+	<div id="menu">
+
+		<div id="groups">
+			<h3>Namespaces</h3>
+			<ul>
+				<li class="active"><a href="namespace-Latte.html">Latte<span></span></a>
+						<ul>
+				<li><a href="namespace-Latte.Loaders.html">Loaders</a>
+						</li>
+				<li class="active"><a href="namespace-Latte.Macros.html">Macros</a>
+						</li>
+				<li><a href="namespace-Latte.Runtime.html">Runtime</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.html">Nette<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.Application.html">Application<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.Application.Responses.html">Responses</a>
+						</li>
+				<li><a href="namespace-Nette.Application.Routers.html">Routers</a>
+						</li>
+				<li><a href="namespace-Nette.Application.UI.html">UI</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.Bridges.html">Bridges<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.Bridges.ApplicationLatte.html">ApplicationLatte</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.ApplicationTracy.html">ApplicationTracy</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.CacheLatte.html">CacheLatte</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.DatabaseDI.html">DatabaseDI</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.DatabaseTracy.html">DatabaseTracy</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.DITracy.html">DITracy</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.FormsLatte.html">FormsLatte</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.Framework.html">Framework</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.HttpTracy.html">HttpTracy</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.SecurityTracy.html">SecurityTracy</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.Caching.html">Caching<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.Caching.Storages.html">Storages</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.ComponentModel.html">ComponentModel</a>
+						</li>
+				<li><a href="namespace-Nette.Database.html">Database<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.Database.Drivers.html">Drivers</a>
+						</li>
+				<li><a href="namespace-Nette.Database.Reflection.html">Reflection</a>
+						</li>
+				<li><a href="namespace-Nette.Database.Table.html">Table</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.DI.html">DI<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.DI.Config.html">Config<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.DI.Config.Adapters.html">Adapters</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.DI.Extensions.html">Extensions</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.Diagnostics.html">Diagnostics</a>
+						</li>
+				<li><a href="namespace-Nette.Forms.html">Forms<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.Forms.Controls.html">Controls</a>
+						</li>
+				<li><a href="namespace-Nette.Forms.Rendering.html">Rendering</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.Http.html">Http</a>
+						</li>
+				<li><a href="namespace-Nette.Iterators.html">Iterators</a>
+						</li>
+				<li><a href="namespace-Nette.Latte.html">Latte</a>
+						</li>
+				<li><a href="namespace-Nette.Loaders.html">Loaders</a>
+						</li>
+				<li><a href="namespace-Nette.Localization.html">Localization</a>
+						</li>
+				<li><a href="namespace-Nette.Mail.html">Mail</a>
+						</li>
+				<li><a href="namespace-Nette.Neon.html">Neon</a>
+						</li>
+				<li><a href="namespace-Nette.PhpGenerator.html">PhpGenerator</a>
+						</li>
+				<li><a href="namespace-Nette.Reflection.html">Reflection</a>
+						</li>
+				<li><a href="namespace-Nette.Security.html">Security</a>
+						</li>
+				<li><a href="namespace-Nette.Templating.html">Templating</a>
+						</li>
+				<li><a href="namespace-Nette.Utils.html">Utils</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-NetteModule.html">NetteModule</a>
+						</li>
+				<li><a href="namespace-none.html">none</a>
+						</li>
+				<li><a href="namespace-Tracy.html">Tracy</a>
+						</li>
+			</ul>
+		</div>
+
+		<hr>
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li class="active"><a href="Latte.Macros.BlockMacros.html">BlockMacros</a></li>
+				<li><a href="Latte.Macros.CoreMacros.html">CoreMacros</a></li>
+				<li><a href="Latte.Macros.MacroSet.html">MacroSet</a></li>
+			</ul>
+
+
+
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form action="http://www.google.com/cse" id="search">
+		<input type="hidden" name="cx" value="011549293477758430224:vxofa9ufnhc">
+		<input type="hidden" name="ie" value="UTF-8">
+		<input type="text" name="q" class="text">
+		<input type="submit" value="Search">
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+				<a href="namespace-Latte.Macros.html" title="Summary of Latte\Macros"><span>Namespace</span></a>
+			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+			<li>
+				<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions"><span>Tree</span></a>
+			</li>
+			<li>
+				<a href="deprecated.html" title="List of deprecated elements"><span>Deprecated</span></a>
+			</li>
+		</ul>
+		<ul><li><a href="http://api.nette.org/releases"><span>Other releases</span></a></li><li><a href="http://nette.org"><span>Nette homepage</span></a></li></ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Class BlockMacros</h1>
+
+
+	<div class="description">
+	
+<p>Block macros.</p>
+
+	</div>
+
+	<dl class="tree">
+		<dd style="padding-left:0px">
+			<a href="Latte.Object.html"><span>Latte\Object</span></a>
+			
+			
+			
+		</dd>
+		<dd style="padding-left:30px">
+			<img src="resources/inherit.png" alt="Extended by">
+			<a href="Latte.Macros.MacroSet.html"><span>Latte\Macros\MacroSet</span></a>
+			
+			 implements 
+				<a href="Latte.IMacro.html"><span>Latte\IMacro</span></a>
+			
+			
+		</dd>
+		<dd style="padding-left:60px">
+			<img src="resources/inherit.png" alt="Extended by">
+<b><span>Latte\Macros\BlockMacros</span></b>			
+			
+			
+		</dd>
+	</dl>
+
+
+
+
+
+
+
+
+	<div class="info">
+		
+		
+		<b>Namespace:</b> <a href="namespace-Latte.html">Latte</a>\<a href="namespace-Latte.Macros.html">Macros</a><br>
+		
+
+				<b>Author:</b>
+				David Grudl<br>
+		<b>Located at</b> <a href="source-Latte.Macros.BlockMacros.php.html#17-348" title="Go to source code">Latte/Macros/BlockMacros.php</a><br>
+	</div>
+
+
+
+	<table class="summary" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="install" id="_install">
+
+		<td class="attributes"><code>
+			 public static
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Latte.Macros.BlockMacros.html#_install">#</a>
+		<code><a href="source-Latte.Macros.BlockMacros.php.html#31-43" title="Go to source code">install</a>( <span><code><a href="Latte.Compiler.html">Latte\Compiler</a></code> <var>$compiler</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="initialize" id="_initialize">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Latte.Macros.BlockMacros.html#_initialize">#</a>
+		<code><a href="source-Latte.Macros.BlockMacros.php.html#46-54" title="Go to source code">initialize</a>( )</code>
+
+		<div class="description short">
+			
+<p>Initializes before template parsing.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Initializes before template parsing.</p>
+
+
+
+
+
+
+
+				<h4>Overrides</h4>
+				<div class="list"><code><a href="Latte.Macros.MacroSet.html#_initialize">Latte\Macros\MacroSet::initialize()</a></code></div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="finalize" id="_finalize">
+
+		<td class="attributes"><code>
+			 public 
+			array(prolog,
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Latte.Macros.BlockMacros.html#_finalize">#</a>
+		<code><a href="source-Latte.Macros.BlockMacros.php.html#57-95" title="Go to source code">finalize</a>( )</code>
+
+		<div class="description short">
+			
+<p>Finishes template parsing.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Finishes template parsing.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>array(prolog,</code><br>epilog)<br>
+				</div>
+
+
+
+				<h4>Overrides</h4>
+				<div class="list"><code><a href="Latte.Macros.MacroSet.html#_finalize">Latte\Macros\MacroSet::finalize()</a></code></div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="macroInclude" id="_macroInclude">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Latte.Macros.BlockMacros.html#_macroInclude">#</a>
+		<code><a href="source-Latte.Macros.BlockMacros.php.html#101-133" title="Go to source code">macroInclude</a>( <span><code><a href="Latte.MacroNode.html">Latte\MacroNode</a></code> <var>$node</var></span>, <span><code><a href="Latte.PhpWriter.html">Latte\PhpWriter</a></code> <var>$writer</var></span> )</code>
+
+		<div class="description short">
+			
+<p>{include #block}</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>{include #block}</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="macroIncludeBlock" id="_macroIncludeBlock">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Latte.Macros.BlockMacros.html#_macroIncludeBlock">#</a>
+		<code><a href="source-Latte.Macros.BlockMacros.php.html#136-143" title="Go to source code">macroIncludeBlock</a>( <span><code><a href="Latte.MacroNode.html">Latte\MacroNode</a></code> <var>$node</var></span>, <span><code><a href="Latte.PhpWriter.html">Latte\PhpWriter</a></code> <var>$writer</var></span> )</code>
+
+		<div class="description short">
+			
+<p>{includeblock "file"}</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>{includeblock "file"}</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="macroExtends" id="_macroExtends">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Latte.Macros.BlockMacros.html#_macroExtends">#</a>
+		<code><a href="source-Latte.Macros.BlockMacros.php.html#146-168" title="Go to source code">macroExtends</a>( <span><code><a href="Latte.MacroNode.html">Latte\MacroNode</a></code> <var>$node</var></span>, <span><code><a href="Latte.PhpWriter.html">Latte\PhpWriter</a></code> <var>$writer</var></span> )</code>
+
+		<div class="description short">
+			
+<p>{extends auto | none | $var | "file"}</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>{extends auto | none | $var | "file"}</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="macroBlock" id="_macroBlock">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Latte.Macros.BlockMacros.html#_macroBlock">#</a>
+		<code><a href="source-Latte.Macros.BlockMacros.php.html#171-261" title="Go to source code">macroBlock</a>( <span><code><a href="Latte.MacroNode.html">Latte\MacroNode</a></code> <var>$node</var></span>, <span><code><a href="Latte.PhpWriter.html">Latte\PhpWriter</a></code> <var>$writer</var></span> )</code>
+
+		<div class="description short">
+			
+<p>{block [[#]name]} {snippet [name [,]] [tag]} {snippetArea [name]} {define
+[#]name}</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>{block [[#]name]} {snippet [name [,]] [tag]} {snippetArea [name]} {define
+[#]name}</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="macroBlockEnd" id="_macroBlockEnd">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Latte.Macros.BlockMacros.html#_macroBlockEnd">#</a>
+		<code><a href="source-Latte.Macros.BlockMacros.php.html#264-299" title="Go to source code">macroBlockEnd</a>( <span><code><a href="Latte.MacroNode.html">Latte\MacroNode</a></code> <var>$node</var></span>, <span><code><a href="Latte.PhpWriter.html">Latte\PhpWriter</a></code> <var>$writer</var></span> )</code>
+
+		<div class="description short">
+			
+<p>{/block} {/snippet} {/snippetArea} {/define}</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>{/block} {/snippet} {/snippetArea} {/define}</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="macroIfset" id="_macroIfset">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Latte.Macros.BlockMacros.html#_macroIfset">#</a>
+		<code><a href="source-Latte.Macros.BlockMacros.php.html#302-315" title="Go to source code">macroIfset</a>( <span><code><a href="Latte.MacroNode.html">Latte\MacroNode</a></code> <var>$node</var></span>, <span><code><a href="Latte.PhpWriter.html">Latte\PhpWriter</a></code> <var>$writer</var></span> )</code>
+
+		<div class="description short">
+			
+<p>{ifset #block}</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>{ifset #block}</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="callBlock" id="_callBlock">
+
+		<td class="attributes"><code>
+			 public static
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Latte.Macros.BlockMacros.html#_callBlock">#</a>
+		<code><a href="source-Latte.Macros.BlockMacros.php.html#321-332" title="Go to source code">callBlock</a>( <span><code><a href="stdClass.html">stdClass</a></code> <var>$context</var></span>, <span> <var>$name</var></span>, <span>array <var>$params</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Calls block.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Calls block.</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="callBlockParent" id="_callBlockParent">
+
+		<td class="attributes"><code>
+			 public static
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Latte.Macros.BlockMacros.html#_callBlockParent">#</a>
+		<code><a href="source-Latte.Macros.BlockMacros.php.html#335-346" title="Go to source code">callBlockParent</a>( <span><code><a href="stdClass.html">stdClass</a></code> <var>$context</var></span>, <span> <var>$name</var></span>, <span>array <var>$params</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Calls parent block.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Calls parent block.</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+	<table class="summary inherited">
+	<caption>Methods inherited from <a href="Latte.Macros.MacroSet.html#methods">Latte\Macros\MacroSet</a></caption>
+	<tr>
+		<td><code>
+			<a href="Latte.Macros.MacroSet.html#___construct">__construct()</a>, 
+			<a href="Latte.Macros.MacroSet.html#_addMacro">addMacro()</a>, 
+			<a href="Latte.Macros.MacroSet.html#_getCompiler">getCompiler()</a>, 
+			<a href="Latte.Macros.MacroSet.html#_nodeClosed">nodeClosed()</a>, 
+			<a href="Latte.Macros.MacroSet.html#_nodeOpened">nodeOpened()</a>
+		</code></td>
+	</tr>
+	</table>
+	<table class="summary inherited">
+	<caption>Methods inherited from <a href="Latte.Object.html#methods">Latte\Object</a></caption>
+	<tr>
+		<td><code>
+			<a href="Latte.Object.html#___call">__call()</a>, 
+			<a href="Latte.Object.html#___get">__get()</a>, 
+			<a href="Latte.Object.html#___isset">__isset()</a>, 
+			<a href="Latte.Object.html#___set">__set()</a>, 
+			<a href="Latte.Object.html#___unset">__unset()</a>
+		</code></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+	<div id="footer">
+		Nette 2.2.2 API API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+	</div>
+</div>
+</div>
+<script src="resources/combined.js?3630868369"></script>
+<script src="elementlist.js?2087501429"></script>
+</body>
+</html>

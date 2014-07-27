@@ -1,0 +1,1373 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="generator" content="ApiGen 2.8.0">
+
+	<title>Class Nette\Security\Permission | Nette 2.2.2 API</title>
+
+	<link rel="stylesheet" href="resources/style.css?3746977979">
+	<link rel="search" type="application/opensearchdescription+xml" title="Nette 2.2.2 API" href="http://api.nette.org/2.0/opensearch.xml">
+
+
+<script src='http://files.nette.org/js/analytics.js'></script><script>
+_ga.create('UA-95238-14', '.nette.org');
+_gaq.push(['_trackPageview']);
+</script>
+</head>
+
+<body>
+<div id="left">
+	<div id="menu">
+
+		<div id="groups">
+			<h3>Namespaces</h3>
+			<ul>
+				<li><a href="namespace-Latte.html">Latte<span></span></a>
+						<ul>
+				<li><a href="namespace-Latte.Loaders.html">Loaders</a>
+						</li>
+				<li><a href="namespace-Latte.Macros.html">Macros</a>
+						</li>
+				<li><a href="namespace-Latte.Runtime.html">Runtime</a>
+						</li>
+							</ul></li>
+				<li class="active"><a href="namespace-Nette.html">Nette<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.Application.html">Application<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.Application.Responses.html">Responses</a>
+						</li>
+				<li><a href="namespace-Nette.Application.Routers.html">Routers</a>
+						</li>
+				<li><a href="namespace-Nette.Application.UI.html">UI</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.Bridges.html">Bridges<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.Bridges.ApplicationLatte.html">ApplicationLatte</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.ApplicationTracy.html">ApplicationTracy</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.CacheLatte.html">CacheLatte</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.DatabaseDI.html">DatabaseDI</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.DatabaseTracy.html">DatabaseTracy</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.DITracy.html">DITracy</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.FormsLatte.html">FormsLatte</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.Framework.html">Framework</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.HttpTracy.html">HttpTracy</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.SecurityTracy.html">SecurityTracy</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.Caching.html">Caching<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.Caching.Storages.html">Storages</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.ComponentModel.html">ComponentModel</a>
+						</li>
+				<li><a href="namespace-Nette.Database.html">Database<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.Database.Drivers.html">Drivers</a>
+						</li>
+				<li><a href="namespace-Nette.Database.Reflection.html">Reflection</a>
+						</li>
+				<li><a href="namespace-Nette.Database.Table.html">Table</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.DI.html">DI<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.DI.Config.html">Config<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.DI.Config.Adapters.html">Adapters</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.DI.Extensions.html">Extensions</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.Diagnostics.html">Diagnostics</a>
+						</li>
+				<li><a href="namespace-Nette.Forms.html">Forms<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.Forms.Controls.html">Controls</a>
+						</li>
+				<li><a href="namespace-Nette.Forms.Rendering.html">Rendering</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.Http.html">Http</a>
+						</li>
+				<li><a href="namespace-Nette.Iterators.html">Iterators</a>
+						</li>
+				<li><a href="namespace-Nette.Latte.html">Latte</a>
+						</li>
+				<li><a href="namespace-Nette.Loaders.html">Loaders</a>
+						</li>
+				<li><a href="namespace-Nette.Localization.html">Localization</a>
+						</li>
+				<li><a href="namespace-Nette.Mail.html">Mail</a>
+						</li>
+				<li><a href="namespace-Nette.Neon.html">Neon</a>
+						</li>
+				<li><a href="namespace-Nette.PhpGenerator.html">PhpGenerator</a>
+						</li>
+				<li><a href="namespace-Nette.Reflection.html">Reflection</a>
+						</li>
+				<li class="active"><a href="namespace-Nette.Security.html">Security</a>
+						</li>
+				<li><a href="namespace-Nette.Templating.html">Templating</a>
+						</li>
+				<li><a href="namespace-Nette.Utils.html">Utils</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-NetteModule.html">NetteModule</a>
+						</li>
+				<li><a href="namespace-none.html">none</a>
+						</li>
+				<li><a href="namespace-Tracy.html">Tracy</a>
+						</li>
+			</ul>
+		</div>
+
+		<hr>
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="Nette.Security.Identity.html">Identity</a></li>
+				<li><a href="Nette.Security.Passwords.html">Passwords</a></li>
+				<li class="active"><a href="Nette.Security.Permission.html">Permission</a></li>
+				<li><a href="Nette.Security.SimpleAuthenticator.html">SimpleAuthenticator</a></li>
+				<li><a href="Nette.Security.User.html">User</a></li>
+			</ul>
+
+			<h3>Interfaces</h3>
+			<ul>
+				<li><a href="Nette.Security.IAuthenticator.html">IAuthenticator</a></li>
+				<li><a href="Nette.Security.IAuthorizator.html">IAuthorizator</a></li>
+				<li><a href="Nette.Security.IIdentity.html">IIdentity</a></li>
+				<li><a href="Nette.Security.IResource.html">IResource</a></li>
+				<li><a href="Nette.Security.IRole.html">IRole</a></li>
+				<li><a href="Nette.Security.IUserStorage.html">IUserStorage</a></li>
+			</ul>
+
+
+			<h3>Exceptions</h3>
+			<ul>
+				<li><a href="Nette.Security.AuthenticationException.html">AuthenticationException</a></li>
+			</ul>
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form action="http://www.google.com/cse" id="search">
+		<input type="hidden" name="cx" value="011549293477758430224:vxofa9ufnhc">
+		<input type="hidden" name="ie" value="UTF-8">
+		<input type="text" name="q" class="text">
+		<input type="submit" value="Search">
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+				<a href="namespace-Nette.Security.html" title="Summary of Nette\Security"><span>Namespace</span></a>
+			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+			<li>
+				<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions"><span>Tree</span></a>
+			</li>
+			<li>
+				<a href="deprecated.html" title="List of deprecated elements"><span>Deprecated</span></a>
+			</li>
+		</ul>
+		<ul><li><a href="http://api.nette.org/releases"><span>Other releases</span></a></li><li><a href="http://nette.org"><span>Nette homepage</span></a></li></ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Class Permission</h1>
+
+
+	<div class="description">
+	
+<p>Access control list (ACL) functionality and privileges management.</p>
+
+<p>This solution is mostly based on Zend_Acl (c) Zend Technologies USA Inc. (<a
+href="http://www.zend.com">http://www.zend.com</a>), new BSD license</p>
+
+	</div>
+
+	<dl class="tree">
+		<dd style="padding-left:0px">
+			<a href="Nette.Object.html"><span>Nette\Object</span></a>
+			
+			
+			
+		</dd>
+		<dd style="padding-left:30px">
+			<img src="resources/inherit.png" alt="Extended by">
+<b><span>Nette\Security\Permission</span></b>			
+			 implements 
+				<a href="Nette.Security.IAuthorizator.html"><span>Nette\Security\IAuthorizator</span></a>
+			
+			
+		</dd>
+	</dl>
+
+
+
+
+
+
+
+
+	<div class="info">
+		
+		
+		<b>Namespace:</b> <a href="namespace-Nette.html">Nette</a>\<a href="namespace-Nette.Security.html">Security</a><br>
+		
+
+				<b>Copyright:</b>
+				Copyright (c) 2005, 2007 Zend Technologies USA Inc.<br>
+				<b>Author:</b>
+				David Grudl<br>
+		<b>Located at</b> <a href="source-Security.Permission.php.html#13-806" title="Go to source code">Security/Permission.php</a><br>
+	</div>
+
+
+
+	<table class="summary" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="addRole" id="_addRole">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="Nette.Security.Permission.html">Nette\Security\Permission</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Security.Permission.html#_addRole">#</a>
+		<code><a href="source-Security.Permission.php.html#56-92" title="Go to source code">addRole</a>( <span>string <var>$role</var></span>, <span>string|array <var>$parents</var> = <span class="php-keyword1">NULL</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Adds a Role to the list. The most recently added parent takes precedence over
+parents that were previously added.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Adds a Role to the list. The most recently added parent takes precedence over
+parents that were previously added.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$role</var></dt>
+					<dd><code>string</code></dd>
+					<dt><var>$parents</var></dt>
+					<dd><code>string|array</code></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="Nette.Security.Permission.html">Nette\Security\Permission</a></code></code><br>
+				</div>
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><code><a href="Nette.InvalidArgumentException.html">Nette\InvalidArgumentException</a></code></code><br>
+					<code><code><a href="Nette.InvalidStateException.html">Nette\InvalidStateException</a></code></code><br>
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="hasRole" id="_hasRole">
+
+		<td class="attributes"><code>
+			 public 
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Security.Permission.html#_hasRole">#</a>
+		<code><a href="source-Security.Permission.php.html#95-104" title="Go to source code">hasRole</a>( <span>string <var>$role</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Returns TRUE if the Role exists in the list.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns TRUE if the Role exists in the list.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$role</var></dt>
+					<dd><code>string</code></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getRoles" id="_getRoles">
+
+		<td class="attributes"><code>
+			 public 
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Security.Permission.html#_getRoles">#</a>
+		<code><a href="source-Security.Permission.php.html#125-132" title="Go to source code">getRoles</a>( )</code>
+
+		<div class="description short">
+			
+<p>Returns all Roles.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns all Roles.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>array</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getRoleParents" id="_getRoleParents">
+
+		<td class="attributes"><code>
+			 public 
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Security.Permission.html#_getRoleParents">#</a>
+		<code><a href="source-Security.Permission.php.html#135-144" title="Go to source code">getRoleParents</a>( <span>string <var>$role</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Returns existing Role's parents ordered by ascending priority.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns existing Role's parents ordered by ascending priority.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$role</var></dt>
+					<dd><code>string</code></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>array</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="roleInheritsFrom" id="_roleInheritsFrom">
+
+		<td class="attributes"><code>
+			 public 
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Security.Permission.html#_roleInheritsFrom">#</a>
+		<code><a href="source-Security.Permission.php.html#147-174" title="Go to source code">roleInheritsFrom</a>( <span>string <var>$role</var></span>, <span>string <var>$inherit</var></span>, <span>boolean <var>$onlyParents</var> = <span class="php-keyword1">FALSE</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Returns TRUE if $role inherits from $inherit. If $onlyParents is TRUE, then
+$role must inherit directly from $inherit.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns TRUE if $role inherits from $inherit. If $onlyParents is TRUE, then
+$role must inherit directly from $inherit.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$role</var></dt>
+					<dd><code>string</code></dd>
+					<dt><var>$inherit</var></dt>
+					<dd><code>string</code></dd>
+					<dt><var>$onlyParents</var></dt>
+					<dd><code>boolean</code></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br>
+				</div>
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><code><a href="Nette.InvalidStateException.html">Nette\InvalidStateException</a></code></code><br>
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="removeRole" id="_removeRole">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="Nette.Security.Permission.html">Nette\Security\Permission</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Security.Permission.html#_removeRole">#</a>
+		<code><a href="source-Security.Permission.php.html#177-215" title="Go to source code">removeRole</a>( <span>string <var>$role</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Removes the Role from the list.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Removes the Role from the list.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$role</var></dt>
+					<dd><code>string</code></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="Nette.Security.Permission.html">Nette\Security\Permission</a></code></code><br>
+				</div>
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><code><a href="Nette.InvalidStateException.html">Nette\InvalidStateException</a></code></code><br>
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="removeAllRoles" id="_removeAllRoles">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="Nette.Security.Permission.html">Nette\Security\Permission</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Security.Permission.html#_removeAllRoles">#</a>
+		<code><a href="source-Security.Permission.php.html#218-238" title="Go to source code">removeAllRoles</a>( )</code>
+
+		<div class="description short">
+			
+<p>Removes all Roles from the list.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Removes all Roles from the list.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="Nette.Security.Permission.html">Nette\Security\Permission</a></code></code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="addResource" id="_addResource">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="Nette.Security.Permission.html">Nette\Security\Permission</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Security.Permission.html#_addResource">#</a>
+		<code><a href="source-Security.Permission.php.html#244-272" title="Go to source code">addResource</a>( <span>string <var>$resource</var></span>, <span>string <var>$parent</var> = <span class="php-keyword1">NULL</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Adds a Resource having an identifier unique to the list.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Adds a Resource having an identifier unique to the list.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$resource</var></dt>
+					<dd><code>string</code></dd>
+					<dt><var>$parent</var></dt>
+					<dd><code>string</code></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="Nette.Security.Permission.html">Nette\Security\Permission</a></code></code><br>
+				</div>
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><code><a href="Nette.InvalidArgumentException.html">Nette\InvalidArgumentException</a></code></code><br>
+					<code><code><a href="Nette.InvalidStateException.html">Nette\InvalidStateException</a></code></code><br>
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="hasResource" id="_hasResource">
+
+		<td class="attributes"><code>
+			 public 
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Security.Permission.html#_hasResource">#</a>
+		<code><a href="source-Security.Permission.php.html#275-284" title="Go to source code">hasResource</a>( <span>string <var>$resource</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Returns TRUE if the Resource exists in the list.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns TRUE if the Resource exists in the list.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$resource</var></dt>
+					<dd><code>string</code></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getResources" id="_getResources">
+
+		<td class="attributes"><code>
+			 public 
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Security.Permission.html#_getResources">#</a>
+		<code><a href="source-Security.Permission.php.html#305-312" title="Go to source code">getResources</a>( )</code>
+
+		<div class="description short">
+			
+<p>Returns all Resources.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns all Resources.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>array</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="resourceInheritsFrom" id="_resourceInheritsFrom">
+
+		<td class="attributes"><code>
+			 public 
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Security.Permission.html#_resourceInheritsFrom">#</a>
+		<code><a href="source-Security.Permission.php.html#315-350" title="Go to source code">resourceInheritsFrom</a>( <span>string <var>$resource</var></span>, <span>string <var>$inherit</var></span>, <span>boolean <var>$onlyParent</var> = <span class="php-keyword1">FALSE</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Returns TRUE if $resource inherits from $inherit. If $onlyParents is TRUE,
+then $resource must inherit directly from $inherit.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns TRUE if $resource inherits from $inherit. If $onlyParents is TRUE,
+then $resource must inherit directly from $inherit.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$resource</var></dt>
+					<dd><code>string</code></dd>
+					<dt><var>$inherit</var></dt>
+					<dd><code>string</code></dd>
+					<dt><var>$onlyParent</var></dt>
+					<dd><code>boolean</code></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br>
+				</div>
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><code><a href="Nette.InvalidStateException.html">Nette\InvalidStateException</a></code></code><br>
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="removeResource" id="_removeResource">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="Nette.Security.Permission.html">Nette\Security\Permission</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Security.Permission.html#_removeResource">#</a>
+		<code><a href="source-Security.Permission.php.html#353-385" title="Go to source code">removeResource</a>( <span>string <var>$resource</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Removes a Resource and all of its children.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Removes a Resource and all of its children.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$resource</var></dt>
+					<dd><code>string</code></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="Nette.Security.Permission.html">Nette\Security\Permission</a></code></code><br>
+				</div>
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><code><a href="Nette.InvalidStateException.html">Nette\InvalidStateException</a></code></code><br>
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="removeAllResources" id="_removeAllResources">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="Nette.Security.Permission.html">Nette\Security\Permission</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Security.Permission.html#_removeAllResources">#</a>
+		<code><a href="source-Security.Permission.php.html#388-404" title="Go to source code">removeAllResources</a>( )</code>
+
+		<div class="description short">
+			
+<p>Removes all Resources.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Removes all Resources.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="Nette.Security.Permission.html">Nette\Security\Permission</a></code></code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="allow" id="_allow">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="Nette.Security.Permission.html">Nette\Security\Permission</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Security.Permission.html#_allow">#</a>
+		<code><a href="source-Security.Permission.php.html#410-424" title="Go to source code">allow</a>( <span>string|array|<code><a href="Nette.Security.IAuthorizator.html#ALL">Nette\Security\IAuthorizator::<b>ALL</b></a></code> <var>$roles</var> = <code><a href="Nette.Security.IAuthorizator.html#ALL">Nette\Security\IAuthorizator::<b>ALL</b></a></code></span>, <span>string|array|<code><a href="Nette.Security.IAuthorizator.html#ALL">Nette\Security\IAuthorizator::<b>ALL</b></a></code> <var>$resources</var> = <code><a href="Nette.Security.IAuthorizator.html#ALL">Nette\Security\IAuthorizator::<b>ALL</b></a></code></span>, <span>string|array|<code><a href="Nette.Security.IAuthorizator.html#ALL">Nette\Security\IAuthorizator::<b>ALL</b></a></code> <var>$privileges</var> = <code><a href="Nette.Security.IAuthorizator.html#ALL">Nette\Security\IAuthorizator::<b>ALL</b></a></code></span>, <span>callable <var>$assertion</var> = <span class="php-keyword1">NULL</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Allows one or more Roles access to [certain $privileges upon] the specified
+Resource(s). If $assertion is provided, then it must return TRUE in order for
+rule to apply.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Allows one or more Roles access to [certain $privileges upon] the specified
+Resource(s). If $assertion is provided, then it must return TRUE in order for
+rule to apply.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$roles</var></dt>
+					<dd><code>string|array|<code><a href="Nette.Security.IAuthorizator.html#ALL">Nette\Security\IAuthorizator::<b>ALL</b></a></code></code><br>roles</dd>
+					<dt><var>$resources</var></dt>
+					<dd><code>string|array|<code><a href="Nette.Security.IAuthorizator.html#ALL">Nette\Security\IAuthorizator::<b>ALL</b></a></code></code><br>resources</dd>
+					<dt><var>$privileges</var></dt>
+					<dd><code>string|array|<code><a href="Nette.Security.IAuthorizator.html#ALL">Nette\Security\IAuthorizator::<b>ALL</b></a></code></code><br>privileges</dd>
+					<dt><var>$assertion</var></dt>
+					<dd><code>callable</code><br>assertion</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="Nette.Security.Permission.html">Nette\Security\Permission</a></code></code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="deny" id="_deny">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="Nette.Security.Permission.html">Nette\Security\Permission</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Security.Permission.html#_deny">#</a>
+		<code><a href="source-Security.Permission.php.html#427-441" title="Go to source code">deny</a>( <span>string|array|<code><a href="Nette.Security.IAuthorizator.html#ALL">Nette\Security\IAuthorizator::<b>ALL</b></a></code> <var>$roles</var> = <code><a href="Nette.Security.IAuthorizator.html#ALL">Nette\Security\IAuthorizator::<b>ALL</b></a></code></span>, <span>string|array|<code><a href="Nette.Security.IAuthorizator.html#ALL">Nette\Security\IAuthorizator::<b>ALL</b></a></code> <var>$resources</var> = <code><a href="Nette.Security.IAuthorizator.html#ALL">Nette\Security\IAuthorizator::<b>ALL</b></a></code></span>, <span>string|array|<code><a href="Nette.Security.IAuthorizator.html#ALL">Nette\Security\IAuthorizator::<b>ALL</b></a></code> <var>$privileges</var> = <code><a href="Nette.Security.IAuthorizator.html#ALL">Nette\Security\IAuthorizator::<b>ALL</b></a></code></span>, <span>callable <var>$assertion</var> = <span class="php-keyword1">NULL</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Denies one or more Roles access to [certain $privileges upon] the specified
+Resource(s). If $assertion is provided, then it must return TRUE in order for
+rule to apply.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Denies one or more Roles access to [certain $privileges upon] the specified
+Resource(s). If $assertion is provided, then it must return TRUE in order for
+rule to apply.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$roles</var></dt>
+					<dd><code>string|array|<code><a href="Nette.Security.IAuthorizator.html#ALL">Nette\Security\IAuthorizator::<b>ALL</b></a></code></code><br>roles</dd>
+					<dt><var>$resources</var></dt>
+					<dd><code>string|array|<code><a href="Nette.Security.IAuthorizator.html#ALL">Nette\Security\IAuthorizator::<b>ALL</b></a></code></code><br>resources</dd>
+					<dt><var>$privileges</var></dt>
+					<dd><code>string|array|<code><a href="Nette.Security.IAuthorizator.html#ALL">Nette\Security\IAuthorizator::<b>ALL</b></a></code></code><br>privileges</dd>
+					<dt><var>$assertion</var></dt>
+					<dd><code>callable</code><br>assertion</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="Nette.Security.Permission.html">Nette\Security\Permission</a></code></code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="removeAllow" id="_removeAllow">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="Nette.Security.Permission.html">Nette\Security\Permission</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Security.Permission.html#_removeAllow">#</a>
+		<code><a href="source-Security.Permission.php.html#444-456" title="Go to source code">removeAllow</a>( <span>string|array|<code><a href="Nette.Security.IAuthorizator.html#ALL">Nette\Security\IAuthorizator::<b>ALL</b></a></code> <var>$roles</var> = <code><a href="Nette.Security.IAuthorizator.html#ALL">Nette\Security\IAuthorizator::<b>ALL</b></a></code></span>, <span>string|array|<code><a href="Nette.Security.IAuthorizator.html#ALL">Nette\Security\IAuthorizator::<b>ALL</b></a></code> <var>$resources</var> = <code><a href="Nette.Security.IAuthorizator.html#ALL">Nette\Security\IAuthorizator::<b>ALL</b></a></code></span>, <span>string|array|<code><a href="Nette.Security.IAuthorizator.html#ALL">Nette\Security\IAuthorizator::<b>ALL</b></a></code> <var>$privileges</var> = <code><a href="Nette.Security.IAuthorizator.html#ALL">Nette\Security\IAuthorizator::<b>ALL</b></a></code></span> )</code>
+
+		<div class="description short">
+			
+<p>Removes "allow" permissions from the list in the context of the given Roles,
+Resources, and privileges.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Removes "allow" permissions from the list in the context of the given Roles,
+Resources, and privileges.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$roles</var></dt>
+					<dd><code>string|array|<code><a href="Nette.Security.IAuthorizator.html#ALL">Nette\Security\IAuthorizator::<b>ALL</b></a></code></code><br>roles</dd>
+					<dt><var>$resources</var></dt>
+					<dd><code>string|array|<code><a href="Nette.Security.IAuthorizator.html#ALL">Nette\Security\IAuthorizator::<b>ALL</b></a></code></code><br>resources</dd>
+					<dt><var>$privileges</var></dt>
+					<dd><code>string|array|<code><a href="Nette.Security.IAuthorizator.html#ALL">Nette\Security\IAuthorizator::<b>ALL</b></a></code></code><br>privileges</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="Nette.Security.Permission.html">Nette\Security\Permission</a></code></code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="removeDeny" id="_removeDeny">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="Nette.Security.Permission.html">Nette\Security\Permission</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Security.Permission.html#_removeDeny">#</a>
+		<code><a href="source-Security.Permission.php.html#459-471" title="Go to source code">removeDeny</a>( <span>string|array|<code><a href="Nette.Security.IAuthorizator.html#ALL">Nette\Security\IAuthorizator::<b>ALL</b></a></code> <var>$roles</var> = <code><a href="Nette.Security.IAuthorizator.html#ALL">Nette\Security\IAuthorizator::<b>ALL</b></a></code></span>, <span>string|array|<code><a href="Nette.Security.IAuthorizator.html#ALL">Nette\Security\IAuthorizator::<b>ALL</b></a></code> <var>$resources</var> = <code><a href="Nette.Security.IAuthorizator.html#ALL">Nette\Security\IAuthorizator::<b>ALL</b></a></code></span>, <span>string|array|<code><a href="Nette.Security.IAuthorizator.html#ALL">Nette\Security\IAuthorizator::<b>ALL</b></a></code> <var>$privileges</var> = <code><a href="Nette.Security.IAuthorizator.html#ALL">Nette\Security\IAuthorizator::<b>ALL</b></a></code></span> )</code>
+
+		<div class="description short">
+			
+<p>Removes "deny" restrictions from the list in the context of the given Roles,
+Resources, and privileges.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Removes "deny" restrictions from the list in the context of the given Roles,
+Resources, and privileges.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$roles</var></dt>
+					<dd><code>string|array|<code><a href="Nette.Security.IAuthorizator.html#ALL">Nette\Security\IAuthorizator::<b>ALL</b></a></code></code><br>roles</dd>
+					<dt><var>$resources</var></dt>
+					<dd><code>string|array|<code><a href="Nette.Security.IAuthorizator.html#ALL">Nette\Security\IAuthorizator::<b>ALL</b></a></code></code><br>resources</dd>
+					<dt><var>$privileges</var></dt>
+					<dd><code>string|array|<code><a href="Nette.Security.IAuthorizator.html#ALL">Nette\Security\IAuthorizator::<b>ALL</b></a></code></code><br>privileges</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="Nette.Security.Permission.html">Nette\Security\Permission</a></code></code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setRule" id="_setRule">
+
+		<td class="attributes"><code>
+			 protected 
+			<code><a href="Nette.Security.Permission.html">Nette\Security\Permission</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Security.Permission.html#_setRule">#</a>
+		<code><a href="source-Security.Permission.php.html#474-578" title="Go to source code">setRule</a>( <span>boolean <var>$toAdd</var></span>, <span>boolean <var>$type</var></span>, <span>string|array|<code><a href="Nette.Security.IAuthorizator.html#ALL">Nette\Security\IAuthorizator::<b>ALL</b></a></code> <var>$roles</var></span>, <span>string|array|<code><a href="Nette.Security.IAuthorizator.html#ALL">Nette\Security\IAuthorizator::<b>ALL</b></a></code> <var>$resources</var></span>, <span>string|array|<code><a href="Nette.Security.IAuthorizator.html#ALL">Nette\Security\IAuthorizator::<b>ALL</b></a></code> <var>$privileges</var></span>, <span>callable <var>$assertion</var> = <span class="php-keyword1">NULL</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Performs operations on Access Control List rules.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Performs operations on Access Control List rules.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$toAdd</var></dt>
+					<dd><code>boolean</code><br>operation add?</dd>
+					<dt><var>$type</var></dt>
+					<dd><code>boolean</code><br>type</dd>
+					<dt><var>$roles</var></dt>
+					<dd><code>string|array|<code><a href="Nette.Security.IAuthorizator.html#ALL">Nette\Security\IAuthorizator::<b>ALL</b></a></code></code><br>roles</dd>
+					<dt><var>$resources</var></dt>
+					<dd><code>string|array|<code><a href="Nette.Security.IAuthorizator.html#ALL">Nette\Security\IAuthorizator::<b>ALL</b></a></code></code><br>resources</dd>
+					<dt><var>$privileges</var></dt>
+					<dd><code>string|array|<code><a href="Nette.Security.IAuthorizator.html#ALL">Nette\Security\IAuthorizator::<b>ALL</b></a></code></code><br>privileges</dd>
+					<dt><var>$assertion</var></dt>
+					<dd><code>callable</code><br>assertion</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="Nette.Security.Permission.html">Nette\Security\Permission</a></code></code><br>
+				</div>
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><code><a href="Nette.InvalidStateException.html">Nette\InvalidStateException</a></code></code><br>
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="isAllowed" id="_isAllowed">
+
+		<td class="attributes"><code>
+			 public 
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Security.Permission.html#_isAllowed">#</a>
+		<code><a href="source-Security.Permission.php.html#584-647" title="Go to source code">isAllowed</a>( <span>string|<code><a href="Nette.Security.IAuthorizator.html#ALL">Nette\Security\IAuthorizator::<b>ALL</b></a></code>|<code><a href="Nette.Security.IRole.html">Nette\Security\IRole</a></code> <var>$role</var> = <code><a href="Nette.Security.IAuthorizator.html#ALL">Nette\Security\IAuthorizator::<b>ALL</b></a></code></span>, <span>string|<code><a href="Nette.Security.IAuthorizator.html#ALL">Nette\Security\IAuthorizator::<b>ALL</b></a></code>|<code><a href="Nette.Security.IResource.html">Nette\Security\IResource</a></code> <var>$resource</var> = <code><a href="Nette.Security.IAuthorizator.html#ALL">Nette\Security\IAuthorizator::<b>ALL</b></a></code></span>, <span>string|<code><a href="Nette.Security.IAuthorizator.html#ALL">Nette\Security\IAuthorizator::<b>ALL</b></a></code> <var>$privilege</var> = <code><a href="Nette.Security.IAuthorizator.html#ALL">Nette\Security\IAuthorizator::<b>ALL</b></a></code></span> )</code>
+
+		<div class="description short">
+			
+<p>Returns TRUE if and only if the Role has access to [certain $privileges upon]
+the Resource.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns TRUE if and only if the Role has access to [certain $privileges upon]
+the Resource.</p>
+
+<p>This method checks Role inheritance using a depth-first traversal of the Role
+list. The highest priority parent (i.e., the parent most recently added) is
+checked first, and its respective parents are checked similarly before the
+lower-priority parents of the Role are checked.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$role</var></dt>
+					<dd><code>string|<code><a href="Nette.Security.IAuthorizator.html#ALL">Nette\Security\IAuthorizator::<b>ALL</b></a></code>|<code><a href="Nette.Security.IRole.html">Nette\Security\IRole</a></code></code><br>role</dd>
+					<dt><var>$resource</var></dt>
+					<dd><code>string|<code><a href="Nette.Security.IAuthorizator.html#ALL">Nette\Security\IAuthorizator::<b>ALL</b></a></code>|<code><a href="Nette.Security.IResource.html">Nette\Security\IResource</a></code></code><br>resource</dd>
+					<dt><var>$privilege</var></dt>
+					<dd><code>string|<code><a href="Nette.Security.IAuthorizator.html#ALL">Nette\Security\IAuthorizator::<b>ALL</b></a></code></code><br>privilege</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br>
+				</div>
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><code><a href="Nette.InvalidStateException.html">Nette\InvalidStateException</a></code></code><br>
+				</div>
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="Nette.Security.IAuthorizator.html#_isAllowed">Nette\Security\IAuthorizator::isAllowed()</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getQueriedRole" id="_getQueriedRole">
+
+		<td class="attributes"><code>
+			 public 
+			mixed
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Security.Permission.html#_getQueriedRole">#</a>
+		<code><a href="source-Security.Permission.php.html#650-657" title="Go to source code">getQueriedRole</a>( )</code>
+
+		<div class="description short">
+			
+<p>Returns real currently queried Role. Use by assertion.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns real currently queried Role. Use by assertion.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>mixed</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getQueriedResource" id="_getQueriedResource">
+
+		<td class="attributes"><code>
+			 public 
+			mixed
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Security.Permission.html#_getQueriedResource">#</a>
+		<code><a href="source-Security.Permission.php.html#660-667" title="Go to source code">getQueriedResource</a>( )</code>
+
+		<div class="description short">
+			
+<p>Returns real currently queried Resource. Use by assertion.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns real currently queried Resource. Use by assertion.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>mixed</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+	<table class="summary inherited">
+	<caption>Methods inherited from <a href="Nette.Object.html#methods">Nette\Object</a></caption>
+	<tr>
+		<td><code>
+			<a href="Nette.Object.html#___call">__call()</a>, 
+			<a href="Nette.Object.html#___callStatic">__callStatic()</a>, 
+			<a href="Nette.Object.html#___get">__get()</a>, 
+			<a href="Nette.Object.html#___isset">__isset()</a>, 
+			<a href="Nette.Object.html#___set">__set()</a>, 
+			<a href="Nette.Object.html#___unset">__unset()</a>, 
+			<a href="Nette.Object.html#_extensionMethod">extensionMethod()</a>, 
+			<a href="Nette.Object.html#_getReflection">getReflection()</a>
+		</code></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+	<table class="summary inherited">
+	<caption>Constants inherited from <a href="Nette.Security.IAuthorizator.html#constants">Nette\Security\IAuthorizator</a></caption>
+	<tr>
+		<td><code>
+			<a href="Nette.Security.IAuthorizator.html#ALL"><b>ALL</b></a>, 
+			<a href="Nette.Security.IAuthorizator.html#ALLOW"><b>ALLOW</b></a>, 
+			<a href="Nette.Security.IAuthorizator.html#DENY"><b>DENY</b></a>
+		</code></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+	<table class="summary" id="magicProperties">
+	<caption>Magic properties summary</caption>
+	<tr data-order="roles" id="m$roles">
+		<td class="attributes"><code>
+			public  read-only
+			array
+		</code></td>
+
+		<td class="name">
+				<a href="source-Security.Permission.php.html#21" title="Go to source code"><var>$roles</var></a>
+		</td>
+		<td class="description"><div>
+			<a href="Nette.Security.Permission.html#m$roles" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="resources" id="m$resources">
+		<td class="attributes"><code>
+			public  read-only
+			array
+		</code></td>
+
+		<td class="name">
+				<a href="source-Security.Permission.php.html#22" title="Go to source code"><var>$resources</var></a>
+		</td>
+		<td class="description"><div>
+			<a href="Nette.Security.Permission.html#m$resources" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="queriedRole" id="m$queriedRole">
+		<td class="attributes"><code>
+			public  read-only
+			mixed
+		</code></td>
+
+		<td class="name">
+				<a href="source-Security.Permission.php.html#23" title="Go to source code"><var>$queriedRole</var></a>
+		</td>
+		<td class="description"><div>
+			<a href="Nette.Security.Permission.html#m$queriedRole" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="queriedResource" id="m$queriedResource">
+		<td class="attributes"><code>
+			public  read-only
+			mixed
+		</code></td>
+
+		<td class="name">
+				<a href="source-Security.Permission.php.html#24" title="Go to source code"><var>$queriedResource</var></a>
+		</td>
+		<td class="description"><div>
+			<a href="Nette.Security.Permission.html#m$queriedResource" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	</table>
+
+	<table class="summary inherited">
+	<caption>Magic properties inherited from <a href="Nette.Object.html#properties">Nette\Object</a></caption>
+	<tr>
+		<td><code>
+			<a href="Nette.Object.html#m$reflection"><var>$reflection</var></a>
+		</code></td>
+	</tr>
+	</table>
+
+
+</div>
+
+	<div id="footer">
+		Nette 2.2.2 API API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+	</div>
+</div>
+</div>
+<script src="resources/combined.js?3630868369"></script>
+<script src="elementlist.js?2087501429"></script>
+</body>
+</html>

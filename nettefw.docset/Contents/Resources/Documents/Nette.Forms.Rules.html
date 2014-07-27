@@ -1,0 +1,891 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="generator" content="ApiGen 2.8.0">
+
+	<title>Class Nette\Forms\Rules | Nette 2.2.2 API</title>
+
+	<link rel="stylesheet" href="resources/style.css?3746977979">
+	<link rel="search" type="application/opensearchdescription+xml" title="Nette 2.2.2 API" href="http://api.nette.org/2.0/opensearch.xml">
+
+
+<script src='http://files.nette.org/js/analytics.js'></script><script>
+_ga.create('UA-95238-14', '.nette.org');
+_gaq.push(['_trackPageview']);
+</script>
+</head>
+
+<body>
+<div id="left">
+	<div id="menu">
+
+		<div id="groups">
+			<h3>Namespaces</h3>
+			<ul>
+				<li><a href="namespace-Latte.html">Latte<span></span></a>
+						<ul>
+				<li><a href="namespace-Latte.Loaders.html">Loaders</a>
+						</li>
+				<li><a href="namespace-Latte.Macros.html">Macros</a>
+						</li>
+				<li><a href="namespace-Latte.Runtime.html">Runtime</a>
+						</li>
+							</ul></li>
+				<li class="active"><a href="namespace-Nette.html">Nette<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.Application.html">Application<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.Application.Responses.html">Responses</a>
+						</li>
+				<li><a href="namespace-Nette.Application.Routers.html">Routers</a>
+						</li>
+				<li><a href="namespace-Nette.Application.UI.html">UI</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.Bridges.html">Bridges<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.Bridges.ApplicationLatte.html">ApplicationLatte</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.ApplicationTracy.html">ApplicationTracy</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.CacheLatte.html">CacheLatte</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.DatabaseDI.html">DatabaseDI</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.DatabaseTracy.html">DatabaseTracy</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.DITracy.html">DITracy</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.FormsLatte.html">FormsLatte</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.Framework.html">Framework</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.HttpTracy.html">HttpTracy</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.SecurityTracy.html">SecurityTracy</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.Caching.html">Caching<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.Caching.Storages.html">Storages</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.ComponentModel.html">ComponentModel</a>
+						</li>
+				<li><a href="namespace-Nette.Database.html">Database<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.Database.Drivers.html">Drivers</a>
+						</li>
+				<li><a href="namespace-Nette.Database.Reflection.html">Reflection</a>
+						</li>
+				<li><a href="namespace-Nette.Database.Table.html">Table</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.DI.html">DI<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.DI.Config.html">Config<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.DI.Config.Adapters.html">Adapters</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.DI.Extensions.html">Extensions</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.Diagnostics.html">Diagnostics</a>
+						</li>
+				<li class="active"><a href="namespace-Nette.Forms.html">Forms<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.Forms.Controls.html">Controls</a>
+						</li>
+				<li><a href="namespace-Nette.Forms.Rendering.html">Rendering</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.Http.html">Http</a>
+						</li>
+				<li><a href="namespace-Nette.Iterators.html">Iterators</a>
+						</li>
+				<li><a href="namespace-Nette.Latte.html">Latte</a>
+						</li>
+				<li><a href="namespace-Nette.Loaders.html">Loaders</a>
+						</li>
+				<li><a href="namespace-Nette.Localization.html">Localization</a>
+						</li>
+				<li><a href="namespace-Nette.Mail.html">Mail</a>
+						</li>
+				<li><a href="namespace-Nette.Neon.html">Neon</a>
+						</li>
+				<li><a href="namespace-Nette.PhpGenerator.html">PhpGenerator</a>
+						</li>
+				<li><a href="namespace-Nette.Reflection.html">Reflection</a>
+						</li>
+				<li><a href="namespace-Nette.Security.html">Security</a>
+						</li>
+				<li><a href="namespace-Nette.Templating.html">Templating</a>
+						</li>
+				<li><a href="namespace-Nette.Utils.html">Utils</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-NetteModule.html">NetteModule</a>
+						</li>
+				<li><a href="namespace-none.html">none</a>
+						</li>
+				<li><a href="namespace-Tracy.html">Tracy</a>
+						</li>
+			</ul>
+		</div>
+
+		<hr>
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="Nette.Forms.Container.html">Container</a></li>
+				<li><a href="Nette.Forms.ControlGroup.html">ControlGroup</a></li>
+				<li><a href="Nette.Forms.Form.html">Form</a></li>
+				<li><a href="Nette.Forms.Helpers.html">Helpers</a></li>
+				<li><a href="Nette.Forms.Rule.html">Rule</a></li>
+				<li class="active"><a href="Nette.Forms.Rules.html">Rules</a></li>
+			</ul>
+
+			<h3>Interfaces</h3>
+			<ul>
+				<li><a href="Nette.Forms.IControl.html">IControl</a></li>
+				<li><a href="Nette.Forms.IFormRenderer.html">IFormRenderer</a></li>
+				<li><a href="Nette.Forms.ISubmitterControl.html">ISubmitterControl</a></li>
+			</ul>
+
+
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form action="http://www.google.com/cse" id="search">
+		<input type="hidden" name="cx" value="011549293477758430224:vxofa9ufnhc">
+		<input type="hidden" name="ie" value="UTF-8">
+		<input type="text" name="q" class="text">
+		<input type="submit" value="Search">
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+				<a href="namespace-Nette.Forms.html" title="Summary of Nette\Forms"><span>Namespace</span></a>
+			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+			<li>
+				<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions"><span>Tree</span></a>
+			</li>
+			<li>
+				<a href="deprecated.html" title="List of deprecated elements"><span>Deprecated</span></a>
+			</li>
+		</ul>
+		<ul><li><a href="http://api.nette.org/releases"><span>Other releases</span></a></li><li><a href="http://nette.org"><span>Nette homepage</span></a></li></ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Class Rules</h1>
+
+
+	<div class="description">
+	
+<p>List of validation &amp; condition rules.</p>
+
+	</div>
+
+	<dl class="tree">
+		<dd style="padding-left:0px">
+			<a href="Nette.Object.html"><span>Nette\Object</span></a>
+			
+			
+			
+		</dd>
+		<dd style="padding-left:30px">
+			<img src="resources/inherit.png" alt="Extended by">
+<b><span>Nette\Forms\Rules</span></b>			
+			 implements 
+				<a href="IteratorAggregate.html"><span>IteratorAggregate</span></a>
+			
+			
+		</dd>
+	</dl>
+
+
+
+
+
+
+
+
+	<div class="info">
+		
+		
+		<b>Namespace:</b> <a href="namespace-Nette.html">Nette</a>\<a href="namespace-Nette.Forms.html">Forms</a><br>
+		
+
+				<b>Author:</b>
+				David Grudl<br>
+		<b>Located at</b> <a href="source-Forms.Rules.php.html#13-332" title="Go to source code">Forms/Rules.php</a><br>
+	</div>
+
+
+
+	<table class="summary" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="__construct" id="___construct">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Forms.Rules.html#___construct">#</a>
+		<code><a href="source-Forms.Rules.php.html#63-66" title="Go to source code">__construct</a>( <span><code><a href="Nette.Forms.IControl.html">Nette\Forms\IControl</a></code> <var>$control</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setRequired" id="_setRequired">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="Nette.Forms.Rules.html">Nette\Forms\Rules</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Forms.Rules.html#_setRequired">#</a>
+		<code><a href="source-Forms.Rules.php.html#69-82" title="Go to source code">setRequired</a>( <span>mixed <var>$value</var> = <span class="php-keyword1">TRUE</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Makes control mandatory.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Makes control mandatory.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$value</var></dt>
+					<dd><code>mixed</code><br>state or error message</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="Nette.Forms.Rules.html">Nette\Forms\Rules</a></code></code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="isRequired" id="_isRequired">
+
+		<td class="attributes"><code>
+			 public 
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Forms.Rules.html#_isRequired">#</a>
+		<code><a href="source-Forms.Rules.php.html#85-92" title="Go to source code">isRequired</a>( )</code>
+
+		<div class="description short">
+			
+<p>Is control mandatory?</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Is control mandatory?</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="addRule" id="_addRule">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="Nette.Forms.Rules.html">Nette\Forms\Rules</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Forms.Rules.html#_addRule">#</a>
+		<code><a href="source-Forms.Rules.php.html#95-116" title="Go to source code">addRule</a>( <span>mixed <var>$validator</var></span>, <span>string <var>$message</var> = <span class="php-keyword1">NULL</span></span>, <span>mixed <var>$arg</var> = <span class="php-keyword1">NULL</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Adds a validation rule for the current control.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Adds a validation rule for the current control.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$validator</var></dt>
+					<dd><code>mixed</code><br>rule type</dd>
+					<dt><var>$message</var></dt>
+					<dd><code>string</code><br>message to display for invalid data</dd>
+					<dt><var>$arg</var></dt>
+					<dd><code>mixed</code><br>optional rule arguments</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="Nette.Forms.Rules.html">Nette\Forms\Rules</a></code></code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="addCondition" id="_addCondition">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="Nette.Forms.Rules.html">Nette\Forms\Rules</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Forms.Rules.html#_addCondition">#</a>
+		<code><a href="source-Forms.Rules.php.html#119-128" title="Go to source code">addCondition</a>( <span>mixed <var>$validator</var></span>, <span>mixed <var>$arg</var> = <span class="php-keyword1">NULL</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Adds a validation condition and returns new branch.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Adds a validation condition and returns new branch.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$validator</var></dt>
+					<dd><code>mixed</code><br>condition type</dd>
+					<dt><var>$arg</var></dt>
+					<dd><code>mixed</code><br>optional condition arguments</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="Nette.Forms.Rules.html">Nette\Forms\Rules</a></code></code><br>new branch<br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="addConditionOn" id="_addConditionOn">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="Nette.Forms.Rules.html">Nette\Forms\Rules</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Forms.Rules.html#_addConditionOn">#</a>
+		<code><a href="source-Forms.Rules.php.html#131-150" title="Go to source code">addConditionOn</a>( <span><code><a href="Nette.Forms.IControl.html">Nette\Forms\IControl</a></code> <var>$control</var></span>, <span>mixed <var>$validator</var></span>, <span>mixed <var>$arg</var> = <span class="php-keyword1">NULL</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Adds a validation condition on specified control a returns new branch.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Adds a validation condition on specified control a returns new branch.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$control</var></dt>
+					<dd><code><code><a href="Nette.Forms.IControl.html">Nette\Forms\IControl</a></code></code><br>form control</dd>
+					<dt><var>$validator</var></dt>
+					<dd><code>mixed</code><br>condition type</dd>
+					<dt><var>$arg</var></dt>
+					<dd><code>mixed</code><br>optional condition arguments</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="Nette.Forms.Rules.html">Nette\Forms\Rules</a></code></code><br>new branch<br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="elseCondition" id="_elseCondition">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="Nette.Forms.Rules.html">Nette\Forms\Rules</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Forms.Rules.html#_elseCondition">#</a>
+		<code><a href="source-Forms.Rules.php.html#153-165" title="Go to source code">elseCondition</a>( )</code>
+
+		<div class="description short">
+			
+<p>Adds a else statement.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Adds a else statement.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="Nette.Forms.Rules.html">Nette\Forms\Rules</a></code></code><br>else branch<br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="endCondition" id="_endCondition">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="Nette.Forms.Rules.html">Nette\Forms\Rules</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Forms.Rules.html#_endCondition">#</a>
+		<code><a href="source-Forms.Rules.php.html#168-175" title="Go to source code">endCondition</a>( )</code>
+
+		<div class="description short">
+			
+<p>Ends current validation condition.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Ends current validation condition.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="Nette.Forms.Rules.html">Nette\Forms\Rules</a></code></code><br>parent branch<br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="toggle" id="_toggle">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="Nette.Forms.Rules.html">Nette\Forms\Rules</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Forms.Rules.html#_toggle">#</a>
+		<code><a href="source-Forms.Rules.php.html#178-188" title="Go to source code">toggle</a>( <span>string <var>$id</var></span>, <span>boolean <var>$hide</var> = <span class="php-keyword1">TRUE</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Toggles HTML element visibility.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Toggles HTML element visibility.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$id</var></dt>
+					<dd><code>string</code><br>element id</dd>
+					<dt><var>$hide</var></dt>
+					<dd><code>boolean</code><br>hide element?</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="Nette.Forms.Rules.html">Nette\Forms\Rules</a></code></code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getToggles" id="_getToggles">
+
+		<td class="attributes"><code>
+			 public 
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Forms.Rules.html#_getToggles">#</a>
+		<code><a href="source-Forms.Rules.php.html#191-198" title="Go to source code">getToggles</a>( <span>boolean <var>$actual</var> = <span class="php-keyword1">FALSE</span></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$actual</var></dt>
+					<dd><code>boolean</code></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>array</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="validate" id="_validate">
+
+		<td class="attributes"><code>
+			 public 
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Forms.Rules.html#_validate">#</a>
+		<code><a href="source-Forms.Rules.php.html#220-238" title="Go to source code">validate</a>( )</code>
+
+		<div class="description short">
+			
+<p>Validates against ruleset.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Validates against ruleset.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="validateRule" id="_validateRule">
+
+		<td class="attributes"><code>
+			 public static
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Forms.Rules.html#_validateRule">#</a>
+		<code><a href="source-Forms.Rules.php.html#241-253" title="Go to source code">validateRule</a>( <span><code><a href="Nette.Forms.Rule.html">Nette\Forms\Rule</a></code> <var>$rule</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Validates single rule.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Validates single rule.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getIterator" id="_getIterator">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="ArrayIterator.html">ArrayIterator</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Forms.Rules.html#_getIterator">#</a>
+		<code><a href="source-Forms.Rules.php.html#256-267" title="Go to source code">getIterator</a>( )</code>
+
+		<div class="description short">
+			
+<p>Iterates over complete ruleset.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Iterates over complete ruleset.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="ArrayIterator.html">ArrayIterator</a></code></code><br>
+				</div>
+
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="IteratorAggregate.html#_getIterator">IteratorAggregate::getIterator()</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="formatMessage" id="_formatMessage">
+
+		<td class="attributes"><code>
+			 public static
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="Nette.Forms.Rules.html#_formatMessage">#</a>
+		<code><a href="source-Forms.Rules.php.html#300-330" title="Go to source code">formatMessage</a>( <span><code><a href="Nette.Forms.Rule.html">Nette\Forms\Rule</a></code> <var>$rule</var></span>, <span> <var>$withValue</var> = <span class="php-keyword1">TRUE</span></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+	<table class="summary inherited">
+	<caption>Methods inherited from <a href="Nette.Object.html#methods">Nette\Object</a></caption>
+	<tr>
+		<td><code>
+			<a href="Nette.Object.html#___call">__call()</a>, 
+			<a href="Nette.Object.html#___callStatic">__callStatic()</a>, 
+			<a href="Nette.Object.html#___get">__get()</a>, 
+			<a href="Nette.Object.html#___isset">__isset()</a>, 
+			<a href="Nette.Object.html#___set">__set()</a>, 
+			<a href="Nette.Object.html#___unset">__unset()</a>, 
+			<a href="Nette.Object.html#_extensionMethod">extensionMethod()</a>, 
+			<a href="Nette.Object.html#_getReflection">getReflection()</a>
+		</code></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+
+
+
+	<table class="summary" id="properties">
+	<caption>Properties summary</caption>
+	<tr data-order="defaultMessages" id="$defaultMessages">
+		<td class="attributes"><code>
+			public static 
+			array
+		</code></td>
+
+		<td class="name">
+				<a href="source-Forms.Rules.php.html#23-45" title="Go to source code"><var>$defaultMessages</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">array</span>(
+	Form::PROTECTION =&gt; <span class="php-quote">'Please submit this form again (security token has expired).'</span>,
+	Form::EQUAL =&gt; <span class="php-quote">'Please enter %s.'</span>,
+	Form::NOT_EQUAL =&gt; <span class="php-quote">'This value should not be %s.'</span>,
+	Form::FILLED =&gt; <span class="php-quote">'This field is required.'</span>,
+	Form::BLANK =&gt; <span class="php-quote">'This field should be blank.'</span>,
+	Form::MIN_LENGTH =&gt; <span class="php-quote">'Please enter at least %d characters.'</span>,
+	Form::MAX_LENGTH =&gt; <span class="php-quote">'Please enter no more than %d characters.'</span>,
+	Form::LENGTH =&gt; <span class="php-quote">'Please enter a value between %d and %d characters long.'</span>,
+	Form::EMAIL =&gt; <span class="php-quote">'Please enter a valid email address.'</span>,
+	Form::URL =&gt; <span class="php-quote">'Please enter a valid URL.'</span>,
+	Form::INTEGER =&gt; <span class="php-quote">'Please enter a valid integer.'</span>,
+	Form::FLOAT =&gt; <span class="php-quote">'Please enter a valid number.'</span>,
+	Form::<span class="php-keyword2">MIN</span> =&gt; <span class="php-quote">'Please enter a value greater than or equal to %d.'</span>,
+	Form::<span class="php-keyword2">MAX</span> =&gt; <span class="php-quote">'Please enter a value less than or equal to %d.'</span>,
+	Form::<span class="php-keyword2">RANGE</span> =&gt; <span class="php-quote">'Please enter a value between %d and %d.'</span>,
+	Form::MAX_FILE_SIZE =&gt; <span class="php-quote">'The size of the uploaded file can be up to %d bytes.'</span>,
+	Form::MAX_POST_SIZE =&gt; <span class="php-quote">'The uploaded data exceeds the limit of %d bytes.'</span>,
+	Form::IMAGE =&gt; <span class="php-quote">'The uploaded file must be image in format JPEG, GIF or PNG.'</span>,
+	Form::MIME_TYPE =&gt; <span class="php-quote">'The uploaded file is not in the expected format.'</span>,
+	Nette\Forms\Controls\SelectBox::VALID =&gt; <span class="php-quote">'Please select a valid option.'</span>,
+)</code></td>
+		<td class="description"><div>
+			<a href="Nette.Forms.Rules.html#$defaultMessages" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+	<table class="summary inherited">
+	<caption>Magic properties inherited from <a href="Nette.Object.html#properties">Nette\Object</a></caption>
+	<tr>
+		<td><code>
+			<a href="Nette.Object.html#m$reflection"><var>$reflection</var></a>
+		</code></td>
+	</tr>
+	</table>
+
+
+</div>
+
+	<div id="footer">
+		Nette 2.2.2 API API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+	</div>
+</div>
+</div>
+<script src="resources/combined.js?3630868369"></script>
+<script src="elementlist.js?2087501429"></script>
+</body>
+</html>

@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="generator" content="ApiGen 2.8.0">
+	<meta name="robots" content="noindex">
+
+	<title>File Application/MicroPresenter.php | Nette 2.2.2 API</title>
+
+	<link rel="stylesheet" href="resources/style.css?3746977979">
+	<link rel="search" type="application/opensearchdescription+xml" title="Nette 2.2.2 API" href="http://api.nette.org/2.0/opensearch.xml">
+
+
+<script src='http://files.nette.org/js/analytics.js'></script><script>
+_ga.create('UA-95238-14', '.nette.org');
+_gaq.push(['_trackPageview']);
+</script>
+</head>
+
+<body>
+<div id="left">
+	<div id="menu">
+
+		<div id="groups">
+			<h3>Namespaces</h3>
+			<ul>
+				<li><a href="namespace-Latte.html">Latte<span></span></a>
+						<ul>
+				<li><a href="namespace-Latte.Loaders.html">Loaders</a>
+						</li>
+				<li><a href="namespace-Latte.Macros.html">Macros</a>
+						</li>
+				<li><a href="namespace-Latte.Runtime.html">Runtime</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.html">Nette<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.Application.html">Application<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.Application.Responses.html">Responses</a>
+						</li>
+				<li><a href="namespace-Nette.Application.Routers.html">Routers</a>
+						</li>
+				<li><a href="namespace-Nette.Application.UI.html">UI</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.Bridges.html">Bridges<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.Bridges.ApplicationLatte.html">ApplicationLatte</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.ApplicationTracy.html">ApplicationTracy</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.CacheLatte.html">CacheLatte</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.DatabaseDI.html">DatabaseDI</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.DatabaseTracy.html">DatabaseTracy</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.DITracy.html">DITracy</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.FormsLatte.html">FormsLatte</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.Framework.html">Framework</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.HttpTracy.html">HttpTracy</a>
+						</li>
+				<li><a href="namespace-Nette.Bridges.SecurityTracy.html">SecurityTracy</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.Caching.html">Caching<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.Caching.Storages.html">Storages</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.ComponentModel.html">ComponentModel</a>
+						</li>
+				<li><a href="namespace-Nette.Database.html">Database<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.Database.Drivers.html">Drivers</a>
+						</li>
+				<li><a href="namespace-Nette.Database.Reflection.html">Reflection</a>
+						</li>
+				<li><a href="namespace-Nette.Database.Table.html">Table</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.DI.html">DI<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.DI.Config.html">Config<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.DI.Config.Adapters.html">Adapters</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.DI.Extensions.html">Extensions</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.Diagnostics.html">Diagnostics</a>
+						</li>
+				<li><a href="namespace-Nette.Forms.html">Forms<span></span></a>
+						<ul>
+				<li><a href="namespace-Nette.Forms.Controls.html">Controls</a>
+						</li>
+				<li><a href="namespace-Nette.Forms.Rendering.html">Rendering</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Nette.Http.html">Http</a>
+						</li>
+				<li><a href="namespace-Nette.Iterators.html">Iterators</a>
+						</li>
+				<li><a href="namespace-Nette.Latte.html">Latte</a>
+						</li>
+				<li><a href="namespace-Nette.Loaders.html">Loaders</a>
+						</li>
+				<li><a href="namespace-Nette.Localization.html">Localization</a>
+						</li>
+				<li><a href="namespace-Nette.Mail.html">Mail</a>
+						</li>
+				<li><a href="namespace-Nette.Neon.html">Neon</a>
+						</li>
+				<li><a href="namespace-Nette.PhpGenerator.html">PhpGenerator</a>
+						</li>
+				<li><a href="namespace-Nette.Reflection.html">Reflection</a>
+						</li>
+				<li><a href="namespace-Nette.Security.html">Security</a>
+						</li>
+				<li><a href="namespace-Nette.Templating.html">Templating</a>
+						</li>
+				<li><a href="namespace-Nette.Utils.html">Utils</a>
+						</li>
+							</ul></li>
+				<li class="active"><a href="namespace-NetteModule.html">NetteModule</a>
+						</li>
+				<li><a href="namespace-none.html">none</a>
+						</li>
+				<li><a href="namespace-Tracy.html">Tracy</a>
+						</li>
+			</ul>
+		</div>
+
+		<hr>
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="NetteModule.ErrorPresenter.html">ErrorPresenter</a></li>
+				<li class="active"><a href="NetteModule.MicroPresenter.html">MicroPresenter</a></li>
+			</ul>
+
+
+
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form action="http://www.google.com/cse" id="search">
+		<input type="hidden" name="cx" value="011549293477758430224:vxofa9ufnhc">
+		<input type="hidden" name="ie" value="UTF-8">
+		<input type="text" name="q" class="text">
+		<input type="submit" value="Search">
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+				<a href="namespace-NetteModule.html" title="Summary of NetteModule"><span>Namespace</span></a>
+			</li>
+			<li>
+				<a href="NetteModule.MicroPresenter.html" title="Summary of NetteModule\MicroPresenter"><span>Class</span></a>
+			</li>
+		</ul>
+		<ul>
+			<li>
+				<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions"><span>Tree</span></a>
+			</li>
+			<li>
+				<a href="deprecated.html" title="List of deprecated elements"><span>Deprecated</span></a>
+			</li>
+		</ul>
+		<ul><li><a href="http://api.nette.org/releases"><span>Other releases</span></a></li><li><a href="http://nette.org"><span>Nette homepage</span></a></li></ul>
+		<ul>
+		</ul>
+	</div>
+
+<pre><code><span id="1" class="l"><a class="l" href="source-Application.MicroPresenter.php.html#1">  1: </a><span class="xlang">&lt;?php</span>
+</span><span id="2" class="l"><a class="l" href="source-Application.MicroPresenter.php.html#2">  2: </a>
+</span><span id="3" class="l"><a class="l" href="source-Application.MicroPresenter.php.html#3">  3: </a><span class="php-comment">/**
+</span></span><span id="4" class="l"><a class="l" href="source-Application.MicroPresenter.php.html#4">  4: </a><span class="php-comment"> * This file is part of the Nette Framework (http://nette.org)
+</span></span><span id="5" class="l"><a class="l" href="source-Application.MicroPresenter.php.html#5">  5: </a><span class="php-comment"> * Copyright (c) 2004 David Grudl (http://davidgrudl.com)
+</span></span><span id="6" class="l"><a class="l" href="source-Application.MicroPresenter.php.html#6">  6: </a><span class="php-comment"> */</span>
+</span><span id="7" class="l"><a class="l" href="source-Application.MicroPresenter.php.html#7">  7: </a>
+</span><span id="8" class="l"><a class="l" href="source-Application.MicroPresenter.php.html#8">  8: </a><span class="php-keyword1">namespace</span> NetteModule;
+</span><span id="9" class="l"><a class="l" href="source-Application.MicroPresenter.php.html#9">  9: </a>
+</span><span id="10" class="l"><a class="l" href="source-Application.MicroPresenter.php.html#10"> 10: </a><span class="php-keyword1">use</span> Nette,
+</span><span id="11" class="l"><a class="l" href="source-Application.MicroPresenter.php.html#11"> 11: </a>    Nette\Application,
+</span><span id="12" class="l"><a class="l" href="source-Application.MicroPresenter.php.html#12"> 12: </a>    Nette\Application\Responses,
+</span><span id="13" class="l"><a class="l" href="source-Application.MicroPresenter.php.html#13"> 13: </a>    Nette\Http;
+</span><span id="14" class="l"><a class="l" href="source-Application.MicroPresenter.php.html#14"> 14: </a>
+</span><span id="15" class="l"><a class="l" href="source-Application.MicroPresenter.php.html#15"> 15: </a>
+</span><span id="16" class="l"><a class="l" href="source-Application.MicroPresenter.php.html#16"> 16: </a><span class="php-comment">/**
+</span></span><span id="17" class="l"><a class="l" href="source-Application.MicroPresenter.php.html#17"> 17: </a><span class="php-comment"> * Micro presenter.
+</span></span><span id="18" class="l"><a class="l" href="source-Application.MicroPresenter.php.html#18"> 18: </a><span class="php-comment"> *
+</span></span><span id="19" class="l"><a class="l" href="source-Application.MicroPresenter.php.html#19"> 19: </a><span class="php-comment"> * @author     David Grudl
+</span></span><span id="20" class="l"><a class="l" href="source-Application.MicroPresenter.php.html#20"> 20: </a><span class="php-comment"> *
+</span></span><span id="21" class="l"><a class="l" href="source-Application.MicroPresenter.php.html#21"> 21: </a><span class="php-comment"> * @property-read Nette\Application\IRequest $request
+</span></span><span id="22" class="l"><a class="l" href="source-Application.MicroPresenter.php.html#22"> 22: </a><span class="php-comment"> */</span>
+</span><span id="23" class="l"><a class="l" href="source-Application.MicroPresenter.php.html#23"> 23: </a><span class="php-keyword1">class</span> <a id="MicroPresenter" href="source-Application.MicroPresenter.php.html#MicroPresenter">MicroPresenter</a> <span class="php-keyword1">extends</span> Nette\Object <span class="php-keyword1">implements</span> Application\IPresenter
+</span><span id="24" class="l"><a class="l" href="source-Application.MicroPresenter.php.html#24"> 24: </a>{
+</span><span id="25" class="l"><a class="l" href="source-Application.MicroPresenter.php.html#25"> 25: </a>    <span class="php-comment">/** @var Nette\DI\Container|NULL */</span>
+</span><span id="26" class="l"><a class="l" href="source-Application.MicroPresenter.php.html#26"> 26: </a>    <span class="php-keyword1">private</span> <span class="php-var"><a id="$context" href="source-Application.MicroPresenter.php.html#$context">$context</a></span>;
+</span><span id="27" class="l"><a class="l" href="source-Application.MicroPresenter.php.html#27"> 27: </a>
+</span><span id="28" class="l"><a class="l" href="source-Application.MicroPresenter.php.html#28"> 28: </a>    <span class="php-comment">/** @var Nette\Http\IRequest|NULL */</span>
+</span><span id="29" class="l"><a class="l" href="source-Application.MicroPresenter.php.html#29"> 29: </a>    <span class="php-keyword1">private</span> <span class="php-var"><a id="$httpRequest" href="source-Application.MicroPresenter.php.html#$httpRequest">$httpRequest</a></span>;
+</span><span id="30" class="l"><a class="l" href="source-Application.MicroPresenter.php.html#30"> 30: </a>
+</span><span id="31" class="l"><a class="l" href="source-Application.MicroPresenter.php.html#31"> 31: </a>    <span class="php-comment">/** @var IRouter|NULL */</span>
+</span><span id="32" class="l"><a class="l" href="source-Application.MicroPresenter.php.html#32"> 32: </a>    <span class="php-keyword1">private</span> <span class="php-var"><a id="$router" href="source-Application.MicroPresenter.php.html#$router">$router</a></span>;
+</span><span id="33" class="l"><a class="l" href="source-Application.MicroPresenter.php.html#33"> 33: </a>
+</span><span id="34" class="l"><a class="l" href="source-Application.MicroPresenter.php.html#34"> 34: </a>    <span class="php-comment">/** @var Request */</span>
+</span><span id="35" class="l"><a class="l" href="source-Application.MicroPresenter.php.html#35"> 35: </a>    <span class="php-keyword1">private</span> <span class="php-var"><a id="$request" href="source-Application.MicroPresenter.php.html#$request">$request</a></span>;
+</span><span id="36" class="l"><a class="l" href="source-Application.MicroPresenter.php.html#36"> 36: </a>
+</span><span id="37" class="l"><a class="l" href="source-Application.MicroPresenter.php.html#37"> 37: </a>
+</span><span id="38" class="l"><a class="l" href="source-Application.MicroPresenter.php.html#38"> 38: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="___construct" href="source-Application.MicroPresenter.php.html#___construct">__construct</a>(Nette\DI\Container <span class="php-var">$context</span> = <span class="php-keyword1">NULL</span>, Http\IRequest <span class="php-var">$httpRequest</span> = <span class="php-keyword1">NULL</span>, IRouter <span class="php-var">$router</span> = <span class="php-keyword1">NULL</span>)
+</span><span id="39" class="l"><a class="l" href="source-Application.MicroPresenter.php.html#39"> 39: </a>    {
+</span><span id="40" class="l"><a class="l" href="source-Application.MicroPresenter.php.html#40"> 40: </a>        <span class="php-var">$this</span>-&gt;context = <span class="php-var">$context</span>;
+</span><span id="41" class="l"><a class="l" href="source-Application.MicroPresenter.php.html#41"> 41: </a>        <span class="php-var">$this</span>-&gt;httpRequest = <span class="php-var">$httpRequest</span>;
+</span><span id="42" class="l"><a class="l" href="source-Application.MicroPresenter.php.html#42"> 42: </a>        <span class="php-var">$this</span>-&gt;router = <span class="php-var">$router</span>;
+</span><span id="43" class="l"><a class="l" href="source-Application.MicroPresenter.php.html#43"> 43: </a>    }
+</span><span id="44" class="l"><a class="l" href="source-Application.MicroPresenter.php.html#44"> 44: </a>
+</span><span id="45" class="l"><a class="l" href="source-Application.MicroPresenter.php.html#45"> 45: </a>
+</span><span id="46" class="l"><a class="l" href="source-Application.MicroPresenter.php.html#46"> 46: </a>    <span class="php-comment">/**
+</span></span><span id="47" class="l"><a class="l" href="source-Application.MicroPresenter.php.html#47"> 47: </a><span class="php-comment">     * Gets the context.
+</span></span><span id="48" class="l"><a class="l" href="source-Application.MicroPresenter.php.html#48"> 48: </a><span class="php-comment">     * @return \SystemContainer|Nette\DI\Container
+</span></span><span id="49" class="l"><a class="l" href="source-Application.MicroPresenter.php.html#49"> 49: </a><span class="php-comment">     */</span>
+</span><span id="50" class="l"><a class="l" href="source-Application.MicroPresenter.php.html#50"> 50: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_getContext" href="source-Application.MicroPresenter.php.html#_getContext">getContext</a>()
+</span><span id="51" class="l"><a class="l" href="source-Application.MicroPresenter.php.html#51"> 51: </a>    {
+</span><span id="52" class="l"><a class="l" href="source-Application.MicroPresenter.php.html#52"> 52: </a>        <span class="php-keyword1">return</span> <span class="php-var">$this</span>-&gt;context;
+</span><span id="53" class="l"><a class="l" href="source-Application.MicroPresenter.php.html#53"> 53: </a>    }
+</span><span id="54" class="l"><a class="l" href="source-Application.MicroPresenter.php.html#54"> 54: </a>
+</span><span id="55" class="l"><a class="l" href="source-Application.MicroPresenter.php.html#55"> 55: </a>
+</span><span id="56" class="l"><a class="l" href="source-Application.MicroPresenter.php.html#56"> 56: </a>    <span class="php-comment">/**
+</span></span><span id="57" class="l"><a class="l" href="source-Application.MicroPresenter.php.html#57"> 57: </a><span class="php-comment">     * @return Nette\Application\IResponse
+</span></span><span id="58" class="l"><a class="l" href="source-Application.MicroPresenter.php.html#58"> 58: </a><span class="php-comment">     */</span>
+</span><span id="59" class="l"><a class="l" href="source-Application.MicroPresenter.php.html#59"> 59: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_run" href="source-Application.MicroPresenter.php.html#_run">run</a>(Application\Request <span class="php-var">$request</span>)
+</span><span id="60" class="l"><a class="l" href="source-Application.MicroPresenter.php.html#60"> 60: </a>    {
+</span><span id="61" class="l"><a class="l" href="source-Application.MicroPresenter.php.html#61"> 61: </a>        <span class="php-var">$this</span>-&gt;request = <span class="php-var">$request</span>;
+</span><span id="62" class="l"><a class="l" href="source-Application.MicroPresenter.php.html#62"> 62: </a>
+</span><span id="63" class="l"><a class="l" href="source-Application.MicroPresenter.php.html#63"> 63: </a>        <span class="php-keyword1">if</span> (<span class="php-var">$this</span>-&gt;httpRequest &amp;&amp; <span class="php-var">$this</span>-&gt;router &amp;&amp; !<span class="php-var">$this</span>-&gt;httpRequest-&gt;isAjax() &amp;&amp; (<span class="php-var">$request</span>-&gt;isMethod(<span class="php-quote">'get'</span>) || <span class="php-var">$request</span>-&gt;isMethod(<span class="php-quote">'head'</span>))) {
+</span><span id="64" class="l"><a class="l" href="source-Application.MicroPresenter.php.html#64"> 64: </a>            <span class="php-var">$refUrl</span> = <span class="php-keyword1">clone</span> <span class="php-var">$this</span>-&gt;httpRequest-&gt;getUrl();
+</span><span id="65" class="l"><a class="l" href="source-Application.MicroPresenter.php.html#65"> 65: </a>            <span class="php-var">$url</span> = <span class="php-var">$this</span>-&gt;router-&gt;constructUrl(<span class="php-var">$request</span>, <span class="php-var">$refUrl</span>-&gt;setPath(<span class="php-var">$refUrl</span>-&gt;getScriptPath()));
+</span><span id="66" class="l"><a class="l" href="source-Application.MicroPresenter.php.html#66"> 66: </a>            <span class="php-keyword1">if</span> (<span class="php-var">$url</span> !== <span class="php-keyword1">NULL</span> &amp;&amp; !<span class="php-var">$this</span>-&gt;httpRequest-&gt;getUrl()-&gt;isEqual(<span class="php-var">$url</span>)) {
+</span><span id="67" class="l"><a class="l" href="source-Application.MicroPresenter.php.html#67"> 67: </a>                <span class="php-keyword1">return</span> <span class="php-keyword1">new</span> Responses\RedirectResponse(<span class="php-var">$url</span>, Http\IResponse::S301_MOVED_PERMANENTLY);
+</span><span id="68" class="l"><a class="l" href="source-Application.MicroPresenter.php.html#68"> 68: </a>            }
+</span><span id="69" class="l"><a class="l" href="source-Application.MicroPresenter.php.html#69"> 69: </a>        }
+</span><span id="70" class="l"><a class="l" href="source-Application.MicroPresenter.php.html#70"> 70: </a>
+</span><span id="71" class="l"><a class="l" href="source-Application.MicroPresenter.php.html#71"> 71: </a>        <span class="php-var">$params</span> = <span class="php-var">$request</span>-&gt;getParameters();
+</span><span id="72" class="l"><a class="l" href="source-Application.MicroPresenter.php.html#72"> 72: </a>        <span class="php-keyword1">if</span> (!<span class="php-keyword1">isset</span>(<span class="php-var">$params</span>[<span class="php-quote">'callback'</span>])) {
+</span><span id="73" class="l"><a class="l" href="source-Application.MicroPresenter.php.html#73"> 73: </a>            <span class="php-keyword1">throw</span> <span class="php-keyword1">new</span> Application\BadRequestException(<span class="php-quote">'Parameter callback is missing.'</span>);
+</span><span id="74" class="l"><a class="l" href="source-Application.MicroPresenter.php.html#74"> 74: </a>        }
+</span><span id="75" class="l"><a class="l" href="source-Application.MicroPresenter.php.html#75"> 75: </a>        <span class="php-var">$params</span>[<span class="php-quote">'presenter'</span>] = <span class="php-var">$this</span>;
+</span><span id="76" class="l"><a class="l" href="source-Application.MicroPresenter.php.html#76"> 76: </a>        <span class="php-var">$callback</span> = <span class="php-var">$params</span>[<span class="php-quote">'callback'</span>];
+</span><span id="77" class="l"><a class="l" href="source-Application.MicroPresenter.php.html#77"> 77: </a>        <span class="php-var">$reflection</span> = Nette\Utils\Callback::toReflection(Nette\Utils\Callback::check(<span class="php-var">$callback</span>));
+</span><span id="78" class="l"><a class="l" href="source-Application.MicroPresenter.php.html#78"> 78: </a>        <span class="php-var">$params</span> = Application\UI\PresenterComponentReflection::combineArgs(<span class="php-var">$reflection</span>, <span class="php-var">$params</span>);
+</span><span id="79" class="l"><a class="l" href="source-Application.MicroPresenter.php.html#79"> 79: </a>
+</span><span id="80" class="l"><a class="l" href="source-Application.MicroPresenter.php.html#80"> 80: </a>        <span class="php-keyword1">foreach</span> (<span class="php-var">$reflection</span>-&gt;getParameters() <span class="php-keyword1">as</span> <span class="php-var">$param</span>) {
+</span><span id="81" class="l"><a class="l" href="source-Application.MicroPresenter.php.html#81"> 81: </a>            <span class="php-keyword1">if</span> (<span class="php-var">$param</span>-&gt;getClassName()) {
+</span><span id="82" class="l"><a class="l" href="source-Application.MicroPresenter.php.html#82"> 82: </a>                <span class="php-keyword1">unset</span>(<span class="php-var">$params</span>[<span class="php-var">$param</span>-&gt;getPosition()]);
+</span><span id="83" class="l"><a class="l" href="source-Application.MicroPresenter.php.html#83"> 83: </a>            }
+</span><span id="84" class="l"><a class="l" href="source-Application.MicroPresenter.php.html#84"> 84: </a>        }
+</span><span id="85" class="l"><a class="l" href="source-Application.MicroPresenter.php.html#85"> 85: </a>
+</span><span id="86" class="l"><a class="l" href="source-Application.MicroPresenter.php.html#86"> 86: </a>        <span class="php-keyword1">if</span> (<span class="php-var">$this</span>-&gt;context) {
+</span><span id="87" class="l"><a class="l" href="source-Application.MicroPresenter.php.html#87"> 87: </a>            <span class="php-var">$params</span> = Nette\DI\Helpers::autowireArguments(<span class="php-var">$reflection</span>, <span class="php-var">$params</span>, <span class="php-var">$this</span>-&gt;context);
+</span><span id="88" class="l"><a class="l" href="source-Application.MicroPresenter.php.html#88"> 88: </a>        }
+</span><span id="89" class="l"><a class="l" href="source-Application.MicroPresenter.php.html#89"> 89: </a>
+</span><span id="90" class="l"><a class="l" href="source-Application.MicroPresenter.php.html#90"> 90: </a>        <span class="php-var">$response</span> = <span class="php-keyword2">call_user_func_array</span>(<span class="php-var">$callback</span>, <span class="php-var">$params</span>);
+</span><span id="91" class="l"><a class="l" href="source-Application.MicroPresenter.php.html#91"> 91: </a>
+</span><span id="92" class="l"><a class="l" href="source-Application.MicroPresenter.php.html#92"> 92: </a>        <span class="php-keyword1">if</span> (<span class="php-keyword2">is_string</span>(<span class="php-var">$response</span>)) {
+</span><span id="93" class="l"><a class="l" href="source-Application.MicroPresenter.php.html#93"> 93: </a>            <span class="php-var">$response</span> = <span class="php-keyword1">array</span>(<span class="php-var">$response</span>, <span class="php-keyword1">array</span>());
+</span><span id="94" class="l"><a class="l" href="source-Application.MicroPresenter.php.html#94"> 94: </a>        }
+</span><span id="95" class="l"><a class="l" href="source-Application.MicroPresenter.php.html#95"> 95: </a>        <span class="php-keyword1">if</span> (<span class="php-keyword2">is_array</span>(<span class="php-var">$response</span>)) {
+</span><span id="96" class="l"><a class="l" href="source-Application.MicroPresenter.php.html#96"> 96: </a>            <span class="php-var">$response</span> = <span class="php-var">$this</span>-&gt;createTemplate()-&gt;setParameters(<span class="php-var">$response</span>[<span class="php-num">1</span>]);
+</span><span id="97" class="l"><a class="l" href="source-Application.MicroPresenter.php.html#97"> 97: </a>            <span class="php-keyword1">if</span> (<span class="php-var">$response</span>[<span class="php-num">0</span>] <span class="php-keyword1">instanceof</span> \SplFileInfo) {
+</span><span id="98" class="l"><a class="l" href="source-Application.MicroPresenter.php.html#98"> 98: </a>                <span class="php-var">$response</span>-&gt;setFile(<span class="php-var">$response</span>[<span class="php-num">0</span>]);
+</span><span id="99" class="l"><a class="l" href="source-Application.MicroPresenter.php.html#99"> 99: </a>            } <span class="php-keyword1">else</span> {
+</span><span id="100" class="l"><a class="l" href="source-Application.MicroPresenter.php.html#100">100: </a>                <span class="php-var">$response</span>-&gt;setSource(<span class="php-var">$response</span>[<span class="php-num">0</span>]); <span class="php-comment">// TODO</span>
+</span><span id="101" class="l"><a class="l" href="source-Application.MicroPresenter.php.html#101">101: </a>            }
+</span><span id="102" class="l"><a class="l" href="source-Application.MicroPresenter.php.html#102">102: </a>        }
+</span><span id="103" class="l"><a class="l" href="source-Application.MicroPresenter.php.html#103">103: </a>        <span class="php-keyword1">if</span> (<span class="php-var">$response</span> <span class="php-keyword1">instanceof</span> Application\UI\ITemplate) {
+</span><span id="104" class="l"><a class="l" href="source-Application.MicroPresenter.php.html#104">104: </a>            <span class="php-keyword1">return</span> <span class="php-keyword1">new</span> Responses\TextResponse(<span class="php-var">$response</span>);
+</span><span id="105" class="l"><a class="l" href="source-Application.MicroPresenter.php.html#105">105: </a>        } <span class="php-keyword1">else</span> {
+</span><span id="106" class="l"><a class="l" href="source-Application.MicroPresenter.php.html#106">106: </a>            <span class="php-keyword1">return</span> <span class="php-var">$response</span>;
+</span><span id="107" class="l"><a class="l" href="source-Application.MicroPresenter.php.html#107">107: </a>        }
+</span><span id="108" class="l"><a class="l" href="source-Application.MicroPresenter.php.html#108">108: </a>    }
+</span><span id="109" class="l"><a class="l" href="source-Application.MicroPresenter.php.html#109">109: </a>
+</span><span id="110" class="l"><a class="l" href="source-Application.MicroPresenter.php.html#110">110: </a>
+</span><span id="111" class="l"><a class="l" href="source-Application.MicroPresenter.php.html#111">111: </a>    <span class="php-comment">/**
+</span></span><span id="112" class="l"><a class="l" href="source-Application.MicroPresenter.php.html#112">112: </a><span class="php-comment">     * Template factory.
+</span></span><span id="113" class="l"><a class="l" href="source-Application.MicroPresenter.php.html#113">113: </a><span class="php-comment">     * @param  string
+</span></span><span id="114" class="l"><a class="l" href="source-Application.MicroPresenter.php.html#114">114: </a><span class="php-comment">     * @param  callable
+</span></span><span id="115" class="l"><a class="l" href="source-Application.MicroPresenter.php.html#115">115: </a><span class="php-comment">     * @return Application\UI\ITemplate
+</span></span><span id="116" class="l"><a class="l" href="source-Application.MicroPresenter.php.html#116">116: </a><span class="php-comment">     */</span>
+</span><span id="117" class="l"><a class="l" href="source-Application.MicroPresenter.php.html#117">117: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_createTemplate" href="source-Application.MicroPresenter.php.html#_createTemplate">createTemplate</a>(<span class="php-var">$class</span> = <span class="php-keyword1">NULL</span>, <span class="php-var">$latteFactory</span> = <span class="php-keyword1">NULL</span>)
+</span><span id="118" class="l"><a class="l" href="source-Application.MicroPresenter.php.html#118">118: </a>    {
+</span><span id="119" class="l"><a class="l" href="source-Application.MicroPresenter.php.html#119">119: </a>        <span class="php-var">$latte</span> = <span class="php-var">$latteFactory</span> ? <span class="php-var">$latteFactory</span>() : <span class="php-var">$this</span>-&gt;getContext()-&gt;getByType(<span class="php-quote">'Nette\Bridges\ApplicationLatte\ILatteFactory'</span>)-&gt;create();
+</span><span id="120" class="l"><a class="l" href="source-Application.MicroPresenter.php.html#120">120: </a>        <span class="php-var">$template</span> = <span class="php-var">$class</span> ? <span class="php-keyword1">new</span> <span class="php-var">$class</span> : <span class="php-keyword1">new</span> Nette\Bridges\ApplicationLatte\Template(<span class="php-var">$latte</span>);
+</span><span id="121" class="l"><a class="l" href="source-Application.MicroPresenter.php.html#121">121: </a>
+</span><span id="122" class="l"><a class="l" href="source-Application.MicroPresenter.php.html#122">122: </a>        <span class="php-var">$template</span>-&gt;setParameters(<span class="php-var">$this</span>-&gt;request-&gt;getParameters());
+</span><span id="123" class="l"><a class="l" href="source-Application.MicroPresenter.php.html#123">123: </a>        <span class="php-var">$template</span>-&gt;presenter = <span class="php-var">$this</span>;
+</span><span id="124" class="l"><a class="l" href="source-Application.MicroPresenter.php.html#124">124: </a>        <span class="php-var">$template</span>-&gt;context = <span class="php-var">$this</span>-&gt;context;
+</span><span id="125" class="l"><a class="l" href="source-Application.MicroPresenter.php.html#125">125: </a>        <span class="php-keyword1">if</span> (<span class="php-var">$this</span>-&gt;httpRequest) {
+</span><span id="126" class="l"><a class="l" href="source-Application.MicroPresenter.php.html#126">126: </a>            <span class="php-var">$url</span> = <span class="php-var">$this</span>-&gt;httpRequest-&gt;getUrl();
+</span><span id="127" class="l"><a class="l" href="source-Application.MicroPresenter.php.html#127">127: </a>            <span class="php-var">$template</span>-&gt;baseUrl = <span class="php-keyword2">rtrim</span>(<span class="php-var">$url</span>-&gt;getBaseUrl(), <span class="php-quote">'/'</span>);
+</span><span id="128" class="l"><a class="l" href="source-Application.MicroPresenter.php.html#128">128: </a>            <span class="php-var">$template</span>-&gt;basePath = <span class="php-keyword2">rtrim</span>(<span class="php-var">$url</span>-&gt;getBasePath(), <span class="php-quote">'/'</span>);
+</span><span id="129" class="l"><a class="l" href="source-Application.MicroPresenter.php.html#129">129: </a>        }
+</span><span id="130" class="l"><a class="l" href="source-Application.MicroPresenter.php.html#130">130: </a>        <span class="php-keyword1">return</span> <span class="php-var">$template</span>;
+</span><span id="131" class="l"><a class="l" href="source-Application.MicroPresenter.php.html#131">131: </a>    }
+</span><span id="132" class="l"><a class="l" href="source-Application.MicroPresenter.php.html#132">132: </a>
+</span><span id="133" class="l"><a class="l" href="source-Application.MicroPresenter.php.html#133">133: </a>
+</span><span id="134" class="l"><a class="l" href="source-Application.MicroPresenter.php.html#134">134: </a>    <span class="php-comment">/**
+</span></span><span id="135" class="l"><a class="l" href="source-Application.MicroPresenter.php.html#135">135: </a><span class="php-comment">     * Redirects to another URL.
+</span></span><span id="136" class="l"><a class="l" href="source-Application.MicroPresenter.php.html#136">136: </a><span class="php-comment">     * @param  string
+</span></span><span id="137" class="l"><a class="l" href="source-Application.MicroPresenter.php.html#137">137: </a><span class="php-comment">     * @param  int HTTP code
+</span></span><span id="138" class="l"><a class="l" href="source-Application.MicroPresenter.php.html#138">138: </a><span class="php-comment">     * @return Nette\Application\Responses\RedirectResponse
+</span></span><span id="139" class="l"><a class="l" href="source-Application.MicroPresenter.php.html#139">139: </a><span class="php-comment">     */</span>
+</span><span id="140" class="l"><a class="l" href="source-Application.MicroPresenter.php.html#140">140: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_redirectUrl" href="source-Application.MicroPresenter.php.html#_redirectUrl">redirectUrl</a>(<span class="php-var">$url</span>, <span class="php-var">$code</span> = Http\IResponse::S302_FOUND)
+</span><span id="141" class="l"><a class="l" href="source-Application.MicroPresenter.php.html#141">141: </a>    {
+</span><span id="142" class="l"><a class="l" href="source-Application.MicroPresenter.php.html#142">142: </a>        <span class="php-keyword1">return</span> <span class="php-keyword1">new</span> Responses\RedirectResponse(<span class="php-var">$url</span>, <span class="php-var">$code</span>);
+</span><span id="143" class="l"><a class="l" href="source-Application.MicroPresenter.php.html#143">143: </a>    }
+</span><span id="144" class="l"><a class="l" href="source-Application.MicroPresenter.php.html#144">144: </a>
+</span><span id="145" class="l"><a class="l" href="source-Application.MicroPresenter.php.html#145">145: </a>
+</span><span id="146" class="l"><a class="l" href="source-Application.MicroPresenter.php.html#146">146: </a>    <span class="php-comment">/**
+</span></span><span id="147" class="l"><a class="l" href="source-Application.MicroPresenter.php.html#147">147: </a><span class="php-comment">     * Throws HTTP error.
+</span></span><span id="148" class="l"><a class="l" href="source-Application.MicroPresenter.php.html#148">148: </a><span class="php-comment">     * @param  string
+</span></span><span id="149" class="l"><a class="l" href="source-Application.MicroPresenter.php.html#149">149: </a><span class="php-comment">     * @param  int HTTP error code
+</span></span><span id="150" class="l"><a class="l" href="source-Application.MicroPresenter.php.html#150">150: </a><span class="php-comment">     * @return void
+</span></span><span id="151" class="l"><a class="l" href="source-Application.MicroPresenter.php.html#151">151: </a><span class="php-comment">     * @throws Nette\Application\BadRequestException
+</span></span><span id="152" class="l"><a class="l" href="source-Application.MicroPresenter.php.html#152">152: </a><span class="php-comment">     */</span>
+</span><span id="153" class="l"><a class="l" href="source-Application.MicroPresenter.php.html#153">153: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_error" href="source-Application.MicroPresenter.php.html#_error">error</a>(<span class="php-var">$message</span> = <span class="php-keyword1">NULL</span>, <span class="php-var">$code</span> = Http\IResponse::S404_NOT_FOUND)
+</span><span id="154" class="l"><a class="l" href="source-Application.MicroPresenter.php.html#154">154: </a>    {
+</span><span id="155" class="l"><a class="l" href="source-Application.MicroPresenter.php.html#155">155: </a>        <span class="php-keyword1">throw</span> <span class="php-keyword1">new</span> Application\BadRequestException(<span class="php-var">$message</span>, <span class="php-var">$code</span>);
+</span><span id="156" class="l"><a class="l" href="source-Application.MicroPresenter.php.html#156">156: </a>    }
+</span><span id="157" class="l"><a class="l" href="source-Application.MicroPresenter.php.html#157">157: </a>
+</span><span id="158" class="l"><a class="l" href="source-Application.MicroPresenter.php.html#158">158: </a>
+</span><span id="159" class="l"><a class="l" href="source-Application.MicroPresenter.php.html#159">159: </a>    <span class="php-comment">/**
+</span></span><span id="160" class="l"><a class="l" href="source-Application.MicroPresenter.php.html#160">160: </a><span class="php-comment">     * @return Nette\Application\IRequest
+</span></span><span id="161" class="l"><a class="l" href="source-Application.MicroPresenter.php.html#161">161: </a><span class="php-comment">     */</span>
+</span><span id="162" class="l"><a class="l" href="source-Application.MicroPresenter.php.html#162">162: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_getRequest" href="source-Application.MicroPresenter.php.html#_getRequest">getRequest</a>()
+</span><span id="163" class="l"><a class="l" href="source-Application.MicroPresenter.php.html#163">163: </a>    {
+</span><span id="164" class="l"><a class="l" href="source-Application.MicroPresenter.php.html#164">164: </a>        <span class="php-keyword1">return</span> <span class="php-var">$this</span>-&gt;request;
+</span><span id="165" class="l"><a class="l" href="source-Application.MicroPresenter.php.html#165">165: </a>    }
+</span><span id="166" class="l"><a class="l" href="source-Application.MicroPresenter.php.html#166">166: </a>
+</span><span id="167" class="l"><a class="l" href="source-Application.MicroPresenter.php.html#167">167: </a>}
+</span><span id="168" class="l"><a class="l" href="source-Application.MicroPresenter.php.html#168">168: </a></span></code></pre>
+
+	<div id="footer">
+		Nette 2.2.2 API API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+	</div>
+</div>
+</div>
+<script src="resources/combined.js?3630868369"></script>
+<script src="elementlist.js?2087501429"></script>
+</body>
+</html>
