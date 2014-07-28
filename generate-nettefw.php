@@ -126,7 +126,10 @@ foreach ($dir as $fileinfo) {
 		if ($el = $dom->getElementById("methods")) {
 			foreach ($el->getElementsByTagName("tr") as $row) {
 				$href = $file . '#' . $row->getAttribute('id');
-				$link = $row->getElementsByTagName('code')->item(1)->firstChild;
+				if (!$code = $row->getElementsByTagName('code')->item(1)) {
+					$code = $row->getElementsByTagName('code')->item(0);
+				}
+				$link = $code->getElementsByTagName('a')->item(0);
 				$name = (string) $link->textContent;
 
 				// echo $name, " -> ", $href, "\n";
