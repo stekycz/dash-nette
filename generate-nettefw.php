@@ -34,6 +34,7 @@ file_put_contents($contentsPath . "/Info.plist", <<<ENDE
 ENDE
 );
 copy(__DIR__ . "/icon.png", $packagePath . "/icon.png");
+copy(__DIR__ . "/icon@2x.png", $packagePath . "/icon@2x.png");
 
 $db = new sqlite3($resourcesPath . "/docSet.dsidx");
 $db->query("CREATE TABLE searchIndex(id INTEGER PRIMARY KEY, name TEXT, type TEXT, path TEXT)");
@@ -134,4 +135,4 @@ foreach ($dir as $fileinfo) {
 	}
 }
 
-exec('tar --exclude='.DS_Store' -cvzf nettefw.docset.tar nettefw.docset');
+exec('tar --exclude=".DS_Store" -cvzf nettefw.docset.tar nettefw.docset');
