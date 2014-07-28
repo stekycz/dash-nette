@@ -46,7 +46,7 @@ foreach ($dir as $fileinfo) {
 		$file = $fileinfo->getFilename();
 
 		$content = file_get_contents($documentsPath . '/' . $file);
-		$content = str_replace('<ul><li><a href="../releases"><span>Other releases</span></a></li><li><a href="http://nette.org"><span>Nette homepage</span></a></li></ul>', '', $content);
+		$content = str_replace('<ul><li><a href="http://api.nette.org/releases"><span>Other releases</span></a></li><li><a href="http://nette.org"><span>Nette homepage</span></a></li></ul>', '', $content);
 		$content = str_replace('http://api.nette.org/2.2.2/', '', $content);
 		file_put_contents($documentsPath . '/' . $file, $content);
 	}
