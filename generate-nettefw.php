@@ -139,4 +139,4 @@ foreach ($dir as $fileinfo) {
 	}
 }
 
-exec('tar --exclude=".DS_Store" -cvzf nettefw.docset.tar nettefw.docset');
+exec('tar --exclude=".DS_Store" -cvzf nettefw.tgz nettefw.docset');
