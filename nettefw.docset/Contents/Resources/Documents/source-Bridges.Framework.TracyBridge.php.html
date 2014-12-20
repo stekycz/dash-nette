@@ -5,10 +5,10 @@
 	<meta name="generator" content="ApiGen 2.8.0">
 	<meta name="robots" content="noindex">
 
-	<title>File Bridges/Framework/TracyBridge.php | Nette 2.2.2 API</title>
+	<title>File Bridges/Framework/TracyBridge.php | Nette 2.2.6 API</title>
 
 	<link rel="stylesheet" href="resources/style.css?3746977979">
-	<link rel="search" type="application/opensearchdescription+xml" title="Nette 2.2.2 API" href="http://api.nette.org/2.0/opensearch.xml">
+	<link rel="search" type="application/opensearchdescription+xml" title="Nette 2.2.6 API" href="http://api.nette.org/2.0/opensearch.xml">
 
 
 <script src='http://files.nette.org/js/analytics.js'></script><script>
@@ -216,53 +216,50 @@ _gaq.push(['_trackPageview']);
 </span><span id="23" class="l"><a class="l" href="source-Bridges.Framework.TracyBridge.php.html#23">23: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">static</span> <span class="php-keyword1">function</span> <a id="_initialize" href="source-Bridges.Framework.TracyBridge.php.html#_initialize">initialize</a>()
 </span><span id="24" class="l"><a class="l" href="source-Bridges.Framework.TracyBridge.php.html#24">24: </a>    {
 </span><span id="25" class="l"><a class="l" href="source-Bridges.Framework.TracyBridge.php.html#25">25: </a>        <span class="php-var">$blueScreen</span> = Tracy\Debugger::getBlueScreen();
-</span><span id="26" class="l"><a class="l" href="source-Bridges.Framework.TracyBridge.php.html#26">26: </a>        <span class="php-keyword1">if</span> (<span class="php-keyword2">preg_match</span>(<span class="php-quote">'#(.+)/Bridges/Framework$#'</span>, <span class="php-keyword2">strtr</span>(__DIR__, <span class="php-quote">'\\'</span>, <span class="php-quote">'/'</span>), <span class="php-var">$m</span>)) {
-</span><span id="27" class="l"><a class="l" href="source-Bridges.Framework.TracyBridge.php.html#27">27: </a>            <span class="php-keyword1">if</span> (<span class="php-keyword2">preg_match</span>(<span class="php-quote">'#(.+)/nette/bootstrap/src$#'</span>, <span class="php-var">$m</span>[<span class="php-num">1</span>], <span class="php-var">$m2</span>)) {
-</span><span id="28" class="l"><a class="l" href="source-Bridges.Framework.TracyBridge.php.html#28">28: </a>                <span class="php-var">$blueScreen</span>-&gt;collapsePaths[] = <span class="php-quote">&quot;</span><span class="php-var">$m2</span><span class="php-quote">[1]/nette&quot;</span>;
-</span><span id="29" class="l"><a class="l" href="source-Bridges.Framework.TracyBridge.php.html#29">29: </a>                <span class="php-var">$blueScreen</span>-&gt;collapsePaths[] = <span class="php-quote">&quot;</span><span class="php-var">$m2</span><span class="php-quote">[1]/latte&quot;</span>;
-</span><span id="30" class="l"><a class="l" href="source-Bridges.Framework.TracyBridge.php.html#30">30: </a>            } <span class="php-keyword1">else</span> {
-</span><span id="31" class="l"><a class="l" href="source-Bridges.Framework.TracyBridge.php.html#31">31: </a>                <span class="php-var">$blueScreen</span>-&gt;collapsePaths[] = <span class="php-var">$m</span>[<span class="php-num">1</span>];
-</span><span id="32" class="l"><a class="l" href="source-Bridges.Framework.TracyBridge.php.html#32">32: </a>            }
-</span><span id="33" class="l"><a class="l" href="source-Bridges.Framework.TracyBridge.php.html#33">33: </a>        }
-</span><span id="34" class="l"><a class="l" href="source-Bridges.Framework.TracyBridge.php.html#34">34: </a>
-</span><span id="35" class="l"><a class="l" href="source-Bridges.Framework.TracyBridge.php.html#35">35: </a>        <span class="php-keyword1">if</span> (<span class="php-keyword2">class_exists</span>(<span class="php-quote">'Nette\Framework'</span>)) {
-</span><span id="36" class="l"><a class="l" href="source-Bridges.Framework.TracyBridge.php.html#36">36: </a>            <span class="php-var">$bar</span> = Tracy\Debugger::getBar();
-</span><span id="37" class="l"><a class="l" href="source-Bridges.Framework.TracyBridge.php.html#37">37: </a>            <span class="php-var">$bar</span>-&gt;info[] = <span class="php-var">$blueScreen</span>-&gt;info[] = <span class="php-quote">'Nette Framework '</span> . Nette\Framework::VERSION . <span class="php-quote">' ('</span> . Nette\Framework::REVISION . <span class="php-quote">')'</span>;
-</span><span id="38" class="l"><a class="l" href="source-Bridges.Framework.TracyBridge.php.html#38">38: </a>        }
-</span><span id="39" class="l"><a class="l" href="source-Bridges.Framework.TracyBridge.php.html#39">39: </a>
-</span><span id="40" class="l"><a class="l" href="source-Bridges.Framework.TracyBridge.php.html#40">40: </a>        <span class="php-var">$blueScreen</span>-&gt;addPanel(<span class="php-keyword1">function</span>(<span class="php-var">$e</span>) {
-</span><span id="41" class="l"><a class="l" href="source-Bridges.Framework.TracyBridge.php.html#41">41: </a>            <span class="php-keyword1">if</span> (<span class="php-var">$e</span> <span class="php-keyword1">instanceof</span> Latte\CompileException) {
-</span><span id="42" class="l"><a class="l" href="source-Bridges.Framework.TracyBridge.php.html#42">42: </a>                <span class="php-keyword1">return</span> <span class="php-keyword1">array</span>(
-</span><span id="43" class="l"><a class="l" href="source-Bridges.Framework.TracyBridge.php.html#43">43: </a>                    <span class="php-quote">'tab'</span> =&gt; <span class="php-quote">'Template'</span>,
-</span><span id="44" class="l"><a class="l" href="source-Bridges.Framework.TracyBridge.php.html#44">44: </a>                    <span class="php-quote">'panel'</span> =&gt; <span class="php-quote">'&lt;p&gt;'</span> . (<span class="php-keyword2">is_file</span>(<span class="php-var">$e</span>-&gt;sourceName) ? <span class="php-quote">'&lt;b&gt;File:&lt;/b&gt; '</span> . Helpers::editorLink(<span class="php-var">$e</span>-&gt;sourceName, <span class="php-var">$e</span>-&gt;sourceLine) : <span class="php-keyword2">htmlspecialchars</span>(<span class="php-var">$e</span>-&gt;sourceName)) . <span class="php-quote">'&lt;/p&gt;'</span>
-</span><span id="45" class="l"><a class="l" href="source-Bridges.Framework.TracyBridge.php.html#45">45: </a>                        . (<span class="php-var">$e</span>-&gt;sourceCode ? <span class="php-quote">'&lt;pre&gt;'</span> . BlueScreen::highlightLine(<span class="php-keyword2">htmlspecialchars</span>(<span class="php-var">$e</span>-&gt;sourceCode), <span class="php-var">$e</span>-&gt;sourceLine) . <span class="php-quote">'&lt;/pre&gt;'</span> : <span class="php-quote">''</span>),
-</span><span id="46" class="l"><a class="l" href="source-Bridges.Framework.TracyBridge.php.html#46">46: </a>                );
-</span><span id="47" class="l"><a class="l" href="source-Bridges.Framework.TracyBridge.php.html#47">47: </a>            } <span class="php-keyword1">elseif</span> (<span class="php-var">$e</span> <span class="php-keyword1">instanceof</span> Nette\Neon\Exception &amp;&amp; <span class="php-keyword2">preg_match</span>(<span class="php-quote">'#line (\d+)#'</span>, <span class="php-var">$e</span>-&gt;getMessage(), <span class="php-var">$m</span>)) {
-</span><span id="48" class="l"><a class="l" href="source-Bridges.Framework.TracyBridge.php.html#48">48: </a>                <span class="php-keyword1">if</span> (<span class="php-var">$item</span> = Helpers::findTrace(<span class="php-var">$e</span>-&gt;getTrace(), <span class="php-quote">'Nette\DI\Config\Adapters\NeonAdapter::load'</span>)) {
-</span><span id="49" class="l"><a class="l" href="source-Bridges.Framework.TracyBridge.php.html#49">49: </a>                    <span class="php-keyword1">return</span> <span class="php-keyword1">array</span>(
-</span><span id="50" class="l"><a class="l" href="source-Bridges.Framework.TracyBridge.php.html#50">50: </a>                        <span class="php-quote">'tab'</span> =&gt; <span class="php-quote">'NEON'</span>,
-</span><span id="51" class="l"><a class="l" href="source-Bridges.Framework.TracyBridge.php.html#51">51: </a>                        <span class="php-quote">'panel'</span> =&gt; <span class="php-quote">'&lt;p&gt;&lt;b&gt;File:&lt;/b&gt; '</span> . Helpers::editorLink(<span class="php-var">$item</span>[<span class="php-quote">'args'</span>][<span class="php-num">0</span>], <span class="php-var">$m</span>[<span class="php-num">1</span>]) . <span class="php-quote">'&lt;/p&gt;'</span>
-</span><span id="52" class="l"><a class="l" href="source-Bridges.Framework.TracyBridge.php.html#52">52: </a>                            . BlueScreen::highlightFile(<span class="php-var">$item</span>[<span class="php-quote">'args'</span>][<span class="php-num">0</span>], <span class="php-var">$m</span>[<span class="php-num">1</span>])
-</span><span id="53" class="l"><a class="l" href="source-Bridges.Framework.TracyBridge.php.html#53">53: </a>                    );
-</span><span id="54" class="l"><a class="l" href="source-Bridges.Framework.TracyBridge.php.html#54">54: </a>                } <span class="php-keyword1">elseif</span> (<span class="php-var">$item</span> = Helpers::findTrace(<span class="php-var">$e</span>-&gt;getTrace(), <span class="php-quote">'Nette\Neon\Decoder::decode'</span>)) {
-</span><span id="55" class="l"><a class="l" href="source-Bridges.Framework.TracyBridge.php.html#55">55: </a>                    <span class="php-keyword1">return</span> <span class="php-keyword1">array</span>(
-</span><span id="56" class="l"><a class="l" href="source-Bridges.Framework.TracyBridge.php.html#56">56: </a>                        <span class="php-quote">'tab'</span> =&gt; <span class="php-quote">'NEON'</span>,
-</span><span id="57" class="l"><a class="l" href="source-Bridges.Framework.TracyBridge.php.html#57">57: </a>                        <span class="php-quote">'panel'</span> =&gt; BlueScreen::highlightPhp(<span class="php-var">$item</span>[<span class="php-quote">'args'</span>][<span class="php-num">0</span>], <span class="php-var">$m</span>[<span class="php-num">1</span>])
-</span><span id="58" class="l"><a class="l" href="source-Bridges.Framework.TracyBridge.php.html#58">58: </a>                    );
-</span><span id="59" class="l"><a class="l" href="source-Bridges.Framework.TracyBridge.php.html#59">59: </a>                }
-</span><span id="60" class="l"><a class="l" href="source-Bridges.Framework.TracyBridge.php.html#60">60: </a>            }
-</span><span id="61" class="l"><a class="l" href="source-Bridges.Framework.TracyBridge.php.html#61">61: </a>        });
-</span><span id="62" class="l"><a class="l" href="source-Bridges.Framework.TracyBridge.php.html#62">62: </a>    }
-</span><span id="63" class="l"><a class="l" href="source-Bridges.Framework.TracyBridge.php.html#63">63: </a>
-</span><span id="64" class="l"><a class="l" href="source-Bridges.Framework.TracyBridge.php.html#64">64: </a>}
-</span><span id="65" class="l"><a class="l" href="source-Bridges.Framework.TracyBridge.php.html#65">65: </a></span></code></pre>
+</span><span id="26" class="l"><a class="l" href="source-Bridges.Framework.TracyBridge.php.html#26">26: </a>        <span class="php-keyword1">if</span> (<span class="php-keyword2">class_exists</span>(<span class="php-quote">'Nette\Framework'</span>)) {
+</span><span id="27" class="l"><a class="l" href="source-Bridges.Framework.TracyBridge.php.html#27">27: </a>            <span class="php-var">$bar</span> = Tracy\Debugger::getBar();
+</span><span id="28" class="l"><a class="l" href="source-Bridges.Framework.TracyBridge.php.html#28">28: </a>            <span class="php-var">$bar</span>-&gt;info[] = <span class="php-var">$blueScreen</span>-&gt;info[] = <span class="php-quote">'Nette Framework '</span> . Nette\Framework::VERSION . <span class="php-quote">' ('</span> . Nette\Framework::REVISION . <span class="php-quote">')'</span>;
+</span><span id="29" class="l"><a class="l" href="source-Bridges.Framework.TracyBridge.php.html#29">29: </a>        }
+</span><span id="30" class="l"><a class="l" href="source-Bridges.Framework.TracyBridge.php.html#30">30: </a>
+</span><span id="31" class="l"><a class="l" href="source-Bridges.Framework.TracyBridge.php.html#31">31: </a>        <span class="php-var">$blueScreen</span>-&gt;addPanel(<span class="php-keyword1">function</span>(<span class="php-var">$e</span>) {
+</span><span id="32" class="l"><a class="l" href="source-Bridges.Framework.TracyBridge.php.html#32">32: </a>            <span class="php-keyword1">if</span> (<span class="php-var">$e</span> <span class="php-keyword1">instanceof</span> Latte\CompileException) {
+</span><span id="33" class="l"><a class="l" href="source-Bridges.Framework.TracyBridge.php.html#33">33: </a>                <span class="php-keyword1">return</span> <span class="php-keyword1">array</span>(
+</span><span id="34" class="l"><a class="l" href="source-Bridges.Framework.TracyBridge.php.html#34">34: </a>                    <span class="php-quote">'tab'</span> =&gt; <span class="php-quote">'Template'</span>,
+</span><span id="35" class="l"><a class="l" href="source-Bridges.Framework.TracyBridge.php.html#35">35: </a>                    <span class="php-quote">'panel'</span> =&gt; <span class="php-quote">'&lt;p&gt;'</span>
+</span><span id="36" class="l"><a class="l" href="source-Bridges.Framework.TracyBridge.php.html#36">36: </a>                        . (<span class="php-keyword2">is_file</span>(<span class="php-var">$e</span>-&gt;sourceName)
+</span><span id="37" class="l"><a class="l" href="source-Bridges.Framework.TracyBridge.php.html#37">37: </a>                            ? <span class="php-quote">'&lt;b&gt;File:&lt;/b&gt; '</span> . Helpers::editorLink(<span class="php-var">$e</span>-&gt;sourceName, <span class="php-var">$e</span>-&gt;sourceLine)
+</span><span id="38" class="l"><a class="l" href="source-Bridges.Framework.TracyBridge.php.html#38">38: </a>                            : <span class="php-keyword2">htmlspecialchars</span>(<span class="php-var">$e</span>-&gt;sourceName))
+</span><span id="39" class="l"><a class="l" href="source-Bridges.Framework.TracyBridge.php.html#39">39: </a>                        . <span class="php-quote">'&lt;/p&gt;'</span>
+</span><span id="40" class="l"><a class="l" href="source-Bridges.Framework.TracyBridge.php.html#40">40: </a>                        . (<span class="php-var">$e</span>-&gt;sourceCode
+</span><span id="41" class="l"><a class="l" href="source-Bridges.Framework.TracyBridge.php.html#41">41: </a>                            ? <span class="php-quote">'&lt;pre&gt;'</span> . BlueScreen::highlightLine(<span class="php-keyword2">htmlspecialchars</span>(<span class="php-var">$e</span>-&gt;sourceCode), <span class="php-var">$e</span>-&gt;sourceLine) . <span class="php-quote">'&lt;/pre&gt;'</span>
+</span><span id="42" class="l"><a class="l" href="source-Bridges.Framework.TracyBridge.php.html#42">42: </a>                            : <span class="php-quote">''</span>),
+</span><span id="43" class="l"><a class="l" href="source-Bridges.Framework.TracyBridge.php.html#43">43: </a>                );
+</span><span id="44" class="l"><a class="l" href="source-Bridges.Framework.TracyBridge.php.html#44">44: </a>            } <span class="php-keyword1">elseif</span> (<span class="php-var">$e</span> <span class="php-keyword1">instanceof</span> Nette\Neon\Exception &amp;&amp; <span class="php-keyword2">preg_match</span>(<span class="php-quote">'#line (\d+)#'</span>, <span class="php-var">$e</span>-&gt;getMessage(), <span class="php-var">$m</span>)) {
+</span><span id="45" class="l"><a class="l" href="source-Bridges.Framework.TracyBridge.php.html#45">45: </a>                <span class="php-keyword1">if</span> (<span class="php-var">$item</span> = Helpers::findTrace(<span class="php-var">$e</span>-&gt;getTrace(), <span class="php-quote">'Nette\DI\Config\Adapters\NeonAdapter::load'</span>)) {
+</span><span id="46" class="l"><a class="l" href="source-Bridges.Framework.TracyBridge.php.html#46">46: </a>                    <span class="php-keyword1">return</span> <span class="php-keyword1">array</span>(
+</span><span id="47" class="l"><a class="l" href="source-Bridges.Framework.TracyBridge.php.html#47">47: </a>                        <span class="php-quote">'tab'</span> =&gt; <span class="php-quote">'NEON'</span>,
+</span><span id="48" class="l"><a class="l" href="source-Bridges.Framework.TracyBridge.php.html#48">48: </a>                        <span class="php-quote">'panel'</span> =&gt; <span class="php-quote">'&lt;p&gt;&lt;b&gt;File:&lt;/b&gt; '</span> . Helpers::editorLink(<span class="php-var">$item</span>[<span class="php-quote">'args'</span>][<span class="php-num">0</span>], <span class="php-var">$m</span>[<span class="php-num">1</span>]) . <span class="php-quote">'&lt;/p&gt;'</span>
+</span><span id="49" class="l"><a class="l" href="source-Bridges.Framework.TracyBridge.php.html#49">49: </a>                            . BlueScreen::highlightFile(<span class="php-var">$item</span>[<span class="php-quote">'args'</span>][<span class="php-num">0</span>], <span class="php-var">$m</span>[<span class="php-num">1</span>])
+</span><span id="50" class="l"><a class="l" href="source-Bridges.Framework.TracyBridge.php.html#50">50: </a>                    );
+</span><span id="51" class="l"><a class="l" href="source-Bridges.Framework.TracyBridge.php.html#51">51: </a>                } <span class="php-keyword1">elseif</span> (<span class="php-var">$item</span> = Helpers::findTrace(<span class="php-var">$e</span>-&gt;getTrace(), <span class="php-quote">'Nette\Neon\Decoder::decode'</span>)) {
+</span><span id="52" class="l"><a class="l" href="source-Bridges.Framework.TracyBridge.php.html#52">52: </a>                    <span class="php-keyword1">return</span> <span class="php-keyword1">array</span>(
+</span><span id="53" class="l"><a class="l" href="source-Bridges.Framework.TracyBridge.php.html#53">53: </a>                        <span class="php-quote">'tab'</span> =&gt; <span class="php-quote">'NEON'</span>,
+</span><span id="54" class="l"><a class="l" href="source-Bridges.Framework.TracyBridge.php.html#54">54: </a>                        <span class="php-quote">'panel'</span> =&gt; BlueScreen::highlightPhp(<span class="php-var">$item</span>[<span class="php-quote">'args'</span>][<span class="php-num">0</span>], <span class="php-var">$m</span>[<span class="php-num">1</span>])
+</span><span id="55" class="l"><a class="l" href="source-Bridges.Framework.TracyBridge.php.html#55">55: </a>                    );
+</span><span id="56" class="l"><a class="l" href="source-Bridges.Framework.TracyBridge.php.html#56">56: </a>                }
+</span><span id="57" class="l"><a class="l" href="source-Bridges.Framework.TracyBridge.php.html#57">57: </a>            }
+</span><span id="58" class="l"><a class="l" href="source-Bridges.Framework.TracyBridge.php.html#58">58: </a>        });
+</span><span id="59" class="l"><a class="l" href="source-Bridges.Framework.TracyBridge.php.html#59">59: </a>    }
+</span><span id="60" class="l"><a class="l" href="source-Bridges.Framework.TracyBridge.php.html#60">60: </a>
+</span><span id="61" class="l"><a class="l" href="source-Bridges.Framework.TracyBridge.php.html#61">61: </a>}
+</span><span id="62" class="l"><a class="l" href="source-Bridges.Framework.TracyBridge.php.html#62">62: </a></span></code></pre>
 
 	<div id="footer">
-		Nette 2.2.2 API API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+		Nette 2.2.6 API API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
 	</div>
 </div>
 </div>
 <script src="resources/combined.js?3630868369"></script>
-<script src="elementlist.js?2087501429"></script>
+<script src="elementlist.js?1613912923"></script>
 </body>
 </html>

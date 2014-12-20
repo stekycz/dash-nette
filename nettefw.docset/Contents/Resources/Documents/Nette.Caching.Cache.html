@@ -4,10 +4,10 @@
 	<meta charset="utf-8">
 	<meta name="generator" content="ApiGen 2.8.0">
 
-	<title>Class Nette\Caching\Cache | Nette 2.2.2 API</title>
+	<title>Class Nette\Caching\Cache | Nette 2.2.6 API</title>
 
 	<link rel="stylesheet" href="resources/style.css?3746977979">
-	<link rel="search" type="application/opensearchdescription+xml" title="Nette 2.2.2 API" href="http://api.nette.org/2.0/opensearch.xml">
+	<link rel="search" type="application/opensearchdescription+xml" title="Nette 2.2.6 API" href="http://api.nette.org/2.0/opensearch.xml">
 
 
 <script src='http://files.nette.org/js/analytics.js'></script><script>
@@ -234,7 +234,7 @@ _gaq.push(['_trackPageview']);
 
 				<b>Author:</b>
 				David Grudl<br>
-		<b>Located at</b> <a href="source-Caching.Cache.php.html#14-377" title="Go to source code">Caching/Cache.php</a><br>
+		<b>Located at</b> <a href="source-Caching.Cache.php.html#14-362" title="Go to source code">Caching/Cache.php</a><br>
 	</div>
 
 
@@ -523,7 +523,7 @@ _gaq.push(['_trackPageview']);
 
 		<td class="name"><div>
 		<a class="anchor" href="Nette.Caching.Cache.html#_remove">#</a>
-		<code><a href="source-Caching.Cache.php.html#179-187" title="Go to source code">remove</a>( <span>mixed <var>$key</var></span> )</code>
+		<code><a href="source-Caching.Cache.php.html#178-186" title="Go to source code">remove</a>( <span>mixed <var>$key</var></span> )</code>
 
 		<div class="description short">
 			
@@ -561,7 +561,7 @@ _gaq.push(['_trackPageview']);
 
 		<td class="name"><div>
 		<a class="anchor" href="Nette.Caching.Cache.html#_clean">#</a>
-		<code><a href="source-Caching.Cache.php.html#190-202" title="Go to source code">clean</a>( <span>array <var>$conditions</var> = <span class="php-keyword1">NULL</span></span> )</code>
+		<code><a href="source-Caching.Cache.php.html#189-201" title="Go to source code">clean</a>( <span>array <var>$conditions</var> = <span class="php-keyword1">NULL</span></span> )</code>
 
 		<div class="description short">
 			
@@ -610,7 +610,7 @@ _gaq.push(['_trackPageview']);
 
 		<td class="name"><div>
 		<a class="anchor" href="Nette.Caching.Cache.html#_call">#</a>
-		<code><a href="source-Caching.Cache.php.html#205-217" title="Go to source code">call</a>( <span>mixed <var>$function</var></span> )</code>
+		<code><a href="source-Caching.Cache.php.html#204-216" title="Go to source code">call</a>( <span>mixed <var>$function</var></span> )</code>
 
 		<div class="description short">
 			
@@ -652,7 +652,7 @@ _gaq.push(['_trackPageview']);
 
 		<td class="name"><div>
 		<a class="anchor" href="Nette.Caching.Cache.html#_wrap">#</a>
-		<code><a href="source-Caching.Cache.php.html#220-237" title="Go to source code">wrap</a>( <span>mixed <var>$function</var></span>, <span>array <var>$dependencies</var> = <span class="php-keyword1">NULL</span></span> )</code>
+		<code><a href="source-Caching.Cache.php.html#219-236" title="Go to source code">wrap</a>( <span>mixed <var>$function</var></span>, <span>array <var>$dependencies</var> = <span class="php-keyword1">NULL</span></span> )</code>
 
 		<div class="description short">
 			
@@ -696,7 +696,7 @@ _gaq.push(['_trackPageview']);
 
 		<td class="name"><div>
 		<a class="anchor" href="Nette.Caching.Cache.html#_start">#</a>
-		<code><a href="source-Caching.Cache.php.html#240-252" title="Go to source code">start</a>( <span>mixed <var>$key</var></span> )</code>
+		<code><a href="source-Caching.Cache.php.html#239-251" title="Go to source code">start</a>( <span>mixed <var>$key</var></span> )</code>
 
 		<div class="description short">
 			
@@ -738,7 +738,7 @@ _gaq.push(['_trackPageview']);
 
 		<td class="name"><div>
 		<a class="anchor" href="Nette.Caching.Cache.html#_generateKey">#</a>
-		<code><a href="source-Caching.Cache.php.html#255-264" title="Go to source code">generateKey</a>( <span>string <var>$key</var></span> )</code>
+		<code><a href="source-Caching.Cache.php.html#254-263" title="Go to source code">generateKey</a>( <span>string <var>$key</var></span> )</code>
 
 		<div class="description short">
 			
@@ -769,7 +769,7 @@ _gaq.push(['_trackPageview']);
 		</div>
 		</div></td>
 	</tr>
-	<tr data-order="offsetSet" id="_offsetSet">
+	<tr data-order="offsetSet" id="_offsetSet" class="deprecated">
 
 		<td class="attributes"><code>
 			 public 
@@ -780,33 +780,21 @@ _gaq.push(['_trackPageview']);
 
 		<td class="name"><div>
 		<a class="anchor" href="Nette.Caching.Cache.html#_offsetSet">#</a>
-		<code><a href="source-Caching.Cache.php.html#270-280" title="Go to source code">offsetSet</a>( <span>mixed <var>$key</var></span>, <span>mixed <var>$data</var></span> )</code>
+		<code><a href="source-Caching.Cache.php.html#269-275" title="Go to source code">offsetSet</a>( <span> <var>$key</var></span>, <span> <var>$data</var></span> )</code>
 
 		<div class="description short">
 			
-<p>Inserts (replaces) item into the cache (\ArrayAccess implementation).</p>
-
 		</div>
 
 		<div class="description detailed hidden">
 			
-<p>Inserts (replaces) item into the cache (\ArrayAccess implementation).</p>
 
-
-
-				<h4>Parameters</h4>
-				<div class="list"><dl>
-					<dt><var>$key</var></dt>
-					<dd><code>mixed</code><br>key</dd>
-					<dt><var>$data</var></dt>
-					<dd><code>mixed</code></dd>
-				</dl></div>
-
-
-				<h4>Throws</h4>
+				<h4>Deprecated</h4>
 				<div class="list">
-					<code><code><a href="Nette.InvalidArgumentException.html">Nette\InvalidArgumentException</a></code></code><br>
 				</div>
+
+
+
 
 
 
@@ -815,48 +803,32 @@ _gaq.push(['_trackPageview']);
 		</div>
 		</div></td>
 	</tr>
-	<tr data-order="offsetGet" id="_offsetGet">
+	<tr data-order="offsetGet" id="_offsetGet" class="deprecated">
 
 		<td class="attributes"><code>
 			 public 
-			mixed|null
+			
 			
 			</code>
 		</td>
 
 		<td class="name"><div>
 		<a class="anchor" href="Nette.Caching.Cache.html#_offsetGet">#</a>
-		<code><a href="source-Caching.Cache.php.html#283-297" title="Go to source code">offsetGet</a>( <span>mixed <var>$key</var></span> )</code>
+		<code><a href="source-Caching.Cache.php.html#278-289" title="Go to source code">offsetGet</a>( <span> <var>$key</var></span> )</code>
 
 		<div class="description short">
 			
-<p>Retrieves the specified item from the cache or NULL if the key is not found
-(\ArrayAccess implementation).</p>
-
 		</div>
 
 		<div class="description detailed hidden">
 			
-<p>Retrieves the specified item from the cache or NULL if the key is not found
-(\ArrayAccess implementation).</p>
 
-
-
-				<h4>Parameters</h4>
-				<div class="list"><dl>
-					<dt><var>$key</var></dt>
-					<dd><code>mixed</code><br>key</dd>
-				</dl></div>
-
-				<h4>Returns</h4>
+				<h4>Deprecated</h4>
 				<div class="list">
-					<code>mixed|null</code><br>
 				</div>
 
-				<h4>Throws</h4>
-				<div class="list">
-					<code><code><a href="Nette.InvalidArgumentException.html">Nette\InvalidArgumentException</a></code></code><br>
-				</div>
+
+
 
 
 
@@ -865,46 +837,32 @@ _gaq.push(['_trackPageview']);
 		</div>
 		</div></td>
 	</tr>
-	<tr data-order="offsetExists" id="_offsetExists">
+	<tr data-order="offsetExists" id="_offsetExists" class="deprecated">
 
 		<td class="attributes"><code>
 			 public 
-			boolean
+			
 			
 			</code>
 		</td>
 
 		<td class="name"><div>
 		<a class="anchor" href="Nette.Caching.Cache.html#_offsetExists">#</a>
-		<code><a href="source-Caching.Cache.php.html#300-310" title="Go to source code">offsetExists</a>( <span>mixed <var>$key</var></span> )</code>
+		<code><a href="source-Caching.Cache.php.html#292-299" title="Go to source code">offsetExists</a>( <span> <var>$key</var></span> )</code>
 
 		<div class="description short">
 			
-<p>Exists item in cache? (\ArrayAccess implementation).</p>
-
 		</div>
 
 		<div class="description detailed hidden">
 			
-<p>Exists item in cache? (\ArrayAccess implementation).</p>
 
-
-
-				<h4>Parameters</h4>
-				<div class="list"><dl>
-					<dt><var>$key</var></dt>
-					<dd><code>mixed</code><br>key</dd>
-				</dl></div>
-
-				<h4>Returns</h4>
+				<h4>Deprecated</h4>
 				<div class="list">
-					<code>boolean</code><br>
 				</div>
 
-				<h4>Throws</h4>
-				<div class="list">
-					<code><code><a href="Nette.InvalidArgumentException.html">Nette\InvalidArgumentException</a></code></code><br>
-				</div>
+
+
 
 
 
@@ -913,7 +871,7 @@ _gaq.push(['_trackPageview']);
 		</div>
 		</div></td>
 	</tr>
-	<tr data-order="offsetUnset" id="_offsetUnset">
+	<tr data-order="offsetUnset" id="_offsetUnset" class="deprecated">
 
 		<td class="attributes"><code>
 			 public 
@@ -924,31 +882,21 @@ _gaq.push(['_trackPageview']);
 
 		<td class="name"><div>
 		<a class="anchor" href="Nette.Caching.Cache.html#_offsetUnset">#</a>
-		<code><a href="source-Caching.Cache.php.html#313-322" title="Go to source code">offsetUnset</a>( <span>mixed <var>$key</var></span> )</code>
+		<code><a href="source-Caching.Cache.php.html#302-308" title="Go to source code">offsetUnset</a>( <span> <var>$key</var></span> )</code>
 
 		<div class="description short">
 			
-<p>Removes the specified item from the cache.</p>
-
 		</div>
 
 		<div class="description detailed hidden">
 			
-<p>Removes the specified item from the cache.</p>
 
-
-
-				<h4>Parameters</h4>
-				<div class="list"><dl>
-					<dt><var>$key</var></dt>
-					<dd><code>mixed</code><br>key</dd>
-				</dl></div>
-
-
-				<h4>Throws</h4>
+				<h4>Deprecated</h4>
 				<div class="list">
-					<code><code><a href="Nette.InvalidArgumentException.html">Nette\InvalidArgumentException</a></code></code><br>
 				</div>
+
+
+
 
 
 
@@ -957,7 +905,7 @@ _gaq.push(['_trackPageview']);
 		</div>
 		</div></td>
 	</tr>
-	<tr data-order="release" id="_release">
+	<tr data-order="release" id="_release" class="deprecated">
 
 		<td class="attributes"><code>
 			 public 
@@ -968,19 +916,18 @@ _gaq.push(['_trackPageview']);
 
 		<td class="name"><div>
 		<a class="anchor" href="Nette.Caching.Cache.html#_release">#</a>
-		<code><a href="source-Caching.Cache.php.html#325-332" title="Go to source code">release</a>( )</code>
+		<code><a href="source-Caching.Cache.php.html#311-317" title="Go to source code">release</a>( )</code>
 
 		<div class="description short">
 			
-<p>Discards the internal cache used by ArrayAccess.</p>
-
 		</div>
 
 		<div class="description detailed hidden">
 			
-<p>Discards the internal cache used by ArrayAccess.</p>
 
-
+				<h4>Deprecated</h4>
+				<div class="list">
+				</div>
 
 
 
@@ -1001,7 +948,7 @@ _gaq.push(['_trackPageview']);
 
 		<td class="name"><div>
 		<a class="anchor" href="Nette.Caching.Cache.html#_checkCallbacks">#</a>
-		<code><a href="source-Caching.Cache.php.html#338-351" title="Go to source code">checkCallbacks</a>( <span>array <var>$callbacks</var></span> )</code>
+		<code><a href="source-Caching.Cache.php.html#323-336" title="Go to source code">checkCallbacks</a>( <span>array <var>$callbacks</var></span> )</code>
 
 		<div class="description short">
 			
@@ -1367,11 +1314,11 @@ _gaq.push(['_trackPageview']);
 </div>
 
 	<div id="footer">
-		Nette 2.2.2 API API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+		Nette 2.2.6 API API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
 	</div>
 </div>
 </div>
 <script src="resources/combined.js?3630868369"></script>
-<script src="elementlist.js?2087501429"></script>
+<script src="elementlist.js?1613912923"></script>
 </body>
 </html>

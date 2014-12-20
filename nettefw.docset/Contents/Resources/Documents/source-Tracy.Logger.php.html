@@ -5,10 +5,10 @@
 	<meta name="generator" content="ApiGen 2.8.0">
 	<meta name="robots" content="noindex">
 
-	<title>File Tracy/Logger.php | Nette 2.2.2 API</title>
+	<title>File Tracy/Logger.php | Nette 2.2.6 API</title>
 
 	<link rel="stylesheet" href="resources/style.css?3746977979">
-	<link rel="search" type="application/opensearchdescription+xml" title="Nette 2.2.2 API" href="http://api.nette.org/2.0/opensearch.xml">
+	<link rel="search" type="application/opensearchdescription+xml" title="Nette 2.2.6 API" href="http://api.nette.org/2.0/opensearch.xml">
 
 
 <script src='http://files.nette.org/js/analytics.js'></script><script>
@@ -200,111 +200,113 @@ _gaq.push(['_trackPageview']);
 		</ul>
 	</div>
 
-<pre><code><span id="1" class="l"><a class="l" href="source-Tracy.Logger.php.html#1"> 1: </a><span class="xlang">&lt;?php</span>
-</span><span id="2" class="l"><a class="l" href="source-Tracy.Logger.php.html#2"> 2: </a>
-</span><span id="3" class="l"><a class="l" href="source-Tracy.Logger.php.html#3"> 3: </a><span class="php-comment">/**
-</span></span><span id="4" class="l"><a class="l" href="source-Tracy.Logger.php.html#4"> 4: </a><span class="php-comment"> * This file is part of the Tracy (http://tracy.nette.org)
-</span></span><span id="5" class="l"><a class="l" href="source-Tracy.Logger.php.html#5"> 5: </a><span class="php-comment"> * Copyright (c) 2004 David Grudl (http://davidgrudl.com)
-</span></span><span id="6" class="l"><a class="l" href="source-Tracy.Logger.php.html#6"> 6: </a><span class="php-comment"> */</span>
-</span><span id="7" class="l"><a class="l" href="source-Tracy.Logger.php.html#7"> 7: </a>
-</span><span id="8" class="l"><a class="l" href="source-Tracy.Logger.php.html#8"> 8: </a><span class="php-keyword1">namespace</span> Tracy;
-</span><span id="9" class="l"><a class="l" href="source-Tracy.Logger.php.html#9"> 9: </a>
-</span><span id="10" class="l"><a class="l" href="source-Tracy.Logger.php.html#10">10: </a><span class="php-keyword1">use</span> Tracy;
-</span><span id="11" class="l"><a class="l" href="source-Tracy.Logger.php.html#11">11: </a>
-</span><span id="12" class="l"><a class="l" href="source-Tracy.Logger.php.html#12">12: </a>
-</span><span id="13" class="l"><a class="l" href="source-Tracy.Logger.php.html#13">13: </a><span class="php-comment">/**
-</span></span><span id="14" class="l"><a class="l" href="source-Tracy.Logger.php.html#14">14: </a><span class="php-comment"> * Logger.
-</span></span><span id="15" class="l"><a class="l" href="source-Tracy.Logger.php.html#15">15: </a><span class="php-comment"> *
-</span></span><span id="16" class="l"><a class="l" href="source-Tracy.Logger.php.html#16">16: </a><span class="php-comment"> * @author     David Grudl
-</span></span><span id="17" class="l"><a class="l" href="source-Tracy.Logger.php.html#17">17: </a><span class="php-comment"> */</span>
-</span><span id="18" class="l"><a class="l" href="source-Tracy.Logger.php.html#18">18: </a><span class="php-keyword1">class</span> <a id="Logger" href="source-Tracy.Logger.php.html#Logger">Logger</a>
-</span><span id="19" class="l"><a class="l" href="source-Tracy.Logger.php.html#19">19: </a>{
-</span><span id="20" class="l"><a class="l" href="source-Tracy.Logger.php.html#20">20: </a>    <span class="php-keyword1">const</span> <a id="DEBUG" href="source-Tracy.Logger.php.html#DEBUG">DEBUG</a> = <span class="php-quote">'debug'</span>,
-</span><span id="21" class="l"><a class="l" href="source-Tracy.Logger.php.html#21">21: </a>        <a id="INFO" href="source-Tracy.Logger.php.html#INFO">INFO</a> = <span class="php-quote">'info'</span>,
-</span><span id="22" class="l"><a class="l" href="source-Tracy.Logger.php.html#22">22: </a>        <a id="WARNING" href="source-Tracy.Logger.php.html#WARNING">WARNING</a> = <span class="php-quote">'warning'</span>,
-</span><span id="23" class="l"><a class="l" href="source-Tracy.Logger.php.html#23">23: </a>        <a id="ERROR" href="source-Tracy.Logger.php.html#ERROR">ERROR</a> = <span class="php-quote">'error'</span>,
-</span><span id="24" class="l"><a class="l" href="source-Tracy.Logger.php.html#24">24: </a>        <a id="EXCEPTION" href="source-Tracy.Logger.php.html#EXCEPTION">EXCEPTION</a> = <span class="php-quote">'exception'</span>,
-</span><span id="25" class="l"><a class="l" href="source-Tracy.Logger.php.html#25">25: </a>        <a id="CRITICAL" href="source-Tracy.Logger.php.html#CRITICAL">CRITICAL</a> = <span class="php-quote">'critical'</span>;
-</span><span id="26" class="l"><a class="l" href="source-Tracy.Logger.php.html#26">26: </a>
-</span><span id="27" class="l"><a class="l" href="source-Tracy.Logger.php.html#27">27: </a>    <span class="php-comment">/** @var int interval for sending email is 2 days */</span>
-</span><span id="28" class="l"><a class="l" href="source-Tracy.Logger.php.html#28">28: </a>    <span class="php-keyword1">public</span> <span class="php-var"><a id="$emailSnooze" href="source-Tracy.Logger.php.html#$emailSnooze">$emailSnooze</a></span> = <span class="php-num">172800</span>;
-</span><span id="29" class="l"><a class="l" href="source-Tracy.Logger.php.html#29">29: </a>
-</span><span id="30" class="l"><a class="l" href="source-Tracy.Logger.php.html#30">30: </a>    <span class="php-comment">/** @var callable handler for sending emails */</span>
-</span><span id="31" class="l"><a class="l" href="source-Tracy.Logger.php.html#31">31: </a>    <span class="php-keyword1">public</span> <span class="php-var"><a id="$mailer" href="source-Tracy.Logger.php.html#$mailer">$mailer</a></span> = <span class="php-keyword1">array</span>(__CLASS__, <span class="php-quote">'defaultMailer'</span>);
-</span><span id="32" class="l"><a class="l" href="source-Tracy.Logger.php.html#32">32: </a>
-</span><span id="33" class="l"><a class="l" href="source-Tracy.Logger.php.html#33">33: </a>    <span class="php-comment">/** @var string name of the directory where errors should be logged; FALSE means that logging is disabled */</span>
-</span><span id="34" class="l"><a class="l" href="source-Tracy.Logger.php.html#34">34: </a>    <span class="php-keyword1">public</span> <span class="php-var"><a id="$directory" href="source-Tracy.Logger.php.html#$directory">$directory</a></span>;
-</span><span id="35" class="l"><a class="l" href="source-Tracy.Logger.php.html#35">35: </a>
-</span><span id="36" class="l"><a class="l" href="source-Tracy.Logger.php.html#36">36: </a>    <span class="php-comment">/** @var string|array email or emails to which send error notifications */</span>
-</span><span id="37" class="l"><a class="l" href="source-Tracy.Logger.php.html#37">37: </a>    <span class="php-keyword1">public</span> <span class="php-var"><a id="$email" href="source-Tracy.Logger.php.html#$email">$email</a></span>;
-</span><span id="38" class="l"><a class="l" href="source-Tracy.Logger.php.html#38">38: </a>
-</span><span id="39" class="l"><a class="l" href="source-Tracy.Logger.php.html#39">39: </a>
-</span><span id="40" class="l"><a class="l" href="source-Tracy.Logger.php.html#40">40: </a>    <span class="php-comment">/**
-</span></span><span id="41" class="l"><a class="l" href="source-Tracy.Logger.php.html#41">41: </a><span class="php-comment">     * Logs message or exception to file and sends email notification.
-</span></span><span id="42" class="l"><a class="l" href="source-Tracy.Logger.php.html#42">42: </a><span class="php-comment">     * @param  string|array
-</span></span><span id="43" class="l"><a class="l" href="source-Tracy.Logger.php.html#43">43: </a><span class="php-comment">     * @param  int   one of constant Debugger::INFO, WARNING, ERROR (sends email), EXCEPTION (sends email), CRITICAL (sends email)
-</span></span><span id="44" class="l"><a class="l" href="source-Tracy.Logger.php.html#44">44: </a><span class="php-comment">     * @return void
-</span></span><span id="45" class="l"><a class="l" href="source-Tracy.Logger.php.html#45">45: </a><span class="php-comment">     */</span>
-</span><span id="46" class="l"><a class="l" href="source-Tracy.Logger.php.html#46">46: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <span class="php-keyword2">log</span>(<span class="php-var">$message</span>, <span class="php-var">$priority</span> = <span class="php-keyword1">NULL</span>)
-</span><span id="47" class="l"><a class="l" href="source-Tracy.Logger.php.html#47">47: </a>    {
-</span><span id="48" class="l"><a class="l" href="source-Tracy.Logger.php.html#48">48: </a>        <span class="php-keyword1">if</span> (!<span class="php-keyword2">is_dir</span>(<span class="php-var">$this</span>-&gt;directory)) {
-</span><span id="49" class="l"><a class="l" href="source-Tracy.Logger.php.html#49">49: </a>            <span class="php-keyword1">throw</span> <span class="php-keyword1">new</span> \RuntimeException(<span class="php-quote">&quot;Directory '</span><span class="php-var">$this</span><span class="php-quote">-&gt;directory' is not found or is not directory.&quot;</span>);
-</span><span id="50" class="l"><a class="l" href="source-Tracy.Logger.php.html#50">50: </a>        }
-</span><span id="51" class="l"><a class="l" href="source-Tracy.Logger.php.html#51">51: </a>
-</span><span id="52" class="l"><a class="l" href="source-Tracy.Logger.php.html#52">52: </a>        <span class="php-keyword1">if</span> (<span class="php-keyword2">is_array</span>(<span class="php-var">$message</span>)) {
-</span><span id="53" class="l"><a class="l" href="source-Tracy.Logger.php.html#53">53: </a>            <span class="php-var">$message</span> = <span class="php-keyword2">implode</span>(<span class="php-quote">' '</span>, <span class="php-var">$message</span>);
-</span><span id="54" class="l"><a class="l" href="source-Tracy.Logger.php.html#54">54: </a>        }
-</span><span id="55" class="l"><a class="l" href="source-Tracy.Logger.php.html#55">55: </a>        <span class="php-var">$message</span> = <span class="php-keyword2">preg_replace</span>(<span class="php-quote">'#\s*\r?\n\s*#'</span>, <span class="php-quote">' '</span>, <span class="php-keyword2">trim</span>(<span class="php-var">$message</span>));
-</span><span id="56" class="l"><a class="l" href="source-Tracy.Logger.php.html#56">56: </a>        <span class="php-var">$file</span> = <span class="php-var">$this</span>-&gt;directory . <span class="php-quote">'/'</span> . <span class="php-keyword2">strtolower</span>(<span class="php-var">$priority</span> ?: self::INFO) . <span class="php-quote">'.log'</span>;
-</span><span id="57" class="l"><a class="l" href="source-Tracy.Logger.php.html#57">57: </a>        <span class="php-keyword1">if</span> (!@<span class="php-keyword2">file_put_contents</span>(<span class="php-var">$file</span>, <span class="php-var">$message</span> . PHP_EOL, FILE_APPEND | LOCK_EX)) {
-</span><span id="58" class="l"><a class="l" href="source-Tracy.Logger.php.html#58">58: </a>            <span class="php-keyword1">throw</span> <span class="php-keyword1">new</span> \RuntimeException(<span class="php-quote">&quot;Unable to write to log file '</span><span class="php-var">$file</span><span class="php-quote">'. Is directory writable?&quot;</span>);
-</span><span id="59" class="l"><a class="l" href="source-Tracy.Logger.php.html#59">59: </a>        }
-</span><span id="60" class="l"><a class="l" href="source-Tracy.Logger.php.html#60">60: </a>
-</span><span id="61" class="l"><a class="l" href="source-Tracy.Logger.php.html#61">61: </a>        <span class="php-keyword1">if</span> (<span class="php-keyword2">in_array</span>(<span class="php-var">$priority</span>, <span class="php-keyword1">array</span>(self::ERROR, self::EXCEPTION, self::CRITICAL), <span class="php-keyword1">TRUE</span>) &amp;&amp; <span class="php-var">$this</span>-&gt;email &amp;&amp; <span class="php-var">$this</span>-&gt;mailer
-</span><span id="62" class="l"><a class="l" href="source-Tracy.Logger.php.html#62">62: </a>            &amp;&amp; @<span class="php-keyword2">filemtime</span>(<span class="php-var">$this</span>-&gt;directory . <span class="php-quote">'/email-sent'</span>) + <span class="php-var">$this</span>-&gt;emailSnooze &lt; <span class="php-keyword2">time</span>() <span class="php-comment">// @ - file may not exist</span>
-</span><span id="63" class="l"><a class="l" href="source-Tracy.Logger.php.html#63">63: </a>            &amp;&amp; @<span class="php-keyword2">file_put_contents</span>(<span class="php-var">$this</span>-&gt;directory . <span class="php-quote">'/email-sent'</span>, <span class="php-quote">'sent'</span>) <span class="php-comment">// @ - file may not be writable</span>
-</span><span id="64" class="l"><a class="l" href="source-Tracy.Logger.php.html#64">64: </a>        ) {
-</span><span id="65" class="l"><a class="l" href="source-Tracy.Logger.php.html#65">65: </a>            <span class="php-keyword2">call_user_func</span>(<span class="php-var">$this</span>-&gt;mailer, <span class="php-var">$message</span>, <span class="php-keyword2">implode</span>(<span class="php-quote">', '</span>, (<span class="php-keyword1">array</span>) <span class="php-var">$this</span>-&gt;email));
-</span><span id="66" class="l"><a class="l" href="source-Tracy.Logger.php.html#66">66: </a>        }
-</span><span id="67" class="l"><a class="l" href="source-Tracy.Logger.php.html#67">67: </a>    }
-</span><span id="68" class="l"><a class="l" href="source-Tracy.Logger.php.html#68">68: </a>
-</span><span id="69" class="l"><a class="l" href="source-Tracy.Logger.php.html#69">69: </a>
-</span><span id="70" class="l"><a class="l" href="source-Tracy.Logger.php.html#70">70: </a>    <span class="php-comment">/**
-</span></span><span id="71" class="l"><a class="l" href="source-Tracy.Logger.php.html#71">71: </a><span class="php-comment">     * Default mailer.
-</span></span><span id="72" class="l"><a class="l" href="source-Tracy.Logger.php.html#72">72: </a><span class="php-comment">     * @param  string
-</span></span><span id="73" class="l"><a class="l" href="source-Tracy.Logger.php.html#73">73: </a><span class="php-comment">     * @param  string
-</span></span><span id="74" class="l"><a class="l" href="source-Tracy.Logger.php.html#74">74: </a><span class="php-comment">     * @return void
-</span></span><span id="75" class="l"><a class="l" href="source-Tracy.Logger.php.html#75">75: </a><span class="php-comment">     */</span>
-</span><span id="76" class="l"><a class="l" href="source-Tracy.Logger.php.html#76">76: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">static</span> <span class="php-keyword1">function</span> <a id="_defaultMailer" href="source-Tracy.Logger.php.html#_defaultMailer">defaultMailer</a>(<span class="php-var">$message</span>, <span class="php-var">$email</span>)
-</span><span id="77" class="l"><a class="l" href="source-Tracy.Logger.php.html#77">77: </a>    {
-</span><span id="78" class="l"><a class="l" href="source-Tracy.Logger.php.html#78">78: </a>        <span class="php-var">$host</span> = <span class="php-keyword2">preg_replace</span>(<span class="php-quote">'#[^\w.-]+#'</span>, <span class="php-quote">''</span>, <span class="php-keyword1">isset</span>(<span class="php-var">$_SERVER</span>[<span class="php-quote">'HTTP_HOST'</span>]) ? <span class="php-var">$_SERVER</span>[<span class="php-quote">'HTTP_HOST'</span>] : <span class="php-keyword2">php_uname</span>(<span class="php-quote">'n'</span>));
-</span><span id="79" class="l"><a class="l" href="source-Tracy.Logger.php.html#79">79: </a>        <span class="php-var">$parts</span> = <span class="php-keyword2">str_replace</span>(
-</span><span id="80" class="l"><a class="l" href="source-Tracy.Logger.php.html#80">80: </a>            <span class="php-keyword1">array</span>(<span class="php-quote">&quot;\r\n&quot;</span>, <span class="php-quote">&quot;\n&quot;</span>),
-</span><span id="81" class="l"><a class="l" href="source-Tracy.Logger.php.html#81">81: </a>            <span class="php-keyword1">array</span>(<span class="php-quote">&quot;\n&quot;</span>, PHP_EOL),
-</span><span id="82" class="l"><a class="l" href="source-Tracy.Logger.php.html#82">82: </a>            <span class="php-keyword1">array</span>(
-</span><span id="83" class="l"><a class="l" href="source-Tracy.Logger.php.html#83">83: </a>                <span class="php-quote">'headers'</span> =&gt; <span class="php-keyword2">implode</span>(<span class="php-quote">&quot;\n&quot;</span>, <span class="php-keyword1">array</span>(
-</span><span id="84" class="l"><a class="l" href="source-Tracy.Logger.php.html#84">84: </a>                    <span class="php-quote">&quot;From: noreply@</span><span class="php-var">$host</span><span class="php-quote">&quot;</span>,
-</span><span id="85" class="l"><a class="l" href="source-Tracy.Logger.php.html#85">85: </a>                    <span class="php-quote">'X-Mailer: Tracy'</span>,
-</span><span id="86" class="l"><a class="l" href="source-Tracy.Logger.php.html#86">86: </a>                    <span class="php-quote">'Content-Type: text/plain; charset=UTF-8'</span>,
-</span><span id="87" class="l"><a class="l" href="source-Tracy.Logger.php.html#87">87: </a>                    <span class="php-quote">'Content-Transfer-Encoding: 8bit'</span>,
-</span><span id="88" class="l"><a class="l" href="source-Tracy.Logger.php.html#88">88: </a>                )) . <span class="php-quote">&quot;\n&quot;</span>,
-</span><span id="89" class="l"><a class="l" href="source-Tracy.Logger.php.html#89">89: </a>                <span class="php-quote">'subject'</span> =&gt; <span class="php-quote">&quot;PHP: An error occurred on the server </span><span class="php-var">$host</span><span class="php-quote">&quot;</span>,
-</span><span id="90" class="l"><a class="l" href="source-Tracy.Logger.php.html#90">90: </a>                <span class="php-quote">'body'</span> =&gt; <span class="php-quote">&quot;[&quot;</span> . @<span class="php-keyword2">date</span>(<span class="php-quote">'Y-m-d H:i:s'</span>) . <span class="php-quote">&quot;] </span><span class="php-var">$message</span><span class="php-quote">&quot;</span>, <span class="php-comment">// @ - timezone may not be set</span>
-</span><span id="91" class="l"><a class="l" href="source-Tracy.Logger.php.html#91">91: </a>            )
-</span><span id="92" class="l"><a class="l" href="source-Tracy.Logger.php.html#92">92: </a>        );
-</span><span id="93" class="l"><a class="l" href="source-Tracy.Logger.php.html#93">93: </a>
-</span><span id="94" class="l"><a class="l" href="source-Tracy.Logger.php.html#94">94: </a>        <span class="php-keyword2">mail</span>(<span class="php-var">$email</span>, <span class="php-var">$parts</span>[<span class="php-quote">'subject'</span>], <span class="php-var">$parts</span>[<span class="php-quote">'body'</span>], <span class="php-var">$parts</span>[<span class="php-quote">'headers'</span>]);
-</span><span id="95" class="l"><a class="l" href="source-Tracy.Logger.php.html#95">95: </a>    }
-</span><span id="96" class="l"><a class="l" href="source-Tracy.Logger.php.html#96">96: </a>
-</span><span id="97" class="l"><a class="l" href="source-Tracy.Logger.php.html#97">97: </a>}
-</span><span id="98" class="l"><a class="l" href="source-Tracy.Logger.php.html#98">98: </a></span></code></pre>
+<pre><code><span id="1" class="l"><a class="l" href="source-Tracy.Logger.php.html#1">  1: </a><span class="xlang">&lt;?php</span>
+</span><span id="2" class="l"><a class="l" href="source-Tracy.Logger.php.html#2">  2: </a>
+</span><span id="3" class="l"><a class="l" href="source-Tracy.Logger.php.html#3">  3: </a><span class="php-comment">/**
+</span></span><span id="4" class="l"><a class="l" href="source-Tracy.Logger.php.html#4">  4: </a><span class="php-comment"> * This file is part of the Tracy (http://tracy.nette.org)
+</span></span><span id="5" class="l"><a class="l" href="source-Tracy.Logger.php.html#5">  5: </a><span class="php-comment"> * Copyright (c) 2004 David Grudl (http://davidgrudl.com)
+</span></span><span id="6" class="l"><a class="l" href="source-Tracy.Logger.php.html#6">  6: </a><span class="php-comment"> */</span>
+</span><span id="7" class="l"><a class="l" href="source-Tracy.Logger.php.html#7">  7: </a>
+</span><span id="8" class="l"><a class="l" href="source-Tracy.Logger.php.html#8">  8: </a><span class="php-keyword1">namespace</span> Tracy;
+</span><span id="9" class="l"><a class="l" href="source-Tracy.Logger.php.html#9">  9: </a>
+</span><span id="10" class="l"><a class="l" href="source-Tracy.Logger.php.html#10"> 10: </a><span class="php-keyword1">use</span> Tracy;
+</span><span id="11" class="l"><a class="l" href="source-Tracy.Logger.php.html#11"> 11: </a>
+</span><span id="12" class="l"><a class="l" href="source-Tracy.Logger.php.html#12"> 12: </a>
+</span><span id="13" class="l"><a class="l" href="source-Tracy.Logger.php.html#13"> 13: </a><span class="php-comment">/**
+</span></span><span id="14" class="l"><a class="l" href="source-Tracy.Logger.php.html#14"> 14: </a><span class="php-comment"> * Logger.
+</span></span><span id="15" class="l"><a class="l" href="source-Tracy.Logger.php.html#15"> 15: </a><span class="php-comment"> *
+</span></span><span id="16" class="l"><a class="l" href="source-Tracy.Logger.php.html#16"> 16: </a><span class="php-comment"> * @author     David Grudl
+</span></span><span id="17" class="l"><a class="l" href="source-Tracy.Logger.php.html#17"> 17: </a><span class="php-comment"> */</span>
+</span><span id="18" class="l"><a class="l" href="source-Tracy.Logger.php.html#18"> 18: </a><span class="php-keyword1">class</span> <a id="Logger" href="source-Tracy.Logger.php.html#Logger">Logger</a>
+</span><span id="19" class="l"><a class="l" href="source-Tracy.Logger.php.html#19"> 19: </a>{
+</span><span id="20" class="l"><a class="l" href="source-Tracy.Logger.php.html#20"> 20: </a>    <span class="php-keyword1">const</span> <a id="DEBUG" href="source-Tracy.Logger.php.html#DEBUG">DEBUG</a> = <span class="php-quote">'debug'</span>,
+</span><span id="21" class="l"><a class="l" href="source-Tracy.Logger.php.html#21"> 21: </a>        <a id="INFO" href="source-Tracy.Logger.php.html#INFO">INFO</a> = <span class="php-quote">'info'</span>,
+</span><span id="22" class="l"><a class="l" href="source-Tracy.Logger.php.html#22"> 22: </a>        <a id="WARNING" href="source-Tracy.Logger.php.html#WARNING">WARNING</a> = <span class="php-quote">'warning'</span>,
+</span><span id="23" class="l"><a class="l" href="source-Tracy.Logger.php.html#23"> 23: </a>        <a id="ERROR" href="source-Tracy.Logger.php.html#ERROR">ERROR</a> = <span class="php-quote">'error'</span>,
+</span><span id="24" class="l"><a class="l" href="source-Tracy.Logger.php.html#24"> 24: </a>        <a id="EXCEPTION" href="source-Tracy.Logger.php.html#EXCEPTION">EXCEPTION</a> = <span class="php-quote">'exception'</span>,
+</span><span id="25" class="l"><a class="l" href="source-Tracy.Logger.php.html#25"> 25: </a>        <a id="CRITICAL" href="source-Tracy.Logger.php.html#CRITICAL">CRITICAL</a> = <span class="php-quote">'critical'</span>;
+</span><span id="26" class="l"><a class="l" href="source-Tracy.Logger.php.html#26"> 26: </a>
+</span><span id="27" class="l"><a class="l" href="source-Tracy.Logger.php.html#27"> 27: </a>    <span class="php-comment">/** @var int interval for sending email is 2 days */</span>
+</span><span id="28" class="l"><a class="l" href="source-Tracy.Logger.php.html#28"> 28: </a>    <span class="php-keyword1">public</span> <span class="php-var"><a id="$emailSnooze" href="source-Tracy.Logger.php.html#$emailSnooze">$emailSnooze</a></span> = <span class="php-num">172800</span>;
+</span><span id="29" class="l"><a class="l" href="source-Tracy.Logger.php.html#29"> 29: </a>
+</span><span id="30" class="l"><a class="l" href="source-Tracy.Logger.php.html#30"> 30: </a>    <span class="php-comment">/** @var callable handler for sending emails */</span>
+</span><span id="31" class="l"><a class="l" href="source-Tracy.Logger.php.html#31"> 31: </a>    <span class="php-keyword1">public</span> <span class="php-var"><a id="$mailer" href="source-Tracy.Logger.php.html#$mailer">$mailer</a></span> = <span class="php-keyword1">array</span>(__CLASS__, <span class="php-quote">'defaultMailer'</span>);
+</span><span id="32" class="l"><a class="l" href="source-Tracy.Logger.php.html#32"> 32: </a>
+</span><span id="33" class="l"><a class="l" href="source-Tracy.Logger.php.html#33"> 33: </a>    <span class="php-comment">/** @var string name of the directory where errors should be logged; FALSE means that logging is disabled */</span>
+</span><span id="34" class="l"><a class="l" href="source-Tracy.Logger.php.html#34"> 34: </a>    <span class="php-keyword1">public</span> <span class="php-var"><a id="$directory" href="source-Tracy.Logger.php.html#$directory">$directory</a></span>;
+</span><span id="35" class="l"><a class="l" href="source-Tracy.Logger.php.html#35"> 35: </a>
+</span><span id="36" class="l"><a class="l" href="source-Tracy.Logger.php.html#36"> 36: </a>    <span class="php-comment">/** @var string|array email or emails to which send error notifications */</span>
+</span><span id="37" class="l"><a class="l" href="source-Tracy.Logger.php.html#37"> 37: </a>    <span class="php-keyword1">public</span> <span class="php-var"><a id="$email" href="source-Tracy.Logger.php.html#$email">$email</a></span>;
+</span><span id="38" class="l"><a class="l" href="source-Tracy.Logger.php.html#38"> 38: </a>
+</span><span id="39" class="l"><a class="l" href="source-Tracy.Logger.php.html#39"> 39: </a>
+</span><span id="40" class="l"><a class="l" href="source-Tracy.Logger.php.html#40"> 40: </a>    <span class="php-comment">/**
+</span></span><span id="41" class="l"><a class="l" href="source-Tracy.Logger.php.html#41"> 41: </a><span class="php-comment">     * Logs message or exception to file and sends email notification.
+</span></span><span id="42" class="l"><a class="l" href="source-Tracy.Logger.php.html#42"> 42: </a><span class="php-comment">     * @param  string|array
+</span></span><span id="43" class="l"><a class="l" href="source-Tracy.Logger.php.html#43"> 43: </a><span class="php-comment">     * @param  int   one of constant Debugger::INFO, WARNING, ERROR (sends email), EXCEPTION (sends email), CRITICAL (sends email)
+</span></span><span id="44" class="l"><a class="l" href="source-Tracy.Logger.php.html#44"> 44: </a><span class="php-comment">     * @return void
+</span></span><span id="45" class="l"><a class="l" href="source-Tracy.Logger.php.html#45"> 45: </a><span class="php-comment">     */</span>
+</span><span id="46" class="l"><a class="l" href="source-Tracy.Logger.php.html#46"> 46: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <span class="php-keyword2">log</span>(<span class="php-var">$message</span>, <span class="php-var">$priority</span> = <span class="php-keyword1">NULL</span>)
+</span><span id="47" class="l"><a class="l" href="source-Tracy.Logger.php.html#47"> 47: </a>    {
+</span><span id="48" class="l"><a class="l" href="source-Tracy.Logger.php.html#48"> 48: </a>        <span class="php-keyword1">if</span> (!<span class="php-keyword2">is_dir</span>(<span class="php-var">$this</span>-&gt;directory)) {
+</span><span id="49" class="l"><a class="l" href="source-Tracy.Logger.php.html#49"> 49: </a>            <span class="php-keyword1">throw</span> <span class="php-keyword1">new</span> \RuntimeException(<span class="php-quote">&quot;Directory '</span><span class="php-var">$this</span><span class="php-quote">-&gt;directory' is not found or is not directory.&quot;</span>);
+</span><span id="50" class="l"><a class="l" href="source-Tracy.Logger.php.html#50"> 50: </a>        }
+</span><span id="51" class="l"><a class="l" href="source-Tracy.Logger.php.html#51"> 51: </a>
+</span><span id="52" class="l"><a class="l" href="source-Tracy.Logger.php.html#52"> 52: </a>        <span class="php-keyword1">if</span> (<span class="php-keyword2">is_array</span>(<span class="php-var">$message</span>)) {
+</span><span id="53" class="l"><a class="l" href="source-Tracy.Logger.php.html#53"> 53: </a>            <span class="php-var">$message</span> = <span class="php-keyword2">implode</span>(<span class="php-quote">' '</span>, <span class="php-var">$message</span>);
+</span><span id="54" class="l"><a class="l" href="source-Tracy.Logger.php.html#54"> 54: </a>        }
+</span><span id="55" class="l"><a class="l" href="source-Tracy.Logger.php.html#55"> 55: </a>        <span class="php-var">$message</span> = <span class="php-keyword2">preg_replace</span>(<span class="php-quote">'#\s*\r?\n\s*#'</span>, <span class="php-quote">' '</span>, <span class="php-keyword2">trim</span>(<span class="php-var">$message</span>));
+</span><span id="56" class="l"><a class="l" href="source-Tracy.Logger.php.html#56"> 56: </a>        <span class="php-var">$file</span> = <span class="php-var">$this</span>-&gt;directory . <span class="php-quote">'/'</span> . <span class="php-keyword2">strtolower</span>(<span class="php-var">$priority</span> ?: self::INFO) . <span class="php-quote">'.log'</span>;
+</span><span id="57" class="l"><a class="l" href="source-Tracy.Logger.php.html#57"> 57: </a>        <span class="php-keyword1">if</span> (!@<span class="php-keyword2">file_put_contents</span>(<span class="php-var">$file</span>, <span class="php-var">$message</span> . PHP_EOL, FILE_APPEND | LOCK_EX)) {
+</span><span id="58" class="l"><a class="l" href="source-Tracy.Logger.php.html#58"> 58: </a>            <span class="php-keyword1">throw</span> <span class="php-keyword1">new</span> \RuntimeException(<span class="php-quote">&quot;Unable to write to log file '</span><span class="php-var">$file</span><span class="php-quote">'. Is directory writable?&quot;</span>);
+</span><span id="59" class="l"><a class="l" href="source-Tracy.Logger.php.html#59"> 59: </a>        }
+</span><span id="60" class="l"><a class="l" href="source-Tracy.Logger.php.html#60"> 60: </a>
+</span><span id="61" class="l"><a class="l" href="source-Tracy.Logger.php.html#61"> 61: </a>        <span class="php-keyword1">if</span> (<span class="php-keyword2">in_array</span>(<span class="php-var">$priority</span>, <span class="php-keyword1">array</span>(self::ERROR, self::EXCEPTION, self::CRITICAL), <span class="php-keyword1">TRUE</span>)
+</span><span id="62" class="l"><a class="l" href="source-Tracy.Logger.php.html#62"> 62: </a>            &amp;&amp; <span class="php-var">$this</span>-&gt;email &amp;&amp; <span class="php-var">$this</span>-&gt;mailer
+</span><span id="63" class="l"><a class="l" href="source-Tracy.Logger.php.html#63"> 63: </a>            &amp;&amp; @<span class="php-keyword2">filemtime</span>(<span class="php-var">$this</span>-&gt;directory . <span class="php-quote">'/email-sent'</span>) + <span class="php-var">$this</span>-&gt;emailSnooze &lt; <span class="php-keyword2">time</span>() <span class="php-comment">// @ - file may not exist</span>
+</span><span id="64" class="l"><a class="l" href="source-Tracy.Logger.php.html#64"> 64: </a>            &amp;&amp; @<span class="php-keyword2">file_put_contents</span>(<span class="php-var">$this</span>-&gt;directory . <span class="php-quote">'/email-sent'</span>, <span class="php-quote">'sent'</span>) <span class="php-comment">// @ - file may not be writable</span>
+</span><span id="65" class="l"><a class="l" href="source-Tracy.Logger.php.html#65"> 65: </a>        ) {
+</span><span id="66" class="l"><a class="l" href="source-Tracy.Logger.php.html#66"> 66: </a>            <span class="php-keyword2">call_user_func</span>(<span class="php-var">$this</span>-&gt;mailer, <span class="php-var">$message</span>, <span class="php-keyword2">implode</span>(<span class="php-quote">', '</span>, (<span class="php-keyword1">array</span>) <span class="php-var">$this</span>-&gt;email));
+</span><span id="67" class="l"><a class="l" href="source-Tracy.Logger.php.html#67"> 67: </a>        }
+</span><span id="68" class="l"><a class="l" href="source-Tracy.Logger.php.html#68"> 68: </a>    }
+</span><span id="69" class="l"><a class="l" href="source-Tracy.Logger.php.html#69"> 69: </a>
+</span><span id="70" class="l"><a class="l" href="source-Tracy.Logger.php.html#70"> 70: </a>
+</span><span id="71" class="l"><a class="l" href="source-Tracy.Logger.php.html#71"> 71: </a>    <span class="php-comment">/**
+</span></span><span id="72" class="l"><a class="l" href="source-Tracy.Logger.php.html#72"> 72: </a><span class="php-comment">     * Default mailer.
+</span></span><span id="73" class="l"><a class="l" href="source-Tracy.Logger.php.html#73"> 73: </a><span class="php-comment">     * @param  string
+</span></span><span id="74" class="l"><a class="l" href="source-Tracy.Logger.php.html#74"> 74: </a><span class="php-comment">     * @param  string
+</span></span><span id="75" class="l"><a class="l" href="source-Tracy.Logger.php.html#75"> 75: </a><span class="php-comment">     * @return void
+</span></span><span id="76" class="l"><a class="l" href="source-Tracy.Logger.php.html#76"> 76: </a><span class="php-comment">     * @internal
+</span></span><span id="77" class="l"><a class="l" href="source-Tracy.Logger.php.html#77"> 77: </a><span class="php-comment">     */</span>
+</span><span id="78" class="l"><a class="l" href="source-Tracy.Logger.php.html#78"> 78: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">static</span> <span class="php-keyword1">function</span> <a id="_defaultMailer" href="source-Tracy.Logger.php.html#_defaultMailer">defaultMailer</a>(<span class="php-var">$message</span>, <span class="php-var">$email</span>)
+</span><span id="79" class="l"><a class="l" href="source-Tracy.Logger.php.html#79"> 79: </a>    {
+</span><span id="80" class="l"><a class="l" href="source-Tracy.Logger.php.html#80"> 80: </a>        <span class="php-var">$host</span> = <span class="php-keyword2">preg_replace</span>(<span class="php-quote">'#[^\w.-]+#'</span>, <span class="php-quote">''</span>, <span class="php-keyword1">isset</span>(<span class="php-var">$_SERVER</span>[<span class="php-quote">'HTTP_HOST'</span>]) ? <span class="php-var">$_SERVER</span>[<span class="php-quote">'HTTP_HOST'</span>] : <span class="php-keyword2">php_uname</span>(<span class="php-quote">'n'</span>));
+</span><span id="81" class="l"><a class="l" href="source-Tracy.Logger.php.html#81"> 81: </a>        <span class="php-var">$parts</span> = <span class="php-keyword2">str_replace</span>(
+</span><span id="82" class="l"><a class="l" href="source-Tracy.Logger.php.html#82"> 82: </a>            <span class="php-keyword1">array</span>(<span class="php-quote">&quot;\r\n&quot;</span>, <span class="php-quote">&quot;\n&quot;</span>),
+</span><span id="83" class="l"><a class="l" href="source-Tracy.Logger.php.html#83"> 83: </a>            <span class="php-keyword1">array</span>(<span class="php-quote">&quot;\n&quot;</span>, PHP_EOL),
+</span><span id="84" class="l"><a class="l" href="source-Tracy.Logger.php.html#84"> 84: </a>            <span class="php-keyword1">array</span>(
+</span><span id="85" class="l"><a class="l" href="source-Tracy.Logger.php.html#85"> 85: </a>                <span class="php-quote">'headers'</span> =&gt; <span class="php-keyword2">implode</span>(<span class="php-quote">&quot;\n&quot;</span>, <span class="php-keyword1">array</span>(
+</span><span id="86" class="l"><a class="l" href="source-Tracy.Logger.php.html#86"> 86: </a>                    <span class="php-quote">&quot;From: noreply@</span><span class="php-var">$host</span><span class="php-quote">&quot;</span>,
+</span><span id="87" class="l"><a class="l" href="source-Tracy.Logger.php.html#87"> 87: </a>                    <span class="php-quote">'X-Mailer: Tracy'</span>,
+</span><span id="88" class="l"><a class="l" href="source-Tracy.Logger.php.html#88"> 88: </a>                    <span class="php-quote">'Content-Type: text/plain; charset=UTF-8'</span>,
+</span><span id="89" class="l"><a class="l" href="source-Tracy.Logger.php.html#89"> 89: </a>                    <span class="php-quote">'Content-Transfer-Encoding: 8bit'</span>,
+</span><span id="90" class="l"><a class="l" href="source-Tracy.Logger.php.html#90"> 90: </a>                )) . <span class="php-quote">&quot;\n&quot;</span>,
+</span><span id="91" class="l"><a class="l" href="source-Tracy.Logger.php.html#91"> 91: </a>                <span class="php-quote">'subject'</span> =&gt; <span class="php-quote">&quot;PHP: An error occurred on the server </span><span class="php-var">$host</span><span class="php-quote">&quot;</span>,
+</span><span id="92" class="l"><a class="l" href="source-Tracy.Logger.php.html#92"> 92: </a>                <span class="php-quote">'body'</span> =&gt; <span class="php-quote">&quot;[&quot;</span> . @<span class="php-keyword2">date</span>(<span class="php-quote">'Y-m-d H:i:s'</span>) . <span class="php-quote">&quot;] </span><span class="php-var">$message</span><span class="php-quote">&quot;</span>, <span class="php-comment">// @ - timezone may not be set</span>
+</span><span id="93" class="l"><a class="l" href="source-Tracy.Logger.php.html#93"> 93: </a>            )
+</span><span id="94" class="l"><a class="l" href="source-Tracy.Logger.php.html#94"> 94: </a>        );
+</span><span id="95" class="l"><a class="l" href="source-Tracy.Logger.php.html#95"> 95: </a>
+</span><span id="96" class="l"><a class="l" href="source-Tracy.Logger.php.html#96"> 96: </a>        <span class="php-keyword2">mail</span>(<span class="php-var">$email</span>, <span class="php-var">$parts</span>[<span class="php-quote">'subject'</span>], <span class="php-var">$parts</span>[<span class="php-quote">'body'</span>], <span class="php-var">$parts</span>[<span class="php-quote">'headers'</span>]);
+</span><span id="97" class="l"><a class="l" href="source-Tracy.Logger.php.html#97"> 97: </a>    }
+</span><span id="98" class="l"><a class="l" href="source-Tracy.Logger.php.html#98"> 98: </a>
+</span><span id="99" class="l"><a class="l" href="source-Tracy.Logger.php.html#99"> 99: </a>}
+</span><span id="100" class="l"><a class="l" href="source-Tracy.Logger.php.html#100">100: </a></span></code></pre>
 
 	<div id="footer">
-		Nette 2.2.2 API API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+		Nette 2.2.6 API API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
 	</div>
 </div>
 </div>
 <script src="resources/combined.js?3630868369"></script>
-<script src="elementlist.js?2087501429"></script>
+<script src="elementlist.js?1613912923"></script>
 </body>
 </html>

@@ -5,10 +5,10 @@
 	<meta name="generator" content="ApiGen 2.8.0">
 	<meta name="robots" content="noindex">
 
-	<title>File Mail/SendmailMailer.php | Nette 2.2.2 API</title>
+	<title>File Mail/SendmailMailer.php | Nette 2.2.6 API</title>
 
 	<link rel="stylesheet" href="resources/style.css?3746977979">
-	<link rel="search" type="application/opensearchdescription+xml" title="Nette 2.2.2 API" href="http://api.nette.org/2.0/opensearch.xml">
+	<link rel="search" type="application/opensearchdescription+xml" title="Nette 2.2.6 API" href="http://api.nette.org/2.0/opensearch.xml">
 
 
 <script src='http://files.nette.org/js/analytics.js'></script><script>
@@ -244,25 +244,23 @@ _gaq.push(['_trackPageview']);
 </span><span id="42" class="l"><a class="l" href="source-Mail.SendmailMailer.php.html#42">42: </a>        <span class="php-keyword1">if</span> (<span class="php-var">$this</span>-&gt;commandArgs) {
 </span><span id="43" class="l"><a class="l" href="source-Mail.SendmailMailer.php.html#43">43: </a>            <span class="php-var">$args</span>[] = (string) <span class="php-var">$this</span>-&gt;commandArgs;
 </span><span id="44" class="l"><a class="l" href="source-Mail.SendmailMailer.php.html#44">44: </a>        }
-</span><span id="45" class="l"><a class="l" href="source-Mail.SendmailMailer.php.html#45">45: </a>        <span class="php-keyword2">set_error_handler</span>(<span class="php-keyword1">function</span>(<span class="php-var">$severity</span>, <span class="php-var">$message</span>) <span class="php-keyword1">use</span> (&amp; <span class="php-var">$info</span>) {
+</span><span id="45" class="l"><a class="l" href="source-Mail.SendmailMailer.php.html#45">45: </a>        <span class="php-var">$res</span> = Nette\Utils\Callback::invokeSafe(<span class="php-quote">'mail'</span>, <span class="php-var">$args</span>, <span class="php-keyword1">function</span>(<span class="php-var">$message</span>) <span class="php-keyword1">use</span> (&amp; <span class="php-var">$info</span>) {
 </span><span id="46" class="l"><a class="l" href="source-Mail.SendmailMailer.php.html#46">46: </a>            <span class="php-var">$info</span> = <span class="php-quote">&quot;: </span><span class="php-var">$message</span><span class="php-quote">&quot;</span>;
 </span><span id="47" class="l"><a class="l" href="source-Mail.SendmailMailer.php.html#47">47: </a>        });
-</span><span id="48" class="l"><a class="l" href="source-Mail.SendmailMailer.php.html#48">48: </a>        <span class="php-var">$res</span> = <span class="php-keyword2">call_user_func_array</span>(<span class="php-quote">'mail'</span>, <span class="php-var">$args</span>);
-</span><span id="49" class="l"><a class="l" href="source-Mail.SendmailMailer.php.html#49">49: </a>        <span class="php-keyword2">restore_error_handler</span>();
-</span><span id="50" class="l"><a class="l" href="source-Mail.SendmailMailer.php.html#50">50: </a>        <span class="php-keyword1">if</span> (<span class="php-var">$res</span> === <span class="php-keyword1">FALSE</span>) {
-</span><span id="51" class="l"><a class="l" href="source-Mail.SendmailMailer.php.html#51">51: </a>            <span class="php-keyword1">throw</span> <span class="php-keyword1">new</span> Nette\InvalidStateException(<span class="php-quote">&quot;Unable to send email</span><span class="php-var">$info</span><span class="php-quote">.&quot;</span>);
-</span><span id="52" class="l"><a class="l" href="source-Mail.SendmailMailer.php.html#52">52: </a>        }
-</span><span id="53" class="l"><a class="l" href="source-Mail.SendmailMailer.php.html#53">53: </a>    }
-</span><span id="54" class="l"><a class="l" href="source-Mail.SendmailMailer.php.html#54">54: </a>
-</span><span id="55" class="l"><a class="l" href="source-Mail.SendmailMailer.php.html#55">55: </a>}
-</span><span id="56" class="l"><a class="l" href="source-Mail.SendmailMailer.php.html#56">56: </a></span></code></pre>
+</span><span id="48" class="l"><a class="l" href="source-Mail.SendmailMailer.php.html#48">48: </a>        <span class="php-keyword1">if</span> (<span class="php-var">$res</span> === <span class="php-keyword1">FALSE</span>) {
+</span><span id="49" class="l"><a class="l" href="source-Mail.SendmailMailer.php.html#49">49: </a>            <span class="php-keyword1">throw</span> <span class="php-keyword1">new</span> Nette\InvalidStateException(<span class="php-quote">&quot;Unable to send email</span><span class="php-var">$info</span><span class="php-quote">.&quot;</span>);
+</span><span id="50" class="l"><a class="l" href="source-Mail.SendmailMailer.php.html#50">50: </a>        }
+</span><span id="51" class="l"><a class="l" href="source-Mail.SendmailMailer.php.html#51">51: </a>    }
+</span><span id="52" class="l"><a class="l" href="source-Mail.SendmailMailer.php.html#52">52: </a>
+</span><span id="53" class="l"><a class="l" href="source-Mail.SendmailMailer.php.html#53">53: </a>}
+</span><span id="54" class="l"><a class="l" href="source-Mail.SendmailMailer.php.html#54">54: </a></span></code></pre>
 
 	<div id="footer">
-		Nette 2.2.2 API API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+		Nette 2.2.6 API API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
 	</div>
 </div>
 </div>
 <script src="resources/combined.js?3630868369"></script>
-<script src="elementlist.js?2087501429"></script>
+<script src="elementlist.js?1613912923"></script>
 </body>
 </html>

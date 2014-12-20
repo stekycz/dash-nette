@@ -5,10 +5,10 @@
 	<meta name="generator" content="ApiGen 2.8.0">
 	<meta name="robots" content="noindex">
 
-	<title>File PhpGenerator/Helpers.php | Nette 2.2.2 API</title>
+	<title>File PhpGenerator/Helpers.php | Nette 2.2.6 API</title>
 
 	<link rel="stylesheet" href="resources/style.css?3746977979">
-	<link rel="search" type="application/opensearchdescription+xml" title="Nette 2.2.2 API" href="http://api.nette.org/2.0/opensearch.xml">
+	<link rel="search" type="application/opensearchdescription+xml" title="Nette 2.2.6 API" href="http://api.nette.org/2.0/opensearch.xml">
 
 
 <script src='http://files.nette.org/js/analytics.js'></script><script>
@@ -283,118 +283,125 @@ _gaq.push(['_trackPageview']);
 </span><span id="87" class="l"><a class="l" href="source-PhpGenerator.Helpers.php.html#87"> 87: </a>            }
 </span><span id="88" class="l"><a class="l" href="source-PhpGenerator.Helpers.php.html#88"> 88: </a>            <span class="php-keyword1">return</span> <span class="php-quote">'array('</span> . (<span class="php-keyword2">strpos</span>(<span class="php-var">$out</span>, <span class="php-quote">&quot;\n&quot;</span>) === <span class="php-keyword1">FALSE</span> &amp;&amp; <span class="php-keyword2">strlen</span>(<span class="php-var">$out</span>) &lt; <span class="php-num">40</span> ? <span class="php-var">$out</span> : <span class="php-var">$outAlt</span>) . <span class="php-quote">')'</span>;
 </span><span id="89" class="l"><a class="l" href="source-PhpGenerator.Helpers.php.html#89"> 89: </a>
-</span><span id="90" class="l"><a class="l" href="source-PhpGenerator.Helpers.php.html#90"> 90: </a>        } <span class="php-keyword1">elseif</span> (<span class="php-keyword2">is_object</span>(<span class="php-var">$var</span>)) {
-</span><span id="91" class="l"><a class="l" href="source-PhpGenerator.Helpers.php.html#91"> 91: </a>            <span class="php-var">$arr</span> = (<span class="php-keyword1">array</span>) <span class="php-var">$var</span>;
-</span><span id="92" class="l"><a class="l" href="source-PhpGenerator.Helpers.php.html#92"> 92: </a>            <span class="php-var">$space</span> = <span class="php-keyword2">str_repeat</span>(<span class="php-quote">&quot;\t&quot;</span>, <span class="php-var">$level</span>);
+</span><span id="90" class="l"><a class="l" href="source-PhpGenerator.Helpers.php.html#90"> 90: </a>        } <span class="php-keyword1">elseif</span> (<span class="php-var">$var</span> <span class="php-keyword1">instanceof</span> \Serializable) {
+</span><span id="91" class="l"><a class="l" href="source-PhpGenerator.Helpers.php.html#91"> 91: </a>            <span class="php-var">$var</span> = <span class="php-keyword2">serialize</span>(<span class="php-var">$var</span>);
+</span><span id="92" class="l"><a class="l" href="source-PhpGenerator.Helpers.php.html#92"> 92: </a>            <span class="php-keyword1">return</span> <span class="php-quote">'unserialize('</span> . self::_dump(<span class="php-var">$var</span>, <span class="php-var">$level</span>) . <span class="php-quote">')'</span>;
 </span><span id="93" class="l"><a class="l" href="source-PhpGenerator.Helpers.php.html#93"> 93: </a>
-</span><span id="94" class="l"><a class="l" href="source-PhpGenerator.Helpers.php.html#94"> 94: </a>            <span class="php-keyword1">static</span> <span class="php-var"><a id="$list" href="source-PhpGenerator.Helpers.php.html#$list">$list</a></span> = <span class="php-keyword1">array</span>();
-</span><span id="95" class="l"><a class="l" href="source-PhpGenerator.Helpers.php.html#95"> 95: </a>            <span class="php-keyword1">if</span> (<span class="php-keyword1">empty</span>(<span class="php-var">$arr</span>)) {
-</span><span id="96" class="l"><a class="l" href="source-PhpGenerator.Helpers.php.html#96"> 96: </a>                <span class="php-var">$out</span> = <span class="php-quote">''</span>;
-</span><span id="97" class="l"><a class="l" href="source-PhpGenerator.Helpers.php.html#97"> 97: </a>
-</span><span id="98" class="l"><a class="l" href="source-PhpGenerator.Helpers.php.html#98"> 98: </a>            } <span class="php-keyword1">elseif</span> (<span class="php-var">$level</span> &gt; <span class="php-num">50</span> || <span class="php-keyword2">in_array</span>(<span class="php-var">$var</span>, <span class="php-var">$list</span>, <span class="php-keyword1">TRUE</span>)) {
-</span><span id="99" class="l"><a class="l" href="source-PhpGenerator.Helpers.php.html#99"> 99: </a>                <span class="php-keyword1">throw</span> <span class="php-keyword1">new</span> Nette\InvalidArgumentException(<span class="php-quote">'Nesting level too deep or recursive dependency.'</span>);
-</span><span id="100" class="l"><a class="l" href="source-PhpGenerator.Helpers.php.html#100">100: </a>
-</span><span id="101" class="l"><a class="l" href="source-PhpGenerator.Helpers.php.html#101">101: </a>            } <span class="php-keyword1">else</span> {
-</span><span id="102" class="l"><a class="l" href="source-PhpGenerator.Helpers.php.html#102">102: </a>                <span class="php-var">$out</span> = <span class="php-quote">&quot;\n&quot;</span>;
-</span><span id="103" class="l"><a class="l" href="source-PhpGenerator.Helpers.php.html#103">103: </a>                <span class="php-var">$list</span>[] = <span class="php-var">$var</span>;
-</span><span id="104" class="l"><a class="l" href="source-PhpGenerator.Helpers.php.html#104">104: </a>                <span class="php-keyword1">foreach</span> (<span class="php-var">$arr</span> <span class="php-keyword1">as</span> <span class="php-var">$k</span> =&gt; &amp; <span class="php-var">$v</span>) {
-</span><span id="105" class="l"><a class="l" href="source-PhpGenerator.Helpers.php.html#105">105: </a>                    <span class="php-keyword1">if</span> (<span class="php-var">$k</span>[<span class="php-num">0</span>] === <span class="php-quote">&quot;\x00&quot;</span>) {
-</span><span id="106" class="l"><a class="l" href="source-PhpGenerator.Helpers.php.html#106">106: </a>                        <span class="php-var">$k</span> = <span class="php-keyword2">substr</span>(<span class="php-var">$k</span>, <span class="php-keyword2">strrpos</span>(<span class="php-var">$k</span>, <span class="php-quote">&quot;\x00&quot;</span>) + <span class="php-num">1</span>);
-</span><span id="107" class="l"><a class="l" href="source-PhpGenerator.Helpers.php.html#107">107: </a>                    }
-</span><span id="108" class="l"><a class="l" href="source-PhpGenerator.Helpers.php.html#108">108: </a>                    <span class="php-var">$out</span> .= <span class="php-quote">&quot;</span><span class="php-var">$space</span><span class="php-quote">\t&quot;</span> . self::_dump(<span class="php-var">$k</span>, <span class="php-var">$level</span> + <span class="php-num">1</span>) . <span class="php-quote">&quot; =&gt; &quot;</span> . self::_dump(<span class="php-var">$v</span>, <span class="php-var">$level</span> + <span class="php-num">1</span>) . <span class="php-quote">&quot;,\n&quot;</span>;
-</span><span id="109" class="l"><a class="l" href="source-PhpGenerator.Helpers.php.html#109">109: </a>                }
-</span><span id="110" class="l"><a class="l" href="source-PhpGenerator.Helpers.php.html#110">110: </a>                <span class="php-keyword2">array_pop</span>(<span class="php-var">$list</span>);
-</span><span id="111" class="l"><a class="l" href="source-PhpGenerator.Helpers.php.html#111">111: </a>                <span class="php-var">$out</span> .= <span class="php-var">$space</span>;
-</span><span id="112" class="l"><a class="l" href="source-PhpGenerator.Helpers.php.html#112">112: </a>            }
-</span><span id="113" class="l"><a class="l" href="source-PhpGenerator.Helpers.php.html#113">113: </a>            <span class="php-keyword1">return</span> <span class="php-keyword2">get_class</span>(<span class="php-var">$var</span>) === <span class="php-quote">'stdClass'</span>
-</span><span id="114" class="l"><a class="l" href="source-PhpGenerator.Helpers.php.html#114">114: </a>                ? <span class="php-quote">&quot;(object) array(</span><span class="php-var">$out</span><span class="php-quote">)&quot;</span>
-</span><span id="115" class="l"><a class="l" href="source-PhpGenerator.Helpers.php.html#115">115: </a>                : __CLASS__ . <span class="php-quote">&quot;::createObject('&quot;</span> . <span class="php-keyword2">get_class</span>(<span class="php-var">$var</span>) . <span class="php-quote">&quot;', array(</span><span class="php-var">$out</span><span class="php-quote">))&quot;</span>;
-</span><span id="116" class="l"><a class="l" href="source-PhpGenerator.Helpers.php.html#116">116: </a>
-</span><span id="117" class="l"><a class="l" href="source-PhpGenerator.Helpers.php.html#117">117: </a>        } <span class="php-keyword1">elseif</span> (<span class="php-keyword2">is_resource</span>(<span class="php-var">$var</span>)) {
-</span><span id="118" class="l"><a class="l" href="source-PhpGenerator.Helpers.php.html#118">118: </a>            <span class="php-keyword1">throw</span> <span class="php-keyword1">new</span> Nette\InvalidArgumentException(<span class="php-quote">'Cannot dump resource.'</span>);
-</span><span id="119" class="l"><a class="l" href="source-PhpGenerator.Helpers.php.html#119">119: </a>
-</span><span id="120" class="l"><a class="l" href="source-PhpGenerator.Helpers.php.html#120">120: </a>        } <span class="php-keyword1">else</span> {
-</span><span id="121" class="l"><a class="l" href="source-PhpGenerator.Helpers.php.html#121">121: </a>            <span class="php-keyword1">return</span> <span class="php-keyword2">var_export</span>(<span class="php-var">$var</span>, <span class="php-keyword1">TRUE</span>);
-</span><span id="122" class="l"><a class="l" href="source-PhpGenerator.Helpers.php.html#122">122: </a>        }
-</span><span id="123" class="l"><a class="l" href="source-PhpGenerator.Helpers.php.html#123">123: </a>    }
-</span><span id="124" class="l"><a class="l" href="source-PhpGenerator.Helpers.php.html#124">124: </a>
+</span><span id="94" class="l"><a class="l" href="source-PhpGenerator.Helpers.php.html#94"> 94: </a>        } <span class="php-keyword1">elseif</span> (<span class="php-keyword2">is_object</span>(<span class="php-var">$var</span>)) {
+</span><span id="95" class="l"><a class="l" href="source-PhpGenerator.Helpers.php.html#95"> 95: </a>            <span class="php-var">$arr</span> = (<span class="php-keyword1">array</span>) <span class="php-var">$var</span>;
+</span><span id="96" class="l"><a class="l" href="source-PhpGenerator.Helpers.php.html#96"> 96: </a>            <span class="php-var">$space</span> = <span class="php-keyword2">str_repeat</span>(<span class="php-quote">&quot;\t&quot;</span>, <span class="php-var">$level</span>);
+</span><span id="97" class="l"><a class="l" href="source-PhpGenerator.Helpers.php.html#97"> 97: </a>            <span class="php-var">$class</span> = <span class="php-keyword2">get_class</span>(<span class="php-var">$var</span>);
+</span><span id="98" class="l"><a class="l" href="source-PhpGenerator.Helpers.php.html#98"> 98: </a>
+</span><span id="99" class="l"><a class="l" href="source-PhpGenerator.Helpers.php.html#99"> 99: </a>            <span class="php-keyword1">static</span> <span class="php-var"><a id="$list" href="source-PhpGenerator.Helpers.php.html#$list">$list</a></span> = <span class="php-keyword1">array</span>();
+</span><span id="100" class="l"><a class="l" href="source-PhpGenerator.Helpers.php.html#100">100: </a>            <span class="php-keyword1">if</span> (<span class="php-var">$level</span> &gt; <span class="php-num">50</span> || <span class="php-keyword2">in_array</span>(<span class="php-var">$var</span>, <span class="php-var">$list</span>, <span class="php-keyword1">TRUE</span>)) {
+</span><span id="101" class="l"><a class="l" href="source-PhpGenerator.Helpers.php.html#101">101: </a>                <span class="php-keyword1">throw</span> <span class="php-keyword1">new</span> Nette\InvalidArgumentException(<span class="php-quote">'Nesting level too deep or recursive dependency.'</span>);
+</span><span id="102" class="l"><a class="l" href="source-PhpGenerator.Helpers.php.html#102">102: </a>
+</span><span id="103" class="l"><a class="l" href="source-PhpGenerator.Helpers.php.html#103">103: </a>            } <span class="php-keyword1">else</span> {
+</span><span id="104" class="l"><a class="l" href="source-PhpGenerator.Helpers.php.html#104">104: </a>                <span class="php-var">$out</span> = <span class="php-quote">&quot;\n&quot;</span>;
+</span><span id="105" class="l"><a class="l" href="source-PhpGenerator.Helpers.php.html#105">105: </a>                <span class="php-var">$list</span>[] = <span class="php-var">$var</span>;
+</span><span id="106" class="l"><a class="l" href="source-PhpGenerator.Helpers.php.html#106">106: </a>                <span class="php-keyword1">if</span> (<span class="php-keyword2">method_exists</span>(<span class="php-var">$var</span>, <span class="php-quote">'__sleep'</span>)) {
+</span><span id="107" class="l"><a class="l" href="source-PhpGenerator.Helpers.php.html#107">107: </a>                    <span class="php-keyword1">foreach</span> (<span class="php-var">$var</span>-&gt;__sleep() <span class="php-keyword1">as</span> <span class="php-var">$v</span>) {
+</span><span id="108" class="l"><a class="l" href="source-PhpGenerator.Helpers.php.html#108">108: </a>                        <span class="php-var">$props</span>[<span class="php-var">$v</span>] = <span class="php-var">$props</span>[<span class="php-quote">&quot;\x00*\x00</span><span class="php-var">$v</span><span class="php-quote">&quot;</span>] = <span class="php-var">$props</span>[<span class="php-quote">&quot;\x00</span><span class="php-var">$class</span><span class="php-quote">\x00</span><span class="php-var">$v</span><span class="php-quote">&quot;</span>] = <span class="php-keyword1">TRUE</span>;
+</span><span id="109" class="l"><a class="l" href="source-PhpGenerator.Helpers.php.html#109">109: </a>                    }
+</span><span id="110" class="l"><a class="l" href="source-PhpGenerator.Helpers.php.html#110">110: </a>                }
+</span><span id="111" class="l"><a class="l" href="source-PhpGenerator.Helpers.php.html#111">111: </a>                <span class="php-keyword1">foreach</span> (<span class="php-var">$arr</span> <span class="php-keyword1">as</span> <span class="php-var">$k</span> =&gt; &amp; <span class="php-var">$v</span>) {
+</span><span id="112" class="l"><a class="l" href="source-PhpGenerator.Helpers.php.html#112">112: </a>                    <span class="php-keyword1">if</span> (!<span class="php-keyword1">isset</span>(<span class="php-var">$props</span>) || <span class="php-keyword1">isset</span>(<span class="php-var">$props</span>[<span class="php-var">$k</span>])) {
+</span><span id="113" class="l"><a class="l" href="source-PhpGenerator.Helpers.php.html#113">113: </a>                        <span class="php-var">$out</span> .= <span class="php-quote">&quot;</span><span class="php-var">$space</span><span class="php-quote">\t&quot;</span> . self::_dump(<span class="php-var">$k</span>, <span class="php-var">$level</span> + <span class="php-num">1</span>) . <span class="php-quote">&quot; =&gt; &quot;</span> . self::_dump(<span class="php-var">$v</span>, <span class="php-var">$level</span> + <span class="php-num">1</span>) . <span class="php-quote">&quot;,\n&quot;</span>;
+</span><span id="114" class="l"><a class="l" href="source-PhpGenerator.Helpers.php.html#114">114: </a>                    }
+</span><span id="115" class="l"><a class="l" href="source-PhpGenerator.Helpers.php.html#115">115: </a>                }
+</span><span id="116" class="l"><a class="l" href="source-PhpGenerator.Helpers.php.html#116">116: </a>                <span class="php-keyword2">array_pop</span>(<span class="php-var">$list</span>);
+</span><span id="117" class="l"><a class="l" href="source-PhpGenerator.Helpers.php.html#117">117: </a>                <span class="php-var">$out</span> .= <span class="php-var">$space</span>;
+</span><span id="118" class="l"><a class="l" href="source-PhpGenerator.Helpers.php.html#118">118: </a>            }
+</span><span id="119" class="l"><a class="l" href="source-PhpGenerator.Helpers.php.html#119">119: </a>            <span class="php-keyword1">return</span> <span class="php-var">$class</span> === <span class="php-quote">'stdClass'</span>
+</span><span id="120" class="l"><a class="l" href="source-PhpGenerator.Helpers.php.html#120">120: </a>                ? <span class="php-quote">&quot;(object) array(</span><span class="php-var">$out</span><span class="php-quote">)&quot;</span>
+</span><span id="121" class="l"><a class="l" href="source-PhpGenerator.Helpers.php.html#121">121: </a>                : __CLASS__ . <span class="php-quote">&quot;::createObject('</span><span class="php-var">$class</span><span class="php-quote">', array(</span><span class="php-var">$out</span><span class="php-quote">))&quot;</span>;
+</span><span id="122" class="l"><a class="l" href="source-PhpGenerator.Helpers.php.html#122">122: </a>
+</span><span id="123" class="l"><a class="l" href="source-PhpGenerator.Helpers.php.html#123">123: </a>        } <span class="php-keyword1">elseif</span> (<span class="php-keyword2">is_resource</span>(<span class="php-var">$var</span>)) {
+</span><span id="124" class="l"><a class="l" href="source-PhpGenerator.Helpers.php.html#124">124: </a>            <span class="php-keyword1">throw</span> <span class="php-keyword1">new</span> Nette\InvalidArgumentException(<span class="php-quote">'Cannot dump resource.'</span>);
 </span><span id="125" class="l"><a class="l" href="source-PhpGenerator.Helpers.php.html#125">125: </a>
-</span><span id="126" class="l"><a class="l" href="source-PhpGenerator.Helpers.php.html#126">126: </a>    <span class="php-comment">/**
-</span></span><span id="127" class="l"><a class="l" href="source-PhpGenerator.Helpers.php.html#127">127: </a><span class="php-comment">     * Generates PHP statement.
-</span></span><span id="128" class="l"><a class="l" href="source-PhpGenerator.Helpers.php.html#128">128: </a><span class="php-comment">     * @return string
-</span></span><span id="129" class="l"><a class="l" href="source-PhpGenerator.Helpers.php.html#129">129: </a><span class="php-comment">     */</span>
-</span><span id="130" class="l"><a class="l" href="source-PhpGenerator.Helpers.php.html#130">130: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">static</span> <span class="php-keyword1">function</span> <a id="_format" href="source-PhpGenerator.Helpers.php.html#_format">format</a>(<span class="php-var">$statement</span>)
-</span><span id="131" class="l"><a class="l" href="source-PhpGenerator.Helpers.php.html#131">131: </a>    {
-</span><span id="132" class="l"><a class="l" href="source-PhpGenerator.Helpers.php.html#132">132: </a>        <span class="php-var">$args</span> = <span class="php-keyword2">func_get_args</span>();
-</span><span id="133" class="l"><a class="l" href="source-PhpGenerator.Helpers.php.html#133">133: </a>        <span class="php-keyword1">return</span> self::formatArgs(<span class="php-keyword2">array_shift</span>(<span class="php-var">$args</span>), <span class="php-var">$args</span>);
-</span><span id="134" class="l"><a class="l" href="source-PhpGenerator.Helpers.php.html#134">134: </a>    }
-</span><span id="135" class="l"><a class="l" href="source-PhpGenerator.Helpers.php.html#135">135: </a>
-</span><span id="136" class="l"><a class="l" href="source-PhpGenerator.Helpers.php.html#136">136: </a>
-</span><span id="137" class="l"><a class="l" href="source-PhpGenerator.Helpers.php.html#137">137: </a>    <span class="php-comment">/**
-</span></span><span id="138" class="l"><a class="l" href="source-PhpGenerator.Helpers.php.html#138">138: </a><span class="php-comment">     * Generates PHP statement.
-</span></span><span id="139" class="l"><a class="l" href="source-PhpGenerator.Helpers.php.html#139">139: </a><span class="php-comment">     * @return string
-</span></span><span id="140" class="l"><a class="l" href="source-PhpGenerator.Helpers.php.html#140">140: </a><span class="php-comment">     */</span>
-</span><span id="141" class="l"><a class="l" href="source-PhpGenerator.Helpers.php.html#141">141: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">static</span> <span class="php-keyword1">function</span> <a id="_formatArgs" href="source-PhpGenerator.Helpers.php.html#_formatArgs">formatArgs</a>(<span class="php-var">$statement</span>, <span class="php-keyword1">array</span> <span class="php-var">$args</span>)
-</span><span id="142" class="l"><a class="l" href="source-PhpGenerator.Helpers.php.html#142">142: </a>    {
-</span><span id="143" class="l"><a class="l" href="source-PhpGenerator.Helpers.php.html#143">143: </a>        <span class="php-var">$a</span> = <span class="php-keyword2">strpos</span>(<span class="php-var">$statement</span>, <span class="php-quote">'?'</span>);
-</span><span id="144" class="l"><a class="l" href="source-PhpGenerator.Helpers.php.html#144">144: </a>        <span class="php-keyword1">while</span> (<span class="php-var">$a</span> !== <span class="php-keyword1">FALSE</span>) {
-</span><span id="145" class="l"><a class="l" href="source-PhpGenerator.Helpers.php.html#145">145: </a>            <span class="php-keyword1">if</span> (!<span class="php-var">$args</span>) {
-</span><span id="146" class="l"><a class="l" href="source-PhpGenerator.Helpers.php.html#146">146: </a>                <span class="php-keyword1">throw</span> <span class="php-keyword1">new</span> Nette\InvalidArgumentException(<span class="php-quote">'Insufficient number of arguments.'</span>);
-</span><span id="147" class="l"><a class="l" href="source-PhpGenerator.Helpers.php.html#147">147: </a>            }
-</span><span id="148" class="l"><a class="l" href="source-PhpGenerator.Helpers.php.html#148">148: </a>            <span class="php-var">$arg</span> = <span class="php-keyword2">array_shift</span>(<span class="php-var">$args</span>);
-</span><span id="149" class="l"><a class="l" href="source-PhpGenerator.Helpers.php.html#149">149: </a>            <span class="php-keyword1">if</span> (<span class="php-keyword2">substr</span>(<span class="php-var">$statement</span>, <span class="php-var">$a</span> + <span class="php-num">1</span>, <span class="php-num">1</span>) === <span class="php-quote">'*'</span>) { <span class="php-comment">// ?*</span>
-</span><span id="150" class="l"><a class="l" href="source-PhpGenerator.Helpers.php.html#150">150: </a>                <span class="php-keyword1">if</span> (!<span class="php-keyword2">is_array</span>(<span class="php-var">$arg</span>)) {
-</span><span id="151" class="l"><a class="l" href="source-PhpGenerator.Helpers.php.html#151">151: </a>                    <span class="php-keyword1">throw</span> <span class="php-keyword1">new</span> Nette\InvalidArgumentException(<span class="php-quote">'Argument must be an array.'</span>);
-</span><span id="152" class="l"><a class="l" href="source-PhpGenerator.Helpers.php.html#152">152: </a>                }
-</span><span id="153" class="l"><a class="l" href="source-PhpGenerator.Helpers.php.html#153">153: </a>                <span class="php-var">$arg</span> = <span class="php-keyword2">implode</span>(<span class="php-quote">', '</span>, <span class="php-keyword2">array_map</span>(<span class="php-keyword1">array</span>(__CLASS__, <span class="php-quote">'dump'</span>), <span class="php-var">$arg</span>));
-</span><span id="154" class="l"><a class="l" href="source-PhpGenerator.Helpers.php.html#154">154: </a>                <span class="php-var">$statement</span> = <span class="php-keyword2">substr_replace</span>(<span class="php-var">$statement</span>, <span class="php-var">$arg</span>, <span class="php-var">$a</span>, <span class="php-num">2</span>);
-</span><span id="155" class="l"><a class="l" href="source-PhpGenerator.Helpers.php.html#155">155: </a>
-</span><span id="156" class="l"><a class="l" href="source-PhpGenerator.Helpers.php.html#156">156: </a>            } <span class="php-keyword1">else</span> {
-</span><span id="157" class="l"><a class="l" href="source-PhpGenerator.Helpers.php.html#157">157: </a>                <span class="php-var">$arg</span> = <span class="php-keyword2">substr</span>(<span class="php-var">$statement</span>, <span class="php-var">$a</span> - <span class="php-num">1</span>, <span class="php-num">1</span>) === <span class="php-quote">'$'</span> || <span class="php-keyword2">in_array</span>(<span class="php-keyword2">substr</span>(<span class="php-var">$statement</span>, <span class="php-var">$a</span> - <span class="php-num">2</span>, <span class="php-num">2</span>), <span class="php-keyword1">array</span>(<span class="php-quote">'-&gt;'</span>, <span class="php-quote">'::'</span>))
-</span><span id="158" class="l"><a class="l" href="source-PhpGenerator.Helpers.php.html#158">158: </a>                    ? self::formatMember(<span class="php-var">$arg</span>) : self::_dump(<span class="php-var">$arg</span>);
-</span><span id="159" class="l"><a class="l" href="source-PhpGenerator.Helpers.php.html#159">159: </a>                <span class="php-var">$statement</span> = <span class="php-keyword2">substr_replace</span>(<span class="php-var">$statement</span>, <span class="php-var">$arg</span>, <span class="php-var">$a</span>, <span class="php-num">1</span>);
-</span><span id="160" class="l"><a class="l" href="source-PhpGenerator.Helpers.php.html#160">160: </a>            }
-</span><span id="161" class="l"><a class="l" href="source-PhpGenerator.Helpers.php.html#161">161: </a>            <span class="php-var">$a</span> = <span class="php-keyword2">strpos</span>(<span class="php-var">$statement</span>, <span class="php-quote">'?'</span>, <span class="php-var">$a</span> + <span class="php-keyword2">strlen</span>(<span class="php-var">$arg</span>));
-</span><span id="162" class="l"><a class="l" href="source-PhpGenerator.Helpers.php.html#162">162: </a>        }
-</span><span id="163" class="l"><a class="l" href="source-PhpGenerator.Helpers.php.html#163">163: </a>        <span class="php-keyword1">return</span> <span class="php-var">$statement</span>;
-</span><span id="164" class="l"><a class="l" href="source-PhpGenerator.Helpers.php.html#164">164: </a>    }
-</span><span id="165" class="l"><a class="l" href="source-PhpGenerator.Helpers.php.html#165">165: </a>
-</span><span id="166" class="l"><a class="l" href="source-PhpGenerator.Helpers.php.html#166">166: </a>
-</span><span id="167" class="l"><a class="l" href="source-PhpGenerator.Helpers.php.html#167">167: </a>    <span class="php-comment">/**
-</span></span><span id="168" class="l"><a class="l" href="source-PhpGenerator.Helpers.php.html#168">168: </a><span class="php-comment">     * Returns a PHP representation of a object member.
-</span></span><span id="169" class="l"><a class="l" href="source-PhpGenerator.Helpers.php.html#169">169: </a><span class="php-comment">     * @return string
-</span></span><span id="170" class="l"><a class="l" href="source-PhpGenerator.Helpers.php.html#170">170: </a><span class="php-comment">     */</span>
-</span><span id="171" class="l"><a class="l" href="source-PhpGenerator.Helpers.php.html#171">171: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">static</span> <span class="php-keyword1">function</span> <a id="_formatMember" href="source-PhpGenerator.Helpers.php.html#_formatMember">formatMember</a>(<span class="php-var">$name</span>)
-</span><span id="172" class="l"><a class="l" href="source-PhpGenerator.Helpers.php.html#172">172: </a>    {
-</span><span id="173" class="l"><a class="l" href="source-PhpGenerator.Helpers.php.html#173">173: </a>        <span class="php-keyword1">return</span> <span class="php-var">$name</span> <span class="php-keyword1">instanceof</span> PhpLiteral || !self::isIdentifier(<span class="php-var">$name</span>)
-</span><span id="174" class="l"><a class="l" href="source-PhpGenerator.Helpers.php.html#174">174: </a>            ? <span class="php-quote">'{'</span> . self::_dump(<span class="php-var">$name</span>) . <span class="php-quote">'}'</span>
-</span><span id="175" class="l"><a class="l" href="source-PhpGenerator.Helpers.php.html#175">175: </a>            : <span class="php-var">$name</span> ;
-</span><span id="176" class="l"><a class="l" href="source-PhpGenerator.Helpers.php.html#176">176: </a>    }
-</span><span id="177" class="l"><a class="l" href="source-PhpGenerator.Helpers.php.html#177">177: </a>
-</span><span id="178" class="l"><a class="l" href="source-PhpGenerator.Helpers.php.html#178">178: </a>
-</span><span id="179" class="l"><a class="l" href="source-PhpGenerator.Helpers.php.html#179">179: </a>    <span class="php-comment">/**
-</span></span><span id="180" class="l"><a class="l" href="source-PhpGenerator.Helpers.php.html#180">180: </a><span class="php-comment">     * @return bool
-</span></span><span id="181" class="l"><a class="l" href="source-PhpGenerator.Helpers.php.html#181">181: </a><span class="php-comment">     */</span>
-</span><span id="182" class="l"><a class="l" href="source-PhpGenerator.Helpers.php.html#182">182: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">static</span> <span class="php-keyword1">function</span> <a id="_isIdentifier" href="source-PhpGenerator.Helpers.php.html#_isIdentifier">isIdentifier</a>(<span class="php-var">$value</span>)
-</span><span id="183" class="l"><a class="l" href="source-PhpGenerator.Helpers.php.html#183">183: </a>    {
-</span><span id="184" class="l"><a class="l" href="source-PhpGenerator.Helpers.php.html#184">184: </a>        <span class="php-keyword1">return</span> <span class="php-keyword2">is_string</span>(<span class="php-var">$value</span>) &amp;&amp; <span class="php-keyword2">preg_match</span>(<span class="php-quote">'#^'</span> . self::PHP_IDENT . <span class="php-quote">'\z#'</span>, <span class="php-var">$value</span>);
-</span><span id="185" class="l"><a class="l" href="source-PhpGenerator.Helpers.php.html#185">185: </a>    }
-</span><span id="186" class="l"><a class="l" href="source-PhpGenerator.Helpers.php.html#186">186: </a>
-</span><span id="187" class="l"><a class="l" href="source-PhpGenerator.Helpers.php.html#187">187: </a>
-</span><span id="188" class="l"><a class="l" href="source-PhpGenerator.Helpers.php.html#188">188: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">static</span> <span class="php-keyword1">function</span> <a id="_createObject" href="source-PhpGenerator.Helpers.php.html#_createObject">createObject</a>(<span class="php-var">$class</span>, <span class="php-keyword1">array</span> <span class="php-var">$props</span>)
+</span><span id="126" class="l"><a class="l" href="source-PhpGenerator.Helpers.php.html#126">126: </a>        } <span class="php-keyword1">else</span> {
+</span><span id="127" class="l"><a class="l" href="source-PhpGenerator.Helpers.php.html#127">127: </a>            <span class="php-keyword1">return</span> <span class="php-keyword2">var_export</span>(<span class="php-var">$var</span>, <span class="php-keyword1">TRUE</span>);
+</span><span id="128" class="l"><a class="l" href="source-PhpGenerator.Helpers.php.html#128">128: </a>        }
+</span><span id="129" class="l"><a class="l" href="source-PhpGenerator.Helpers.php.html#129">129: </a>    }
+</span><span id="130" class="l"><a class="l" href="source-PhpGenerator.Helpers.php.html#130">130: </a>
+</span><span id="131" class="l"><a class="l" href="source-PhpGenerator.Helpers.php.html#131">131: </a>
+</span><span id="132" class="l"><a class="l" href="source-PhpGenerator.Helpers.php.html#132">132: </a>    <span class="php-comment">/**
+</span></span><span id="133" class="l"><a class="l" href="source-PhpGenerator.Helpers.php.html#133">133: </a><span class="php-comment">     * Generates PHP statement.
+</span></span><span id="134" class="l"><a class="l" href="source-PhpGenerator.Helpers.php.html#134">134: </a><span class="php-comment">     * @return string
+</span></span><span id="135" class="l"><a class="l" href="source-PhpGenerator.Helpers.php.html#135">135: </a><span class="php-comment">     */</span>
+</span><span id="136" class="l"><a class="l" href="source-PhpGenerator.Helpers.php.html#136">136: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">static</span> <span class="php-keyword1">function</span> <a id="_format" href="source-PhpGenerator.Helpers.php.html#_format">format</a>(<span class="php-var">$statement</span>)
+</span><span id="137" class="l"><a class="l" href="source-PhpGenerator.Helpers.php.html#137">137: </a>    {
+</span><span id="138" class="l"><a class="l" href="source-PhpGenerator.Helpers.php.html#138">138: </a>        <span class="php-var">$args</span> = <span class="php-keyword2">func_get_args</span>();
+</span><span id="139" class="l"><a class="l" href="source-PhpGenerator.Helpers.php.html#139">139: </a>        <span class="php-keyword1">return</span> self::formatArgs(<span class="php-keyword2">array_shift</span>(<span class="php-var">$args</span>), <span class="php-var">$args</span>);
+</span><span id="140" class="l"><a class="l" href="source-PhpGenerator.Helpers.php.html#140">140: </a>    }
+</span><span id="141" class="l"><a class="l" href="source-PhpGenerator.Helpers.php.html#141">141: </a>
+</span><span id="142" class="l"><a class="l" href="source-PhpGenerator.Helpers.php.html#142">142: </a>
+</span><span id="143" class="l"><a class="l" href="source-PhpGenerator.Helpers.php.html#143">143: </a>    <span class="php-comment">/**
+</span></span><span id="144" class="l"><a class="l" href="source-PhpGenerator.Helpers.php.html#144">144: </a><span class="php-comment">     * Generates PHP statement.
+</span></span><span id="145" class="l"><a class="l" href="source-PhpGenerator.Helpers.php.html#145">145: </a><span class="php-comment">     * @return string
+</span></span><span id="146" class="l"><a class="l" href="source-PhpGenerator.Helpers.php.html#146">146: </a><span class="php-comment">     */</span>
+</span><span id="147" class="l"><a class="l" href="source-PhpGenerator.Helpers.php.html#147">147: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">static</span> <span class="php-keyword1">function</span> <a id="_formatArgs" href="source-PhpGenerator.Helpers.php.html#_formatArgs">formatArgs</a>(<span class="php-var">$statement</span>, <span class="php-keyword1">array</span> <span class="php-var">$args</span>)
+</span><span id="148" class="l"><a class="l" href="source-PhpGenerator.Helpers.php.html#148">148: </a>    {
+</span><span id="149" class="l"><a class="l" href="source-PhpGenerator.Helpers.php.html#149">149: </a>        <span class="php-var">$a</span> = <span class="php-keyword2">strpos</span>(<span class="php-var">$statement</span>, <span class="php-quote">'?'</span>);
+</span><span id="150" class="l"><a class="l" href="source-PhpGenerator.Helpers.php.html#150">150: </a>        <span class="php-keyword1">while</span> (<span class="php-var">$a</span> !== <span class="php-keyword1">FALSE</span>) {
+</span><span id="151" class="l"><a class="l" href="source-PhpGenerator.Helpers.php.html#151">151: </a>            <span class="php-keyword1">if</span> (!<span class="php-var">$args</span>) {
+</span><span id="152" class="l"><a class="l" href="source-PhpGenerator.Helpers.php.html#152">152: </a>                <span class="php-keyword1">throw</span> <span class="php-keyword1">new</span> Nette\InvalidArgumentException(<span class="php-quote">'Insufficient number of arguments.'</span>);
+</span><span id="153" class="l"><a class="l" href="source-PhpGenerator.Helpers.php.html#153">153: </a>            }
+</span><span id="154" class="l"><a class="l" href="source-PhpGenerator.Helpers.php.html#154">154: </a>            <span class="php-var">$arg</span> = <span class="php-keyword2">array_shift</span>(<span class="php-var">$args</span>);
+</span><span id="155" class="l"><a class="l" href="source-PhpGenerator.Helpers.php.html#155">155: </a>            <span class="php-keyword1">if</span> (<span class="php-keyword2">substr</span>(<span class="php-var">$statement</span>, <span class="php-var">$a</span> + <span class="php-num">1</span>, <span class="php-num">1</span>) === <span class="php-quote">'*'</span>) { <span class="php-comment">// ?*</span>
+</span><span id="156" class="l"><a class="l" href="source-PhpGenerator.Helpers.php.html#156">156: </a>                <span class="php-keyword1">if</span> (!<span class="php-keyword2">is_array</span>(<span class="php-var">$arg</span>)) {
+</span><span id="157" class="l"><a class="l" href="source-PhpGenerator.Helpers.php.html#157">157: </a>                    <span class="php-keyword1">throw</span> <span class="php-keyword1">new</span> Nette\InvalidArgumentException(<span class="php-quote">'Argument must be an array.'</span>);
+</span><span id="158" class="l"><a class="l" href="source-PhpGenerator.Helpers.php.html#158">158: </a>                }
+</span><span id="159" class="l"><a class="l" href="source-PhpGenerator.Helpers.php.html#159">159: </a>                <span class="php-var">$arg</span> = <span class="php-keyword2">implode</span>(<span class="php-quote">', '</span>, <span class="php-keyword2">array_map</span>(<span class="php-keyword1">array</span>(__CLASS__, <span class="php-quote">'dump'</span>), <span class="php-var">$arg</span>));
+</span><span id="160" class="l"><a class="l" href="source-PhpGenerator.Helpers.php.html#160">160: </a>                <span class="php-var">$statement</span> = <span class="php-keyword2">substr_replace</span>(<span class="php-var">$statement</span>, <span class="php-var">$arg</span>, <span class="php-var">$a</span>, <span class="php-num">2</span>);
+</span><span id="161" class="l"><a class="l" href="source-PhpGenerator.Helpers.php.html#161">161: </a>
+</span><span id="162" class="l"><a class="l" href="source-PhpGenerator.Helpers.php.html#162">162: </a>            } <span class="php-keyword1">else</span> {
+</span><span id="163" class="l"><a class="l" href="source-PhpGenerator.Helpers.php.html#163">163: </a>                <span class="php-var">$arg</span> = <span class="php-keyword2">substr</span>(<span class="php-var">$statement</span>, <span class="php-var">$a</span> - <span class="php-num">1</span>, <span class="php-num">1</span>) === <span class="php-quote">'$'</span> || <span class="php-keyword2">in_array</span>(<span class="php-keyword2">substr</span>(<span class="php-var">$statement</span>, <span class="php-var">$a</span> - <span class="php-num">2</span>, <span class="php-num">2</span>), <span class="php-keyword1">array</span>(<span class="php-quote">'-&gt;'</span>, <span class="php-quote">'::'</span>), <span class="php-keyword1">TRUE</span>)
+</span><span id="164" class="l"><a class="l" href="source-PhpGenerator.Helpers.php.html#164">164: </a>                    ? self::formatMember(<span class="php-var">$arg</span>) : self::_dump(<span class="php-var">$arg</span>);
+</span><span id="165" class="l"><a class="l" href="source-PhpGenerator.Helpers.php.html#165">165: </a>                <span class="php-var">$statement</span> = <span class="php-keyword2">substr_replace</span>(<span class="php-var">$statement</span>, <span class="php-var">$arg</span>, <span class="php-var">$a</span>, <span class="php-num">1</span>);
+</span><span id="166" class="l"><a class="l" href="source-PhpGenerator.Helpers.php.html#166">166: </a>            }
+</span><span id="167" class="l"><a class="l" href="source-PhpGenerator.Helpers.php.html#167">167: </a>            <span class="php-var">$a</span> = <span class="php-keyword2">strpos</span>(<span class="php-var">$statement</span>, <span class="php-quote">'?'</span>, <span class="php-var">$a</span> + <span class="php-keyword2">strlen</span>(<span class="php-var">$arg</span>));
+</span><span id="168" class="l"><a class="l" href="source-PhpGenerator.Helpers.php.html#168">168: </a>        }
+</span><span id="169" class="l"><a class="l" href="source-PhpGenerator.Helpers.php.html#169">169: </a>        <span class="php-keyword1">return</span> <span class="php-var">$statement</span>;
+</span><span id="170" class="l"><a class="l" href="source-PhpGenerator.Helpers.php.html#170">170: </a>    }
+</span><span id="171" class="l"><a class="l" href="source-PhpGenerator.Helpers.php.html#171">171: </a>
+</span><span id="172" class="l"><a class="l" href="source-PhpGenerator.Helpers.php.html#172">172: </a>
+</span><span id="173" class="l"><a class="l" href="source-PhpGenerator.Helpers.php.html#173">173: </a>    <span class="php-comment">/**
+</span></span><span id="174" class="l"><a class="l" href="source-PhpGenerator.Helpers.php.html#174">174: </a><span class="php-comment">     * Returns a PHP representation of a object member.
+</span></span><span id="175" class="l"><a class="l" href="source-PhpGenerator.Helpers.php.html#175">175: </a><span class="php-comment">     * @return string
+</span></span><span id="176" class="l"><a class="l" href="source-PhpGenerator.Helpers.php.html#176">176: </a><span class="php-comment">     */</span>
+</span><span id="177" class="l"><a class="l" href="source-PhpGenerator.Helpers.php.html#177">177: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">static</span> <span class="php-keyword1">function</span> <a id="_formatMember" href="source-PhpGenerator.Helpers.php.html#_formatMember">formatMember</a>(<span class="php-var">$name</span>)
+</span><span id="178" class="l"><a class="l" href="source-PhpGenerator.Helpers.php.html#178">178: </a>    {
+</span><span id="179" class="l"><a class="l" href="source-PhpGenerator.Helpers.php.html#179">179: </a>        <span class="php-keyword1">return</span> <span class="php-var">$name</span> <span class="php-keyword1">instanceof</span> PhpLiteral || !self::isIdentifier(<span class="php-var">$name</span>)
+</span><span id="180" class="l"><a class="l" href="source-PhpGenerator.Helpers.php.html#180">180: </a>            ? <span class="php-quote">'{'</span> . self::_dump(<span class="php-var">$name</span>) . <span class="php-quote">'}'</span>
+</span><span id="181" class="l"><a class="l" href="source-PhpGenerator.Helpers.php.html#181">181: </a>            : <span class="php-var">$name</span> ;
+</span><span id="182" class="l"><a class="l" href="source-PhpGenerator.Helpers.php.html#182">182: </a>    }
+</span><span id="183" class="l"><a class="l" href="source-PhpGenerator.Helpers.php.html#183">183: </a>
+</span><span id="184" class="l"><a class="l" href="source-PhpGenerator.Helpers.php.html#184">184: </a>
+</span><span id="185" class="l"><a class="l" href="source-PhpGenerator.Helpers.php.html#185">185: </a>    <span class="php-comment">/**
+</span></span><span id="186" class="l"><a class="l" href="source-PhpGenerator.Helpers.php.html#186">186: </a><span class="php-comment">     * @return bool
+</span></span><span id="187" class="l"><a class="l" href="source-PhpGenerator.Helpers.php.html#187">187: </a><span class="php-comment">     */</span>
+</span><span id="188" class="l"><a class="l" href="source-PhpGenerator.Helpers.php.html#188">188: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">static</span> <span class="php-keyword1">function</span> <a id="_isIdentifier" href="source-PhpGenerator.Helpers.php.html#_isIdentifier">isIdentifier</a>(<span class="php-var">$value</span>)
 </span><span id="189" class="l"><a class="l" href="source-PhpGenerator.Helpers.php.html#189">189: </a>    {
-</span><span id="190" class="l"><a class="l" href="source-PhpGenerator.Helpers.php.html#190">190: </a>        <span class="php-keyword1">return</span> <span class="php-keyword2">unserialize</span>(<span class="php-quote">'O'</span> . <span class="php-keyword2">substr</span>(<span class="php-keyword2">serialize</span>((string) <span class="php-var">$class</span>), <span class="php-num">1</span>, -<span class="php-num">1</span>) . <span class="php-keyword2">substr</span>(<span class="php-keyword2">serialize</span>(<span class="php-var">$props</span>), <span class="php-num">1</span>));
+</span><span id="190" class="l"><a class="l" href="source-PhpGenerator.Helpers.php.html#190">190: </a>        <span class="php-keyword1">return</span> <span class="php-keyword2">is_string</span>(<span class="php-var">$value</span>) &amp;&amp; <span class="php-keyword2">preg_match</span>(<span class="php-quote">'#^'</span> . self::PHP_IDENT . <span class="php-quote">'\z#'</span>, <span class="php-var">$value</span>);
 </span><span id="191" class="l"><a class="l" href="source-PhpGenerator.Helpers.php.html#191">191: </a>    }
 </span><span id="192" class="l"><a class="l" href="source-PhpGenerator.Helpers.php.html#192">192: </a>
-</span><span id="193" class="l"><a class="l" href="source-PhpGenerator.Helpers.php.html#193">193: </a>}
-</span><span id="194" class="l"><a class="l" href="source-PhpGenerator.Helpers.php.html#194">194: </a></span></code></pre>
+</span><span id="193" class="l"><a class="l" href="source-PhpGenerator.Helpers.php.html#193">193: </a>
+</span><span id="194" class="l"><a class="l" href="source-PhpGenerator.Helpers.php.html#194">194: </a>    <span class="php-comment">/** @internal */</span>
+</span><span id="195" class="l"><a class="l" href="source-PhpGenerator.Helpers.php.html#195">195: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">static</span> <span class="php-keyword1">function</span> <a id="_createObject" href="source-PhpGenerator.Helpers.php.html#_createObject">createObject</a>(<span class="php-var">$class</span>, <span class="php-keyword1">array</span> <span class="php-var">$props</span>)
+</span><span id="196" class="l"><a class="l" href="source-PhpGenerator.Helpers.php.html#196">196: </a>    {
+</span><span id="197" class="l"><a class="l" href="source-PhpGenerator.Helpers.php.html#197">197: </a>        <span class="php-keyword1">return</span> <span class="php-keyword2">unserialize</span>(<span class="php-quote">'O'</span> . <span class="php-keyword2">substr</span>(<span class="php-keyword2">serialize</span>((string) <span class="php-var">$class</span>), <span class="php-num">1</span>, -<span class="php-num">1</span>) . <span class="php-keyword2">substr</span>(<span class="php-keyword2">serialize</span>(<span class="php-var">$props</span>), <span class="php-num">1</span>));
+</span><span id="198" class="l"><a class="l" href="source-PhpGenerator.Helpers.php.html#198">198: </a>    }
+</span><span id="199" class="l"><a class="l" href="source-PhpGenerator.Helpers.php.html#199">199: </a>
+</span><span id="200" class="l"><a class="l" href="source-PhpGenerator.Helpers.php.html#200">200: </a>}
+</span><span id="201" class="l"><a class="l" href="source-PhpGenerator.Helpers.php.html#201">201: </a></span></code></pre>
 
 	<div id="footer">
-		Nette 2.2.2 API API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+		Nette 2.2.6 API API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
 	</div>
 </div>
 </div>
 <script src="resources/combined.js?3630868369"></script>
-<script src="elementlist.js?2087501429"></script>
+<script src="elementlist.js?1613912923"></script>
 </body>
 </html>

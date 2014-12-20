@@ -5,10 +5,10 @@
 	<meta name="generator" content="ApiGen 2.8.0">
 	<meta name="robots" content="noindex">
 
-	<title>File Latte/Engine.php | Nette 2.2.2 API</title>
+	<title>File Latte/Engine.php | Nette 2.2.6 API</title>
 
 	<link rel="stylesheet" href="resources/style.css?3746977979">
-	<link rel="search" type="application/opensearchdescription+xml" title="Nette 2.2.2 API" href="http://api.nette.org/2.0/opensearch.xml">
+	<link rel="search" type="application/opensearchdescription+xml" title="Nette 2.2.6 API" href="http://api.nette.org/2.0/opensearch.xml">
 
 
 <script src='http://files.nette.org/js/analytics.js'></script><script>
@@ -144,7 +144,6 @@ _gaq.push(['_trackPageview']);
 			<ul>
 				<li><a href="Latte.Compiler.html">Compiler</a></li>
 				<li class="active"><a href="Latte.Engine.html">Engine</a></li>
-				<li><a href="Latte.Helpers.html">Helpers</a></li>
 				<li><a href="Latte.HtmlNode.html">HtmlNode</a></li>
 				<li><a href="Latte.MacroNode.html">MacroNode</a></li>
 				<li><a href="Latte.MacroTokens.html">MacroTokens</a></li>
@@ -338,7 +337,7 @@ _gaq.push(['_trackPageview']);
 </span><span id="127" class="l"><a class="l" href="source-Latte.Engine.php.html#127">127: </a>            <span class="php-var">$code</span> = <span class="php-var">$this</span>-&gt;getCompiler()-&gt;setContentType(<span class="php-var">$this</span>-&gt;contentType)
 </span><span id="128" class="l"><a class="l" href="source-Latte.Engine.php.html#128">128: </a>                -&gt;compile(<span class="php-var">$tokens</span>);
 </span><span id="129" class="l"><a class="l" href="source-Latte.Engine.php.html#129">129: </a>
-</span><span id="130" class="l"><a class="l" href="source-Latte.Engine.php.html#130">130: </a>            <span class="php-keyword1">if</span> (<span class="php-keyword2">preg_match</span>(<span class="php-quote">'#^\S{5,100}\z#'</span>, <span class="php-var">$name</span>)) {
+</span><span id="130" class="l"><a class="l" href="source-Latte.Engine.php.html#130">130: </a>            <span class="php-keyword1">if</span> (!<span class="php-keyword2">preg_match</span>(<span class="php-quote">'#\n|\?#'</span>, <span class="php-var">$name</span>)) {
 </span><span id="131" class="l"><a class="l" href="source-Latte.Engine.php.html#131">131: </a>                <span class="php-var">$code</span> = <span class="php-quote">&quot;&lt;?php\n// source: </span><span class="php-var">$name</span><span class="php-quote">\n?&gt;&quot;</span> . <span class="php-var">$code</span>;
 </span><span id="132" class="l"><a class="l" href="source-Latte.Engine.php.html#132">132: </a>            }
 </span><span id="133" class="l"><a class="l" href="source-Latte.Engine.php.html#133">133: </a>
@@ -405,142 +404,171 @@ _gaq.push(['_trackPageview']);
 </span><span id="194" class="l"><a class="l" href="source-Latte.Engine.php.html#194">194: </a>        <span class="php-keyword1">if</span> (!<span class="php-var">$this</span>-&gt;tempDirectory) {
 </span><span id="195" class="l"><a class="l" href="source-Latte.Engine.php.html#195">195: </a>            <span class="php-keyword1">throw</span> <span class="php-keyword1">new</span> \RuntimeException(<span class="php-quote">'Set path to temporary directory using setTempDirectory().'</span>);
 </span><span id="196" class="l"><a class="l" href="source-Latte.Engine.php.html#196">196: </a>        } <span class="php-keyword1">elseif</span> (!<span class="php-keyword2">is_dir</span>(<span class="php-var">$this</span>-&gt;tempDirectory)) {
-</span><span id="197" class="l"><a class="l" href="source-Latte.Engine.php.html#197">197: </a>            <span class="php-keyword2">mkdir</span>(<span class="php-var">$this</span>-&gt;tempDirectory);
-</span><span id="198" class="l"><a class="l" href="source-Latte.Engine.php.html#198">198: </a>        }
-</span><span id="199" class="l"><a class="l" href="source-Latte.Engine.php.html#199">199: </a>        <span class="php-var">$file</span> = <span class="php-keyword2">md5</span>(<span class="php-var">$name</span>);
-</span><span id="200" class="l"><a class="l" href="source-Latte.Engine.php.html#200">200: </a>        <span class="php-keyword1">if</span> (<span class="php-keyword2">preg_match</span>(<span class="php-quote">'#\b\w.{10,50}$#'</span>, <span class="php-var">$name</span>, <span class="php-var">$m</span>)) {
-</span><span id="201" class="l"><a class="l" href="source-Latte.Engine.php.html#201">201: </a>            <span class="php-var">$file</span> = <span class="php-keyword2">trim</span>(<span class="php-keyword2">preg_replace</span>(<span class="php-quote">'#\W+#'</span>, <span class="php-quote">'-'</span>, <span class="php-var">$m</span>[<span class="php-num">0</span>]), <span class="php-quote">'-'</span>) . <span class="php-quote">'-'</span> . <span class="php-var">$file</span>;
-</span><span id="202" class="l"><a class="l" href="source-Latte.Engine.php.html#202">202: </a>        }
-</span><span id="203" class="l"><a class="l" href="source-Latte.Engine.php.html#203">203: </a>        <span class="php-keyword1">return</span> <span class="php-var">$this</span>-&gt;tempDirectory . <span class="php-quote">'/'</span> . <span class="php-var">$file</span> . <span class="php-quote">'.php'</span>;
-</span><span id="204" class="l"><a class="l" href="source-Latte.Engine.php.html#204">204: </a>    }
-</span><span id="205" class="l"><a class="l" href="source-Latte.Engine.php.html#205">205: </a>
-</span><span id="206" class="l"><a class="l" href="source-Latte.Engine.php.html#206">206: </a>
-</span><span id="207" class="l"><a class="l" href="source-Latte.Engine.php.html#207">207: </a>    <span class="php-comment">/**
-</span></span><span id="208" class="l"><a class="l" href="source-Latte.Engine.php.html#208">208: </a><span class="php-comment">     * Registers run-time filter.
-</span></span><span id="209" class="l"><a class="l" href="source-Latte.Engine.php.html#209">209: </a><span class="php-comment">     * @param  string|NULL
-</span></span><span id="210" class="l"><a class="l" href="source-Latte.Engine.php.html#210">210: </a><span class="php-comment">     * @param  callable
-</span></span><span id="211" class="l"><a class="l" href="source-Latte.Engine.php.html#211">211: </a><span class="php-comment">     * @return self
-</span></span><span id="212" class="l"><a class="l" href="source-Latte.Engine.php.html#212">212: </a><span class="php-comment">     */</span>
-</span><span id="213" class="l"><a class="l" href="source-Latte.Engine.php.html#213">213: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_addFilter" href="source-Latte.Engine.php.html#_addFilter">addFilter</a>(<span class="php-var">$name</span>, <span class="php-var">$callback</span>)
-</span><span id="214" class="l"><a class="l" href="source-Latte.Engine.php.html#214">214: </a>    {
-</span><span id="215" class="l"><a class="l" href="source-Latte.Engine.php.html#215">215: </a>        <span class="php-keyword1">if</span> (<span class="php-var">$name</span> == <span class="php-keyword1">NULL</span>) { <span class="php-comment">// intentionally ==</span>
-</span><span id="216" class="l"><a class="l" href="source-Latte.Engine.php.html#216">216: </a>            <span class="php-keyword2">array_unshift</span>(<span class="php-var">$this</span>-&gt;filters[<span class="php-keyword1">NULL</span>], <span class="php-var">$callback</span>);
-</span><span id="217" class="l"><a class="l" href="source-Latte.Engine.php.html#217">217: </a>        } <span class="php-keyword1">else</span> {
-</span><span id="218" class="l"><a class="l" href="source-Latte.Engine.php.html#218">218: </a>            <span class="php-var">$this</span>-&gt;filters[<span class="php-keyword2">strtolower</span>(<span class="php-var">$name</span>)] = <span class="php-var">$callback</span>;
-</span><span id="219" class="l"><a class="l" href="source-Latte.Engine.php.html#219">219: </a>        }
-</span><span id="220" class="l"><a class="l" href="source-Latte.Engine.php.html#220">220: </a>        <span class="php-keyword1">return</span> <span class="php-var">$this</span>;
-</span><span id="221" class="l"><a class="l" href="source-Latte.Engine.php.html#221">221: </a>    }
-</span><span id="222" class="l"><a class="l" href="source-Latte.Engine.php.html#222">222: </a>
-</span><span id="223" class="l"><a class="l" href="source-Latte.Engine.php.html#223">223: </a>
-</span><span id="224" class="l"><a class="l" href="source-Latte.Engine.php.html#224">224: </a>    <span class="php-comment">/**
-</span></span><span id="225" class="l"><a class="l" href="source-Latte.Engine.php.html#225">225: </a><span class="php-comment">     * Returns all run-time filters.
-</span></span><span id="226" class="l"><a class="l" href="source-Latte.Engine.php.html#226">226: </a><span class="php-comment">     * @return callable[]
-</span></span><span id="227" class="l"><a class="l" href="source-Latte.Engine.php.html#227">227: </a><span class="php-comment">     */</span>
-</span><span id="228" class="l"><a class="l" href="source-Latte.Engine.php.html#228">228: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_getFilters" href="source-Latte.Engine.php.html#_getFilters">getFilters</a>()
-</span><span id="229" class="l"><a class="l" href="source-Latte.Engine.php.html#229">229: </a>    {
-</span><span id="230" class="l"><a class="l" href="source-Latte.Engine.php.html#230">230: </a>        <span class="php-keyword1">return</span> <span class="php-var">$this</span>-&gt;filters;
-</span><span id="231" class="l"><a class="l" href="source-Latte.Engine.php.html#231">231: </a>    }
-</span><span id="232" class="l"><a class="l" href="source-Latte.Engine.php.html#232">232: </a>
-</span><span id="233" class="l"><a class="l" href="source-Latte.Engine.php.html#233">233: </a>
-</span><span id="234" class="l"><a class="l" href="source-Latte.Engine.php.html#234">234: </a>    <span class="php-comment">/**
-</span></span><span id="235" class="l"><a class="l" href="source-Latte.Engine.php.html#235">235: </a><span class="php-comment">     * Adds new macro.
-</span></span><span id="236" class="l"><a class="l" href="source-Latte.Engine.php.html#236">236: </a><span class="php-comment">     * @return self
-</span></span><span id="237" class="l"><a class="l" href="source-Latte.Engine.php.html#237">237: </a><span class="php-comment">     */</span>
-</span><span id="238" class="l"><a class="l" href="source-Latte.Engine.php.html#238">238: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_addMacro" href="source-Latte.Engine.php.html#_addMacro">addMacro</a>(<span class="php-var">$name</span>, IMacro <span class="php-var">$macro</span>)
-</span><span id="239" class="l"><a class="l" href="source-Latte.Engine.php.html#239">239: </a>    {
-</span><span id="240" class="l"><a class="l" href="source-Latte.Engine.php.html#240">240: </a>        <span class="php-var">$this</span>-&gt;getCompiler()-&gt;addMacro(<span class="php-var">$name</span>, <span class="php-var">$macro</span>);
-</span><span id="241" class="l"><a class="l" href="source-Latte.Engine.php.html#241">241: </a>        <span class="php-keyword1">return</span> <span class="php-var">$this</span>;
-</span><span id="242" class="l"><a class="l" href="source-Latte.Engine.php.html#242">242: </a>    }
-</span><span id="243" class="l"><a class="l" href="source-Latte.Engine.php.html#243">243: </a>
-</span><span id="244" class="l"><a class="l" href="source-Latte.Engine.php.html#244">244: </a>
-</span><span id="245" class="l"><a class="l" href="source-Latte.Engine.php.html#245">245: </a>    <span class="php-comment">/**
-</span></span><span id="246" class="l"><a class="l" href="source-Latte.Engine.php.html#246">246: </a><span class="php-comment">     * @return self
-</span></span><span id="247" class="l"><a class="l" href="source-Latte.Engine.php.html#247">247: </a><span class="php-comment">     */</span>
-</span><span id="248" class="l"><a class="l" href="source-Latte.Engine.php.html#248">248: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_setContentType" href="source-Latte.Engine.php.html#_setContentType">setContentType</a>(<span class="php-var">$type</span>)
-</span><span id="249" class="l"><a class="l" href="source-Latte.Engine.php.html#249">249: </a>    {
-</span><span id="250" class="l"><a class="l" href="source-Latte.Engine.php.html#250">250: </a>        <span class="php-var">$this</span>-&gt;contentType = <span class="php-var">$type</span>;
-</span><span id="251" class="l"><a class="l" href="source-Latte.Engine.php.html#251">251: </a>        <span class="php-keyword1">return</span> <span class="php-var">$this</span>;
-</span><span id="252" class="l"><a class="l" href="source-Latte.Engine.php.html#252">252: </a>    }
-</span><span id="253" class="l"><a class="l" href="source-Latte.Engine.php.html#253">253: </a>
-</span><span id="254" class="l"><a class="l" href="source-Latte.Engine.php.html#254">254: </a>
-</span><span id="255" class="l"><a class="l" href="source-Latte.Engine.php.html#255">255: </a>    <span class="php-comment">/**
-</span></span><span id="256" class="l"><a class="l" href="source-Latte.Engine.php.html#256">256: </a><span class="php-comment">     * Sets path to temporary directory.
-</span></span><span id="257" class="l"><a class="l" href="source-Latte.Engine.php.html#257">257: </a><span class="php-comment">     * @return self
-</span></span><span id="258" class="l"><a class="l" href="source-Latte.Engine.php.html#258">258: </a><span class="php-comment">     */</span>
-</span><span id="259" class="l"><a class="l" href="source-Latte.Engine.php.html#259">259: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_setTempDirectory" href="source-Latte.Engine.php.html#_setTempDirectory">setTempDirectory</a>(<span class="php-var">$path</span>)
-</span><span id="260" class="l"><a class="l" href="source-Latte.Engine.php.html#260">260: </a>    {
-</span><span id="261" class="l"><a class="l" href="source-Latte.Engine.php.html#261">261: </a>        <span class="php-var">$this</span>-&gt;tempDirectory = <span class="php-var">$path</span>;
-</span><span id="262" class="l"><a class="l" href="source-Latte.Engine.php.html#262">262: </a>        <span class="php-keyword1">return</span> <span class="php-var">$this</span>;
-</span><span id="263" class="l"><a class="l" href="source-Latte.Engine.php.html#263">263: </a>    }
-</span><span id="264" class="l"><a class="l" href="source-Latte.Engine.php.html#264">264: </a>
-</span><span id="265" class="l"><a class="l" href="source-Latte.Engine.php.html#265">265: </a>
-</span><span id="266" class="l"><a class="l" href="source-Latte.Engine.php.html#266">266: </a>    <span class="php-comment">/**
-</span></span><span id="267" class="l"><a class="l" href="source-Latte.Engine.php.html#267">267: </a><span class="php-comment">     * Sets auto-refresh mode.
-</span></span><span id="268" class="l"><a class="l" href="source-Latte.Engine.php.html#268">268: </a><span class="php-comment">     * @return self
-</span></span><span id="269" class="l"><a class="l" href="source-Latte.Engine.php.html#269">269: </a><span class="php-comment">     */</span>
-</span><span id="270" class="l"><a class="l" href="source-Latte.Engine.php.html#270">270: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_setAutoRefresh" href="source-Latte.Engine.php.html#_setAutoRefresh">setAutoRefresh</a>(<span class="php-var">$on</span> = <span class="php-keyword1">TRUE</span>)
-</span><span id="271" class="l"><a class="l" href="source-Latte.Engine.php.html#271">271: </a>    {
-</span><span id="272" class="l"><a class="l" href="source-Latte.Engine.php.html#272">272: </a>        <span class="php-var">$this</span>-&gt;autoRefresh = (bool) <span class="php-var">$on</span>;
-</span><span id="273" class="l"><a class="l" href="source-Latte.Engine.php.html#273">273: </a>        <span class="php-keyword1">return</span> <span class="php-var">$this</span>;
-</span><span id="274" class="l"><a class="l" href="source-Latte.Engine.php.html#274">274: </a>    }
-</span><span id="275" class="l"><a class="l" href="source-Latte.Engine.php.html#275">275: </a>
-</span><span id="276" class="l"><a class="l" href="source-Latte.Engine.php.html#276">276: </a>
-</span><span id="277" class="l"><a class="l" href="source-Latte.Engine.php.html#277">277: </a>    <span class="php-comment">/**
-</span></span><span id="278" class="l"><a class="l" href="source-Latte.Engine.php.html#278">278: </a><span class="php-comment">     * @return Parser
-</span></span><span id="279" class="l"><a class="l" href="source-Latte.Engine.php.html#279">279: </a><span class="php-comment">     */</span>
-</span><span id="280" class="l"><a class="l" href="source-Latte.Engine.php.html#280">280: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_getParser" href="source-Latte.Engine.php.html#_getParser">getParser</a>()
-</span><span id="281" class="l"><a class="l" href="source-Latte.Engine.php.html#281">281: </a>    {
-</span><span id="282" class="l"><a class="l" href="source-Latte.Engine.php.html#282">282: </a>        <span class="php-keyword1">if</span> (!<span class="php-var">$this</span>-&gt;parser) {
-</span><span id="283" class="l"><a class="l" href="source-Latte.Engine.php.html#283">283: </a>            <span class="php-var">$this</span>-&gt;parser = <span class="php-keyword1">new</span> Parser;
-</span><span id="284" class="l"><a class="l" href="source-Latte.Engine.php.html#284">284: </a>        }
-</span><span id="285" class="l"><a class="l" href="source-Latte.Engine.php.html#285">285: </a>        <span class="php-keyword1">return</span> <span class="php-var">$this</span>-&gt;parser;
-</span><span id="286" class="l"><a class="l" href="source-Latte.Engine.php.html#286">286: </a>    }
-</span><span id="287" class="l"><a class="l" href="source-Latte.Engine.php.html#287">287: </a>
-</span><span id="288" class="l"><a class="l" href="source-Latte.Engine.php.html#288">288: </a>
-</span><span id="289" class="l"><a class="l" href="source-Latte.Engine.php.html#289">289: </a>    <span class="php-comment">/**
-</span></span><span id="290" class="l"><a class="l" href="source-Latte.Engine.php.html#290">290: </a><span class="php-comment">     * @return Compiler
-</span></span><span id="291" class="l"><a class="l" href="source-Latte.Engine.php.html#291">291: </a><span class="php-comment">     */</span>
-</span><span id="292" class="l"><a class="l" href="source-Latte.Engine.php.html#292">292: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_getCompiler" href="source-Latte.Engine.php.html#_getCompiler">getCompiler</a>()
-</span><span id="293" class="l"><a class="l" href="source-Latte.Engine.php.html#293">293: </a>    {
-</span><span id="294" class="l"><a class="l" href="source-Latte.Engine.php.html#294">294: </a>        <span class="php-keyword1">if</span> (!<span class="php-var">$this</span>-&gt;compiler) {
-</span><span id="295" class="l"><a class="l" href="source-Latte.Engine.php.html#295">295: </a>            <span class="php-var">$this</span>-&gt;compiler = <span class="php-keyword1">new</span> Compiler;
-</span><span id="296" class="l"><a class="l" href="source-Latte.Engine.php.html#296">296: </a>            Macros\CoreMacros::install(<span class="php-var">$this</span>-&gt;compiler);
-</span><span id="297" class="l"><a class="l" href="source-Latte.Engine.php.html#297">297: </a>            Macros\BlockMacros::install(<span class="php-var">$this</span>-&gt;compiler);
-</span><span id="298" class="l"><a class="l" href="source-Latte.Engine.php.html#298">298: </a>        }
-</span><span id="299" class="l"><a class="l" href="source-Latte.Engine.php.html#299">299: </a>        <span class="php-keyword1">return</span> <span class="php-var">$this</span>-&gt;compiler;
-</span><span id="300" class="l"><a class="l" href="source-Latte.Engine.php.html#300">300: </a>    }
-</span><span id="301" class="l"><a class="l" href="source-Latte.Engine.php.html#301">301: </a>
-</span><span id="302" class="l"><a class="l" href="source-Latte.Engine.php.html#302">302: </a>
-</span><span id="303" class="l"><a class="l" href="source-Latte.Engine.php.html#303">303: </a>    <span class="php-comment">/**
-</span></span><span id="304" class="l"><a class="l" href="source-Latte.Engine.php.html#304">304: </a><span class="php-comment">     * @return self
-</span></span><span id="305" class="l"><a class="l" href="source-Latte.Engine.php.html#305">305: </a><span class="php-comment">     */</span>
-</span><span id="306" class="l"><a class="l" href="source-Latte.Engine.php.html#306">306: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_setLoader" href="source-Latte.Engine.php.html#_setLoader">setLoader</a>(ILoader <span class="php-var">$loader</span>)
-</span><span id="307" class="l"><a class="l" href="source-Latte.Engine.php.html#307">307: </a>    {
-</span><span id="308" class="l"><a class="l" href="source-Latte.Engine.php.html#308">308: </a>        <span class="php-var">$this</span>-&gt;loader = <span class="php-var">$loader</span>;
-</span><span id="309" class="l"><a class="l" href="source-Latte.Engine.php.html#309">309: </a>        <span class="php-keyword1">return</span> <span class="php-var">$this</span>;
-</span><span id="310" class="l"><a class="l" href="source-Latte.Engine.php.html#310">310: </a>    }
-</span><span id="311" class="l"><a class="l" href="source-Latte.Engine.php.html#311">311: </a>
-</span><span id="312" class="l"><a class="l" href="source-Latte.Engine.php.html#312">312: </a>
-</span><span id="313" class="l"><a class="l" href="source-Latte.Engine.php.html#313">313: </a>    <span class="php-comment">/**
-</span></span><span id="314" class="l"><a class="l" href="source-Latte.Engine.php.html#314">314: </a><span class="php-comment">     * @return ILoader
-</span></span><span id="315" class="l"><a class="l" href="source-Latte.Engine.php.html#315">315: </a><span class="php-comment">     */</span>
-</span><span id="316" class="l"><a class="l" href="source-Latte.Engine.php.html#316">316: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_getLoader" href="source-Latte.Engine.php.html#_getLoader">getLoader</a>()
-</span><span id="317" class="l"><a class="l" href="source-Latte.Engine.php.html#317">317: </a>    {
-</span><span id="318" class="l"><a class="l" href="source-Latte.Engine.php.html#318">318: </a>        <span class="php-keyword1">if</span> (!<span class="php-var">$this</span>-&gt;loader) {
-</span><span id="319" class="l"><a class="l" href="source-Latte.Engine.php.html#319">319: </a>            <span class="php-var">$this</span>-&gt;loader = <span class="php-keyword1">new</span> Loaders\FileLoader;
-</span><span id="320" class="l"><a class="l" href="source-Latte.Engine.php.html#320">320: </a>        }
-</span><span id="321" class="l"><a class="l" href="source-Latte.Engine.php.html#321">321: </a>        <span class="php-keyword1">return</span> <span class="php-var">$this</span>-&gt;loader;
-</span><span id="322" class="l"><a class="l" href="source-Latte.Engine.php.html#322">322: </a>    }
-</span><span id="323" class="l"><a class="l" href="source-Latte.Engine.php.html#323">323: </a>
-</span><span id="324" class="l"><a class="l" href="source-Latte.Engine.php.html#324">324: </a>}
-</span><span id="325" class="l"><a class="l" href="source-Latte.Engine.php.html#325">325: </a></span></code></pre>
+</span><span id="197" class="l"><a class="l" href="source-Latte.Engine.php.html#197">197: </a>            @<span class="php-keyword2">mkdir</span>(<span class="php-var">$this</span>-&gt;tempDirectory); <span class="php-comment">// High concurrency</span>
+</span><span id="198" class="l"><a class="l" href="source-Latte.Engine.php.html#198">198: </a>            <span class="php-keyword1">if</span> (!<span class="php-keyword2">is_dir</span>(<span class="php-var">$this</span>-&gt;tempDirectory)) {
+</span><span id="199" class="l"><a class="l" href="source-Latte.Engine.php.html#199">199: </a>                <span class="php-keyword1">throw</span> <span class="php-keyword1">new</span> \RuntimeException(<span class="php-quote">&quot;Temporary directory cannot be created. Check access rights&quot;</span>);
+</span><span id="200" class="l"><a class="l" href="source-Latte.Engine.php.html#200">200: </a>            }
+</span><span id="201" class="l"><a class="l" href="source-Latte.Engine.php.html#201">201: </a>        }
+</span><span id="202" class="l"><a class="l" href="source-Latte.Engine.php.html#202">202: </a>        <span class="php-var">$file</span> = <span class="php-keyword2">md5</span>(<span class="php-var">$name</span>);
+</span><span id="203" class="l"><a class="l" href="source-Latte.Engine.php.html#203">203: </a>        <span class="php-keyword1">if</span> (<span class="php-keyword2">preg_match</span>(<span class="php-quote">'#\b\w.{10,50}$#'</span>, <span class="php-var">$name</span>, <span class="php-var">$m</span>)) {
+</span><span id="204" class="l"><a class="l" href="source-Latte.Engine.php.html#204">204: </a>            <span class="php-var">$file</span> = <span class="php-keyword2">trim</span>(<span class="php-keyword2">preg_replace</span>(<span class="php-quote">'#\W+#'</span>, <span class="php-quote">'-'</span>, <span class="php-var">$m</span>[<span class="php-num">0</span>]), <span class="php-quote">'-'</span>) . <span class="php-quote">'-'</span> . <span class="php-var">$file</span>;
+</span><span id="205" class="l"><a class="l" href="source-Latte.Engine.php.html#205">205: </a>        }
+</span><span id="206" class="l"><a class="l" href="source-Latte.Engine.php.html#206">206: </a>        <span class="php-keyword1">return</span> <span class="php-var">$this</span>-&gt;tempDirectory . <span class="php-quote">'/'</span> . <span class="php-var">$file</span> . <span class="php-quote">'.php'</span>;
+</span><span id="207" class="l"><a class="l" href="source-Latte.Engine.php.html#207">207: </a>    }
+</span><span id="208" class="l"><a class="l" href="source-Latte.Engine.php.html#208">208: </a>
+</span><span id="209" class="l"><a class="l" href="source-Latte.Engine.php.html#209">209: </a>
+</span><span id="210" class="l"><a class="l" href="source-Latte.Engine.php.html#210">210: </a>    <span class="php-comment">/**
+</span></span><span id="211" class="l"><a class="l" href="source-Latte.Engine.php.html#211">211: </a><span class="php-comment">     * Registers run-time filter.
+</span></span><span id="212" class="l"><a class="l" href="source-Latte.Engine.php.html#212">212: </a><span class="php-comment">     * @param  string|NULL
+</span></span><span id="213" class="l"><a class="l" href="source-Latte.Engine.php.html#213">213: </a><span class="php-comment">     * @param  callable
+</span></span><span id="214" class="l"><a class="l" href="source-Latte.Engine.php.html#214">214: </a><span class="php-comment">     * @return self
+</span></span><span id="215" class="l"><a class="l" href="source-Latte.Engine.php.html#215">215: </a><span class="php-comment">     */</span>
+</span><span id="216" class="l"><a class="l" href="source-Latte.Engine.php.html#216">216: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_addFilter" href="source-Latte.Engine.php.html#_addFilter">addFilter</a>(<span class="php-var">$name</span>, <span class="php-var">$callback</span>)
+</span><span id="217" class="l"><a class="l" href="source-Latte.Engine.php.html#217">217: </a>    {
+</span><span id="218" class="l"><a class="l" href="source-Latte.Engine.php.html#218">218: </a>        <span class="php-keyword1">if</span> (<span class="php-var">$name</span> == <span class="php-keyword1">NULL</span>) { <span class="php-comment">// intentionally ==</span>
+</span><span id="219" class="l"><a class="l" href="source-Latte.Engine.php.html#219">219: </a>            <span class="php-keyword2">array_unshift</span>(<span class="php-var">$this</span>-&gt;filters[<span class="php-keyword1">NULL</span>], <span class="php-var">$callback</span>);
+</span><span id="220" class="l"><a class="l" href="source-Latte.Engine.php.html#220">220: </a>        } <span class="php-keyword1">else</span> {
+</span><span id="221" class="l"><a class="l" href="source-Latte.Engine.php.html#221">221: </a>            <span class="php-var">$this</span>-&gt;filters[<span class="php-keyword2">strtolower</span>(<span class="php-var">$name</span>)] = <span class="php-var">$callback</span>;
+</span><span id="222" class="l"><a class="l" href="source-Latte.Engine.php.html#222">222: </a>        }
+</span><span id="223" class="l"><a class="l" href="source-Latte.Engine.php.html#223">223: </a>        <span class="php-keyword1">return</span> <span class="php-var">$this</span>;
+</span><span id="224" class="l"><a class="l" href="source-Latte.Engine.php.html#224">224: </a>    }
+</span><span id="225" class="l"><a class="l" href="source-Latte.Engine.php.html#225">225: </a>
+</span><span id="226" class="l"><a class="l" href="source-Latte.Engine.php.html#226">226: </a>
+</span><span id="227" class="l"><a class="l" href="source-Latte.Engine.php.html#227">227: </a>    <span class="php-comment">/**
+</span></span><span id="228" class="l"><a class="l" href="source-Latte.Engine.php.html#228">228: </a><span class="php-comment">     * Returns all run-time filters.
+</span></span><span id="229" class="l"><a class="l" href="source-Latte.Engine.php.html#229">229: </a><span class="php-comment">     * @return callable[]
+</span></span><span id="230" class="l"><a class="l" href="source-Latte.Engine.php.html#230">230: </a><span class="php-comment">     */</span>
+</span><span id="231" class="l"><a class="l" href="source-Latte.Engine.php.html#231">231: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_getFilters" href="source-Latte.Engine.php.html#_getFilters">getFilters</a>()
+</span><span id="232" class="l"><a class="l" href="source-Latte.Engine.php.html#232">232: </a>    {
+</span><span id="233" class="l"><a class="l" href="source-Latte.Engine.php.html#233">233: </a>        <span class="php-keyword1">return</span> <span class="php-var">$this</span>-&gt;filters;
+</span><span id="234" class="l"><a class="l" href="source-Latte.Engine.php.html#234">234: </a>    }
+</span><span id="235" class="l"><a class="l" href="source-Latte.Engine.php.html#235">235: </a>
+</span><span id="236" class="l"><a class="l" href="source-Latte.Engine.php.html#236">236: </a>
+</span><span id="237" class="l"><a class="l" href="source-Latte.Engine.php.html#237">237: </a>    <span class="php-comment">/**
+</span></span><span id="238" class="l"><a class="l" href="source-Latte.Engine.php.html#238">238: </a><span class="php-comment">     * Call a run-time filter.
+</span></span><span id="239" class="l"><a class="l" href="source-Latte.Engine.php.html#239">239: </a><span class="php-comment">     * @param  string  filter name
+</span></span><span id="240" class="l"><a class="l" href="source-Latte.Engine.php.html#240">240: </a><span class="php-comment">     * @param  array   arguments
+</span></span><span id="241" class="l"><a class="l" href="source-Latte.Engine.php.html#241">241: </a><span class="php-comment">     * @return mixed
+</span></span><span id="242" class="l"><a class="l" href="source-Latte.Engine.php.html#242">242: </a><span class="php-comment">     */</span>
+</span><span id="243" class="l"><a class="l" href="source-Latte.Engine.php.html#243">243: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_invokeFilter" href="source-Latte.Engine.php.html#_invokeFilter">invokeFilter</a>(<span class="php-var">$name</span>, <span class="php-keyword1">array</span> <span class="php-var">$args</span>)
+</span><span id="244" class="l"><a class="l" href="source-Latte.Engine.php.html#244">244: </a>    {
+</span><span id="245" class="l"><a class="l" href="source-Latte.Engine.php.html#245">245: </a>        <span class="php-var">$lname</span> = <span class="php-keyword2">strtolower</span>(<span class="php-var">$name</span>);
+</span><span id="246" class="l"><a class="l" href="source-Latte.Engine.php.html#246">246: </a>        <span class="php-keyword1">if</span> (!<span class="php-keyword1">isset</span>(<span class="php-var">$this</span>-&gt;filters[<span class="php-var">$lname</span>])) {
+</span><span id="247" class="l"><a class="l" href="source-Latte.Engine.php.html#247">247: </a>            <span class="php-var">$args2</span> = <span class="php-var">$args</span>;
+</span><span id="248" class="l"><a class="l" href="source-Latte.Engine.php.html#248">248: </a>            <span class="php-keyword2">array_unshift</span>(<span class="php-var">$args2</span>, <span class="php-var">$lname</span>);
+</span><span id="249" class="l"><a class="l" href="source-Latte.Engine.php.html#249">249: </a>            <span class="php-keyword1">foreach</span> (<span class="php-var">$this</span>-&gt;filters[<span class="php-keyword1">NULL</span>] <span class="php-keyword1">as</span> <span class="php-var">$filter</span>) {
+</span><span id="250" class="l"><a class="l" href="source-Latte.Engine.php.html#250">250: </a>                <span class="php-var">$res</span> = <span class="php-keyword2">call_user_func_array</span>(Helpers::checkCallback(<span class="php-var">$filter</span>), <span class="php-var">$args2</span>);
+</span><span id="251" class="l"><a class="l" href="source-Latte.Engine.php.html#251">251: </a>                <span class="php-keyword1">if</span> (<span class="php-var">$res</span> !== <span class="php-keyword1">NULL</span>) {
+</span><span id="252" class="l"><a class="l" href="source-Latte.Engine.php.html#252">252: </a>                    <span class="php-keyword1">return</span> <span class="php-var">$res</span>;
+</span><span id="253" class="l"><a class="l" href="source-Latte.Engine.php.html#253">253: </a>                } <span class="php-keyword1">elseif</span> (<span class="php-keyword1">isset</span>(<span class="php-var">$this</span>-&gt;filters[<span class="php-var">$lname</span>])) {
+</span><span id="254" class="l"><a class="l" href="source-Latte.Engine.php.html#254">254: </a>                    <span class="php-keyword1">return</span> <span class="php-keyword2">call_user_func_array</span>(Helpers::checkCallback(<span class="php-var">$this</span>-&gt;filters[<span class="php-var">$lname</span>]), <span class="php-var">$args</span>);
+</span><span id="255" class="l"><a class="l" href="source-Latte.Engine.php.html#255">255: </a>                }
+</span><span id="256" class="l"><a class="l" href="source-Latte.Engine.php.html#256">256: </a>            }
+</span><span id="257" class="l"><a class="l" href="source-Latte.Engine.php.html#257">257: </a>            <span class="php-keyword1">throw</span> <span class="php-keyword1">new</span> \LogicException(<span class="php-quote">&quot;Filter '</span><span class="php-var">$name</span><span class="php-quote">' is not defined.&quot;</span>);
+</span><span id="258" class="l"><a class="l" href="source-Latte.Engine.php.html#258">258: </a>        }
+</span><span id="259" class="l"><a class="l" href="source-Latte.Engine.php.html#259">259: </a>        <span class="php-keyword1">return</span> <span class="php-keyword2">call_user_func_array</span>(Helpers::checkCallback(<span class="php-var">$this</span>-&gt;filters[<span class="php-var">$lname</span>]), <span class="php-var">$args</span>);
+</span><span id="260" class="l"><a class="l" href="source-Latte.Engine.php.html#260">260: </a>    }
+</span><span id="261" class="l"><a class="l" href="source-Latte.Engine.php.html#261">261: </a>
+</span><span id="262" class="l"><a class="l" href="source-Latte.Engine.php.html#262">262: </a>
+</span><span id="263" class="l"><a class="l" href="source-Latte.Engine.php.html#263">263: </a>    <span class="php-comment">/**
+</span></span><span id="264" class="l"><a class="l" href="source-Latte.Engine.php.html#264">264: </a><span class="php-comment">     * Adds new macro.
+</span></span><span id="265" class="l"><a class="l" href="source-Latte.Engine.php.html#265">265: </a><span class="php-comment">     * @return self
+</span></span><span id="266" class="l"><a class="l" href="source-Latte.Engine.php.html#266">266: </a><span class="php-comment">     */</span>
+</span><span id="267" class="l"><a class="l" href="source-Latte.Engine.php.html#267">267: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_addMacro" href="source-Latte.Engine.php.html#_addMacro">addMacro</a>(<span class="php-var">$name</span>, IMacro <span class="php-var">$macro</span>)
+</span><span id="268" class="l"><a class="l" href="source-Latte.Engine.php.html#268">268: </a>    {
+</span><span id="269" class="l"><a class="l" href="source-Latte.Engine.php.html#269">269: </a>        <span class="php-var">$this</span>-&gt;getCompiler()-&gt;addMacro(<span class="php-var">$name</span>, <span class="php-var">$macro</span>);
+</span><span id="270" class="l"><a class="l" href="source-Latte.Engine.php.html#270">270: </a>        <span class="php-keyword1">return</span> <span class="php-var">$this</span>;
+</span><span id="271" class="l"><a class="l" href="source-Latte.Engine.php.html#271">271: </a>    }
+</span><span id="272" class="l"><a class="l" href="source-Latte.Engine.php.html#272">272: </a>
+</span><span id="273" class="l"><a class="l" href="source-Latte.Engine.php.html#273">273: </a>
+</span><span id="274" class="l"><a class="l" href="source-Latte.Engine.php.html#274">274: </a>    <span class="php-comment">/**
+</span></span><span id="275" class="l"><a class="l" href="source-Latte.Engine.php.html#275">275: </a><span class="php-comment">     * @return self
+</span></span><span id="276" class="l"><a class="l" href="source-Latte.Engine.php.html#276">276: </a><span class="php-comment">     */</span>
+</span><span id="277" class="l"><a class="l" href="source-Latte.Engine.php.html#277">277: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_setContentType" href="source-Latte.Engine.php.html#_setContentType">setContentType</a>(<span class="php-var">$type</span>)
+</span><span id="278" class="l"><a class="l" href="source-Latte.Engine.php.html#278">278: </a>    {
+</span><span id="279" class="l"><a class="l" href="source-Latte.Engine.php.html#279">279: </a>        <span class="php-var">$this</span>-&gt;contentType = <span class="php-var">$type</span>;
+</span><span id="280" class="l"><a class="l" href="source-Latte.Engine.php.html#280">280: </a>        <span class="php-keyword1">return</span> <span class="php-var">$this</span>;
+</span><span id="281" class="l"><a class="l" href="source-Latte.Engine.php.html#281">281: </a>    }
+</span><span id="282" class="l"><a class="l" href="source-Latte.Engine.php.html#282">282: </a>
+</span><span id="283" class="l"><a class="l" href="source-Latte.Engine.php.html#283">283: </a>
+</span><span id="284" class="l"><a class="l" href="source-Latte.Engine.php.html#284">284: </a>    <span class="php-comment">/**
+</span></span><span id="285" class="l"><a class="l" href="source-Latte.Engine.php.html#285">285: </a><span class="php-comment">     * Sets path to temporary directory.
+</span></span><span id="286" class="l"><a class="l" href="source-Latte.Engine.php.html#286">286: </a><span class="php-comment">     * @return self
+</span></span><span id="287" class="l"><a class="l" href="source-Latte.Engine.php.html#287">287: </a><span class="php-comment">     */</span>
+</span><span id="288" class="l"><a class="l" href="source-Latte.Engine.php.html#288">288: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_setTempDirectory" href="source-Latte.Engine.php.html#_setTempDirectory">setTempDirectory</a>(<span class="php-var">$path</span>)
+</span><span id="289" class="l"><a class="l" href="source-Latte.Engine.php.html#289">289: </a>    {
+</span><span id="290" class="l"><a class="l" href="source-Latte.Engine.php.html#290">290: </a>        <span class="php-var">$this</span>-&gt;tempDirectory = <span class="php-var">$path</span>;
+</span><span id="291" class="l"><a class="l" href="source-Latte.Engine.php.html#291">291: </a>        <span class="php-keyword1">return</span> <span class="php-var">$this</span>;
+</span><span id="292" class="l"><a class="l" href="source-Latte.Engine.php.html#292">292: </a>    }
+</span><span id="293" class="l"><a class="l" href="source-Latte.Engine.php.html#293">293: </a>
+</span><span id="294" class="l"><a class="l" href="source-Latte.Engine.php.html#294">294: </a>
+</span><span id="295" class="l"><a class="l" href="source-Latte.Engine.php.html#295">295: </a>    <span class="php-comment">/**
+</span></span><span id="296" class="l"><a class="l" href="source-Latte.Engine.php.html#296">296: </a><span class="php-comment">     * Sets auto-refresh mode.
+</span></span><span id="297" class="l"><a class="l" href="source-Latte.Engine.php.html#297">297: </a><span class="php-comment">     * @return self
+</span></span><span id="298" class="l"><a class="l" href="source-Latte.Engine.php.html#298">298: </a><span class="php-comment">     */</span>
+</span><span id="299" class="l"><a class="l" href="source-Latte.Engine.php.html#299">299: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_setAutoRefresh" href="source-Latte.Engine.php.html#_setAutoRefresh">setAutoRefresh</a>(<span class="php-var">$on</span> = <span class="php-keyword1">TRUE</span>)
+</span><span id="300" class="l"><a class="l" href="source-Latte.Engine.php.html#300">300: </a>    {
+</span><span id="301" class="l"><a class="l" href="source-Latte.Engine.php.html#301">301: </a>        <span class="php-var">$this</span>-&gt;autoRefresh = (bool) <span class="php-var">$on</span>;
+</span><span id="302" class="l"><a class="l" href="source-Latte.Engine.php.html#302">302: </a>        <span class="php-keyword1">return</span> <span class="php-var">$this</span>;
+</span><span id="303" class="l"><a class="l" href="source-Latte.Engine.php.html#303">303: </a>    }
+</span><span id="304" class="l"><a class="l" href="source-Latte.Engine.php.html#304">304: </a>
+</span><span id="305" class="l"><a class="l" href="source-Latte.Engine.php.html#305">305: </a>
+</span><span id="306" class="l"><a class="l" href="source-Latte.Engine.php.html#306">306: </a>    <span class="php-comment">/**
+</span></span><span id="307" class="l"><a class="l" href="source-Latte.Engine.php.html#307">307: </a><span class="php-comment">     * @return Parser
+</span></span><span id="308" class="l"><a class="l" href="source-Latte.Engine.php.html#308">308: </a><span class="php-comment">     */</span>
+</span><span id="309" class="l"><a class="l" href="source-Latte.Engine.php.html#309">309: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_getParser" href="source-Latte.Engine.php.html#_getParser">getParser</a>()
+</span><span id="310" class="l"><a class="l" href="source-Latte.Engine.php.html#310">310: </a>    {
+</span><span id="311" class="l"><a class="l" href="source-Latte.Engine.php.html#311">311: </a>        <span class="php-keyword1">if</span> (!<span class="php-var">$this</span>-&gt;parser) {
+</span><span id="312" class="l"><a class="l" href="source-Latte.Engine.php.html#312">312: </a>            <span class="php-var">$this</span>-&gt;parser = <span class="php-keyword1">new</span> Parser;
+</span><span id="313" class="l"><a class="l" href="source-Latte.Engine.php.html#313">313: </a>        }
+</span><span id="314" class="l"><a class="l" href="source-Latte.Engine.php.html#314">314: </a>        <span class="php-keyword1">return</span> <span class="php-var">$this</span>-&gt;parser;
+</span><span id="315" class="l"><a class="l" href="source-Latte.Engine.php.html#315">315: </a>    }
+</span><span id="316" class="l"><a class="l" href="source-Latte.Engine.php.html#316">316: </a>
+</span><span id="317" class="l"><a class="l" href="source-Latte.Engine.php.html#317">317: </a>
+</span><span id="318" class="l"><a class="l" href="source-Latte.Engine.php.html#318">318: </a>    <span class="php-comment">/**
+</span></span><span id="319" class="l"><a class="l" href="source-Latte.Engine.php.html#319">319: </a><span class="php-comment">     * @return Compiler
+</span></span><span id="320" class="l"><a class="l" href="source-Latte.Engine.php.html#320">320: </a><span class="php-comment">     */</span>
+</span><span id="321" class="l"><a class="l" href="source-Latte.Engine.php.html#321">321: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_getCompiler" href="source-Latte.Engine.php.html#_getCompiler">getCompiler</a>()
+</span><span id="322" class="l"><a class="l" href="source-Latte.Engine.php.html#322">322: </a>    {
+</span><span id="323" class="l"><a class="l" href="source-Latte.Engine.php.html#323">323: </a>        <span class="php-keyword1">if</span> (!<span class="php-var">$this</span>-&gt;compiler) {
+</span><span id="324" class="l"><a class="l" href="source-Latte.Engine.php.html#324">324: </a>            <span class="php-var">$this</span>-&gt;compiler = <span class="php-keyword1">new</span> Compiler;
+</span><span id="325" class="l"><a class="l" href="source-Latte.Engine.php.html#325">325: </a>            Macros\CoreMacros::install(<span class="php-var">$this</span>-&gt;compiler);
+</span><span id="326" class="l"><a class="l" href="source-Latte.Engine.php.html#326">326: </a>            Macros\BlockMacros::install(<span class="php-var">$this</span>-&gt;compiler);
+</span><span id="327" class="l"><a class="l" href="source-Latte.Engine.php.html#327">327: </a>        }
+</span><span id="328" class="l"><a class="l" href="source-Latte.Engine.php.html#328">328: </a>        <span class="php-keyword1">return</span> <span class="php-var">$this</span>-&gt;compiler;
+</span><span id="329" class="l"><a class="l" href="source-Latte.Engine.php.html#329">329: </a>    }
+</span><span id="330" class="l"><a class="l" href="source-Latte.Engine.php.html#330">330: </a>
+</span><span id="331" class="l"><a class="l" href="source-Latte.Engine.php.html#331">331: </a>
+</span><span id="332" class="l"><a class="l" href="source-Latte.Engine.php.html#332">332: </a>    <span class="php-comment">/**
+</span></span><span id="333" class="l"><a class="l" href="source-Latte.Engine.php.html#333">333: </a><span class="php-comment">     * @return self
+</span></span><span id="334" class="l"><a class="l" href="source-Latte.Engine.php.html#334">334: </a><span class="php-comment">     */</span>
+</span><span id="335" class="l"><a class="l" href="source-Latte.Engine.php.html#335">335: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_setLoader" href="source-Latte.Engine.php.html#_setLoader">setLoader</a>(ILoader <span class="php-var">$loader</span>)
+</span><span id="336" class="l"><a class="l" href="source-Latte.Engine.php.html#336">336: </a>    {
+</span><span id="337" class="l"><a class="l" href="source-Latte.Engine.php.html#337">337: </a>        <span class="php-var">$this</span>-&gt;loader = <span class="php-var">$loader</span>;
+</span><span id="338" class="l"><a class="l" href="source-Latte.Engine.php.html#338">338: </a>        <span class="php-keyword1">return</span> <span class="php-var">$this</span>;
+</span><span id="339" class="l"><a class="l" href="source-Latte.Engine.php.html#339">339: </a>    }
+</span><span id="340" class="l"><a class="l" href="source-Latte.Engine.php.html#340">340: </a>
+</span><span id="341" class="l"><a class="l" href="source-Latte.Engine.php.html#341">341: </a>
+</span><span id="342" class="l"><a class="l" href="source-Latte.Engine.php.html#342">342: </a>    <span class="php-comment">/**
+</span></span><span id="343" class="l"><a class="l" href="source-Latte.Engine.php.html#343">343: </a><span class="php-comment">     * @return ILoader
+</span></span><span id="344" class="l"><a class="l" href="source-Latte.Engine.php.html#344">344: </a><span class="php-comment">     */</span>
+</span><span id="345" class="l"><a class="l" href="source-Latte.Engine.php.html#345">345: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_getLoader" href="source-Latte.Engine.php.html#_getLoader">getLoader</a>()
+</span><span id="346" class="l"><a class="l" href="source-Latte.Engine.php.html#346">346: </a>    {
+</span><span id="347" class="l"><a class="l" href="source-Latte.Engine.php.html#347">347: </a>        <span class="php-keyword1">if</span> (!<span class="php-var">$this</span>-&gt;loader) {
+</span><span id="348" class="l"><a class="l" href="source-Latte.Engine.php.html#348">348: </a>            <span class="php-var">$this</span>-&gt;loader = <span class="php-keyword1">new</span> Loaders\FileLoader;
+</span><span id="349" class="l"><a class="l" href="source-Latte.Engine.php.html#349">349: </a>        }
+</span><span id="350" class="l"><a class="l" href="source-Latte.Engine.php.html#350">350: </a>        <span class="php-keyword1">return</span> <span class="php-var">$this</span>-&gt;loader;
+</span><span id="351" class="l"><a class="l" href="source-Latte.Engine.php.html#351">351: </a>    }
+</span><span id="352" class="l"><a class="l" href="source-Latte.Engine.php.html#352">352: </a>
+</span><span id="353" class="l"><a class="l" href="source-Latte.Engine.php.html#353">353: </a>}
+</span><span id="354" class="l"><a class="l" href="source-Latte.Engine.php.html#354">354: </a></span></code></pre>
 
 	<div id="footer">
-		Nette 2.2.2 API API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+		Nette 2.2.6 API API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
 	</div>
 </div>
 </div>
 <script src="resources/combined.js?3630868369"></script>
-<script src="elementlist.js?2087501429"></script>
+<script src="elementlist.js?1613912923"></script>
 </body>
 </html>

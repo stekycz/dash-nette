@@ -5,10 +5,10 @@
 	<meta name="generator" content="ApiGen 2.8.0">
 	<meta name="robots" content="noindex">
 
-	<title>File DI/ServiceDefinition.php | Nette 2.2.2 API</title>
+	<title>File DI/ServiceDefinition.php | Nette 2.2.6 API</title>
 
 	<link rel="stylesheet" href="resources/style.css?3746977979">
-	<link rel="search" type="application/opensearchdescription+xml" title="Nette 2.2.2 API" href="http://api.nette.org/2.0/opensearch.xml">
+	<link rel="search" type="application/opensearchdescription+xml" title="Nette 2.2.6 API" href="http://api.nette.org/2.0/opensearch.xml">
 
 
 <script src='http://files.nette.org/js/analytics.js'></script><script>
@@ -307,30 +307,36 @@ _gaq.push(['_trackPageview']);
 </span><span id="104" class="l"><a class="l" href="source-DI.ServiceDefinition.php.html#104">104: </a>    }
 </span><span id="105" class="l"><a class="l" href="source-DI.ServiceDefinition.php.html#105">105: </a>
 </span><span id="106" class="l"><a class="l" href="source-DI.ServiceDefinition.php.html#106">106: </a>
-</span><span id="107" class="l"><a class="l" href="source-DI.ServiceDefinition.php.html#107">107: </a>    <span class="php-comment">/** @deprecated */</span>
-</span><span id="108" class="l"><a class="l" href="source-DI.ServiceDefinition.php.html#108">108: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_setShared" href="source-DI.ServiceDefinition.php.html#_setShared">setShared</a>(<span class="php-var">$on</span>)
-</span><span id="109" class="l"><a class="l" href="source-DI.ServiceDefinition.php.html#109">109: </a>    {
-</span><span id="110" class="l"><a class="l" href="source-DI.ServiceDefinition.php.html#110">110: </a>        <span class="php-keyword2">trigger_error</span>(__METHOD__ . <span class="php-quote">'() is deprecated.'</span>, E_USER_DEPRECATED);
-</span><span id="111" class="l"><a class="l" href="source-DI.ServiceDefinition.php.html#111">111: </a>        <span class="php-var">$this</span>-&gt;autowired = <span class="php-var">$on</span> ? <span class="php-var">$this</span>-&gt;autowired : <span class="php-keyword1">FALSE</span>;
-</span><span id="112" class="l"><a class="l" href="source-DI.ServiceDefinition.php.html#112">112: </a>        <span class="php-keyword1">return</span> <span class="php-var">$this</span>;
-</span><span id="113" class="l"><a class="l" href="source-DI.ServiceDefinition.php.html#113">113: </a>    }
-</span><span id="114" class="l"><a class="l" href="source-DI.ServiceDefinition.php.html#114">114: </a>
-</span><span id="115" class="l"><a class="l" href="source-DI.ServiceDefinition.php.html#115">115: </a>
-</span><span id="116" class="l"><a class="l" href="source-DI.ServiceDefinition.php.html#116">116: </a>    <span class="php-comment">/** @deprecated */</span>
-</span><span id="117" class="l"><a class="l" href="source-DI.ServiceDefinition.php.html#117">117: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_isShared" href="source-DI.ServiceDefinition.php.html#_isShared">isShared</a>()
-</span><span id="118" class="l"><a class="l" href="source-DI.ServiceDefinition.php.html#118">118: </a>    {
-</span><span id="119" class="l"><a class="l" href="source-DI.ServiceDefinition.php.html#119">119: </a>        <span class="php-keyword2">trigger_error</span>(__METHOD__ . <span class="php-quote">'() is deprecated.'</span>, E_USER_DEPRECATED);
-</span><span id="120" class="l"><a class="l" href="source-DI.ServiceDefinition.php.html#120">120: </a>    }
+</span><span id="107" class="l"><a class="l" href="source-DI.ServiceDefinition.php.html#107">107: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_getTag" href="source-DI.ServiceDefinition.php.html#_getTag">getTag</a>(<span class="php-var">$tag</span>)
+</span><span id="108" class="l"><a class="l" href="source-DI.ServiceDefinition.php.html#108">108: </a>    {
+</span><span id="109" class="l"><a class="l" href="source-DI.ServiceDefinition.php.html#109">109: </a>        <span class="php-keyword1">return</span> <span class="php-keyword1">isset</span>(<span class="php-var">$this</span>-&gt;tags[<span class="php-var">$tag</span>]) ? <span class="php-var">$this</span>-&gt;tags[<span class="php-var">$tag</span>] : <span class="php-keyword1">NULL</span>;
+</span><span id="110" class="l"><a class="l" href="source-DI.ServiceDefinition.php.html#110">110: </a>    }
+</span><span id="111" class="l"><a class="l" href="source-DI.ServiceDefinition.php.html#111">111: </a>
+</span><span id="112" class="l"><a class="l" href="source-DI.ServiceDefinition.php.html#112">112: </a>
+</span><span id="113" class="l"><a class="l" href="source-DI.ServiceDefinition.php.html#113">113: </a>    <span class="php-comment">/** @deprecated */</span>
+</span><span id="114" class="l"><a class="l" href="source-DI.ServiceDefinition.php.html#114">114: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_setShared" href="source-DI.ServiceDefinition.php.html#_setShared">setShared</a>(<span class="php-var">$on</span>)
+</span><span id="115" class="l"><a class="l" href="source-DI.ServiceDefinition.php.html#115">115: </a>    {
+</span><span id="116" class="l"><a class="l" href="source-DI.ServiceDefinition.php.html#116">116: </a>        <span class="php-keyword2">trigger_error</span>(__METHOD__ . <span class="php-quote">'() is deprecated.'</span>, E_USER_DEPRECATED);
+</span><span id="117" class="l"><a class="l" href="source-DI.ServiceDefinition.php.html#117">117: </a>        <span class="php-var">$this</span>-&gt;autowired = <span class="php-var">$on</span> ? <span class="php-var">$this</span>-&gt;autowired : <span class="php-keyword1">FALSE</span>;
+</span><span id="118" class="l"><a class="l" href="source-DI.ServiceDefinition.php.html#118">118: </a>        <span class="php-keyword1">return</span> <span class="php-var">$this</span>;
+</span><span id="119" class="l"><a class="l" href="source-DI.ServiceDefinition.php.html#119">119: </a>    }
+</span><span id="120" class="l"><a class="l" href="source-DI.ServiceDefinition.php.html#120">120: </a>
 </span><span id="121" class="l"><a class="l" href="source-DI.ServiceDefinition.php.html#121">121: </a>
-</span><span id="122" class="l"><a class="l" href="source-DI.ServiceDefinition.php.html#122">122: </a>}
-</span><span id="123" class="l"><a class="l" href="source-DI.ServiceDefinition.php.html#123">123: </a></span></code></pre>
+</span><span id="122" class="l"><a class="l" href="source-DI.ServiceDefinition.php.html#122">122: </a>    <span class="php-comment">/** @deprecated */</span>
+</span><span id="123" class="l"><a class="l" href="source-DI.ServiceDefinition.php.html#123">123: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_isShared" href="source-DI.ServiceDefinition.php.html#_isShared">isShared</a>()
+</span><span id="124" class="l"><a class="l" href="source-DI.ServiceDefinition.php.html#124">124: </a>    {
+</span><span id="125" class="l"><a class="l" href="source-DI.ServiceDefinition.php.html#125">125: </a>        <span class="php-keyword2">trigger_error</span>(__METHOD__ . <span class="php-quote">'() is deprecated.'</span>, E_USER_DEPRECATED);
+</span><span id="126" class="l"><a class="l" href="source-DI.ServiceDefinition.php.html#126">126: </a>    }
+</span><span id="127" class="l"><a class="l" href="source-DI.ServiceDefinition.php.html#127">127: </a>
+</span><span id="128" class="l"><a class="l" href="source-DI.ServiceDefinition.php.html#128">128: </a>}
+</span><span id="129" class="l"><a class="l" href="source-DI.ServiceDefinition.php.html#129">129: </a></span></code></pre>
 
 	<div id="footer">
-		Nette 2.2.2 API API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+		Nette 2.2.6 API API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
 	</div>
 </div>
 </div>
 <script src="resources/combined.js?3630868369"></script>
-<script src="elementlist.js?2087501429"></script>
+<script src="elementlist.js?1613912923"></script>
 </body>
 </html>

@@ -5,10 +5,10 @@
 	<meta name="generator" content="ApiGen 2.8.0">
 	<meta name="robots" content="noindex">
 
-	<title>File Http/FileUpload.php | Nette 2.2.2 API</title>
+	<title>File Http/FileUpload.php | Nette 2.2.6 API</title>
 
 	<link rel="stylesheet" href="resources/style.css?3746977979">
-	<link rel="search" type="application/opensearchdescription+xml" title="Nette 2.2.2 API" href="http://api.nette.org/2.0/opensearch.xml">
+	<link rel="search" type="application/opensearchdescription+xml" title="Nette 2.2.6 API" href="http://api.nette.org/2.0/opensearch.xml">
 
 
 <script src='http://files.nette.org/js/analytics.js'></script><script>
@@ -224,14 +224,14 @@ _gaq.push(['_trackPageview']);
 </span></span><span id="17" class="l"><a class="l" href="source-Http.FileUpload.php.html#17"> 17: </a><span class="php-comment"> *
 </span></span><span id="18" class="l"><a class="l" href="source-Http.FileUpload.php.html#18"> 18: </a><span class="php-comment"> * @property-read string $name
 </span></span><span id="19" class="l"><a class="l" href="source-Http.FileUpload.php.html#19"> 19: </a><span class="php-comment"> * @property-read string $sanitizedName
-</span></span><span id="20" class="l"><a class="l" href="source-Http.FileUpload.php.html#20"> 20: </a><span class="php-comment"> * @property-read string $contentType
+</span></span><span id="20" class="l"><a class="l" href="source-Http.FileUpload.php.html#20"> 20: </a><span class="php-comment"> * @property-read string|NULL $contentType
 </span></span><span id="21" class="l"><a class="l" href="source-Http.FileUpload.php.html#21"> 21: </a><span class="php-comment"> * @property-read int $size
 </span></span><span id="22" class="l"><a class="l" href="source-Http.FileUpload.php.html#22"> 22: </a><span class="php-comment"> * @property-read string $temporaryFile
 </span></span><span id="23" class="l"><a class="l" href="source-Http.FileUpload.php.html#23"> 23: </a><span class="php-comment"> * @property-read int $error
 </span></span><span id="24" class="l"><a class="l" href="source-Http.FileUpload.php.html#24"> 24: </a><span class="php-comment"> * @property-read bool $ok
 </span></span><span id="25" class="l"><a class="l" href="source-Http.FileUpload.php.html#25"> 25: </a><span class="php-comment"> * @property-read bool $image
-</span></span><span id="26" class="l"><a class="l" href="source-Http.FileUpload.php.html#26"> 26: </a><span class="php-comment"> * @property-read array $imageSize
-</span></span><span id="27" class="l"><a class="l" href="source-Http.FileUpload.php.html#27"> 27: </a><span class="php-comment"> * @property-read string $contents
+</span></span><span id="26" class="l"><a class="l" href="source-Http.FileUpload.php.html#26"> 26: </a><span class="php-comment"> * @property-read array|NULL $imageSize
+</span></span><span id="27" class="l"><a class="l" href="source-Http.FileUpload.php.html#27"> 27: </a><span class="php-comment"> * @property-read string|NULL $contents
 </span></span><span id="28" class="l"><a class="l" href="source-Http.FileUpload.php.html#28"> 28: </a><span class="php-comment"> */</span>
 </span><span id="29" class="l"><a class="l" href="source-Http.FileUpload.php.html#29"> 29: </a><span class="php-keyword1">class</span> <a id="FileUpload" href="source-Http.FileUpload.php.html#FileUpload">FileUpload</a> <span class="php-keyword1">extends</span> Nette\Object
 </span><span id="30" class="l"><a class="l" href="source-Http.FileUpload.php.html#30"> 30: </a>{
@@ -288,7 +288,7 @@ _gaq.push(['_trackPageview']);
 </span><span id="81" class="l"><a class="l" href="source-Http.FileUpload.php.html#81"> 81: </a>
 </span><span id="82" class="l"><a class="l" href="source-Http.FileUpload.php.html#82"> 82: </a>    <span class="php-comment">/**
 </span></span><span id="83" class="l"><a class="l" href="source-Http.FileUpload.php.html#83"> 83: </a><span class="php-comment">     * Returns the MIME content type of an uploaded file.
-</span></span><span id="84" class="l"><a class="l" href="source-Http.FileUpload.php.html#84"> 84: </a><span class="php-comment">     * @return string
+</span></span><span id="84" class="l"><a class="l" href="source-Http.FileUpload.php.html#84"> 84: </a><span class="php-comment">     * @return string|NULL
 </span></span><span id="85" class="l"><a class="l" href="source-Http.FileUpload.php.html#85"> 85: </a><span class="php-comment">     */</span>
 </span><span id="86" class="l"><a class="l" href="source-Http.FileUpload.php.html#86"> 86: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_getContentType" href="source-Http.FileUpload.php.html#_getContentType">getContentType</a>()
 </span><span id="87" class="l"><a class="l" href="source-Http.FileUpload.php.html#87"> 87: </a>    {
@@ -380,42 +380,43 @@ _gaq.push(['_trackPageview']);
 </span><span id="173" class="l"><a class="l" href="source-Http.FileUpload.php.html#173">173: </a>    <span class="php-comment">/**
 </span></span><span id="174" class="l"><a class="l" href="source-Http.FileUpload.php.html#174">174: </a><span class="php-comment">     * Returns the image.
 </span></span><span id="175" class="l"><a class="l" href="source-Http.FileUpload.php.html#175">175: </a><span class="php-comment">     * @return Nette\Utils\Image
-</span></span><span id="176" class="l"><a class="l" href="source-Http.FileUpload.php.html#176">176: </a><span class="php-comment">     */</span>
-</span><span id="177" class="l"><a class="l" href="source-Http.FileUpload.php.html#177">177: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_toImage" href="source-Http.FileUpload.php.html#_toImage">toImage</a>()
-</span><span id="178" class="l"><a class="l" href="source-Http.FileUpload.php.html#178">178: </a>    {
-</span><span id="179" class="l"><a class="l" href="source-Http.FileUpload.php.html#179">179: </a>        <span class="php-keyword1">return</span> Nette\Utils\Image::fromFile(<span class="php-var">$this</span>-&gt;tmpName);
-</span><span id="180" class="l"><a class="l" href="source-Http.FileUpload.php.html#180">180: </a>    }
-</span><span id="181" class="l"><a class="l" href="source-Http.FileUpload.php.html#181">181: </a>
+</span></span><span id="176" class="l"><a class="l" href="source-Http.FileUpload.php.html#176">176: </a><span class="php-comment">     * @throws Nette\Utils\ImageException
+</span></span><span id="177" class="l"><a class="l" href="source-Http.FileUpload.php.html#177">177: </a><span class="php-comment">     */</span>
+</span><span id="178" class="l"><a class="l" href="source-Http.FileUpload.php.html#178">178: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_toImage" href="source-Http.FileUpload.php.html#_toImage">toImage</a>()
+</span><span id="179" class="l"><a class="l" href="source-Http.FileUpload.php.html#179">179: </a>    {
+</span><span id="180" class="l"><a class="l" href="source-Http.FileUpload.php.html#180">180: </a>        <span class="php-keyword1">return</span> Nette\Utils\Image::fromFile(<span class="php-var">$this</span>-&gt;tmpName);
+</span><span id="181" class="l"><a class="l" href="source-Http.FileUpload.php.html#181">181: </a>    }
 </span><span id="182" class="l"><a class="l" href="source-Http.FileUpload.php.html#182">182: </a>
-</span><span id="183" class="l"><a class="l" href="source-Http.FileUpload.php.html#183">183: </a>    <span class="php-comment">/**
-</span></span><span id="184" class="l"><a class="l" href="source-Http.FileUpload.php.html#184">184: </a><span class="php-comment">     * Returns the dimensions of an uploaded image as array.
-</span></span><span id="185" class="l"><a class="l" href="source-Http.FileUpload.php.html#185">185: </a><span class="php-comment">     * @return array
-</span></span><span id="186" class="l"><a class="l" href="source-Http.FileUpload.php.html#186">186: </a><span class="php-comment">     */</span>
-</span><span id="187" class="l"><a class="l" href="source-Http.FileUpload.php.html#187">187: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <span class="php-keyword2">getImageSize</span>()
-</span><span id="188" class="l"><a class="l" href="source-Http.FileUpload.php.html#188">188: </a>    {
-</span><span id="189" class="l"><a class="l" href="source-Http.FileUpload.php.html#189">189: </a>        <span class="php-keyword1">return</span> <span class="php-var">$this</span>-&gt;isOk() ? @<span class="php-keyword2">getimagesize</span>(<span class="php-var">$this</span>-&gt;tmpName) : <span class="php-keyword1">NULL</span>; <span class="php-comment">// @ - files smaller than 12 bytes causes read error</span>
-</span><span id="190" class="l"><a class="l" href="source-Http.FileUpload.php.html#190">190: </a>    }
-</span><span id="191" class="l"><a class="l" href="source-Http.FileUpload.php.html#191">191: </a>
+</span><span id="183" class="l"><a class="l" href="source-Http.FileUpload.php.html#183">183: </a>
+</span><span id="184" class="l"><a class="l" href="source-Http.FileUpload.php.html#184">184: </a>    <span class="php-comment">/**
+</span></span><span id="185" class="l"><a class="l" href="source-Http.FileUpload.php.html#185">185: </a><span class="php-comment">     * Returns the dimensions of an uploaded image as array.
+</span></span><span id="186" class="l"><a class="l" href="source-Http.FileUpload.php.html#186">186: </a><span class="php-comment">     * @return array|NULL
+</span></span><span id="187" class="l"><a class="l" href="source-Http.FileUpload.php.html#187">187: </a><span class="php-comment">     */</span>
+</span><span id="188" class="l"><a class="l" href="source-Http.FileUpload.php.html#188">188: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <span class="php-keyword2">getImageSize</span>()
+</span><span id="189" class="l"><a class="l" href="source-Http.FileUpload.php.html#189">189: </a>    {
+</span><span id="190" class="l"><a class="l" href="source-Http.FileUpload.php.html#190">190: </a>        <span class="php-keyword1">return</span> <span class="php-var">$this</span>-&gt;isOk() ? @<span class="php-keyword2">getimagesize</span>(<span class="php-var">$this</span>-&gt;tmpName) : <span class="php-keyword1">NULL</span>; <span class="php-comment">// @ - files smaller than 12 bytes causes read error</span>
+</span><span id="191" class="l"><a class="l" href="source-Http.FileUpload.php.html#191">191: </a>    }
 </span><span id="192" class="l"><a class="l" href="source-Http.FileUpload.php.html#192">192: </a>
-</span><span id="193" class="l"><a class="l" href="source-Http.FileUpload.php.html#193">193: </a>    <span class="php-comment">/**
-</span></span><span id="194" class="l"><a class="l" href="source-Http.FileUpload.php.html#194">194: </a><span class="php-comment">     * Get file contents.
-</span></span><span id="195" class="l"><a class="l" href="source-Http.FileUpload.php.html#195">195: </a><span class="php-comment">     * @return string
-</span></span><span id="196" class="l"><a class="l" href="source-Http.FileUpload.php.html#196">196: </a><span class="php-comment">     */</span>
-</span><span id="197" class="l"><a class="l" href="source-Http.FileUpload.php.html#197">197: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_getContents" href="source-Http.FileUpload.php.html#_getContents">getContents</a>()
-</span><span id="198" class="l"><a class="l" href="source-Http.FileUpload.php.html#198">198: </a>    {
-</span><span id="199" class="l"><a class="l" href="source-Http.FileUpload.php.html#199">199: </a>        <span class="php-comment">// future implementation can try to work around safe_mode and open_basedir limitations</span>
-</span><span id="200" class="l"><a class="l" href="source-Http.FileUpload.php.html#200">200: </a>        <span class="php-keyword1">return</span> <span class="php-var">$this</span>-&gt;isOk() ? <span class="php-keyword2">file_get_contents</span>(<span class="php-var">$this</span>-&gt;tmpName) : <span class="php-keyword1">NULL</span>;
-</span><span id="201" class="l"><a class="l" href="source-Http.FileUpload.php.html#201">201: </a>    }
-</span><span id="202" class="l"><a class="l" href="source-Http.FileUpload.php.html#202">202: </a>
-</span><span id="203" class="l"><a class="l" href="source-Http.FileUpload.php.html#203">203: </a>}
-</span><span id="204" class="l"><a class="l" href="source-Http.FileUpload.php.html#204">204: </a></span></code></pre>
+</span><span id="193" class="l"><a class="l" href="source-Http.FileUpload.php.html#193">193: </a>
+</span><span id="194" class="l"><a class="l" href="source-Http.FileUpload.php.html#194">194: </a>    <span class="php-comment">/**
+</span></span><span id="195" class="l"><a class="l" href="source-Http.FileUpload.php.html#195">195: </a><span class="php-comment">     * Get file contents.
+</span></span><span id="196" class="l"><a class="l" href="source-Http.FileUpload.php.html#196">196: </a><span class="php-comment">     * @return string|NULL
+</span></span><span id="197" class="l"><a class="l" href="source-Http.FileUpload.php.html#197">197: </a><span class="php-comment">     */</span>
+</span><span id="198" class="l"><a class="l" href="source-Http.FileUpload.php.html#198">198: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_getContents" href="source-Http.FileUpload.php.html#_getContents">getContents</a>()
+</span><span id="199" class="l"><a class="l" href="source-Http.FileUpload.php.html#199">199: </a>    {
+</span><span id="200" class="l"><a class="l" href="source-Http.FileUpload.php.html#200">200: </a>        <span class="php-comment">// future implementation can try to work around safe_mode and open_basedir limitations</span>
+</span><span id="201" class="l"><a class="l" href="source-Http.FileUpload.php.html#201">201: </a>        <span class="php-keyword1">return</span> <span class="php-var">$this</span>-&gt;isOk() ? <span class="php-keyword2">file_get_contents</span>(<span class="php-var">$this</span>-&gt;tmpName) : <span class="php-keyword1">NULL</span>;
+</span><span id="202" class="l"><a class="l" href="source-Http.FileUpload.php.html#202">202: </a>    }
+</span><span id="203" class="l"><a class="l" href="source-Http.FileUpload.php.html#203">203: </a>
+</span><span id="204" class="l"><a class="l" href="source-Http.FileUpload.php.html#204">204: </a>}
+</span><span id="205" class="l"><a class="l" href="source-Http.FileUpload.php.html#205">205: </a></span></code></pre>
 
 	<div id="footer">
-		Nette 2.2.2 API API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+		Nette 2.2.6 API API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
 	</div>
 </div>
 </div>
 <script src="resources/combined.js?3630868369"></script>
-<script src="elementlist.js?2087501429"></script>
+<script src="elementlist.js?1613912923"></script>
 </body>
 </html>

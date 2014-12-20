@@ -5,10 +5,10 @@
 	<meta name="generator" content="ApiGen 2.8.0">
 	<meta name="robots" content="noindex">
 
-	<title>File Application/MicroPresenter.php | Nette 2.2.2 API</title>
+	<title>File Application/MicroPresenter.php | Nette 2.2.6 API</title>
 
 	<link rel="stylesheet" href="resources/style.css?3746977979">
-	<link rel="search" type="application/opensearchdescription+xml" title="Nette 2.2.2 API" href="http://api.nette.org/2.0/opensearch.xml">
+	<link rel="search" type="application/opensearchdescription+xml" title="Nette 2.2.6 API" href="http://api.nette.org/2.0/opensearch.xml">
 
 
 <script src='http://files.nette.org/js/analytics.js'></script><script>
@@ -220,14 +220,14 @@ _gaq.push(['_trackPageview']);
 </span><span id="28" class="l"><a class="l" href="source-Application.MicroPresenter.php.html#28"> 28: </a>    <span class="php-comment">/** @var Nette\Http\IRequest|NULL */</span>
 </span><span id="29" class="l"><a class="l" href="source-Application.MicroPresenter.php.html#29"> 29: </a>    <span class="php-keyword1">private</span> <span class="php-var"><a id="$httpRequest" href="source-Application.MicroPresenter.php.html#$httpRequest">$httpRequest</a></span>;
 </span><span id="30" class="l"><a class="l" href="source-Application.MicroPresenter.php.html#30"> 30: </a>
-</span><span id="31" class="l"><a class="l" href="source-Application.MicroPresenter.php.html#31"> 31: </a>    <span class="php-comment">/** @var IRouter|NULL */</span>
+</span><span id="31" class="l"><a class="l" href="source-Application.MicroPresenter.php.html#31"> 31: </a>    <span class="php-comment">/** @var Application\IRouter|NULL */</span>
 </span><span id="32" class="l"><a class="l" href="source-Application.MicroPresenter.php.html#32"> 32: </a>    <span class="php-keyword1">private</span> <span class="php-var"><a id="$router" href="source-Application.MicroPresenter.php.html#$router">$router</a></span>;
 </span><span id="33" class="l"><a class="l" href="source-Application.MicroPresenter.php.html#33"> 33: </a>
-</span><span id="34" class="l"><a class="l" href="source-Application.MicroPresenter.php.html#34"> 34: </a>    <span class="php-comment">/** @var Request */</span>
+</span><span id="34" class="l"><a class="l" href="source-Application.MicroPresenter.php.html#34"> 34: </a>    <span class="php-comment">/** @var Application\Request */</span>
 </span><span id="35" class="l"><a class="l" href="source-Application.MicroPresenter.php.html#35"> 35: </a>    <span class="php-keyword1">private</span> <span class="php-var"><a id="$request" href="source-Application.MicroPresenter.php.html#$request">$request</a></span>;
 </span><span id="36" class="l"><a class="l" href="source-Application.MicroPresenter.php.html#36"> 36: </a>
 </span><span id="37" class="l"><a class="l" href="source-Application.MicroPresenter.php.html#37"> 37: </a>
-</span><span id="38" class="l"><a class="l" href="source-Application.MicroPresenter.php.html#38"> 38: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="___construct" href="source-Application.MicroPresenter.php.html#___construct">__construct</a>(Nette\DI\Container <span class="php-var">$context</span> = <span class="php-keyword1">NULL</span>, Http\IRequest <span class="php-var">$httpRequest</span> = <span class="php-keyword1">NULL</span>, IRouter <span class="php-var">$router</span> = <span class="php-keyword1">NULL</span>)
+</span><span id="38" class="l"><a class="l" href="source-Application.MicroPresenter.php.html#38"> 38: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="___construct" href="source-Application.MicroPresenter.php.html#___construct">__construct</a>(Nette\DI\Container <span class="php-var">$context</span> = <span class="php-keyword1">NULL</span>, Http\IRequest <span class="php-var">$httpRequest</span> = <span class="php-keyword1">NULL</span>, Application\IRouter <span class="php-var">$router</span> = <span class="php-keyword1">NULL</span>)
 </span><span id="39" class="l"><a class="l" href="source-Application.MicroPresenter.php.html#39"> 39: </a>    {
 </span><span id="40" class="l"><a class="l" href="source-Application.MicroPresenter.php.html#40"> 40: </a>        <span class="php-var">$this</span>-&gt;context = <span class="php-var">$context</span>;
 </span><span id="41" class="l"><a class="l" href="source-Application.MicroPresenter.php.html#41"> 41: </a>        <span class="php-var">$this</span>-&gt;httpRequest = <span class="php-var">$httpRequest</span>;
@@ -289,7 +289,7 @@ _gaq.push(['_trackPageview']);
 </span><span id="97" class="l"><a class="l" href="source-Application.MicroPresenter.php.html#97"> 97: </a>            <span class="php-keyword1">if</span> (<span class="php-var">$response</span>[<span class="php-num">0</span>] <span class="php-keyword1">instanceof</span> \SplFileInfo) {
 </span><span id="98" class="l"><a class="l" href="source-Application.MicroPresenter.php.html#98"> 98: </a>                <span class="php-var">$response</span>-&gt;setFile(<span class="php-var">$response</span>[<span class="php-num">0</span>]);
 </span><span id="99" class="l"><a class="l" href="source-Application.MicroPresenter.php.html#99"> 99: </a>            } <span class="php-keyword1">else</span> {
-</span><span id="100" class="l"><a class="l" href="source-Application.MicroPresenter.php.html#100">100: </a>                <span class="php-var">$response</span>-&gt;setSource(<span class="php-var">$response</span>[<span class="php-num">0</span>]); <span class="php-comment">// TODO</span>
+</span><span id="100" class="l"><a class="l" href="source-Application.MicroPresenter.php.html#100">100: </a>                <span class="php-var">$response</span>-&gt;setSource(<span class="php-var">$response</span>[<span class="php-num">0</span>]);
 </span><span id="101" class="l"><a class="l" href="source-Application.MicroPresenter.php.html#101">101: </a>            }
 </span><span id="102" class="l"><a class="l" href="source-Application.MicroPresenter.php.html#102">102: </a>        }
 </span><span id="103" class="l"><a class="l" href="source-Application.MicroPresenter.php.html#103">103: </a>        <span class="php-keyword1">if</span> (<span class="php-var">$response</span> <span class="php-keyword1">instanceof</span> Application\UI\ITemplate) {
@@ -360,11 +360,11 @@ _gaq.push(['_trackPageview']);
 </span><span id="168" class="l"><a class="l" href="source-Application.MicroPresenter.php.html#168">168: </a></span></code></pre>
 
 	<div id="footer">
-		Nette 2.2.2 API API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+		Nette 2.2.6 API API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
 	</div>
 </div>
 </div>
 <script src="resources/combined.js?3630868369"></script>
-<script src="elementlist.js?2087501429"></script>
+<script src="elementlist.js?1613912923"></script>
 </body>
 </html>

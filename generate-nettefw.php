@@ -7,8 +7,8 @@ $documentsPath = $resourcesPath . '/Documents';
 
 exec("rm -rf " . $resourcesPath);
 exec("mkdir -p " . $resourcesPath);
-exec('wget --recursive --domains=api.nette.org --convert-links --accept-regex=\/2\.2\.2\/ http://api.nette.org/2.2.2/');
-exec("mv " . __DIR__ . "/api.nette.org/2.2.2 " . $documentsPath);
+exec('wget --recursive --domains=api.nette.org --convert-links --accept-regex=\/2\.2\.6\/ http://api.nette.org/2.2.6/');
+exec("mv " . __DIR__ . "/api.nette.org/2.2.6 " . $documentsPath);
 exec("rm -r " . __DIR__ . "/api.nette.org/");
 exec("mv " . $documentsPath . '/resources/style.css* ' . $documentsPath . '/resources/style.css');
 
@@ -47,7 +47,7 @@ foreach ($dir as $fileinfo) {
 
 		$content = file_get_contents($documentsPath . '/' . $file);
 		$content = str_replace('<ul><li><a href="http://api.nette.org/releases"><span>Other releases</span></a></li><li><a href="http://nette.org"><span>Nette homepage</span></a></li></ul>', '', $content);
-		$content = str_replace('http://api.nette.org/2.2.2/', '', $content);
+		$content = str_replace('http://api.nette.org/2.2.6/', '', $content);
 		$content = str_replace('autofocus', '', $content);
 		file_put_contents($documentsPath . '/' . $file, $content);
 	}

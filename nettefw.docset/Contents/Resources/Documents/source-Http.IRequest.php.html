@@ -5,10 +5,10 @@
 	<meta name="generator" content="ApiGen 2.8.0">
 	<meta name="robots" content="noindex">
 
-	<title>File Http/IRequest.php | Nette 2.2.2 API</title>
+	<title>File Http/IRequest.php | Nette 2.2.6 API</title>
 
 	<link rel="stylesheet" href="resources/style.css?3746977979">
-	<link rel="search" type="application/opensearchdescription+xml" title="Nette 2.2.2 API" href="http://api.nette.org/2.0/opensearch.xml">
+	<link rel="search" type="application/opensearchdescription+xml" title="Nette 2.2.6 API" href="http://api.nette.org/2.0/opensearch.xml">
 
 
 <script src='http://files.nette.org/js/analytics.js'></script><script>
@@ -261,7 +261,7 @@ _gaq.push(['_trackPageview']);
 </span><span id="54" class="l"><a class="l" href="source-Http.IRequest.php.html#54"> 54: </a>    <span class="php-comment">/**
 </span></span><span id="55" class="l"><a class="l" href="source-Http.IRequest.php.html#55"> 55: </a><span class="php-comment">     * Returns uploaded file.
 </span></span><span id="56" class="l"><a class="l" href="source-Http.IRequest.php.html#56"> 56: </a><span class="php-comment">     * @param  string key (or more keys)
-</span></span><span id="57" class="l"><a class="l" href="source-Http.IRequest.php.html#57"> 57: </a><span class="php-comment">     * @return FileUpload
+</span></span><span id="57" class="l"><a class="l" href="source-Http.IRequest.php.html#57"> 57: </a><span class="php-comment">     * @return FileUpload|NULL
 </span></span><span id="58" class="l"><a class="l" href="source-Http.IRequest.php.html#58"> 58: </a><span class="php-comment">     */</span>
 </span><span id="59" class="l"><a class="l" href="source-Http.IRequest.php.html#59"> 59: </a>    <span class="php-keyword1">function</span> <a id="_getFile" href="source-Http.IRequest.php.html#_getFile">getFile</a>(<span class="php-var">$key</span>);
 </span><span id="60" class="l"><a class="l" href="source-Http.IRequest.php.html#60"> 60: </a>
@@ -329,19 +329,19 @@ _gaq.push(['_trackPageview']);
 </span><span id="122" class="l"><a class="l" href="source-Http.IRequest.php.html#122">122: </a>
 </span><span id="123" class="l"><a class="l" href="source-Http.IRequest.php.html#123">123: </a>    <span class="php-comment">/**
 </span></span><span id="124" class="l"><a class="l" href="source-Http.IRequest.php.html#124">124: </a><span class="php-comment">     * Returns the IP address of the remote client.
-</span></span><span id="125" class="l"><a class="l" href="source-Http.IRequest.php.html#125">125: </a><span class="php-comment">     * @return string
+</span></span><span id="125" class="l"><a class="l" href="source-Http.IRequest.php.html#125">125: </a><span class="php-comment">     * @return string|NULL
 </span></span><span id="126" class="l"><a class="l" href="source-Http.IRequest.php.html#126">126: </a><span class="php-comment">     */</span>
 </span><span id="127" class="l"><a class="l" href="source-Http.IRequest.php.html#127">127: </a>    <span class="php-keyword1">function</span> <a id="_getRemoteAddress" href="source-Http.IRequest.php.html#_getRemoteAddress">getRemoteAddress</a>();
 </span><span id="128" class="l"><a class="l" href="source-Http.IRequest.php.html#128">128: </a>
 </span><span id="129" class="l"><a class="l" href="source-Http.IRequest.php.html#129">129: </a>    <span class="php-comment">/**
 </span></span><span id="130" class="l"><a class="l" href="source-Http.IRequest.php.html#130">130: </a><span class="php-comment">     * Returns the host of the remote client.
-</span></span><span id="131" class="l"><a class="l" href="source-Http.IRequest.php.html#131">131: </a><span class="php-comment">     * @return string
+</span></span><span id="131" class="l"><a class="l" href="source-Http.IRequest.php.html#131">131: </a><span class="php-comment">     * @return string|NULL
 </span></span><span id="132" class="l"><a class="l" href="source-Http.IRequest.php.html#132">132: </a><span class="php-comment">     */</span>
 </span><span id="133" class="l"><a class="l" href="source-Http.IRequest.php.html#133">133: </a>    <span class="php-keyword1">function</span> <a id="_getRemoteHost" href="source-Http.IRequest.php.html#_getRemoteHost">getRemoteHost</a>();
 </span><span id="134" class="l"><a class="l" href="source-Http.IRequest.php.html#134">134: </a>
 </span><span id="135" class="l"><a class="l" href="source-Http.IRequest.php.html#135">135: </a>    <span class="php-comment">/**
 </span></span><span id="136" class="l"><a class="l" href="source-Http.IRequest.php.html#136">136: </a><span class="php-comment">     * Returns raw content of HTTP request body.
-</span></span><span id="137" class="l"><a class="l" href="source-Http.IRequest.php.html#137">137: </a><span class="php-comment">     * @return string
+</span></span><span id="137" class="l"><a class="l" href="source-Http.IRequest.php.html#137">137: </a><span class="php-comment">     * @return string|NULL
 </span></span><span id="138" class="l"><a class="l" href="source-Http.IRequest.php.html#138">138: </a><span class="php-comment">     */</span>
 </span><span id="139" class="l"><a class="l" href="source-Http.IRequest.php.html#139">139: </a>    <span class="php-keyword1">function</span> <a id="_getRawBody" href="source-Http.IRequest.php.html#_getRawBody">getRawBody</a>();
 </span><span id="140" class="l"><a class="l" href="source-Http.IRequest.php.html#140">140: </a>
@@ -349,11 +349,11 @@ _gaq.push(['_trackPageview']);
 </span><span id="142" class="l"><a class="l" href="source-Http.IRequest.php.html#142">142: </a></span></code></pre>
 
 	<div id="footer">
-		Nette 2.2.2 API API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+		Nette 2.2.6 API API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
 	</div>
 </div>
 </div>
 <script src="resources/combined.js?3630868369"></script>
-<script src="elementlist.js?2087501429"></script>
+<script src="elementlist.js?1613912923"></script>
 </body>
 </html>

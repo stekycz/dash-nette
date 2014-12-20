@@ -5,10 +5,10 @@
 	<meta name="generator" content="ApiGen 2.8.0">
 	<meta name="robots" content="noindex">
 
-	<title>File Utils/Html.php | Nette 2.2.2 API</title>
+	<title>File Utils/Html.php | Nette 2.2.6 API</title>
 
 	<link rel="stylesheet" href="resources/style.css?3746977979">
-	<link rel="search" type="application/opensearchdescription+xml" title="Nette 2.2.2 API" href="http://api.nette.org/2.0/opensearch.xml">
+	<link rel="search" type="application/opensearchdescription+xml" title="Nette 2.2.6 API" href="http://api.nette.org/2.0/opensearch.xml">
 
 
 <script src='http://files.nette.org/js/analytics.js'></script><script>
@@ -718,97 +718,98 @@ _gaq.push(['_trackPageview']);
 </span><span id="495" class="l"><a class="l" href="source-Utils.Html.php.html#495">495: </a>    <span class="php-comment">/**
 </span></span><span id="496" class="l"><a class="l" href="source-Utils.Html.php.html#496">496: </a><span class="php-comment">     * Returns element's attributes.
 </span></span><span id="497" class="l"><a class="l" href="source-Utils.Html.php.html#497">497: </a><span class="php-comment">     * @return string
-</span></span><span id="498" class="l"><a class="l" href="source-Utils.Html.php.html#498">498: </a><span class="php-comment">     */</span>
-</span><span id="499" class="l"><a class="l" href="source-Utils.Html.php.html#499">499: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_attributes" href="source-Utils.Html.php.html#_attributes">attributes</a>()
-</span><span id="500" class="l"><a class="l" href="source-Utils.Html.php.html#500">500: </a>    {
-</span><span id="501" class="l"><a class="l" href="source-Utils.Html.php.html#501">501: </a>        <span class="php-keyword1">if</span> (!<span class="php-keyword2">is_array</span>(<span class="php-var">$this</span>-&gt;attrs)) {
-</span><span id="502" class="l"><a class="l" href="source-Utils.Html.php.html#502">502: </a>            <span class="php-keyword1">return</span> <span class="php-quote">''</span>;
-</span><span id="503" class="l"><a class="l" href="source-Utils.Html.php.html#503">503: </a>        }
-</span><span id="504" class="l"><a class="l" href="source-Utils.Html.php.html#504">504: </a>
-</span><span id="505" class="l"><a class="l" href="source-Utils.Html.php.html#505">505: </a>        <span class="php-var">$s</span> = <span class="php-quote">''</span>;
-</span><span id="506" class="l"><a class="l" href="source-Utils.Html.php.html#506">506: </a>        <span class="php-keyword1">foreach</span> (<span class="php-var">$this</span>-&gt;attrs <span class="php-keyword1">as</span> <span class="php-var">$key</span> =&gt; <span class="php-var">$value</span>) {
-</span><span id="507" class="l"><a class="l" href="source-Utils.Html.php.html#507">507: </a>            <span class="php-keyword1">if</span> (<span class="php-var">$value</span> === <span class="php-keyword1">NULL</span> || <span class="php-var">$value</span> === <span class="php-keyword1">FALSE</span>) {
-</span><span id="508" class="l"><a class="l" href="source-Utils.Html.php.html#508">508: </a>                <span class="php-keyword1">continue</span>;
-</span><span id="509" class="l"><a class="l" href="source-Utils.Html.php.html#509">509: </a>
-</span><span id="510" class="l"><a class="l" href="source-Utils.Html.php.html#510">510: </a>            } <span class="php-keyword1">elseif</span> (<span class="php-var">$value</span> === <span class="php-keyword1">TRUE</span>) {
-</span><span id="511" class="l"><a class="l" href="source-Utils.Html.php.html#511">511: </a>                <span class="php-keyword1">if</span> (<span class="php-keyword1">static</span>::<span class="php-var">$xhtml</span>) {
-</span><span id="512" class="l"><a class="l" href="source-Utils.Html.php.html#512">512: </a>                    <span class="php-var">$s</span> .= <span class="php-quote">' '</span> . <span class="php-var">$key</span> . <span class="php-quote">'=&quot;'</span> . <span class="php-var">$key</span> . <span class="php-quote">'&quot;'</span>;
-</span><span id="513" class="l"><a class="l" href="source-Utils.Html.php.html#513">513: </a>                } <span class="php-keyword1">else</span> {
-</span><span id="514" class="l"><a class="l" href="source-Utils.Html.php.html#514">514: </a>                    <span class="php-var">$s</span> .= <span class="php-quote">' '</span> . <span class="php-var">$key</span>;
-</span><span id="515" class="l"><a class="l" href="source-Utils.Html.php.html#515">515: </a>                }
-</span><span id="516" class="l"><a class="l" href="source-Utils.Html.php.html#516">516: </a>                <span class="php-keyword1">continue</span>;
-</span><span id="517" class="l"><a class="l" href="source-Utils.Html.php.html#517">517: </a>
-</span><span id="518" class="l"><a class="l" href="source-Utils.Html.php.html#518">518: </a>            } <span class="php-keyword1">elseif</span> (<span class="php-keyword2">is_array</span>(<span class="php-var">$value</span>)) {
-</span><span id="519" class="l"><a class="l" href="source-Utils.Html.php.html#519">519: </a>                <span class="php-keyword1">if</span> (<span class="php-var">$key</span> === <span class="php-quote">'data'</span>) { <span class="php-comment">// deprecated</span>
-</span><span id="520" class="l"><a class="l" href="source-Utils.Html.php.html#520">520: </a>                    <span class="php-keyword1">foreach</span> (<span class="php-var">$value</span> <span class="php-keyword1">as</span> <span class="php-var">$k</span> =&gt; <span class="php-var">$v</span>) {
-</span><span id="521" class="l"><a class="l" href="source-Utils.Html.php.html#521">521: </a>                        <span class="php-keyword1">if</span> (<span class="php-var">$v</span> !== <span class="php-keyword1">NULL</span> &amp;&amp; <span class="php-var">$v</span> !== <span class="php-keyword1">FALSE</span>) {
-</span><span id="522" class="l"><a class="l" href="source-Utils.Html.php.html#522">522: </a>                            <span class="php-keyword1">if</span> (<span class="php-keyword2">is_array</span>(<span class="php-var">$v</span>)) {
-</span><span id="523" class="l"><a class="l" href="source-Utils.Html.php.html#523">523: </a>                                <span class="php-var">$v</span> = Json::encode(<span class="php-var">$v</span>);
-</span><span id="524" class="l"><a class="l" href="source-Utils.Html.php.html#524">524: </a>                            }
-</span><span id="525" class="l"><a class="l" href="source-Utils.Html.php.html#525">525: </a>                            <span class="php-var">$q</span> = <span class="php-keyword2">strpos</span>(<span class="php-var">$v</span>, <span class="php-quote">'&quot;'</span>) === <span class="php-keyword1">FALSE</span> ? <span class="php-quote">'&quot;'</span> : <span class="php-quote">&quot;'&quot;</span>;
-</span><span id="526" class="l"><a class="l" href="source-Utils.Html.php.html#526">526: </a>                            <span class="php-var">$s</span> .= <span class="php-quote">' data-'</span> . <span class="php-var">$k</span> . <span class="php-quote">'='</span>
-</span><span id="527" class="l"><a class="l" href="source-Utils.Html.php.html#527">527: </a>                                . <span class="php-var">$q</span> . <span class="php-keyword2">str_replace</span>(<span class="php-keyword1">array</span>(<span class="php-quote">'&amp;'</span>, <span class="php-var">$q</span>), <span class="php-keyword1">array</span>(<span class="php-quote">'&amp;amp;'</span>, <span class="php-var">$q</span> === <span class="php-quote">'&quot;'</span> ? <span class="php-quote">'&amp;quot;'</span> : <span class="php-quote">'&amp;#39;'</span>), <span class="php-var">$v</span>)
-</span><span id="528" class="l"><a class="l" href="source-Utils.Html.php.html#528">528: </a>                                . (<span class="php-keyword2">strpos</span>(<span class="php-var">$v</span>, <span class="php-quote">'`'</span>) !== <span class="php-keyword1">FALSE</span> &amp;&amp; <span class="php-keyword2">strpbrk</span>(<span class="php-var">$v</span>, <span class="php-quote">' &lt;&gt;&quot;\''</span>) === <span class="php-keyword1">FALSE</span> ? <span class="php-quote">' '</span> : <span class="php-quote">''</span>)
-</span><span id="529" class="l"><a class="l" href="source-Utils.Html.php.html#529">529: </a>                                . <span class="php-var">$q</span>;
-</span><span id="530" class="l"><a class="l" href="source-Utils.Html.php.html#530">530: </a>                        }
-</span><span id="531" class="l"><a class="l" href="source-Utils.Html.php.html#531">531: </a>                    }
-</span><span id="532" class="l"><a class="l" href="source-Utils.Html.php.html#532">532: </a>                    <span class="php-keyword1">continue</span>;
-</span><span id="533" class="l"><a class="l" href="source-Utils.Html.php.html#533">533: </a>
-</span><span id="534" class="l"><a class="l" href="source-Utils.Html.php.html#534">534: </a>                } <span class="php-keyword1">elseif</span> (<span class="php-keyword2">strncmp</span>(<span class="php-var">$key</span>, <span class="php-quote">'data-'</span>, <span class="php-num">5</span>) === <span class="php-num">0</span>) {
-</span><span id="535" class="l"><a class="l" href="source-Utils.Html.php.html#535">535: </a>                    <span class="php-var">$value</span> = Json::encode(<span class="php-var">$value</span>);
-</span><span id="536" class="l"><a class="l" href="source-Utils.Html.php.html#536">536: </a>
-</span><span id="537" class="l"><a class="l" href="source-Utils.Html.php.html#537">537: </a>                } <span class="php-keyword1">else</span> {
-</span><span id="538" class="l"><a class="l" href="source-Utils.Html.php.html#538">538: </a>                    <span class="php-var">$tmp</span> = <span class="php-keyword1">NULL</span>;
-</span><span id="539" class="l"><a class="l" href="source-Utils.Html.php.html#539">539: </a>                    <span class="php-keyword1">foreach</span> (<span class="php-var">$value</span> <span class="php-keyword1">as</span> <span class="php-var">$k</span> =&gt; <span class="php-var">$v</span>) {
-</span><span id="540" class="l"><a class="l" href="source-Utils.Html.php.html#540">540: </a>                        <span class="php-keyword1">if</span> (<span class="php-var">$v</span> != <span class="php-keyword1">NULL</span>) { <span class="php-comment">// intentionally ==, skip NULLs &amp; empty string</span>
-</span><span id="541" class="l"><a class="l" href="source-Utils.Html.php.html#541">541: </a>                            <span class="php-comment">//  composite 'style' vs. 'others'</span>
-</span><span id="542" class="l"><a class="l" href="source-Utils.Html.php.html#542">542: </a>                            <span class="php-var">$tmp</span>[] = <span class="php-var">$v</span> === <span class="php-keyword1">TRUE</span> ? <span class="php-var">$k</span> : (<span class="php-keyword2">is_string</span>(<span class="php-var">$k</span>) ? <span class="php-var">$k</span> . <span class="php-quote">':'</span> . <span class="php-var">$v</span> : <span class="php-var">$v</span>);
-</span><span id="543" class="l"><a class="l" href="source-Utils.Html.php.html#543">543: </a>                        }
-</span><span id="544" class="l"><a class="l" href="source-Utils.Html.php.html#544">544: </a>                    }
-</span><span id="545" class="l"><a class="l" href="source-Utils.Html.php.html#545">545: </a>                    <span class="php-keyword1">if</span> (<span class="php-var">$tmp</span> === <span class="php-keyword1">NULL</span>) {
-</span><span id="546" class="l"><a class="l" href="source-Utils.Html.php.html#546">546: </a>                        <span class="php-keyword1">continue</span>;
-</span><span id="547" class="l"><a class="l" href="source-Utils.Html.php.html#547">547: </a>                    }
-</span><span id="548" class="l"><a class="l" href="source-Utils.Html.php.html#548">548: </a>
-</span><span id="549" class="l"><a class="l" href="source-Utils.Html.php.html#549">549: </a>                    <span class="php-var">$value</span> = <span class="php-keyword2">implode</span>(<span class="php-var">$key</span> === <span class="php-quote">'style'</span> || !<span class="php-keyword2">strncmp</span>(<span class="php-var">$key</span>, <span class="php-quote">'on'</span>, <span class="php-num">2</span>) ? <span class="php-quote">';'</span> : <span class="php-quote">' '</span>, <span class="php-var">$tmp</span>);
-</span><span id="550" class="l"><a class="l" href="source-Utils.Html.php.html#550">550: </a>                }
-</span><span id="551" class="l"><a class="l" href="source-Utils.Html.php.html#551">551: </a>
-</span><span id="552" class="l"><a class="l" href="source-Utils.Html.php.html#552">552: </a>            } <span class="php-keyword1">else</span> {
-</span><span id="553" class="l"><a class="l" href="source-Utils.Html.php.html#553">553: </a>                <span class="php-var">$value</span> = (string) <span class="php-var">$value</span>;
-</span><span id="554" class="l"><a class="l" href="source-Utils.Html.php.html#554">554: </a>            }
-</span><span id="555" class="l"><a class="l" href="source-Utils.Html.php.html#555">555: </a>
-</span><span id="556" class="l"><a class="l" href="source-Utils.Html.php.html#556">556: </a>            <span class="php-var">$q</span> = <span class="php-keyword2">strpos</span>(<span class="php-var">$value</span>, <span class="php-quote">'&quot;'</span>) === <span class="php-keyword1">FALSE</span> ? <span class="php-quote">'&quot;'</span> : <span class="php-quote">&quot;'&quot;</span>;
-</span><span id="557" class="l"><a class="l" href="source-Utils.Html.php.html#557">557: </a>            <span class="php-var">$s</span> .= <span class="php-quote">' '</span> . <span class="php-var">$key</span> . <span class="php-quote">'='</span>
-</span><span id="558" class="l"><a class="l" href="source-Utils.Html.php.html#558">558: </a>                . <span class="php-var">$q</span> . <span class="php-keyword2">str_replace</span>(<span class="php-keyword1">array</span>(<span class="php-quote">'&amp;'</span>, <span class="php-var">$q</span>), <span class="php-keyword1">array</span>(<span class="php-quote">'&amp;amp;'</span>, <span class="php-var">$q</span> === <span class="php-quote">'&quot;'</span> ? <span class="php-quote">'&amp;quot;'</span> : <span class="php-quote">'&amp;#39;'</span>), <span class="php-var">$value</span>)
-</span><span id="559" class="l"><a class="l" href="source-Utils.Html.php.html#559">559: </a>                . (<span class="php-keyword2">strpos</span>(<span class="php-var">$value</span>, <span class="php-quote">'`'</span>) !== <span class="php-keyword1">FALSE</span> &amp;&amp; <span class="php-keyword2">strpbrk</span>(<span class="php-var">$value</span>, <span class="php-quote">' &lt;&gt;&quot;\''</span>) === <span class="php-keyword1">FALSE</span> ? <span class="php-quote">' '</span> : <span class="php-quote">''</span>)
-</span><span id="560" class="l"><a class="l" href="source-Utils.Html.php.html#560">560: </a>                . <span class="php-var">$q</span>;
-</span><span id="561" class="l"><a class="l" href="source-Utils.Html.php.html#561">561: </a>        }
-</span><span id="562" class="l"><a class="l" href="source-Utils.Html.php.html#562">562: </a>
-</span><span id="563" class="l"><a class="l" href="source-Utils.Html.php.html#563">563: </a>        <span class="php-var">$s</span> = <span class="php-keyword2">str_replace</span>(<span class="php-quote">'@'</span>, <span class="php-quote">'&amp;#64;'</span>, <span class="php-var">$s</span>);
-</span><span id="564" class="l"><a class="l" href="source-Utils.Html.php.html#564">564: </a>        <span class="php-keyword1">return</span> <span class="php-var">$s</span>;
-</span><span id="565" class="l"><a class="l" href="source-Utils.Html.php.html#565">565: </a>    }
-</span><span id="566" class="l"><a class="l" href="source-Utils.Html.php.html#566">566: </a>
+</span></span><span id="498" class="l"><a class="l" href="source-Utils.Html.php.html#498">498: </a><span class="php-comment">     * @internal
+</span></span><span id="499" class="l"><a class="l" href="source-Utils.Html.php.html#499">499: </a><span class="php-comment">     */</span>
+</span><span id="500" class="l"><a class="l" href="source-Utils.Html.php.html#500">500: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_attributes" href="source-Utils.Html.php.html#_attributes">attributes</a>()
+</span><span id="501" class="l"><a class="l" href="source-Utils.Html.php.html#501">501: </a>    {
+</span><span id="502" class="l"><a class="l" href="source-Utils.Html.php.html#502">502: </a>        <span class="php-keyword1">if</span> (!<span class="php-keyword2">is_array</span>(<span class="php-var">$this</span>-&gt;attrs)) {
+</span><span id="503" class="l"><a class="l" href="source-Utils.Html.php.html#503">503: </a>            <span class="php-keyword1">return</span> <span class="php-quote">''</span>;
+</span><span id="504" class="l"><a class="l" href="source-Utils.Html.php.html#504">504: </a>        }
+</span><span id="505" class="l"><a class="l" href="source-Utils.Html.php.html#505">505: </a>
+</span><span id="506" class="l"><a class="l" href="source-Utils.Html.php.html#506">506: </a>        <span class="php-var">$s</span> = <span class="php-quote">''</span>;
+</span><span id="507" class="l"><a class="l" href="source-Utils.Html.php.html#507">507: </a>        <span class="php-keyword1">foreach</span> (<span class="php-var">$this</span>-&gt;attrs <span class="php-keyword1">as</span> <span class="php-var">$key</span> =&gt; <span class="php-var">$value</span>) {
+</span><span id="508" class="l"><a class="l" href="source-Utils.Html.php.html#508">508: </a>            <span class="php-keyword1">if</span> (<span class="php-var">$value</span> === <span class="php-keyword1">NULL</span> || <span class="php-var">$value</span> === <span class="php-keyword1">FALSE</span>) {
+</span><span id="509" class="l"><a class="l" href="source-Utils.Html.php.html#509">509: </a>                <span class="php-keyword1">continue</span>;
+</span><span id="510" class="l"><a class="l" href="source-Utils.Html.php.html#510">510: </a>
+</span><span id="511" class="l"><a class="l" href="source-Utils.Html.php.html#511">511: </a>            } <span class="php-keyword1">elseif</span> (<span class="php-var">$value</span> === <span class="php-keyword1">TRUE</span>) {
+</span><span id="512" class="l"><a class="l" href="source-Utils.Html.php.html#512">512: </a>                <span class="php-keyword1">if</span> (<span class="php-keyword1">static</span>::<span class="php-var">$xhtml</span>) {
+</span><span id="513" class="l"><a class="l" href="source-Utils.Html.php.html#513">513: </a>                    <span class="php-var">$s</span> .= <span class="php-quote">' '</span> . <span class="php-var">$key</span> . <span class="php-quote">'=&quot;'</span> . <span class="php-var">$key</span> . <span class="php-quote">'&quot;'</span>;
+</span><span id="514" class="l"><a class="l" href="source-Utils.Html.php.html#514">514: </a>                } <span class="php-keyword1">else</span> {
+</span><span id="515" class="l"><a class="l" href="source-Utils.Html.php.html#515">515: </a>                    <span class="php-var">$s</span> .= <span class="php-quote">' '</span> . <span class="php-var">$key</span>;
+</span><span id="516" class="l"><a class="l" href="source-Utils.Html.php.html#516">516: </a>                }
+</span><span id="517" class="l"><a class="l" href="source-Utils.Html.php.html#517">517: </a>                <span class="php-keyword1">continue</span>;
+</span><span id="518" class="l"><a class="l" href="source-Utils.Html.php.html#518">518: </a>
+</span><span id="519" class="l"><a class="l" href="source-Utils.Html.php.html#519">519: </a>            } <span class="php-keyword1">elseif</span> (<span class="php-keyword2">is_array</span>(<span class="php-var">$value</span>)) {
+</span><span id="520" class="l"><a class="l" href="source-Utils.Html.php.html#520">520: </a>                <span class="php-keyword1">if</span> (<span class="php-var">$key</span> === <span class="php-quote">'data'</span>) { <span class="php-comment">// deprecated</span>
+</span><span id="521" class="l"><a class="l" href="source-Utils.Html.php.html#521">521: </a>                    <span class="php-keyword1">foreach</span> (<span class="php-var">$value</span> <span class="php-keyword1">as</span> <span class="php-var">$k</span> =&gt; <span class="php-var">$v</span>) {
+</span><span id="522" class="l"><a class="l" href="source-Utils.Html.php.html#522">522: </a>                        <span class="php-keyword1">if</span> (<span class="php-var">$v</span> !== <span class="php-keyword1">NULL</span> &amp;&amp; <span class="php-var">$v</span> !== <span class="php-keyword1">FALSE</span>) {
+</span><span id="523" class="l"><a class="l" href="source-Utils.Html.php.html#523">523: </a>                            <span class="php-keyword1">if</span> (<span class="php-keyword2">is_array</span>(<span class="php-var">$v</span>)) {
+</span><span id="524" class="l"><a class="l" href="source-Utils.Html.php.html#524">524: </a>                                <span class="php-var">$v</span> = Json::encode(<span class="php-var">$v</span>);
+</span><span id="525" class="l"><a class="l" href="source-Utils.Html.php.html#525">525: </a>                            }
+</span><span id="526" class="l"><a class="l" href="source-Utils.Html.php.html#526">526: </a>                            <span class="php-var">$q</span> = <span class="php-keyword2">strpos</span>(<span class="php-var">$v</span>, <span class="php-quote">'&quot;'</span>) === <span class="php-keyword1">FALSE</span> ? <span class="php-quote">'&quot;'</span> : <span class="php-quote">&quot;'&quot;</span>;
+</span><span id="527" class="l"><a class="l" href="source-Utils.Html.php.html#527">527: </a>                            <span class="php-var">$s</span> .= <span class="php-quote">' data-'</span> . <span class="php-var">$k</span> . <span class="php-quote">'='</span>
+</span><span id="528" class="l"><a class="l" href="source-Utils.Html.php.html#528">528: </a>                                . <span class="php-var">$q</span> . <span class="php-keyword2">str_replace</span>(<span class="php-keyword1">array</span>(<span class="php-quote">'&amp;'</span>, <span class="php-var">$q</span>), <span class="php-keyword1">array</span>(<span class="php-quote">'&amp;amp;'</span>, <span class="php-var">$q</span> === <span class="php-quote">'&quot;'</span> ? <span class="php-quote">'&amp;quot;'</span> : <span class="php-quote">'&amp;#39;'</span>), <span class="php-var">$v</span>)
+</span><span id="529" class="l"><a class="l" href="source-Utils.Html.php.html#529">529: </a>                                . (<span class="php-keyword2">strpos</span>(<span class="php-var">$v</span>, <span class="php-quote">'`'</span>) !== <span class="php-keyword1">FALSE</span> &amp;&amp; <span class="php-keyword2">strpbrk</span>(<span class="php-var">$v</span>, <span class="php-quote">' &lt;&gt;&quot;\''</span>) === <span class="php-keyword1">FALSE</span> ? <span class="php-quote">' '</span> : <span class="php-quote">''</span>)
+</span><span id="530" class="l"><a class="l" href="source-Utils.Html.php.html#530">530: </a>                                . <span class="php-var">$q</span>;
+</span><span id="531" class="l"><a class="l" href="source-Utils.Html.php.html#531">531: </a>                        }
+</span><span id="532" class="l"><a class="l" href="source-Utils.Html.php.html#532">532: </a>                    }
+</span><span id="533" class="l"><a class="l" href="source-Utils.Html.php.html#533">533: </a>                    <span class="php-keyword1">continue</span>;
+</span><span id="534" class="l"><a class="l" href="source-Utils.Html.php.html#534">534: </a>
+</span><span id="535" class="l"><a class="l" href="source-Utils.Html.php.html#535">535: </a>                } <span class="php-keyword1">elseif</span> (<span class="php-keyword2">strncmp</span>(<span class="php-var">$key</span>, <span class="php-quote">'data-'</span>, <span class="php-num">5</span>) === <span class="php-num">0</span>) {
+</span><span id="536" class="l"><a class="l" href="source-Utils.Html.php.html#536">536: </a>                    <span class="php-var">$value</span> = Json::encode(<span class="php-var">$value</span>);
+</span><span id="537" class="l"><a class="l" href="source-Utils.Html.php.html#537">537: </a>
+</span><span id="538" class="l"><a class="l" href="source-Utils.Html.php.html#538">538: </a>                } <span class="php-keyword1">else</span> {
+</span><span id="539" class="l"><a class="l" href="source-Utils.Html.php.html#539">539: </a>                    <span class="php-var">$tmp</span> = <span class="php-keyword1">NULL</span>;
+</span><span id="540" class="l"><a class="l" href="source-Utils.Html.php.html#540">540: </a>                    <span class="php-keyword1">foreach</span> (<span class="php-var">$value</span> <span class="php-keyword1">as</span> <span class="php-var">$k</span> =&gt; <span class="php-var">$v</span>) {
+</span><span id="541" class="l"><a class="l" href="source-Utils.Html.php.html#541">541: </a>                        <span class="php-keyword1">if</span> (<span class="php-var">$v</span> != <span class="php-keyword1">NULL</span>) { <span class="php-comment">// intentionally ==, skip NULLs &amp; empty string</span>
+</span><span id="542" class="l"><a class="l" href="source-Utils.Html.php.html#542">542: </a>                            <span class="php-comment">//  composite 'style' vs. 'others'</span>
+</span><span id="543" class="l"><a class="l" href="source-Utils.Html.php.html#543">543: </a>                            <span class="php-var">$tmp</span>[] = <span class="php-var">$v</span> === <span class="php-keyword1">TRUE</span> ? <span class="php-var">$k</span> : (<span class="php-keyword2">is_string</span>(<span class="php-var">$k</span>) ? <span class="php-var">$k</span> . <span class="php-quote">':'</span> . <span class="php-var">$v</span> : <span class="php-var">$v</span>);
+</span><span id="544" class="l"><a class="l" href="source-Utils.Html.php.html#544">544: </a>                        }
+</span><span id="545" class="l"><a class="l" href="source-Utils.Html.php.html#545">545: </a>                    }
+</span><span id="546" class="l"><a class="l" href="source-Utils.Html.php.html#546">546: </a>                    <span class="php-keyword1">if</span> (<span class="php-var">$tmp</span> === <span class="php-keyword1">NULL</span>) {
+</span><span id="547" class="l"><a class="l" href="source-Utils.Html.php.html#547">547: </a>                        <span class="php-keyword1">continue</span>;
+</span><span id="548" class="l"><a class="l" href="source-Utils.Html.php.html#548">548: </a>                    }
+</span><span id="549" class="l"><a class="l" href="source-Utils.Html.php.html#549">549: </a>
+</span><span id="550" class="l"><a class="l" href="source-Utils.Html.php.html#550">550: </a>                    <span class="php-var">$value</span> = <span class="php-keyword2">implode</span>(<span class="php-var">$key</span> === <span class="php-quote">'style'</span> || !<span class="php-keyword2">strncmp</span>(<span class="php-var">$key</span>, <span class="php-quote">'on'</span>, <span class="php-num">2</span>) ? <span class="php-quote">';'</span> : <span class="php-quote">' '</span>, <span class="php-var">$tmp</span>);
+</span><span id="551" class="l"><a class="l" href="source-Utils.Html.php.html#551">551: </a>                }
+</span><span id="552" class="l"><a class="l" href="source-Utils.Html.php.html#552">552: </a>
+</span><span id="553" class="l"><a class="l" href="source-Utils.Html.php.html#553">553: </a>            } <span class="php-keyword1">else</span> {
+</span><span id="554" class="l"><a class="l" href="source-Utils.Html.php.html#554">554: </a>                <span class="php-var">$value</span> = (string) <span class="php-var">$value</span>;
+</span><span id="555" class="l"><a class="l" href="source-Utils.Html.php.html#555">555: </a>            }
+</span><span id="556" class="l"><a class="l" href="source-Utils.Html.php.html#556">556: </a>
+</span><span id="557" class="l"><a class="l" href="source-Utils.Html.php.html#557">557: </a>            <span class="php-var">$q</span> = <span class="php-keyword2">strpos</span>(<span class="php-var">$value</span>, <span class="php-quote">'&quot;'</span>) === <span class="php-keyword1">FALSE</span> ? <span class="php-quote">'&quot;'</span> : <span class="php-quote">&quot;'&quot;</span>;
+</span><span id="558" class="l"><a class="l" href="source-Utils.Html.php.html#558">558: </a>            <span class="php-var">$s</span> .= <span class="php-quote">' '</span> . <span class="php-var">$key</span> . <span class="php-quote">'='</span>
+</span><span id="559" class="l"><a class="l" href="source-Utils.Html.php.html#559">559: </a>                . <span class="php-var">$q</span> . <span class="php-keyword2">str_replace</span>(<span class="php-keyword1">array</span>(<span class="php-quote">'&amp;'</span>, <span class="php-var">$q</span>), <span class="php-keyword1">array</span>(<span class="php-quote">'&amp;amp;'</span>, <span class="php-var">$q</span> === <span class="php-quote">'&quot;'</span> ? <span class="php-quote">'&amp;quot;'</span> : <span class="php-quote">'&amp;#39;'</span>), <span class="php-var">$value</span>)
+</span><span id="560" class="l"><a class="l" href="source-Utils.Html.php.html#560">560: </a>                . (<span class="php-keyword2">strpos</span>(<span class="php-var">$value</span>, <span class="php-quote">'`'</span>) !== <span class="php-keyword1">FALSE</span> &amp;&amp; <span class="php-keyword2">strpbrk</span>(<span class="php-var">$value</span>, <span class="php-quote">' &lt;&gt;&quot;\''</span>) === <span class="php-keyword1">FALSE</span> ? <span class="php-quote">' '</span> : <span class="php-quote">''</span>)
+</span><span id="561" class="l"><a class="l" href="source-Utils.Html.php.html#561">561: </a>                . <span class="php-var">$q</span>;
+</span><span id="562" class="l"><a class="l" href="source-Utils.Html.php.html#562">562: </a>        }
+</span><span id="563" class="l"><a class="l" href="source-Utils.Html.php.html#563">563: </a>
+</span><span id="564" class="l"><a class="l" href="source-Utils.Html.php.html#564">564: </a>        <span class="php-var">$s</span> = <span class="php-keyword2">str_replace</span>(<span class="php-quote">'@'</span>, <span class="php-quote">'&amp;#64;'</span>, <span class="php-var">$s</span>);
+</span><span id="565" class="l"><a class="l" href="source-Utils.Html.php.html#565">565: </a>        <span class="php-keyword1">return</span> <span class="php-var">$s</span>;
+</span><span id="566" class="l"><a class="l" href="source-Utils.Html.php.html#566">566: </a>    }
 </span><span id="567" class="l"><a class="l" href="source-Utils.Html.php.html#567">567: </a>
-</span><span id="568" class="l"><a class="l" href="source-Utils.Html.php.html#568">568: </a>    <span class="php-comment">/**
-</span></span><span id="569" class="l"><a class="l" href="source-Utils.Html.php.html#569">569: </a><span class="php-comment">     * Clones all children too.
-</span></span><span id="570" class="l"><a class="l" href="source-Utils.Html.php.html#570">570: </a><span class="php-comment">     */</span>
-</span><span id="571" class="l"><a class="l" href="source-Utils.Html.php.html#571">571: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="___clone" href="source-Utils.Html.php.html#___clone">__clone</a>()
-</span><span id="572" class="l"><a class="l" href="source-Utils.Html.php.html#572">572: </a>    {
-</span><span id="573" class="l"><a class="l" href="source-Utils.Html.php.html#573">573: </a>        <span class="php-keyword1">foreach</span> (<span class="php-var">$this</span>-&gt;children <span class="php-keyword1">as</span> <span class="php-var">$key</span> =&gt; <span class="php-var">$value</span>) {
-</span><span id="574" class="l"><a class="l" href="source-Utils.Html.php.html#574">574: </a>            <span class="php-keyword1">if</span> (<span class="php-keyword2">is_object</span>(<span class="php-var">$value</span>)) {
-</span><span id="575" class="l"><a class="l" href="source-Utils.Html.php.html#575">575: </a>                <span class="php-var">$this</span>-&gt;children[<span class="php-var">$key</span>] = <span class="php-keyword1">clone</span> <span class="php-var">$value</span>;
-</span><span id="576" class="l"><a class="l" href="source-Utils.Html.php.html#576">576: </a>            }
-</span><span id="577" class="l"><a class="l" href="source-Utils.Html.php.html#577">577: </a>        }
-</span><span id="578" class="l"><a class="l" href="source-Utils.Html.php.html#578">578: </a>    }
-</span><span id="579" class="l"><a class="l" href="source-Utils.Html.php.html#579">579: </a>
-</span><span id="580" class="l"><a class="l" href="source-Utils.Html.php.html#580">580: </a>}
-</span><span id="581" class="l"><a class="l" href="source-Utils.Html.php.html#581">581: </a></span></code></pre>
+</span><span id="568" class="l"><a class="l" href="source-Utils.Html.php.html#568">568: </a>
+</span><span id="569" class="l"><a class="l" href="source-Utils.Html.php.html#569">569: </a>    <span class="php-comment">/**
+</span></span><span id="570" class="l"><a class="l" href="source-Utils.Html.php.html#570">570: </a><span class="php-comment">     * Clones all children too.
+</span></span><span id="571" class="l"><a class="l" href="source-Utils.Html.php.html#571">571: </a><span class="php-comment">     */</span>
+</span><span id="572" class="l"><a class="l" href="source-Utils.Html.php.html#572">572: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="___clone" href="source-Utils.Html.php.html#___clone">__clone</a>()
+</span><span id="573" class="l"><a class="l" href="source-Utils.Html.php.html#573">573: </a>    {
+</span><span id="574" class="l"><a class="l" href="source-Utils.Html.php.html#574">574: </a>        <span class="php-keyword1">foreach</span> (<span class="php-var">$this</span>-&gt;children <span class="php-keyword1">as</span> <span class="php-var">$key</span> =&gt; <span class="php-var">$value</span>) {
+</span><span id="575" class="l"><a class="l" href="source-Utils.Html.php.html#575">575: </a>            <span class="php-keyword1">if</span> (<span class="php-keyword2">is_object</span>(<span class="php-var">$value</span>)) {
+</span><span id="576" class="l"><a class="l" href="source-Utils.Html.php.html#576">576: </a>                <span class="php-var">$this</span>-&gt;children[<span class="php-var">$key</span>] = <span class="php-keyword1">clone</span> <span class="php-var">$value</span>;
+</span><span id="577" class="l"><a class="l" href="source-Utils.Html.php.html#577">577: </a>            }
+</span><span id="578" class="l"><a class="l" href="source-Utils.Html.php.html#578">578: </a>        }
+</span><span id="579" class="l"><a class="l" href="source-Utils.Html.php.html#579">579: </a>    }
+</span><span id="580" class="l"><a class="l" href="source-Utils.Html.php.html#580">580: </a>
+</span><span id="581" class="l"><a class="l" href="source-Utils.Html.php.html#581">581: </a>}
+</span><span id="582" class="l"><a class="l" href="source-Utils.Html.php.html#582">582: </a></span></code></pre>
 
 	<div id="footer">
-		Nette 2.2.2 API API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+		Nette 2.2.6 API API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
 	</div>
 </div>
 </div>
 <script src="resources/combined.js?3630868369"></script>
-<script src="elementlist.js?2087501429"></script>
+<script src="elementlist.js?1613912923"></script>
 </body>
 </html>

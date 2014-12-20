@@ -5,10 +5,10 @@
 	<meta name="generator" content="ApiGen 2.8.0">
 	<meta name="robots" content="noindex">
 
-	<title>File PhpGenerator/ClassType.php | Nette 2.2.2 API</title>
+	<title>File PhpGenerator/ClassType.php | Nette 2.2.6 API</title>
 
 	<link rel="stylesheet" href="resources/style.css?3746977979">
-	<link rel="search" type="application/opensearchdescription+xml" title="Nette 2.2.2 API" href="http://api.nette.org/2.0/opensearch.xml">
+	<link rel="search" type="application/opensearchdescription+xml" title="Nette 2.2.6 API" href="http://api.nette.org/2.0/opensearch.xml">
 
 
 <script src='http://files.nette.org/js/analytics.js'></script><script>
@@ -299,92 +299,94 @@ _gaq.push(['_trackPageview']);
 </span><span id="103" class="l"><a class="l" href="source-PhpGenerator.ClassType.php.html#103">103: </a>            }
 </span><span id="104" class="l"><a class="l" href="source-PhpGenerator.ClassType.php.html#104">104: </a>        }
 </span><span id="105" class="l"><a class="l" href="source-PhpGenerator.ClassType.php.html#105">105: </a>        <span class="php-keyword1">foreach</span> (<span class="php-var">$from</span>-&gt;getProperties() <span class="php-keyword1">as</span> <span class="php-var">$prop</span>) {
-</span><span id="106" class="l"><a class="l" href="source-PhpGenerator.ClassType.php.html#106">106: </a>            <span class="php-var">$class</span>-&gt;properties[<span class="php-var">$prop</span>-&gt;getName()] = Property::from(<span class="php-var">$prop</span>);
-</span><span id="107" class="l"><a class="l" href="source-PhpGenerator.ClassType.php.html#107">107: </a>        }
-</span><span id="108" class="l"><a class="l" href="source-PhpGenerator.ClassType.php.html#108">108: </a>        <span class="php-keyword1">foreach</span> (<span class="php-var">$from</span>-&gt;getMethods() <span class="php-keyword1">as</span> <span class="php-var">$method</span>) {
-</span><span id="109" class="l"><a class="l" href="source-PhpGenerator.ClassType.php.html#109">109: </a>            <span class="php-keyword1">if</span> (<span class="php-var">$method</span>-&gt;getDeclaringClass() == <span class="php-var">$from</span>) { <span class="php-comment">// intentionally ==</span>
-</span><span id="110" class="l"><a class="l" href="source-PhpGenerator.ClassType.php.html#110">110: </a>                <span class="php-var">$class</span>-&gt;methods[<span class="php-var">$method</span>-&gt;getName()] = Method::from(<span class="php-var">$method</span>);
-</span><span id="111" class="l"><a class="l" href="source-PhpGenerator.ClassType.php.html#111">111: </a>            }
-</span><span id="112" class="l"><a class="l" href="source-PhpGenerator.ClassType.php.html#112">112: </a>        }
-</span><span id="113" class="l"><a class="l" href="source-PhpGenerator.ClassType.php.html#113">113: </a>        <span class="php-keyword1">return</span> <span class="php-var">$class</span>;
-</span><span id="114" class="l"><a class="l" href="source-PhpGenerator.ClassType.php.html#114">114: </a>    }
-</span><span id="115" class="l"><a class="l" href="source-PhpGenerator.ClassType.php.html#115">115: </a>
-</span><span id="116" class="l"><a class="l" href="source-PhpGenerator.ClassType.php.html#116">116: </a>
-</span><span id="117" class="l"><a class="l" href="source-PhpGenerator.ClassType.php.html#117">117: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="___construct" href="source-PhpGenerator.ClassType.php.html#___construct">__construct</a>(<span class="php-var">$name</span> = <span class="php-keyword1">NULL</span>)
-</span><span id="118" class="l"><a class="l" href="source-PhpGenerator.ClassType.php.html#118">118: </a>    {
-</span><span id="119" class="l"><a class="l" href="source-PhpGenerator.ClassType.php.html#119">119: </a>        <span class="php-var">$this</span>-&gt;name = <span class="php-var">$name</span>;
-</span><span id="120" class="l"><a class="l" href="source-PhpGenerator.ClassType.php.html#120">120: </a>    }
-</span><span id="121" class="l"><a class="l" href="source-PhpGenerator.ClassType.php.html#121">121: </a>
-</span><span id="122" class="l"><a class="l" href="source-PhpGenerator.ClassType.php.html#122">122: </a>
-</span><span id="123" class="l"><a class="l" href="source-PhpGenerator.ClassType.php.html#123">123: </a>    <span class="php-comment">/** @return ClassType */</span>
-</span><span id="124" class="l"><a class="l" href="source-PhpGenerator.ClassType.php.html#124">124: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_addConst" href="source-PhpGenerator.ClassType.php.html#_addConst">addConst</a>(<span class="php-var">$name</span>, <span class="php-var">$value</span>)
-</span><span id="125" class="l"><a class="l" href="source-PhpGenerator.ClassType.php.html#125">125: </a>    {
-</span><span id="126" class="l"><a class="l" href="source-PhpGenerator.ClassType.php.html#126">126: </a>        <span class="php-var">$this</span>-&gt;consts[<span class="php-var">$name</span>] = <span class="php-var">$value</span>;
-</span><span id="127" class="l"><a class="l" href="source-PhpGenerator.ClassType.php.html#127">127: </a>        <span class="php-keyword1">return</span> <span class="php-var">$this</span>;
-</span><span id="128" class="l"><a class="l" href="source-PhpGenerator.ClassType.php.html#128">128: </a>    }
-</span><span id="129" class="l"><a class="l" href="source-PhpGenerator.ClassType.php.html#129">129: </a>
-</span><span id="130" class="l"><a class="l" href="source-PhpGenerator.ClassType.php.html#130">130: </a>
-</span><span id="131" class="l"><a class="l" href="source-PhpGenerator.ClassType.php.html#131">131: </a>    <span class="php-comment">/** @return Property */</span>
-</span><span id="132" class="l"><a class="l" href="source-PhpGenerator.ClassType.php.html#132">132: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_addProperty" href="source-PhpGenerator.ClassType.php.html#_addProperty">addProperty</a>(<span class="php-var">$name</span>, <span class="php-var">$value</span> = <span class="php-keyword1">NULL</span>)
-</span><span id="133" class="l"><a class="l" href="source-PhpGenerator.ClassType.php.html#133">133: </a>    {
-</span><span id="134" class="l"><a class="l" href="source-PhpGenerator.ClassType.php.html#134">134: </a>        <span class="php-var">$property</span> = <span class="php-keyword1">new</span> Property;
-</span><span id="135" class="l"><a class="l" href="source-PhpGenerator.ClassType.php.html#135">135: </a>        <span class="php-keyword1">return</span> <span class="php-var">$this</span>-&gt;properties[<span class="php-var">$name</span>] = <span class="php-var">$property</span>-&gt;setName(<span class="php-var">$name</span>)-&gt;setValue(<span class="php-var">$value</span>);
-</span><span id="136" class="l"><a class="l" href="source-PhpGenerator.ClassType.php.html#136">136: </a>    }
-</span><span id="137" class="l"><a class="l" href="source-PhpGenerator.ClassType.php.html#137">137: </a>
-</span><span id="138" class="l"><a class="l" href="source-PhpGenerator.ClassType.php.html#138">138: </a>
-</span><span id="139" class="l"><a class="l" href="source-PhpGenerator.ClassType.php.html#139">139: </a>    <span class="php-comment">/** @return Method */</span>
-</span><span id="140" class="l"><a class="l" href="source-PhpGenerator.ClassType.php.html#140">140: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_addMethod" href="source-PhpGenerator.ClassType.php.html#_addMethod">addMethod</a>(<span class="php-var">$name</span>)
-</span><span id="141" class="l"><a class="l" href="source-PhpGenerator.ClassType.php.html#141">141: </a>    {
-</span><span id="142" class="l"><a class="l" href="source-PhpGenerator.ClassType.php.html#142">142: </a>        <span class="php-var">$method</span> = <span class="php-keyword1">new</span> Method;
-</span><span id="143" class="l"><a class="l" href="source-PhpGenerator.ClassType.php.html#143">143: </a>        <span class="php-keyword1">if</span> (<span class="php-var">$this</span>-&gt;type === <span class="php-quote">'interface'</span>) {
-</span><span id="144" class="l"><a class="l" href="source-PhpGenerator.ClassType.php.html#144">144: </a>            <span class="php-var">$method</span>-&gt;setVisibility(<span class="php-quote">''</span>)-&gt;setBody(<span class="php-keyword1">FALSE</span>);
-</span><span id="145" class="l"><a class="l" href="source-PhpGenerator.ClassType.php.html#145">145: </a>        } <span class="php-keyword1">else</span> {
-</span><span id="146" class="l"><a class="l" href="source-PhpGenerator.ClassType.php.html#146">146: </a>            <span class="php-var">$method</span>-&gt;setVisibility(<span class="php-quote">'public'</span>);
-</span><span id="147" class="l"><a class="l" href="source-PhpGenerator.ClassType.php.html#147">147: </a>        }
-</span><span id="148" class="l"><a class="l" href="source-PhpGenerator.ClassType.php.html#148">148: </a>        <span class="php-keyword1">return</span> <span class="php-var">$this</span>-&gt;methods[<span class="php-var">$name</span>] = <span class="php-var">$method</span>-&gt;setName(<span class="php-var">$name</span>);
-</span><span id="149" class="l"><a class="l" href="source-PhpGenerator.ClassType.php.html#149">149: </a>    }
-</span><span id="150" class="l"><a class="l" href="source-PhpGenerator.ClassType.php.html#150">150: </a>
-</span><span id="151" class="l"><a class="l" href="source-PhpGenerator.ClassType.php.html#151">151: </a>
-</span><span id="152" class="l"><a class="l" href="source-PhpGenerator.ClassType.php.html#152">152: </a>    <span class="php-comment">/** @return string  PHP code */</span>
-</span><span id="153" class="l"><a class="l" href="source-PhpGenerator.ClassType.php.html#153">153: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="___toString" href="source-PhpGenerator.ClassType.php.html#___toString">__toString</a>()
-</span><span id="154" class="l"><a class="l" href="source-PhpGenerator.ClassType.php.html#154">154: </a>    {
-</span><span id="155" class="l"><a class="l" href="source-PhpGenerator.ClassType.php.html#155">155: </a>        <span class="php-var">$consts</span> = <span class="php-keyword1">array</span>();
-</span><span id="156" class="l"><a class="l" href="source-PhpGenerator.ClassType.php.html#156">156: </a>        <span class="php-keyword1">foreach</span> (<span class="php-var">$this</span>-&gt;consts <span class="php-keyword1">as</span> <span class="php-var">$name</span> =&gt; <span class="php-var">$value</span>) {
-</span><span id="157" class="l"><a class="l" href="source-PhpGenerator.ClassType.php.html#157">157: </a>            <span class="php-var">$consts</span>[] = <span class="php-quote">&quot;const </span><span class="php-var">$name</span><span class="php-quote"> = &quot;</span> . Helpers::dump(<span class="php-var">$value</span>) . <span class="php-quote">&quot;;\n&quot;</span>;
-</span><span id="158" class="l"><a class="l" href="source-PhpGenerator.ClassType.php.html#158">158: </a>        }
-</span><span id="159" class="l"><a class="l" href="source-PhpGenerator.ClassType.php.html#159">159: </a>        <span class="php-var">$properties</span> = <span class="php-keyword1">array</span>();
-</span><span id="160" class="l"><a class="l" href="source-PhpGenerator.ClassType.php.html#160">160: </a>        <span class="php-keyword1">foreach</span> (<span class="php-var">$this</span>-&gt;properties <span class="php-keyword1">as</span> <span class="php-var">$property</span>) {
-</span><span id="161" class="l"><a class="l" href="source-PhpGenerator.ClassType.php.html#161">161: </a>            <span class="php-var">$properties</span>[] = (<span class="php-var">$property</span>-&gt;documents ? <span class="php-keyword2">str_replace</span>(<span class="php-quote">&quot;\n&quot;</span>, <span class="php-quote">&quot;\n * &quot;</span>, <span class="php-quote">&quot;/**\n&quot;</span> . <span class="php-keyword2">implode</span>(<span class="php-quote">&quot;\n&quot;</span>, (<span class="php-keyword1">array</span>) <span class="php-var">$property</span>-&gt;documents)) . <span class="php-quote">&quot;\n */\n&quot;</span> : <span class="php-quote">''</span>)
-</span><span id="162" class="l"><a class="l" href="source-PhpGenerator.ClassType.php.html#162">162: </a>                . <span class="php-var">$property</span>-&gt;visibility . (<span class="php-var">$property</span>-&gt;<span class="php-keyword1">static</span> ? <span class="php-quote">' static'</span> : <span class="php-quote">''</span>) . <span class="php-quote">' $'</span> . <span class="php-var">$property</span>-&gt;name
-</span><span id="163" class="l"><a class="l" href="source-PhpGenerator.ClassType.php.html#163">163: </a>                . (<span class="php-var">$property</span>-&gt;value === <span class="php-keyword1">NULL</span> ? <span class="php-quote">''</span> : <span class="php-quote">' = '</span> . Helpers::dump(<span class="php-var">$property</span>-&gt;value))
-</span><span id="164" class="l"><a class="l" href="source-PhpGenerator.ClassType.php.html#164">164: </a>                . <span class="php-quote">&quot;;\n&quot;</span>;
-</span><span id="165" class="l"><a class="l" href="source-PhpGenerator.ClassType.php.html#165">165: </a>        }
-</span><span id="166" class="l"><a class="l" href="source-PhpGenerator.ClassType.php.html#166">166: </a>        <span class="php-keyword1">return</span> Strings::normalize(
-</span><span id="167" class="l"><a class="l" href="source-PhpGenerator.ClassType.php.html#167">167: </a>            (<span class="php-var">$this</span>-&gt;documents ? <span class="php-keyword2">str_replace</span>(<span class="php-quote">&quot;\n&quot;</span>, <span class="php-quote">&quot;\n * &quot;</span>, <span class="php-quote">&quot;/**\n&quot;</span> . <span class="php-keyword2">implode</span>(<span class="php-quote">&quot;\n&quot;</span>, (<span class="php-keyword1">array</span>) <span class="php-var">$this</span>-&gt;documents)) . <span class="php-quote">&quot;\n */\n&quot;</span> : <span class="php-quote">''</span>)
-</span><span id="168" class="l"><a class="l" href="source-PhpGenerator.ClassType.php.html#168">168: </a>            . (<span class="php-var">$this</span>-&gt;<span class="php-keyword1">abstract</span> ? <span class="php-quote">'abstract '</span> : <span class="php-quote">''</span>)
-</span><span id="169" class="l"><a class="l" href="source-PhpGenerator.ClassType.php.html#169">169: </a>            . (<span class="php-var">$this</span>-&gt;<span class="php-keyword1">final</span> ? <span class="php-quote">'final '</span> : <span class="php-quote">''</span>)
-</span><span id="170" class="l"><a class="l" href="source-PhpGenerator.ClassType.php.html#170">170: </a>            . <span class="php-var">$this</span>-&gt;type . <span class="php-quote">' '</span>
-</span><span id="171" class="l"><a class="l" href="source-PhpGenerator.ClassType.php.html#171">171: </a>            . <span class="php-var">$this</span>-&gt;name . <span class="php-quote">' '</span>
-</span><span id="172" class="l"><a class="l" href="source-PhpGenerator.ClassType.php.html#172">172: </a>            . (<span class="php-var">$this</span>-&gt;<span class="php-keyword1">extends</span> ? <span class="php-quote">'extends '</span> . <span class="php-keyword2">implode</span>(<span class="php-quote">', '</span>, (<span class="php-keyword1">array</span>) <span class="php-var">$this</span>-&gt;<span class="php-keyword1">extends</span>) . <span class="php-quote">' '</span> : <span class="php-quote">''</span>)
-</span><span id="173" class="l"><a class="l" href="source-PhpGenerator.ClassType.php.html#173">173: </a>            . (<span class="php-var">$this</span>-&gt;<span class="php-keyword1">implements</span> ? <span class="php-quote">'implements '</span> . <span class="php-keyword2">implode</span>(<span class="php-quote">', '</span>, (<span class="php-keyword1">array</span>) <span class="php-var">$this</span>-&gt;<span class="php-keyword1">implements</span>) . <span class="php-quote">' '</span> : <span class="php-quote">''</span>)
-</span><span id="174" class="l"><a class="l" href="source-PhpGenerator.ClassType.php.html#174">174: </a>            . <span class="php-quote">&quot;\n{\n\n&quot;</span>
-</span><span id="175" class="l"><a class="l" href="source-PhpGenerator.ClassType.php.html#175">175: </a>            . Strings::indent(
-</span><span id="176" class="l"><a class="l" href="source-PhpGenerator.ClassType.php.html#176">176: </a>                (<span class="php-var">$this</span>-&gt;traits ? <span class="php-quote">&quot;use &quot;</span> . <span class="php-keyword2">implode</span>(<span class="php-quote">', '</span>, (<span class="php-keyword1">array</span>) <span class="php-var">$this</span>-&gt;traits) . <span class="php-quote">&quot;;\n\n&quot;</span> : <span class="php-quote">''</span>)
-</span><span id="177" class="l"><a class="l" href="source-PhpGenerator.ClassType.php.html#177">177: </a>                . (<span class="php-var">$this</span>-&gt;consts ? <span class="php-keyword2">implode</span>(<span class="php-quote">''</span>, <span class="php-var">$consts</span>) . <span class="php-quote">&quot;\n\n&quot;</span> : <span class="php-quote">''</span>)
-</span><span id="178" class="l"><a class="l" href="source-PhpGenerator.ClassType.php.html#178">178: </a>                . (<span class="php-var">$this</span>-&gt;properties ? <span class="php-keyword2">implode</span>(<span class="php-quote">&quot;\n&quot;</span>, <span class="php-var">$properties</span>) . <span class="php-quote">&quot;\n\n&quot;</span> : <span class="php-quote">''</span>)
-</span><span id="179" class="l"><a class="l" href="source-PhpGenerator.ClassType.php.html#179">179: </a>                . <span class="php-keyword2">implode</span>(<span class="php-quote">&quot;\n\n\n&quot;</span>, <span class="php-var">$this</span>-&gt;methods), <span class="php-num">1</span>)
-</span><span id="180" class="l"><a class="l" href="source-PhpGenerator.ClassType.php.html#180">180: </a>            . <span class="php-quote">&quot;\n\n}&quot;</span>) . <span class="php-quote">&quot;\n&quot;</span>;
-</span><span id="181" class="l"><a class="l" href="source-PhpGenerator.ClassType.php.html#181">181: </a>    }
-</span><span id="182" class="l"><a class="l" href="source-PhpGenerator.ClassType.php.html#182">182: </a>
-</span><span id="183" class="l"><a class="l" href="source-PhpGenerator.ClassType.php.html#183">183: </a>}
-</span><span id="184" class="l"><a class="l" href="source-PhpGenerator.ClassType.php.html#184">184: </a></span></code></pre>
+</span><span id="106" class="l"><a class="l" href="source-PhpGenerator.ClassType.php.html#106">106: </a>            <span class="php-keyword1">if</span> (<span class="php-var">$prop</span>-&gt;getDeclaringClass() == <span class="php-var">$from</span>) { <span class="php-comment">// intentionally ==</span>
+</span><span id="107" class="l"><a class="l" href="source-PhpGenerator.ClassType.php.html#107">107: </a>                <span class="php-var">$class</span>-&gt;properties[<span class="php-var">$prop</span>-&gt;getName()] = Property::from(<span class="php-var">$prop</span>);
+</span><span id="108" class="l"><a class="l" href="source-PhpGenerator.ClassType.php.html#108">108: </a>            }
+</span><span id="109" class="l"><a class="l" href="source-PhpGenerator.ClassType.php.html#109">109: </a>        }
+</span><span id="110" class="l"><a class="l" href="source-PhpGenerator.ClassType.php.html#110">110: </a>        <span class="php-keyword1">foreach</span> (<span class="php-var">$from</span>-&gt;getMethods() <span class="php-keyword1">as</span> <span class="php-var">$method</span>) {
+</span><span id="111" class="l"><a class="l" href="source-PhpGenerator.ClassType.php.html#111">111: </a>            <span class="php-keyword1">if</span> (<span class="php-var">$method</span>-&gt;getDeclaringClass() == <span class="php-var">$from</span>) { <span class="php-comment">// intentionally ==</span>
+</span><span id="112" class="l"><a class="l" href="source-PhpGenerator.ClassType.php.html#112">112: </a>                <span class="php-var">$class</span>-&gt;methods[<span class="php-var">$method</span>-&gt;getName()] = Method::from(<span class="php-var">$method</span>);
+</span><span id="113" class="l"><a class="l" href="source-PhpGenerator.ClassType.php.html#113">113: </a>            }
+</span><span id="114" class="l"><a class="l" href="source-PhpGenerator.ClassType.php.html#114">114: </a>        }
+</span><span id="115" class="l"><a class="l" href="source-PhpGenerator.ClassType.php.html#115">115: </a>        <span class="php-keyword1">return</span> <span class="php-var">$class</span>;
+</span><span id="116" class="l"><a class="l" href="source-PhpGenerator.ClassType.php.html#116">116: </a>    }
+</span><span id="117" class="l"><a class="l" href="source-PhpGenerator.ClassType.php.html#117">117: </a>
+</span><span id="118" class="l"><a class="l" href="source-PhpGenerator.ClassType.php.html#118">118: </a>
+</span><span id="119" class="l"><a class="l" href="source-PhpGenerator.ClassType.php.html#119">119: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="___construct" href="source-PhpGenerator.ClassType.php.html#___construct">__construct</a>(<span class="php-var">$name</span> = <span class="php-keyword1">NULL</span>)
+</span><span id="120" class="l"><a class="l" href="source-PhpGenerator.ClassType.php.html#120">120: </a>    {
+</span><span id="121" class="l"><a class="l" href="source-PhpGenerator.ClassType.php.html#121">121: </a>        <span class="php-var">$this</span>-&gt;name = <span class="php-var">$name</span>;
+</span><span id="122" class="l"><a class="l" href="source-PhpGenerator.ClassType.php.html#122">122: </a>    }
+</span><span id="123" class="l"><a class="l" href="source-PhpGenerator.ClassType.php.html#123">123: </a>
+</span><span id="124" class="l"><a class="l" href="source-PhpGenerator.ClassType.php.html#124">124: </a>
+</span><span id="125" class="l"><a class="l" href="source-PhpGenerator.ClassType.php.html#125">125: </a>    <span class="php-comment">/** @return ClassType */</span>
+</span><span id="126" class="l"><a class="l" href="source-PhpGenerator.ClassType.php.html#126">126: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_addConst" href="source-PhpGenerator.ClassType.php.html#_addConst">addConst</a>(<span class="php-var">$name</span>, <span class="php-var">$value</span>)
+</span><span id="127" class="l"><a class="l" href="source-PhpGenerator.ClassType.php.html#127">127: </a>    {
+</span><span id="128" class="l"><a class="l" href="source-PhpGenerator.ClassType.php.html#128">128: </a>        <span class="php-var">$this</span>-&gt;consts[<span class="php-var">$name</span>] = <span class="php-var">$value</span>;
+</span><span id="129" class="l"><a class="l" href="source-PhpGenerator.ClassType.php.html#129">129: </a>        <span class="php-keyword1">return</span> <span class="php-var">$this</span>;
+</span><span id="130" class="l"><a class="l" href="source-PhpGenerator.ClassType.php.html#130">130: </a>    }
+</span><span id="131" class="l"><a class="l" href="source-PhpGenerator.ClassType.php.html#131">131: </a>
+</span><span id="132" class="l"><a class="l" href="source-PhpGenerator.ClassType.php.html#132">132: </a>
+</span><span id="133" class="l"><a class="l" href="source-PhpGenerator.ClassType.php.html#133">133: </a>    <span class="php-comment">/** @return Property */</span>
+</span><span id="134" class="l"><a class="l" href="source-PhpGenerator.ClassType.php.html#134">134: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_addProperty" href="source-PhpGenerator.ClassType.php.html#_addProperty">addProperty</a>(<span class="php-var">$name</span>, <span class="php-var">$value</span> = <span class="php-keyword1">NULL</span>)
+</span><span id="135" class="l"><a class="l" href="source-PhpGenerator.ClassType.php.html#135">135: </a>    {
+</span><span id="136" class="l"><a class="l" href="source-PhpGenerator.ClassType.php.html#136">136: </a>        <span class="php-var">$property</span> = <span class="php-keyword1">new</span> Property;
+</span><span id="137" class="l"><a class="l" href="source-PhpGenerator.ClassType.php.html#137">137: </a>        <span class="php-keyword1">return</span> <span class="php-var">$this</span>-&gt;properties[<span class="php-var">$name</span>] = <span class="php-var">$property</span>-&gt;setName(<span class="php-var">$name</span>)-&gt;setValue(<span class="php-var">$value</span>);
+</span><span id="138" class="l"><a class="l" href="source-PhpGenerator.ClassType.php.html#138">138: </a>    }
+</span><span id="139" class="l"><a class="l" href="source-PhpGenerator.ClassType.php.html#139">139: </a>
+</span><span id="140" class="l"><a class="l" href="source-PhpGenerator.ClassType.php.html#140">140: </a>
+</span><span id="141" class="l"><a class="l" href="source-PhpGenerator.ClassType.php.html#141">141: </a>    <span class="php-comment">/** @return Method */</span>
+</span><span id="142" class="l"><a class="l" href="source-PhpGenerator.ClassType.php.html#142">142: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_addMethod" href="source-PhpGenerator.ClassType.php.html#_addMethod">addMethod</a>(<span class="php-var">$name</span>)
+</span><span id="143" class="l"><a class="l" href="source-PhpGenerator.ClassType.php.html#143">143: </a>    {
+</span><span id="144" class="l"><a class="l" href="source-PhpGenerator.ClassType.php.html#144">144: </a>        <span class="php-var">$method</span> = <span class="php-keyword1">new</span> Method;
+</span><span id="145" class="l"><a class="l" href="source-PhpGenerator.ClassType.php.html#145">145: </a>        <span class="php-keyword1">if</span> (<span class="php-var">$this</span>-&gt;type === <span class="php-quote">'interface'</span>) {
+</span><span id="146" class="l"><a class="l" href="source-PhpGenerator.ClassType.php.html#146">146: </a>            <span class="php-var">$method</span>-&gt;setVisibility(<span class="php-quote">''</span>)-&gt;setBody(<span class="php-keyword1">FALSE</span>);
+</span><span id="147" class="l"><a class="l" href="source-PhpGenerator.ClassType.php.html#147">147: </a>        } <span class="php-keyword1">else</span> {
+</span><span id="148" class="l"><a class="l" href="source-PhpGenerator.ClassType.php.html#148">148: </a>            <span class="php-var">$method</span>-&gt;setVisibility(<span class="php-quote">'public'</span>);
+</span><span id="149" class="l"><a class="l" href="source-PhpGenerator.ClassType.php.html#149">149: </a>        }
+</span><span id="150" class="l"><a class="l" href="source-PhpGenerator.ClassType.php.html#150">150: </a>        <span class="php-keyword1">return</span> <span class="php-var">$this</span>-&gt;methods[<span class="php-var">$name</span>] = <span class="php-var">$method</span>-&gt;setName(<span class="php-var">$name</span>);
+</span><span id="151" class="l"><a class="l" href="source-PhpGenerator.ClassType.php.html#151">151: </a>    }
+</span><span id="152" class="l"><a class="l" href="source-PhpGenerator.ClassType.php.html#152">152: </a>
+</span><span id="153" class="l"><a class="l" href="source-PhpGenerator.ClassType.php.html#153">153: </a>
+</span><span id="154" class="l"><a class="l" href="source-PhpGenerator.ClassType.php.html#154">154: </a>    <span class="php-comment">/** @return string  PHP code */</span>
+</span><span id="155" class="l"><a class="l" href="source-PhpGenerator.ClassType.php.html#155">155: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="___toString" href="source-PhpGenerator.ClassType.php.html#___toString">__toString</a>()
+</span><span id="156" class="l"><a class="l" href="source-PhpGenerator.ClassType.php.html#156">156: </a>    {
+</span><span id="157" class="l"><a class="l" href="source-PhpGenerator.ClassType.php.html#157">157: </a>        <span class="php-var">$consts</span> = <span class="php-keyword1">array</span>();
+</span><span id="158" class="l"><a class="l" href="source-PhpGenerator.ClassType.php.html#158">158: </a>        <span class="php-keyword1">foreach</span> (<span class="php-var">$this</span>-&gt;consts <span class="php-keyword1">as</span> <span class="php-var">$name</span> =&gt; <span class="php-var">$value</span>) {
+</span><span id="159" class="l"><a class="l" href="source-PhpGenerator.ClassType.php.html#159">159: </a>            <span class="php-var">$consts</span>[] = <span class="php-quote">&quot;const </span><span class="php-var">$name</span><span class="php-quote"> = &quot;</span> . Helpers::dump(<span class="php-var">$value</span>) . <span class="php-quote">&quot;;\n&quot;</span>;
+</span><span id="160" class="l"><a class="l" href="source-PhpGenerator.ClassType.php.html#160">160: </a>        }
+</span><span id="161" class="l"><a class="l" href="source-PhpGenerator.ClassType.php.html#161">161: </a>        <span class="php-var">$properties</span> = <span class="php-keyword1">array</span>();
+</span><span id="162" class="l"><a class="l" href="source-PhpGenerator.ClassType.php.html#162">162: </a>        <span class="php-keyword1">foreach</span> (<span class="php-var">$this</span>-&gt;properties <span class="php-keyword1">as</span> <span class="php-var">$property</span>) {
+</span><span id="163" class="l"><a class="l" href="source-PhpGenerator.ClassType.php.html#163">163: </a>            <span class="php-var">$properties</span>[] = (<span class="php-var">$property</span>-&gt;documents ? <span class="php-keyword2">str_replace</span>(<span class="php-quote">&quot;\n&quot;</span>, <span class="php-quote">&quot;\n * &quot;</span>, <span class="php-quote">&quot;/**\n&quot;</span> . <span class="php-keyword2">implode</span>(<span class="php-quote">&quot;\n&quot;</span>, (<span class="php-keyword1">array</span>) <span class="php-var">$property</span>-&gt;documents)) . <span class="php-quote">&quot;\n */\n&quot;</span> : <span class="php-quote">''</span>)
+</span><span id="164" class="l"><a class="l" href="source-PhpGenerator.ClassType.php.html#164">164: </a>                . <span class="php-var">$property</span>-&gt;visibility . (<span class="php-var">$property</span>-&gt;<span class="php-keyword1">static</span> ? <span class="php-quote">' static'</span> : <span class="php-quote">''</span>) . <span class="php-quote">' $'</span> . <span class="php-var">$property</span>-&gt;name
+</span><span id="165" class="l"><a class="l" href="source-PhpGenerator.ClassType.php.html#165">165: </a>                . (<span class="php-var">$property</span>-&gt;value === <span class="php-keyword1">NULL</span> ? <span class="php-quote">''</span> : <span class="php-quote">' = '</span> . Helpers::dump(<span class="php-var">$property</span>-&gt;value))
+</span><span id="166" class="l"><a class="l" href="source-PhpGenerator.ClassType.php.html#166">166: </a>                . <span class="php-quote">&quot;;\n&quot;</span>;
+</span><span id="167" class="l"><a class="l" href="source-PhpGenerator.ClassType.php.html#167">167: </a>        }
+</span><span id="168" class="l"><a class="l" href="source-PhpGenerator.ClassType.php.html#168">168: </a>        <span class="php-keyword1">return</span> Strings::normalize(
+</span><span id="169" class="l"><a class="l" href="source-PhpGenerator.ClassType.php.html#169">169: </a>            (<span class="php-var">$this</span>-&gt;documents ? <span class="php-keyword2">str_replace</span>(<span class="php-quote">&quot;\n&quot;</span>, <span class="php-quote">&quot;\n * &quot;</span>, <span class="php-quote">&quot;/**\n&quot;</span> . <span class="php-keyword2">implode</span>(<span class="php-quote">&quot;\n&quot;</span>, (<span class="php-keyword1">array</span>) <span class="php-var">$this</span>-&gt;documents)) . <span class="php-quote">&quot;\n */\n&quot;</span> : <span class="php-quote">''</span>)
+</span><span id="170" class="l"><a class="l" href="source-PhpGenerator.ClassType.php.html#170">170: </a>            . (<span class="php-var">$this</span>-&gt;<span class="php-keyword1">abstract</span> ? <span class="php-quote">'abstract '</span> : <span class="php-quote">''</span>)
+</span><span id="171" class="l"><a class="l" href="source-PhpGenerator.ClassType.php.html#171">171: </a>            . (<span class="php-var">$this</span>-&gt;<span class="php-keyword1">final</span> ? <span class="php-quote">'final '</span> : <span class="php-quote">''</span>)
+</span><span id="172" class="l"><a class="l" href="source-PhpGenerator.ClassType.php.html#172">172: </a>            . <span class="php-var">$this</span>-&gt;type . <span class="php-quote">' '</span>
+</span><span id="173" class="l"><a class="l" href="source-PhpGenerator.ClassType.php.html#173">173: </a>            . <span class="php-var">$this</span>-&gt;name . <span class="php-quote">' '</span>
+</span><span id="174" class="l"><a class="l" href="source-PhpGenerator.ClassType.php.html#174">174: </a>            . (<span class="php-var">$this</span>-&gt;<span class="php-keyword1">extends</span> ? <span class="php-quote">'extends '</span> . <span class="php-keyword2">implode</span>(<span class="php-quote">', '</span>, (<span class="php-keyword1">array</span>) <span class="php-var">$this</span>-&gt;<span class="php-keyword1">extends</span>) . <span class="php-quote">' '</span> : <span class="php-quote">''</span>)
+</span><span id="175" class="l"><a class="l" href="source-PhpGenerator.ClassType.php.html#175">175: </a>            . (<span class="php-var">$this</span>-&gt;<span class="php-keyword1">implements</span> ? <span class="php-quote">'implements '</span> . <span class="php-keyword2">implode</span>(<span class="php-quote">', '</span>, (<span class="php-keyword1">array</span>) <span class="php-var">$this</span>-&gt;<span class="php-keyword1">implements</span>) . <span class="php-quote">' '</span> : <span class="php-quote">''</span>)
+</span><span id="176" class="l"><a class="l" href="source-PhpGenerator.ClassType.php.html#176">176: </a>            . <span class="php-quote">&quot;\n{\n\n&quot;</span>
+</span><span id="177" class="l"><a class="l" href="source-PhpGenerator.ClassType.php.html#177">177: </a>            . Strings::indent(
+</span><span id="178" class="l"><a class="l" href="source-PhpGenerator.ClassType.php.html#178">178: </a>                (<span class="php-var">$this</span>-&gt;traits ? <span class="php-quote">&quot;use &quot;</span> . <span class="php-keyword2">implode</span>(<span class="php-quote">', '</span>, (<span class="php-keyword1">array</span>) <span class="php-var">$this</span>-&gt;traits) . <span class="php-quote">&quot;;\n\n&quot;</span> : <span class="php-quote">''</span>)
+</span><span id="179" class="l"><a class="l" href="source-PhpGenerator.ClassType.php.html#179">179: </a>                . (<span class="php-var">$this</span>-&gt;consts ? <span class="php-keyword2">implode</span>(<span class="php-quote">''</span>, <span class="php-var">$consts</span>) . <span class="php-quote">&quot;\n\n&quot;</span> : <span class="php-quote">''</span>)
+</span><span id="180" class="l"><a class="l" href="source-PhpGenerator.ClassType.php.html#180">180: </a>                . (<span class="php-var">$this</span>-&gt;properties ? <span class="php-keyword2">implode</span>(<span class="php-quote">&quot;\n&quot;</span>, <span class="php-var">$properties</span>) . <span class="php-quote">&quot;\n\n&quot;</span> : <span class="php-quote">''</span>)
+</span><span id="181" class="l"><a class="l" href="source-PhpGenerator.ClassType.php.html#181">181: </a>                . <span class="php-keyword2">implode</span>(<span class="php-quote">&quot;\n\n\n&quot;</span>, <span class="php-var">$this</span>-&gt;methods), <span class="php-num">1</span>)
+</span><span id="182" class="l"><a class="l" href="source-PhpGenerator.ClassType.php.html#182">182: </a>            . <span class="php-quote">&quot;\n\n}&quot;</span>) . <span class="php-quote">&quot;\n&quot;</span>;
+</span><span id="183" class="l"><a class="l" href="source-PhpGenerator.ClassType.php.html#183">183: </a>    }
+</span><span id="184" class="l"><a class="l" href="source-PhpGenerator.ClassType.php.html#184">184: </a>
+</span><span id="185" class="l"><a class="l" href="source-PhpGenerator.ClassType.php.html#185">185: </a>}
+</span><span id="186" class="l"><a class="l" href="source-PhpGenerator.ClassType.php.html#186">186: </a></span></code></pre>
 
 	<div id="footer">
-		Nette 2.2.2 API API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+		Nette 2.2.6 API API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
 	</div>
 </div>
 </div>
 <script src="resources/combined.js?3630868369"></script>
-<script src="elementlist.js?2087501429"></script>
+<script src="elementlist.js?1613912923"></script>
 </body>
 </html>

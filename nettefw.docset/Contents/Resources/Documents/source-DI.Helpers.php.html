@@ -5,10 +5,10 @@
 	<meta name="generator" content="ApiGen 2.8.0">
 	<meta name="robots" content="noindex">
 
-	<title>File DI/Helpers.php | Nette 2.2.2 API</title>
+	<title>File DI/Helpers.php | Nette 2.2.6 API</title>
 
 	<link rel="stylesheet" href="resources/style.css?3746977979">
-	<link rel="search" type="application/opensearchdescription+xml" title="Nette 2.2.2 API" href="http://api.nette.org/2.0/opensearch.xml">
+	<link rel="search" type="application/opensearchdescription+xml" title="Nette 2.2.6 API" href="http://api.nette.org/2.0/opensearch.xml">
 
 
 <script src='http://files.nette.org/js/analytics.js'></script><script>
@@ -310,75 +310,79 @@ _gaq.push(['_trackPageview']);
 </span><span id="107" class="l"><a class="l" href="source-DI.Helpers.php.html#107">107: </a>                <span class="php-keyword1">if</span> (<span class="php-var">$res</span>[<span class="php-var">$num</span>] === <span class="php-keyword1">NULL</span>) {
 </span><span id="108" class="l"><a class="l" href="source-DI.Helpers.php.html#108">108: </a>                    <span class="php-keyword1">if</span> (<span class="php-var">$parameter</span>-&gt;allowsNull()) {
 </span><span id="109" class="l"><a class="l" href="source-DI.Helpers.php.html#109">109: </a>                        <span class="php-var">$optCount</span>++;
-</span><span id="110" class="l"><a class="l" href="source-DI.Helpers.php.html#110">110: </a>                    } <span class="php-keyword1">else</span> {
-</span><span id="111" class="l"><a class="l" href="source-DI.Helpers.php.html#111">111: </a>                        <span class="php-keyword1">throw</span> <span class="php-keyword1">new</span> ServiceCreationException(<span class="php-quote">&quot;No service of type </span><span class="php-var">{$class}</span><span class="php-quote"> found. Make sure the type hint in </span><span class="php-var">$method</span><span class="php-quote"> is written correctly and service of this type is registered.&quot;</span>);
-</span><span id="112" class="l"><a class="l" href="source-DI.Helpers.php.html#112">112: </a>                    }
-</span><span id="113" class="l"><a class="l" href="source-DI.Helpers.php.html#113">113: </a>                } <span class="php-keyword1">else</span> {
-</span><span id="114" class="l"><a class="l" href="source-DI.Helpers.php.html#114">114: </a>                    <span class="php-keyword1">if</span> (<span class="php-var">$container</span> <span class="php-keyword1">instanceof</span> ContainerBuilder) {
-</span><span id="115" class="l"><a class="l" href="source-DI.Helpers.php.html#115">115: </a>                        <span class="php-var">$res</span>[<span class="php-var">$num</span>] = <span class="php-quote">'@'</span> . <span class="php-var">$res</span>[<span class="php-var">$num</span>];
-</span><span id="116" class="l"><a class="l" href="source-DI.Helpers.php.html#116">116: </a>                    }
-</span><span id="117" class="l"><a class="l" href="source-DI.Helpers.php.html#117">117: </a>                    <span class="php-var">$optCount</span> = <span class="php-num">0</span>;
-</span><span id="118" class="l"><a class="l" href="source-DI.Helpers.php.html#118">118: </a>                }
-</span><span id="119" class="l"><a class="l" href="source-DI.Helpers.php.html#119">119: </a>
-</span><span id="120" class="l"><a class="l" href="source-DI.Helpers.php.html#120">120: </a>            } <span class="php-keyword1">elseif</span> (<span class="php-var">$parameter</span>-&gt;isOptional()) {
-</span><span id="121" class="l"><a class="l" href="source-DI.Helpers.php.html#121">121: </a>                <span class="php-comment">// PDO::__construct has optional parameter without default value (and isArray() and allowsNull() returns FALSE)</span>
-</span><span id="122" class="l"><a class="l" href="source-DI.Helpers.php.html#122">122: </a>                <span class="php-var">$res</span>[<span class="php-var">$num</span>] = <span class="php-var">$parameter</span>-&gt;isDefaultValueAvailable() ? <span class="php-var">$parameter</span>-&gt;getDefaultValue() : <span class="php-keyword1">NULL</span>;
-</span><span id="123" class="l"><a class="l" href="source-DI.Helpers.php.html#123">123: </a>                <span class="php-var">$optCount</span>++;
-</span><span id="124" class="l"><a class="l" href="source-DI.Helpers.php.html#124">124: </a>
-</span><span id="125" class="l"><a class="l" href="source-DI.Helpers.php.html#125">125: </a>            } <span class="php-keyword1">else</span> {
-</span><span id="126" class="l"><a class="l" href="source-DI.Helpers.php.html#126">126: </a>                <span class="php-keyword1">throw</span> <span class="php-keyword1">new</span> ServiceCreationException(<span class="php-quote">&quot;Parameter </span><span class="php-var">$parameter</span><span class="php-quote"> has no type hint, so its value must be specified.&quot;</span>);
-</span><span id="127" class="l"><a class="l" href="source-DI.Helpers.php.html#127">127: </a>            }
-</span><span id="128" class="l"><a class="l" href="source-DI.Helpers.php.html#128">128: </a>        }
-</span><span id="129" class="l"><a class="l" href="source-DI.Helpers.php.html#129">129: </a>
-</span><span id="130" class="l"><a class="l" href="source-DI.Helpers.php.html#130">130: </a>        <span class="php-comment">// extra parameters</span>
-</span><span id="131" class="l"><a class="l" href="source-DI.Helpers.php.html#131">131: </a>        <span class="php-keyword1">while</span> (<span class="php-keyword2">array_key_exists</span>(++<span class="php-var">$num</span>, <span class="php-var">$arguments</span>)) {
-</span><span id="132" class="l"><a class="l" href="source-DI.Helpers.php.html#132">132: </a>            <span class="php-var">$res</span>[<span class="php-var">$num</span>] = <span class="php-var">$arguments</span>[<span class="php-var">$num</span>];
-</span><span id="133" class="l"><a class="l" href="source-DI.Helpers.php.html#133">133: </a>            <span class="php-keyword1">unset</span>(<span class="php-var">$arguments</span>[<span class="php-var">$num</span>]);
-</span><span id="134" class="l"><a class="l" href="source-DI.Helpers.php.html#134">134: </a>            <span class="php-var">$optCount</span> = <span class="php-num">0</span>;
-</span><span id="135" class="l"><a class="l" href="source-DI.Helpers.php.html#135">135: </a>        }
-</span><span id="136" class="l"><a class="l" href="source-DI.Helpers.php.html#136">136: </a>        <span class="php-keyword1">if</span> (<span class="php-var">$arguments</span>) {
-</span><span id="137" class="l"><a class="l" href="source-DI.Helpers.php.html#137">137: </a>            <span class="php-keyword1">throw</span> <span class="php-keyword1">new</span> ServiceCreationException(<span class="php-quote">&quot;Unable to pass specified arguments to </span><span class="php-var">$method</span><span class="php-quote">.&quot;</span>);
-</span><span id="138" class="l"><a class="l" href="source-DI.Helpers.php.html#138">138: </a>        }
-</span><span id="139" class="l"><a class="l" href="source-DI.Helpers.php.html#139">139: </a>
-</span><span id="140" class="l"><a class="l" href="source-DI.Helpers.php.html#140">140: </a>        <span class="php-keyword1">return</span> <span class="php-var">$optCount</span> ? <span class="php-keyword2">array_slice</span>(<span class="php-var">$res</span>, <span class="php-num">0</span>, -<span class="php-var">$optCount</span>) : <span class="php-var">$res</span>;
-</span><span id="141" class="l"><a class="l" href="source-DI.Helpers.php.html#141">141: </a>    }
-</span><span id="142" class="l"><a class="l" href="source-DI.Helpers.php.html#142">142: </a>
-</span><span id="143" class="l"><a class="l" href="source-DI.Helpers.php.html#143">143: </a>
-</span><span id="144" class="l"><a class="l" href="source-DI.Helpers.php.html#144">144: </a>    <span class="php-comment">/**
-</span></span><span id="145" class="l"><a class="l" href="source-DI.Helpers.php.html#145">145: </a><span class="php-comment">     * Generates list of properties with annotation @inject.
-</span></span><span id="146" class="l"><a class="l" href="source-DI.Helpers.php.html#146">146: </a><span class="php-comment">     * @return array
-</span></span><span id="147" class="l"><a class="l" href="source-DI.Helpers.php.html#147">147: </a><span class="php-comment">     */</span>
-</span><span id="148" class="l"><a class="l" href="source-DI.Helpers.php.html#148">148: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">static</span> <span class="php-keyword1">function</span> <a id="_getInjectProperties" href="source-DI.Helpers.php.html#_getInjectProperties">getInjectProperties</a>(Nette\Reflection\ClassType <span class="php-var">$class</span>)
-</span><span id="149" class="l"><a class="l" href="source-DI.Helpers.php.html#149">149: </a>    {
-</span><span id="150" class="l"><a class="l" href="source-DI.Helpers.php.html#150">150: </a>        <span class="php-var">$res</span> = <span class="php-keyword1">array</span>();
-</span><span id="151" class="l"><a class="l" href="source-DI.Helpers.php.html#151">151: </a>        <span class="php-keyword1">foreach</span> (<span class="php-var">$class</span>-&gt;getProperties(\ReflectionProperty::IS_PUBLIC) <span class="php-keyword1">as</span> <span class="php-var">$property</span>) {
-</span><span id="152" class="l"><a class="l" href="source-DI.Helpers.php.html#152">152: </a>            <span class="php-var">$type</span> = <span class="php-var">$property</span>-&gt;getAnnotation(<span class="php-quote">'var'</span>);
-</span><span id="153" class="l"><a class="l" href="source-DI.Helpers.php.html#153">153: </a>            <span class="php-keyword1">if</span> (!<span class="php-var">$property</span>-&gt;getAnnotation(<span class="php-quote">'inject'</span>)) {
-</span><span id="154" class="l"><a class="l" href="source-DI.Helpers.php.html#154">154: </a>                <span class="php-keyword1">continue</span>;
-</span><span id="155" class="l"><a class="l" href="source-DI.Helpers.php.html#155">155: </a>
-</span><span id="156" class="l"><a class="l" href="source-DI.Helpers.php.html#156">156: </a>            } <span class="php-keyword1">elseif</span> (!<span class="php-var">$type</span>) {
-</span><span id="157" class="l"><a class="l" href="source-DI.Helpers.php.html#157">157: </a>                <span class="php-keyword1">throw</span> <span class="php-keyword1">new</span> Nette\InvalidStateException(<span class="php-quote">&quot;Property </span><span class="php-var">$property</span><span class="php-quote"> has not @var annotation.&quot;</span>);
-</span><span id="158" class="l"><a class="l" href="source-DI.Helpers.php.html#158">158: </a>            }
-</span><span id="159" class="l"><a class="l" href="source-DI.Helpers.php.html#159">159: </a>
-</span><span id="160" class="l"><a class="l" href="source-DI.Helpers.php.html#160">160: </a>            <span class="php-var">$type</span> = Nette\Reflection\AnnotationsParser::expandClassName(<span class="php-var">$type</span>, <span class="php-var">$property</span>-&gt;getDeclaringClass());
-</span><span id="161" class="l"><a class="l" href="source-DI.Helpers.php.html#161">161: </a>            <span class="php-keyword1">if</span> (!<span class="php-keyword2">class_exists</span>(<span class="php-var">$type</span>) &amp;&amp; !<span class="php-keyword2">interface_exists</span>(<span class="php-var">$type</span>)) {
-</span><span id="162" class="l"><a class="l" href="source-DI.Helpers.php.html#162">162: </a>                <span class="php-keyword1">throw</span> <span class="php-keyword1">new</span> Nette\InvalidStateException(<span class="php-quote">&quot;Class or interface '</span><span class="php-var">$type</span><span class="php-quote">' used in @var annotation at </span><span class="php-var">$property</span><span class="php-quote"> not found.&quot;</span>);
-</span><span id="163" class="l"><a class="l" href="source-DI.Helpers.php.html#163">163: </a>            }
-</span><span id="164" class="l"><a class="l" href="source-DI.Helpers.php.html#164">164: </a>            <span class="php-var">$res</span>[<span class="php-var">$property</span>-&gt;getName()] = <span class="php-var">$type</span>;
-</span><span id="165" class="l"><a class="l" href="source-DI.Helpers.php.html#165">165: </a>        }
-</span><span id="166" class="l"><a class="l" href="source-DI.Helpers.php.html#166">166: </a>        <span class="php-keyword1">return</span> <span class="php-var">$res</span>;
-</span><span id="167" class="l"><a class="l" href="source-DI.Helpers.php.html#167">167: </a>    }
-</span><span id="168" class="l"><a class="l" href="source-DI.Helpers.php.html#168">168: </a>
-</span><span id="169" class="l"><a class="l" href="source-DI.Helpers.php.html#169">169: </a>
-</span><span id="170" class="l"><a class="l" href="source-DI.Helpers.php.html#170">170: </a>}
-</span><span id="171" class="l"><a class="l" href="source-DI.Helpers.php.html#171">171: </a></span></code></pre>
+</span><span id="110" class="l"><a class="l" href="source-DI.Helpers.php.html#110">110: </a>                    } <span class="php-keyword1">elseif</span> (<span class="php-keyword2">class_exists</span>(<span class="php-var">$class</span>) || <span class="php-keyword2">interface_exists</span>(<span class="php-var">$class</span>)) {
+</span><span id="111" class="l"><a class="l" href="source-DI.Helpers.php.html#111">111: </a>                        <span class="php-keyword1">throw</span> <span class="php-keyword1">new</span> ServiceCreationException(<span class="php-quote">&quot;Service of type </span><span class="php-var">{$class}</span><span class="php-quote"> needed by </span><span class="php-var">$method</span><span class="php-quote"> not found. Did you register it in configuration file?&quot;</span>);
+</span><span id="112" class="l"><a class="l" href="source-DI.Helpers.php.html#112">112: </a>                    } <span class="php-keyword1">else</span> {
+</span><span id="113" class="l"><a class="l" href="source-DI.Helpers.php.html#113">113: </a>                        <span class="php-keyword1">throw</span> <span class="php-keyword1">new</span> ServiceCreationException(<span class="php-quote">&quot;Class </span><span class="php-var">{$class}</span><span class="php-quote"> needed by </span><span class="php-var">$method</span><span class="php-quote"> not found. Check type hint and 'use' statements.&quot;</span>);
+</span><span id="114" class="l"><a class="l" href="source-DI.Helpers.php.html#114">114: </a>                    }
+</span><span id="115" class="l"><a class="l" href="source-DI.Helpers.php.html#115">115: </a>                } <span class="php-keyword1">else</span> {
+</span><span id="116" class="l"><a class="l" href="source-DI.Helpers.php.html#116">116: </a>                    <span class="php-keyword1">if</span> (<span class="php-var">$container</span> <span class="php-keyword1">instanceof</span> ContainerBuilder) {
+</span><span id="117" class="l"><a class="l" href="source-DI.Helpers.php.html#117">117: </a>                        <span class="php-var">$res</span>[<span class="php-var">$num</span>] = <span class="php-quote">'@'</span> . <span class="php-var">$res</span>[<span class="php-var">$num</span>];
+</span><span id="118" class="l"><a class="l" href="source-DI.Helpers.php.html#118">118: </a>                    }
+</span><span id="119" class="l"><a class="l" href="source-DI.Helpers.php.html#119">119: </a>                    <span class="php-var">$optCount</span> = <span class="php-num">0</span>;
+</span><span id="120" class="l"><a class="l" href="source-DI.Helpers.php.html#120">120: </a>                }
+</span><span id="121" class="l"><a class="l" href="source-DI.Helpers.php.html#121">121: </a>
+</span><span id="122" class="l"><a class="l" href="source-DI.Helpers.php.html#122">122: </a>            } <span class="php-keyword1">elseif</span> (<span class="php-var">$parameter</span>-&gt;isOptional()) {
+</span><span id="123" class="l"><a class="l" href="source-DI.Helpers.php.html#123">123: </a>                <span class="php-comment">// PDO::__construct has optional parameter without default value (and isArray() and allowsNull() returns FALSE)</span>
+</span><span id="124" class="l"><a class="l" href="source-DI.Helpers.php.html#124">124: </a>                <span class="php-var">$res</span>[<span class="php-var">$num</span>] = <span class="php-var">$parameter</span>-&gt;isDefaultValueAvailable() ? <span class="php-var">$parameter</span>-&gt;getDefaultValue() : <span class="php-keyword1">NULL</span>;
+</span><span id="125" class="l"><a class="l" href="source-DI.Helpers.php.html#125">125: </a>                <span class="php-var">$optCount</span>++;
+</span><span id="126" class="l"><a class="l" href="source-DI.Helpers.php.html#126">126: </a>
+</span><span id="127" class="l"><a class="l" href="source-DI.Helpers.php.html#127">127: </a>            } <span class="php-keyword1">else</span> {
+</span><span id="128" class="l"><a class="l" href="source-DI.Helpers.php.html#128">128: </a>                <span class="php-keyword1">throw</span> <span class="php-keyword1">new</span> ServiceCreationException(<span class="php-quote">&quot;Parameter </span><span class="php-var">$parameter</span><span class="php-quote"> has no type hint, so its value must be specified.&quot;</span>);
+</span><span id="129" class="l"><a class="l" href="source-DI.Helpers.php.html#129">129: </a>            }
+</span><span id="130" class="l"><a class="l" href="source-DI.Helpers.php.html#130">130: </a>        }
+</span><span id="131" class="l"><a class="l" href="source-DI.Helpers.php.html#131">131: </a>
+</span><span id="132" class="l"><a class="l" href="source-DI.Helpers.php.html#132">132: </a>        <span class="php-comment">// extra parameters</span>
+</span><span id="133" class="l"><a class="l" href="source-DI.Helpers.php.html#133">133: </a>        <span class="php-keyword1">while</span> (<span class="php-keyword2">array_key_exists</span>(++<span class="php-var">$num</span>, <span class="php-var">$arguments</span>)) {
+</span><span id="134" class="l"><a class="l" href="source-DI.Helpers.php.html#134">134: </a>            <span class="php-var">$res</span>[<span class="php-var">$num</span>] = <span class="php-var">$arguments</span>[<span class="php-var">$num</span>];
+</span><span id="135" class="l"><a class="l" href="source-DI.Helpers.php.html#135">135: </a>            <span class="php-keyword1">unset</span>(<span class="php-var">$arguments</span>[<span class="php-var">$num</span>]);
+</span><span id="136" class="l"><a class="l" href="source-DI.Helpers.php.html#136">136: </a>            <span class="php-var">$optCount</span> = <span class="php-num">0</span>;
+</span><span id="137" class="l"><a class="l" href="source-DI.Helpers.php.html#137">137: </a>        }
+</span><span id="138" class="l"><a class="l" href="source-DI.Helpers.php.html#138">138: </a>        <span class="php-keyword1">if</span> (<span class="php-var">$arguments</span>) {
+</span><span id="139" class="l"><a class="l" href="source-DI.Helpers.php.html#139">139: </a>            <span class="php-keyword1">throw</span> <span class="php-keyword1">new</span> ServiceCreationException(<span class="php-quote">&quot;Unable to pass specified arguments to </span><span class="php-var">$method</span><span class="php-quote">.&quot;</span>);
+</span><span id="140" class="l"><a class="l" href="source-DI.Helpers.php.html#140">140: </a>        }
+</span><span id="141" class="l"><a class="l" href="source-DI.Helpers.php.html#141">141: </a>
+</span><span id="142" class="l"><a class="l" href="source-DI.Helpers.php.html#142">142: </a>        <span class="php-keyword1">return</span> <span class="php-var">$optCount</span> ? <span class="php-keyword2">array_slice</span>(<span class="php-var">$res</span>, <span class="php-num">0</span>, -<span class="php-var">$optCount</span>) : <span class="php-var">$res</span>;
+</span><span id="143" class="l"><a class="l" href="source-DI.Helpers.php.html#143">143: </a>    }
+</span><span id="144" class="l"><a class="l" href="source-DI.Helpers.php.html#144">144: </a>
+</span><span id="145" class="l"><a class="l" href="source-DI.Helpers.php.html#145">145: </a>
+</span><span id="146" class="l"><a class="l" href="source-DI.Helpers.php.html#146">146: </a>    <span class="php-comment">/**
+</span></span><span id="147" class="l"><a class="l" href="source-DI.Helpers.php.html#147">147: </a><span class="php-comment">     * Generates list of properties with annotation @inject.
+</span></span><span id="148" class="l"><a class="l" href="source-DI.Helpers.php.html#148">148: </a><span class="php-comment">     * @return array
+</span></span><span id="149" class="l"><a class="l" href="source-DI.Helpers.php.html#149">149: </a><span class="php-comment">     */</span>
+</span><span id="150" class="l"><a class="l" href="source-DI.Helpers.php.html#150">150: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">static</span> <span class="php-keyword1">function</span> <a id="_getInjectProperties" href="source-DI.Helpers.php.html#_getInjectProperties">getInjectProperties</a>(Nette\Reflection\ClassType <span class="php-var">$class</span>, <span class="php-var">$container</span> = <span class="php-keyword1">NULL</span>)
+</span><span id="151" class="l"><a class="l" href="source-DI.Helpers.php.html#151">151: </a>    {
+</span><span id="152" class="l"><a class="l" href="source-DI.Helpers.php.html#152">152: </a>        <span class="php-var">$res</span> = <span class="php-keyword1">array</span>();
+</span><span id="153" class="l"><a class="l" href="source-DI.Helpers.php.html#153">153: </a>        <span class="php-keyword1">foreach</span> (<span class="php-var">$class</span>-&gt;getProperties(\ReflectionProperty::IS_PUBLIC) <span class="php-keyword1">as</span> <span class="php-var">$property</span>) {
+</span><span id="154" class="l"><a class="l" href="source-DI.Helpers.php.html#154">154: </a>            <span class="php-var">$type</span> = <span class="php-var">$property</span>-&gt;getAnnotation(<span class="php-quote">'var'</span>);
+</span><span id="155" class="l"><a class="l" href="source-DI.Helpers.php.html#155">155: </a>            <span class="php-keyword1">if</span> (!<span class="php-var">$property</span>-&gt;getAnnotation(<span class="php-quote">'inject'</span>)) {
+</span><span id="156" class="l"><a class="l" href="source-DI.Helpers.php.html#156">156: </a>                <span class="php-keyword1">continue</span>;
+</span><span id="157" class="l"><a class="l" href="source-DI.Helpers.php.html#157">157: </a>
+</span><span id="158" class="l"><a class="l" href="source-DI.Helpers.php.html#158">158: </a>            } <span class="php-keyword1">elseif</span> (!<span class="php-var">$type</span>) {
+</span><span id="159" class="l"><a class="l" href="source-DI.Helpers.php.html#159">159: </a>                <span class="php-keyword1">throw</span> <span class="php-keyword1">new</span> Nette\InvalidStateException(<span class="php-quote">&quot;Property </span><span class="php-var">$property</span><span class="php-quote"> has no @var annotation.&quot;</span>);
+</span><span id="160" class="l"><a class="l" href="source-DI.Helpers.php.html#160">160: </a>            }
+</span><span id="161" class="l"><a class="l" href="source-DI.Helpers.php.html#161">161: </a>
+</span><span id="162" class="l"><a class="l" href="source-DI.Helpers.php.html#162">162: </a>            <span class="php-var">$type</span> = Nette\Reflection\AnnotationsParser::expandClassName(<span class="php-var">$type</span>, <span class="php-var">$property</span>-&gt;getDeclaringClass());
+</span><span id="163" class="l"><a class="l" href="source-DI.Helpers.php.html#163">163: </a>            <span class="php-keyword1">if</span> (!<span class="php-keyword2">class_exists</span>(<span class="php-var">$type</span>) &amp;&amp; !<span class="php-keyword2">interface_exists</span>(<span class="php-var">$type</span>)) {
+</span><span id="164" class="l"><a class="l" href="source-DI.Helpers.php.html#164">164: </a>                <span class="php-keyword1">throw</span> <span class="php-keyword1">new</span> Nette\InvalidStateException(<span class="php-quote">&quot;Class or interface '</span><span class="php-var">$type</span><span class="php-quote">' used in @var annotation at </span><span class="php-var">$property</span><span class="php-quote"> not found. Check annotation and 'use' statements.&quot;</span>);
+</span><span id="165" class="l"><a class="l" href="source-DI.Helpers.php.html#165">165: </a>            } <span class="php-keyword1">elseif</span> (<span class="php-var">$container</span> &amp;&amp; !<span class="php-var">$container</span>-&gt;getByType(<span class="php-var">$type</span>, <span class="php-keyword1">FALSE</span>)) {
+</span><span id="166" class="l"><a class="l" href="source-DI.Helpers.php.html#166">166: </a>                <span class="php-keyword1">throw</span> <span class="php-keyword1">new</span> ServiceCreationException(<span class="php-quote">&quot;Service of type </span><span class="php-var">{$type}</span><span class="php-quote"> used in @var annotation at </span><span class="php-var">$property</span><span class="php-quote"> not found. Did you register it in configuration file?&quot;</span>);
+</span><span id="167" class="l"><a class="l" href="source-DI.Helpers.php.html#167">167: </a>            }
+</span><span id="168" class="l"><a class="l" href="source-DI.Helpers.php.html#168">168: </a>            <span class="php-var">$res</span>[<span class="php-var">$property</span>-&gt;getName()] = <span class="php-var">$type</span>;
+</span><span id="169" class="l"><a class="l" href="source-DI.Helpers.php.html#169">169: </a>        }
+</span><span id="170" class="l"><a class="l" href="source-DI.Helpers.php.html#170">170: </a>        <span class="php-keyword1">return</span> <span class="php-var">$res</span>;
+</span><span id="171" class="l"><a class="l" href="source-DI.Helpers.php.html#171">171: </a>    }
+</span><span id="172" class="l"><a class="l" href="source-DI.Helpers.php.html#172">172: </a>
+</span><span id="173" class="l"><a class="l" href="source-DI.Helpers.php.html#173">173: </a>
+</span><span id="174" class="l"><a class="l" href="source-DI.Helpers.php.html#174">174: </a>}
+</span><span id="175" class="l"><a class="l" href="source-DI.Helpers.php.html#175">175: </a></span></code></pre>
 
 	<div id="footer">
-		Nette 2.2.2 API API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+		Nette 2.2.6 API API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
 	</div>
 </div>
 </div>
 <script src="resources/combined.js?3630868369"></script>
-<script src="elementlist.js?2087501429"></script>
+<script src="elementlist.js?1613912923"></script>
 </body>
 </html>

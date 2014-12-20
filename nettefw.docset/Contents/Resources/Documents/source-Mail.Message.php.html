@@ -5,10 +5,10 @@
 	<meta name="generator" content="ApiGen 2.8.0">
 	<meta name="robots" content="noindex">
 
-	<title>File Mail/Message.php | Nette 2.2.2 API</title>
+	<title>File Mail/Message.php | Nette 2.2.6 API</title>
 
 	<link rel="stylesheet" href="resources/style.css?3746977979">
-	<link rel="search" type="application/opensearchdescription+xml" title="Nette 2.2.2 API" href="http://api.nette.org/2.0/opensearch.xml">
+	<link rel="search" type="application/opensearchdescription+xml" title="Nette 2.2.6 API" href="http://api.nette.org/2.0/opensearch.xml">
 
 
 <script src='http://files.nette.org/js/analytics.js'></script><script>
@@ -437,7 +437,7 @@ _gaq.push(['_trackPageview']);
 </span><span id="235" class="l"><a class="l" href="source-Mail.Message.php.html#235">235: </a>                PREG_OFFSET_CAPTURE
 </span><span id="236" class="l"><a class="l" href="source-Mail.Message.php.html#236">236: </a>            );
 </span><span id="237" class="l"><a class="l" href="source-Mail.Message.php.html#237">237: </a>            <span class="php-keyword1">foreach</span> (<span class="php-keyword2">array_reverse</span>(<span class="php-var">$matches</span>) <span class="php-keyword1">as</span> <span class="php-var">$m</span>) {
-</span><span id="238" class="l"><a class="l" href="source-Mail.Message.php.html#238">238: </a>                <span class="php-var">$file</span> = <span class="php-keyword2">rtrim</span>(<span class="php-var">$basePath</span>, <span class="php-quote">'/\\'</span>) . <span class="php-quote">'/'</span> . <span class="php-var">$m</span>[<span class="php-num">3</span>][<span class="php-num">0</span>];
+</span><span id="238" class="l"><a class="l" href="source-Mail.Message.php.html#238">238: </a>                <span class="php-var">$file</span> = <span class="php-keyword2">rtrim</span>(<span class="php-var">$basePath</span>, <span class="php-quote">'/\\'</span>) . <span class="php-quote">'/'</span> . <span class="php-keyword2">urldecode</span>(<span class="php-var">$m</span>[<span class="php-num">3</span>][<span class="php-num">0</span>]);
 </span><span id="239" class="l"><a class="l" href="source-Mail.Message.php.html#239">239: </a>                <span class="php-keyword1">if</span> (!<span class="php-keyword1">isset</span>(<span class="php-var">$cids</span>[<span class="php-var">$file</span>])) {
 </span><span id="240" class="l"><a class="l" href="source-Mail.Message.php.html#240">240: </a>                    <span class="php-var">$cids</span>[<span class="php-var">$file</span>] = <span class="php-keyword2">substr</span>(<span class="php-var">$this</span>-&gt;addEmbeddedFile(<span class="php-var">$file</span>)-&gt;getHeader(<span class="php-quote">'Content-ID'</span>), <span class="php-num">1</span>, -<span class="php-num">1</span>);
 </span><span id="241" class="l"><a class="l" href="source-Mail.Message.php.html#241">241: </a>                }
@@ -563,7 +563,7 @@ _gaq.push(['_trackPageview']);
 </span><span id="361" class="l"><a class="l" href="source-Mail.Message.php.html#361">361: </a>                }
 </span><span id="362" class="l"><a class="l" href="source-Mail.Message.php.html#362">362: </a>            }
 </span><span id="363" class="l"><a class="l" href="source-Mail.Message.php.html#363">363: </a>            <span class="php-var">$alt</span>-&gt;setContentType(<span class="php-quote">'text/html'</span>, <span class="php-quote">'UTF-8'</span>)
-</span><span id="364" class="l"><a class="l" href="source-Mail.Message.php.html#364">364: </a>                -&gt;setEncoding(<span class="php-keyword2">preg_match</span>(<span class="php-quote">'#\S{990}#'</span>, <span class="php-var">$mail</span>-&gt;html)
+</span><span id="364" class="l"><a class="l" href="source-Mail.Message.php.html#364">364: </a>                -&gt;setEncoding(<span class="php-keyword2">preg_match</span>(<span class="php-quote">'#[^\n]{990}#'</span>, <span class="php-var">$mail</span>-&gt;html)
 </span><span id="365" class="l"><a class="l" href="source-Mail.Message.php.html#365">365: </a>                    ? self::ENCODING_QUOTED_PRINTABLE
 </span><span id="366" class="l"><a class="l" href="source-Mail.Message.php.html#366">366: </a>                    : (<span class="php-keyword2">preg_match</span>(<span class="php-quote">'#[\x80-\xFF]#'</span>, <span class="php-var">$mail</span>-&gt;html) ? self::ENCODING_8BIT : self::ENCODING_7BIT))
 </span><span id="367" class="l"><a class="l" href="source-Mail.Message.php.html#367">367: </a>                -&gt;setBody(<span class="php-var">$mail</span>-&gt;html);
@@ -572,7 +572,7 @@ _gaq.push(['_trackPageview']);
 </span><span id="370" class="l"><a class="l" href="source-Mail.Message.php.html#370">370: </a>        <span class="php-var">$text</span> = <span class="php-var">$mail</span>-&gt;getBody();
 </span><span id="371" class="l"><a class="l" href="source-Mail.Message.php.html#371">371: </a>        <span class="php-var">$mail</span>-&gt;setBody(<span class="php-keyword1">NULL</span>);
 </span><span id="372" class="l"><a class="l" href="source-Mail.Message.php.html#372">372: </a>        <span class="php-var">$cursor</span>-&gt;setContentType(<span class="php-quote">'text/plain'</span>, <span class="php-quote">'UTF-8'</span>)
-</span><span id="373" class="l"><a class="l" href="source-Mail.Message.php.html#373">373: </a>            -&gt;setEncoding(<span class="php-keyword2">preg_match</span>(<span class="php-quote">'#\S{990}#'</span>, <span class="php-var">$text</span>)
+</span><span id="373" class="l"><a class="l" href="source-Mail.Message.php.html#373">373: </a>            -&gt;setEncoding(<span class="php-keyword2">preg_match</span>(<span class="php-quote">'#[^\n]{990}#'</span>, <span class="php-var">$text</span>)
 </span><span id="374" class="l"><a class="l" href="source-Mail.Message.php.html#374">374: </a>                ? self::ENCODING_QUOTED_PRINTABLE
 </span><span id="375" class="l"><a class="l" href="source-Mail.Message.php.html#375">375: </a>                : (<span class="php-keyword2">preg_match</span>(<span class="php-quote">'#[\x80-\xFF]#'</span>, <span class="php-var">$text</span>) ? self::ENCODING_8BIT : self::ENCODING_7BIT))
 </span><span id="376" class="l"><a class="l" href="source-Mail.Message.php.html#376">376: </a>            -&gt;setBody(<span class="php-var">$text</span>);
@@ -611,11 +611,11 @@ _gaq.push(['_trackPageview']);
 </span><span id="409" class="l"><a class="l" href="source-Mail.Message.php.html#409">409: </a></span></code></pre>
 
 	<div id="footer">
-		Nette 2.2.2 API API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+		Nette 2.2.6 API API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
 	</div>
 </div>
 </div>
 <script src="resources/combined.js?3630868369"></script>
-<script src="elementlist.js?2087501429"></script>
+<script src="elementlist.js?1613912923"></script>
 </body>
 </html>

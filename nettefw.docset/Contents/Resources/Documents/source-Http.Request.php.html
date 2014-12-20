@@ -5,10 +5,10 @@
 	<meta name="generator" content="ApiGen 2.8.0">
 	<meta name="robots" content="noindex">
 
-	<title>File Http/Request.php | Nette 2.2.2 API</title>
+	<title>File Http/Request.php | Nette 2.2.6 API</title>
 
 	<link rel="stylesheet" href="resources/style.css?3746977979">
-	<link rel="search" type="application/opensearchdescription+xml" title="Nette 2.2.2 API" href="http://api.nette.org/2.0/opensearch.xml">
+	<link rel="search" type="application/opensearchdescription+xml" title="Nette 2.2.6 API" href="http://api.nette.org/2.0/opensearch.xml">
 
 
 <script src='http://files.nette.org/js/analytics.js'></script><script>
@@ -223,8 +223,8 @@ _gaq.push(['_trackPageview']);
 </span></span><span id="16" class="l"><a class="l" href="source-Http.Request.php.html#16"> 16: </a><span class="php-comment"> * @author     David Grudl
 </span></span><span id="17" class="l"><a class="l" href="source-Http.Request.php.html#17"> 17: </a><span class="php-comment"> *
 </span></span><span id="18" class="l"><a class="l" href="source-Http.Request.php.html#18"> 18: </a><span class="php-comment"> * @property-read UrlScript $url
-</span></span><span id="19" class="l"><a class="l" href="source-Http.Request.php.html#19"> 19: </a><span class="php-comment"> * @property-read mixed $query
-</span></span><span id="20" class="l"><a class="l" href="source-Http.Request.php.html#20"> 20: </a><span class="php-comment"> * @property-read bool $post
+</span></span><span id="19" class="l"><a class="l" href="source-Http.Request.php.html#19"> 19: </a><span class="php-comment"> * @property-read array $query
+</span></span><span id="20" class="l"><a class="l" href="source-Http.Request.php.html#20"> 20: </a><span class="php-comment"> * @property-read array $post
 </span></span><span id="21" class="l"><a class="l" href="source-Http.Request.php.html#21"> 21: </a><span class="php-comment"> * @property-read array $files
 </span></span><span id="22" class="l"><a class="l" href="source-Http.Request.php.html#22"> 22: </a><span class="php-comment"> * @property-read array $cookies
 </span></span><span id="23" class="l"><a class="l" href="source-Http.Request.php.html#23"> 23: </a><span class="php-comment"> * @property-read string $method
@@ -232,8 +232,8 @@ _gaq.push(['_trackPageview']);
 </span></span><span id="25" class="l"><a class="l" href="source-Http.Request.php.html#25"> 25: </a><span class="php-comment"> * @property-read Url|NULL $referer
 </span></span><span id="26" class="l"><a class="l" href="source-Http.Request.php.html#26"> 26: </a><span class="php-comment"> * @property-read bool $secured
 </span></span><span id="27" class="l"><a class="l" href="source-Http.Request.php.html#27"> 27: </a><span class="php-comment"> * @property-read bool $ajax
-</span></span><span id="28" class="l"><a class="l" href="source-Http.Request.php.html#28"> 28: </a><span class="php-comment"> * @property-read string $remoteAddress
-</span></span><span id="29" class="l"><a class="l" href="source-Http.Request.php.html#29"> 29: </a><span class="php-comment"> * @property-read string $remoteHost
+</span></span><span id="28" class="l"><a class="l" href="source-Http.Request.php.html#28"> 28: </a><span class="php-comment"> * @property-read string|NULL $remoteAddress
+</span></span><span id="29" class="l"><a class="l" href="source-Http.Request.php.html#29"> 29: </a><span class="php-comment"> * @property-read string|NULL $remoteHost
 </span></span><span id="30" class="l"><a class="l" href="source-Http.Request.php.html#30"> 30: </a><span class="php-comment"> * @property-read string $rawBody
 </span></span><span id="31" class="l"><a class="l" href="source-Http.Request.php.html#31"> 31: </a><span class="php-comment"> */</span>
 </span><span id="32" class="l"><a class="l" href="source-Http.Request.php.html#32"> 32: </a><span class="php-keyword1">class</span> <a id="Request" href="source-Http.Request.php.html#Request">Request</a> <span class="php-keyword1">extends</span> Nette\Object <span class="php-keyword1">implements</span> IRequest
@@ -259,10 +259,10 @@ _gaq.push(['_trackPageview']);
 </span><span id="52" class="l"><a class="l" href="source-Http.Request.php.html#52"> 52: </a>    <span class="php-comment">/** @var array */</span>
 </span><span id="53" class="l"><a class="l" href="source-Http.Request.php.html#53"> 53: </a>    <span class="php-keyword1">private</span> <span class="php-var"><a id="$headers" href="source-Http.Request.php.html#$headers">$headers</a></span>;
 </span><span id="54" class="l"><a class="l" href="source-Http.Request.php.html#54"> 54: </a>
-</span><span id="55" class="l"><a class="l" href="source-Http.Request.php.html#55"> 55: </a>    <span class="php-comment">/** @var string */</span>
+</span><span id="55" class="l"><a class="l" href="source-Http.Request.php.html#55"> 55: </a>    <span class="php-comment">/** @var string|NULL */</span>
 </span><span id="56" class="l"><a class="l" href="source-Http.Request.php.html#56"> 56: </a>    <span class="php-keyword1">private</span> <span class="php-var"><a id="$remoteAddress" href="source-Http.Request.php.html#$remoteAddress">$remoteAddress</a></span>;
 </span><span id="57" class="l"><a class="l" href="source-Http.Request.php.html#57"> 57: </a>
-</span><span id="58" class="l"><a class="l" href="source-Http.Request.php.html#58"> 58: </a>    <span class="php-comment">/** @var string */</span>
+</span><span id="58" class="l"><a class="l" href="source-Http.Request.php.html#58"> 58: </a>    <span class="php-comment">/** @var string|NULL */</span>
 </span><span id="59" class="l"><a class="l" href="source-Http.Request.php.html#59"> 59: </a>    <span class="php-keyword1">private</span> <span class="php-var"><a id="$remoteHost" href="source-Http.Request.php.html#$remoteHost">$remoteHost</a></span>;
 </span><span id="60" class="l"><a class="l" href="source-Http.Request.php.html#60"> 60: </a>
 </span><span id="61" class="l"><a class="l" href="source-Http.Request.php.html#61"> 61: </a>    <span class="php-comment">/** @var string */</span>
@@ -274,14 +274,14 @@ _gaq.push(['_trackPageview']);
 </span><span id="67" class="l"><a class="l" href="source-Http.Request.php.html#67"> 67: </a>    {
 </span><span id="68" class="l"><a class="l" href="source-Http.Request.php.html#68"> 68: </a>        <span class="php-var">$this</span>-&gt;url = <span class="php-var">$url</span>;
 </span><span id="69" class="l"><a class="l" href="source-Http.Request.php.html#69"> 69: </a>        <span class="php-keyword1">if</span> (<span class="php-var">$query</span> === <span class="php-keyword1">NULL</span>) {
-</span><span id="70" class="l"><a class="l" href="source-Http.Request.php.html#70"> 70: </a>            <span class="php-keyword2">parse_str</span>(<span class="php-var">$url</span>-&gt;query, <span class="php-var">$this</span>-&gt;query);
+</span><span id="70" class="l"><a class="l" href="source-Http.Request.php.html#70"> 70: </a>            <span class="php-keyword2">parse_str</span>(<span class="php-var">$url</span>-&gt;getQuery(), <span class="php-var">$this</span>-&gt;query);
 </span><span id="71" class="l"><a class="l" href="source-Http.Request.php.html#71"> 71: </a>        } <span class="php-keyword1">else</span> {
 </span><span id="72" class="l"><a class="l" href="source-Http.Request.php.html#72"> 72: </a>            <span class="php-var">$this</span>-&gt;query = (<span class="php-keyword1">array</span>) <span class="php-var">$query</span>;
 </span><span id="73" class="l"><a class="l" href="source-Http.Request.php.html#73"> 73: </a>        }
 </span><span id="74" class="l"><a class="l" href="source-Http.Request.php.html#74"> 74: </a>        <span class="php-var">$this</span>-&gt;post = (<span class="php-keyword1">array</span>) <span class="php-var">$post</span>;
 </span><span id="75" class="l"><a class="l" href="source-Http.Request.php.html#75"> 75: </a>        <span class="php-var">$this</span>-&gt;files = (<span class="php-keyword1">array</span>) <span class="php-var">$files</span>;
 </span><span id="76" class="l"><a class="l" href="source-Http.Request.php.html#76"> 76: </a>        <span class="php-var">$this</span>-&gt;cookies = (<span class="php-keyword1">array</span>) <span class="php-var">$cookies</span>;
-</span><span id="77" class="l"><a class="l" href="source-Http.Request.php.html#77"> 77: </a>        <span class="php-var">$this</span>-&gt;headers = (<span class="php-keyword1">array</span>) <span class="php-var">$headers</span>;
+</span><span id="77" class="l"><a class="l" href="source-Http.Request.php.html#77"> 77: </a>        <span class="php-var">$this</span>-&gt;headers = <span class="php-keyword2">array_change_key_case</span>((<span class="php-keyword1">array</span>) <span class="php-var">$headers</span>, CASE_LOWER);
 </span><span id="78" class="l"><a class="l" href="source-Http.Request.php.html#78"> 78: </a>        <span class="php-var">$this</span>-&gt;method = <span class="php-var">$method</span>;
 </span><span id="79" class="l"><a class="l" href="source-Http.Request.php.html#79"> 79: </a>        <span class="php-var">$this</span>-&gt;remoteAddress = <span class="php-var">$remoteAddress</span>;
 </span><span id="80" class="l"><a class="l" href="source-Http.Request.php.html#80"> 80: </a>        <span class="php-var">$this</span>-&gt;remoteHost = <span class="php-var">$remoteHost</span>;
@@ -346,7 +346,7 @@ _gaq.push(['_trackPageview']);
 </span><span id="139" class="l"><a class="l" href="source-Http.Request.php.html#139">139: </a>    <span class="php-comment">/**
 </span></span><span id="140" class="l"><a class="l" href="source-Http.Request.php.html#140">140: </a><span class="php-comment">     * Returns uploaded file.
 </span></span><span id="141" class="l"><a class="l" href="source-Http.Request.php.html#141">141: </a><span class="php-comment">     * @param  string key (or more keys)
-</span></span><span id="142" class="l"><a class="l" href="source-Http.Request.php.html#142">142: </a><span class="php-comment">     * @return FileUpload
+</span></span><span id="142" class="l"><a class="l" href="source-Http.Request.php.html#142">142: </a><span class="php-comment">     * @return FileUpload|NULL
 </span></span><span id="143" class="l"><a class="l" href="source-Http.Request.php.html#143">143: </a><span class="php-comment">     */</span>
 </span><span id="144" class="l"><a class="l" href="source-Http.Request.php.html#144">144: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_getFile" href="source-Http.Request.php.html#_getFile">getFile</a>(<span class="php-var">$key</span>)
 </span><span id="145" class="l"><a class="l" href="source-Http.Request.php.html#145">145: </a>    {
@@ -430,136 +430,132 @@ _gaq.push(['_trackPageview']);
 </span><span id="223" class="l"><a class="l" href="source-Http.Request.php.html#223">223: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_getHeader" href="source-Http.Request.php.html#_getHeader">getHeader</a>(<span class="php-var">$header</span>, <span class="php-var">$default</span> = <span class="php-keyword1">NULL</span>)
 </span><span id="224" class="l"><a class="l" href="source-Http.Request.php.html#224">224: </a>    {
 </span><span id="225" class="l"><a class="l" href="source-Http.Request.php.html#225">225: </a>        <span class="php-var">$header</span> = <span class="php-keyword2">strtolower</span>(<span class="php-var">$header</span>);
-</span><span id="226" class="l"><a class="l" href="source-Http.Request.php.html#226">226: </a>        <span class="php-keyword1">if</span> (<span class="php-keyword1">isset</span>(<span class="php-var">$this</span>-&gt;headers[<span class="php-var">$header</span>])) {
-</span><span id="227" class="l"><a class="l" href="source-Http.Request.php.html#227">227: </a>            <span class="php-keyword1">return</span> <span class="php-var">$this</span>-&gt;headers[<span class="php-var">$header</span>];
-</span><span id="228" class="l"><a class="l" href="source-Http.Request.php.html#228">228: </a>        } <span class="php-keyword1">else</span> {
-</span><span id="229" class="l"><a class="l" href="source-Http.Request.php.html#229">229: </a>            <span class="php-keyword1">return</span> <span class="php-var">$default</span>;
-</span><span id="230" class="l"><a class="l" href="source-Http.Request.php.html#230">230: </a>        }
-</span><span id="231" class="l"><a class="l" href="source-Http.Request.php.html#231">231: </a>    }
-</span><span id="232" class="l"><a class="l" href="source-Http.Request.php.html#232">232: </a>
-</span><span id="233" class="l"><a class="l" href="source-Http.Request.php.html#233">233: </a>
-</span><span id="234" class="l"><a class="l" href="source-Http.Request.php.html#234">234: </a>    <span class="php-comment">/**
-</span></span><span id="235" class="l"><a class="l" href="source-Http.Request.php.html#235">235: </a><span class="php-comment">     * Returns all HTTP headers.
-</span></span><span id="236" class="l"><a class="l" href="source-Http.Request.php.html#236">236: </a><span class="php-comment">     * @return array
-</span></span><span id="237" class="l"><a class="l" href="source-Http.Request.php.html#237">237: </a><span class="php-comment">     */</span>
-</span><span id="238" class="l"><a class="l" href="source-Http.Request.php.html#238">238: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_getHeaders" href="source-Http.Request.php.html#_getHeaders">getHeaders</a>()
-</span><span id="239" class="l"><a class="l" href="source-Http.Request.php.html#239">239: </a>    {
-</span><span id="240" class="l"><a class="l" href="source-Http.Request.php.html#240">240: </a>        <span class="php-keyword1">return</span> <span class="php-var">$this</span>-&gt;headers;
-</span><span id="241" class="l"><a class="l" href="source-Http.Request.php.html#241">241: </a>    }
-</span><span id="242" class="l"><a class="l" href="source-Http.Request.php.html#242">242: </a>
-</span><span id="243" class="l"><a class="l" href="source-Http.Request.php.html#243">243: </a>
-</span><span id="244" class="l"><a class="l" href="source-Http.Request.php.html#244">244: </a>    <span class="php-comment">/**
-</span></span><span id="245" class="l"><a class="l" href="source-Http.Request.php.html#245">245: </a><span class="php-comment">     * Returns referrer.
-</span></span><span id="246" class="l"><a class="l" href="source-Http.Request.php.html#246">246: </a><span class="php-comment">     * @return Url|NULL
-</span></span><span id="247" class="l"><a class="l" href="source-Http.Request.php.html#247">247: </a><span class="php-comment">     */</span>
-</span><span id="248" class="l"><a class="l" href="source-Http.Request.php.html#248">248: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_getReferer" href="source-Http.Request.php.html#_getReferer">getReferer</a>()
-</span><span id="249" class="l"><a class="l" href="source-Http.Request.php.html#249">249: </a>    {
-</span><span id="250" class="l"><a class="l" href="source-Http.Request.php.html#250">250: </a>        <span class="php-keyword1">return</span> <span class="php-keyword1">isset</span>(<span class="php-var">$this</span>-&gt;headers[<span class="php-quote">'referer'</span>]) ? <span class="php-keyword1">new</span> Url(<span class="php-var">$this</span>-&gt;headers[<span class="php-quote">'referer'</span>]) : <span class="php-keyword1">NULL</span>;
-</span><span id="251" class="l"><a class="l" href="source-Http.Request.php.html#251">251: </a>    }
-</span><span id="252" class="l"><a class="l" href="source-Http.Request.php.html#252">252: </a>
-</span><span id="253" class="l"><a class="l" href="source-Http.Request.php.html#253">253: </a>
-</span><span id="254" class="l"><a class="l" href="source-Http.Request.php.html#254">254: </a>    <span class="php-comment">/**
-</span></span><span id="255" class="l"><a class="l" href="source-Http.Request.php.html#255">255: </a><span class="php-comment">     * Is the request is sent via secure channel (https).
-</span></span><span id="256" class="l"><a class="l" href="source-Http.Request.php.html#256">256: </a><span class="php-comment">     * @return bool
-</span></span><span id="257" class="l"><a class="l" href="source-Http.Request.php.html#257">257: </a><span class="php-comment">     */</span>
-</span><span id="258" class="l"><a class="l" href="source-Http.Request.php.html#258">258: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_isSecured" href="source-Http.Request.php.html#_isSecured">isSecured</a>()
-</span><span id="259" class="l"><a class="l" href="source-Http.Request.php.html#259">259: </a>    {
-</span><span id="260" class="l"><a class="l" href="source-Http.Request.php.html#260">260: </a>        <span class="php-keyword1">return</span> <span class="php-var">$this</span>-&gt;url-&gt;scheme === <span class="php-quote">'https'</span>;
-</span><span id="261" class="l"><a class="l" href="source-Http.Request.php.html#261">261: </a>    }
-</span><span id="262" class="l"><a class="l" href="source-Http.Request.php.html#262">262: </a>
-</span><span id="263" class="l"><a class="l" href="source-Http.Request.php.html#263">263: </a>
-</span><span id="264" class="l"><a class="l" href="source-Http.Request.php.html#264">264: </a>    <span class="php-comment">/**
-</span></span><span id="265" class="l"><a class="l" href="source-Http.Request.php.html#265">265: </a><span class="php-comment">     * Is AJAX request?
-</span></span><span id="266" class="l"><a class="l" href="source-Http.Request.php.html#266">266: </a><span class="php-comment">     * @return bool
-</span></span><span id="267" class="l"><a class="l" href="source-Http.Request.php.html#267">267: </a><span class="php-comment">     */</span>
-</span><span id="268" class="l"><a class="l" href="source-Http.Request.php.html#268">268: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_isAjax" href="source-Http.Request.php.html#_isAjax">isAjax</a>()
-</span><span id="269" class="l"><a class="l" href="source-Http.Request.php.html#269">269: </a>    {
-</span><span id="270" class="l"><a class="l" href="source-Http.Request.php.html#270">270: </a>        <span class="php-keyword1">return</span> <span class="php-var">$this</span>-&gt;getHeader(<span class="php-quote">'X-Requested-With'</span>) === <span class="php-quote">'XMLHttpRequest'</span>;
-</span><span id="271" class="l"><a class="l" href="source-Http.Request.php.html#271">271: </a>    }
-</span><span id="272" class="l"><a class="l" href="source-Http.Request.php.html#272">272: </a>
-</span><span id="273" class="l"><a class="l" href="source-Http.Request.php.html#273">273: </a>
-</span><span id="274" class="l"><a class="l" href="source-Http.Request.php.html#274">274: </a>    <span class="php-comment">/**
-</span></span><span id="275" class="l"><a class="l" href="source-Http.Request.php.html#275">275: </a><span class="php-comment">     * Returns the IP address of the remote client.
-</span></span><span id="276" class="l"><a class="l" href="source-Http.Request.php.html#276">276: </a><span class="php-comment">     * @return string
-</span></span><span id="277" class="l"><a class="l" href="source-Http.Request.php.html#277">277: </a><span class="php-comment">     */</span>
-</span><span id="278" class="l"><a class="l" href="source-Http.Request.php.html#278">278: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_getRemoteAddress" href="source-Http.Request.php.html#_getRemoteAddress">getRemoteAddress</a>()
-</span><span id="279" class="l"><a class="l" href="source-Http.Request.php.html#279">279: </a>    {
-</span><span id="280" class="l"><a class="l" href="source-Http.Request.php.html#280">280: </a>        <span class="php-keyword1">return</span> <span class="php-var">$this</span>-&gt;remoteAddress;
-</span><span id="281" class="l"><a class="l" href="source-Http.Request.php.html#281">281: </a>    }
-</span><span id="282" class="l"><a class="l" href="source-Http.Request.php.html#282">282: </a>
-</span><span id="283" class="l"><a class="l" href="source-Http.Request.php.html#283">283: </a>
-</span><span id="284" class="l"><a class="l" href="source-Http.Request.php.html#284">284: </a>    <span class="php-comment">/**
-</span></span><span id="285" class="l"><a class="l" href="source-Http.Request.php.html#285">285: </a><span class="php-comment">     * Returns the host of the remote client.
-</span></span><span id="286" class="l"><a class="l" href="source-Http.Request.php.html#286">286: </a><span class="php-comment">     * @return string
-</span></span><span id="287" class="l"><a class="l" href="source-Http.Request.php.html#287">287: </a><span class="php-comment">     */</span>
-</span><span id="288" class="l"><a class="l" href="source-Http.Request.php.html#288">288: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_getRemoteHost" href="source-Http.Request.php.html#_getRemoteHost">getRemoteHost</a>()
-</span><span id="289" class="l"><a class="l" href="source-Http.Request.php.html#289">289: </a>    {
-</span><span id="290" class="l"><a class="l" href="source-Http.Request.php.html#290">290: </a>        <span class="php-keyword1">if</span> (!<span class="php-var">$this</span>-&gt;remoteHost) {
-</span><span id="291" class="l"><a class="l" href="source-Http.Request.php.html#291">291: </a>            <span class="php-var">$this</span>-&gt;remoteHost = <span class="php-var">$this</span>-&gt;remoteAddress ? <span class="php-keyword2">getHostByAddr</span>(<span class="php-var">$this</span>-&gt;remoteAddress) : <span class="php-keyword1">NULL</span>;
-</span><span id="292" class="l"><a class="l" href="source-Http.Request.php.html#292">292: </a>        }
-</span><span id="293" class="l"><a class="l" href="source-Http.Request.php.html#293">293: </a>        <span class="php-keyword1">return</span> <span class="php-var">$this</span>-&gt;remoteHost;
-</span><span id="294" class="l"><a class="l" href="source-Http.Request.php.html#294">294: </a>    }
-</span><span id="295" class="l"><a class="l" href="source-Http.Request.php.html#295">295: </a>
-</span><span id="296" class="l"><a class="l" href="source-Http.Request.php.html#296">296: </a>
-</span><span id="297" class="l"><a class="l" href="source-Http.Request.php.html#297">297: </a>    <span class="php-comment">/**
-</span></span><span id="298" class="l"><a class="l" href="source-Http.Request.php.html#298">298: </a><span class="php-comment">     * Returns raw content of HTTP request body.
-</span></span><span id="299" class="l"><a class="l" href="source-Http.Request.php.html#299">299: </a><span class="php-comment">     * @return string
-</span></span><span id="300" class="l"><a class="l" href="source-Http.Request.php.html#300">300: </a><span class="php-comment">     */</span>
-</span><span id="301" class="l"><a class="l" href="source-Http.Request.php.html#301">301: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_getRawBody" href="source-Http.Request.php.html#_getRawBody">getRawBody</a>()
-</span><span id="302" class="l"><a class="l" href="source-Http.Request.php.html#302">302: </a>    {
-</span><span id="303" class="l"><a class="l" href="source-Http.Request.php.html#303">303: </a>        <span class="php-keyword1">if</span> (PHP_VERSION_ID &gt;= <span class="php-num">50600</span>) {
-</span><span id="304" class="l"><a class="l" href="source-Http.Request.php.html#304">304: </a>            <span class="php-keyword1">return</span> <span class="php-keyword2">file_get_contents</span>(<span class="php-quote">'php://input'</span>);
+</span><span id="226" class="l"><a class="l" href="source-Http.Request.php.html#226">226: </a>        <span class="php-keyword1">return</span> <span class="php-keyword1">isset</span>(<span class="php-var">$this</span>-&gt;headers[<span class="php-var">$header</span>]) ? <span class="php-var">$this</span>-&gt;headers[<span class="php-var">$header</span>] : <span class="php-var">$default</span>;
+</span><span id="227" class="l"><a class="l" href="source-Http.Request.php.html#227">227: </a>    }
+</span><span id="228" class="l"><a class="l" href="source-Http.Request.php.html#228">228: </a>
+</span><span id="229" class="l"><a class="l" href="source-Http.Request.php.html#229">229: </a>
+</span><span id="230" class="l"><a class="l" href="source-Http.Request.php.html#230">230: </a>    <span class="php-comment">/**
+</span></span><span id="231" class="l"><a class="l" href="source-Http.Request.php.html#231">231: </a><span class="php-comment">     * Returns all HTTP headers.
+</span></span><span id="232" class="l"><a class="l" href="source-Http.Request.php.html#232">232: </a><span class="php-comment">     * @return array
+</span></span><span id="233" class="l"><a class="l" href="source-Http.Request.php.html#233">233: </a><span class="php-comment">     */</span>
+</span><span id="234" class="l"><a class="l" href="source-Http.Request.php.html#234">234: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_getHeaders" href="source-Http.Request.php.html#_getHeaders">getHeaders</a>()
+</span><span id="235" class="l"><a class="l" href="source-Http.Request.php.html#235">235: </a>    {
+</span><span id="236" class="l"><a class="l" href="source-Http.Request.php.html#236">236: </a>        <span class="php-keyword1">return</span> <span class="php-var">$this</span>-&gt;headers;
+</span><span id="237" class="l"><a class="l" href="source-Http.Request.php.html#237">237: </a>    }
+</span><span id="238" class="l"><a class="l" href="source-Http.Request.php.html#238">238: </a>
+</span><span id="239" class="l"><a class="l" href="source-Http.Request.php.html#239">239: </a>
+</span><span id="240" class="l"><a class="l" href="source-Http.Request.php.html#240">240: </a>    <span class="php-comment">/**
+</span></span><span id="241" class="l"><a class="l" href="source-Http.Request.php.html#241">241: </a><span class="php-comment">     * Returns referrer.
+</span></span><span id="242" class="l"><a class="l" href="source-Http.Request.php.html#242">242: </a><span class="php-comment">     * @return Url|NULL
+</span></span><span id="243" class="l"><a class="l" href="source-Http.Request.php.html#243">243: </a><span class="php-comment">     */</span>
+</span><span id="244" class="l"><a class="l" href="source-Http.Request.php.html#244">244: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_getReferer" href="source-Http.Request.php.html#_getReferer">getReferer</a>()
+</span><span id="245" class="l"><a class="l" href="source-Http.Request.php.html#245">245: </a>    {
+</span><span id="246" class="l"><a class="l" href="source-Http.Request.php.html#246">246: </a>        <span class="php-keyword1">return</span> <span class="php-keyword1">isset</span>(<span class="php-var">$this</span>-&gt;headers[<span class="php-quote">'referer'</span>]) ? <span class="php-keyword1">new</span> Url(<span class="php-var">$this</span>-&gt;headers[<span class="php-quote">'referer'</span>]) : <span class="php-keyword1">NULL</span>;
+</span><span id="247" class="l"><a class="l" href="source-Http.Request.php.html#247">247: </a>    }
+</span><span id="248" class="l"><a class="l" href="source-Http.Request.php.html#248">248: </a>
+</span><span id="249" class="l"><a class="l" href="source-Http.Request.php.html#249">249: </a>
+</span><span id="250" class="l"><a class="l" href="source-Http.Request.php.html#250">250: </a>    <span class="php-comment">/**
+</span></span><span id="251" class="l"><a class="l" href="source-Http.Request.php.html#251">251: </a><span class="php-comment">     * Is the request is sent via secure channel (https).
+</span></span><span id="252" class="l"><a class="l" href="source-Http.Request.php.html#252">252: </a><span class="php-comment">     * @return bool
+</span></span><span id="253" class="l"><a class="l" href="source-Http.Request.php.html#253">253: </a><span class="php-comment">     */</span>
+</span><span id="254" class="l"><a class="l" href="source-Http.Request.php.html#254">254: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_isSecured" href="source-Http.Request.php.html#_isSecured">isSecured</a>()
+</span><span id="255" class="l"><a class="l" href="source-Http.Request.php.html#255">255: </a>    {
+</span><span id="256" class="l"><a class="l" href="source-Http.Request.php.html#256">256: </a>        <span class="php-keyword1">return</span> <span class="php-var">$this</span>-&gt;url-&gt;getScheme() === <span class="php-quote">'https'</span>;
+</span><span id="257" class="l"><a class="l" href="source-Http.Request.php.html#257">257: </a>    }
+</span><span id="258" class="l"><a class="l" href="source-Http.Request.php.html#258">258: </a>
+</span><span id="259" class="l"><a class="l" href="source-Http.Request.php.html#259">259: </a>
+</span><span id="260" class="l"><a class="l" href="source-Http.Request.php.html#260">260: </a>    <span class="php-comment">/**
+</span></span><span id="261" class="l"><a class="l" href="source-Http.Request.php.html#261">261: </a><span class="php-comment">     * Is AJAX request?
+</span></span><span id="262" class="l"><a class="l" href="source-Http.Request.php.html#262">262: </a><span class="php-comment">     * @return bool
+</span></span><span id="263" class="l"><a class="l" href="source-Http.Request.php.html#263">263: </a><span class="php-comment">     */</span>
+</span><span id="264" class="l"><a class="l" href="source-Http.Request.php.html#264">264: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_isAjax" href="source-Http.Request.php.html#_isAjax">isAjax</a>()
+</span><span id="265" class="l"><a class="l" href="source-Http.Request.php.html#265">265: </a>    {
+</span><span id="266" class="l"><a class="l" href="source-Http.Request.php.html#266">266: </a>        <span class="php-keyword1">return</span> <span class="php-var">$this</span>-&gt;getHeader(<span class="php-quote">'X-Requested-With'</span>) === <span class="php-quote">'XMLHttpRequest'</span>;
+</span><span id="267" class="l"><a class="l" href="source-Http.Request.php.html#267">267: </a>    }
+</span><span id="268" class="l"><a class="l" href="source-Http.Request.php.html#268">268: </a>
+</span><span id="269" class="l"><a class="l" href="source-Http.Request.php.html#269">269: </a>
+</span><span id="270" class="l"><a class="l" href="source-Http.Request.php.html#270">270: </a>    <span class="php-comment">/**
+</span></span><span id="271" class="l"><a class="l" href="source-Http.Request.php.html#271">271: </a><span class="php-comment">     * Returns the IP address of the remote client.
+</span></span><span id="272" class="l"><a class="l" href="source-Http.Request.php.html#272">272: </a><span class="php-comment">     * @return string|NULL
+</span></span><span id="273" class="l"><a class="l" href="source-Http.Request.php.html#273">273: </a><span class="php-comment">     */</span>
+</span><span id="274" class="l"><a class="l" href="source-Http.Request.php.html#274">274: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_getRemoteAddress" href="source-Http.Request.php.html#_getRemoteAddress">getRemoteAddress</a>()
+</span><span id="275" class="l"><a class="l" href="source-Http.Request.php.html#275">275: </a>    {
+</span><span id="276" class="l"><a class="l" href="source-Http.Request.php.html#276">276: </a>        <span class="php-keyword1">return</span> <span class="php-var">$this</span>-&gt;remoteAddress;
+</span><span id="277" class="l"><a class="l" href="source-Http.Request.php.html#277">277: </a>    }
+</span><span id="278" class="l"><a class="l" href="source-Http.Request.php.html#278">278: </a>
+</span><span id="279" class="l"><a class="l" href="source-Http.Request.php.html#279">279: </a>
+</span><span id="280" class="l"><a class="l" href="source-Http.Request.php.html#280">280: </a>    <span class="php-comment">/**
+</span></span><span id="281" class="l"><a class="l" href="source-Http.Request.php.html#281">281: </a><span class="php-comment">     * Returns the host of the remote client.
+</span></span><span id="282" class="l"><a class="l" href="source-Http.Request.php.html#282">282: </a><span class="php-comment">     * @return string|NULL
+</span></span><span id="283" class="l"><a class="l" href="source-Http.Request.php.html#283">283: </a><span class="php-comment">     */</span>
+</span><span id="284" class="l"><a class="l" href="source-Http.Request.php.html#284">284: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_getRemoteHost" href="source-Http.Request.php.html#_getRemoteHost">getRemoteHost</a>()
+</span><span id="285" class="l"><a class="l" href="source-Http.Request.php.html#285">285: </a>    {
+</span><span id="286" class="l"><a class="l" href="source-Http.Request.php.html#286">286: </a>        <span class="php-keyword1">if</span> (!<span class="php-var">$this</span>-&gt;remoteHost) {
+</span><span id="287" class="l"><a class="l" href="source-Http.Request.php.html#287">287: </a>            <span class="php-var">$this</span>-&gt;remoteHost = <span class="php-var">$this</span>-&gt;remoteAddress ? <span class="php-keyword2">getHostByAddr</span>(<span class="php-var">$this</span>-&gt;remoteAddress) : <span class="php-keyword1">NULL</span>;
+</span><span id="288" class="l"><a class="l" href="source-Http.Request.php.html#288">288: </a>        }
+</span><span id="289" class="l"><a class="l" href="source-Http.Request.php.html#289">289: </a>        <span class="php-keyword1">return</span> <span class="php-var">$this</span>-&gt;remoteHost;
+</span><span id="290" class="l"><a class="l" href="source-Http.Request.php.html#290">290: </a>    }
+</span><span id="291" class="l"><a class="l" href="source-Http.Request.php.html#291">291: </a>
+</span><span id="292" class="l"><a class="l" href="source-Http.Request.php.html#292">292: </a>
+</span><span id="293" class="l"><a class="l" href="source-Http.Request.php.html#293">293: </a>    <span class="php-comment">/**
+</span></span><span id="294" class="l"><a class="l" href="source-Http.Request.php.html#294">294: </a><span class="php-comment">     * Returns raw content of HTTP request body.
+</span></span><span id="295" class="l"><a class="l" href="source-Http.Request.php.html#295">295: </a><span class="php-comment">     * @return string
+</span></span><span id="296" class="l"><a class="l" href="source-Http.Request.php.html#296">296: </a><span class="php-comment">     */</span>
+</span><span id="297" class="l"><a class="l" href="source-Http.Request.php.html#297">297: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_getRawBody" href="source-Http.Request.php.html#_getRawBody">getRawBody</a>()
+</span><span id="298" class="l"><a class="l" href="source-Http.Request.php.html#298">298: </a>    {
+</span><span id="299" class="l"><a class="l" href="source-Http.Request.php.html#299">299: </a>        <span class="php-keyword1">if</span> (PHP_VERSION_ID &gt;= <span class="php-num">50600</span>) {
+</span><span id="300" class="l"><a class="l" href="source-Http.Request.php.html#300">300: </a>            <span class="php-keyword1">return</span> <span class="php-keyword2">file_get_contents</span>(<span class="php-quote">'php://input'</span>);
+</span><span id="301" class="l"><a class="l" href="source-Http.Request.php.html#301">301: </a>
+</span><span id="302" class="l"><a class="l" href="source-Http.Request.php.html#302">302: </a>        } <span class="php-keyword1">elseif</span> (<span class="php-var">$this</span>-&gt;rawBody === <span class="php-keyword1">NULL</span>) { <span class="php-comment">// can be read only once in PHP &lt; 5.6</span>
+</span><span id="303" class="l"><a class="l" href="source-Http.Request.php.html#303">303: </a>            <span class="php-var">$this</span>-&gt;rawBody = (string) <span class="php-keyword2">file_get_contents</span>(<span class="php-quote">'php://input'</span>);
+</span><span id="304" class="l"><a class="l" href="source-Http.Request.php.html#304">304: </a>        }
 </span><span id="305" class="l"><a class="l" href="source-Http.Request.php.html#305">305: </a>
-</span><span id="306" class="l"><a class="l" href="source-Http.Request.php.html#306">306: </a>        } <span class="php-keyword1">elseif</span> (<span class="php-var">$this</span>-&gt;rawBody === <span class="php-keyword1">NULL</span>) { <span class="php-comment">// can be read only once in PHP &lt; 5.6</span>
-</span><span id="307" class="l"><a class="l" href="source-Http.Request.php.html#307">307: </a>            <span class="php-var">$this</span>-&gt;rawBody = (string) <span class="php-keyword2">file_get_contents</span>(<span class="php-quote">'php://input'</span>);
-</span><span id="308" class="l"><a class="l" href="source-Http.Request.php.html#308">308: </a>        }
+</span><span id="306" class="l"><a class="l" href="source-Http.Request.php.html#306">306: </a>        <span class="php-keyword1">return</span> <span class="php-var">$this</span>-&gt;rawBody;
+</span><span id="307" class="l"><a class="l" href="source-Http.Request.php.html#307">307: </a>    }
+</span><span id="308" class="l"><a class="l" href="source-Http.Request.php.html#308">308: </a>
 </span><span id="309" class="l"><a class="l" href="source-Http.Request.php.html#309">309: </a>
-</span><span id="310" class="l"><a class="l" href="source-Http.Request.php.html#310">310: </a>        <span class="php-keyword1">return</span> <span class="php-var">$this</span>-&gt;rawBody;
-</span><span id="311" class="l"><a class="l" href="source-Http.Request.php.html#311">311: </a>    }
-</span><span id="312" class="l"><a class="l" href="source-Http.Request.php.html#312">312: </a>
-</span><span id="313" class="l"><a class="l" href="source-Http.Request.php.html#313">313: </a>
-</span><span id="314" class="l"><a class="l" href="source-Http.Request.php.html#314">314: </a>    <span class="php-comment">/**
-</span></span><span id="315" class="l"><a class="l" href="source-Http.Request.php.html#315">315: </a><span class="php-comment">     * Parse Accept-Language header and returns prefered language.
-</span></span><span id="316" class="l"><a class="l" href="source-Http.Request.php.html#316">316: </a><span class="php-comment">     * @param  array   Supported languages
-</span></span><span id="317" class="l"><a class="l" href="source-Http.Request.php.html#317">317: </a><span class="php-comment">     * @return string|null
-</span></span><span id="318" class="l"><a class="l" href="source-Http.Request.php.html#318">318: </a><span class="php-comment">     */</span>
-</span><span id="319" class="l"><a class="l" href="source-Http.Request.php.html#319">319: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_detectLanguage" href="source-Http.Request.php.html#_detectLanguage">detectLanguage</a>(<span class="php-keyword1">array</span> <span class="php-var">$langs</span>)
-</span><span id="320" class="l"><a class="l" href="source-Http.Request.php.html#320">320: </a>    {
-</span><span id="321" class="l"><a class="l" href="source-Http.Request.php.html#321">321: </a>        <span class="php-var">$header</span> = <span class="php-var">$this</span>-&gt;getHeader(<span class="php-quote">'Accept-Language'</span>);
-</span><span id="322" class="l"><a class="l" href="source-Http.Request.php.html#322">322: </a>        <span class="php-keyword1">if</span> (!<span class="php-var">$header</span>) {
-</span><span id="323" class="l"><a class="l" href="source-Http.Request.php.html#323">323: </a>            <span class="php-keyword1">return</span> <span class="php-keyword1">NULL</span>;
-</span><span id="324" class="l"><a class="l" href="source-Http.Request.php.html#324">324: </a>        }
-</span><span id="325" class="l"><a class="l" href="source-Http.Request.php.html#325">325: </a>
-</span><span id="326" class="l"><a class="l" href="source-Http.Request.php.html#326">326: </a>        <span class="php-var">$s</span> = <span class="php-keyword2">strtolower</span>(<span class="php-var">$header</span>);  <span class="php-comment">// case insensitive</span>
-</span><span id="327" class="l"><a class="l" href="source-Http.Request.php.html#327">327: </a>        <span class="php-var">$s</span> = <span class="php-keyword2">strtr</span>(<span class="php-var">$s</span>, <span class="php-quote">'_'</span>, <span class="php-quote">'-'</span>);  <span class="php-comment">// cs_CZ means cs-CZ</span>
-</span><span id="328" class="l"><a class="l" href="source-Http.Request.php.html#328">328: </a>        <span class="php-keyword2">rsort</span>(<span class="php-var">$langs</span>);             <span class="php-comment">// first more specific</span>
-</span><span id="329" class="l"><a class="l" href="source-Http.Request.php.html#329">329: </a>        <span class="php-keyword2">preg_match_all</span>(<span class="php-quote">'#('</span> . <span class="php-keyword2">implode</span>(<span class="php-quote">'|'</span>, <span class="php-var">$langs</span>) . <span class="php-quote">')(?:-[^\s,;=]+)?\s*(?:;\s*q=([0-9.]+))?#'</span>, <span class="php-var">$s</span>, <span class="php-var">$matches</span>);
+</span><span id="310" class="l"><a class="l" href="source-Http.Request.php.html#310">310: </a>    <span class="php-comment">/**
+</span></span><span id="311" class="l"><a class="l" href="source-Http.Request.php.html#311">311: </a><span class="php-comment">     * Parse Accept-Language header and returns preferred language.
+</span></span><span id="312" class="l"><a class="l" href="source-Http.Request.php.html#312">312: </a><span class="php-comment">     * @param  string[] supported languages
+</span></span><span id="313" class="l"><a class="l" href="source-Http.Request.php.html#313">313: </a><span class="php-comment">     * @return string|NULL
+</span></span><span id="314" class="l"><a class="l" href="source-Http.Request.php.html#314">314: </a><span class="php-comment">     */</span>
+</span><span id="315" class="l"><a class="l" href="source-Http.Request.php.html#315">315: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_detectLanguage" href="source-Http.Request.php.html#_detectLanguage">detectLanguage</a>(<span class="php-keyword1">array</span> <span class="php-var">$langs</span>)
+</span><span id="316" class="l"><a class="l" href="source-Http.Request.php.html#316">316: </a>    {
+</span><span id="317" class="l"><a class="l" href="source-Http.Request.php.html#317">317: </a>        <span class="php-var">$header</span> = <span class="php-var">$this</span>-&gt;getHeader(<span class="php-quote">'Accept-Language'</span>);
+</span><span id="318" class="l"><a class="l" href="source-Http.Request.php.html#318">318: </a>        <span class="php-keyword1">if</span> (!<span class="php-var">$header</span>) {
+</span><span id="319" class="l"><a class="l" href="source-Http.Request.php.html#319">319: </a>            <span class="php-keyword1">return</span> <span class="php-keyword1">NULL</span>;
+</span><span id="320" class="l"><a class="l" href="source-Http.Request.php.html#320">320: </a>        }
+</span><span id="321" class="l"><a class="l" href="source-Http.Request.php.html#321">321: </a>
+</span><span id="322" class="l"><a class="l" href="source-Http.Request.php.html#322">322: </a>        <span class="php-var">$s</span> = <span class="php-keyword2">strtolower</span>(<span class="php-var">$header</span>);  <span class="php-comment">// case insensitive</span>
+</span><span id="323" class="l"><a class="l" href="source-Http.Request.php.html#323">323: </a>        <span class="php-var">$s</span> = <span class="php-keyword2">strtr</span>(<span class="php-var">$s</span>, <span class="php-quote">'_'</span>, <span class="php-quote">'-'</span>);  <span class="php-comment">// cs_CZ means cs-CZ</span>
+</span><span id="324" class="l"><a class="l" href="source-Http.Request.php.html#324">324: </a>        <span class="php-keyword2">rsort</span>(<span class="php-var">$langs</span>);             <span class="php-comment">// first more specific</span>
+</span><span id="325" class="l"><a class="l" href="source-Http.Request.php.html#325">325: </a>        <span class="php-keyword2">preg_match_all</span>(<span class="php-quote">'#('</span> . <span class="php-keyword2">implode</span>(<span class="php-quote">'|'</span>, <span class="php-var">$langs</span>) . <span class="php-quote">')(?:-[^\s,;=]+)?\s*(?:;\s*q=([0-9.]+))?#'</span>, <span class="php-var">$s</span>, <span class="php-var">$matches</span>);
+</span><span id="326" class="l"><a class="l" href="source-Http.Request.php.html#326">326: </a>
+</span><span id="327" class="l"><a class="l" href="source-Http.Request.php.html#327">327: </a>        <span class="php-keyword1">if</span> (!<span class="php-var">$matches</span>[<span class="php-num">0</span>]) {
+</span><span id="328" class="l"><a class="l" href="source-Http.Request.php.html#328">328: </a>            <span class="php-keyword1">return</span> <span class="php-keyword1">NULL</span>;
+</span><span id="329" class="l"><a class="l" href="source-Http.Request.php.html#329">329: </a>        }
 </span><span id="330" class="l"><a class="l" href="source-Http.Request.php.html#330">330: </a>
-</span><span id="331" class="l"><a class="l" href="source-Http.Request.php.html#331">331: </a>        <span class="php-keyword1">if</span> (!<span class="php-var">$matches</span>[<span class="php-num">0</span>]) {
-</span><span id="332" class="l"><a class="l" href="source-Http.Request.php.html#332">332: </a>            <span class="php-keyword1">return</span> <span class="php-keyword1">NULL</span>;
-</span><span id="333" class="l"><a class="l" href="source-Http.Request.php.html#333">333: </a>        }
-</span><span id="334" class="l"><a class="l" href="source-Http.Request.php.html#334">334: </a>
-</span><span id="335" class="l"><a class="l" href="source-Http.Request.php.html#335">335: </a>        <span class="php-var">$max</span> = <span class="php-num">0</span>;
-</span><span id="336" class="l"><a class="l" href="source-Http.Request.php.html#336">336: </a>        <span class="php-var">$lang</span> = <span class="php-keyword1">NULL</span>;
-</span><span id="337" class="l"><a class="l" href="source-Http.Request.php.html#337">337: </a>        <span class="php-keyword1">foreach</span> (<span class="php-var">$matches</span>[<span class="php-num">1</span>] <span class="php-keyword1">as</span> <span class="php-var">$key</span> =&gt; <span class="php-var">$value</span>) {
-</span><span id="338" class="l"><a class="l" href="source-Http.Request.php.html#338">338: </a>            <span class="php-var">$q</span> = <span class="php-var">$matches</span>[<span class="php-num">2</span>][<span class="php-var">$key</span>] === <span class="php-quote">''</span> ? <span class="php-num">1.0</span> : (float) <span class="php-var">$matches</span>[<span class="php-num">2</span>][<span class="php-var">$key</span>];
-</span><span id="339" class="l"><a class="l" href="source-Http.Request.php.html#339">339: </a>            <span class="php-keyword1">if</span> (<span class="php-var">$q</span> &gt; <span class="php-var">$max</span>) {
-</span><span id="340" class="l"><a class="l" href="source-Http.Request.php.html#340">340: </a>                <span class="php-var">$max</span> = <span class="php-var">$q</span>; <span class="php-var">$lang</span> = <span class="php-var">$value</span>;
-</span><span id="341" class="l"><a class="l" href="source-Http.Request.php.html#341">341: </a>            }
-</span><span id="342" class="l"><a class="l" href="source-Http.Request.php.html#342">342: </a>        }
-</span><span id="343" class="l"><a class="l" href="source-Http.Request.php.html#343">343: </a>
-</span><span id="344" class="l"><a class="l" href="source-Http.Request.php.html#344">344: </a>        <span class="php-keyword1">return</span> <span class="php-var">$lang</span>;
-</span><span id="345" class="l"><a class="l" href="source-Http.Request.php.html#345">345: </a>    }
-</span><span id="346" class="l"><a class="l" href="source-Http.Request.php.html#346">346: </a>
-</span><span id="347" class="l"><a class="l" href="source-Http.Request.php.html#347">347: </a>}
-</span><span id="348" class="l"><a class="l" href="source-Http.Request.php.html#348">348: </a></span></code></pre>
+</span><span id="331" class="l"><a class="l" href="source-Http.Request.php.html#331">331: </a>        <span class="php-var">$max</span> = <span class="php-num">0</span>;
+</span><span id="332" class="l"><a class="l" href="source-Http.Request.php.html#332">332: </a>        <span class="php-var">$lang</span> = <span class="php-keyword1">NULL</span>;
+</span><span id="333" class="l"><a class="l" href="source-Http.Request.php.html#333">333: </a>        <span class="php-keyword1">foreach</span> (<span class="php-var">$matches</span>[<span class="php-num">1</span>] <span class="php-keyword1">as</span> <span class="php-var">$key</span> =&gt; <span class="php-var">$value</span>) {
+</span><span id="334" class="l"><a class="l" href="source-Http.Request.php.html#334">334: </a>            <span class="php-var">$q</span> = <span class="php-var">$matches</span>[<span class="php-num">2</span>][<span class="php-var">$key</span>] === <span class="php-quote">''</span> ? <span class="php-num">1.0</span> : (float) <span class="php-var">$matches</span>[<span class="php-num">2</span>][<span class="php-var">$key</span>];
+</span><span id="335" class="l"><a class="l" href="source-Http.Request.php.html#335">335: </a>            <span class="php-keyword1">if</span> (<span class="php-var">$q</span> &gt; <span class="php-var">$max</span>) {
+</span><span id="336" class="l"><a class="l" href="source-Http.Request.php.html#336">336: </a>                <span class="php-var">$max</span> = <span class="php-var">$q</span>; <span class="php-var">$lang</span> = <span class="php-var">$value</span>;
+</span><span id="337" class="l"><a class="l" href="source-Http.Request.php.html#337">337: </a>            }
+</span><span id="338" class="l"><a class="l" href="source-Http.Request.php.html#338">338: </a>        }
+</span><span id="339" class="l"><a class="l" href="source-Http.Request.php.html#339">339: </a>
+</span><span id="340" class="l"><a class="l" href="source-Http.Request.php.html#340">340: </a>        <span class="php-keyword1">return</span> <span class="php-var">$lang</span>;
+</span><span id="341" class="l"><a class="l" href="source-Http.Request.php.html#341">341: </a>    }
+</span><span id="342" class="l"><a class="l" href="source-Http.Request.php.html#342">342: </a>
+</span><span id="343" class="l"><a class="l" href="source-Http.Request.php.html#343">343: </a>}
+</span><span id="344" class="l"><a class="l" href="source-Http.Request.php.html#344">344: </a></span></code></pre>
 
 	<div id="footer">
-		Nette 2.2.2 API API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+		Nette 2.2.6 API API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
 	</div>
 </div>
 </div>
 <script src="resources/combined.js?3630868369"></script>
-<script src="elementlist.js?2087501429"></script>
+<script src="elementlist.js?1613912923"></script>
 </body>
 </html>

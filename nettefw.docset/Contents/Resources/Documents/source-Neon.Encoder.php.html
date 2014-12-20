@@ -5,10 +5,10 @@
 	<meta name="generator" content="ApiGen 2.8.0">
 	<meta name="robots" content="noindex">
 
-	<title>File Neon/Encoder.php | Nette 2.2.2 API</title>
+	<title>File Neon/Encoder.php | Nette 2.2.6 API</title>
 
 	<link rel="stylesheet" href="resources/style.css?3746977979">
-	<link rel="search" type="application/opensearchdescription+xml" title="Nette 2.2.2 API" href="http://api.nette.org/2.0/opensearch.xml">
+	<link rel="search" type="application/opensearchdescription+xml" title="Nette 2.2.6 API" href="http://api.nette.org/2.0/opensearch.xml">
 
 
 <script src='http://files.nette.org/js/analytics.js'></script><script>
@@ -229,63 +229,64 @@ _gaq.push(['_trackPageview']);
 </span><span id="32" class="l"><a class="l" href="source-Neon.Encoder.php.html#32">32: </a>            <span class="php-keyword1">return</span> <span class="php-var">$var</span>-&gt;format(<span class="php-quote">'Y-m-d H:i:s O'</span>);
 </span><span id="33" class="l"><a class="l" href="source-Neon.Encoder.php.html#33">33: </a>
 </span><span id="34" class="l"><a class="l" href="source-Neon.Encoder.php.html#34">34: </a>        } <span class="php-keyword1">elseif</span> (<span class="php-var">$var</span> <span class="php-keyword1">instanceof</span> Entity) {
-</span><span id="35" class="l"><a class="l" href="source-Neon.Encoder.php.html#35">35: </a>            <span class="php-keyword1">return</span> self::encode(<span class="php-var">$var</span>-&gt;value) . <span class="php-quote">'('</span> . (<span class="php-keyword2">is_array</span>(<span class="php-var">$var</span>-&gt;attributes) ? <span class="php-keyword2">substr</span>(self::encode(<span class="php-var">$var</span>-&gt;attributes), <span class="php-num">1</span>, -<span class="php-num">1</span>) : <span class="php-quote">''</span>) . <span class="php-quote">')'</span>;
-</span><span id="36" class="l"><a class="l" href="source-Neon.Encoder.php.html#36">36: </a>        }
-</span><span id="37" class="l"><a class="l" href="source-Neon.Encoder.php.html#37">37: </a>
-</span><span id="38" class="l"><a class="l" href="source-Neon.Encoder.php.html#38">38: </a>        <span class="php-keyword1">if</span> (<span class="php-keyword2">is_object</span>(<span class="php-var">$var</span>)) {
-</span><span id="39" class="l"><a class="l" href="source-Neon.Encoder.php.html#39">39: </a>            <span class="php-var">$obj</span> = <span class="php-var">$var</span>; <span class="php-var">$var</span> = <span class="php-keyword1">array</span>();
-</span><span id="40" class="l"><a class="l" href="source-Neon.Encoder.php.html#40">40: </a>            <span class="php-keyword1">foreach</span> (<span class="php-var">$obj</span> <span class="php-keyword1">as</span> <span class="php-var">$k</span> =&gt; <span class="php-var">$v</span>) {
-</span><span id="41" class="l"><a class="l" href="source-Neon.Encoder.php.html#41">41: </a>                <span class="php-var">$var</span>[<span class="php-var">$k</span>] = <span class="php-var">$v</span>;
-</span><span id="42" class="l"><a class="l" href="source-Neon.Encoder.php.html#42">42: </a>            }
-</span><span id="43" class="l"><a class="l" href="source-Neon.Encoder.php.html#43">43: </a>        }
-</span><span id="44" class="l"><a class="l" href="source-Neon.Encoder.php.html#44">44: </a>
-</span><span id="45" class="l"><a class="l" href="source-Neon.Encoder.php.html#45">45: </a>        <span class="php-keyword1">if</span> (<span class="php-keyword2">is_array</span>(<span class="php-var">$var</span>)) {
-</span><span id="46" class="l"><a class="l" href="source-Neon.Encoder.php.html#46">46: </a>            <span class="php-var">$isList</span> = !<span class="php-var">$var</span> || <span class="php-keyword2">array_keys</span>(<span class="php-var">$var</span>) === <span class="php-keyword2">range</span>(<span class="php-num">0</span>, <span class="php-keyword2">count</span>(<span class="php-var">$var</span>) - <span class="php-num">1</span>);
-</span><span id="47" class="l"><a class="l" href="source-Neon.Encoder.php.html#47">47: </a>            <span class="php-var">$s</span> = <span class="php-quote">''</span>;
-</span><span id="48" class="l"><a class="l" href="source-Neon.Encoder.php.html#48">48: </a>            <span class="php-keyword1">if</span> (<span class="php-var">$options</span> &amp; self::BLOCK) {
-</span><span id="49" class="l"><a class="l" href="source-Neon.Encoder.php.html#49">49: </a>                <span class="php-keyword1">if</span> (<span class="php-keyword2">count</span>(<span class="php-var">$var</span>) === <span class="php-num">0</span>) {
-</span><span id="50" class="l"><a class="l" href="source-Neon.Encoder.php.html#50">50: </a>                    <span class="php-keyword1">return</span> <span class="php-quote">'[]'</span>;
-</span><span id="51" class="l"><a class="l" href="source-Neon.Encoder.php.html#51">51: </a>                }
-</span><span id="52" class="l"><a class="l" href="source-Neon.Encoder.php.html#52">52: </a>                <span class="php-keyword1">foreach</span> (<span class="php-var">$var</span> <span class="php-keyword1">as</span> <span class="php-var">$k</span> =&gt; <span class="php-var">$v</span>) {
-</span><span id="53" class="l"><a class="l" href="source-Neon.Encoder.php.html#53">53: </a>                    <span class="php-var">$v</span> = self::encode(<span class="php-var">$v</span>, self::BLOCK);
-</span><span id="54" class="l"><a class="l" href="source-Neon.Encoder.php.html#54">54: </a>                    <span class="php-var">$s</span> .= (<span class="php-var">$isList</span> ? <span class="php-quote">'-'</span> : self::encode(<span class="php-var">$k</span>) . <span class="php-quote">':'</span>)
-</span><span id="55" class="l"><a class="l" href="source-Neon.Encoder.php.html#55">55: </a>                        . (<span class="php-keyword2">strpos</span>(<span class="php-var">$v</span>, <span class="php-quote">&quot;\n&quot;</span>) === <span class="php-keyword1">FALSE</span> ? <span class="php-quote">' '</span> . <span class="php-var">$v</span> : <span class="php-quote">&quot;\n\t&quot;</span> . <span class="php-keyword2">str_replace</span>(<span class="php-quote">&quot;\n&quot;</span>, <span class="php-quote">&quot;\n\t&quot;</span>, <span class="php-var">$v</span>))
-</span><span id="56" class="l"><a class="l" href="source-Neon.Encoder.php.html#56">56: </a>                        . <span class="php-quote">&quot;\n&quot;</span>;
-</span><span id="57" class="l"><a class="l" href="source-Neon.Encoder.php.html#57">57: </a>                    <span class="php-keyword1">continue</span>;
-</span><span id="58" class="l"><a class="l" href="source-Neon.Encoder.php.html#58">58: </a>                }
-</span><span id="59" class="l"><a class="l" href="source-Neon.Encoder.php.html#59">59: </a>                <span class="php-keyword1">return</span> <span class="php-var">$s</span>;
-</span><span id="60" class="l"><a class="l" href="source-Neon.Encoder.php.html#60">60: </a>
-</span><span id="61" class="l"><a class="l" href="source-Neon.Encoder.php.html#61">61: </a>            } <span class="php-keyword1">else</span> {
-</span><span id="62" class="l"><a class="l" href="source-Neon.Encoder.php.html#62">62: </a>                <span class="php-keyword1">foreach</span> (<span class="php-var">$var</span> <span class="php-keyword1">as</span> <span class="php-var">$k</span> =&gt; <span class="php-var">$v</span>) {
-</span><span id="63" class="l"><a class="l" href="source-Neon.Encoder.php.html#63">63: </a>                    <span class="php-var">$s</span> .= (<span class="php-var">$isList</span> ? <span class="php-quote">''</span> : self::encode(<span class="php-var">$k</span>) . <span class="php-quote">': '</span>) . self::encode(<span class="php-var">$v</span>) . <span class="php-quote">', '</span>;
-</span><span id="64" class="l"><a class="l" href="source-Neon.Encoder.php.html#64">64: </a>                }
-</span><span id="65" class="l"><a class="l" href="source-Neon.Encoder.php.html#65">65: </a>                <span class="php-keyword1">return</span> (<span class="php-var">$isList</span> ? <span class="php-quote">'['</span> : <span class="php-quote">'{'</span>) . <span class="php-keyword2">substr</span>(<span class="php-var">$s</span>, <span class="php-num">0</span>, -<span class="php-num">2</span>) . (<span class="php-var">$isList</span> ? <span class="php-quote">']'</span> : <span class="php-quote">'}'</span>);
-</span><span id="66" class="l"><a class="l" href="source-Neon.Encoder.php.html#66">66: </a>            }
-</span><span id="67" class="l"><a class="l" href="source-Neon.Encoder.php.html#67">67: </a>
-</span><span id="68" class="l"><a class="l" href="source-Neon.Encoder.php.html#68">68: </a>        } <span class="php-keyword1">elseif</span> (<span class="php-keyword2">is_string</span>(<span class="php-var">$var</span>) &amp;&amp; !<span class="php-keyword2">is_numeric</span>(<span class="php-var">$var</span>)
-</span><span id="69" class="l"><a class="l" href="source-Neon.Encoder.php.html#69">69: </a>            &amp;&amp; !<span class="php-keyword2">preg_match</span>(<span class="php-quote">'~[\x00-\x1F]|^\d{4}|^(true|false|yes|no|on|off|null)\z~i'</span>, <span class="php-var">$var</span>)
-</span><span id="70" class="l"><a class="l" href="source-Neon.Encoder.php.html#70">70: </a>            &amp;&amp; <span class="php-keyword2">preg_match</span>(<span class="php-quote">'~^'</span> . Decoder::<span class="php-var">$patterns</span>[<span class="php-num">1</span>] . <span class="php-quote">'\z~x'</span>, <span class="php-var">$var</span>) <span class="php-comment">// 1 = literals</span>
-</span><span id="71" class="l"><a class="l" href="source-Neon.Encoder.php.html#71">71: </a>        ) {
-</span><span id="72" class="l"><a class="l" href="source-Neon.Encoder.php.html#72">72: </a>            <span class="php-keyword1">return</span> <span class="php-var">$var</span>;
-</span><span id="73" class="l"><a class="l" href="source-Neon.Encoder.php.html#73">73: </a>
-</span><span id="74" class="l"><a class="l" href="source-Neon.Encoder.php.html#74">74: </a>        } <span class="php-keyword1">elseif</span> (<span class="php-keyword2">is_float</span>(<span class="php-var">$var</span>)) {
-</span><span id="75" class="l"><a class="l" href="source-Neon.Encoder.php.html#75">75: </a>            <span class="php-var">$var</span> = <span class="php-keyword2">json_encode</span>(<span class="php-var">$var</span>);
-</span><span id="76" class="l"><a class="l" href="source-Neon.Encoder.php.html#76">76: </a>            <span class="php-keyword1">return</span> <span class="php-keyword2">strpos</span>(<span class="php-var">$var</span>, <span class="php-quote">'.'</span>) === <span class="php-keyword1">FALSE</span> ? <span class="php-var">$var</span> . <span class="php-quote">'.0'</span> : <span class="php-var">$var</span>;
-</span><span id="77" class="l"><a class="l" href="source-Neon.Encoder.php.html#77">77: </a>
-</span><span id="78" class="l"><a class="l" href="source-Neon.Encoder.php.html#78">78: </a>        } <span class="php-keyword1">else</span> {
-</span><span id="79" class="l"><a class="l" href="source-Neon.Encoder.php.html#79">79: </a>            <span class="php-keyword1">return</span> <span class="php-keyword2">json_encode</span>(<span class="php-var">$var</span>);
-</span><span id="80" class="l"><a class="l" href="source-Neon.Encoder.php.html#80">80: </a>        }
-</span><span id="81" class="l"><a class="l" href="source-Neon.Encoder.php.html#81">81: </a>    }
-</span><span id="82" class="l"><a class="l" href="source-Neon.Encoder.php.html#82">82: </a>
-</span><span id="83" class="l"><a class="l" href="source-Neon.Encoder.php.html#83">83: </a>}
-</span><span id="84" class="l"><a class="l" href="source-Neon.Encoder.php.html#84">84: </a></span></code></pre>
+</span><span id="35" class="l"><a class="l" href="source-Neon.Encoder.php.html#35">35: </a>            <span class="php-keyword1">return</span> <span class="php-var">$this</span>-&gt;encode(<span class="php-var">$var</span>-&gt;value) . <span class="php-quote">'('</span>
+</span><span id="36" class="l"><a class="l" href="source-Neon.Encoder.php.html#36">36: </a>                . (<span class="php-keyword2">is_array</span>(<span class="php-var">$var</span>-&gt;attributes) ? <span class="php-keyword2">substr</span>(<span class="php-var">$this</span>-&gt;encode(<span class="php-var">$var</span>-&gt;attributes), <span class="php-num">1</span>, -<span class="php-num">1</span>) : <span class="php-quote">''</span>) . <span class="php-quote">')'</span>;
+</span><span id="37" class="l"><a class="l" href="source-Neon.Encoder.php.html#37">37: </a>        }
+</span><span id="38" class="l"><a class="l" href="source-Neon.Encoder.php.html#38">38: </a>
+</span><span id="39" class="l"><a class="l" href="source-Neon.Encoder.php.html#39">39: </a>        <span class="php-keyword1">if</span> (<span class="php-keyword2">is_object</span>(<span class="php-var">$var</span>)) {
+</span><span id="40" class="l"><a class="l" href="source-Neon.Encoder.php.html#40">40: </a>            <span class="php-var">$obj</span> = <span class="php-var">$var</span>; <span class="php-var">$var</span> = <span class="php-keyword1">array</span>();
+</span><span id="41" class="l"><a class="l" href="source-Neon.Encoder.php.html#41">41: </a>            <span class="php-keyword1">foreach</span> (<span class="php-var">$obj</span> <span class="php-keyword1">as</span> <span class="php-var">$k</span> =&gt; <span class="php-var">$v</span>) {
+</span><span id="42" class="l"><a class="l" href="source-Neon.Encoder.php.html#42">42: </a>                <span class="php-var">$var</span>[<span class="php-var">$k</span>] = <span class="php-var">$v</span>;
+</span><span id="43" class="l"><a class="l" href="source-Neon.Encoder.php.html#43">43: </a>            }
+</span><span id="44" class="l"><a class="l" href="source-Neon.Encoder.php.html#44">44: </a>        }
+</span><span id="45" class="l"><a class="l" href="source-Neon.Encoder.php.html#45">45: </a>
+</span><span id="46" class="l"><a class="l" href="source-Neon.Encoder.php.html#46">46: </a>        <span class="php-keyword1">if</span> (<span class="php-keyword2">is_array</span>(<span class="php-var">$var</span>)) {
+</span><span id="47" class="l"><a class="l" href="source-Neon.Encoder.php.html#47">47: </a>            <span class="php-var">$isList</span> = !<span class="php-var">$var</span> || <span class="php-keyword2">array_keys</span>(<span class="php-var">$var</span>) === <span class="php-keyword2">range</span>(<span class="php-num">0</span>, <span class="php-keyword2">count</span>(<span class="php-var">$var</span>) - <span class="php-num">1</span>);
+</span><span id="48" class="l"><a class="l" href="source-Neon.Encoder.php.html#48">48: </a>            <span class="php-var">$s</span> = <span class="php-quote">''</span>;
+</span><span id="49" class="l"><a class="l" href="source-Neon.Encoder.php.html#49">49: </a>            <span class="php-keyword1">if</span> (<span class="php-var">$options</span> &amp; self::BLOCK) {
+</span><span id="50" class="l"><a class="l" href="source-Neon.Encoder.php.html#50">50: </a>                <span class="php-keyword1">if</span> (<span class="php-keyword2">count</span>(<span class="php-var">$var</span>) === <span class="php-num">0</span>) {
+</span><span id="51" class="l"><a class="l" href="source-Neon.Encoder.php.html#51">51: </a>                    <span class="php-keyword1">return</span> <span class="php-quote">'[]'</span>;
+</span><span id="52" class="l"><a class="l" href="source-Neon.Encoder.php.html#52">52: </a>                }
+</span><span id="53" class="l"><a class="l" href="source-Neon.Encoder.php.html#53">53: </a>                <span class="php-keyword1">foreach</span> (<span class="php-var">$var</span> <span class="php-keyword1">as</span> <span class="php-var">$k</span> =&gt; <span class="php-var">$v</span>) {
+</span><span id="54" class="l"><a class="l" href="source-Neon.Encoder.php.html#54">54: </a>                    <span class="php-var">$v</span> = <span class="php-var">$this</span>-&gt;encode(<span class="php-var">$v</span>, self::BLOCK);
+</span><span id="55" class="l"><a class="l" href="source-Neon.Encoder.php.html#55">55: </a>                    <span class="php-var">$s</span> .= (<span class="php-var">$isList</span> ? <span class="php-quote">'-'</span> : <span class="php-var">$this</span>-&gt;encode(<span class="php-var">$k</span>) . <span class="php-quote">':'</span>)
+</span><span id="56" class="l"><a class="l" href="source-Neon.Encoder.php.html#56">56: </a>                        . (<span class="php-keyword2">strpos</span>(<span class="php-var">$v</span>, <span class="php-quote">&quot;\n&quot;</span>) === <span class="php-keyword1">FALSE</span> ? <span class="php-quote">' '</span> . <span class="php-var">$v</span> : <span class="php-quote">&quot;\n\t&quot;</span> . <span class="php-keyword2">str_replace</span>(<span class="php-quote">&quot;\n&quot;</span>, <span class="php-quote">&quot;\n\t&quot;</span>, <span class="php-var">$v</span>))
+</span><span id="57" class="l"><a class="l" href="source-Neon.Encoder.php.html#57">57: </a>                        . <span class="php-quote">&quot;\n&quot;</span>;
+</span><span id="58" class="l"><a class="l" href="source-Neon.Encoder.php.html#58">58: </a>                    <span class="php-keyword1">continue</span>;
+</span><span id="59" class="l"><a class="l" href="source-Neon.Encoder.php.html#59">59: </a>                }
+</span><span id="60" class="l"><a class="l" href="source-Neon.Encoder.php.html#60">60: </a>                <span class="php-keyword1">return</span> <span class="php-var">$s</span>;
+</span><span id="61" class="l"><a class="l" href="source-Neon.Encoder.php.html#61">61: </a>
+</span><span id="62" class="l"><a class="l" href="source-Neon.Encoder.php.html#62">62: </a>            } <span class="php-keyword1">else</span> {
+</span><span id="63" class="l"><a class="l" href="source-Neon.Encoder.php.html#63">63: </a>                <span class="php-keyword1">foreach</span> (<span class="php-var">$var</span> <span class="php-keyword1">as</span> <span class="php-var">$k</span> =&gt; <span class="php-var">$v</span>) {
+</span><span id="64" class="l"><a class="l" href="source-Neon.Encoder.php.html#64">64: </a>                    <span class="php-var">$s</span> .= (<span class="php-var">$isList</span> ? <span class="php-quote">''</span> : <span class="php-var">$this</span>-&gt;encode(<span class="php-var">$k</span>) . <span class="php-quote">': '</span>) . <span class="php-var">$this</span>-&gt;encode(<span class="php-var">$v</span>) . <span class="php-quote">', '</span>;
+</span><span id="65" class="l"><a class="l" href="source-Neon.Encoder.php.html#65">65: </a>                }
+</span><span id="66" class="l"><a class="l" href="source-Neon.Encoder.php.html#66">66: </a>                <span class="php-keyword1">return</span> (<span class="php-var">$isList</span> ? <span class="php-quote">'['</span> : <span class="php-quote">'{'</span>) . <span class="php-keyword2">substr</span>(<span class="php-var">$s</span>, <span class="php-num">0</span>, -<span class="php-num">2</span>) . (<span class="php-var">$isList</span> ? <span class="php-quote">']'</span> : <span class="php-quote">'}'</span>);
+</span><span id="67" class="l"><a class="l" href="source-Neon.Encoder.php.html#67">67: </a>            }
+</span><span id="68" class="l"><a class="l" href="source-Neon.Encoder.php.html#68">68: </a>
+</span><span id="69" class="l"><a class="l" href="source-Neon.Encoder.php.html#69">69: </a>        } <span class="php-keyword1">elseif</span> (<span class="php-keyword2">is_string</span>(<span class="php-var">$var</span>) &amp;&amp; !<span class="php-keyword2">is_numeric</span>(<span class="php-var">$var</span>)
+</span><span id="70" class="l"><a class="l" href="source-Neon.Encoder.php.html#70">70: </a>            &amp;&amp; !<span class="php-keyword2">preg_match</span>(<span class="php-quote">'~[\x00-\x1F]|^\d{4}|^(true|false|yes|no|on|off|null)\z~i'</span>, <span class="php-var">$var</span>)
+</span><span id="71" class="l"><a class="l" href="source-Neon.Encoder.php.html#71">71: </a>            &amp;&amp; <span class="php-keyword2">preg_match</span>(<span class="php-quote">'~^'</span> . Decoder::<span class="php-var">$patterns</span>[<span class="php-num">1</span>] . <span class="php-quote">'\z~x'</span>, <span class="php-var">$var</span>) <span class="php-comment">// 1 = literals</span>
+</span><span id="72" class="l"><a class="l" href="source-Neon.Encoder.php.html#72">72: </a>        ) {
+</span><span id="73" class="l"><a class="l" href="source-Neon.Encoder.php.html#73">73: </a>            <span class="php-keyword1">return</span> <span class="php-var">$var</span>;
+</span><span id="74" class="l"><a class="l" href="source-Neon.Encoder.php.html#74">74: </a>
+</span><span id="75" class="l"><a class="l" href="source-Neon.Encoder.php.html#75">75: </a>        } <span class="php-keyword1">elseif</span> (<span class="php-keyword2">is_float</span>(<span class="php-var">$var</span>)) {
+</span><span id="76" class="l"><a class="l" href="source-Neon.Encoder.php.html#76">76: </a>            <span class="php-var">$var</span> = <span class="php-keyword2">json_encode</span>(<span class="php-var">$var</span>);
+</span><span id="77" class="l"><a class="l" href="source-Neon.Encoder.php.html#77">77: </a>            <span class="php-keyword1">return</span> <span class="php-keyword2">strpos</span>(<span class="php-var">$var</span>, <span class="php-quote">'.'</span>) === <span class="php-keyword1">FALSE</span> ? <span class="php-var">$var</span> . <span class="php-quote">'.0'</span> : <span class="php-var">$var</span>;
+</span><span id="78" class="l"><a class="l" href="source-Neon.Encoder.php.html#78">78: </a>
+</span><span id="79" class="l"><a class="l" href="source-Neon.Encoder.php.html#79">79: </a>        } <span class="php-keyword1">else</span> {
+</span><span id="80" class="l"><a class="l" href="source-Neon.Encoder.php.html#80">80: </a>            <span class="php-keyword1">return</span> <span class="php-keyword2">json_encode</span>(<span class="php-var">$var</span>);
+</span><span id="81" class="l"><a class="l" href="source-Neon.Encoder.php.html#81">81: </a>        }
+</span><span id="82" class="l"><a class="l" href="source-Neon.Encoder.php.html#82">82: </a>    }
+</span><span id="83" class="l"><a class="l" href="source-Neon.Encoder.php.html#83">83: </a>
+</span><span id="84" class="l"><a class="l" href="source-Neon.Encoder.php.html#84">84: </a>}
+</span><span id="85" class="l"><a class="l" href="source-Neon.Encoder.php.html#85">85: </a></span></code></pre>
 
 	<div id="footer">
-		Nette 2.2.2 API API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+		Nette 2.2.6 API API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
 	</div>
 </div>
 </div>
 <script src="resources/combined.js?3630868369"></script>
-<script src="elementlist.js?2087501429"></script>
+<script src="elementlist.js?1613912923"></script>
 </body>
 </html>
