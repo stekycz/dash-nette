@@ -5,10 +5,10 @@
 	<meta name="generator" content="ApiGen 2.8.0">
 	<meta name="robots" content="noindex">
 
-	<title>File Http/RequestFactory.php | Nette 2.2.6 API</title>
+	<title>File Http/RequestFactory.php | Nette 2.2.7 API</title>
 
 	<link rel="stylesheet" href="resources/style.css?3746977979">
-	<link rel="search" type="application/opensearchdescription+xml" title="Nette 2.2.6 API" href="http://api.nette.org/2.0/opensearch.xml">
+	<link rel="search" type="application/opensearchdescription+xml" title="Nette 2.2.7 API" href="http://api.nette.org/2.0/opensearch.xml">
 
 
 <script src='http://files.nette.org/js/analytics.js'></script><script>
@@ -226,7 +226,7 @@ _gaq.push(['_trackPageview']);
 </span><span id="19" class="l"><a class="l" href="source-Http.RequestFactory.php.html#19"> 19: </a><span class="php-keyword1">class</span> <a id="RequestFactory" href="source-Http.RequestFactory.php.html#RequestFactory">RequestFactory</a> <span class="php-keyword1">extends</span> Nette\Object
 </span><span id="20" class="l"><a class="l" href="source-Http.RequestFactory.php.html#20"> 20: </a>{
 </span><span id="21" class="l"><a class="l" href="source-Http.RequestFactory.php.html#21"> 21: </a>    <span class="php-comment">/** @internal */</span>
-</span><span id="22" class="l"><a class="l" href="source-Http.RequestFactory.php.html#22"> 22: </a>    <span class="php-keyword1">const</span> <a id="NONCHARS" href="source-Http.RequestFactory.php.html#NONCHARS">NONCHARS</a> = <span class="php-quote">'#[^\x09\x0A\x0D\x20-\x7E\xA0-\x{10FFFF}]#u'</span>;
+</span><span id="22" class="l"><a class="l" href="source-Http.RequestFactory.php.html#22"> 22: </a>    <span class="php-keyword1">const</span> <a id="CHARS" href="source-Http.RequestFactory.php.html#CHARS">CHARS</a> = <span class="php-quote">'#^[\x09\x0A\x0D\x20-\x7E\xA0-\x{10FFFF}]*+\z#u'</span>;
 </span><span id="23" class="l"><a class="l" href="source-Http.RequestFactory.php.html#23"> 23: </a>
 </span><span id="24" class="l"><a class="l" href="source-Http.RequestFactory.php.html#24"> 24: </a>    <span class="php-comment">/** @var array */</span>
 </span><span id="25" class="l"><a class="l" href="source-Http.RequestFactory.php.html#25"> 25: </a>    <span class="php-keyword1">public</span> <span class="php-var"><a id="$urlFilters" href="source-Http.RequestFactory.php.html#$urlFilters">$urlFilters</a></span> = <span class="php-keyword1">array</span>(
@@ -354,7 +354,7 @@ _gaq.push(['_trackPageview']);
 </span><span id="147" class="l"><a class="l" href="source-Http.RequestFactory.php.html#147">147: </a>                        <span class="php-var">$k</span> = <span class="php-keyword2">stripslashes</span>(<span class="php-var">$k</span>);
 </span><span id="148" class="l"><a class="l" href="source-Http.RequestFactory.php.html#148">148: </a>                    }
 </span><span id="149" class="l"><a class="l" href="source-Http.RequestFactory.php.html#149">149: </a>
-</span><span id="150" class="l"><a class="l" href="source-Http.RequestFactory.php.html#150">150: </a>                    <span class="php-keyword1">if</span> (!<span class="php-var">$this</span>-&gt;binary &amp;&amp; <span class="php-keyword2">is_string</span>(<span class="php-var">$k</span>) &amp;&amp; (<span class="php-keyword2">preg_match</span>(self::NONCHARS, <span class="php-var">$k</span>) || <span class="php-keyword2">preg_last_error</span>())) {
+</span><span id="150" class="l"><a class="l" href="source-Http.RequestFactory.php.html#150">150: </a>                    <span class="php-keyword1">if</span> (!<span class="php-var">$this</span>-&gt;binary &amp;&amp; <span class="php-keyword2">is_string</span>(<span class="php-var">$k</span>) &amp;&amp; (!<span class="php-keyword2">preg_match</span>(self::CHARS, <span class="php-var">$k</span>) || <span class="php-keyword2">preg_last_error</span>())) {
 </span><span id="151" class="l"><a class="l" href="source-Http.RequestFactory.php.html#151">151: </a>                        <span class="php-comment">// invalid key -&gt; ignore</span>
 </span><span id="152" class="l"><a class="l" href="source-Http.RequestFactory.php.html#152">152: </a>
 </span><span id="153" class="l"><a class="l" href="source-Http.RequestFactory.php.html#153">153: </a>                    } <span class="php-keyword1">elseif</span> (<span class="php-keyword2">is_array</span>(<span class="php-var">$v</span>)) {
@@ -365,7 +365,7 @@ _gaq.push(['_trackPageview']);
 </span><span id="158" class="l"><a class="l" href="source-Http.RequestFactory.php.html#158">158: </a>                        <span class="php-keyword1">if</span> (<span class="php-var">$gpc</span> &amp;&amp; !<span class="php-var">$useFilter</span>) {
 </span><span id="159" class="l"><a class="l" href="source-Http.RequestFactory.php.html#159">159: </a>                            <span class="php-var">$v</span> = <span class="php-keyword2">stripSlashes</span>(<span class="php-var">$v</span>);
 </span><span id="160" class="l"><a class="l" href="source-Http.RequestFactory.php.html#160">160: </a>                        }
-</span><span id="161" class="l"><a class="l" href="source-Http.RequestFactory.php.html#161">161: </a>                        <span class="php-keyword1">if</span> (!<span class="php-var">$this</span>-&gt;binary &amp;&amp; (<span class="php-keyword2">preg_match</span>(self::NONCHARS, <span class="php-var">$v</span>) || <span class="php-keyword2">preg_last_error</span>())) {
+</span><span id="161" class="l"><a class="l" href="source-Http.RequestFactory.php.html#161">161: </a>                        <span class="php-keyword1">if</span> (!<span class="php-var">$this</span>-&gt;binary &amp;&amp; (!<span class="php-keyword2">preg_match</span>(self::CHARS, <span class="php-var">$v</span>) || <span class="php-keyword2">preg_last_error</span>())) {
 </span><span id="162" class="l"><a class="l" href="source-Http.RequestFactory.php.html#162">162: </a>                            <span class="php-var">$v</span> = <span class="php-quote">''</span>;
 </span><span id="163" class="l"><a class="l" href="source-Http.RequestFactory.php.html#163">163: </a>                        }
 </span><span id="164" class="l"><a class="l" href="source-Http.RequestFactory.php.html#164">164: </a>                        <span class="php-var">$list</span>[<span class="php-var">$key</span>][<span class="php-var">$k</span>] = <span class="php-var">$v</span>;
@@ -381,7 +381,7 @@ _gaq.push(['_trackPageview']);
 </span><span id="174" class="l"><a class="l" href="source-Http.RequestFactory.php.html#174">174: </a>        <span class="php-var">$list</span> = <span class="php-keyword1">array</span>();
 </span><span id="175" class="l"><a class="l" href="source-Http.RequestFactory.php.html#175">175: </a>        <span class="php-keyword1">if</span> (!<span class="php-keyword1">empty</span>(<span class="php-var">$_FILES</span>)) {
 </span><span id="176" class="l"><a class="l" href="source-Http.RequestFactory.php.html#176">176: </a>            <span class="php-keyword1">foreach</span> (<span class="php-var">$_FILES</span> <span class="php-keyword1">as</span> <span class="php-var">$k</span> =&gt; <span class="php-var">$v</span>) {
-</span><span id="177" class="l"><a class="l" href="source-Http.RequestFactory.php.html#177">177: </a>                <span class="php-keyword1">if</span> (!<span class="php-var">$this</span>-&gt;binary &amp;&amp; <span class="php-keyword2">is_string</span>(<span class="php-var">$k</span>) &amp;&amp; (<span class="php-keyword2">preg_match</span>(self::NONCHARS, <span class="php-var">$k</span>) || <span class="php-keyword2">preg_last_error</span>())) {
+</span><span id="177" class="l"><a class="l" href="source-Http.RequestFactory.php.html#177">177: </a>                <span class="php-keyword1">if</span> (!<span class="php-var">$this</span>-&gt;binary &amp;&amp; <span class="php-keyword2">is_string</span>(<span class="php-var">$k</span>) &amp;&amp; (!<span class="php-keyword2">preg_match</span>(self::CHARS, <span class="php-var">$k</span>) || <span class="php-keyword2">preg_last_error</span>())) {
 </span><span id="178" class="l"><a class="l" href="source-Http.RequestFactory.php.html#178">178: </a>                    <span class="php-keyword1">continue</span>;
 </span><span id="179" class="l"><a class="l" href="source-Http.RequestFactory.php.html#179">179: </a>                }
 </span><span id="180" class="l"><a class="l" href="source-Http.RequestFactory.php.html#180">180: </a>                <span class="php-var">$v</span>[<span class="php-quote">'@'</span>] = &amp; <span class="php-var">$files</span>[<span class="php-var">$k</span>];
@@ -397,7 +397,7 @@ _gaq.push(['_trackPageview']);
 </span><span id="190" class="l"><a class="l" href="source-Http.RequestFactory.php.html#190">190: </a>                <span class="php-keyword1">if</span> (<span class="php-var">$gpc</span>) {
 </span><span id="191" class="l"><a class="l" href="source-Http.RequestFactory.php.html#191">191: </a>                    <span class="php-var">$v</span>[<span class="php-quote">'name'</span>] = <span class="php-keyword2">stripSlashes</span>(<span class="php-var">$v</span>[<span class="php-quote">'name'</span>]);
 </span><span id="192" class="l"><a class="l" href="source-Http.RequestFactory.php.html#192">192: </a>                }
-</span><span id="193" class="l"><a class="l" href="source-Http.RequestFactory.php.html#193">193: </a>                <span class="php-keyword1">if</span> (!<span class="php-var">$this</span>-&gt;binary &amp;&amp; (<span class="php-keyword2">preg_match</span>(self::NONCHARS, <span class="php-var">$v</span>[<span class="php-quote">'name'</span>]) || <span class="php-keyword2">preg_last_error</span>())) {
+</span><span id="193" class="l"><a class="l" href="source-Http.RequestFactory.php.html#193">193: </a>                <span class="php-keyword1">if</span> (!<span class="php-var">$this</span>-&gt;binary &amp;&amp; (!<span class="php-keyword2">preg_match</span>(self::CHARS, <span class="php-var">$v</span>[<span class="php-quote">'name'</span>]) || <span class="php-keyword2">preg_last_error</span>())) {
 </span><span id="194" class="l"><a class="l" href="source-Http.RequestFactory.php.html#194">194: </a>                    <span class="php-var">$v</span>[<span class="php-quote">'name'</span>] = <span class="php-quote">''</span>;
 </span><span id="195" class="l"><a class="l" href="source-Http.RequestFactory.php.html#195">195: </a>                }
 </span><span id="196" class="l"><a class="l" href="source-Http.RequestFactory.php.html#196">196: </a>                <span class="php-keyword1">if</span> (<span class="php-var">$v</span>[<span class="php-quote">'error'</span>] !== UPLOAD_ERR_NO_FILE) {
@@ -407,7 +407,7 @@ _gaq.push(['_trackPageview']);
 </span><span id="200" class="l"><a class="l" href="source-Http.RequestFactory.php.html#200">200: </a>            }
 </span><span id="201" class="l"><a class="l" href="source-Http.RequestFactory.php.html#201">201: </a>
 </span><span id="202" class="l"><a class="l" href="source-Http.RequestFactory.php.html#202">202: </a>            <span class="php-keyword1">foreach</span> (<span class="php-var">$v</span>[<span class="php-quote">'name'</span>] <span class="php-keyword1">as</span> <span class="php-var">$k</span> =&gt; <span class="php-var">$foo</span>) {
-</span><span id="203" class="l"><a class="l" href="source-Http.RequestFactory.php.html#203">203: </a>                <span class="php-keyword1">if</span> (!<span class="php-var">$this</span>-&gt;binary &amp;&amp; <span class="php-keyword2">is_string</span>(<span class="php-var">$k</span>) &amp;&amp; (<span class="php-keyword2">preg_match</span>(self::NONCHARS, <span class="php-var">$k</span>) || <span class="php-keyword2">preg_last_error</span>())) {
+</span><span id="203" class="l"><a class="l" href="source-Http.RequestFactory.php.html#203">203: </a>                <span class="php-keyword1">if</span> (!<span class="php-var">$this</span>-&gt;binary &amp;&amp; <span class="php-keyword2">is_string</span>(<span class="php-var">$k</span>) &amp;&amp; (!<span class="php-keyword2">preg_match</span>(self::CHARS, <span class="php-var">$k</span>) || <span class="php-keyword2">preg_last_error</span>())) {
 </span><span id="204" class="l"><a class="l" href="source-Http.RequestFactory.php.html#204">204: </a>                    <span class="php-keyword1">continue</span>;
 </span><span id="205" class="l"><a class="l" href="source-Http.RequestFactory.php.html#205">205: </a>                }
 </span><span id="206" class="l"><a class="l" href="source-Http.RequestFactory.php.html#206">206: </a>                <span class="php-var">$list</span>[] = <span class="php-keyword1">array</span>(
@@ -469,11 +469,11 @@ _gaq.push(['_trackPageview']);
 </span><span id="262" class="l"><a class="l" href="source-Http.RequestFactory.php.html#262">262: </a></span></code></pre>
 
 	<div id="footer">
-		Nette 2.2.6 API API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+		Nette 2.2.7 API API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
 	</div>
 </div>
 </div>
 <script src="resources/combined.js?3630868369"></script>
-<script src="elementlist.js?1613912923"></script>
+<script src="elementlist.js?3317918403"></script>
 </body>
 </html>

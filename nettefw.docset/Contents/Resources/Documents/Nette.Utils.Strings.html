@@ -4,10 +4,10 @@
 	<meta charset="utf-8">
 	<meta name="generator" content="ApiGen 2.8.0">
 
-	<title>Class Nette\Utils\Strings | Nette 2.2.6 API</title>
+	<title>Class Nette\Utils\Strings | Nette 2.2.7 API</title>
 
 	<link rel="stylesheet" href="resources/style.css?3746977979">
-	<link rel="search" type="application/opensearchdescription+xml" title="Nette 2.2.6 API" href="http://api.nette.org/2.0/opensearch.xml">
+	<link rel="search" type="application/opensearchdescription+xml" title="Nette 2.2.7 API" href="http://api.nette.org/2.0/opensearch.xml">
 
 
 <script src='http://files.nette.org/js/analytics.js'></script><script>
@@ -145,7 +145,6 @@ _gaq.push(['_trackPageview']);
 				<li><a href="Nette.Utils.ArrayList.html">ArrayList</a></li>
 				<li><a href="Nette.Utils.Arrays.html">Arrays</a></li>
 				<li><a href="Nette.Utils.Callback.html">Callback</a></li>
-				<li><a href="Nette.Utils.CallbackFilterIterator.html">CallbackFilterIterator</a></li>
 				<li><a href="Nette.Utils.DateTime.html">DateTime</a></li>
 				<li><a href="Nette.Utils.FileSystem.html">FileSystem</a></li>
 				<li><a href="Nette.Utils.Finder.html">Finder</a></li>
@@ -157,7 +156,6 @@ _gaq.push(['_trackPageview']);
 				<li><a href="Nette.Utils.ObjectMixin.html">ObjectMixin</a></li>
 				<li><a href="Nette.Utils.Paginator.html">Paginator</a></li>
 				<li><a href="Nette.Utils.Random.html">Random</a></li>
-				<li><a href="Nette.Utils.RecursiveCallbackFilterIterator.html">RecursiveCallbackFilterIterator</a></li>
 				<li class="active"><a href="Nette.Utils.Strings.html">Strings</a></li>
 				<li><a href="Nette.Utils.TokenIterator.html">TokenIterator</a></li>
 				<li><a href="Nette.Utils.Tokenizer.html">Tokenizer</a></li>
@@ -245,7 +243,7 @@ _gaq.push(['_trackPageview']);
 
 				<b>Author:</b>
 				David Grudl<br>
-		<b>Located at</b> <a href="source-Utils.Strings.php.html#13-515" title="Go to source code">Utils/Strings.php</a><br>
+		<b>Located at</b> <a href="source-Utils.Strings.php.html#13-520" title="Go to source code">Utils/Strings.php</a><br>
 	</div>
 
 
@@ -554,7 +552,7 @@ _gaq.push(['_trackPageview']);
 
 		<td class="name"><div>
 		<a class="anchor" href="Nette.Utils.Strings.html#_substring">#</a>
-		<code><a href="source-Utils.Strings.php.html#113-129" title="Go to source code">substring</a>( <span>string <var>$s</var></span>, <span>integer <var>$start</var></span>, <span>integer <var>$length</var> = <span class="php-keyword1">NULL</span></span> )</code>
+		<code><a href="source-Utils.Strings.php.html#113-133" title="Go to source code">substring</a>( <span>string <var>$s</var></span>, <span>integer <var>$start</var></span>, <span>integer <var>$length</var> = <span class="php-keyword1">NULL</span></span> )</code>
 
 		<div class="description short">
 			
@@ -573,9 +571,9 @@ _gaq.push(['_trackPageview']);
 					<dt><var>$s</var></dt>
 					<dd><code>string</code></dd>
 					<dt><var>$start</var></dt>
-					<dd><code>integer</code></dd>
+					<dd><code>integer</code><br>in characters (code points)</dd>
 					<dt><var>$length</var></dt>
-					<dd><code>integer</code></dd>
+					<dd><code>integer</code><br>in characters (code points)</dd>
 				</dl></div>
 
 				<h4>Returns</h4>
@@ -600,7 +598,7 @@ _gaq.push(['_trackPageview']);
 
 		<td class="name"><div>
 		<a class="anchor" href="Nette.Utils.Strings.html#_normalize">#</a>
-		<code><a href="source-Utils.Strings.php.html#132-151" title="Go to source code">normalize</a>( <span>string <var>$s</var></span> )</code>
+		<code><a href="source-Utils.Strings.php.html#136-155" title="Go to source code">normalize</a>( <span>string <var>$s</var></span> )</code>
 
 		<div class="description short">
 			
@@ -644,7 +642,7 @@ spaces.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="Nette.Utils.Strings.html#_normalizeNewLines">#</a>
-		<code><a href="source-Utils.Strings.php.html#154-162" title="Go to source code">normalizeNewLines</a>( <span>string <var>$s</var></span> )</code>
+		<code><a href="source-Utils.Strings.php.html#158-166" title="Go to source code">normalizeNewLines</a>( <span>string <var>$s</var></span> )</code>
 
 		<div class="description short">
 			
@@ -686,7 +684,7 @@ spaces.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="Nette.Utils.Strings.html#_toAscii">#</a>
-		<code><a href="source-Utils.Strings.php.html#165-189" title="Go to source code">toAscii</a>( <span>string <var>$s</var></span> )</code>
+		<code><a href="source-Utils.Strings.php.html#169-193" title="Go to source code">toAscii</a>( <span>string <var>$s</var></span> )</code>
 
 		<div class="description short">
 			
@@ -728,7 +726,7 @@ spaces.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="Nette.Utils.Strings.html#_webalize">#</a>
-		<code><a href="source-Utils.Strings.php.html#192-208" title="Go to source code">webalize</a>( <span>string <var>$s</var></span>, <span>string <var>$charlist</var> = <span class="php-keyword1">NULL</span></span>, <span>boolean <var>$lower</var> = <span class="php-keyword1">TRUE</span></span> )</code>
+		<code><a href="source-Utils.Strings.php.html#196-212" title="Go to source code">webalize</a>( <span>string <var>$s</var></span>, <span>string <var>$charlist</var> = <span class="php-keyword1">NULL</span></span>, <span>boolean <var>$lower</var> = <span class="php-keyword1">TRUE</span></span> )</code>
 
 		<div class="description short">
 			
@@ -774,7 +772,7 @@ spaces.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="Nette.Utils.Strings.html#_truncate">#</a>
-		<code><a href="source-Utils.Strings.php.html#211-233" title="Go to source code">truncate</a>( <span>string <var>$s</var></span>, <span>integer <var>$maxLen</var></span>, <span>string <var>$append</var> = <span class="php-quote">&quot;\xE2\x80\xA6&quot;</span></span> )</code>
+		<code><a href="source-Utils.Strings.php.html#215-237" title="Go to source code">truncate</a>( <span>string <var>$s</var></span>, <span>integer <var>$maxLen</var></span>, <span>string <var>$append</var> = <span class="php-quote">&quot;\xE2\x80\xA6&quot;</span></span> )</code>
 
 		<div class="description short">
 			
@@ -820,7 +818,7 @@ spaces.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="Nette.Utils.Strings.html#_indent">#</a>
-		<code><a href="source-Utils.Strings.php.html#236-249" title="Go to source code">indent</a>( <span>string <var>$s</var></span>, <span>integer <var>$level</var> = <span class="php-num">1</span></span>, <span>string <var>$chars</var> = <span class="php-quote">&quot;\t&quot;</span></span> )</code>
+		<code><a href="source-Utils.Strings.php.html#240-253" title="Go to source code">indent</a>( <span>string <var>$s</var></span>, <span>integer <var>$level</var> = <span class="php-num">1</span></span>, <span>string <var>$chars</var> = <span class="php-quote">&quot;\t&quot;</span></span> )</code>
 
 		<div class="description short">
 			
@@ -866,7 +864,7 @@ spaces.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="Nette.Utils.Strings.html#_lower">#</a>
-		<code><a href="source-Utils.Strings.php.html#252-260" title="Go to source code">lower</a>( <span>string <var>$s</var></span> )</code>
+		<code><a href="source-Utils.Strings.php.html#256-264" title="Go to source code">lower</a>( <span>string <var>$s</var></span> )</code>
 
 		<div class="description short">
 			
@@ -908,7 +906,7 @@ spaces.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="Nette.Utils.Strings.html#_upper">#</a>
-		<code><a href="source-Utils.Strings.php.html#263-271" title="Go to source code">upper</a>( <span>string <var>$s</var></span> )</code>
+		<code><a href="source-Utils.Strings.php.html#267-275" title="Go to source code">upper</a>( <span>string <var>$s</var></span> )</code>
 
 		<div class="description short">
 			
@@ -950,7 +948,7 @@ spaces.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="Nette.Utils.Strings.html#_firstUpper">#</a>
-		<code><a href="source-Utils.Strings.php.html#274-282" title="Go to source code">firstUpper</a>( <span>string <var>$s</var></span> )</code>
+		<code><a href="source-Utils.Strings.php.html#278-286" title="Go to source code">firstUpper</a>( <span>string <var>$s</var></span> )</code>
 
 		<div class="description short">
 			
@@ -992,7 +990,7 @@ spaces.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="Nette.Utils.Strings.html#_capitalize">#</a>
-		<code><a href="source-Utils.Strings.php.html#285-293" title="Go to source code">capitalize</a>( <span>string <var>$s</var></span> )</code>
+		<code><a href="source-Utils.Strings.php.html#289-297" title="Go to source code">capitalize</a>( <span>string <var>$s</var></span> )</code>
 
 		<div class="description short">
 			
@@ -1034,7 +1032,7 @@ spaces.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="Nette.Utils.Strings.html#_compare">#</a>
-		<code><a href="source-Utils.Strings.php.html#296-313" title="Go to source code">compare</a>( <span>string <var>$left</var></span>, <span>string <var>$right</var></span>, <span>integer <var>$len</var> = <span class="php-keyword1">NULL</span></span> )</code>
+		<code><a href="source-Utils.Strings.php.html#300-317" title="Go to source code">compare</a>( <span>string <var>$left</var></span>, <span>string <var>$right</var></span>, <span>integer <var>$len</var> = <span class="php-keyword1">NULL</span></span> )</code>
 
 		<div class="description short">
 			
@@ -1080,7 +1078,7 @@ spaces.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="Nette.Utils.Strings.html#_findPrefix">#</a>
-		<code><a href="source-Utils.Strings.php.html#316-338" title="Go to source code">findPrefix</a>( <span>string|array <var>$strings</var></span> )</code>
+		<code><a href="source-Utils.Strings.php.html#320-342" title="Go to source code">findPrefix</a>( <span>string|array <var>$strings</var></span> )</code>
 
 		<div class="description short">
 			
@@ -1122,17 +1120,19 @@ spaces.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="Nette.Utils.Strings.html#_length">#</a>
-		<code><a href="source-Utils.Strings.php.html#341-349" title="Go to source code">length</a>( <span>string <var>$s</var></span> )</code>
+		<code><a href="source-Utils.Strings.php.html#345-354" title="Go to source code">length</a>( <span>string <var>$s</var></span> )</code>
 
 		<div class="description short">
 			
-<p>Returns UTF-8 string length.</p>
+<p>Returns number of characters (not bytes) in UTF-8 string. That is the number
+of Unicode code points which may differ from the number of graphemes.</p>
 
 		</div>
 
 		<div class="description detailed hidden">
 			
-<p>Returns UTF-8 string length.</p>
+<p>Returns number of characters (not bytes) in UTF-8 string. That is the number
+of Unicode code points which may differ from the number of graphemes.</p>
 
 
 
@@ -1164,7 +1164,7 @@ spaces.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="Nette.Utils.Strings.html#_trim">#</a>
-		<code><a href="source-Utils.Strings.php.html#352-362" title="Go to source code">trim</a>( <span>string <var>$s</var></span>, <span>string <var>$charlist</var> = <span class="php-quote">&quot; \t\n\r\0\x0B\xC2\xA0&quot;</span></span> )</code>
+		<code><a href="source-Utils.Strings.php.html#357-367" title="Go to source code">trim</a>( <span>string <var>$s</var></span>, <span>string <var>$charlist</var> = <span class="php-quote">&quot; \t\n\r\0\x0B\xC2\xA0&quot;</span></span> )</code>
 
 		<div class="description short">
 			
@@ -1208,7 +1208,7 @@ spaces.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="Nette.Utils.Strings.html#_padLeft">#</a>
-		<code><a href="source-Utils.Strings.php.html#365-377" title="Go to source code">padLeft</a>( <span>string <var>$s</var></span>, <span>integer <var>$length</var></span>, <span>string <var>$pad</var> = <span class="php-quote">' '</span></span> )</code>
+		<code><a href="source-Utils.Strings.php.html#370-382" title="Go to source code">padLeft</a>( <span>string <var>$s</var></span>, <span>integer <var>$length</var></span>, <span>string <var>$pad</var> = <span class="php-quote">' '</span></span> )</code>
 
 		<div class="description short">
 			
@@ -1254,7 +1254,7 @@ spaces.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="Nette.Utils.Strings.html#_padRight">#</a>
-		<code><a href="source-Utils.Strings.php.html#380-392" title="Go to source code">padRight</a>( <span>string <var>$s</var></span>, <span>integer <var>$length</var></span>, <span>string <var>$pad</var> = <span class="php-quote">' '</span></span> )</code>
+		<code><a href="source-Utils.Strings.php.html#385-397" title="Go to source code">padRight</a>( <span>string <var>$s</var></span>, <span>integer <var>$length</var></span>, <span>string <var>$pad</var> = <span class="php-quote">' '</span></span> )</code>
 
 		<div class="description short">
 			
@@ -1300,7 +1300,7 @@ spaces.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="Nette.Utils.Strings.html#_reverse">#</a>
-		<code><a href="source-Utils.Strings.php.html#395-403" title="Go to source code">reverse</a>( <span>string <var>$s</var></span> )</code>
+		<code><a href="source-Utils.Strings.php.html#400-408" title="Go to source code">reverse</a>( <span>string <var>$s</var></span> )</code>
 
 		<div class="description short">
 			
@@ -1342,7 +1342,7 @@ spaces.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="Nette.Utils.Strings.html#_random">#</a>
-		<code><a href="source-Utils.Strings.php.html#406-413" title="Go to source code">random</a>( <span> <var>$length</var> = <span class="php-num">10</span></span>, <span> <var>$charlist</var> = <span class="php-quote">'0-9a-z'</span></span> )</code>
+		<code><a href="source-Utils.Strings.php.html#411-418" title="Go to source code">random</a>( <span> <var>$length</var> = <span class="php-num">10</span></span>, <span> <var>$charlist</var> = <span class="php-quote">'0-9a-z'</span></span> )</code>
 
 		<div class="description short">
 			
@@ -1378,7 +1378,7 @@ spaces.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="Nette.Utils.Strings.html#_split">#</a>
-		<code><a href="source-Utils.Strings.php.html#416-426" title="Go to source code">split</a>( <span>string <var>$subject</var></span>, <span>string <var>$pattern</var></span>, <span>integer <var>$flags</var> = <span class="php-num">0</span></span> )</code>
+		<code><a href="source-Utils.Strings.php.html#421-431" title="Go to source code">split</a>( <span>string <var>$subject</var></span>, <span>string <var>$pattern</var></span>, <span>integer <var>$flags</var> = <span class="php-num">0</span></span> )</code>
 
 		<div class="description short">
 			
@@ -1424,7 +1424,7 @@ spaces.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="Nette.Utils.Strings.html#_match">#</a>
-		<code><a href="source-Utils.Strings.php.html#429-445" title="Go to source code">match</a>( <span>string <var>$subject</var></span>, <span>string <var>$pattern</var></span>, <span>integer <var>$flags</var> = <span class="php-num">0</span></span>, <span>integer <var>$offset</var> = <span class="php-num">0</span></span> )</code>
+		<code><a href="source-Utils.Strings.php.html#434-450" title="Go to source code">match</a>( <span>string <var>$subject</var></span>, <span>string <var>$pattern</var></span>, <span>integer <var>$flags</var> = <span class="php-num">0</span></span>, <span>integer <var>$offset</var> = <span class="php-num">0</span></span> )</code>
 
 		<div class="description short">
 			
@@ -1472,7 +1472,7 @@ spaces.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="Nette.Utils.Strings.html#_matchAll">#</a>
-		<code><a href="source-Utils.Strings.php.html#448-467" title="Go to source code">matchAll</a>( <span>string <var>$subject</var></span>, <span>string <var>$pattern</var></span>, <span>integer <var>$flags</var> = <span class="php-num">0</span></span>, <span>integer <var>$offset</var> = <span class="php-num">0</span></span> )</code>
+		<code><a href="source-Utils.Strings.php.html#453-472" title="Go to source code">matchAll</a>( <span>string <var>$subject</var></span>, <span>string <var>$pattern</var></span>, <span>integer <var>$flags</var> = <span class="php-num">0</span></span>, <span>integer <var>$offset</var> = <span class="php-num">0</span></span> )</code>
 
 		<div class="description short">
 			
@@ -1520,7 +1520,7 @@ spaces.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="Nette.Utils.Strings.html#_replace">#</a>
-		<code><a href="source-Utils.Strings.php.html#470-496" title="Go to source code">replace</a>( <span>string <var>$subject</var></span>, <span>string|array <var>$pattern</var></span>, <span>string|callable <var>$replacement</var> = <span class="php-keyword1">NULL</span></span>, <span>integer <var>$limit</var> = -<span class="php-num">1</span></span> )</code>
+		<code><a href="source-Utils.Strings.php.html#475-501" title="Go to source code">replace</a>( <span>string <var>$subject</var></span>, <span>string|array <var>$pattern</var></span>, <span>string|callable <var>$replacement</var> = <span class="php-keyword1">NULL</span></span>, <span>integer <var>$limit</var> = -<span class="php-num">1</span></span> )</code>
 
 		<div class="description short">
 			
@@ -1579,11 +1579,11 @@ spaces.</p>
 </div>
 
 	<div id="footer">
-		Nette 2.2.6 API API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+		Nette 2.2.7 API API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
 	</div>
 </div>
 </div>
 <script src="resources/combined.js?3630868369"></script>
-<script src="elementlist.js?1613912923"></script>
+<script src="elementlist.js?3317918403"></script>
 </body>
 </html>

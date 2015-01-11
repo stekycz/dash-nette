@@ -5,10 +5,10 @@
 	<meta name="generator" content="ApiGen 2.8.0">
 	<meta name="robots" content="noindex">
 
-	<title>File Utils/FileSystem.php | Nette 2.2.6 API</title>
+	<title>File Utils/FileSystem.php | Nette 2.2.7 API</title>
 
 	<link rel="stylesheet" href="resources/style.css?3746977979">
-	<link rel="search" type="application/opensearchdescription+xml" title="Nette 2.2.6 API" href="http://api.nette.org/2.0/opensearch.xml">
+	<link rel="search" type="application/opensearchdescription+xml" title="Nette 2.2.7 API" href="http://api.nette.org/2.0/opensearch.xml">
 
 
 <script src='http://files.nette.org/js/analytics.js'></script><script>
@@ -146,7 +146,6 @@ _gaq.push(['_trackPageview']);
 				<li><a href="Nette.Utils.ArrayList.html">ArrayList</a></li>
 				<li><a href="Nette.Utils.Arrays.html">Arrays</a></li>
 				<li><a href="Nette.Utils.Callback.html">Callback</a></li>
-				<li><a href="Nette.Utils.CallbackFilterIterator.html">CallbackFilterIterator</a></li>
 				<li><a href="Nette.Utils.DateTime.html">DateTime</a></li>
 				<li class="active"><a href="Nette.Utils.FileSystem.html">FileSystem</a></li>
 				<li><a href="Nette.Utils.Finder.html">Finder</a></li>
@@ -158,7 +157,6 @@ _gaq.push(['_trackPageview']);
 				<li><a href="Nette.Utils.ObjectMixin.html">ObjectMixin</a></li>
 				<li><a href="Nette.Utils.Paginator.html">Paginator</a></li>
 				<li><a href="Nette.Utils.Random.html">Random</a></li>
-				<li><a href="Nette.Utils.RecursiveCallbackFilterIterator.html">RecursiveCallbackFilterIterator</a></li>
 				<li><a href="Nette.Utils.Strings.html">Strings</a></li>
 				<li><a href="Nette.Utils.TokenIterator.html">TokenIterator</a></li>
 				<li><a href="Nette.Utils.Tokenizer.html">Tokenizer</a></li>
@@ -244,128 +242,134 @@ _gaq.push(['_trackPageview']);
 </span><span id="21" class="l"><a class="l" href="source-Utils.FileSystem.php.html#21"> 21: </a>    <span class="php-comment">/**
 </span></span><span id="22" class="l"><a class="l" href="source-Utils.FileSystem.php.html#22"> 22: </a><span class="php-comment">     * Creates a directory.
 </span></span><span id="23" class="l"><a class="l" href="source-Utils.FileSystem.php.html#23"> 23: </a><span class="php-comment">     * @return void
-</span></span><span id="24" class="l"><a class="l" href="source-Utils.FileSystem.php.html#24"> 24: </a><span class="php-comment">     */</span>
-</span><span id="25" class="l"><a class="l" href="source-Utils.FileSystem.php.html#25"> 25: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">static</span> <span class="php-keyword1">function</span> <a id="_createDir" href="source-Utils.FileSystem.php.html#_createDir">createDir</a>(<span class="php-var">$dir</span>, <span class="php-var">$mode</span> = <span class="php-num">0777</span>)
-</span><span id="26" class="l"><a class="l" href="source-Utils.FileSystem.php.html#26"> 26: </a>    {
-</span><span id="27" class="l"><a class="l" href="source-Utils.FileSystem.php.html#27"> 27: </a>        <span class="php-keyword1">if</span> (!<span class="php-keyword2">is_dir</span>(<span class="php-var">$dir</span>) &amp;&amp; !@<span class="php-keyword2">mkdir</span>(<span class="php-var">$dir</span>, <span class="php-var">$mode</span>, <span class="php-keyword1">TRUE</span>)) { <span class="php-comment">// intentionally @; not atomic</span>
-</span><span id="28" class="l"><a class="l" href="source-Utils.FileSystem.php.html#28"> 28: </a>            <span class="php-keyword1">throw</span> <span class="php-keyword1">new</span> Nette\IOException(<span class="php-quote">&quot;Unable to create directory '</span><span class="php-var">$dir</span><span class="php-quote">'.&quot;</span>);
-</span><span id="29" class="l"><a class="l" href="source-Utils.FileSystem.php.html#29"> 29: </a>        }
-</span><span id="30" class="l"><a class="l" href="source-Utils.FileSystem.php.html#30"> 30: </a>    }
-</span><span id="31" class="l"><a class="l" href="source-Utils.FileSystem.php.html#31"> 31: </a>
+</span></span><span id="24" class="l"><a class="l" href="source-Utils.FileSystem.php.html#24"> 24: </a><span class="php-comment">     * @throws Nette\IOException
+</span></span><span id="25" class="l"><a class="l" href="source-Utils.FileSystem.php.html#25"> 25: </a><span class="php-comment">     */</span>
+</span><span id="26" class="l"><a class="l" href="source-Utils.FileSystem.php.html#26"> 26: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">static</span> <span class="php-keyword1">function</span> <a id="_createDir" href="source-Utils.FileSystem.php.html#_createDir">createDir</a>(<span class="php-var">$dir</span>, <span class="php-var">$mode</span> = <span class="php-num">0777</span>)
+</span><span id="27" class="l"><a class="l" href="source-Utils.FileSystem.php.html#27"> 27: </a>    {
+</span><span id="28" class="l"><a class="l" href="source-Utils.FileSystem.php.html#28"> 28: </a>        <span class="php-keyword1">if</span> (!<span class="php-keyword2">is_dir</span>(<span class="php-var">$dir</span>) &amp;&amp; !@<span class="php-keyword2">mkdir</span>(<span class="php-var">$dir</span>, <span class="php-var">$mode</span>, <span class="php-keyword1">TRUE</span>)) { <span class="php-comment">// intentionally @; not atomic</span>
+</span><span id="29" class="l"><a class="l" href="source-Utils.FileSystem.php.html#29"> 29: </a>            <span class="php-keyword1">throw</span> <span class="php-keyword1">new</span> Nette\IOException(<span class="php-quote">&quot;Unable to create directory '</span><span class="php-var">$dir</span><span class="php-quote">'.&quot;</span>);
+</span><span id="30" class="l"><a class="l" href="source-Utils.FileSystem.php.html#30"> 30: </a>        }
+</span><span id="31" class="l"><a class="l" href="source-Utils.FileSystem.php.html#31"> 31: </a>    }
 </span><span id="32" class="l"><a class="l" href="source-Utils.FileSystem.php.html#32"> 32: </a>
-</span><span id="33" class="l"><a class="l" href="source-Utils.FileSystem.php.html#33"> 33: </a>    <span class="php-comment">/**
-</span></span><span id="34" class="l"><a class="l" href="source-Utils.FileSystem.php.html#34"> 34: </a><span class="php-comment">     * Copies a file or directory.
-</span></span><span id="35" class="l"><a class="l" href="source-Utils.FileSystem.php.html#35"> 35: </a><span class="php-comment">     * @return void
-</span></span><span id="36" class="l"><a class="l" href="source-Utils.FileSystem.php.html#36"> 36: </a><span class="php-comment">     */</span>
-</span><span id="37" class="l"><a class="l" href="source-Utils.FileSystem.php.html#37"> 37: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">static</span> <span class="php-keyword1">function</span> <span class="php-keyword2">copy</span>(<span class="php-var">$source</span>, <span class="php-var">$dest</span>, <span class="php-var">$overwrite</span> = <span class="php-keyword1">TRUE</span>)
-</span><span id="38" class="l"><a class="l" href="source-Utils.FileSystem.php.html#38"> 38: </a>    {
-</span><span id="39" class="l"><a class="l" href="source-Utils.FileSystem.php.html#39"> 39: </a>        <span class="php-keyword1">if</span> (<span class="php-keyword2">stream_is_local</span>(<span class="php-var">$source</span>) &amp;&amp; !<span class="php-keyword2">file_exists</span>(<span class="php-var">$source</span>)) {
-</span><span id="40" class="l"><a class="l" href="source-Utils.FileSystem.php.html#40"> 40: </a>            <span class="php-keyword1">throw</span> <span class="php-keyword1">new</span> Nette\IOException(<span class="php-quote">&quot;File or directory '</span><span class="php-var">$source</span><span class="php-quote">' not found.&quot;</span>);
-</span><span id="41" class="l"><a class="l" href="source-Utils.FileSystem.php.html#41"> 41: </a>
-</span><span id="42" class="l"><a class="l" href="source-Utils.FileSystem.php.html#42"> 42: </a>        } <span class="php-keyword1">elseif</span> (!<span class="php-var">$overwrite</span> &amp;&amp; <span class="php-keyword2">file_exists</span>(<span class="php-var">$dest</span>)) {
-</span><span id="43" class="l"><a class="l" href="source-Utils.FileSystem.php.html#43"> 43: </a>            <span class="php-keyword1">throw</span> <span class="php-keyword1">new</span> Nette\InvalidStateException(<span class="php-quote">&quot;File or directory '</span><span class="php-var">$dest</span><span class="php-quote">' already exists.&quot;</span>);
-</span><span id="44" class="l"><a class="l" href="source-Utils.FileSystem.php.html#44"> 44: </a>
-</span><span id="45" class="l"><a class="l" href="source-Utils.FileSystem.php.html#45"> 45: </a>        } <span class="php-keyword1">elseif</span> (<span class="php-keyword2">is_dir</span>(<span class="php-var">$source</span>)) {
-</span><span id="46" class="l"><a class="l" href="source-Utils.FileSystem.php.html#46"> 46: </a>            <span class="php-keyword1">static</span>::createDir(<span class="php-var">$dest</span>);
-</span><span id="47" class="l"><a class="l" href="source-Utils.FileSystem.php.html#47"> 47: </a>            <span class="php-keyword1">foreach</span> (<span class="php-keyword1">new</span> \FilesystemIterator(<span class="php-var">$dest</span>) <span class="php-keyword1">as</span> <span class="php-var">$item</span>) {
-</span><span id="48" class="l"><a class="l" href="source-Utils.FileSystem.php.html#48"> 48: </a>                <span class="php-keyword1">static</span>::<span class="php-keyword2">delete</span>(<span class="php-var">$item</span>);
-</span><span id="49" class="l"><a class="l" href="source-Utils.FileSystem.php.html#49"> 49: </a>            }
-</span><span id="50" class="l"><a class="l" href="source-Utils.FileSystem.php.html#50"> 50: </a>            <span class="php-keyword1">foreach</span> (<span class="php-var">$iterator</span> = <span class="php-keyword1">new</span> \RecursiveIteratorIterator(<span class="php-keyword1">new</span> \RecursiveDirectoryIterator(<span class="php-var">$source</span>, \RecursiveDirectoryIterator::SKIP_DOTS), \RecursiveIteratorIterator::SELF_FIRST) <span class="php-keyword1">as</span> <span class="php-var">$item</span>) {
-</span><span id="51" class="l"><a class="l" href="source-Utils.FileSystem.php.html#51"> 51: </a>                <span class="php-keyword1">if</span> (<span class="php-var">$item</span>-&gt;isDir()) {
-</span><span id="52" class="l"><a class="l" href="source-Utils.FileSystem.php.html#52"> 52: </a>                    <span class="php-keyword1">static</span>::createDir(<span class="php-var">$dest</span> . <span class="php-quote">'/'</span> . <span class="php-var">$iterator</span>-&gt;getSubPathName());
-</span><span id="53" class="l"><a class="l" href="source-Utils.FileSystem.php.html#53"> 53: </a>                } <span class="php-keyword1">else</span> {
-</span><span id="54" class="l"><a class="l" href="source-Utils.FileSystem.php.html#54"> 54: </a>                    <span class="php-keyword1">static</span>::<span class="php-keyword2">copy</span>(<span class="php-var">$item</span>, <span class="php-var">$dest</span> . <span class="php-quote">'/'</span> . <span class="php-var">$iterator</span>-&gt;getSubPathName());
-</span><span id="55" class="l"><a class="l" href="source-Utils.FileSystem.php.html#55"> 55: </a>                }
-</span><span id="56" class="l"><a class="l" href="source-Utils.FileSystem.php.html#56"> 56: </a>            }
-</span><span id="57" class="l"><a class="l" href="source-Utils.FileSystem.php.html#57"> 57: </a>
-</span><span id="58" class="l"><a class="l" href="source-Utils.FileSystem.php.html#58"> 58: </a>        } <span class="php-keyword1">else</span> {
-</span><span id="59" class="l"><a class="l" href="source-Utils.FileSystem.php.html#59"> 59: </a>            <span class="php-keyword1">static</span>::createDir(<span class="php-keyword2">dirname</span>(<span class="php-var">$dest</span>));
-</span><span id="60" class="l"><a class="l" href="source-Utils.FileSystem.php.html#60"> 60: </a>            <span class="php-keyword1">if</span> (@<span class="php-keyword2">stream_copy_to_stream</span>(<span class="php-keyword2">fopen</span>(<span class="php-var">$source</span>, <span class="php-quote">'r'</span>), <span class="php-keyword2">fopen</span>(<span class="php-var">$dest</span>, <span class="php-quote">'w'</span>)) === <span class="php-keyword1">FALSE</span>) {
-</span><span id="61" class="l"><a class="l" href="source-Utils.FileSystem.php.html#61"> 61: </a>                <span class="php-keyword1">throw</span> <span class="php-keyword1">new</span> Nette\IOException(<span class="php-quote">&quot;Unable to copy file '</span><span class="php-var">$source</span><span class="php-quote">' to '</span><span class="php-var">$dest</span><span class="php-quote">'.&quot;</span>);
-</span><span id="62" class="l"><a class="l" href="source-Utils.FileSystem.php.html#62"> 62: </a>            }
-</span><span id="63" class="l"><a class="l" href="source-Utils.FileSystem.php.html#63"> 63: </a>        }
-</span><span id="64" class="l"><a class="l" href="source-Utils.FileSystem.php.html#64"> 64: </a>    }
-</span><span id="65" class="l"><a class="l" href="source-Utils.FileSystem.php.html#65"> 65: </a>
-</span><span id="66" class="l"><a class="l" href="source-Utils.FileSystem.php.html#66"> 66: </a>
-</span><span id="67" class="l"><a class="l" href="source-Utils.FileSystem.php.html#67"> 67: </a>    <span class="php-comment">/**
-</span></span><span id="68" class="l"><a class="l" href="source-Utils.FileSystem.php.html#68"> 68: </a><span class="php-comment">     * Deletes a file or directory.
-</span></span><span id="69" class="l"><a class="l" href="source-Utils.FileSystem.php.html#69"> 69: </a><span class="php-comment">     * @return void
-</span></span><span id="70" class="l"><a class="l" href="source-Utils.FileSystem.php.html#70"> 70: </a><span class="php-comment">     */</span>
-</span><span id="71" class="l"><a class="l" href="source-Utils.FileSystem.php.html#71"> 71: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">static</span> <span class="php-keyword1">function</span> <span class="php-keyword2">delete</span>(<span class="php-var">$path</span>)
-</span><span id="72" class="l"><a class="l" href="source-Utils.FileSystem.php.html#72"> 72: </a>    {
-</span><span id="73" class="l"><a class="l" href="source-Utils.FileSystem.php.html#73"> 73: </a>        <span class="php-keyword1">if</span> (<span class="php-keyword2">is_file</span>(<span class="php-var">$path</span>) || <span class="php-keyword2">is_link</span>(<span class="php-var">$path</span>)) {
-</span><span id="74" class="l"><a class="l" href="source-Utils.FileSystem.php.html#74"> 74: </a>            <span class="php-var">$func</span> = DIRECTORY_SEPARATOR === <span class="php-quote">'\\'</span> &amp;&amp; <span class="php-keyword2">is_dir</span>(<span class="php-var">$path</span>) ? <span class="php-quote">'rmdir'</span> : <span class="php-quote">'unlink'</span>;
-</span><span id="75" class="l"><a class="l" href="source-Utils.FileSystem.php.html#75"> 75: </a>            <span class="php-keyword1">if</span> (!@<span class="php-var">$func</span>(<span class="php-var">$path</span>)) {
-</span><span id="76" class="l"><a class="l" href="source-Utils.FileSystem.php.html#76"> 76: </a>                <span class="php-keyword1">throw</span> <span class="php-keyword1">new</span> Nette\IOException(<span class="php-quote">&quot;Unable to delete '</span><span class="php-var">$path</span><span class="php-quote">'.&quot;</span>);
-</span><span id="77" class="l"><a class="l" href="source-Utils.FileSystem.php.html#77"> 77: </a>            }
-</span><span id="78" class="l"><a class="l" href="source-Utils.FileSystem.php.html#78"> 78: </a>
-</span><span id="79" class="l"><a class="l" href="source-Utils.FileSystem.php.html#79"> 79: </a>        } <span class="php-keyword1">elseif</span> (<span class="php-keyword2">is_dir</span>(<span class="php-var">$path</span>)) {
-</span><span id="80" class="l"><a class="l" href="source-Utils.FileSystem.php.html#80"> 80: </a>            <span class="php-keyword1">foreach</span> (<span class="php-keyword1">new</span> \FilesystemIterator(<span class="php-var">$path</span>) <span class="php-keyword1">as</span> <span class="php-var">$item</span>) {
-</span><span id="81" class="l"><a class="l" href="source-Utils.FileSystem.php.html#81"> 81: </a>                <span class="php-keyword1">static</span>::<span class="php-keyword2">delete</span>(<span class="php-var">$item</span>);
-</span><span id="82" class="l"><a class="l" href="source-Utils.FileSystem.php.html#82"> 82: </a>            }
-</span><span id="83" class="l"><a class="l" href="source-Utils.FileSystem.php.html#83"> 83: </a>            <span class="php-keyword1">if</span> (!@<span class="php-keyword2">rmdir</span>(<span class="php-var">$path</span>)) {
-</span><span id="84" class="l"><a class="l" href="source-Utils.FileSystem.php.html#84"> 84: </a>                <span class="php-keyword1">throw</span> <span class="php-keyword1">new</span> Nette\IOException(<span class="php-quote">&quot;Unable to delete directory '</span><span class="php-var">$path</span><span class="php-quote">'.&quot;</span>);
+</span><span id="33" class="l"><a class="l" href="source-Utils.FileSystem.php.html#33"> 33: </a>
+</span><span id="34" class="l"><a class="l" href="source-Utils.FileSystem.php.html#34"> 34: </a>    <span class="php-comment">/**
+</span></span><span id="35" class="l"><a class="l" href="source-Utils.FileSystem.php.html#35"> 35: </a><span class="php-comment">     * Copies a file or directory.
+</span></span><span id="36" class="l"><a class="l" href="source-Utils.FileSystem.php.html#36"> 36: </a><span class="php-comment">     * @return void
+</span></span><span id="37" class="l"><a class="l" href="source-Utils.FileSystem.php.html#37"> 37: </a><span class="php-comment">     * @throws Nette\IOException
+</span></span><span id="38" class="l"><a class="l" href="source-Utils.FileSystem.php.html#38"> 38: </a><span class="php-comment">     */</span>
+</span><span id="39" class="l"><a class="l" href="source-Utils.FileSystem.php.html#39"> 39: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">static</span> <span class="php-keyword1">function</span> <span class="php-keyword2">copy</span>(<span class="php-var">$source</span>, <span class="php-var">$dest</span>, <span class="php-var">$overwrite</span> = <span class="php-keyword1">TRUE</span>)
+</span><span id="40" class="l"><a class="l" href="source-Utils.FileSystem.php.html#40"> 40: </a>    {
+</span><span id="41" class="l"><a class="l" href="source-Utils.FileSystem.php.html#41"> 41: </a>        <span class="php-keyword1">if</span> (<span class="php-keyword2">stream_is_local</span>(<span class="php-var">$source</span>) &amp;&amp; !<span class="php-keyword2">file_exists</span>(<span class="php-var">$source</span>)) {
+</span><span id="42" class="l"><a class="l" href="source-Utils.FileSystem.php.html#42"> 42: </a>            <span class="php-keyword1">throw</span> <span class="php-keyword1">new</span> Nette\IOException(<span class="php-quote">&quot;File or directory '</span><span class="php-var">$source</span><span class="php-quote">' not found.&quot;</span>);
+</span><span id="43" class="l"><a class="l" href="source-Utils.FileSystem.php.html#43"> 43: </a>
+</span><span id="44" class="l"><a class="l" href="source-Utils.FileSystem.php.html#44"> 44: </a>        } <span class="php-keyword1">elseif</span> (!<span class="php-var">$overwrite</span> &amp;&amp; <span class="php-keyword2">file_exists</span>(<span class="php-var">$dest</span>)) {
+</span><span id="45" class="l"><a class="l" href="source-Utils.FileSystem.php.html#45"> 45: </a>            <span class="php-keyword1">throw</span> <span class="php-keyword1">new</span> Nette\InvalidStateException(<span class="php-quote">&quot;File or directory '</span><span class="php-var">$dest</span><span class="php-quote">' already exists.&quot;</span>);
+</span><span id="46" class="l"><a class="l" href="source-Utils.FileSystem.php.html#46"> 46: </a>
+</span><span id="47" class="l"><a class="l" href="source-Utils.FileSystem.php.html#47"> 47: </a>        } <span class="php-keyword1">elseif</span> (<span class="php-keyword2">is_dir</span>(<span class="php-var">$source</span>)) {
+</span><span id="48" class="l"><a class="l" href="source-Utils.FileSystem.php.html#48"> 48: </a>            <span class="php-keyword1">static</span>::createDir(<span class="php-var">$dest</span>);
+</span><span id="49" class="l"><a class="l" href="source-Utils.FileSystem.php.html#49"> 49: </a>            <span class="php-keyword1">foreach</span> (<span class="php-keyword1">new</span> \FilesystemIterator(<span class="php-var">$dest</span>) <span class="php-keyword1">as</span> <span class="php-var">$item</span>) {
+</span><span id="50" class="l"><a class="l" href="source-Utils.FileSystem.php.html#50"> 50: </a>                <span class="php-keyword1">static</span>::<span class="php-keyword2">delete</span>(<span class="php-var">$item</span>);
+</span><span id="51" class="l"><a class="l" href="source-Utils.FileSystem.php.html#51"> 51: </a>            }
+</span><span id="52" class="l"><a class="l" href="source-Utils.FileSystem.php.html#52"> 52: </a>            <span class="php-keyword1">foreach</span> (<span class="php-var">$iterator</span> = <span class="php-keyword1">new</span> \RecursiveIteratorIterator(<span class="php-keyword1">new</span> \RecursiveDirectoryIterator(<span class="php-var">$source</span>, \RecursiveDirectoryIterator::SKIP_DOTS), \RecursiveIteratorIterator::SELF_FIRST) <span class="php-keyword1">as</span> <span class="php-var">$item</span>) {
+</span><span id="53" class="l"><a class="l" href="source-Utils.FileSystem.php.html#53"> 53: </a>                <span class="php-keyword1">if</span> (<span class="php-var">$item</span>-&gt;isDir()) {
+</span><span id="54" class="l"><a class="l" href="source-Utils.FileSystem.php.html#54"> 54: </a>                    <span class="php-keyword1">static</span>::createDir(<span class="php-var">$dest</span> . <span class="php-quote">'/'</span> . <span class="php-var">$iterator</span>-&gt;getSubPathName());
+</span><span id="55" class="l"><a class="l" href="source-Utils.FileSystem.php.html#55"> 55: </a>                } <span class="php-keyword1">else</span> {
+</span><span id="56" class="l"><a class="l" href="source-Utils.FileSystem.php.html#56"> 56: </a>                    <span class="php-keyword1">static</span>::<span class="php-keyword2">copy</span>(<span class="php-var">$item</span>, <span class="php-var">$dest</span> . <span class="php-quote">'/'</span> . <span class="php-var">$iterator</span>-&gt;getSubPathName());
+</span><span id="57" class="l"><a class="l" href="source-Utils.FileSystem.php.html#57"> 57: </a>                }
+</span><span id="58" class="l"><a class="l" href="source-Utils.FileSystem.php.html#58"> 58: </a>            }
+</span><span id="59" class="l"><a class="l" href="source-Utils.FileSystem.php.html#59"> 59: </a>
+</span><span id="60" class="l"><a class="l" href="source-Utils.FileSystem.php.html#60"> 60: </a>        } <span class="php-keyword1">else</span> {
+</span><span id="61" class="l"><a class="l" href="source-Utils.FileSystem.php.html#61"> 61: </a>            <span class="php-keyword1">static</span>::createDir(<span class="php-keyword2">dirname</span>(<span class="php-var">$dest</span>));
+</span><span id="62" class="l"><a class="l" href="source-Utils.FileSystem.php.html#62"> 62: </a>            <span class="php-keyword1">if</span> (@<span class="php-keyword2">stream_copy_to_stream</span>(<span class="php-keyword2">fopen</span>(<span class="php-var">$source</span>, <span class="php-quote">'r'</span>), <span class="php-keyword2">fopen</span>(<span class="php-var">$dest</span>, <span class="php-quote">'w'</span>)) === <span class="php-keyword1">FALSE</span>) {
+</span><span id="63" class="l"><a class="l" href="source-Utils.FileSystem.php.html#63"> 63: </a>                <span class="php-keyword1">throw</span> <span class="php-keyword1">new</span> Nette\IOException(<span class="php-quote">&quot;Unable to copy file '</span><span class="php-var">$source</span><span class="php-quote">' to '</span><span class="php-var">$dest</span><span class="php-quote">'.&quot;</span>);
+</span><span id="64" class="l"><a class="l" href="source-Utils.FileSystem.php.html#64"> 64: </a>            }
+</span><span id="65" class="l"><a class="l" href="source-Utils.FileSystem.php.html#65"> 65: </a>        }
+</span><span id="66" class="l"><a class="l" href="source-Utils.FileSystem.php.html#66"> 66: </a>    }
+</span><span id="67" class="l"><a class="l" href="source-Utils.FileSystem.php.html#67"> 67: </a>
+</span><span id="68" class="l"><a class="l" href="source-Utils.FileSystem.php.html#68"> 68: </a>
+</span><span id="69" class="l"><a class="l" href="source-Utils.FileSystem.php.html#69"> 69: </a>    <span class="php-comment">/**
+</span></span><span id="70" class="l"><a class="l" href="source-Utils.FileSystem.php.html#70"> 70: </a><span class="php-comment">     * Deletes a file or directory.
+</span></span><span id="71" class="l"><a class="l" href="source-Utils.FileSystem.php.html#71"> 71: </a><span class="php-comment">     * @return void
+</span></span><span id="72" class="l"><a class="l" href="source-Utils.FileSystem.php.html#72"> 72: </a><span class="php-comment">     * @throws Nette\IOException
+</span></span><span id="73" class="l"><a class="l" href="source-Utils.FileSystem.php.html#73"> 73: </a><span class="php-comment">     */</span>
+</span><span id="74" class="l"><a class="l" href="source-Utils.FileSystem.php.html#74"> 74: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">static</span> <span class="php-keyword1">function</span> <span class="php-keyword2">delete</span>(<span class="php-var">$path</span>)
+</span><span id="75" class="l"><a class="l" href="source-Utils.FileSystem.php.html#75"> 75: </a>    {
+</span><span id="76" class="l"><a class="l" href="source-Utils.FileSystem.php.html#76"> 76: </a>        <span class="php-keyword1">if</span> (<span class="php-keyword2">is_file</span>(<span class="php-var">$path</span>) || <span class="php-keyword2">is_link</span>(<span class="php-var">$path</span>)) {
+</span><span id="77" class="l"><a class="l" href="source-Utils.FileSystem.php.html#77"> 77: </a>            <span class="php-var">$func</span> = DIRECTORY_SEPARATOR === <span class="php-quote">'\\'</span> &amp;&amp; <span class="php-keyword2">is_dir</span>(<span class="php-var">$path</span>) ? <span class="php-quote">'rmdir'</span> : <span class="php-quote">'unlink'</span>;
+</span><span id="78" class="l"><a class="l" href="source-Utils.FileSystem.php.html#78"> 78: </a>            <span class="php-keyword1">if</span> (!@<span class="php-var">$func</span>(<span class="php-var">$path</span>)) {
+</span><span id="79" class="l"><a class="l" href="source-Utils.FileSystem.php.html#79"> 79: </a>                <span class="php-keyword1">throw</span> <span class="php-keyword1">new</span> Nette\IOException(<span class="php-quote">&quot;Unable to delete '</span><span class="php-var">$path</span><span class="php-quote">'.&quot;</span>);
+</span><span id="80" class="l"><a class="l" href="source-Utils.FileSystem.php.html#80"> 80: </a>            }
+</span><span id="81" class="l"><a class="l" href="source-Utils.FileSystem.php.html#81"> 81: </a>
+</span><span id="82" class="l"><a class="l" href="source-Utils.FileSystem.php.html#82"> 82: </a>        } <span class="php-keyword1">elseif</span> (<span class="php-keyword2">is_dir</span>(<span class="php-var">$path</span>)) {
+</span><span id="83" class="l"><a class="l" href="source-Utils.FileSystem.php.html#83"> 83: </a>            <span class="php-keyword1">foreach</span> (<span class="php-keyword1">new</span> \FilesystemIterator(<span class="php-var">$path</span>) <span class="php-keyword1">as</span> <span class="php-var">$item</span>) {
+</span><span id="84" class="l"><a class="l" href="source-Utils.FileSystem.php.html#84"> 84: </a>                <span class="php-keyword1">static</span>::<span class="php-keyword2">delete</span>(<span class="php-var">$item</span>);
 </span><span id="85" class="l"><a class="l" href="source-Utils.FileSystem.php.html#85"> 85: </a>            }
-</span><span id="86" class="l"><a class="l" href="source-Utils.FileSystem.php.html#86"> 86: </a>        }
-</span><span id="87" class="l"><a class="l" href="source-Utils.FileSystem.php.html#87"> 87: </a>    }
-</span><span id="88" class="l"><a class="l" href="source-Utils.FileSystem.php.html#88"> 88: </a>
-</span><span id="89" class="l"><a class="l" href="source-Utils.FileSystem.php.html#89"> 89: </a>
-</span><span id="90" class="l"><a class="l" href="source-Utils.FileSystem.php.html#90"> 90: </a>    <span class="php-comment">/**
-</span></span><span id="91" class="l"><a class="l" href="source-Utils.FileSystem.php.html#91"> 91: </a><span class="php-comment">     * Renames a file or directory.
-</span></span><span id="92" class="l"><a class="l" href="source-Utils.FileSystem.php.html#92"> 92: </a><span class="php-comment">     * @return void
-</span></span><span id="93" class="l"><a class="l" href="source-Utils.FileSystem.php.html#93"> 93: </a><span class="php-comment">     */</span>
-</span><span id="94" class="l"><a class="l" href="source-Utils.FileSystem.php.html#94"> 94: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">static</span> <span class="php-keyword1">function</span> <span class="php-keyword2">rename</span>(<span class="php-var">$name</span>, <span class="php-var">$newName</span>, <span class="php-var">$overwrite</span> = <span class="php-keyword1">TRUE</span>)
-</span><span id="95" class="l"><a class="l" href="source-Utils.FileSystem.php.html#95"> 95: </a>    {
-</span><span id="96" class="l"><a class="l" href="source-Utils.FileSystem.php.html#96"> 96: </a>        <span class="php-keyword1">if</span> (!<span class="php-var">$overwrite</span> &amp;&amp; <span class="php-keyword2">file_exists</span>(<span class="php-var">$newName</span>)) {
-</span><span id="97" class="l"><a class="l" href="source-Utils.FileSystem.php.html#97"> 97: </a>            <span class="php-keyword1">throw</span> <span class="php-keyword1">new</span> Nette\InvalidStateException(<span class="php-quote">&quot;File or directory '</span><span class="php-var">$newName</span><span class="php-quote">' already exists.&quot;</span>);
-</span><span id="98" class="l"><a class="l" href="source-Utils.FileSystem.php.html#98"> 98: </a>
-</span><span id="99" class="l"><a class="l" href="source-Utils.FileSystem.php.html#99"> 99: </a>        } <span class="php-keyword1">elseif</span> (!<span class="php-keyword2">file_exists</span>(<span class="php-var">$name</span>)) {
-</span><span id="100" class="l"><a class="l" href="source-Utils.FileSystem.php.html#100">100: </a>            <span class="php-keyword1">throw</span> <span class="php-keyword1">new</span> Nette\IOException(<span class="php-quote">&quot;File or directory '</span><span class="php-var">$name</span><span class="php-quote">' not found.&quot;</span>);
-</span><span id="101" class="l"><a class="l" href="source-Utils.FileSystem.php.html#101">101: </a>
-</span><span id="102" class="l"><a class="l" href="source-Utils.FileSystem.php.html#102">102: </a>        } <span class="php-keyword1">else</span> {
-</span><span id="103" class="l"><a class="l" href="source-Utils.FileSystem.php.html#103">103: </a>            <span class="php-keyword1">static</span>::createDir(<span class="php-keyword2">dirname</span>(<span class="php-var">$newName</span>));
-</span><span id="104" class="l"><a class="l" href="source-Utils.FileSystem.php.html#104">104: </a>            <span class="php-keyword1">static</span>::<span class="php-keyword2">delete</span>(<span class="php-var">$newName</span>);
-</span><span id="105" class="l"><a class="l" href="source-Utils.FileSystem.php.html#105">105: </a>            <span class="php-keyword1">if</span> (!@<span class="php-keyword2">rename</span>(<span class="php-var">$name</span>, <span class="php-var">$newName</span>)) {
-</span><span id="106" class="l"><a class="l" href="source-Utils.FileSystem.php.html#106">106: </a>                <span class="php-keyword1">throw</span> <span class="php-keyword1">new</span> Nette\IOException(<span class="php-quote">&quot;Unable to rename file or directory '</span><span class="php-var">$name</span><span class="php-quote">' to '</span><span class="php-var">$newName</span><span class="php-quote">'.&quot;</span>);
-</span><span id="107" class="l"><a class="l" href="source-Utils.FileSystem.php.html#107">107: </a>            }
-</span><span id="108" class="l"><a class="l" href="source-Utils.FileSystem.php.html#108">108: </a>        }
-</span><span id="109" class="l"><a class="l" href="source-Utils.FileSystem.php.html#109">109: </a>    }
-</span><span id="110" class="l"><a class="l" href="source-Utils.FileSystem.php.html#110">110: </a>
-</span><span id="111" class="l"><a class="l" href="source-Utils.FileSystem.php.html#111">111: </a>
-</span><span id="112" class="l"><a class="l" href="source-Utils.FileSystem.php.html#112">112: </a>    <span class="php-comment">/**
-</span></span><span id="113" class="l"><a class="l" href="source-Utils.FileSystem.php.html#113">113: </a><span class="php-comment">     * Writes a string to a file.
-</span></span><span id="114" class="l"><a class="l" href="source-Utils.FileSystem.php.html#114">114: </a><span class="php-comment">     * @return bool
-</span></span><span id="115" class="l"><a class="l" href="source-Utils.FileSystem.php.html#115">115: </a><span class="php-comment">     */</span>
-</span><span id="116" class="l"><a class="l" href="source-Utils.FileSystem.php.html#116">116: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">static</span> <span class="php-keyword1">function</span> <a id="_write" href="source-Utils.FileSystem.php.html#_write">write</a>(<span class="php-var">$file</span>, <span class="php-var">$content</span>, <span class="php-var">$mode</span> = <span class="php-num">0666</span>)
-</span><span id="117" class="l"><a class="l" href="source-Utils.FileSystem.php.html#117">117: </a>    {
-</span><span id="118" class="l"><a class="l" href="source-Utils.FileSystem.php.html#118">118: </a>        <span class="php-keyword1">static</span>::createDir(<span class="php-keyword2">dirname</span>(<span class="php-var">$file</span>));
-</span><span id="119" class="l"><a class="l" href="source-Utils.FileSystem.php.html#119">119: </a>        <span class="php-keyword1">if</span> (@<span class="php-keyword2">file_put_contents</span>(<span class="php-var">$file</span>, <span class="php-var">$content</span>) === <span class="php-keyword1">FALSE</span>) {
-</span><span id="120" class="l"><a class="l" href="source-Utils.FileSystem.php.html#120">120: </a>            <span class="php-keyword1">throw</span> <span class="php-keyword1">new</span> Nette\IOException(<span class="php-quote">&quot;Unable to write file '</span><span class="php-var">$file</span><span class="php-quote">'.&quot;</span>);
-</span><span id="121" class="l"><a class="l" href="source-Utils.FileSystem.php.html#121">121: </a>        }
-</span><span id="122" class="l"><a class="l" href="source-Utils.FileSystem.php.html#122">122: </a>        <span class="php-keyword1">if</span> (<span class="php-var">$mode</span> !== <span class="php-keyword1">NULL</span> &amp;&amp; !@<span class="php-keyword2">chmod</span>(<span class="php-var">$file</span>, <span class="php-var">$mode</span>)) {
-</span><span id="123" class="l"><a class="l" href="source-Utils.FileSystem.php.html#123">123: </a>            <span class="php-keyword1">throw</span> <span class="php-keyword1">new</span> Nette\IOException(<span class="php-quote">&quot;Unable to chmod file '</span><span class="php-var">$file</span><span class="php-quote">'.&quot;</span>);
-</span><span id="124" class="l"><a class="l" href="source-Utils.FileSystem.php.html#124">124: </a>        }
-</span><span id="125" class="l"><a class="l" href="source-Utils.FileSystem.php.html#125">125: </a>    }
-</span><span id="126" class="l"><a class="l" href="source-Utils.FileSystem.php.html#126">126: </a>
-</span><span id="127" class="l"><a class="l" href="source-Utils.FileSystem.php.html#127">127: </a>
-</span><span id="128" class="l"><a class="l" href="source-Utils.FileSystem.php.html#128">128: </a>    <span class="php-comment">/**
-</span></span><span id="129" class="l"><a class="l" href="source-Utils.FileSystem.php.html#129">129: </a><span class="php-comment">     * Is path absolute?
-</span></span><span id="130" class="l"><a class="l" href="source-Utils.FileSystem.php.html#130">130: </a><span class="php-comment">     * @return bool
-</span></span><span id="131" class="l"><a class="l" href="source-Utils.FileSystem.php.html#131">131: </a><span class="php-comment">     */</span>
-</span><span id="132" class="l"><a class="l" href="source-Utils.FileSystem.php.html#132">132: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">static</span> <span class="php-keyword1">function</span> <a id="_isAbsolute" href="source-Utils.FileSystem.php.html#_isAbsolute">isAbsolute</a>(<span class="php-var">$path</span>)
-</span><span id="133" class="l"><a class="l" href="source-Utils.FileSystem.php.html#133">133: </a>    {
-</span><span id="134" class="l"><a class="l" href="source-Utils.FileSystem.php.html#134">134: </a>        <span class="php-keyword1">return</span> (bool) <span class="php-keyword2">preg_match</span>(<span class="php-quote">'#([a-z]:)?[/\\\\]|[a-z][a-z0-9+.-]*://#Ai'</span>, <span class="php-var">$path</span>);
-</span><span id="135" class="l"><a class="l" href="source-Utils.FileSystem.php.html#135">135: </a>    }
-</span><span id="136" class="l"><a class="l" href="source-Utils.FileSystem.php.html#136">136: </a>
-</span><span id="137" class="l"><a class="l" href="source-Utils.FileSystem.php.html#137">137: </a>}
-</span><span id="138" class="l"><a class="l" href="source-Utils.FileSystem.php.html#138">138: </a></span></code></pre>
+</span><span id="86" class="l"><a class="l" href="source-Utils.FileSystem.php.html#86"> 86: </a>            <span class="php-keyword1">if</span> (!@<span class="php-keyword2">rmdir</span>(<span class="php-var">$path</span>)) {
+</span><span id="87" class="l"><a class="l" href="source-Utils.FileSystem.php.html#87"> 87: </a>                <span class="php-keyword1">throw</span> <span class="php-keyword1">new</span> Nette\IOException(<span class="php-quote">&quot;Unable to delete directory '</span><span class="php-var">$path</span><span class="php-quote">'.&quot;</span>);
+</span><span id="88" class="l"><a class="l" href="source-Utils.FileSystem.php.html#88"> 88: </a>            }
+</span><span id="89" class="l"><a class="l" href="source-Utils.FileSystem.php.html#89"> 89: </a>        }
+</span><span id="90" class="l"><a class="l" href="source-Utils.FileSystem.php.html#90"> 90: </a>    }
+</span><span id="91" class="l"><a class="l" href="source-Utils.FileSystem.php.html#91"> 91: </a>
+</span><span id="92" class="l"><a class="l" href="source-Utils.FileSystem.php.html#92"> 92: </a>
+</span><span id="93" class="l"><a class="l" href="source-Utils.FileSystem.php.html#93"> 93: </a>    <span class="php-comment">/**
+</span></span><span id="94" class="l"><a class="l" href="source-Utils.FileSystem.php.html#94"> 94: </a><span class="php-comment">     * Renames a file or directory.
+</span></span><span id="95" class="l"><a class="l" href="source-Utils.FileSystem.php.html#95"> 95: </a><span class="php-comment">     * @return void
+</span></span><span id="96" class="l"><a class="l" href="source-Utils.FileSystem.php.html#96"> 96: </a><span class="php-comment">     * @throws Nette\IOException
+</span></span><span id="97" class="l"><a class="l" href="source-Utils.FileSystem.php.html#97"> 97: </a><span class="php-comment">     * @throws Nette\InvalidStateException if the target file or directory already exist
+</span></span><span id="98" class="l"><a class="l" href="source-Utils.FileSystem.php.html#98"> 98: </a><span class="php-comment">     */</span>
+</span><span id="99" class="l"><a class="l" href="source-Utils.FileSystem.php.html#99"> 99: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">static</span> <span class="php-keyword1">function</span> <span class="php-keyword2">rename</span>(<span class="php-var">$name</span>, <span class="php-var">$newName</span>, <span class="php-var">$overwrite</span> = <span class="php-keyword1">TRUE</span>)
+</span><span id="100" class="l"><a class="l" href="source-Utils.FileSystem.php.html#100">100: </a>    {
+</span><span id="101" class="l"><a class="l" href="source-Utils.FileSystem.php.html#101">101: </a>        <span class="php-keyword1">if</span> (!<span class="php-var">$overwrite</span> &amp;&amp; <span class="php-keyword2">file_exists</span>(<span class="php-var">$newName</span>)) {
+</span><span id="102" class="l"><a class="l" href="source-Utils.FileSystem.php.html#102">102: </a>            <span class="php-keyword1">throw</span> <span class="php-keyword1">new</span> Nette\InvalidStateException(<span class="php-quote">&quot;File or directory '</span><span class="php-var">$newName</span><span class="php-quote">' already exists.&quot;</span>);
+</span><span id="103" class="l"><a class="l" href="source-Utils.FileSystem.php.html#103">103: </a>
+</span><span id="104" class="l"><a class="l" href="source-Utils.FileSystem.php.html#104">104: </a>        } <span class="php-keyword1">elseif</span> (!<span class="php-keyword2">file_exists</span>(<span class="php-var">$name</span>)) {
+</span><span id="105" class="l"><a class="l" href="source-Utils.FileSystem.php.html#105">105: </a>            <span class="php-keyword1">throw</span> <span class="php-keyword1">new</span> Nette\IOException(<span class="php-quote">&quot;File or directory '</span><span class="php-var">$name</span><span class="php-quote">' not found.&quot;</span>);
+</span><span id="106" class="l"><a class="l" href="source-Utils.FileSystem.php.html#106">106: </a>
+</span><span id="107" class="l"><a class="l" href="source-Utils.FileSystem.php.html#107">107: </a>        } <span class="php-keyword1">else</span> {
+</span><span id="108" class="l"><a class="l" href="source-Utils.FileSystem.php.html#108">108: </a>            <span class="php-keyword1">static</span>::createDir(<span class="php-keyword2">dirname</span>(<span class="php-var">$newName</span>));
+</span><span id="109" class="l"><a class="l" href="source-Utils.FileSystem.php.html#109">109: </a>            <span class="php-keyword1">static</span>::<span class="php-keyword2">delete</span>(<span class="php-var">$newName</span>);
+</span><span id="110" class="l"><a class="l" href="source-Utils.FileSystem.php.html#110">110: </a>            <span class="php-keyword1">if</span> (!@<span class="php-keyword2">rename</span>(<span class="php-var">$name</span>, <span class="php-var">$newName</span>)) {
+</span><span id="111" class="l"><a class="l" href="source-Utils.FileSystem.php.html#111">111: </a>                <span class="php-keyword1">throw</span> <span class="php-keyword1">new</span> Nette\IOException(<span class="php-quote">&quot;Unable to rename file or directory '</span><span class="php-var">$name</span><span class="php-quote">' to '</span><span class="php-var">$newName</span><span class="php-quote">'.&quot;</span>);
+</span><span id="112" class="l"><a class="l" href="source-Utils.FileSystem.php.html#112">112: </a>            }
+</span><span id="113" class="l"><a class="l" href="source-Utils.FileSystem.php.html#113">113: </a>        }
+</span><span id="114" class="l"><a class="l" href="source-Utils.FileSystem.php.html#114">114: </a>    }
+</span><span id="115" class="l"><a class="l" href="source-Utils.FileSystem.php.html#115">115: </a>
+</span><span id="116" class="l"><a class="l" href="source-Utils.FileSystem.php.html#116">116: </a>
+</span><span id="117" class="l"><a class="l" href="source-Utils.FileSystem.php.html#117">117: </a>    <span class="php-comment">/**
+</span></span><span id="118" class="l"><a class="l" href="source-Utils.FileSystem.php.html#118">118: </a><span class="php-comment">     * Writes a string to a file.
+</span></span><span id="119" class="l"><a class="l" href="source-Utils.FileSystem.php.html#119">119: </a><span class="php-comment">     * @return void
+</span></span><span id="120" class="l"><a class="l" href="source-Utils.FileSystem.php.html#120">120: </a><span class="php-comment">     * @throws Nette\IOException
+</span></span><span id="121" class="l"><a class="l" href="source-Utils.FileSystem.php.html#121">121: </a><span class="php-comment">     */</span>
+</span><span id="122" class="l"><a class="l" href="source-Utils.FileSystem.php.html#122">122: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">static</span> <span class="php-keyword1">function</span> <a id="_write" href="source-Utils.FileSystem.php.html#_write">write</a>(<span class="php-var">$file</span>, <span class="php-var">$content</span>, <span class="php-var">$mode</span> = <span class="php-num">0666</span>)
+</span><span id="123" class="l"><a class="l" href="source-Utils.FileSystem.php.html#123">123: </a>    {
+</span><span id="124" class="l"><a class="l" href="source-Utils.FileSystem.php.html#124">124: </a>        <span class="php-keyword1">static</span>::createDir(<span class="php-keyword2">dirname</span>(<span class="php-var">$file</span>));
+</span><span id="125" class="l"><a class="l" href="source-Utils.FileSystem.php.html#125">125: </a>        <span class="php-keyword1">if</span> (@<span class="php-keyword2">file_put_contents</span>(<span class="php-var">$file</span>, <span class="php-var">$content</span>) === <span class="php-keyword1">FALSE</span>) {
+</span><span id="126" class="l"><a class="l" href="source-Utils.FileSystem.php.html#126">126: </a>            <span class="php-keyword1">throw</span> <span class="php-keyword1">new</span> Nette\IOException(<span class="php-quote">&quot;Unable to write file '</span><span class="php-var">$file</span><span class="php-quote">'.&quot;</span>);
+</span><span id="127" class="l"><a class="l" href="source-Utils.FileSystem.php.html#127">127: </a>        }
+</span><span id="128" class="l"><a class="l" href="source-Utils.FileSystem.php.html#128">128: </a>        <span class="php-keyword1">if</span> (<span class="php-var">$mode</span> !== <span class="php-keyword1">NULL</span> &amp;&amp; !@<span class="php-keyword2">chmod</span>(<span class="php-var">$file</span>, <span class="php-var">$mode</span>)) {
+</span><span id="129" class="l"><a class="l" href="source-Utils.FileSystem.php.html#129">129: </a>            <span class="php-keyword1">throw</span> <span class="php-keyword1">new</span> Nette\IOException(<span class="php-quote">&quot;Unable to chmod file '</span><span class="php-var">$file</span><span class="php-quote">'.&quot;</span>);
+</span><span id="130" class="l"><a class="l" href="source-Utils.FileSystem.php.html#130">130: </a>        }
+</span><span id="131" class="l"><a class="l" href="source-Utils.FileSystem.php.html#131">131: </a>    }
+</span><span id="132" class="l"><a class="l" href="source-Utils.FileSystem.php.html#132">132: </a>
+</span><span id="133" class="l"><a class="l" href="source-Utils.FileSystem.php.html#133">133: </a>
+</span><span id="134" class="l"><a class="l" href="source-Utils.FileSystem.php.html#134">134: </a>    <span class="php-comment">/**
+</span></span><span id="135" class="l"><a class="l" href="source-Utils.FileSystem.php.html#135">135: </a><span class="php-comment">     * Is path absolute?
+</span></span><span id="136" class="l"><a class="l" href="source-Utils.FileSystem.php.html#136">136: </a><span class="php-comment">     * @return bool
+</span></span><span id="137" class="l"><a class="l" href="source-Utils.FileSystem.php.html#137">137: </a><span class="php-comment">     */</span>
+</span><span id="138" class="l"><a class="l" href="source-Utils.FileSystem.php.html#138">138: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">static</span> <span class="php-keyword1">function</span> <a id="_isAbsolute" href="source-Utils.FileSystem.php.html#_isAbsolute">isAbsolute</a>(<span class="php-var">$path</span>)
+</span><span id="139" class="l"><a class="l" href="source-Utils.FileSystem.php.html#139">139: </a>    {
+</span><span id="140" class="l"><a class="l" href="source-Utils.FileSystem.php.html#140">140: </a>        <span class="php-keyword1">return</span> (bool) <span class="php-keyword2">preg_match</span>(<span class="php-quote">'#([a-z]:)?[/\\\\]|[a-z][a-z0-9+.-]*://#Ai'</span>, <span class="php-var">$path</span>);
+</span><span id="141" class="l"><a class="l" href="source-Utils.FileSystem.php.html#141">141: </a>    }
+</span><span id="142" class="l"><a class="l" href="source-Utils.FileSystem.php.html#142">142: </a>
+</span><span id="143" class="l"><a class="l" href="source-Utils.FileSystem.php.html#143">143: </a>}
+</span><span id="144" class="l"><a class="l" href="source-Utils.FileSystem.php.html#144">144: </a></span></code></pre>
 
 	<div id="footer">
-		Nette 2.2.6 API API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+		Nette 2.2.7 API API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
 	</div>
 </div>
 </div>
 <script src="resources/combined.js?3630868369"></script>
-<script src="elementlist.js?1613912923"></script>
+<script src="elementlist.js?3317918403"></script>
 </body>
 </html>

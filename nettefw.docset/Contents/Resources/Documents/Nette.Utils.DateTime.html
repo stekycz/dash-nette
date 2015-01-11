@@ -4,10 +4,10 @@
 	<meta charset="utf-8">
 	<meta name="generator" content="ApiGen 2.8.0">
 
-	<title>Class Nette\Utils\DateTime | Nette 2.2.6 API</title>
+	<title>Class Nette\Utils\DateTime | Nette 2.2.7 API</title>
 
 	<link rel="stylesheet" href="resources/style.css?3746977979">
-	<link rel="search" type="application/opensearchdescription+xml" title="Nette 2.2.6 API" href="http://api.nette.org/2.0/opensearch.xml">
+	<link rel="search" type="application/opensearchdescription+xml" title="Nette 2.2.7 API" href="http://api.nette.org/2.0/opensearch.xml">
 
 
 <script src='http://files.nette.org/js/analytics.js'></script><script>
@@ -145,7 +145,6 @@ _gaq.push(['_trackPageview']);
 				<li><a href="Nette.Utils.ArrayList.html">ArrayList</a></li>
 				<li><a href="Nette.Utils.Arrays.html">Arrays</a></li>
 				<li><a href="Nette.Utils.Callback.html">Callback</a></li>
-				<li><a href="Nette.Utils.CallbackFilterIterator.html">CallbackFilterIterator</a></li>
 				<li class="active"><a href="Nette.Utils.DateTime.html">DateTime</a></li>
 				<li><a href="Nette.Utils.FileSystem.html">FileSystem</a></li>
 				<li><a href="Nette.Utils.Finder.html">Finder</a></li>
@@ -157,7 +156,6 @@ _gaq.push(['_trackPageview']);
 				<li><a href="Nette.Utils.ObjectMixin.html">ObjectMixin</a></li>
 				<li><a href="Nette.Utils.Paginator.html">Paginator</a></li>
 				<li><a href="Nette.Utils.Random.html">Random</a></li>
-				<li><a href="Nette.Utils.RecursiveCallbackFilterIterator.html">RecursiveCallbackFilterIterator</a></li>
 				<li><a href="Nette.Utils.Strings.html">Strings</a></li>
 				<li><a href="Nette.Utils.TokenIterator.html">TokenIterator</a></li>
 				<li><a href="Nette.Utils.Tokenizer.html">Tokenizer</a></li>
@@ -259,7 +257,7 @@ _gaq.push(['_trackPageview']);
 
 				<b>Author:</b>
 				David Grudl<br>
-		<b>Located at</b> <a href="source-Utils.DateTime.php.html#13-113" title="Go to source code">Utils/DateTime.php</a><br>
+		<b>Located at</b> <a href="source-Utils.DateTime.php.html#13-127" title="Go to source code">Utils/DateTime.php</a><br>
 	</div>
 
 
@@ -312,14 +310,14 @@ _gaq.push(['_trackPageview']);
 
 		<td class="attributes"><code>
 			 public 
-			
+			string
 			
 			</code>
 		</td>
 
 		<td class="name"><div>
 		<a class="anchor" href="Nette.Utils.DateTime.html#___toString">#</a>
-		<code><a href="source-Utils.DateTime.php.html#62-65" title="Go to source code">__toString</a>( )</code>
+		<code><a href="source-Utils.DateTime.php.html#62-68" title="Go to source code">__toString</a>( )</code>
 
 		<div class="description short">
 			
@@ -330,6 +328,10 @@ _gaq.push(['_trackPageview']);
 
 
 
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>
+				</div>
 
 
 
@@ -341,14 +343,14 @@ _gaq.push(['_trackPageview']);
 
 		<td class="attributes"><code>
 			 public 
-			
+			<code><a href="Nette.Utils.DateTime.html">Nette\Utils\DateTime</a></code>
 			
 			</code>
 		</td>
 
 		<td class="name"><div>
 		<a class="anchor" href="Nette.Utils.DateTime.html#_modifyClone">#</a>
-		<code><a href="source-Utils.DateTime.php.html#68-72" title="Go to source code">modifyClone</a>( <span> <var>$modify</var> = <span class="php-quote">''</span></span> )</code>
+		<code><a href="source-Utils.DateTime.php.html#71-79" title="Go to source code">modifyClone</a>( <span>string <var>$modify</var> = <span class="php-quote">''</span></span> )</code>
 
 		<div class="description short">
 			
@@ -358,7 +360,16 @@ _gaq.push(['_trackPageview']);
 			
 
 
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$modify</var></dt>
+					<dd><code>string</code></dd>
+				</dl></div>
 
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="Nette.Utils.DateTime.html">Nette\Utils\DateTime</a></code></code><br>
+				</div>
 
 
 
@@ -370,14 +381,14 @@ _gaq.push(['_trackPageview']);
 
 		<td class="attributes"><code>
 			 public 
-			
+			<code><a href="Nette.Utils.DateTime.html">Nette\Utils\DateTime</a></code>
 			
 			</code>
 		</td>
 
 		<td class="name"><div>
 		<a class="anchor" href="Nette.Utils.DateTime.html#_setTimestamp">#</a>
-		<code><a href="source-Utils.DateTime.php.html#75-80" title="Go to source code">setTimestamp</a>( <span> <var>$timestamp</var></span> )</code>
+		<code><a href="source-Utils.DateTime.php.html#82-91" title="Go to source code">setTimestamp</a>( <span>integer <var>$timestamp</var></span> )</code>
 
 		<div class="description short">
 			
@@ -387,7 +398,16 @@ _gaq.push(['_trackPageview']);
 			
 
 
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$timestamp</var></dt>
+					<dd><code>integer</code></dd>
+				</dl></div>
 
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="Nette.Utils.DateTime.html">Nette\Utils\DateTime</a></code></code><br>
+				</div>
 
 
 
@@ -401,14 +421,14 @@ _gaq.push(['_trackPageview']);
 
 		<td class="attributes"><code>
 			 public 
-			
+			integer|string
 			
 			</code>
 		</td>
 
 		<td class="name"><div>
 		<a class="anchor" href="Nette.Utils.DateTime.html#_getTimestamp">#</a>
-		<code><a href="source-Utils.DateTime.php.html#83-87" title="Go to source code">getTimestamp</a>( )</code>
+		<code><a href="source-Utils.DateTime.php.html#94-101" title="Go to source code">getTimestamp</a>( )</code>
 
 		<div class="description short">
 			
@@ -419,6 +439,10 @@ _gaq.push(['_trackPageview']);
 
 
 
+				<h4>Returns</h4>
+				<div class="list">
+					<code>integer|string</code><br>
+				</div>
 
 
 
@@ -439,7 +463,7 @@ _gaq.push(['_trackPageview']);
 
 		<td class="name"><div>
 		<a class="anchor" href="Nette.Utils.DateTime.html#_createFromFormat">#</a>
-		<code><a href="source-Utils.DateTime.php.html#90-111" title="Go to source code">createFromFormat</a>( <span>string <var>$format</var></span>, <span>string <var>$time</var></span>, <span>string|<code><a href="DateTimeZone.html">DateTimeZone</a></code> <var>$timezone</var> = <span class="php-keyword1">NULL</span></span> )</code>
+		<code><a href="source-Utils.DateTime.php.html#104-125" title="Go to source code">createFromFormat</a>( <span>string <var>$format</var></span>, <span>string <var>$time</var></span>, <span>string|<code><a href="DateTimeZone.html">DateTimeZone</a></code> <var>$timezone</var> = <span class="php-keyword1">NULL</span></span> )</code>
 
 		<div class="description short">
 			
@@ -685,11 +709,11 @@ _gaq.push(['_trackPageview']);
 </div>
 
 	<div id="footer">
-		Nette 2.2.6 API API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+		Nette 2.2.7 API API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
 	</div>
 </div>
 </div>
 <script src="resources/combined.js?3630868369"></script>
-<script src="elementlist.js?1613912923"></script>
+<script src="elementlist.js?3317918403"></script>
 </body>
 </html>

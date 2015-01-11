@@ -5,10 +5,10 @@
 	<meta name="generator" content="ApiGen 2.8.0">
 	<meta name="robots" content="noindex">
 
-	<title>File Caching/Storages/MemcachedStorage.php | Nette 2.2.6 API</title>
+	<title>File Caching/Storages/MemcachedStorage.php | Nette 2.2.7 API</title>
 
 	<link rel="stylesheet" href="resources/style.css?3746977979">
-	<link rel="search" type="application/opensearchdescription+xml" title="Nette 2.2.6 API" href="http://api.nette.org/2.0/opensearch.xml">
+	<link rel="search" type="application/opensearchdescription+xml" title="Nette 2.2.7 API" href="http://api.nette.org/2.0/opensearch.xml">
 
 
 <script src='http://files.nette.org/js/analytics.js'></script><script>
@@ -284,7 +284,7 @@ _gaq.push(['_trackPageview']);
 </span></span><span id="83" class="l"><a class="l" href="source-Caching.Storages.MemcachedStorage.php.html#83"> 83: </a><span class="php-comment">     */</span>
 </span><span id="84" class="l"><a class="l" href="source-Caching.Storages.MemcachedStorage.php.html#84"> 84: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_read" href="source-Caching.Storages.MemcachedStorage.php.html#_read">read</a>(<span class="php-var">$key</span>)
 </span><span id="85" class="l"><a class="l" href="source-Caching.Storages.MemcachedStorage.php.html#85"> 85: </a>    {
-</span><span id="86" class="l"><a class="l" href="source-Caching.Storages.MemcachedStorage.php.html#86"> 86: </a>        <span class="php-var">$key</span> = <span class="php-var">$this</span>-&gt;prefix . <span class="php-var">$key</span>;
+</span><span id="86" class="l"><a class="l" href="source-Caching.Storages.MemcachedStorage.php.html#86"> 86: </a>        <span class="php-var">$key</span> = <span class="php-keyword2">urlencode</span>(<span class="php-var">$this</span>-&gt;prefix . <span class="php-var">$key</span>);
 </span><span id="87" class="l"><a class="l" href="source-Caching.Storages.MemcachedStorage.php.html#87"> 87: </a>        <span class="php-var">$meta</span> = <span class="php-var">$this</span>-&gt;memcache-&gt;get(<span class="php-var">$key</span>);
 </span><span id="88" class="l"><a class="l" href="source-Caching.Storages.MemcachedStorage.php.html#88"> 88: </a>        <span class="php-keyword1">if</span> (!<span class="php-var">$meta</span>) {
 </span><span id="89" class="l"><a class="l" href="source-Caching.Storages.MemcachedStorage.php.html#89"> 89: </a>            <span class="php-keyword1">return</span> <span class="php-keyword1">NULL</span>;
@@ -334,7 +334,7 @@ _gaq.push(['_trackPageview']);
 </span><span id="133" class="l"><a class="l" href="source-Caching.Storages.MemcachedStorage.php.html#133">133: </a>            <span class="php-keyword1">throw</span> <span class="php-keyword1">new</span> Nette\NotSupportedException(<span class="php-quote">'Dependent items are not supported by MemcachedStorage.'</span>);
 </span><span id="134" class="l"><a class="l" href="source-Caching.Storages.MemcachedStorage.php.html#134">134: </a>        }
 </span><span id="135" class="l"><a class="l" href="source-Caching.Storages.MemcachedStorage.php.html#135">135: </a>
-</span><span id="136" class="l"><a class="l" href="source-Caching.Storages.MemcachedStorage.php.html#136">136: </a>        <span class="php-var">$key</span> = <span class="php-var">$this</span>-&gt;prefix . <span class="php-var">$key</span>;
+</span><span id="136" class="l"><a class="l" href="source-Caching.Storages.MemcachedStorage.php.html#136">136: </a>        <span class="php-var">$key</span> = <span class="php-keyword2">urlencode</span>(<span class="php-var">$this</span>-&gt;prefix . <span class="php-var">$key</span>);
 </span><span id="137" class="l"><a class="l" href="source-Caching.Storages.MemcachedStorage.php.html#137">137: </a>        <span class="php-var">$meta</span> = <span class="php-keyword1">array</span>(
 </span><span id="138" class="l"><a class="l" href="source-Caching.Storages.MemcachedStorage.php.html#138">138: </a>            self::META_DATA =&gt; <span class="php-var">$data</span>,
 </span><span id="139" class="l"><a class="l" href="source-Caching.Storages.MemcachedStorage.php.html#139">139: </a>        );
@@ -369,7 +369,7 @@ _gaq.push(['_trackPageview']);
 </span></span><span id="168" class="l"><a class="l" href="source-Caching.Storages.MemcachedStorage.php.html#168">168: </a><span class="php-comment">     */</span>
 </span><span id="169" class="l"><a class="l" href="source-Caching.Storages.MemcachedStorage.php.html#169">169: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_remove" href="source-Caching.Storages.MemcachedStorage.php.html#_remove">remove</a>(<span class="php-var">$key</span>)
 </span><span id="170" class="l"><a class="l" href="source-Caching.Storages.MemcachedStorage.php.html#170">170: </a>    {
-</span><span id="171" class="l"><a class="l" href="source-Caching.Storages.MemcachedStorage.php.html#171">171: </a>        <span class="php-var">$this</span>-&gt;memcache-&gt;<span class="php-keyword2">delete</span>(<span class="php-var">$this</span>-&gt;prefix . <span class="php-var">$key</span>, <span class="php-num">0</span>);
+</span><span id="171" class="l"><a class="l" href="source-Caching.Storages.MemcachedStorage.php.html#171">171: </a>        <span class="php-var">$this</span>-&gt;memcache-&gt;<span class="php-keyword2">delete</span>(<span class="php-keyword2">urlencode</span>(<span class="php-var">$this</span>-&gt;prefix . <span class="php-var">$key</span>), <span class="php-num">0</span>);
 </span><span id="172" class="l"><a class="l" href="source-Caching.Storages.MemcachedStorage.php.html#172">172: </a>    }
 </span><span id="173" class="l"><a class="l" href="source-Caching.Storages.MemcachedStorage.php.html#173">173: </a>
 </span><span id="174" class="l"><a class="l" href="source-Caching.Storages.MemcachedStorage.php.html#174">174: </a>
@@ -394,11 +394,11 @@ _gaq.push(['_trackPageview']);
 </span><span id="193" class="l"><a class="l" href="source-Caching.Storages.MemcachedStorage.php.html#193">193: </a></span></code></pre>
 
 	<div id="footer">
-		Nette 2.2.6 API API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+		Nette 2.2.7 API API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
 	</div>
 </div>
 </div>
 <script src="resources/combined.js?3630868369"></script>
-<script src="elementlist.js?1613912923"></script>
+<script src="elementlist.js?3317918403"></script>
 </body>
 </html>

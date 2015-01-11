@@ -4,10 +4,10 @@
 	<meta charset="utf-8">
 	<meta name="generator" content="ApiGen 2.8.0">
 
-	<title>Class Nette\Utils\Arrays | Nette 2.2.6 API</title>
+	<title>Class Nette\Utils\Arrays | Nette 2.2.7 API</title>
 
 	<link rel="stylesheet" href="resources/style.css?3746977979">
-	<link rel="search" type="application/opensearchdescription+xml" title="Nette 2.2.6 API" href="http://api.nette.org/2.0/opensearch.xml">
+	<link rel="search" type="application/opensearchdescription+xml" title="Nette 2.2.7 API" href="http://api.nette.org/2.0/opensearch.xml">
 
 
 <script src='http://files.nette.org/js/analytics.js'></script><script>
@@ -145,7 +145,6 @@ _gaq.push(['_trackPageview']);
 				<li><a href="Nette.Utils.ArrayList.html">ArrayList</a></li>
 				<li class="active"><a href="Nette.Utils.Arrays.html">Arrays</a></li>
 				<li><a href="Nette.Utils.Callback.html">Callback</a></li>
-				<li><a href="Nette.Utils.CallbackFilterIterator.html">CallbackFilterIterator</a></li>
 				<li><a href="Nette.Utils.DateTime.html">DateTime</a></li>
 				<li><a href="Nette.Utils.FileSystem.html">FileSystem</a></li>
 				<li><a href="Nette.Utils.Finder.html">Finder</a></li>
@@ -157,7 +156,6 @@ _gaq.push(['_trackPageview']);
 				<li><a href="Nette.Utils.ObjectMixin.html">ObjectMixin</a></li>
 				<li><a href="Nette.Utils.Paginator.html">Paginator</a></li>
 				<li><a href="Nette.Utils.Random.html">Random</a></li>
-				<li><a href="Nette.Utils.RecursiveCallbackFilterIterator.html">RecursiveCallbackFilterIterator</a></li>
 				<li><a href="Nette.Utils.Strings.html">Strings</a></li>
 				<li><a href="Nette.Utils.TokenIterator.html">TokenIterator</a></li>
 				<li><a href="Nette.Utils.Tokenizer.html">Tokenizer</a></li>
@@ -245,7 +243,7 @@ _gaq.push(['_trackPageview']);
 
 				<b>Author:</b>
 				David Grudl<br>
-		<b>Located at</b> <a href="source-Utils.Arrays.php.html#13-218" title="Go to source code">Utils/Arrays.php</a><br>
+		<b>Located at</b> <a href="source-Utils.Arrays.php.html#13-225" title="Go to source code">Utils/Arrays.php</a><br>
 	</div>
 
 
@@ -296,7 +294,7 @@ _gaq.push(['_trackPageview']);
 
 		<td class="name"><div>
 		<a class="anchor" href="Nette.Utils.Arrays.html#_get">#</a>
-		<code><a href="source-Utils.Arrays.php.html#30-47" title="Go to source code">get</a>( <span>array <var>$arr</var></span>, <span> <var>$key</var></span>, <span> <var>$default</var> = <span class="php-keyword1">NULL</span></span> )</code>
+		<code><a href="source-Utils.Arrays.php.html#30-51" title="Go to source code">get</a>( <span>array <var>$arr</var></span>, <span>string|integer|array <var>$key</var></span>, <span>mixed <var>$default</var> = <span class="php-keyword1">NULL</span></span> )</code>
 
 		<div class="description short">
 			
@@ -310,12 +308,25 @@ _gaq.push(['_trackPageview']);
 
 
 
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$arr</var></dt>
+					<dd><code>array</code></dd>
+					<dt><var>$key</var></dt>
+					<dd><code>string|integer|array</code><br>one or more keys</dd>
+					<dt><var>$default</var></dt>
+					<dd><code>mixed</code></dd>
+				</dl></div>
 
 				<h4>Returns</h4>
 				<div class="list">
 					<code>mixed</code><br>
 				</div>
 
+				<h4>Throws</h4>
+				<div class="list">
+					<code><code><a href="Nette.InvalidArgumentException.html">Nette\InvalidArgumentException</a></code></code><br>if item does not exist and default value is not provided<br>
+				</div>
 
 
 
@@ -333,7 +344,7 @@ _gaq.push(['_trackPageview']);
 
 		<td class="name"><div>
 		<a class="anchor" href="Nette.Utils.Arrays.html#_getRef">#</a>
-		<code><a href="source-Utils.Arrays.php.html#50-64" title="Go to source code">getRef</a>( <span> <var>&amp; $arr</var></span>, <span> <var>$key</var></span> )</code>
+		<code><a href="source-Utils.Arrays.php.html#54-71" title="Go to source code">getRef</a>( <span>array <var>&amp; $arr</var></span>, <span>string|integer|array <var>$key</var></span> )</code>
 
 		<div class="description short">
 			
@@ -347,12 +358,23 @@ _gaq.push(['_trackPageview']);
 
 
 
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$arr</var></dt>
+					<dd><code>array</code></dd>
+					<dt><var>$key</var></dt>
+					<dd><code>string|integer|array</code><br>one or more keys</dd>
+				</dl></div>
 
 				<h4>Returns</h4>
 				<div class="list">
 					<code>mixed</code><br>
 				</div>
 
+				<h4>Throws</h4>
+				<div class="list">
+					<code><code><a href="Nette.InvalidArgumentException.html">Nette\InvalidArgumentException</a></code></code><br>if traversed item is not an array<br>
+				</div>
 
 
 
@@ -370,7 +392,7 @@ _gaq.push(['_trackPageview']);
 
 		<td class="name"><div>
 		<a class="anchor" href="Nette.Utils.Arrays.html#_mergeTree">#</a>
-		<code><a href="source-Utils.Arrays.php.html#67-80" title="Go to source code">mergeTree</a>( <span> <var>$arr1</var></span>, <span> <var>$arr2</var></span> )</code>
+		<code><a href="source-Utils.Arrays.php.html#74-87" title="Go to source code">mergeTree</a>( <span> <var>$arr1</var></span>, <span> <var>$arr2</var></span> )</code>
 
 		<div class="description short">
 			
@@ -402,14 +424,14 @@ first.</p>
 
 		<td class="attributes"><code>
 			 public static
-			integer
+			integer|false
 			
 			</code>
 		</td>
 
 		<td class="name"><div>
 		<a class="anchor" href="Nette.Utils.Arrays.html#_searchKey">#</a>
-		<code><a href="source-Utils.Arrays.php.html#83-91" title="Go to source code">searchKey</a>( <span> <var>$arr</var></span>, <span> <var>$key</var></span> )</code>
+		<code><a href="source-Utils.Arrays.php.html#90-98" title="Go to source code">searchKey</a>( <span> <var>$arr</var></span>, <span> <var>$key</var></span> )</code>
 
 		<div class="description short">
 			
@@ -426,7 +448,7 @@ first.</p>
 
 				<h4>Returns</h4>
 				<div class="list">
-					<code>integer</code><br>offset if it is found, FALSE otherwise<br>
+					<code>integer|false</code><br>offset if it is found, FALSE otherwise<br>
 				</div>
 
 
@@ -446,7 +468,7 @@ first.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="Nette.Utils.Arrays.html#_insertBefore">#</a>
-		<code><a href="source-Utils.Arrays.php.html#94-102" title="Go to source code">insertBefore</a>( <span>array <var>&amp; $arr</var></span>, <span> <var>$key</var></span>, <span>array <var>$inserted</var></span> )</code>
+		<code><a href="source-Utils.Arrays.php.html#101-109" title="Go to source code">insertBefore</a>( <span>array <var>&amp; $arr</var></span>, <span> <var>$key</var></span>, <span>array <var>$inserted</var></span> )</code>
 
 		<div class="description short">
 			
@@ -479,7 +501,7 @@ first.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="Nette.Utils.Arrays.html#_insertAfter">#</a>
-		<code><a href="source-Utils.Arrays.php.html#105-114" title="Go to source code">insertAfter</a>( <span>array <var>&amp; $arr</var></span>, <span> <var>$key</var></span>, <span>array <var>$inserted</var></span> )</code>
+		<code><a href="source-Utils.Arrays.php.html#112-121" title="Go to source code">insertAfter</a>( <span>array <var>&amp; $arr</var></span>, <span> <var>$key</var></span>, <span>array <var>$inserted</var></span> )</code>
 
 		<div class="description short">
 			
@@ -512,7 +534,7 @@ first.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="Nette.Utils.Arrays.html#_renameKey">#</a>
-		<code><a href="source-Utils.Arrays.php.html#117-129" title="Go to source code">renameKey</a>( <span>array <var>&amp; $arr</var></span>, <span> <var>$oldKey</var></span>, <span> <var>$newKey</var></span> )</code>
+		<code><a href="source-Utils.Arrays.php.html#124-136" title="Go to source code">renameKey</a>( <span>array <var>&amp; $arr</var></span>, <span> <var>$oldKey</var></span>, <span> <var>$newKey</var></span> )</code>
 
 		<div class="description short">
 			
@@ -545,7 +567,7 @@ first.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="Nette.Utils.Arrays.html#_grep">#</a>
-		<code><a href="source-Utils.Arrays.php.html#132-139" title="Go to source code">grep</a>( <span>array <var>$arr</var></span>, <span> <var>$pattern</var></span>, <span> <var>$flags</var> = <span class="php-num">0</span></span> )</code>
+		<code><a href="source-Utils.Arrays.php.html#139-146" title="Go to source code">grep</a>( <span>array <var>$arr</var></span>, <span> <var>$pattern</var></span>, <span> <var>$flags</var> = <span class="php-num">0</span></span> )</code>
 
 		<div class="description short">
 			
@@ -582,7 +604,7 @@ first.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="Nette.Utils.Arrays.html#_flatten">#</a>
-		<code><a href="source-Utils.Arrays.php.html#142-154" title="Go to source code">flatten</a>( <span>array <var>$arr</var></span>, <span> <var>$preserveKeys</var> = <span class="php-keyword1">FALSE</span></span> )</code>
+		<code><a href="source-Utils.Arrays.php.html#149-161" title="Go to source code">flatten</a>( <span>array <var>$arr</var></span>, <span> <var>$preserveKeys</var> = <span class="php-keyword1">FALSE</span></span> )</code>
 
 		<div class="description short">
 			
@@ -619,7 +641,7 @@ first.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="Nette.Utils.Arrays.html#_isList">#</a>
-		<code><a href="source-Utils.Arrays.php.html#157-164" title="Go to source code">isList</a>( <span> <var>$value</var></span> )</code>
+		<code><a href="source-Utils.Arrays.php.html#164-171" title="Go to source code">isList</a>( <span> <var>$value</var></span> )</code>
 
 		<div class="description short">
 			
@@ -656,7 +678,7 @@ first.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="Nette.Utils.Arrays.html#_associate">#</a>
-		<code><a href="source-Utils.Arrays.php.html#167-216" title="Go to source code">associate</a>( <span>array <var>$arr</var></span>, <span> <var>$path</var></span> )</code>
+		<code><a href="source-Utils.Arrays.php.html#174-223" title="Go to source code">associate</a>( <span>array <var>$arr</var></span>, <span> <var>$path</var></span> )</code>
 
 		<div class="description short">
 			
@@ -706,11 +728,11 @@ first.</p>
 </div>
 
 	<div id="footer">
-		Nette 2.2.6 API API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+		Nette 2.2.7 API API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
 	</div>
 </div>
 </div>
 <script src="resources/combined.js?3630868369"></script>
-<script src="elementlist.js?1613912923"></script>
+<script src="elementlist.js?3317918403"></script>
 </body>
 </html>

@@ -4,10 +4,10 @@
 	<meta charset="utf-8">
 	<meta name="generator" content="ApiGen 2.8.0">
 
-	<title>Class Nette\Utils\FileSystem | Nette 2.2.6 API</title>
+	<title>Class Nette\Utils\FileSystem | Nette 2.2.7 API</title>
 
 	<link rel="stylesheet" href="resources/style.css?3746977979">
-	<link rel="search" type="application/opensearchdescription+xml" title="Nette 2.2.6 API" href="http://api.nette.org/2.0/opensearch.xml">
+	<link rel="search" type="application/opensearchdescription+xml" title="Nette 2.2.7 API" href="http://api.nette.org/2.0/opensearch.xml">
 
 
 <script src='http://files.nette.org/js/analytics.js'></script><script>
@@ -145,7 +145,6 @@ _gaq.push(['_trackPageview']);
 				<li><a href="Nette.Utils.ArrayList.html">ArrayList</a></li>
 				<li><a href="Nette.Utils.Arrays.html">Arrays</a></li>
 				<li><a href="Nette.Utils.Callback.html">Callback</a></li>
-				<li><a href="Nette.Utils.CallbackFilterIterator.html">CallbackFilterIterator</a></li>
 				<li><a href="Nette.Utils.DateTime.html">DateTime</a></li>
 				<li class="active"><a href="Nette.Utils.FileSystem.html">FileSystem</a></li>
 				<li><a href="Nette.Utils.Finder.html">Finder</a></li>
@@ -157,7 +156,6 @@ _gaq.push(['_trackPageview']);
 				<li><a href="Nette.Utils.ObjectMixin.html">ObjectMixin</a></li>
 				<li><a href="Nette.Utils.Paginator.html">Paginator</a></li>
 				<li><a href="Nette.Utils.Random.html">Random</a></li>
-				<li><a href="Nette.Utils.RecursiveCallbackFilterIterator.html">RecursiveCallbackFilterIterator</a></li>
 				<li><a href="Nette.Utils.Strings.html">Strings</a></li>
 				<li><a href="Nette.Utils.TokenIterator.html">TokenIterator</a></li>
 				<li><a href="Nette.Utils.Tokenizer.html">Tokenizer</a></li>
@@ -245,7 +243,7 @@ _gaq.push(['_trackPageview']);
 
 				<b>Author:</b>
 				David Grudl<br>
-		<b>Located at</b> <a href="source-Utils.FileSystem.php.html#13-137" title="Go to source code">Utils/FileSystem.php</a><br>
+		<b>Located at</b> <a href="source-Utils.FileSystem.php.html#13-143" title="Go to source code">Utils/FileSystem.php</a><br>
 	</div>
 
 
@@ -263,7 +261,7 @@ _gaq.push(['_trackPageview']);
 
 		<td class="name"><div>
 		<a class="anchor" href="Nette.Utils.FileSystem.html#_createDir">#</a>
-		<code><a href="source-Utils.FileSystem.php.html#21-30" title="Go to source code">createDir</a>( <span> <var>$dir</var></span>, <span> <var>$mode</var> = <span class="php-num">0777</span></span> )</code>
+		<code><a href="source-Utils.FileSystem.php.html#21-31" title="Go to source code">createDir</a>( <span> <var>$dir</var></span>, <span> <var>$mode</var> = <span class="php-num">0777</span></span> )</code>
 
 		<div class="description short">
 			
@@ -279,6 +277,10 @@ _gaq.push(['_trackPageview']);
 
 
 
+				<h4>Throws</h4>
+				<div class="list">
+					<code><code><a href="Nette.IOException.html">Nette\IOException</a></code></code><br>
+				</div>
 
 
 
@@ -296,7 +298,7 @@ _gaq.push(['_trackPageview']);
 
 		<td class="name"><div>
 		<a class="anchor" href="Nette.Utils.FileSystem.html#_copy">#</a>
-		<code><a href="source-Utils.FileSystem.php.html#33-64" title="Go to source code">copy</a>( <span> <var>$source</var></span>, <span> <var>$dest</var></span>, <span> <var>$overwrite</var> = <span class="php-keyword1">TRUE</span></span> )</code>
+		<code><a href="source-Utils.FileSystem.php.html#34-66" title="Go to source code">copy</a>( <span> <var>$source</var></span>, <span> <var>$dest</var></span>, <span> <var>$overwrite</var> = <span class="php-keyword1">TRUE</span></span> )</code>
 
 		<div class="description short">
 			
@@ -312,6 +314,10 @@ _gaq.push(['_trackPageview']);
 
 
 
+				<h4>Throws</h4>
+				<div class="list">
+					<code><code><a href="Nette.IOException.html">Nette\IOException</a></code></code><br>
+				</div>
 
 
 
@@ -329,7 +335,7 @@ _gaq.push(['_trackPageview']);
 
 		<td class="name"><div>
 		<a class="anchor" href="Nette.Utils.FileSystem.html#_delete">#</a>
-		<code><a href="source-Utils.FileSystem.php.html#67-87" title="Go to source code">delete</a>( <span> <var>$path</var></span> )</code>
+		<code><a href="source-Utils.FileSystem.php.html#69-90" title="Go to source code">delete</a>( <span> <var>$path</var></span> )</code>
 
 		<div class="description short">
 			
@@ -345,6 +351,10 @@ _gaq.push(['_trackPageview']);
 
 
 
+				<h4>Throws</h4>
+				<div class="list">
+					<code><code><a href="Nette.IOException.html">Nette\IOException</a></code></code><br>
+				</div>
 
 
 
@@ -362,7 +372,7 @@ _gaq.push(['_trackPageview']);
 
 		<td class="name"><div>
 		<a class="anchor" href="Nette.Utils.FileSystem.html#_rename">#</a>
-		<code><a href="source-Utils.FileSystem.php.html#90-109" title="Go to source code">rename</a>( <span> <var>$name</var></span>, <span> <var>$newName</var></span>, <span> <var>$overwrite</var> = <span class="php-keyword1">TRUE</span></span> )</code>
+		<code><a href="source-Utils.FileSystem.php.html#93-114" title="Go to source code">rename</a>( <span> <var>$name</var></span>, <span> <var>$newName</var></span>, <span> <var>$overwrite</var> = <span class="php-keyword1">TRUE</span></span> )</code>
 
 		<div class="description short">
 			
@@ -378,6 +388,11 @@ _gaq.push(['_trackPageview']);
 
 
 
+				<h4>Throws</h4>
+				<div class="list">
+					<code><code><a href="Nette.IOException.html">Nette\IOException</a></code></code><br>
+					<code><code><a href="Nette.InvalidStateException.html">Nette\InvalidStateException</a></code></code><br>if the target file or directory already exist<br>
+				</div>
 
 
 
@@ -388,14 +403,14 @@ _gaq.push(['_trackPageview']);
 
 		<td class="attributes"><code>
 			 public static
-			boolean
+			
 			
 			</code>
 		</td>
 
 		<td class="name"><div>
 		<a class="anchor" href="Nette.Utils.FileSystem.html#_write">#</a>
-		<code><a href="source-Utils.FileSystem.php.html#112-125" title="Go to source code">write</a>( <span> <var>$file</var></span>, <span> <var>$content</var></span>, <span> <var>$mode</var> = <span class="php-num">0666</span></span> )</code>
+		<code><a href="source-Utils.FileSystem.php.html#117-131" title="Go to source code">write</a>( <span> <var>$file</var></span>, <span> <var>$content</var></span>, <span> <var>$mode</var> = <span class="php-num">0666</span></span> )</code>
 
 		<div class="description short">
 			
@@ -410,11 +425,11 @@ _gaq.push(['_trackPageview']);
 
 
 
-				<h4>Returns</h4>
-				<div class="list">
-					<code>boolean</code><br>
-				</div>
 
+				<h4>Throws</h4>
+				<div class="list">
+					<code><code><a href="Nette.IOException.html">Nette\IOException</a></code></code><br>
+				</div>
 
 
 
@@ -432,7 +447,7 @@ _gaq.push(['_trackPageview']);
 
 		<td class="name"><div>
 		<a class="anchor" href="Nette.Utils.FileSystem.html#_isAbsolute">#</a>
-		<code><a href="source-Utils.FileSystem.php.html#128-135" title="Go to source code">isAbsolute</a>( <span> <var>$path</var></span> )</code>
+		<code><a href="source-Utils.FileSystem.php.html#134-141" title="Go to source code">isAbsolute</a>( <span> <var>$path</var></span> )</code>
 
 		<div class="description short">
 			
@@ -480,11 +495,11 @@ _gaq.push(['_trackPageview']);
 </div>
 
 	<div id="footer">
-		Nette 2.2.6 API API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+		Nette 2.2.7 API API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
 	</div>
 </div>
 </div>
 <script src="resources/combined.js?3630868369"></script>
-<script src="elementlist.js?1613912923"></script>
+<script src="elementlist.js?3317918403"></script>
 </body>
 </html>

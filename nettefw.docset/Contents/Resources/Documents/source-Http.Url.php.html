@@ -5,10 +5,10 @@
 	<meta name="generator" content="ApiGen 2.8.0">
 	<meta name="robots" content="noindex">
 
-	<title>File Http/Url.php | Nette 2.2.6 API</title>
+	<title>File Http/Url.php | Nette 2.2.7 API</title>
 
 	<link rel="stylesheet" href="resources/style.css?3746977979">
-	<link rel="search" type="application/opensearchdescription+xml" title="Nette 2.2.6 API" href="http://api.nette.org/2.0/opensearch.xml">
+	<link rel="search" type="application/opensearchdescription+xml" title="Nette 2.2.7 API" href="http://api.nette.org/2.0/opensearch.xml">
 
 
 <script src='http://files.nette.org/js/analytics.js'></script><script>
@@ -659,7 +659,7 @@ _gaq.push(['_trackPageview']);
 </span><span id="452" class="l"><a class="l" href="source-Http.Url.php.html#452">452: </a>
 </span><span id="453" class="l"><a class="l" href="source-Http.Url.php.html#453">453: </a>
 </span><span id="454" class="l"><a class="l" href="source-Http.Url.php.html#454">454: </a>    <span class="php-comment">/**
-</span></span><span id="455" class="l"><a class="l" href="source-Http.Url.php.html#455">455: </a><span class="php-comment">     * Similar to rawurldecode, but preserve reserved chars encoded.
+</span></span><span id="455" class="l"><a class="l" href="source-Http.Url.php.html#455">455: </a><span class="php-comment">     * Similar to rawurldecode, but preserves reserved chars encoded.
 </span></span><span id="456" class="l"><a class="l" href="source-Http.Url.php.html#456">456: </a><span class="php-comment">     * @param  string to decode
 </span></span><span id="457" class="l"><a class="l" href="source-Http.Url.php.html#457">457: </a><span class="php-comment">     * @param  string reserved characters
 </span></span><span id="458" class="l"><a class="l" href="source-Http.Url.php.html#458">458: </a><span class="php-comment">     * @return string
@@ -669,25 +669,25 @@ _gaq.push(['_trackPageview']);
 </span><span id="462" class="l"><a class="l" href="source-Http.Url.php.html#462">462: </a>        <span class="php-comment">// reserved (@see RFC 2396) = &quot;;&quot; | &quot;/&quot; | &quot;?&quot; | &quot;:&quot; | &quot;@&quot; | &quot;&amp;&quot; | &quot;=&quot; | &quot;+&quot; | &quot;$&quot; | &quot;,&quot;</span>
 </span><span id="463" class="l"><a class="l" href="source-Http.Url.php.html#463">463: </a>        <span class="php-comment">// within a path segment, the characters &quot;/&quot;, &quot;;&quot;, &quot;=&quot;, &quot;?&quot; are reserved</span>
 </span><span id="464" class="l"><a class="l" href="source-Http.Url.php.html#464">464: </a>        <span class="php-comment">// within a query component, the characters &quot;;&quot;, &quot;/&quot;, &quot;?&quot;, &quot;:&quot;, &quot;@&quot;, &quot;&amp;&quot;, &quot;=&quot;, &quot;+&quot;, &quot;,&quot;, &quot;$&quot; are reserved.</span>
-</span><span id="465" class="l"><a class="l" href="source-Http.Url.php.html#465">465: </a>        <span class="php-keyword2">preg_match_all</span>(<span class="php-quote">'#(?&lt;=%)[a-f0-9][a-f0-9]#i'</span>, <span class="php-var">$s</span>, <span class="php-var">$matches</span>, PREG_OFFSET_CAPTURE | PREG_SET_ORDER);
-</span><span id="466" class="l"><a class="l" href="source-Http.Url.php.html#466">466: </a>        <span class="php-keyword1">foreach</span> (<span class="php-keyword2">array_reverse</span>(<span class="php-var">$matches</span>) <span class="php-keyword1">as</span> <span class="php-var">$match</span>) {
-</span><span id="467" class="l"><a class="l" href="source-Http.Url.php.html#467">467: </a>            <span class="php-var">$ch</span> = <span class="php-keyword2">chr</span>(<span class="php-keyword2">hexdec</span>(<span class="php-var">$match</span>[<span class="php-num">0</span>][<span class="php-num">0</span>]));
-</span><span id="468" class="l"><a class="l" href="source-Http.Url.php.html#468">468: </a>            <span class="php-keyword1">if</span> (<span class="php-keyword2">strpos</span>(<span class="php-var">$reserved</span>, <span class="php-var">$ch</span>) === <span class="php-keyword1">FALSE</span>) {
-</span><span id="469" class="l"><a class="l" href="source-Http.Url.php.html#469">469: </a>                <span class="php-var">$s</span> = <span class="php-keyword2">substr_replace</span>(<span class="php-var">$s</span>, <span class="php-var">$ch</span>, <span class="php-var">$match</span>[<span class="php-num">0</span>][<span class="php-num">1</span>] - <span class="php-num">1</span>, <span class="php-num">3</span>);
-</span><span id="470" class="l"><a class="l" href="source-Http.Url.php.html#470">470: </a>            }
+</span><span id="465" class="l"><a class="l" href="source-Http.Url.php.html#465">465: </a>        <span class="php-keyword1">if</span> (<span class="php-var">$reserved</span> !== <span class="php-quote">''</span>) {
+</span><span id="466" class="l"><a class="l" href="source-Http.Url.php.html#466">466: </a>            <span class="php-var">$s</span> = <span class="php-keyword2">preg_replace_callback</span>(
+</span><span id="467" class="l"><a class="l" href="source-Http.Url.php.html#467">467: </a>                <span class="php-quote">'#%('</span> . <span class="php-keyword2">substr</span>(<span class="php-keyword2">chunk_split</span>(<span class="php-keyword2">bin2hex</span>(<span class="php-var">$reserved</span>), <span class="php-num">2</span>, <span class="php-quote">'|'</span>), <span class="php-num">0</span>, -<span class="php-num">1</span>) . <span class="php-quote">')#i'</span>,
+</span><span id="468" class="l"><a class="l" href="source-Http.Url.php.html#468">468: </a>                <span class="php-keyword1">function</span>(<span class="php-var">$m</span>) { <span class="php-keyword1">return</span> <span class="php-quote">'%25'</span> . <span class="php-keyword2">strtoupper</span>(<span class="php-var">$m</span>[<span class="php-num">1</span>]); },
+</span><span id="469" class="l"><a class="l" href="source-Http.Url.php.html#469">469: </a>                <span class="php-var">$s</span>
+</span><span id="470" class="l"><a class="l" href="source-Http.Url.php.html#470">470: </a>            );
 </span><span id="471" class="l"><a class="l" href="source-Http.Url.php.html#471">471: </a>        }
-</span><span id="472" class="l"><a class="l" href="source-Http.Url.php.html#472">472: </a>        <span class="php-keyword1">return</span> <span class="php-var">$s</span>;
+</span><span id="472" class="l"><a class="l" href="source-Http.Url.php.html#472">472: </a>        <span class="php-keyword1">return</span> <span class="php-keyword2">rawurldecode</span>(<span class="php-var">$s</span>);
 </span><span id="473" class="l"><a class="l" href="source-Http.Url.php.html#473">473: </a>    }
 </span><span id="474" class="l"><a class="l" href="source-Http.Url.php.html#474">474: </a>
 </span><span id="475" class="l"><a class="l" href="source-Http.Url.php.html#475">475: </a>}
 </span><span id="476" class="l"><a class="l" href="source-Http.Url.php.html#476">476: </a></span></code></pre>
 
 	<div id="footer">
-		Nette 2.2.6 API API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+		Nette 2.2.7 API API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
 	</div>
 </div>
 </div>
 <script src="resources/combined.js?3630868369"></script>
-<script src="elementlist.js?1613912923"></script>
+<script src="elementlist.js?3317918403"></script>
 </body>
 </html>

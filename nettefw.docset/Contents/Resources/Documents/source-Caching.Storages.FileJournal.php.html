@@ -5,10 +5,10 @@
 	<meta name="generator" content="ApiGen 2.8.0">
 	<meta name="robots" content="noindex">
 
-	<title>File Caching/Storages/FileJournal.php | Nette 2.2.6 API</title>
+	<title>File Caching/Storages/FileJournal.php | Nette 2.2.7 API</title>
 
 	<link rel="stylesheet" href="resources/style.css?3746977979">
-	<link rel="search" type="application/opensearchdescription+xml" title="Nette 2.2.6 API" href="http://api.nette.org/2.0/opensearch.xml">
+	<link rel="search" type="application/opensearchdescription+xml" title="Nette 2.2.7 API" href="http://api.nette.org/2.0/opensearch.xml">
 
 
 <script src='http://files.nette.org/js/analytics.js'></script><script>
@@ -582,12 +582,12 @@ _gaq.push(['_trackPageview']);
 </span><span id="381" class="l"><a class="l" href="source-Caching.Storages.FileJournal.php.html#381"> 381: </a>            <span class="php-keyword1">do</span> {
 </span><span id="382" class="l"><a class="l" href="source-Caching.Storages.FileJournal.php.html#382"> 382: </a>                <span class="php-var">$link</span> = <span class="php-var">$data</span>[<span class="php-var">$i</span>];
 </span><span id="383" class="l"><a class="l" href="source-Caching.Storages.FileJournal.php.html#383"> 383: </a>
-</span><span id="384" class="l"><a class="l" href="source-Caching.Storages.FileJournal.php.html#384"> 384: </a>                <span class="php-keyword1">if</span> (!<span class="php-keyword1">isset</span>(<span class="php-var">$node</span>[<span class="php-var">$link</span>])) {
-</span><span id="385" class="l"><a class="l" href="source-Caching.Storages.FileJournal.php.html#385"> 385: </a>                    <span class="php-keyword1">if</span> (self::<span class="php-var">$debug</span>) {
-</span><span id="386" class="l"><a class="l" href="source-Caching.Storages.FileJournal.php.html#386"> 386: </a>                        <span class="php-keyword1">throw</span> <span class="php-keyword1">new</span> Nette\InvalidStateException(<span class="php-quote">&quot;Link with ID </span><span class="php-var">$searchLink</span><span class="php-quote"> is not in node </span><span class="php-var">$nodeId</span><span class="php-quote">.&quot;</span>);
-</span><span id="387" class="l"><a class="l" href="source-Caching.Storages.FileJournal.php.html#387"> 387: </a>                    }
-</span><span id="388" class="l"><a class="l" href="source-Caching.Storages.FileJournal.php.html#388"> 388: </a>                    <span class="php-keyword1">continue</span>;
-</span><span id="389" class="l"><a class="l" href="source-Caching.Storages.FileJournal.php.html#389"> 389: </a>                } <span class="php-keyword1">elseif</span> (<span class="php-keyword1">isset</span>(<span class="php-var">$this</span>-&gt;deletedLinks[<span class="php-var">$link</span>])) {
+</span><span id="384" class="l"><a class="l" href="source-Caching.Storages.FileJournal.php.html#384"> 384: </a>                <span class="php-keyword1">if</span> (<span class="php-keyword1">isset</span>(<span class="php-var">$this</span>-&gt;deletedLinks[<span class="php-var">$link</span>])) {
+</span><span id="385" class="l"><a class="l" href="source-Caching.Storages.FileJournal.php.html#385"> 385: </a>                    <span class="php-keyword1">continue</span>;
+</span><span id="386" class="l"><a class="l" href="source-Caching.Storages.FileJournal.php.html#386"> 386: </a>                } <span class="php-keyword1">elseif</span> (!<span class="php-keyword1">isset</span>(<span class="php-var">$node</span>[<span class="php-var">$link</span>])) {
+</span><span id="387" class="l"><a class="l" href="source-Caching.Storages.FileJournal.php.html#387"> 387: </a>                    <span class="php-keyword1">if</span> (self::<span class="php-var">$debug</span>) {
+</span><span id="388" class="l"><a class="l" href="source-Caching.Storages.FileJournal.php.html#388"> 388: </a>                        <span class="php-keyword1">throw</span> <span class="php-keyword1">new</span> Nette\InvalidStateException(<span class="php-quote">&quot;Link with ID </span><span class="php-var">$searchLink</span><span class="php-quote"> is not in node </span><span class="php-var">$nodeId</span><span class="php-quote">.&quot;</span>);
+</span><span id="389" class="l"><a class="l" href="source-Caching.Storages.FileJournal.php.html#389"> 389: </a>                    }
 </span><span id="390" class="l"><a class="l" href="source-Caching.Storages.FileJournal.php.html#390"> 390: </a>                    <span class="php-keyword1">continue</span>;
 </span><span id="391" class="l"><a class="l" href="source-Caching.Storages.FileJournal.php.html#391"> 391: </a>                }
 </span><span id="392" class="l"><a class="l" href="source-Caching.Storages.FileJournal.php.html#392"> 392: </a>
@@ -1406,11 +1406,11 @@ _gaq.push(['_trackPageview']);
 </span><span id="1205" class="l"><a class="l" href="source-Caching.Storages.FileJournal.php.html#1205">1205: </a></span></code></pre>
 
 	<div id="footer">
-		Nette 2.2.6 API API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+		Nette 2.2.7 API API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
 	</div>
 </div>
 </div>
 <script src="resources/combined.js?3630868369"></script>
-<script src="elementlist.js?1613912923"></script>
+<script src="elementlist.js?3317918403"></script>
 </body>
 </html>

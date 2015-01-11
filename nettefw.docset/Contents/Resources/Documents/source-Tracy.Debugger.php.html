@@ -5,10 +5,10 @@
 	<meta name="generator" content="ApiGen 2.8.0">
 	<meta name="robots" content="noindex">
 
-	<title>File Tracy/Debugger.php | Nette 2.2.6 API</title>
+	<title>File Tracy/Debugger.php | Nette 2.2.7 API</title>
 
 	<link rel="stylesheet" href="resources/style.css?3746977979">
-	<link rel="search" type="application/opensearchdescription+xml" title="Nette 2.2.6 API" href="http://api.nette.org/2.0/opensearch.xml">
+	<link rel="search" type="application/opensearchdescription+xml" title="Nette 2.2.7 API" href="http://api.nette.org/2.0/opensearch.xml">
 
 
 <script src='http://files.nette.org/js/analytics.js'></script><script>
@@ -225,7 +225,7 @@ _gaq.push(['_trackPageview']);
 </span><span id="23" class="l"><a class="l" href="source-Tracy.Debugger.php.html#23"> 23: </a><span class="php-keyword1">class</span> <a id="Debugger" href="source-Tracy.Debugger.php.html#Debugger">Debugger</a>
 </span><span id="24" class="l"><a class="l" href="source-Tracy.Debugger.php.html#24"> 24: </a>{
 </span><span id="25" class="l"><a class="l" href="source-Tracy.Debugger.php.html#25"> 25: </a>    <span class="php-comment">/** @var string */</span>
-</span><span id="26" class="l"><a class="l" href="source-Tracy.Debugger.php.html#26"> 26: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">static</span> <span class="php-var"><a id="$version" href="source-Tracy.Debugger.php.html#$version">$version</a></span> = <span class="php-quote">'2.2.5'</span>;
+</span><span id="26" class="l"><a class="l" href="source-Tracy.Debugger.php.html#26"> 26: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">static</span> <span class="php-var"><a id="$version" href="source-Tracy.Debugger.php.html#$version">$version</a></span> = <span class="php-quote">'2.2.6'</span>;
 </span><span id="27" class="l"><a class="l" href="source-Tracy.Debugger.php.html#27"> 27: </a>
 </span><span id="28" class="l"><a class="l" href="source-Tracy.Debugger.php.html#28"> 28: </a>    <span class="php-comment">/** @var bool in production mode is suppressed any debugging output */</span>
 </span><span id="29" class="l"><a class="l" href="source-Tracy.Debugger.php.html#29"> 29: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">static</span> <span class="php-var"><a id="$productionMode" href="source-Tracy.Debugger.php.html#$productionMode">$productionMode</a></span> = self::DETECT;
@@ -607,18 +607,18 @@ _gaq.push(['_trackPageview']);
 </span><span id="405" class="l"><a class="l" href="source-Tracy.Debugger.php.html#405">405: </a>            }
 </span><span id="406" class="l"><a class="l" href="source-Tracy.Debugger.php.html#406">406: </a>        }
 </span><span id="407" class="l"><a class="l" href="source-Tracy.Debugger.php.html#407">407: </a>
-</span><span id="408" class="l"><a class="l" href="source-Tracy.Debugger.php.html#408">408: </a>        <span class="php-var">$logMsg</span> = <span class="php-quote">'Unable to log error. Check if directory is writable and path is absolute.'</span>;
-</span><span id="409" class="l"><a class="l" href="source-Tracy.Debugger.php.html#409">409: </a>        <span class="php-keyword1">if</span> (self::<span class="php-var">$productionMode</span>) {
-</span><span id="410" class="l"><a class="l" href="source-Tracy.Debugger.php.html#410">410: </a>            <span class="php-keyword1">try</span> {
-</span><span id="411" class="l"><a class="l" href="source-Tracy.Debugger.php.html#411">411: </a>                self::<span class="php-keyword2">log</span>(<span class="php-var">$exception</span>, self::EXCEPTION);
-</span><span id="412" class="l"><a class="l" href="source-Tracy.Debugger.php.html#412">412: </a>            } <span class="php-keyword1">catch</span> (\Exception <span class="php-var">$e</span>) {
-</span><span id="413" class="l"><a class="l" href="source-Tracy.Debugger.php.html#413">413: </a>            }
-</span><span id="414" class="l"><a class="l" href="source-Tracy.Debugger.php.html#414">414: </a>
-</span><span id="415" class="l"><a class="l" href="source-Tracy.Debugger.php.html#415">415: </a>            <span class="php-var">$error</span> = <span class="php-keyword1">isset</span>(<span class="php-var">$e</span>) ? <span class="php-var">$logMsg</span> : <span class="php-keyword1">NULL</span>;
-</span><span id="416" class="l"><a class="l" href="source-Tracy.Debugger.php.html#416">416: </a>            <span class="php-keyword1">if</span> (self::isHtmlMode()) {
-</span><span id="417" class="l"><a class="l" href="source-Tracy.Debugger.php.html#417">417: </a>                <span class="php-keyword1">require</span> __DIR__ . <span class="php-quote">'/templates/error.phtml'</span>;
-</span><span id="418" class="l"><a class="l" href="source-Tracy.Debugger.php.html#418">418: </a>            } <span class="php-keyword1">elseif</span> (PHP_SAPI === <span class="php-quote">'cli'</span>) {
-</span><span id="419" class="l"><a class="l" href="source-Tracy.Debugger.php.html#419">419: </a>                <span class="php-keyword2">fwrite</span>(STDERR, <span class="php-quote">&quot;ERROR: application encountered an error and can not continue.\n</span><span class="php-var">$error</span><span class="php-quote">\n&quot;</span>);
+</span><span id="408" class="l"><a class="l" href="source-Tracy.Debugger.php.html#408">408: </a>        <span class="php-keyword1">if</span> (self::<span class="php-var">$productionMode</span>) {
+</span><span id="409" class="l"><a class="l" href="source-Tracy.Debugger.php.html#409">409: </a>            <span class="php-keyword1">try</span> {
+</span><span id="410" class="l"><a class="l" href="source-Tracy.Debugger.php.html#410">410: </a>                self::<span class="php-keyword2">log</span>(<span class="php-var">$exception</span>, self::EXCEPTION);
+</span><span id="411" class="l"><a class="l" href="source-Tracy.Debugger.php.html#411">411: </a>            } <span class="php-keyword1">catch</span> (\Exception <span class="php-var">$e</span>) {
+</span><span id="412" class="l"><a class="l" href="source-Tracy.Debugger.php.html#412">412: </a>            }
+</span><span id="413" class="l"><a class="l" href="source-Tracy.Debugger.php.html#413">413: </a>
+</span><span id="414" class="l"><a class="l" href="source-Tracy.Debugger.php.html#414">414: </a>            <span class="php-keyword1">if</span> (self::isHtmlMode()) {
+</span><span id="415" class="l"><a class="l" href="source-Tracy.Debugger.php.html#415">415: </a>                <span class="php-var">$logged</span> = <span class="php-keyword1">empty</span>(<span class="php-var">$e</span>);
+</span><span id="416" class="l"><a class="l" href="source-Tracy.Debugger.php.html#416">416: </a>                <span class="php-keyword1">require</span> __DIR__ . <span class="php-quote">'/templates/error.phtml'</span>;
+</span><span id="417" class="l"><a class="l" href="source-Tracy.Debugger.php.html#417">417: </a>            } <span class="php-keyword1">elseif</span> (PHP_SAPI === <span class="php-quote">'cli'</span>) {
+</span><span id="418" class="l"><a class="l" href="source-Tracy.Debugger.php.html#418">418: </a>                <span class="php-keyword2">fwrite</span>(STDERR, <span class="php-quote">'ERROR: application encountered an error and can not continue. '</span>
+</span><span id="419" class="l"><a class="l" href="source-Tracy.Debugger.php.html#419">419: </a>                    . (<span class="php-keyword1">isset</span>(<span class="php-var">$e</span>) ? <span class="php-quote">&quot;Unable to log error.\n&quot;</span> : <span class="php-quote">&quot;Error was logged.\n&quot;</span>));
 </span><span id="420" class="l"><a class="l" href="source-Tracy.Debugger.php.html#420">420: </a>            }
 </span><span id="421" class="l"><a class="l" href="source-Tracy.Debugger.php.html#421">421: </a>
 </span><span id="422" class="l"><a class="l" href="source-Tracy.Debugger.php.html#422">422: </a>        } <span class="php-keyword1">elseif</span> (!<span class="php-keyword2">connection_aborted</span>() &amp;&amp; self::isHtmlMode()) {
@@ -636,7 +636,7 @@ _gaq.push(['_trackPageview']);
 </span><span id="434" class="l"><a class="l" href="source-Tracy.Debugger.php.html#434">434: </a>                    <span class="php-keyword2">exec</span>(self::<span class="php-var">$browser</span> . <span class="php-quote">' '</span> . <span class="php-keyword2">escapeshellarg</span>(<span class="php-var">$file</span>));
 </span><span id="435" class="l"><a class="l" href="source-Tracy.Debugger.php.html#435">435: </a>                }
 </span><span id="436" class="l"><a class="l" href="source-Tracy.Debugger.php.html#436">436: </a>            } <span class="php-keyword1">catch</span> (\Exception <span class="php-var">$e</span>) {
-</span><span id="437" class="l"><a class="l" href="source-Tracy.Debugger.php.html#437">437: </a>                <span class="php-keyword1">echo</span> <span class="php-quote">&quot;</span><span class="php-var">$exception</span><span class="php-quote">\n</span><span class="php-var">$logMsg</span><span class="php-quote"> </span><span class="php-var">{$e-&gt;getMessage()}</span><span class="php-quote">\n&quot;</span>;
+</span><span id="437" class="l"><a class="l" href="source-Tracy.Debugger.php.html#437">437: </a>                <span class="php-keyword1">echo</span> <span class="php-quote">&quot;</span><span class="php-var">$exception</span><span class="php-quote">\nUnable to log error: </span><span class="php-var">{$e-&gt;getMessage()}</span><span class="php-quote">\n&quot;</span>;
 </span><span id="438" class="l"><a class="l" href="source-Tracy.Debugger.php.html#438">438: </a>            }
 </span><span id="439" class="l"><a class="l" href="source-Tracy.Debugger.php.html#439">439: </a>        }
 </span><span id="440" class="l"><a class="l" href="source-Tracy.Debugger.php.html#440">440: </a>
@@ -809,11 +809,11 @@ _gaq.push(['_trackPageview']);
 </span><span id="607" class="l"><a class="l" href="source-Tracy.Debugger.php.html#607">607: </a></span></code></pre>
 
 	<div id="footer">
-		Nette 2.2.6 API API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+		Nette 2.2.7 API API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
 	</div>
 </div>
 </div>
 <script src="resources/combined.js?3630868369"></script>
-<script src="elementlist.js?1613912923"></script>
+<script src="elementlist.js?3317918403"></script>
 </body>
 </html>

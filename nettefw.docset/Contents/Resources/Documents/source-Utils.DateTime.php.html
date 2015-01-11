@@ -5,10 +5,10 @@
 	<meta name="generator" content="ApiGen 2.8.0">
 	<meta name="robots" content="noindex">
 
-	<title>File Utils/DateTime.php | Nette 2.2.6 API</title>
+	<title>File Utils/DateTime.php | Nette 2.2.7 API</title>
 
 	<link rel="stylesheet" href="resources/style.css?3746977979">
-	<link rel="search" type="application/opensearchdescription+xml" title="Nette 2.2.6 API" href="http://api.nette.org/2.0/opensearch.xml">
+	<link rel="search" type="application/opensearchdescription+xml" title="Nette 2.2.7 API" href="http://api.nette.org/2.0/opensearch.xml">
 
 
 <script src='http://files.nette.org/js/analytics.js'></script><script>
@@ -146,7 +146,6 @@ _gaq.push(['_trackPageview']);
 				<li><a href="Nette.Utils.ArrayList.html">ArrayList</a></li>
 				<li><a href="Nette.Utils.Arrays.html">Arrays</a></li>
 				<li><a href="Nette.Utils.Callback.html">Callback</a></li>
-				<li><a href="Nette.Utils.CallbackFilterIterator.html">CallbackFilterIterator</a></li>
 				<li class="active"><a href="Nette.Utils.DateTime.html">DateTime</a></li>
 				<li><a href="Nette.Utils.FileSystem.html">FileSystem</a></li>
 				<li><a href="Nette.Utils.Finder.html">Finder</a></li>
@@ -158,7 +157,6 @@ _gaq.push(['_trackPageview']);
 				<li><a href="Nette.Utils.ObjectMixin.html">ObjectMixin</a></li>
 				<li><a href="Nette.Utils.Paginator.html">Paginator</a></li>
 				<li><a href="Nette.Utils.Random.html">Random</a></li>
-				<li><a href="Nette.Utils.RecursiveCallbackFilterIterator.html">RecursiveCallbackFilterIterator</a></li>
 				<li><a href="Nette.Utils.Strings.html">Strings</a></li>
 				<li><a href="Nette.Utils.TokenIterator.html">TokenIterator</a></li>
 				<li><a href="Nette.Utils.Tokenizer.html">Tokenizer</a></li>
@@ -282,66 +280,80 @@ _gaq.push(['_trackPageview']);
 </span><span id="59" class="l"><a class="l" href="source-Utils.DateTime.php.html#59"> 59: </a>    }
 </span><span id="60" class="l"><a class="l" href="source-Utils.DateTime.php.html#60"> 60: </a>
 </span><span id="61" class="l"><a class="l" href="source-Utils.DateTime.php.html#61"> 61: </a>
-</span><span id="62" class="l"><a class="l" href="source-Utils.DateTime.php.html#62"> 62: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="___toString" href="source-Utils.DateTime.php.html#___toString">__toString</a>()
-</span><span id="63" class="l"><a class="l" href="source-Utils.DateTime.php.html#63"> 63: </a>    {
-</span><span id="64" class="l"><a class="l" href="source-Utils.DateTime.php.html#64"> 64: </a>        <span class="php-keyword1">return</span> <span class="php-var">$this</span>-&gt;format(<span class="php-quote">'Y-m-d H:i:s'</span>);
-</span><span id="65" class="l"><a class="l" href="source-Utils.DateTime.php.html#65"> 65: </a>    }
-</span><span id="66" class="l"><a class="l" href="source-Utils.DateTime.php.html#66"> 66: </a>
-</span><span id="67" class="l"><a class="l" href="source-Utils.DateTime.php.html#67"> 67: </a>
-</span><span id="68" class="l"><a class="l" href="source-Utils.DateTime.php.html#68"> 68: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_modifyClone" href="source-Utils.DateTime.php.html#_modifyClone">modifyClone</a>(<span class="php-var">$modify</span> = <span class="php-quote">''</span>)
-</span><span id="69" class="l"><a class="l" href="source-Utils.DateTime.php.html#69"> 69: </a>    {
-</span><span id="70" class="l"><a class="l" href="source-Utils.DateTime.php.html#70"> 70: </a>        <span class="php-var">$dolly</span> = <span class="php-keyword1">clone</span> <span class="php-var">$this</span>;
-</span><span id="71" class="l"><a class="l" href="source-Utils.DateTime.php.html#71"> 71: </a>        <span class="php-keyword1">return</span> <span class="php-var">$modify</span> ? <span class="php-var">$dolly</span>-&gt;modify(<span class="php-var">$modify</span>) : <span class="php-var">$dolly</span>;
-</span><span id="72" class="l"><a class="l" href="source-Utils.DateTime.php.html#72"> 72: </a>    }
-</span><span id="73" class="l"><a class="l" href="source-Utils.DateTime.php.html#73"> 73: </a>
-</span><span id="74" class="l"><a class="l" href="source-Utils.DateTime.php.html#74"> 74: </a>
-</span><span id="75" class="l"><a class="l" href="source-Utils.DateTime.php.html#75"> 75: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_setTimestamp" href="source-Utils.DateTime.php.html#_setTimestamp">setTimestamp</a>(<span class="php-var">$timestamp</span>)
+</span><span id="62" class="l"><a class="l" href="source-Utils.DateTime.php.html#62"> 62: </a>    <span class="php-comment">/**
+</span></span><span id="63" class="l"><a class="l" href="source-Utils.DateTime.php.html#63"> 63: </a><span class="php-comment">     * @return string
+</span></span><span id="64" class="l"><a class="l" href="source-Utils.DateTime.php.html#64"> 64: </a><span class="php-comment">     */</span>
+</span><span id="65" class="l"><a class="l" href="source-Utils.DateTime.php.html#65"> 65: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="___toString" href="source-Utils.DateTime.php.html#___toString">__toString</a>()
+</span><span id="66" class="l"><a class="l" href="source-Utils.DateTime.php.html#66"> 66: </a>    {
+</span><span id="67" class="l"><a class="l" href="source-Utils.DateTime.php.html#67"> 67: </a>        <span class="php-keyword1">return</span> <span class="php-var">$this</span>-&gt;format(<span class="php-quote">'Y-m-d H:i:s'</span>);
+</span><span id="68" class="l"><a class="l" href="source-Utils.DateTime.php.html#68"> 68: </a>    }
+</span><span id="69" class="l"><a class="l" href="source-Utils.DateTime.php.html#69"> 69: </a>
+</span><span id="70" class="l"><a class="l" href="source-Utils.DateTime.php.html#70"> 70: </a>
+</span><span id="71" class="l"><a class="l" href="source-Utils.DateTime.php.html#71"> 71: </a>    <span class="php-comment">/**
+</span></span><span id="72" class="l"><a class="l" href="source-Utils.DateTime.php.html#72"> 72: </a><span class="php-comment">     * @param  string
+</span></span><span id="73" class="l"><a class="l" href="source-Utils.DateTime.php.html#73"> 73: </a><span class="php-comment">     * @return self
+</span></span><span id="74" class="l"><a class="l" href="source-Utils.DateTime.php.html#74"> 74: </a><span class="php-comment">     */</span>
+</span><span id="75" class="l"><a class="l" href="source-Utils.DateTime.php.html#75"> 75: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_modifyClone" href="source-Utils.DateTime.php.html#_modifyClone">modifyClone</a>(<span class="php-var">$modify</span> = <span class="php-quote">''</span>)
 </span><span id="76" class="l"><a class="l" href="source-Utils.DateTime.php.html#76"> 76: </a>    {
-</span><span id="77" class="l"><a class="l" href="source-Utils.DateTime.php.html#77"> 77: </a>        <span class="php-var">$zone</span> = <span class="php-var">$this</span>-&gt;getTimezone();
-</span><span id="78" class="l"><a class="l" href="source-Utils.DateTime.php.html#78"> 78: </a>        <span class="php-var">$this</span>-&gt;__construct(<span class="php-quote">'@'</span> . <span class="php-var">$timestamp</span>);
-</span><span id="79" class="l"><a class="l" href="source-Utils.DateTime.php.html#79"> 79: </a>        <span class="php-keyword1">return</span> <span class="php-var">$this</span>-&gt;setTimeZone(<span class="php-var">$zone</span>);
-</span><span id="80" class="l"><a class="l" href="source-Utils.DateTime.php.html#80"> 80: </a>    }
+</span><span id="77" class="l"><a class="l" href="source-Utils.DateTime.php.html#77"> 77: </a>        <span class="php-var">$dolly</span> = <span class="php-keyword1">clone</span> <span class="php-var">$this</span>;
+</span><span id="78" class="l"><a class="l" href="source-Utils.DateTime.php.html#78"> 78: </a>        <span class="php-keyword1">return</span> <span class="php-var">$modify</span> ? <span class="php-var">$dolly</span>-&gt;modify(<span class="php-var">$modify</span>) : <span class="php-var">$dolly</span>;
+</span><span id="79" class="l"><a class="l" href="source-Utils.DateTime.php.html#79"> 79: </a>    }
+</span><span id="80" class="l"><a class="l" href="source-Utils.DateTime.php.html#80"> 80: </a>
 </span><span id="81" class="l"><a class="l" href="source-Utils.DateTime.php.html#81"> 81: </a>
-</span><span id="82" class="l"><a class="l" href="source-Utils.DateTime.php.html#82"> 82: </a>
-</span><span id="83" class="l"><a class="l" href="source-Utils.DateTime.php.html#83"> 83: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_getTimestamp" href="source-Utils.DateTime.php.html#_getTimestamp">getTimestamp</a>()
-</span><span id="84" class="l"><a class="l" href="source-Utils.DateTime.php.html#84"> 84: </a>    {
-</span><span id="85" class="l"><a class="l" href="source-Utils.DateTime.php.html#85"> 85: </a>        <span class="php-var">$ts</span> = <span class="php-var">$this</span>-&gt;format(<span class="php-quote">'U'</span>);
-</span><span id="86" class="l"><a class="l" href="source-Utils.DateTime.php.html#86"> 86: </a>        <span class="php-keyword1">return</span> <span class="php-keyword2">is_float</span>(<span class="php-var">$tmp</span> = <span class="php-var">$ts</span> * <span class="php-num">1</span>) ? <span class="php-var">$ts</span> : <span class="php-var">$tmp</span>;
-</span><span id="87" class="l"><a class="l" href="source-Utils.DateTime.php.html#87"> 87: </a>    }
-</span><span id="88" class="l"><a class="l" href="source-Utils.DateTime.php.html#88"> 88: </a>
-</span><span id="89" class="l"><a class="l" href="source-Utils.DateTime.php.html#89"> 89: </a>
-</span><span id="90" class="l"><a class="l" href="source-Utils.DateTime.php.html#90"> 90: </a>    <span class="php-comment">/**
-</span></span><span id="91" class="l"><a class="l" href="source-Utils.DateTime.php.html#91"> 91: </a><span class="php-comment">     * Returns new DateTime object formatted according to the specified format.
-</span></span><span id="92" class="l"><a class="l" href="source-Utils.DateTime.php.html#92"> 92: </a><span class="php-comment">     * @param string The format the $time parameter should be in
-</span></span><span id="93" class="l"><a class="l" href="source-Utils.DateTime.php.html#93"> 93: </a><span class="php-comment">     * @param string String representing the time
-</span></span><span id="94" class="l"><a class="l" href="source-Utils.DateTime.php.html#94"> 94: </a><span class="php-comment">     * @param string|\DateTimeZone desired timezone (default timezone is used if NULL is passed)
-</span></span><span id="95" class="l"><a class="l" href="source-Utils.DateTime.php.html#95"> 95: </a><span class="php-comment">     * @return DateTime|FALSE
+</span><span id="82" class="l"><a class="l" href="source-Utils.DateTime.php.html#82"> 82: </a>    <span class="php-comment">/**
+</span></span><span id="83" class="l"><a class="l" href="source-Utils.DateTime.php.html#83"> 83: </a><span class="php-comment">     * @param  int
+</span></span><span id="84" class="l"><a class="l" href="source-Utils.DateTime.php.html#84"> 84: </a><span class="php-comment">     * @return self
+</span></span><span id="85" class="l"><a class="l" href="source-Utils.DateTime.php.html#85"> 85: </a><span class="php-comment">     */</span>
+</span><span id="86" class="l"><a class="l" href="source-Utils.DateTime.php.html#86"> 86: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_setTimestamp" href="source-Utils.DateTime.php.html#_setTimestamp">setTimestamp</a>(<span class="php-var">$timestamp</span>)
+</span><span id="87" class="l"><a class="l" href="source-Utils.DateTime.php.html#87"> 87: </a>    {
+</span><span id="88" class="l"><a class="l" href="source-Utils.DateTime.php.html#88"> 88: </a>        <span class="php-var">$zone</span> = <span class="php-var">$this</span>-&gt;getTimezone();
+</span><span id="89" class="l"><a class="l" href="source-Utils.DateTime.php.html#89"> 89: </a>        <span class="php-var">$this</span>-&gt;__construct(<span class="php-quote">'@'</span> . <span class="php-var">$timestamp</span>);
+</span><span id="90" class="l"><a class="l" href="source-Utils.DateTime.php.html#90"> 90: </a>        <span class="php-keyword1">return</span> <span class="php-var">$this</span>-&gt;setTimeZone(<span class="php-var">$zone</span>);
+</span><span id="91" class="l"><a class="l" href="source-Utils.DateTime.php.html#91"> 91: </a>    }
+</span><span id="92" class="l"><a class="l" href="source-Utils.DateTime.php.html#92"> 92: </a>
+</span><span id="93" class="l"><a class="l" href="source-Utils.DateTime.php.html#93"> 93: </a>
+</span><span id="94" class="l"><a class="l" href="source-Utils.DateTime.php.html#94"> 94: </a>    <span class="php-comment">/**
+</span></span><span id="95" class="l"><a class="l" href="source-Utils.DateTime.php.html#95"> 95: </a><span class="php-comment">     * @return int|string
 </span></span><span id="96" class="l"><a class="l" href="source-Utils.DateTime.php.html#96"> 96: </a><span class="php-comment">     */</span>
-</span><span id="97" class="l"><a class="l" href="source-Utils.DateTime.php.html#97"> 97: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">static</span> <span class="php-keyword1">function</span> <a id="_createFromFormat" href="source-Utils.DateTime.php.html#_createFromFormat">createFromFormat</a>(<span class="php-var">$format</span>, <span class="php-var">$time</span>, <span class="php-var">$timezone</span> = <span class="php-keyword1">NULL</span>)
+</span><span id="97" class="l"><a class="l" href="source-Utils.DateTime.php.html#97"> 97: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_getTimestamp" href="source-Utils.DateTime.php.html#_getTimestamp">getTimestamp</a>()
 </span><span id="98" class="l"><a class="l" href="source-Utils.DateTime.php.html#98"> 98: </a>    {
-</span><span id="99" class="l"><a class="l" href="source-Utils.DateTime.php.html#99"> 99: </a>        <span class="php-keyword1">if</span> (<span class="php-var">$timezone</span> === <span class="php-keyword1">NULL</span>) {
-</span><span id="100" class="l"><a class="l" href="source-Utils.DateTime.php.html#100">100: </a>            <span class="php-var">$timezone</span> = <span class="php-keyword1">new</span> \DateTimeZone(<span class="php-keyword2">date_default_timezone_get</span>());
-</span><span id="101" class="l"><a class="l" href="source-Utils.DateTime.php.html#101">101: </a>
-</span><span id="102" class="l"><a class="l" href="source-Utils.DateTime.php.html#102">102: </a>        } <span class="php-keyword1">elseif</span> (<span class="php-keyword2">is_string</span>(<span class="php-var">$timezone</span>)) {
-</span><span id="103" class="l"><a class="l" href="source-Utils.DateTime.php.html#103">103: </a>            <span class="php-var">$timezone</span> = <span class="php-keyword1">new</span> \DateTimeZone(<span class="php-var">$timezone</span>);
-</span><span id="104" class="l"><a class="l" href="source-Utils.DateTime.php.html#104">104: </a>
-</span><span id="105" class="l"><a class="l" href="source-Utils.DateTime.php.html#105">105: </a>        } <span class="php-keyword1">elseif</span> (!<span class="php-var">$timezone</span> <span class="php-keyword1">instanceof</span> \DateTimeZone) {
-</span><span id="106" class="l"><a class="l" href="source-Utils.DateTime.php.html#106">106: </a>            <span class="php-keyword1">throw</span> <span class="php-keyword1">new</span> Nette\InvalidArgumentException(<span class="php-quote">'Invalid timezone given'</span>);
-</span><span id="107" class="l"><a class="l" href="source-Utils.DateTime.php.html#107">107: </a>        }
-</span><span id="108" class="l"><a class="l" href="source-Utils.DateTime.php.html#108">108: </a>
-</span><span id="109" class="l"><a class="l" href="source-Utils.DateTime.php.html#109">109: </a>        <span class="php-var">$date</span> = parent::createFromFormat(<span class="php-var">$format</span>, <span class="php-var">$time</span>, <span class="php-var">$timezone</span>);
-</span><span id="110" class="l"><a class="l" href="source-Utils.DateTime.php.html#110">110: </a>        <span class="php-keyword1">return</span> <span class="php-var">$date</span> ? <span class="php-keyword1">static</span>::from(<span class="php-var">$date</span>) : <span class="php-keyword1">FALSE</span>;
-</span><span id="111" class="l"><a class="l" href="source-Utils.DateTime.php.html#111">111: </a>    }
-</span><span id="112" class="l"><a class="l" href="source-Utils.DateTime.php.html#112">112: </a>
-</span><span id="113" class="l"><a class="l" href="source-Utils.DateTime.php.html#113">113: </a>}
-</span><span id="114" class="l"><a class="l" href="source-Utils.DateTime.php.html#114">114: </a></span></code></pre>
+</span><span id="99" class="l"><a class="l" href="source-Utils.DateTime.php.html#99"> 99: </a>        <span class="php-var">$ts</span> = <span class="php-var">$this</span>-&gt;format(<span class="php-quote">'U'</span>);
+</span><span id="100" class="l"><a class="l" href="source-Utils.DateTime.php.html#100">100: </a>        <span class="php-keyword1">return</span> <span class="php-keyword2">is_float</span>(<span class="php-var">$tmp</span> = <span class="php-var">$ts</span> * <span class="php-num">1</span>) ? <span class="php-var">$ts</span> : <span class="php-var">$tmp</span>;
+</span><span id="101" class="l"><a class="l" href="source-Utils.DateTime.php.html#101">101: </a>    }
+</span><span id="102" class="l"><a class="l" href="source-Utils.DateTime.php.html#102">102: </a>
+</span><span id="103" class="l"><a class="l" href="source-Utils.DateTime.php.html#103">103: </a>
+</span><span id="104" class="l"><a class="l" href="source-Utils.DateTime.php.html#104">104: </a>    <span class="php-comment">/**
+</span></span><span id="105" class="l"><a class="l" href="source-Utils.DateTime.php.html#105">105: </a><span class="php-comment">     * Returns new DateTime object formatted according to the specified format.
+</span></span><span id="106" class="l"><a class="l" href="source-Utils.DateTime.php.html#106">106: </a><span class="php-comment">     * @param string The format the $time parameter should be in
+</span></span><span id="107" class="l"><a class="l" href="source-Utils.DateTime.php.html#107">107: </a><span class="php-comment">     * @param string String representing the time
+</span></span><span id="108" class="l"><a class="l" href="source-Utils.DateTime.php.html#108">108: </a><span class="php-comment">     * @param string|\DateTimeZone desired timezone (default timezone is used if NULL is passed)
+</span></span><span id="109" class="l"><a class="l" href="source-Utils.DateTime.php.html#109">109: </a><span class="php-comment">     * @return DateTime|FALSE
+</span></span><span id="110" class="l"><a class="l" href="source-Utils.DateTime.php.html#110">110: </a><span class="php-comment">     */</span>
+</span><span id="111" class="l"><a class="l" href="source-Utils.DateTime.php.html#111">111: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">static</span> <span class="php-keyword1">function</span> <a id="_createFromFormat" href="source-Utils.DateTime.php.html#_createFromFormat">createFromFormat</a>(<span class="php-var">$format</span>, <span class="php-var">$time</span>, <span class="php-var">$timezone</span> = <span class="php-keyword1">NULL</span>)
+</span><span id="112" class="l"><a class="l" href="source-Utils.DateTime.php.html#112">112: </a>    {
+</span><span id="113" class="l"><a class="l" href="source-Utils.DateTime.php.html#113">113: </a>        <span class="php-keyword1">if</span> (<span class="php-var">$timezone</span> === <span class="php-keyword1">NULL</span>) {
+</span><span id="114" class="l"><a class="l" href="source-Utils.DateTime.php.html#114">114: </a>            <span class="php-var">$timezone</span> = <span class="php-keyword1">new</span> \DateTimeZone(<span class="php-keyword2">date_default_timezone_get</span>());
+</span><span id="115" class="l"><a class="l" href="source-Utils.DateTime.php.html#115">115: </a>
+</span><span id="116" class="l"><a class="l" href="source-Utils.DateTime.php.html#116">116: </a>        } <span class="php-keyword1">elseif</span> (<span class="php-keyword2">is_string</span>(<span class="php-var">$timezone</span>)) {
+</span><span id="117" class="l"><a class="l" href="source-Utils.DateTime.php.html#117">117: </a>            <span class="php-var">$timezone</span> = <span class="php-keyword1">new</span> \DateTimeZone(<span class="php-var">$timezone</span>);
+</span><span id="118" class="l"><a class="l" href="source-Utils.DateTime.php.html#118">118: </a>
+</span><span id="119" class="l"><a class="l" href="source-Utils.DateTime.php.html#119">119: </a>        } <span class="php-keyword1">elseif</span> (!<span class="php-var">$timezone</span> <span class="php-keyword1">instanceof</span> \DateTimeZone) {
+</span><span id="120" class="l"><a class="l" href="source-Utils.DateTime.php.html#120">120: </a>            <span class="php-keyword1">throw</span> <span class="php-keyword1">new</span> Nette\InvalidArgumentException(<span class="php-quote">'Invalid timezone given'</span>);
+</span><span id="121" class="l"><a class="l" href="source-Utils.DateTime.php.html#121">121: </a>        }
+</span><span id="122" class="l"><a class="l" href="source-Utils.DateTime.php.html#122">122: </a>
+</span><span id="123" class="l"><a class="l" href="source-Utils.DateTime.php.html#123">123: </a>        <span class="php-var">$date</span> = parent::createFromFormat(<span class="php-var">$format</span>, <span class="php-var">$time</span>, <span class="php-var">$timezone</span>);
+</span><span id="124" class="l"><a class="l" href="source-Utils.DateTime.php.html#124">124: </a>        <span class="php-keyword1">return</span> <span class="php-var">$date</span> ? <span class="php-keyword1">static</span>::from(<span class="php-var">$date</span>) : <span class="php-keyword1">FALSE</span>;
+</span><span id="125" class="l"><a class="l" href="source-Utils.DateTime.php.html#125">125: </a>    }
+</span><span id="126" class="l"><a class="l" href="source-Utils.DateTime.php.html#126">126: </a>
+</span><span id="127" class="l"><a class="l" href="source-Utils.DateTime.php.html#127">127: </a>}
+</span><span id="128" class="l"><a class="l" href="source-Utils.DateTime.php.html#128">128: </a></span></code></pre>
 
 	<div id="footer">
-		Nette 2.2.6 API API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+		Nette 2.2.7 API API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
 	</div>
 </div>
 </div>
 <script src="resources/combined.js?3630868369"></script>
-<script src="elementlist.js?1613912923"></script>
+<script src="elementlist.js?3317918403"></script>
 </body>
 </html>
